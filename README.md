@@ -129,10 +129,12 @@ locally and builds `data/collective.sqlite` — one native table per dataset
 (`raw_*`), a unified cross-domain `measurements` table
 (dataset · material · property · value · unit · conditions), and a `datasets`
 table carrying each database's short description, license, DOI and link
-straight from the catalog. Currently 7 datasets / **76,608 measurements**
-(thermoelectrics, solubility, pKa, electrocatalysis, alloys, hydration,
-photoswitches); restricted/registration-only databases are indexed in the
-catalog but never mirrored.
+straight from the catalog. Currently 10 datasets / **105,955 measurements /
+319 distinct properties** (thermoelectrics, solubility, pKa, electrocatalysis,
+alloys, hydration, photoswitches, solid electrolytes, polymers, adsorption
+isotherms); restricted/registration-only databases are indexed in the catalog
+but never mirrored. The ISODB loader parses a capped subset per build
+(`ISODB_CAP`) — raise it for a full local build.
 
 ```bash
 python scripts/localdb/build_localdb.py                  # clone + build

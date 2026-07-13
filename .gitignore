@@ -8,6 +8,7 @@ scripts/tdm/.env
 tdm_private_data/
 reports/
 *.log
+openclaw_tdm_package.zip
 
 # Python
 __pycache__/

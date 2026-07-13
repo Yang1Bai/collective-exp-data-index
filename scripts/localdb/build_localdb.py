@@ -28,7 +28,11 @@ SOURCES = {
   "freesolv":              {"git": "https://github.com/MobleyLab/FreeSolv.git", "dir": "FreeSolv"},
   "ocx24-open-catalyst-experiments-2024": {"git": "https://github.com/FAIR-Chem/fairchem.git", "dir": "fairchem", "sparse": "src/fairchem/applications/ocx"},
   "mpea-dataset-borg":     {"git": "https://github.com/vahid2364/DataScribe_DeepTabularLearning.git", "dir": "DataScribe_DeepTabularLearning"},
+  "obelix-solid-electrolytes": {"git": "https://github.com/NRC-Mila/OBELiX.git", "dir": "OBELiX"},
+  "openpoly-benchmark":    {"git": "https://github.com/WangGroupFDU/Openpoly_benchmark.git", "dir": "Openpoly_benchmark"},
+  "nist-isodb":            {"git": "https://github.com/NIST-ISODB/isodb-library.git", "dir": "isodb-library"},
 }
+ISODB_CAP = 8000  # isotherm files parsed per build; raise on a fast machine
 
 def ensure(workdir, spec):
     p = os.path.join(workdir, spec["dir"])
@@ -99,6 +103,42 @@ def load_all(workdir, con):
     for _, r in d.iterrows():
         for c in props:
             rows.append(M("mpea-dataset-borg", r[fcol], "formula", str(c)[:40], r[c]))
+    # OBELiX solid electrolytes
+    p = ensure(workdir, SOURCES["obelix-solid-electrolytes"])
+    d = pd.read_csv(os.path.join(p, "data/processed.csv"))
+    d.to_sql("raw_obelix", con, if_exists="replace", index=False)
+    for _, r in d.iterrows():
+        rows.append(M("obelix-solid-electrolytes", r["Composition"], "formula",
+                      "ionic_conductivity", r["Ionic conductivity (S cm-1)"], "S/cm"))
+    # OpenPoly polymer benchmark (wide -> long)
+    p = ensure(workdir, SOURCES["openpoly-benchmark"])
+    d = pd.read_csv(os.path.join(p, "data/final_polymer_properties_fromliterature.csv"))
+    d.to_sql("raw_openpoly", con, if_exists="replace", index=False)
+    for _, r in d.iterrows():
+        for c in d.columns:
+            if c in ("Name", "PSMILES"): continue
+            rows.append(M("openpoly-benchmark", r.get("PSMILES", r.get("Name")), "smiles", str(c)[:50], r[c]))
+    # NIST ISODB (one summary row per isotherm: max uptake at max pressure)
+    import glob as g, json as j
+    p = ensure(workdir, SOURCES["nist-isodb"])
+    files = g.glob(os.path.join(p, "**", "*.json"), recursive=True)
+    parsed = 0
+    for f in files:
+        if parsed >= ISODB_CAP: break
+        try:
+            o = j.load(open(f, encoding="utf-8"))
+            pts = o.get("isotherm_data")
+            if not pts: continue
+            ads = (o.get("adsorbates") or [{}])[0].get("name", "?")
+            mat = (o.get("adsorbent") or {}).get("name", "?")
+            T = o.get("temperature", "?")
+            best = max(pts, key=lambda x: x.get("pressure", 0) or 0)
+            upt = (best.get("species_data") or [{}])[0].get("adsorption", best.get("total_adsorption"))
+            rows.append(M("nist-isodb", mat, "name", f"uptake_{ads}", upt,
+                          str(o.get("adsorptionUnits", "")), f"T={T}K P={best.get('pressure')} {o.get('pressureUnits','')}"))
+            parsed += 1
+        except Exception:
+            continue
     return [r for r in rows if r]
 
 def main():
