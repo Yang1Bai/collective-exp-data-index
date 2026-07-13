@@ -1,0 +1,30 @@
+# Discovery output (candidates awaiting review) — regenerate as needed
+scripts/discovered/
+
+# PRIVATE TDM material — API keys and any downloaded publisher content.
+# Licensed content must NEVER be committed or pushed anywhere.
+scripts/tdm/.env
+*.env
+tdm_private_data/
+reports/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local notes not meant for the repo
+scratch/
+*.local.md

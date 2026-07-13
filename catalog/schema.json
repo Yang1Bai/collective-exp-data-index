@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/collective-exp-data-index/schema.json",
+  "title": "Collective Experimental Data Index - catalog entry",
+  "description": "Schema for a single database/dataset entry in the catalog. The catalog stores METADATA and LINKS only; it does not re-host source files.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "description", "domain", "subdomain", "data_type", "access", "homepage_url"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case slug, unique across the catalog."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Human-readable database/dataset name."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "description": "1-3 sentences: what's in it, approximate size/scope, how the data was generated."
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["materials", "chemistry"],
+      "description": "Primary discipline. Add cross-domain relevance via tags."
+    },
+    "subdomain": {
+      "type": "string",
+      "description": "Finer topical grouping (e.g. general-properties, crystallography, catalysis, batteries, photovoltaics, reactions, spectroscopy, bioactivity, quantum-chem, hte-synthesis, benchmark-ml, high-throughput-exp)."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "data_type": {
+      "type": "string",
+      "enum": ["experimental", "computational", "mixed"],
+      "description": "Whether the underlying data is measured (experimental), simulated (computational), or both."
+    },
+    "access": {
+      "type": "string",
+      "enum": ["open", "registration", "restricted"],
+      "description": "open = free download; registration = free account required; restricted = paywall/subscription for full access."
+    },
+    "license": {
+      "type": ["string", "null"],
+      "description": "License of the underlying data if known (e.g. CC-BY-4.0, CC0, MIT, Unknown)."
+    },
+    "doi": {
+      "type": ["string", "null"],
+      "description": "DOI of the dataset or its defining paper, without the https://doi.org/ prefix. Null if none confirmed."
+    },
+    "homepage_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical landing page or repository record for the dataset."
+    },
+    "repository": {
+      "type": ["string", "null"],
+      "description": "Where the data physically lives (e.g. Zenodo, Figshare, Materials Cloud, NIST, GitHub, self-hosted)."
+    },
+    "associated_paper": {
+      "type": ["string", "null"],
+      "description": "Short citation of the paper that introduced the dataset, if any."
+    },
+    "year": {
+      "type": ["integer", "null"],
+      "minimum": 1950,
+      "maximum": 2100
+    },
+    "data_type_notes": {
+      "type": ["string", "null"]
+    },
+    "source": {
+      "type": "string",
+      "enum": ["curated-seed", "api-discovery", "community-contribution"],
+      "default": "curated-seed",
+      "description": "How this entry entered the catalog."
+    },
+    "added": {
+      "type": ["string", "null"],
+      "description": "ISO date the entry was added."
+    },
+    "verified_via": {
+      "type": ["string", "null"],
+      "description": "URL where the entry's existence/metadata was confirmed."
+    }
+  }
+}

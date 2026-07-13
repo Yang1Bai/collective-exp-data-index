@@ -1,0 +1,9 @@
+# Core tooling (build_seed, build_exports, validate) is pure stdlib and needs nothing.
+# The extras below are optional:
+
+# Strict JSON-Schema validation (validate_catalog.py falls back to a lite
+# checker if this is absent):
+jsonschema>=4.0
+
+# Nicer discovery HTTP (discover.py falls back to urllib if requests is absent):
+requests>=2.28
