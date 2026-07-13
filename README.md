@@ -50,7 +50,7 @@ scrape it.
 
 ## What's in the seed catalog
 
-The catalog holds **109 curated, verified databases** across materials
+The catalog holds **118 curated, verified databases** across materials
 science and chemistry — with particular depth in high-throughput
 experimentation and self-driving-lab campaign datasets — each confirmed
 against its live landing page. Browse it three ways:

@@ -1,6 +1,6 @@
 # Catalog
 
-_113 databases · updated 2026-07-13 · 85 experimental · 28 mixed · 0 computational_
+_118 databases · updated 2026-07-13 · 90 experimental · 28 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -34,12 +34,12 @@ _113 databases · updated 2026-07-13 · 85 experimental · 28 mixed · 0 computa
 - **Materials**
   - [Additive manufacturing](#materials-additive-manufacturing) (1)
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
-  - [Batteries & energy storage](#materials-batteries) (7)
+  - [Batteries & energy storage](#materials-batteries) (9)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
   - [Catalysis](#materials-catalysis) (1)
   - [Crystallography](#materials-crystallography) (2)
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
-  - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (1)
+  - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
   - [General materials properties](#materials-general-properties) (3)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
@@ -52,7 +52,7 @@ _113 databases · updated 2026-07-13 · 85 experimental · 28 mixed · 0 computa
   - [Organic electronics](#materials-organic-electronics) (2)
   - [Photovoltaics & solar cells](#materials-photovoltaics) (6)
   - [Polymers](#materials-polymers) (4)
-  - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (3)
+  - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (5)
   - [Superconductors](#materials-superconductors) (1)
   - [Thermoelectrics](#materials-thermoelectrics) (2)
   - [Thermophysical properties](#materials-thermophysical) (1)
@@ -492,6 +492,12 @@ NIMS Materials Database platform spanning polymer, inorganic and metallic databa
 <a id="materials-batteries"></a>
 ### Batteries & energy storage
 
+#### 🧪🔓 [Battery Materials Database (ChemDataExtractor, Huang & Cole)](https://springernature.figshare.com/articles/Metadata_record_for_A_database_of_battery_materials_auto-generated_using_ChemDataExtractor/12646277/1)
+
+Literature-mined database of experimentally reported battery material properties auto-generated with ChemDataExtractor: ~292,000 records (capacity, voltage, conductivity, Coulombic efficiency, energy density) extracted from ~229,000 papers. Scientific Data (2020).
+
+`experimental`· `open`· 2020 · CC0-1.0 · Figshare· DOI: [10.6084/m9.figshare.12646277.v1](https://doi.org/10.6084/m9.figshare.12646277.v1)· tags: `battery-materials`, `text-mining`, `literature-curated`, `capacity`, `conductivity`
+
 #### 🧪🔓 [BatteryArchive.org](https://batteryarchive.org/)
 
 Public repository for visualization, analysis and comparison of experimental battery cycling data across institutions, aggregating datasets (e.g. from Sandia, NREL, CALCE, Oxford) converted to a common format with cycle- and time-series data. Data are experimental cell-testing measurements.
@@ -503,6 +509,12 @@ Public repository for visualization, analysis and comparison of experimental bat
 Open experimental Li-ion battery test data from the Center for Advanced Life Cycle Engineering: continuous full/partial cycling, storage, dynamic driving profiles, OCV and impedance measurements across LCO, LFP and NMC chemistries in multiple form factors. Standard reference data for state estimation and degradation modeling.
 
 `experimental`· `open`· 2011 · Other (free for research; citation requested) · CALCE, Univ. Maryland· tags: `lithium-ion`, `degradation`, `cycling-data`, `state-of-charge`, `state-of-health`
+
+#### 🧪🔓 [Multi-Stage Lithium-Ion Battery Aging Dataset](https://figshare.com/articles/dataset/Multi-Stage_Lithium_Ion_Battery_Aging_Study/25975315/1)
+
+Experimental Li-ion aging dataset built with multiple design-of-experiment methodologies: 280 files (10.3 GB) of cycling/aging measurements across stages and conditions. Deposited with the Scientific Data descriptor (2024).
+
+`experimental`· `open`· 2024 · CC-BY-4.0 · Figshare· DOI: [10.6084/m9.figshare.25975315.v1](https://doi.org/10.6084/m9.figshare.25975315.v1)· tags: `lithium-ion`, `aging`, `cycling-data`, `design-of-experiments`
 
 #### 🧪🔓 [NASA Prognostics Center of Excellence (PCoE) Battery Datasets](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/)
 
@@ -596,6 +608,12 @@ Open data portal of the NSF Materials Innovation Platform PARADIM (Cornell/Johns
 
 <a id="materials-electrocatalysis-exp"></a>
 ### Electrocatalysis (experimental HTE)
+
+#### 🧪🔓 [In-Situ PEM Fuel Cell Cathode Catalyst Degradation Dataset](https://figshare.com/articles/dataset/_b_In-Situ_Characterization_of_Cathode_Catalyst_Degradation_in_PEM_Fuel_Cells_b_/25450177/1)
+
+Experimental in-situ characterization of cathode catalyst degradation in proton-exchange-membrane fuel cells: 51 files (851 MB) of electrochemical and characterization data with analysis scripts. Scientific Data descriptor (2024).
+
+`experimental`· `open`· 2024 · CC-BY-4.0 · Figshare· DOI: [10.6084/m9.figshare.25450177.v1](https://doi.org/10.6084/m9.figshare.25450177.v1)· tags: `pem-fuel-cell`, `catalyst-degradation`, `in-situ`, `electrochemistry`
 
 #### 🧪🔓 [Materials Experiment and Analysis Database (MEAD, Caltech HTE/JCAP)](https://solarfuelshub.org/materials-experiment-and-analysis-database)
 
@@ -827,6 +845,18 @@ NIST/CHiMaD resource (UChicago) curating experimentally measured Flory-Huggins i
 
 <a id="materials-spectra-exp"></a>
 ### Experimental spectra (XPS/Raman/XRD)
+
+#### 🧪🔓 [LIBS Benchmark Classification Dataset](https://springernature.figshare.com/articles/Training_dataset/11316578/1)
+
+Benchmark dataset of measured laser-induced breakdown spectroscopy (LIBS) spectra for classification: 7.6 GB HDF5 training set (plus test set) covering many sample classes, released as a Scientific Data descriptor (2020). CC0.
+
+`experimental`· `open`· 2020 · CC0-1.0 · Figshare· DOI: [10.6084/m9.figshare.11316578.v1](https://doi.org/10.6084/m9.figshare.11316578.v1)· tags: `libs`, `spectroscopy`, `benchmark`, `classification`, `hdf5`
+
+#### 🧪🔓 [Multidimensional Photoemission Spectra of WSe2](https://zenodo.org/record/2704787)
+
+Measured multidimensional (time/angle-resolved) photoemission spectroscopy data of tungsten diselenide: 6.2 GB HDF5 volumes released with an open-source end-to-end workflow for multidimensional photoemission spectroscopy. Scientific Data (2020).
+
+`experimental`· `open`· 2020 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.2704787](https://doi.org/10.5281/zenodo.2704787)· tags: `arpes`, `photoemission`, `2d-materials`, `hdf5`, `trarpes`
 
 #### 🧪🔓 [NIST X-ray Photoelectron Spectroscopy Database (SRD 20)](https://srdata.nist.gov/xps/)
 
