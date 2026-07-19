@@ -1423,7 +1423,7 @@
     {
       "id": "m9-figshare-28235162-v1",
       "name": "Sustainability indicators in high entropy alloy design: an economic, environmental, and societal database",
-      "description": "Dataset deposited alongside: Sustainability indicators in high entropy alloy design: an economic, environmental, and societal database (Scientific Data, 2025-2-17).",
+      "description": "This dataset contains 9 sustainability indicators for 18 elements (Al, Co, Cr, Cu, Fe, Hf, Mn, Mo, Nb, Ni, Re, Ru, Si, Ta, Ti, V, W, Zr) commonly used in High Entropy Alloys (HEAs).",
       "domain": "materials",
       "subdomain": "alloys",
       "tags": [],
@@ -1493,7 +1493,7 @@
     {
       "id": "m9-figshare-30630491",
       "name": "A Scalable, Biopolymer-Based Microenvironment for Electrochemical CO2 Conversion to Multicarbon Products with Current Densities Over 2 A/cm2",
-      "description": "Dataset deposited alongside: A scalable, biopolymer-based microenvironment for electrochemical CO2 conversion to multicarbon products with current densities over 2 A cm−2 (Nature Energy, 2026-4-17). Dataset size: 132 MB.",
+      "description": "The data consists of experimental results underlying our study. Dataset size: 132 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1512,7 +1512,7 @@
     {
       "id": "m9-figshare-26713166",
       "name": "Additional file 3 of Classification of battery compounds using structure-free Mendeleev encodings",
-      "description": "Dataset deposited alongside: A database of battery materials auto-generated using ChemDataExtractor (Scientific Data, 2020-8-6).",
+      "description": "Additional file 3. Periodic table csv file to undertake cleaning of the experimental data set, in combination with Additional file 2.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1606,7 +1606,7 @@
     {
       "id": "m9-figshare-28915994",
       "name": "Direct Evidence of Metal-Ligand Redox in Li-ion Battery Cathodes",
-      "description": "Dataset deposited alongside: Direct evidence of metal–ligand redox processes in positive electrodes during lithium-based battery operation (Nature Nanotechnology, 2026-6-9). Dataset size: 39 MB.",
+      "description": "Experimental data from diamond I09 and B07 regarding X-ray absorption and RPES to understand redox mechanisms. Dataset size: 39 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1625,7 +1625,7 @@
     {
       "id": "m9-figshare-30279262-v1",
       "name": "Flow-Synchronized Ring-shaped Electrochemical Ion Pumping for Redox-Free Desalination without Terminal Electrodes",
-      "description": "Dataset deposited alongside: Flow-synchronized ring-shaped electrochemical ion pumping for redox-free desalination without terminal electrodes (Nature Chemical Engineering, 2025-12-29). Dataset size: 3 MB.",
+      "description": "data for figures in main text and SI. Dataset size: 3 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1644,7 +1644,7 @@
     {
       "id": "m9-figshare-28158095",
       "name": "Hydration entropy of cations regulates chloride ion diffusion during electrochemical chlorine evolution",
-      "description": "Dataset deposited alongside: Hydration entropy of cations regulates chloride ion diffusion during electrochemical chlorine evolution (Nature Chemistry, 2025-12-8). Dataset size: 310 MB.",
+      "description": "- Numerical data are provided for all Supplementary Figures (.xlsx). - Python scripts (.py) are included in Supplementary Figs. 28 and 29. No proprietary code were used. - All data are managed by T.L. Dataset size: 310 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1663,7 +1663,7 @@
     {
       "id": "m9-figshare-12423878-v1",
       "name": "Metadata record for: Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents",
-      "description": "Dataset deposited alongside: Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents (Scientific Data, 2020-6-22).",
+      "description": "This dataset contains key characteristics about the data described in the Data Descriptor Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1682,7 +1682,7 @@
     {
       "id": "m9-figshare-14915256-v1",
       "name": "Metadata record for: Quantum chemical calculations of lithium-ion battery electrolyte and interphase species",
-      "description": "Dataset deposited alongside: Quantum chemical calculations of lithium-ion battery electrolyte and interphase species (Scientific Data, 2021-8-5).",
+      "description": "This dataset contains key characteristics about the data described in the Data Descriptor Quantum chemical calculations of lithium-ion battery electrolyte and interphase species. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1701,7 +1701,7 @@
     {
       "id": "m9-figshare-29257265-v1",
       "name": "Molecularly aligned electron-channels for ultrafast-charging practical lithium metal batteries",
-      "description": "Dataset deposited alongside: Molecularly aligned electron channels for ultrafast-charging practical lithium-metal batteries (Nature Energy, 2026-1-23). Dataset size: 2 MB.",
+      "description": "Molecular design for ultrafast-charging practical lithium metal batteries. Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1846,7 +1846,7 @@
     {
       "id": "m9-figshare-29231339-v1",
       "name": "Source Data",
-      "description": "Dataset deposited alongside: Grid-scale corrosion-free Zn/Br flow batteries enabled by a multi-electron transfer reaction (Nature Energy, 2025-12-19). Dataset size: 1 MB.",
+      "description": "Experimental battery and electrochemical systems dataset: Source Data. Published alongside a Nature Energy study (2026). Deposited on figshare. Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1890,7 +1890,7 @@
     {
       "id": "m9-figshare-32262747",
       "name": "Unveiling Solid Electrolyte Interphase Dynamics in Electrochemical Lithium-Mediated Ammonia Synthesis via Operando Raman Spectroscopy",
-      "description": "Dataset deposited alongside: Unveiling solid electrolyte interphase dynamics in electrochemical lithium-mediated ammonia synthesis via operando Raman spectroscopy (Nature Catalysis, 2026-6-30). Dataset size: 3 MB.",
+      "description": "Statistical source data of Raman spectra, LSV, and SEI intensities Statistical source data of Raman spectra, potential, SEI intensities, and FE(NH3) Statistical source data of Raman spectra, potential, SEI intensities, and FE(NH3) Statistical source data of Raman spectra, perchlorate/solvent peak analysis, and SEI intensities Statistical source data of potential, FE(NH3), yield rates, Raman spectr…",
       "domain": "materials",
       "subdomain": "batteries",
       "tags": [],
@@ -1959,7 +1959,7 @@
     {
       "id": "zenodo-18044162",
       "name": "A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands",
-      "description": "Dataset deposited alongside: A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands (Scientific Data, 2026-6-3). Dataset size: 14.5 GB.",
+      "description": "Grasslands are critical to the global carbon cycle and support livestock production, yet long-term, high-resolution global datasets of grassland aboveground biomass (AGB) remain scarce, since existing products are often spatially coarse, temporally discontinuous, or regionally limited. Here, we present a global grassland AGB dataset spanning 2000–2022 at 0.005° spatial resolution.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -1978,7 +1978,7 @@
     {
       "id": "zenodo-18044163",
       "name": "A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands",
-      "description": "Dataset deposited alongside: A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands (Scientific Data, 2026-6-3). Dataset size: 14.5 GB.",
+      "description": "Grasslands are critical to the global carbon cycle and support livestock production, yet long-term, high-resolution global datasets of grassland aboveground biomass (AGB) remain scarce, since existing products are often spatially coarse, temporally discontinuous, or regionally limited. Here, we present a global grassland AGB dataset spanning 2000–2022 at 0.005° spatial resolution.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -1997,7 +1997,7 @@
     {
       "id": "m9-figshare-32257284",
       "name": "A secreted endosymbiont protein essential for colonizing host cells",
-      "description": "Dataset deposited alongside: A secreted endosymbiont protein essential for colonizing host cells (Nature, 2026-7-1). Dataset size: 0 MB.",
+      "description": "These data were used to support the results and include data used in bioinformatic analyses, image analyses, and experiments on knockdown of the syeA gene. The tables also include accessions for the data used in analyses.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2016,7 +2016,7 @@
     {
       "id": "m9-figshare-31231516-v1",
       "name": "Biophysical and Molecular mechanisms that control active wetting and tissue fluidification in epithelial tissues",
-      "description": "Dataset deposited alongside: Mechanisms of active wetting and fluidification in epithelial cell collectives (Nature Materials, 2026-3-23). Dataset size: 0 MB.",
+      "description": "contains the raw data underlying any graphs and charts presented as Excel file",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2035,7 +2035,7 @@
     {
       "id": "m9-figshare-29264624-v1",
       "name": "Cho and Prabowo-etal-Source data",
-      "description": "Dataset deposited alongside: High-titer, antibiotic-free, pilot-scale production of 1,3-propanediol by engineered Corynebacterium (Nature Chemical Engineering, 2026-5-12). Dataset size: 0 MB.",
+      "description": "Source data for all the results presented in the submitted paper.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2054,7 +2054,7 @@
     {
       "id": "m9-figshare-26161684",
       "name": "Construction of synthetic non-genetic DNA-protein systems in living cells",
-      "description": "Dataset deposited alongside: Construction of synthetic protein-binding non-genetic DNA systems in living cells (Nature Chemistry, 2026-1-16). Dataset size: 17 MB.",
+      "description": "The zip file includes raw image data obtained from fluorescence microscopy. Dataset size: 17 MB.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2073,7 +2073,7 @@
     {
       "id": "m9-figshare-28429202-v1",
       "name": "Efficient and reversible chirality induction between protein and achiral plasmonic assemblies",
-      "description": "Dataset deposited alongside: Efficient and reversible chirality induction between protein and achiral plasmonic assemblies (Nature Materials, 2026-4-15). Dataset size: 20 MB.",
+      "description": "Experimental and simulation data. Dataset size: 20 MB.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2092,7 +2092,7 @@
     {
       "id": "m9-figshare-27302391",
       "name": "Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming",
-      "description": "Dataset deposited alongside: Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming (Nature Sustainability, 2026-3-16). Dataset size: 0 MB.",
+      "description": "Experimental biological activity dataset: Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming. Published alongside a Nature Sustainability study (2026). Deposited on figshare.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2111,7 +2111,7 @@
     {
       "id": "m9-figshare-31161145-v1",
       "name": "Purcell-enhanced two-photon emission from a quantum dot via dark-state biexciton loading",
-      "description": "Dataset deposited alongside: Purcell-enhanced two-photon emission from a quantum dot via dark-state biexciton loading (Nature Materials, 2026-3-2). Dataset size: 2 MB.",
+      "description": "Source data in .xlsx format for preparing the figures in the main text. Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2130,7 +2130,7 @@
     {
       "id": "m9-figshare-30687980-v1",
       "name": "Versatile heavy metal ion separation via biological ion-channel-inspired membranes",
-      "description": "Dataset deposited alongside: Versatile heavy metal ion separation via biological ion-channel-inspired membranes (Nature Nanotechnology, 2026-4-16).",
+      "description": "Raw data of uranium extraction from seawater by TpPa-AO membrane.",
       "domain": "materials",
       "subdomain": "bioactivity",
       "tags": [],
@@ -2149,7 +2149,7 @@
     {
       "id": "zenodo-7106173",
       "name": "CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials",
-      "description": "Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.",
+      "description": "Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2168,7 +2168,7 @@
     {
       "id": "zenodo-10120180",
       "name": "CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials",
-      "description": "Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.",
+      "description": "Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2187,7 +2187,7 @@
     {
       "id": "zenodo-8190237",
       "name": "CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials",
-      "description": "Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.",
+      "description": "Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2206,7 +2206,7 @@
     {
       "id": "zenodo-17977395",
       "name": "Data associated to \"An end-to-end framework for reactivity in heterogeneous catalysis\"",
-      "description": "Dataset deposited alongside: An end-to-end framework for reactivity in heterogeneous catalysis (Nature Chemical Engineering, 2026-3-19). Dataset size: 1008 MB.",
+      "description": "This repository contains the results associated to the article \"An end-to-end framework for reactivity in heterogeneous catalysis\" published in Nature Chemical Engineering (DOI: https://doi.org/10.1038/s44286-026-00361-8 ). Dataset size: 1008 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2225,7 +2225,7 @@
     {
       "id": "zenodo-17977394",
       "name": "Data associated to \"An end-to-end framework for reactivity in heterogeneous catalysis\"",
-      "description": "Dataset deposited alongside: An end-to-end framework for reactivity in heterogeneous catalysis (Nature Chemical Engineering, 2026-3-19). Dataset size: 1008 MB.",
+      "description": "This repository contains the results associated to the article \"An end-to-end framework for reactivity in heterogeneous catalysis\" published in Nature Chemical Engineering (DOI: https://doi.org/10.1038/s44286-026-00361-8 ). Dataset size: 1008 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2244,7 +2244,7 @@
     {
       "id": "zenodo-19349955",
       "name": "Data for the publication \"Quantum Fisher information in a strange metal\"",
-      "description": "Dataset deposited alongside: Quantum Fisher information in a strange metal (Nature Physics, 2026-6-15).",
+      "description": "Datasets underlying the figures in the publication \"Quantum Fisher information in a strange metal\"",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2263,7 +2263,7 @@
     {
       "id": "zenodo-19349954",
       "name": "Data for the publication \"Quantum Fisher information in a strange metal\"",
-      "description": "Dataset deposited alongside: Quantum Fisher information in a strange metal (Nature Physics, 2026-6-15).",
+      "description": "Datasets underlying the figures in the publication \"Quantum Fisher information in a strange metal\"",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2282,7 +2282,7 @@
     {
       "id": "m9-figshare-31052176-v9",
       "name": "Data set for: Terahertz Time-Domain imaging of feet of diabetic and non-diabetic patients",
-      "description": "Dataset deposited alongside: Terahertz Time-Domain imaging of feet of diabetic and non-diabetic patients (Scientific Data, 2026-6-26). Dataset size: 12.1 GB.",
+      "description": "This respository contains Terahertz Time-Domain imaging dataset of human plantar surface of the feet acquired from type-2 diabetic and non-diabetic volunteers. The measurements were collected in reflection geometry using a fiber-coupled terahertz system and include spatially resolved terahertz waveforms obtained through raster scanning of both feet soles.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2301,7 +2301,7 @@
     {
       "id": "zenodo-15300305",
       "name": "Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (DOI",
-      "description": "Dataset deposited alongside: Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts (Nature Catalysis, 2025-7-17). Dataset size: 2 MB.",
+      "description": "Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (Nature Catalysis; https://www.nature.com/articles/s41929-025-01370-1). Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2320,7 +2320,7 @@
     {
       "id": "zenodo-15300306",
       "name": "Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (DOI",
-      "description": "Dataset deposited alongside: Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts (Nature Catalysis, 2025-7-17). Dataset size: 2 MB.",
+      "description": "Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (Nature Catalysis; https://www.nature.com/articles/s41929-025-01370-1). Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2339,7 +2339,7 @@
     {
       "id": "zenodo-18183751",
       "name": "Dataset: Strain boosts propanol electrosynthesis from CO",
-      "description": "Dataset deposited alongside: Strain boosts propanol electrosynthesis from CO on copper (Nature Catalysis, 2026-3-16). Dataset size: 28 MB.",
+      "description": "The two-step electroreduction of CO 2 to CO followed by CO to multi-carbon products is a promising alternative to the direct CO 2 electroreduction for both efficiency and stability. The catalyst features which control selectivity in CO electroreduction (CORR) remain unclear, which limits further advancement in the overall performance.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2358,7 +2358,7 @@
     {
       "id": "zenodo-18183752",
       "name": "Dataset: Strain boosts propanol electrosynthesis from CO",
-      "description": "Dataset deposited alongside: Strain boosts propanol electrosynthesis from CO on copper (Nature Catalysis, 2026-3-16). Dataset size: 28 MB.",
+      "description": "The two-step electroreduction of CO 2 to CO followed by CO to multi-carbon products is a promising alternative to the direct CO 2 electroreduction for both efficiency and stability. The catalyst features which control selectivity in CO electroreduction (CORR) remain unclear, which limits further advancement in the overall performance.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2377,7 +2377,7 @@
     {
       "id": "zenodo-17647531",
       "name": "De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis.",
-      "description": "Dataset deposited alongside: De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis (Nature Catalysis, 2025-11-3). Dataset size: 23 MB.",
+      "description": "Data underlying the figures/tables of the publication: Zou, Z., Kalvet, I., Lozhkin, B. et al. De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis. Nat Catal (2025). https://doi.org/10.1038/s41929-025-01436-0. Dataset size: 23 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2396,7 +2396,7 @@
     {
       "id": "zenodo-17647530",
       "name": "De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis.",
-      "description": "Dataset deposited alongside: De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis (Nature Catalysis, 2025-11-3). Dataset size: 23 MB.",
+      "description": "Data underlying the figures/tables of the publication: Zou, Z., Kalvet, I., Lozhkin, B. et al. De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis. Nat Catal (2025). https://doi.org/10.1038/s41929-025-01436-0. Dataset size: 23 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2415,7 +2415,7 @@
     {
       "id": "zenodo-20135543",
       "name": "Direct evaluation of coherence in a Magnon Bose-Einstein Condensate",
-      "description": "Dataset deposited alongside: Emergence of phase coherence in a magnon Bose–Einstein condensate (Nature Physics, 2026-7-13). Dataset size: 1.4 GB.",
+      "description": "The spontaneous emergence of coherence is a defining feature of multi-body quantum systems, underlying phenomena from superconductivity to quantum information processing. While Bose-Einstein condensates (BECs) provide a unique setting for exploring this process, yet direct observation of how a condensate acquires a coherent global phase has remained out of reach.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2434,7 +2434,7 @@
     {
       "id": "zenodo-20135542",
       "name": "Direct evaluation of coherence in a Magnon Bose-Einstein Condensate",
-      "description": "Dataset deposited alongside: Emergence of phase coherence in a magnon Bose–Einstein condensate (Nature Physics, 2026-7-13). Dataset size: 1.4 GB.",
+      "description": "The spontaneous emergence of coherence is a defining feature of multi-body quantum systems, underlying phenomena from superconductivity to quantum information processing. While Bose-Einstein condensates (BECs) provide a unique setting for exploring this process, yet direct observation of how a condensate acquires a coherent global phase has remained out of reach.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2453,7 +2453,7 @@
     {
       "id": "m9-figshare-29647922-v1",
       "name": "Emergent Harmonics in Josephson Tunnel Junctions Due to Series Inductance",
-      "description": "Dataset deposited alongside: Higher-order harmonics in Josephson tunnel junctions due to series inductance (Nature Physics, 2026-5-12). Dataset size: 21 MB.",
+      "description": "Flux-biased spectroscopy data for fourteeen qubits. Dataset size: 21 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2472,7 +2472,7 @@
     {
       "id": "m9-figshare-28091891-v1",
       "name": "Full-Spectrum Photocatalyst for Radical-Regulated Selective Methane Conversion",
-      "description": "Dataset deposited alongside: Co3O4 as full-solar-spectrum photocatalyst for selective methane conversion through reactive oxygen species control (Nature Catalysis, 2026-1-23). Dataset size: 15 MB.",
+      "description": "Raw data of the figures conrresponding to the article entitled: Full-Spectrum Photocatalyst for Radical-Regulated Selective Methane Conversion. Dataset size: 15 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2491,7 +2491,7 @@
     {
       "id": "zenodo-18039731",
       "name": "High-resolution multimodal microclimate dataset: thermal, radiative and physiological measurements of a mature linden tree (tilia cordata)",
-      "description": "Dataset deposited alongside: Multi-sensor microclimate and tree canopy dataset from a linden tree for green infrastructure validation (Scientific Data, 2026-6-1). Dataset size: 7.4 GB.",
+      "description": "Multi-sensor microclimate dataset from a mature urban linden tree ( Tilia cordata ) collected over 72 hours in June 2025 near Grünstadt, Germany. Dataset size: 7.4 GB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2510,7 +2510,7 @@
     {
       "id": "zenodo-18039730",
       "name": "High-resolution multimodal microclimate dataset: thermal, radiative and physiological measurements of a mature linden tree (tilia cordata)",
-      "description": "Dataset deposited alongside: Multi-sensor microclimate and tree canopy dataset from a linden tree for green infrastructure validation (Scientific Data, 2026-6-1). Dataset size: 7.4 GB.",
+      "description": "Multi-sensor microclimate dataset from a mature urban linden tree ( Tilia cordata ) collected over 72 hours in June 2025 near Grünstadt, Germany. Dataset size: 7.4 GB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2529,7 +2529,7 @@
     {
       "id": "m9-figshare-29591042-v1",
       "name": "Multi-applied field modulation enables efficient multielectron molecular CO2 reduction in strong acid",
-      "description": "Dataset deposited alongside: Efficient CO2-to-methanol electrocatalysis in acidic media via microenvironment-tuned cobalt phthalocyanine (Nature Nanotechnology, 2025-11-17). Dataset size: 4 MB.",
+      "description": "Source data for manuscript in the main text. Dataset size: 4 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2574,7 +2574,7 @@
     {
       "id": "zenodo-16878886",
       "name": "Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning",
-      "description": "Dataset deposited alongside: Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning (Nature Catalysis, 2025-9-29). Dataset size: 9.0 GB.",
+      "description": "Neural Network Potential-driven Molecular Dynamics Database for Catalyst Support Materials This database contains Neural Network Potential driven Molecular Dynamics (NN-MD) simulation results for 3nm Pt nanoparticle supported on various metal oxides supports at 800 °C for 500 ps and high-throughput screening results for catalyst support materials, organized into three datasets for comprehensive an…",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2593,7 +2593,7 @@
     {
       "id": "zenodo-16878887",
       "name": "Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning",
-      "description": "Dataset deposited alongside: Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning (Nature Catalysis, 2025-9-29). Dataset size: 9.0 GB.",
+      "description": "Neural Network Potential-driven Molecular Dynamics Database for Catalyst Support Materials This database contains Neural Network Potential driven Molecular Dynamics (NN-MD) simulation results for 3nm Pt nanoparticle supported on various metal oxides supports at 800 °C for 500 ps and high-throughput screening results for catalyst support materials, organized into three datasets for comprehensive an…",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2612,7 +2612,7 @@
     {
       "id": "m9-figshare-28531955-v1",
       "name": "Resolving Non-Covalent Interactions Between Surface Hydroxyl on Cu and Interfacial Water in Alkaline CO Electroreduction",
-      "description": "Dataset deposited alongside: Resolving non-covalent interactions between surface hydroxyl on Cu and interfacial water in alkaline CO electroreduction (Nature Catalysis, 2025-8-19). Dataset size: 1 MB.",
+      "description": "Original datas for the manuscript. Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2631,7 +2631,7 @@
     {
       "id": "m9-figshare-31975524-v1",
       "name": "Single cell transcriptome profiling of peripheral blood mononuclear cells in Guillain–Barré syndrome patients",
-      "description": "Dataset deposited alongside: Single cell transcriptome profiling of peripheral blood mononuclear cells in Guillain–Barré syndrome patients (Scientific Data, 2026-6-5). Dataset size: 3.9 GB.",
+      "description": "We collected a total of 5 human peripheral blood mononuclear cells and performed single-cell RNAseq sequencing. Among them, PBMC1, PBMC2, and PBMC3 were data from three GBS patients, while HPBMC1 and HPBMC2 were data from two healthy controls matched for age and gender. Dataset size: 3.9 GB.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2650,7 +2650,7 @@
     {
       "id": "m9-figshare-31743865-v1",
       "name": "Sub-nanometer Alloyed Clusters Sustain High Productivity in Propane Dehydrogenation",
-      "description": "Dataset deposited alongside: Subnanometre PtSn alloyed clusters encapsulated in silicalite-1 sustain high productivity in propane dehydrogenation (Nature Catalysis, 2026-5-26). Dataset size: 948 MB.",
+      "description": "Propane dehydrogenation (PDH) processes typically operate at low weight-hourly space velocities (WHSV) about 10 h⁻¹ to ensure catalyst stability, limiting propylene productivity to around 0.1 molC3H6·gcatalyst-1·h-1. Here, we report that controlling the formation of sub-nm PtSn alloyed clusters encapsulated in silicalite-1 affords a catalyst that can sustain high propylene productivities.",
       "domain": "materials",
       "subdomain": "catalysis",
       "tags": [],
@@ -2845,7 +2845,7 @@
     {
       "id": "zenodo-16788655",
       "name": "A quantum resistance memristor for an intrinsically traceable International System of Units standard - Dataset",
-      "description": "Dataset deposited alongside: A quantum resistance memristor for an intrinsically traceable International System of Units standard (Nature Nanotechnology, 2025-10-27). Dataset size: 2 MB.",
+      "description": "This is the dataset of \"A quantum resistance memristor for an intrinsically traceable International System of Units standard\", Nature Nanotechnology, DOI: 10.1038/s41565-025-02037-5, (2025). This work was supported by the European project MEMQuD, code 20FUN06, funder ID: 10.13039/100014132. Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2864,7 +2864,7 @@
     {
       "id": "zenodo-16788654",
       "name": "A quantum resistance memristor for an intrinsically traceable International System of Units standard - Dataset",
-      "description": "Dataset deposited alongside: A quantum resistance memristor for an intrinsically traceable International System of Units standard (Nature Nanotechnology, 2025-10-27). Dataset size: 2 MB.",
+      "description": "This is the dataset of \"A quantum resistance memristor for an intrinsically traceable International System of Units standard\", Nature Nanotechnology, DOI: 10.1038/s41565-025-02037-5, (2025). This work was supported by the European project MEMQuD, code 20FUN06, funder ID: 10.13039/100014132. Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2883,7 +2883,7 @@
     {
       "id": "m9-figshare-29354609-v1",
       "name": "Agricultural Workforce as a Potential Bottleneck of Future Cropland Supply",
-      "description": "Dataset deposited alongside: Agricultural workforce as a potential bottleneck of future cropland availability (Nature Sustainability, 2026-6-1). Dataset size: 3 MB.",
+      "description": "Here, the main manuscript of a research article is presented, along with supplementary material containing additional figures and tables, and a cover letter introducing the research. Dataset size: 3 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2902,7 +2902,7 @@
     {
       "id": "zenodo-20077332",
       "name": "AllpaDB Dataset: Harmonized soil legacy and research data from Peru",
-      "description": "Dataset deposited alongside: AllpaDB: a compiled repository of harmonized soil legacy data and research data from Peru (Scientific Data, 2026-6-25). Dataset size: 2.9 GB.",
+      "description": "This dataset are derived from from historical soil studies conducted throughout Peru. Although soil studies have been carried out in the country since 1962, this information lacked a digital archive and a structured database. This limitation hindered its usefulness for effective land management, scientific research, and education.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2921,7 +2921,7 @@
     {
       "id": "zenodo-20077331",
       "name": "AllpaDB Dataset: Harmonized soil legacy and research data from Peru",
-      "description": "Dataset deposited alongside: AllpaDB: a compiled repository of harmonized soil legacy data and research data from Peru (Scientific Data, 2026-6-25). Dataset size: 2.9 GB.",
+      "description": "This dataset are derived from from historical soil studies conducted throughout Peru. Although soil studies have been carried out in the country since 1962, this information lacked a digital archive and a structured database. This limitation hindered its usefulness for effective land management, scientific research, and education.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2940,7 +2940,7 @@
     {
       "id": "m9-figshare-31153141",
       "name": "An iontronic reservoir for highly robust neuromorphic prosthesis",
-      "description": "Dataset deposited alongside: An iontronic reservoir for highly robust neuromorphic prosthesis (Nature Materials, 2026-3-9). Dataset size: 16 MB.",
+      "description": "This dataset contains the underlying source data for the figures presented in the manuscript. Source_data.xlsx: This spreadsheet includes the numerical data and statistical analysis results for the Main Figures and relevant Extended Data Figures. MATLAB Files (.mat): Due to file size constraints, the large raw datasets corresponding to the Extended Data Figures (e.g., Extended Data Fig. 3, Fig.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2959,7 +2959,7 @@
     {
       "id": "m9-figshare-32144932-v1",
       "name": "Aneuploidy selects for the acquisition of driver genes in breast cancer",
-      "description": "Dataset deposited alongside: Aneuploidy selects for the acquisition of driver genes in breast cancer (Nature, 2026-7-8). Dataset size: 266 MB.",
+      "description": "Gene-level copy number calls from whole genome sequencing of mouse tumors. Dataset size: 266 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -2978,7 +2978,7 @@
     {
       "id": "m9-figshare-31047436",
       "name": "Charge-Triggered Switching Mechanism in Selenium Select Enabling Ultralow Leakage-Current",
-      "description": "Dataset deposited alongside: Charge-triggered switching mechanism in selenium selector enabling ultralow leakage current (Nature Materials, 2026-3-2). Dataset size: 11 MB.",
+      "description": "This dataset contains the minimum source data for most figures presented in the accompanying manuscript titled \"Charge-Triggered Switching Mechanism in Selenium Selector Enabling Ultralow Leakage-Current\". Individual data files corresponding to each main figure. Each file contains the raw or primary processed data used to generate the specific panels within that figure.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3021,7 +3021,7 @@
     {
       "id": "m9-figshare-26180530",
       "name": "County-Level Environmental and Social Influences on EPA Criminal Prosecutions in the United States",
-      "description": "Dataset deposited alongside: Social factors shape federal environmental crime prosecution patterns in the USA (Nature Sustainability, 2026-1-6). Dataset size: 2 MB.",
+      "description": "These data can be used to reproduce Extended Data Tables 1-3, Supplementary Tables 1-4 and Figures 1 and 2 in the submitted manuscript, \"Social factors shape the geographic pattern of U.S. environmental crime prosecutions\". The files contain the Final Data in Stata format (.dta) and .csv format, Stata code (.do) for reproduction of the tables and figures, a .",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3040,7 +3040,7 @@
     {
       "id": "m9-figshare-31814242-v1",
       "name": "Crossover of quasi-localized dynamics and diffusion in supercooled liquids",
-      "description": "Dataset deposited alongside: Crossover of quasi-localized dynamics and diffusion in supercooled liquids (Nature Physics, 2026-6-9).",
+      "description": "This figshare repository contains the raw data used to generate Figures 1–4 of the associated publication: \"At the crossover between quasi-localized dynamics and diffusion in deeply supercooled liquids.\" Repository structure The repository is organized into folders corresponding to the individual figures and subplots.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3059,7 +3059,7 @@
     {
       "id": "m9-figshare-29155031",
       "name": "Data and code for: The dual impact of trade on the water-energy-food nexus globally",
-      "description": "Dataset deposited alongside: The dual impact of trade on the water–energy–food nexus globally (Nature Sustainability, 2026-4-2). Dataset size: 7 MB.",
+      "description": "This contains all the necessary data and code used in the study by Yin et al. (2026) for data preprocessing, network analysis, counterfactual scenario analysis, and machine learning. Dataset size: 7 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3078,7 +3078,7 @@
     {
       "id": "m9-figshare-24680199",
       "name": "Data used in The Linkage between Microbial Community Dynamics and Urbanization Age",
-      "description": "Dataset deposited alongside: The linkage between microbial community dynamics and urbanization age (Nature Sustainability, 2026-4-15). Dataset size: 61 MB.",
+      "description": "Raw data used in this study. Full information about data and code is available at https://doi.org/10.6084/m9.figshare.24782817. Dataset size: 61 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3097,7 +3097,7 @@
     {
       "id": "m9-figshare-30670601",
       "name": "Dataset",
-      "description": "Dataset deposited alongside: Industrial overcapacity can enable seasonal flexibility in electricity use (Nature Energy, 2026-6-12). Dataset size: 106 MB.",
+      "description": "Dataset of Pypsa-China, an open optimisation model of the Chinese energy system, with aluminum asset data added. Dataset size: 106 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3116,7 +3116,7 @@
     {
       "id": "m9-figshare-31998285",
       "name": "Detecting Linear Dichroism with Atomic Resolution",
-      "description": "Dataset deposited alongside: Detecting linear dichroism with atomic resolution (Nature Materials, 2026-5-12). Dataset size: 36 MB.",
+      "description": "Source data for Detecting Linear Dichroism with Atomic Resolution. Dataset size: 36 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3135,7 +3135,7 @@
     {
       "id": "m9-figshare-32324148-v1",
       "name": "Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality",
-      "description": "Dataset deposited alongside: Electron–phonon coupling and symmetry breaking in superconducting oxide interfaces near ferroelectric quantum criticality (Nature Materials, 2026-6-30). Dataset size: 354 MB.",
+      "description": "Source data for Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality. Dataset size: 354 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3154,7 +3154,7 @@
     {
       "id": "zenodo-15690639",
       "name": "Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics",
-      "description": "Dataset deposited alongside: Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics (Nature Chemistry, 2026-3-23). Dataset size: 7 MB.",
+      "description": "Additional Data to report: https://doi.org/10.1038/s41557-026-02082-0 In biomacromolecules, many amino acids or nucleotides are needed to obtain defined secondary structures and concomitant advanced functionalities. Dataset size: 7 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3173,7 +3173,7 @@
     {
       "id": "zenodo-15690640",
       "name": "Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics",
-      "description": "Dataset deposited alongside: Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics (Nature Chemistry, 2026-3-23). Dataset size: 7 MB.",
+      "description": "Additional Data to report: https://doi.org/10.1038/s41557-026-02082-0 In biomacromolecules, many amino acids or nucleotides are needed to obtain defined secondary structures and concomitant advanced functionalities. Dataset size: 7 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3217,7 +3217,7 @@
     {
       "id": "m9-figshare-32251713-v1",
       "name": "Microscopic signatures of imaginary charge density wave in a kagome metal",
-      "description": "Dataset deposited alongside: Microscopic signatures of an imaginary charge density wave in a kagome metal (Nature Physics, 2026-6-17). Dataset size: 7 MB.",
+      "description": "Source data for Microscopic signatures of an imaginary charge density wave in a kagome metal. Dataset size: 7 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3261,7 +3261,7 @@
     {
       "id": "zenodo-19087102",
       "name": "Observation of angular momentum transfer among crystal lattice modes - Experimental data",
-      "description": "Dataset deposited alongside: Observation of angular momentum transfer among crystal lattice modes (Nature Physics, 2026-5-12). Dataset size: 18 MB.",
+      "description": "Experimental data for the paper \" Observation of angular momentum transfer among crystal lattice modes \", published with open-access in Nature Physics under https://doi.org/10.1038/s41567-026-03274-8 The data was measured at the Department of Physical Chemistry, Fritz Haber Institute of the Max Planck Society in Berlin. Contents: Data from Fig. 1 c-f Data from Fig. 2 a-d Data from Fig.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3280,7 +3280,7 @@
     {
       "id": "zenodo-19087101",
       "name": "Observation of angular momentum transfer among crystal lattice modes - Experimental data",
-      "description": "Dataset deposited alongside: Observation of angular momentum transfer among crystal lattice modes (Nature Physics, 2026-5-12). Dataset size: 18 MB.",
+      "description": "Experimental data for the paper \" Observation of angular momentum transfer among crystal lattice modes \", published with open-access in Nature Physics under https://doi.org/10.1038/s41567-026-03274-8 The data was measured at the Department of Physical Chemistry, Fritz Haber Institute of the Max Planck Society in Berlin. Contents: Data from Fig. 1 c-f Data from Fig. 2 a-d Data from Fig.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3299,7 +3299,7 @@
     {
       "id": "m9-figshare-30752111-v1",
       "name": "Observing disorder-induced average topological order in an atom array",
-      "description": "Dataset deposited alongside: Average topological phase in a disordered Rydberg atom array (Nature Physics, 2026-4-20). Dataset size: 0 MB.",
+      "description": "We have deposited the source data underlying all four figures of the manuscript in figshare. The dataset consists of four Excel files, each corresponding to one figure in the main text",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3318,7 +3318,7 @@
     {
       "id": "zenodo-17248815",
       "name": "OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies",
-      "description": "Dataset deposited alongside: OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies (Scientific Data, 2026-6-27). Dataset size: 0 MB.",
+      "description": "Description Species traits are an important facet of biodiversity and are useful for testing many ecological hypotheses. Many initiatives to centralize species traits have emerged in recent years, but there are still large gaps in species traits’ knowledge in the literature.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3337,7 +3337,7 @@
     {
       "id": "zenodo-20134320",
       "name": "OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies",
-      "description": "Dataset deposited alongside: OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies (Scientific Data, 2026-6-27). Dataset size: 0 MB.",
+      "description": "Description Species traits are an important facet of biodiversity and are useful for testing many ecological hypotheses. Many initiatives to centralize species traits have emerged in recent years, but there are still large gaps in species traits’ knowledge in the literature.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3356,7 +3356,7 @@
     {
       "id": "m9-figshare-29643506",
       "name": "Original Data of \"Scalable Generation of Massive Schrödinger Cat States via Quantum Tunneling\"",
-      "description": "Dataset deposited alongside: Scalable generation of massive Schrödinger cat states via quantum tunnelling (Nature Physics, 2026-5-11). Dataset size: 1 MB.",
+      "description": "This file provides the original experimental data associated with our massive quantum tunneling study, formatted as a .xls spreadsheet. Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3375,7 +3375,7 @@
     {
       "id": "zenodo-20692986",
       "name": "Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors",
-      "description": "Dataset deposited alongside: Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors (Scientific Data, 2026-6-30). Dataset size: 156 MB.",
+      "description": "Ovarian Stainology is a structured, openly accessible database of evidence-based immunohistochemical (IHC) antigen and protein expression profiles in ovarian tumors, aggregated from the published literature. The final harmonized dataset comprises 12,212 tumor–stain frequency records derived from 1,450 studies, curated from 100,149 raw tumor–stain pairs gathered across 5,961 screened publications.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3394,7 +3394,7 @@
     {
       "id": "zenodo-21227034",
       "name": "Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors",
-      "description": "Dataset deposited alongside: Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors (Scientific Data, 2026-6-30). Dataset size: 156 MB.",
+      "description": "Ovarian Stainology is a structured, openly accessible database of evidence-based immunohistochemical (IHC) antigen and protein expression profiles in ovarian tumors, aggregated from the published literature. The final harmonized dataset comprises 12,212 tumor–stain frequency records derived from 1,450 studies, curated from 100,149 raw tumor–stain pairs gathered across 5,961 screened publications.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3413,7 +3413,7 @@
     {
       "id": "m9-figshare-30892724",
       "name": "Principles of optics in Fock space for the scalable manipulation of large quantum states",
-      "description": "Dataset deposited alongside: Principles of optics in Fock space for the scalable manipulation of large quantum states (Nature Physics, 2026-7-9). Dataset size: 1 MB.",
+      "description": "Data for Figures in the main text of “Principles of Optics in the Fock Space: Scalable Manipulation of Giant Quantum States”. Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3432,7 +3432,7 @@
     {
       "id": "m9-figshare-30593789-v1",
       "name": "Programming Local Confinements in Crystalline Frameworks through Reticular Chemistry",
-      "description": "Dataset deposited alongside: Programming local confinements in crystalline frameworks through reticular chemistry (Nature Materials, 2026-7-3). Dataset size: 130 MB.",
+      "description": "PXRD, VT-PXRD, CO2 isotherm, breakthrough curves, DRIFT spectra data for NU-6000 and NU-6001. Dataset size: 130 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3451,7 +3451,7 @@
     {
       "id": "zenodo-17279334",
       "name": "Protected Rivers Assessment of the United States (PRA-US) Version 1.2.",
-      "description": "Dataset deposited alongside: Safeguarding, strengthening and expanding river protections for nature and people (Nature Sustainability, 2026-1-9). Dataset size: 4.5 GB.",
+      "description": "Conservation Science Partners, in partnership with American Rivers, has developed the Protected Rivers Assessment of the United States , a data-driven nationwide inventory of present-day river protection status. Dataset size: 4.5 GB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3470,7 +3470,7 @@
     {
       "id": "zenodo-17279333",
       "name": "Protected Rivers Assessment of the United States (PRA-US) Version 1.2.",
-      "description": "Dataset deposited alongside: Safeguarding, strengthening and expanding river protections for nature and people (Nature Sustainability, 2026-1-9). Dataset size: 4.5 GB.",
+      "description": "Conservation Science Partners, in partnership with American Rivers, has developed the Protected Rivers Assessment of the United States , a data-driven nationwide inventory of present-day river protection status. Dataset size: 4.5 GB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3489,7 +3489,7 @@
     {
       "id": "m9-figshare-32316573",
       "name": "Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay",
-      "description": "Dataset deposited alongside: Real-space imaging of the electron-pair density hole in molecular Auger–Meitner decay (Nature Physics, 2026-6-30). Dataset size: 41 MB.",
+      "description": "Data for the figures and extended data figures in the manuscript \"Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay\" in Nature Physics (2026). In addition, Molpro in- and output files, as well as simulated scattering signals are provided. A Wolfram Mathematica notebook file is included for generating the figures and inspecting the electronic structure data.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3508,7 +3508,7 @@
     {
       "id": "zenodo-18135191",
       "name": "Romanetz Driving Force Supporting Data",
-      "description": "Dataset deposited alongside: Photoinduced electron-transfer distance is controlled by the driving force in solid-state organic donor–acceptor systems (Nature Chemistry, 2026-3-25). Dataset size: 262 MB.",
+      "description": "Source data to support the findings of manuscript entitled, \"Photoinduced electron transfer distance is controlled by the driving force in solid-state organic donor-acceptors.\". Dataset size: 262 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3527,7 +3527,7 @@
     {
       "id": "zenodo-18135192",
       "name": "Romanetz Driving Force Supporting Data",
-      "description": "Dataset deposited alongside: Photoinduced electron-transfer distance is controlled by the driving force in solid-state organic donor–acceptor systems (Nature Chemistry, 2026-3-25). Dataset size: 262 MB.",
+      "description": "Source data to support the findings of manuscript entitled, \"Photoinduced electron transfer distance is controlled by the driving force in solid-state organic donor-acceptors.\". Dataset size: 262 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3546,7 +3546,7 @@
     {
       "id": "m9-figshare-29456279",
       "name": "Scalable large-area ZIF-8 membranes for industrial propylene/propane separations",
-      "description": "Dataset deposited alongside: Scalable large-area ZIF-8 membranes for industrial propylene/propane separations (Nature Chemical Engineering, 2026-4-7). Dataset size: 0 MB.",
+      "description": "This dataset includes experimental and characterization data supporting the findings reported in the manuscript entitled “Enabling scalable fabrication of large-area ZIF-8 membranes for industrial side-stream separation.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3565,7 +3565,7 @@
     {
       "id": "zenodo-19471018",
       "name": "Supporting data: Soft-X-ray momentum microscopy of nonlinear magnon interactions",
-      "description": "Dataset deposited alongside: Soft-X-ray momentum microscopy of nonlinear magnon interactions (Nature Physics, 2026-6-5). Dataset size: 4.5 GB.",
+      "description": "Supporting data for the research article “Soft X-ray momentum microscopy of nonlinear magnon interactions below 100 nm wavelength.” This repository contains the raw experimental data and a Jupyter notebook used to generate all data-driven figures presented in the study. Detailed information on data structure and processing can be found in the included README.md .",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3584,7 +3584,7 @@
     {
       "id": "zenodo-19471019",
       "name": "Supporting data: Soft-X-ray momentum microscopy of nonlinear magnon interactions",
-      "description": "Dataset deposited alongside: Soft-X-ray momentum microscopy of nonlinear magnon interactions (Nature Physics, 2026-6-5). Dataset size: 4.5 GB.",
+      "description": "Supporting data for the research article “Soft X-ray momentum microscopy of nonlinear magnon interactions below 100 nm wavelength.” This repository contains the raw experimental data and a Jupyter notebook used to generate all data-driven figures presented in the study. Detailed information on data structure and processing can be found in the included README.md .",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3603,7 +3603,7 @@
     {
       "id": "m9-figshare-31148908",
       "name": "The Active Young-Dupré Equation",
-      "description": "Dataset deposited alongside: Wetting by active fluids (Nature Physics, 2026-4-3). Dataset size: 75 MB.",
+      "description": "These data allow to reproduce all figures and movies included in our article. Dataset size: 75 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3622,7 +3622,7 @@
     {
       "id": "m9-figshare-30631367",
       "name": "Towards Single-Crystalline Two-Dimensional Poly(arylene vinylene) Covalent Organic Frameworks",
-      "description": "Dataset deposited alongside: Towards single-crystalline two-dimensional poly(arylene vinylene) covalent organic frameworks (Nature Chemistry, 2026-1-20). Dataset size: 6 MB.",
+      "description": "Source data for main text figure. Dataset size: 6 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3641,7 +3641,7 @@
     {
       "id": "m9-figshare-31383004",
       "name": "Tuning Phonon Transmission via Single-Atom Substituents",
-      "description": "Dataset deposited alongside: Tuning phonon transmission via single-atom substituents (Nature Materials, 2026-4-2). Dataset size: 16 MB.",
+      "description": "Experimental materials properties dataset: Tuning Phonon Transmission via Single-Atom Substituents. Published alongside a Nature Materials study (2026). Deposited on figshare. Dataset size: 16 MB.",
       "domain": "materials",
       "subdomain": "general-properties",
       "tags": [],
@@ -3660,7 +3660,7 @@
     {
       "id": "zenodo-20757578",
       "name": "Recalculated (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2026",
-      "description": "Dataset deposited alongside: Recalculating the Surface Ocean CO2 Atlas (SOCAT) to a sea surface temperature climate data record (Scientific Data, 2026-6-9). Dataset size: 3.1 GB.",
+      "description": "Product Information SOCAT dataset version v2026 Recalculated SOCAT dataset version V0-1 Changelog at end of repository FluxEngine version v4.2.0 Contacts Daniel J. Ford d.ford@exeter.ac.uk Jamie D. Shutler j.d.shutler@exeter.ac.uk Introduction The Surface Ocean CO₂ Atlas (SOCAT) version 2026 dataset (Bakker et al., 2016; https://doi.org/10.",
       "domain": "materials",
       "subdomain": "geophysics",
       "tags": [],
@@ -3679,7 +3679,7 @@
     {
       "id": "zenodo-20757579",
       "name": "Recalculated (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2026",
-      "description": "Dataset deposited alongside: Recalculating the Surface Ocean CO2 Atlas (SOCAT) to a sea surface temperature climate data record (Scientific Data, 2026-6-9). Dataset size: 3.1 GB.",
+      "description": "Product Information SOCAT dataset version v2026 Recalculated SOCAT dataset version V0-1 Changelog at end of repository FluxEngine version v4.2.0 Contacts Daniel J. Ford d.ford@exeter.ac.uk Jamie D. Shutler j.d.shutler@exeter.ac.uk Introduction The Surface Ocean CO₂ Atlas (SOCAT) version 2026 dataset (Bakker et al., 2016; https://doi.org/10.",
       "domain": "materials",
       "subdomain": "geophysics",
       "tags": [],
@@ -3898,7 +3898,7 @@
     {
       "id": "zenodo-14615202",
       "name": "An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises",
-      "description": "Dataset deposited alongside: An Electrospinography Database of Gait-Related Tasks and Motor Imagery Exercises (Scientific Data, 2026-6-9). Dataset size: 44.5 GB.",
+      "description": "Description The electroespinography (ESG) signals dataset comprises recordings from fourteen able-bodied participants. A total 10 sessions were recorded for experiment 1 (age: 30.30 ± 8.60, 40 % female participants), 10 sessions for experiment 2 (age: 30.00 ± 8.99, 40 % female participants) and 5 sessions for experiment 3 (age: 26.00 ± 4.24, 40 % female participants).",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -3917,7 +3917,7 @@
     {
       "id": "zenodo-19065545",
       "name": "An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises",
-      "description": "Dataset deposited alongside: An Electrospinography Database of Gait-Related Tasks and Motor Imagery Exercises (Scientific Data, 2026-6-9). Dataset size: 44.5 GB.",
+      "description": "Description The electroespinography (ESG) signals dataset comprises recordings from fourteen able-bodied participants. A total 10 sessions were recorded for experiment 1 (age: 30.30 ± 8.60, 40 % female participants), 10 sessions for experiment 2 (age: 30.00 ± 8.99, 40 % female participants) and 5 sessions for experiment 3 (age: 26.00 ± 4.24, 40 % female participants).",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -3936,7 +3936,7 @@
     {
       "id": "zenodo-20025667",
       "name": "Covalency control of photomagnetic relaxation in a manganese(II) photoswitch",
-      "description": "Dataset deposited alongside: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch (Nature Chemistry, 2026-6-29). Dataset size: 4 MB.",
+      "description": "Experimental magnetic materials dataset: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch. Published alongside a II study (2026). Deposited on Zenodo. Dataset size: 4 MB.",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -3955,7 +3955,7 @@
     {
       "id": "zenodo-20025668",
       "name": "Covalency control of photomagnetic relaxation in a manganese(II) photoswitch",
-      "description": "Dataset deposited alongside: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch (Nature Chemistry, 2026-6-29). Dataset size: 4 MB.",
+      "description": "Experimental magnetic materials dataset: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch. Published alongside a II study (2026). Deposited on Zenodo. Dataset size: 4 MB.",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -3974,7 +3974,7 @@
     {
       "id": "m9-figshare-31554586",
       "name": "Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces",
-      "description": "Dataset deposited alongside: Exchange-mediated spin–electric control of single molecules on surfaces (Nature Physics, 2026-6-29). Dataset size: 98 MB.",
+      "description": "Data and Evaluation to \"Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces\". Sorted by the paper Figures. Dataset size: 98 MB.",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -3993,7 +3993,7 @@
     {
       "id": "m9-figshare-30937706",
       "name": "Homochiral Toroidal Spin State in Dy(III)-based Single-Molecule Toroics",
-      "description": "Dataset deposited alongside: Homochiral toroidal spin state in Dy(III)-based single-molecule toroics (Nature Chemistry, 2026-2-23). Dataset size: 2 MB.",
+      "description": "This folder contains the raw experimental data for the micro-SQUID and MChD measurements presented in the above publication. The data are separated into separate files corresponding to Figs. 3-6 described in the main text. Dataset size: 2 MB.",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -4036,7 +4036,7 @@
     {
       "id": "m9-figshare-29042909",
       "name": "Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor",
-      "description": "Dataset deposited alongside: Planckian scattering and parallel conduction channels in an iron chalcogenide superconductor (Nature Physics, 2026-4-23). Dataset size: 1 MB.",
+      "description": "Experimental magnetic materials dataset: Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor. Published alongside a Nature Physics study (2026). Deposited on figshare. Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "magnetic",
       "tags": [],
@@ -4055,7 +4055,7 @@
     {
       "id": "zenodo-18487115",
       "name": "Nonmonotonic Magnetic Friction from Collective Rotor Dynamics (Data)",
-      "description": "Dataset deposited alongside: Non-monotonic magnetic friction from collective rotor dynamics (Nature Materials, 2026-3-18). Dataset size: 15.1 GB.",
+      "description": "Raw data of the manuscript Nonmonotonic Magnetic Friction from Collective Rotor Dynamics by H. Gu, A. Lüders, and C. Bechinger Reference: Gu, H., Lüders, A. & Bechinger, C. Non-monotonic magnetic friction from collective rotor dynamics. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02538-1. Dataset size: 15.1 GB.",
       "domain": "materials",
       "subdomain": "mechanical",
       "tags": [],
@@ -4074,7 +4074,7 @@
     {
       "id": "zenodo-18487116",
       "name": "Nonmonotonic Magnetic Friction from Collective Rotor Dynamics (Data)",
-      "description": "Dataset deposited alongside: Non-monotonic magnetic friction from collective rotor dynamics (Nature Materials, 2026-3-18). Dataset size: 15.1 GB.",
+      "description": "Raw data of the manuscript Nonmonotonic Magnetic Friction from Collective Rotor Dynamics by H. Gu, A. Lüders, and C. Bechinger Reference: Gu, H., Lüders, A. & Bechinger, C. Non-monotonic magnetic friction from collective rotor dynamics. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02538-1. Dataset size: 15.1 GB.",
       "domain": "materials",
       "subdomain": "mechanical",
       "tags": [],
@@ -4344,7 +4344,7 @@
     {
       "id": "m9-figshare-30957728-v1",
       "name": "Bulk heterojunction contact doping for low-resistance metal–perovskite interfaces",
-      "description": "Dataset deposited alongside: Bulk-heterojunction doping in lead halide perovskites for low-resistance metal contacts (Nature Materials, 2026-2-20). Dataset size: 0 MB.",
+      "description": "Source data for Fig. 1d, Figs. 2b-d,f, Figs. 3a-e, and Figs. 4a-f",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4363,7 +4363,7 @@
     {
       "id": "zenodo-18151704",
       "name": "Data Accompanying 'Molecular Factors Controlling Charge Pair Generation in Organic Photovoltaic Materials'",
-      "description": "Dataset deposited alongside: Molecular factors controlling charge pair generation in organic photovoltaic materials (Nature Materials, 2026-2-27). Dataset size: 0 MB.",
+      "description": "Data used to create the figures in the main text of Hart, L.J.F., Medranda, D.G., Yuan, S.W. et al. Molecular factors controlling charge pair generation in organic photovoltaic materials. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02509-6.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4382,7 +4382,7 @@
     {
       "id": "zenodo-18151703",
       "name": "Data Accompanying 'Molecular Factors Controlling Charge Pair Generation in Organic Photovoltaic Materials'",
-      "description": "Dataset deposited alongside: Molecular factors controlling charge pair generation in organic photovoltaic materials (Nature Materials, 2026-2-27). Dataset size: 0 MB.",
+      "description": "Data used to create the figures in the main text of Hart, L.J.F., Medranda, D.G., Yuan, S.W. et al. Molecular factors controlling charge pair generation in organic photovoltaic materials. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02509-6.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4401,7 +4401,7 @@
     {
       "id": "m9-figshare-29646350",
       "name": "E2M2s model and input data of the European energy system",
-      "description": "Dataset deposited alongside: Implications of the solar rebound effect for the European energy transition (Nature Energy, 2026-4-14). Dataset size: 99 MB.",
+      "description": "Contains the full code, data, and workflows used to analyse the solar rebound effect in a sector-coupled European energy system model, including all scenario definitions. Dataset size: 99 MB.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4471,7 +4471,7 @@
     {
       "id": "m9-figshare-30405232",
       "name": "Hole-Transfer Cascade–Engineered Donor Polymer for Moisture-Stable Unencapsulated Perovskite Solar Cells",
-      "description": "Dataset deposited alongside: Hole-transfer cascade-engineered donor polymer for unencapsulated perovskite solar cells with improved moisture stability (Nature Energy, 2026-5-18). Dataset size: 0 MB.",
+      "description": "This file provides the raw data underlying the four main figures presented in the manuscript \"Hybrid kink PeSC.\" It includes original measurement datasets and source values used for data plotting and analysis.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4490,7 +4490,7 @@
     {
       "id": "m9-figshare-31827727-v1",
       "name": "Layer Photovoltaic Effect in a Two-dimensional Parity-Time Symmetric Antiferromagnet",
-      "description": "Dataset deposited alongside: Layer photovoltaic effect in a two-dimensional antiferromagnet with parity–time symmetry (Nature Materials, 2026-5-18). Dataset size: 1 MB.",
+      "description": "All source data files for the main text figures, extended data figures and supplementary figures (saved as individual excel files). Dataset size: 1 MB.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4561,7 +4561,7 @@
     {
       "id": "zenodo-17546718",
       "name": "Simultaneous measurements of solar wind from L1, shocked solar wind from Magnetosheath, and measures of geomagnetic response from ground-based indices",
-      "description": "Dataset deposited alongside: Regression to the mean can explain saturation of geomagnetic storms (Nature, 2026-7-15). Dataset size: 5.0 GB.",
+      "description": "These data are compiled from other sources and are used in the calculations and simulations for the paper Sivadas et al., 2026 \"Regression to the Mean can Explain the Saturation of Geomagnetic Storms\". Data.zip contains the curated data set of simultaneous measurements from L1 satellites and ground-based measurements.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4580,7 +4580,7 @@
     {
       "id": "zenodo-18291615",
       "name": "Simultaneous measurements of solar wind from L1, shocked solar wind from Magnetosheath, and measures of geomagnetic response from ground-based indices",
-      "description": "Dataset deposited alongside: Regression to the mean can explain saturation of geomagnetic storms (Nature, 2026-7-15). Dataset size: 5.0 GB.",
+      "description": "These data are compiled from other sources and are used in the calculations and simulations for the paper Sivadas et al., 2026 \"Regression to the Mean can Explain the Saturation of Geomagnetic Storms\". Data.zip contains the curated data set of simultaneous measurements from L1 satellites and ground-based measurements.",
       "domain": "materials",
       "subdomain": "photovoltaics",
       "tags": [],
@@ -4649,7 +4649,7 @@
     {
       "id": "m9-figshare-18742097-v1",
       "name": "Metadata record for: Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations",
-      "description": "Dataset deposited alongside: Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations (Scientific Data, 2022-2-8).",
+      "description": "This dataset contains key characteristics about the data described in the Data Descriptor Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format",
       "domain": "materials",
       "subdomain": "polymers",
       "tags": [],
@@ -4742,7 +4742,7 @@
     {
       "id": "m9-figshare-30038194",
       "name": "Transient pH changes drive vacuole formation in enzyme-polymer condensates",
-      "description": "Dataset deposited alongside: Transient pH changes drive vacuole formation in enzyme–polymer condensates (Nature Chemical Engineering, 2026-1-9). Dataset size: 412 MB.",
+      "description": "This contains the source data - including raw, uncropped images and videos corresponding to cropped images shown in the main text and supporting information. Dataset size: 412 MB.",
       "domain": "materials",
       "subdomain": "polymers",
       "tags": [],
@@ -4761,7 +4761,7 @@
     {
       "id": "zenodo-16836065",
       "name": "Dataset: Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy",
-      "description": "Dataset deposited alongside: Statistics makes a difference: machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy (Digital Discovery, 2026). Dataset size: 35.7 GB.",
+      "description": "Raw Data for the publication Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy. Dataset size: 35.7 GB.",
       "domain": "materials",
       "subdomain": "porous-materials",
       "tags": [],
@@ -4780,7 +4780,7 @@
     {
       "id": "zenodo-17523493",
       "name": "Dataset: Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy",
-      "description": "Dataset deposited alongside: Statistics makes a difference: machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy (Digital Discovery, 2026). Dataset size: 35.7 GB.",
+      "description": "Raw Data for the publication Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy. Dataset size: 35.7 GB.",
       "domain": "materials",
       "subdomain": "porous-materials",
       "tags": [],
@@ -4924,7 +4924,7 @@
     {
       "id": "zenodo-3987303",
       "name": "Datasets for the computational workflow of multidimensional photoemission spectroscopy",
-      "description": "Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 8.5 GB.",
+      "description": "Recorded single-electron event data of bulk 2H-WSe 2 photoemission from a commercial momentum microscope (SPECS METIS 1000).These data are used for demonstration of the computational workflow explained in the following publication. R. P. Xian, Y. Acremann, S. Y. Agustsson, M. Dendzik, K. Bühlmann, D. Curcio, D. Kutnyakhov, F. Pressacco, M. Heber, S. Dong, T. Pincelli, J.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],
@@ -4943,7 +4943,7 @@
     {
       "id": "zenodo-3987304",
       "name": "Datasets for the computational workflow of multidimensional photoemission spectroscopy",
-      "description": "Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 8.5 GB.",
+      "description": "Recorded single-electron event data of bulk 2H-WSe 2 photoemission from a commercial momentum microscope (SPECS METIS 1000).These data are used for demonstration of the computational workflow explained in the following publication. R. P. Xian, Y. Acremann, S. Y. Agustsson, M. Dendzik, K. Bühlmann, D. Curcio, D. Kutnyakhov, F. Pressacco, M. Heber, S. Dong, T. Pincelli, J.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],
@@ -4962,7 +4962,7 @@
     {
       "id": "m9-figshare-5678998-v1",
       "name": "K-edge XANES spectra data",
-      "description": "Dataset deposited alongside: High-throughput computational X-ray absorption spectroscopy (Scientific Data, 2018-7-31). Dataset size: 5.4 GB.",
+      "description": "K-edge XANES spectra data computed using FEFF9. Dataset size: 5.4 GB.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],
@@ -4981,7 +4981,7 @@
     {
       "id": "zenodo-4266202",
       "name": "Multidimensional photoemission spectra of tungsten diselenide",
-      "description": "Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 6.1 GB.",
+      "description": "Pump-probe multidimensional photoemission spectroscopy (MPES) of tungsten diselenide (WSe2) measured using an electron momentum microscope at the FLASH Free Electron Laser. This is an example file for data standardization of MPES and has been linked to the publication, D. Kutnyakhov, R. P. Xian, M. Dendzik, M. Heber, F. Pressacco, S. Y. Agustsson, L. Wenthaus, H. Meyer, S. Gieschen, G.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],
@@ -5000,7 +5000,7 @@
     {
       "id": "m9-figshare-11316572-v1",
       "name": "Support tables",
-      "description": "Dataset deposited alongside: Benchmark classification dataset for laser-induced breakdown spectroscopy (Scientific Data, 2020-2-13). Dataset size: 0 MB.",
+      "description": "Excel sheets providing the sample compositions with estimated uncertainties.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],
@@ -5019,7 +5019,7 @@
     {
       "id": "m9-figshare-11316575-v1",
       "name": "Testing dataset",
-      "description": "Dataset deposited alongside: Benchmark classification dataset for laser-induced breakdown spectroscopy (Scientific Data, 2020-2-13). Dataset size: 3.1 GB.",
+      "description": "Testing dataset in hdf5 file format without the class labels. Scripts are provided for reading in the dataset in R, Python, and Matlab. Dataset size: 3.1 GB.",
       "domain": "materials",
       "subdomain": "spectroscopy",
       "tags": [],

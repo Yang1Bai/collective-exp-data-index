@@ -33,7 +33,7 @@ _233 databases · updated 2026-07-19 · 205 experimental · 28 mixed · 0 comput
   - [Thermochemistry](#chemistry-thermochemistry) (1)
 - **Materials**
   - [Additive manufacturing](#materials-additive-manufacturing) (1)
-  - [alloys](#materials-alloys) (1)
+  - [Alloys & high-entropy alloys](#materials-alloys) (1)
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
   - [Batteries & energy storage](#materials-batteries) (19)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
@@ -43,20 +43,20 @@ _233 databases · updated 2026-07-19 · 205 experimental · 28 mixed · 0 comput
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
   - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
   - [General materials properties](#materials-general-properties) (42)
-  - [geophysics](#materials-geophysics) (2)
+  - [Geophysics & earth sciences](#materials-geophysics) (2)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
   - [HTE / synthesis](#materials-hte-synthesis) (1)
   - [Lab automation & robotic chemistry](#materials-lab-automation) (2)
   - [Magnetic materials](#materials-magnetic) (8)
-  - [mechanical](#materials-mechanical) (2)
+  - [Mechanical properties](#materials-mechanical) (2)
   - [Membranes & separations](#materials-membranes) (1)
   - [MOFs & porous materials](#materials-mofs-porous) (5)
   - [Nanomaterials & nanosafety](#materials-nanomaterials) (1)
   - [Organic electronics](#materials-organic-electronics) (2)
   - [Photovoltaics & solar cells](#materials-photovoltaics) (14)
   - [Polymers](#materials-polymers) (6)
-  - [porous-materials](#materials-porous-materials) (2)
+  - [Porous materials](#materials-porous-materials) (2)
   - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (5)
   - [Spectroscopy](#materials-spectroscopy) (6)
   - [Superconductors](#materials-superconductors) (1)
@@ -481,11 +481,11 @@ NIST-led series of highly controlled additive manufacturing benchmark measuremen
 `experimental`· `open`· 2018 · NIST public data (US Gov) · NIST· tags: `additive-manufacturing`, `laser-powder-bed-fusion`, `benchmark`, `in-situ`, `microstructure`
 
 <a id="materials-alloys"></a>
-### alloys
+### Alloys & high-entropy alloys
 
 #### 🧪🔓 [Sustainability indicators in high entropy alloy design: an economic, environmental, and societal database](https://springernature.figshare.com/articles/dataset/Sustainability_indicators_in_high_entropy_alloy_design_an_economic_environmental_and_societal_database/28235162/1)
 
-Dataset deposited alongside: Sustainability indicators in high entropy alloy design: an economic, environmental, and societal database (Scientific Data, 2025-2-17).
+This dataset contains 9 sustainability indicators for 18 elements (Al, Co, Cr, Cu, Fe, Hf, Mn, Mo, Nb, Ni, Re, Ru, Si, Ta, Ti, V, W, Zr) commonly used in High Entropy Alloys (HEAs).
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28235162.v1](https://doi.org/10.6084/m9.figshare.28235162.v1)
 
@@ -509,13 +509,13 @@ NIMS Materials Database platform spanning polymer, inorganic and metallic databa
 
 #### 🧪🔓 [A Scalable, Biopolymer-Based Microenvironment for Electrochemical CO2 Conversion to Multicarbon Products with Current Densities Over 2 A/cm2](https://springernature.figshare.com/articles/dataset/A_Scalable_Biopolymer-Based_Microenvironment_for_Electrochemical_CO2_Conversion_to_Multicarbon_Products_with_Current_Densities_Over_2_A_cm2/30630491)
 
-Dataset deposited alongside: A scalable, biopolymer-based microenvironment for electrochemical CO2 conversion to multicarbon products with current densities over 2 A cm−2 (Nature Energy, 2026-4-17). Dataset size: 132 MB.
+The data consists of experimental results underlying our study. Dataset size: 132 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30630491](https://doi.org/10.6084/m9.figshare.30630491)
 
 #### 🧪🔓 [Additional file 3 of Classification of battery compounds using structure-free Mendeleev encodings](https://springernature.figshare.com/articles/dataset/Additional_file_3_of_Classification_of_battery_compounds_using_structure-free_Mendeleev_encodings/26713166)
 
-Dataset deposited alongside: A database of battery materials auto-generated using ChemDataExtractor (Scientific Data, 2020-8-6).
+Additional file 3. Periodic table csv file to undertake cleaning of the experimental data set, in combination with Additional file 2.
 
 `experimental`· `open`· 2024 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26713166](https://doi.org/10.6084/m9.figshare.26713166)
 
@@ -539,37 +539,37 @@ Open experimental Li-ion battery test data from the Center for Advanced Life Cyc
 
 #### 🧪🔓 [Direct Evidence of Metal-Ligand Redox in Li-ion Battery Cathodes](https://springernature.figshare.com/articles/dataset/Direct_Evidence_of_Metal-Ligand_Redox_in_Li-ion_Battery_Cathodes/28915994)
 
-Dataset deposited alongside: Direct evidence of metal–ligand redox processes in positive electrodes during lithium-based battery operation (Nature Nanotechnology, 2026-6-9). Dataset size: 39 MB.
+Experimental data from diamond I09 and B07 regarding X-ray absorption and RPES to understand redox mechanisms. Dataset size: 39 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28915994](https://doi.org/10.6084/m9.figshare.28915994)
 
 #### 🧪🔓 [Flow-Synchronized Ring-shaped Electrochemical Ion Pumping for Redox-Free Desalination without Terminal Electrodes](https://springernature.figshare.com/articles/dataset/Flow-Synchronized_Ring-shaped_Electrochemical_Ion_Pumping_for_Redox-Free_Desalination_without_Terminal_Electrodes/30279262/1)
 
-Dataset deposited alongside: Flow-synchronized ring-shaped electrochemical ion pumping for redox-free desalination without terminal electrodes (Nature Chemical Engineering, 2025-12-29). Dataset size: 3 MB.
+data for figures in main text and SI. Dataset size: 3 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30279262.v1](https://doi.org/10.6084/m9.figshare.30279262.v1)
 
 #### 🧪🔓 [Hydration entropy of cations regulates chloride ion diffusion during electrochemical chlorine evolution](https://springernature.figshare.com/articles/dataset/Hydration_entropy_of_cations_regulates_chloride_ion_diffusion_during_electrochemical_chlorine_evolution/28158095)
 
-Dataset deposited alongside: Hydration entropy of cations regulates chloride ion diffusion during electrochemical chlorine evolution (Nature Chemistry, 2025-12-8). Dataset size: 310 MB.
+- Numerical data are provided for all Supplementary Figures (.xlsx). - Python scripts (.py) are included in Supplementary Figs. 28 and 29. No proprietary code were used. - All data are managed by T.L. Dataset size: 310 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28158095](https://doi.org/10.6084/m9.figshare.28158095)
 
 #### 🧪🔓 [Metadata record for: Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents](https://springernature.figshare.com/articles/Metadata_record_for_Discharge_profile_of_a_zinc-air_flow_battery_at_various_electrolyte_flow_rates_and_discharge_currents/12423878/1)
 
-Dataset deposited alongside: Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents (Scientific Data, 2020-6-22).
+This dataset contains key characteristics about the data described in the Data Descriptor Discharge profile of a zinc-air flow battery at various electrolyte flow rates and discharge currents. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format
 
 `experimental`· `open`· 2020 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.12423878.v1](https://doi.org/10.6084/m9.figshare.12423878.v1)
 
 #### 🧪🔓 [Metadata record for: Quantum chemical calculations of lithium-ion battery electrolyte and interphase species](https://springernature.figshare.com/articles/dataset/Metadata_record_for_Quantum_chemical_calculations_of_lithium-ion_battery_electrolyte_and_interphase_species/14915256/1)
 
-Dataset deposited alongside: Quantum chemical calculations of lithium-ion battery electrolyte and interphase species (Scientific Data, 2021-8-5).
+This dataset contains key characteristics about the data described in the Data Descriptor Quantum chemical calculations of lithium-ion battery electrolyte and interphase species. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format
 
 `experimental`· `open`· 2021 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.14915256.v1](https://doi.org/10.6084/m9.figshare.14915256.v1)
 
 #### 🧪🔓 [Molecularly aligned electron-channels for ultrafast-charging practical lithium metal batteries](https://springernature.figshare.com/articles/dataset/Molecularly_aligned_electron-channels_for_ultrafast-charging_practical_lithium_metal_batteries/29257265/1)
 
-Dataset deposited alongside: Molecularly aligned electron channels for ultrafast-charging practical lithium-metal batteries (Nature Energy, 2026-1-23). Dataset size: 2 MB.
+Molecular design for ultrafast-charging practical lithium metal batteries. Dataset size: 2 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29257265.v1](https://doi.org/10.6084/m9.figshare.29257265.v1)
 
@@ -605,7 +605,7 @@ Long-term ageing tests of 8 Kokam 740 mAh lithium-ion pouch cells cycled in the 
 
 #### 🧪🔓 [Source Data](https://springernature.figshare.com/articles/dataset/Source_Data/29231339/1)
 
-Dataset deposited alongside: Grid-scale corrosion-free Zn/Br flow batteries enabled by a multi-electron transfer reaction (Nature Energy, 2025-12-19). Dataset size: 1 MB.
+Experimental battery and electrochemical systems dataset: Source Data. Published alongside a Nature Energy study (2026). Deposited on figshare. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29231339.v1](https://doi.org/10.6084/m9.figshare.29231339.v1)
 
@@ -617,7 +617,7 @@ Widely used experimental dataset of 124 commercial LFP/graphite cells (plus a fo
 
 #### 🧪🔓 [Unveiling Solid Electrolyte Interphase Dynamics in Electrochemical Lithium-Mediated Ammonia Synthesis via Operando Raman Spectroscopy](https://springernature.figshare.com/articles/dataset/Unveiling_Solid_Electrolyte_Interphase_Dynamics_in_Electrochemical_Lithium-Mediated_Ammonia_Synthesis_via_Operando_Raman_Spectroscopy/32262747)
 
-Dataset deposited alongside: Unveiling solid electrolyte interphase dynamics in electrochemical lithium-mediated ammonia synthesis via operando Raman spectroscopy (Nature Catalysis, 2026-6-30). Dataset size: 3 MB.
+Statistical source data of Raman spectra, LSV, and SEI intensities Statistical source data of Raman spectra, potential, SEI intensities, and FE(NH3) Statistical source data of Raman spectra, potential, SEI intensities, and FE(NH3) Statistical source data of Raman spectra, perchlorate/solvent peak analysis, and SEI intensities Statistical source data of potential, FE(NH3), yield rates, Raman spectr…
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32262747](https://doi.org/10.6084/m9.figshare.32262747)
 
@@ -641,61 +641,61 @@ Collection of standardized, benchmark-ready materials datasets bundled with the 
 
 #### 🧪🔓 [A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands](https://zenodo.org/doi/10.5281/zenodo.18044162)
 
-Dataset deposited alongside: A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands (Scientific Data, 2026-6-3). Dataset size: 14.5 GB.
+Grasslands are critical to the global carbon cycle and support livestock production, yet long-term, high-resolution global datasets of grassland aboveground biomass (AGB) remain scarce, since existing products are often spatially coarse, temporally discontinuous, or regionally limited. Here, we present a global grassland AGB dataset spanning 2000–2022 at 0.005° spatial resolution.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18044162](https://doi.org/10.5281/zenodo.18044162)
 
 #### 🧪🔓 [A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands](https://zenodo.org/doi/10.5281/zenodo.18044163)
 
-Dataset deposited alongside: A long-term (2000–2022), high-resolution (0.005°) aboveground biomass dataset of global grasslands (Scientific Data, 2026-6-3). Dataset size: 14.5 GB.
+Grasslands are critical to the global carbon cycle and support livestock production, yet long-term, high-resolution global datasets of grassland aboveground biomass (AGB) remain scarce, since existing products are often spatially coarse, temporally discontinuous, or regionally limited. Here, we present a global grassland AGB dataset spanning 2000–2022 at 0.005° spatial resolution.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18044163](https://doi.org/10.5281/zenodo.18044163)
 
 #### 🧪🔓 [A secreted endosymbiont protein essential for colonizing host cells](https://springernature.figshare.com/articles/dataset/A_secreted_endosymbiont_protein_essential_for_colonizing_host_cells/32257284)
 
-Dataset deposited alongside: A secreted endosymbiont protein essential for colonizing host cells (Nature, 2026-7-1). Dataset size: 0 MB.
+These data were used to support the results and include data used in bioinformatic analyses, image analyses, and experiments on knockdown of the syeA gene. The tables also include accessions for the data used in analyses.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32257284](https://doi.org/10.6084/m9.figshare.32257284)
 
 #### 🧪🔓 [Biophysical and Molecular mechanisms that control active wetting and tissue fluidification in epithelial tissues](https://springernature.figshare.com/articles/dataset/Biophysical_and_Molecular_mechanisms_that_control_active_wetting_and_tissue_fluidification_in_epithelial_tissues/31231516/1)
 
-Dataset deposited alongside: Mechanisms of active wetting and fluidification in epithelial cell collectives (Nature Materials, 2026-3-23). Dataset size: 0 MB.
+contains the raw data underlying any graphs and charts presented as Excel file
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31231516.v1](https://doi.org/10.6084/m9.figshare.31231516.v1)
 
 #### 🧪🔓 [Cho and Prabowo-etal-Source data](https://springernature.figshare.com/articles/dataset/Cho_and_Prabowo-etal-Source_data/29264624/1)
 
-Dataset deposited alongside: High-titer, antibiotic-free, pilot-scale production of 1,3-propanediol by engineered Corynebacterium (Nature Chemical Engineering, 2026-5-12). Dataset size: 0 MB.
+Source data for all the results presented in the submitted paper.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29264624.v1](https://doi.org/10.6084/m9.figshare.29264624.v1)
 
 #### 🧪🔓 [Construction of synthetic non-genetic DNA-protein systems in living cells](https://springernature.figshare.com/articles/dataset/Construction_of_synthetic_non-genetic_DNA-protein_systems_in_living_cells/26161684)
 
-Dataset deposited alongside: Construction of synthetic protein-binding non-genetic DNA systems in living cells (Nature Chemistry, 2026-1-16). Dataset size: 17 MB.
+The zip file includes raw image data obtained from fluorescence microscopy. Dataset size: 17 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26161684](https://doi.org/10.6084/m9.figshare.26161684)
 
 #### 🧪🔓 [Efficient and reversible chirality induction between protein and achiral plasmonic assemblies](https://springernature.figshare.com/articles/dataset/Efficient_and_reversible_chirality_induction_between_protein_and_achiral_plasmonic_assemblies/28429202/1)
 
-Dataset deposited alongside: Efficient and reversible chirality induction between protein and achiral plasmonic assemblies (Nature Materials, 2026-4-15). Dataset size: 20 MB.
+Experimental and simulation data. Dataset size: 20 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28429202.v1](https://doi.org/10.6084/m9.figshare.28429202.v1)
 
 #### 🧪🔓 [Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming](https://springernature.figshare.com/articles/dataset/Optimizing_biodiversity_multifunctionality_and_yield_when_transitioning_to_organic_farming/27302391)
 
-Dataset deposited alongside: Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming (Nature Sustainability, 2026-3-16). Dataset size: 0 MB.
+Experimental biological activity dataset: Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming. Published alongside a Nature Sustainability study (2026). Deposited on figshare.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.27302391](https://doi.org/10.6084/m9.figshare.27302391)
 
 #### 🧪🔓 [Purcell-enhanced two-photon emission from a quantum dot via dark-state biexciton loading](https://springernature.figshare.com/articles/dataset/Purcell-enhanced_two-photon_emission_from_a_quantum_dot_via_dark-state_biexciton_loading/31161145/1)
 
-Dataset deposited alongside: Purcell-enhanced two-photon emission from a quantum dot via dark-state biexciton loading (Nature Materials, 2026-3-2). Dataset size: 2 MB.
+Source data in .xlsx format for preparing the figures in the main text. Dataset size: 2 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31161145.v1](https://doi.org/10.6084/m9.figshare.31161145.v1)
 
 #### 🧪🔓 [Versatile heavy metal ion separation via biological ion-channel-inspired membranes](https://springernature.figshare.com/articles/dataset/Versatile_heavy_metal_ion_separation_via_biological_ion-channel-inspired_membranes/30687980/1)
 
-Dataset deposited alongside: Versatile heavy metal ion separation via biological ion-channel-inspired membranes (Nature Nanotechnology, 2026-4-16).
+Raw data of uranium extraction from seawater by TpPa-AO membrane.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30687980.v1](https://doi.org/10.6084/m9.figshare.30687980.v1)
 
@@ -704,127 +704,127 @@ Dataset deposited alongside: Versatile heavy metal ion separation via biological
 
 #### 🧪🔓 [CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials](https://zenodo.org/doi/10.5281/zenodo.7106173)
 
-Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.
+Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.
 
 `experimental`· `open`· 2023 · CDLA-SHARING-1.0 · Zenodo· DOI: [10.5281/zenodo.7106173](https://doi.org/10.5281/zenodo.7106173)
 
 #### 🧪🔓 [CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials](https://zenodo.org/doi/10.5281/zenodo.10120180)
 
-Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.
+Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.
 
 `experimental`· `open`· 2023 · CDLA-SHARING-1.0 · Zenodo· DOI: [10.5281/zenodo.10120180](https://doi.org/10.5281/zenodo.10120180)
 
 #### 🧪🔓 [CRAFTED: An exploratory database of simulated adsorption isotherms of nanoporous materials](https://zenodo.org/record/8190237)
 
-Dataset deposited alongside: CRAFTED: An exploratory database of simulated adsorption isotherms of metal-organic frameworks (Scientific Data, 2023-4-20). Dataset size: 55 MB.
+Overview The files in this repository compose the C harge-dependent, R eproducible, A ccessible, F orcefield-dependent, and T emperature-dependent E xploratory D atabase ( CRAFTED ) of adsorption isotherms. Dataset size: 55 MB.
 
 `experimental`· `open`· 2023 · CDLA-SHARING-1.0 · Zenodo· DOI: [10.5281/zenodo.8190237](https://doi.org/10.5281/zenodo.8190237)
 
 #### 🧪🔓 [Data associated to "An end-to-end framework for reactivity in heterogeneous catalysis"](https://zenodo.org/doi/10.5281/zenodo.17977395)
 
-Dataset deposited alongside: An end-to-end framework for reactivity in heterogeneous catalysis (Nature Chemical Engineering, 2026-3-19). Dataset size: 1008 MB.
+This repository contains the results associated to the article "An end-to-end framework for reactivity in heterogeneous catalysis" published in Nature Chemical Engineering (DOI: https://doi.org/10.1038/s44286-026-00361-8 ). Dataset size: 1008 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17977395](https://doi.org/10.5281/zenodo.17977395)
 
 #### 🧪🔓 [Data associated to "An end-to-end framework for reactivity in heterogeneous catalysis"](https://zenodo.org/doi/10.5281/zenodo.17977394)
 
-Dataset deposited alongside: An end-to-end framework for reactivity in heterogeneous catalysis (Nature Chemical Engineering, 2026-3-19). Dataset size: 1008 MB.
+This repository contains the results associated to the article "An end-to-end framework for reactivity in heterogeneous catalysis" published in Nature Chemical Engineering (DOI: https://doi.org/10.1038/s44286-026-00361-8 ). Dataset size: 1008 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17977394](https://doi.org/10.5281/zenodo.17977394)
 
 #### 🧪🔓 [Data for the publication "Quantum Fisher information in a strange metal"](https://zenodo.org/doi/10.5281/zenodo.19349955)
 
-Dataset deposited alongside: Quantum Fisher information in a strange metal (Nature Physics, 2026-6-15).
+Datasets underlying the figures in the publication "Quantum Fisher information in a strange metal"
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19349955](https://doi.org/10.5281/zenodo.19349955)
 
 #### 🧪🔓 [Data for the publication "Quantum Fisher information in a strange metal"](https://zenodo.org/doi/10.5281/zenodo.19349954)
 
-Dataset deposited alongside: Quantum Fisher information in a strange metal (Nature Physics, 2026-6-15).
+Datasets underlying the figures in the publication "Quantum Fisher information in a strange metal"
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19349954](https://doi.org/10.5281/zenodo.19349954)
 
 #### 🧪🔓 [Data set for: Terahertz Time-Domain imaging of feet of diabetic and non-diabetic patients](https://figshare.com/articles/dataset/Data_set_for_Terahertz_Time-Domain_imaging_of_feet_of_diabetic_and_non-diabetic_patients/31052176/9)
 
-Dataset deposited alongside: Terahertz Time-Domain imaging of feet of diabetic and non-diabetic patients (Scientific Data, 2026-6-26). Dataset size: 12.1 GB.
+This respository contains Terahertz Time-Domain imaging dataset of human plantar surface of the feet acquired from type-2 diabetic and non-diabetic volunteers. The measurements were collected in reflection geometry using a fiber-coupled terahertz system and include spatially resolved terahertz waveforms obtained through raster scanning of both feet soles.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31052176.v9](https://doi.org/10.6084/m9.figshare.31052176.v9)
 
 #### 🧪🔓 [Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (DOI](https://zenodo.org/doi/10.5281/zenodo.15300305)
 
-Dataset deposited alongside: Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts (Nature Catalysis, 2025-7-17). Dataset size: 2 MB.
+Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (Nature Catalysis; https://www.nature.com/articles/s41929-025-01370-1). Dataset size: 2 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15300305](https://doi.org/10.5281/zenodo.15300305)
 
 #### 🧪🔓 [Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (DOI](https://zenodo.org/doi/10.5281/zenodo.15300306)
 
-Dataset deposited alongside: Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts (Nature Catalysis, 2025-7-17). Dataset size: 2 MB.
+Dataset for the article 'Controlling hydrocarbon chain growth and degree of branching in CO2 electroreduction on fluorine-doped nickel catalysts' (Nature Catalysis; https://www.nature.com/articles/s41929-025-01370-1). Dataset size: 2 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15300306](https://doi.org/10.5281/zenodo.15300306)
 
 #### 🧪🔓 [Dataset: Strain boosts propanol electrosynthesis from CO](https://zenodo.org/doi/10.5281/zenodo.18183751)
 
-Dataset deposited alongside: Strain boosts propanol electrosynthesis from CO on copper (Nature Catalysis, 2026-3-16). Dataset size: 28 MB.
+The two-step electroreduction of CO 2 to CO followed by CO to multi-carbon products is a promising alternative to the direct CO 2 electroreduction for both efficiency and stability. The catalyst features which control selectivity in CO electroreduction (CORR) remain unclear, which limits further advancement in the overall performance.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18183751](https://doi.org/10.5281/zenodo.18183751)
 
 #### 🧪🔓 [Dataset: Strain boosts propanol electrosynthesis from CO](https://zenodo.org/doi/10.5281/zenodo.18183752)
 
-Dataset deposited alongside: Strain boosts propanol electrosynthesis from CO on copper (Nature Catalysis, 2026-3-16). Dataset size: 28 MB.
+The two-step electroreduction of CO 2 to CO followed by CO to multi-carbon products is a promising alternative to the direct CO 2 electroreduction for both efficiency and stability. The catalyst features which control selectivity in CO electroreduction (CORR) remain unclear, which limits further advancement in the overall performance.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18183752](https://doi.org/10.5281/zenodo.18183752)
 
 #### 🧪🔓 [De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis.](https://zenodo.org/doi/10.5281/zenodo.17647531)
 
-Dataset deposited alongside: De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis (Nature Catalysis, 2025-11-3). Dataset size: 23 MB.
+Data underlying the figures/tables of the publication: Zou, Z., Kalvet, I., Lozhkin, B. et al. De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis. Nat Catal (2025). https://doi.org/10.1038/s41929-025-01436-0. Dataset size: 23 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17647531](https://doi.org/10.5281/zenodo.17647531)
 
 #### 🧪🔓 [De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis.](https://zenodo.org/doi/10.5281/zenodo.17647530)
 
-Dataset deposited alongside: De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis (Nature Catalysis, 2025-11-3). Dataset size: 23 MB.
+Data underlying the figures/tables of the publication: Zou, Z., Kalvet, I., Lozhkin, B. et al. De novo design and evolution of an artificial metathase for cytoplasmic olefin metathesis. Nat Catal (2025). https://doi.org/10.1038/s41929-025-01436-0. Dataset size: 23 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17647530](https://doi.org/10.5281/zenodo.17647530)
 
 #### 🧪🔓 [Direct evaluation of coherence in a Magnon Bose-Einstein Condensate](https://zenodo.org/doi/10.5281/zenodo.20135543)
 
-Dataset deposited alongside: Emergence of phase coherence in a magnon Bose–Einstein condensate (Nature Physics, 2026-7-13). Dataset size: 1.4 GB.
+The spontaneous emergence of coherence is a defining feature of multi-body quantum systems, underlying phenomena from superconductivity to quantum information processing. While Bose-Einstein condensates (BECs) provide a unique setting for exploring this process, yet direct observation of how a condensate acquires a coherent global phase has remained out of reach.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20135543](https://doi.org/10.5281/zenodo.20135543)
 
 #### 🧪🔓 [Direct evaluation of coherence in a Magnon Bose-Einstein Condensate](https://zenodo.org/doi/10.5281/zenodo.20135542)
 
-Dataset deposited alongside: Emergence of phase coherence in a magnon Bose–Einstein condensate (Nature Physics, 2026-7-13). Dataset size: 1.4 GB.
+The spontaneous emergence of coherence is a defining feature of multi-body quantum systems, underlying phenomena from superconductivity to quantum information processing. While Bose-Einstein condensates (BECs) provide a unique setting for exploring this process, yet direct observation of how a condensate acquires a coherent global phase has remained out of reach.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20135542](https://doi.org/10.5281/zenodo.20135542)
 
 #### 🧪🔓 [Emergent Harmonics in Josephson Tunnel Junctions Due to Series Inductance](https://springernature.figshare.com/articles/dataset/Emergent_Harmonics_in_Josephson_Tunnel_Junctions_Due_to_Series_Inductance/29647922/1)
 
-Dataset deposited alongside: Higher-order harmonics in Josephson tunnel junctions due to series inductance (Nature Physics, 2026-5-12). Dataset size: 21 MB.
+Flux-biased spectroscopy data for fourteeen qubits. Dataset size: 21 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29647922.v1](https://doi.org/10.6084/m9.figshare.29647922.v1)
 
 #### 🧪🔓 [Full-Spectrum Photocatalyst for Radical-Regulated Selective Methane Conversion](https://springernature.figshare.com/articles/dataset/Full-Spectrum_Photocatalyst_for_Radical-Regulated_Selective_Methane_Conversion/28091891/1)
 
-Dataset deposited alongside: Co3O4 as full-solar-spectrum photocatalyst for selective methane conversion through reactive oxygen species control (Nature Catalysis, 2026-1-23). Dataset size: 15 MB.
+Raw data of the figures conrresponding to the article entitled: Full-Spectrum Photocatalyst for Radical-Regulated Selective Methane Conversion. Dataset size: 15 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28091891.v1](https://doi.org/10.6084/m9.figshare.28091891.v1)
 
 #### 🧪🔓 [High-resolution multimodal microclimate dataset: thermal, radiative and physiological measurements of a mature linden tree (tilia cordata)](https://zenodo.org/doi/10.5281/zenodo.18039731)
 
-Dataset deposited alongside: Multi-sensor microclimate and tree canopy dataset from a linden tree for green infrastructure validation (Scientific Data, 2026-6-1). Dataset size: 7.4 GB.
+Multi-sensor microclimate dataset from a mature urban linden tree ( Tilia cordata ) collected over 72 hours in June 2025 near Grünstadt, Germany. Dataset size: 7.4 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18039731](https://doi.org/10.5281/zenodo.18039731)
 
 #### 🧪🔓 [High-resolution multimodal microclimate dataset: thermal, radiative and physiological measurements of a mature linden tree (tilia cordata)](https://zenodo.org/doi/10.5281/zenodo.18039730)
 
-Dataset deposited alongside: Multi-sensor microclimate and tree canopy dataset from a linden tree for green infrastructure validation (Scientific Data, 2026-6-1). Dataset size: 7.4 GB.
+Multi-sensor microclimate dataset from a mature urban linden tree ( Tilia cordata ) collected over 72 hours in June 2025 near Grünstadt, Germany. Dataset size: 7.4 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18039730](https://doi.org/10.5281/zenodo.18039730)
 
 #### 🧪🔓 [Multi-applied field modulation enables efficient multielectron molecular CO2 reduction in strong acid](https://springernature.figshare.com/articles/dataset/Multi-applied_field_modulation_enables_efficient_multielectron_molecular_CO2_reduction_in_strong_acid/29591042/1)
 
-Dataset deposited alongside: Efficient CO2-to-methanol electrocatalysis in acidic media via microenvironment-tuned cobalt phthalocyanine (Nature Nanotechnology, 2025-11-17). Dataset size: 4 MB.
+Source data for manuscript in the main text. Dataset size: 4 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29591042.v1](https://doi.org/10.6084/m9.figshare.29591042.v1)
 
@@ -836,31 +836,31 @@ First large open experimental electrocatalyst database from Meta FAIR, VSParticl
 
 #### 🧪🔓 [Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning](https://zenodo.org/doi/10.5281/zenodo.16878886)
 
-Dataset deposited alongside: Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning (Nature Catalysis, 2025-9-29). Dataset size: 9.0 GB.
+Neural Network Potential-driven Molecular Dynamics Database for Catalyst Support Materials This database contains Neural Network Potential driven Molecular Dynamics (NN-MD) simulation results for 3nm Pt nanoparticle supported on various metal oxides supports at 800 °C for 500 ps and high-throughput screening results for catalyst support materials, organized into three datasets for comprehensive an…
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16878886](https://doi.org/10.5281/zenodo.16878886)
 
 #### 🧪🔓 [Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning](https://zenodo.org/doi/10.5281/zenodo.16878887)
 
-Dataset deposited alongside: Predictive model for the discovery of sinter-resistant supports for metallic nanoparticle catalysts by interpretable machine learning (Nature Catalysis, 2025-9-29). Dataset size: 9.0 GB.
+Neural Network Potential-driven Molecular Dynamics Database for Catalyst Support Materials This database contains Neural Network Potential driven Molecular Dynamics (NN-MD) simulation results for 3nm Pt nanoparticle supported on various metal oxides supports at 800 °C for 500 ps and high-throughput screening results for catalyst support materials, organized into three datasets for comprehensive an…
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16878887](https://doi.org/10.5281/zenodo.16878887)
 
 #### 🧪🔓 [Resolving Non-Covalent Interactions Between Surface Hydroxyl on Cu and Interfacial Water in Alkaline CO Electroreduction](https://springernature.figshare.com/articles/dataset/Resolving_Non-Covalent_Interactions_Between_Surface_Hydroxyl_on_Cu_and_Interfacial_Water_in_Alkaline_CO_Electroreduction/28531955/1)
 
-Dataset deposited alongside: Resolving non-covalent interactions between surface hydroxyl on Cu and interfacial water in alkaline CO electroreduction (Nature Catalysis, 2025-8-19). Dataset size: 1 MB.
+Original datas for the manuscript. Dataset size: 1 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28531955.v1](https://doi.org/10.6084/m9.figshare.28531955.v1)
 
 #### 🧪🔓 [Single cell transcriptome profiling of peripheral blood mononuclear cells in Guillain–Barré syndrome patients](https://springernature.figshare.com/articles/dataset/Single_cell_transcriptome_profiling_of_peripheral_blood_mononuclear_cells_in_Guillain_Barr_syndrome_patients/31975524/1)
 
-Dataset deposited alongside: Single cell transcriptome profiling of peripheral blood mononuclear cells in Guillain–Barré syndrome patients (Scientific Data, 2026-6-5). Dataset size: 3.9 GB.
+We collected a total of 5 human peripheral blood mononuclear cells and performed single-cell RNAseq sequencing. Among them, PBMC1, PBMC2, and PBMC3 were data from three GBS patients, while HPBMC1 and HPBMC2 were data from two healthy controls matched for age and gender. Dataset size: 3.9 GB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31975524.v1](https://doi.org/10.6084/m9.figshare.31975524.v1)
 
 #### 🧪🔓 [Sub-nanometer Alloyed Clusters Sustain High Productivity in Propane Dehydrogenation](https://springernature.figshare.com/articles/dataset/Sub-nanometer_Alloyed_Clusters_Sustain_High_Productivity_in_Propane_Dehydrogenation/31743865/1)
 
-Dataset deposited alongside: Subnanometre PtSn alloyed clusters encapsulated in silicalite-1 sustain high productivity in propane dehydrogenation (Nature Catalysis, 2026-5-26). Dataset size: 948 MB.
+Propane dehydrogenation (PDH) processes typically operate at low weight-hourly space velocities (WHSV) about 10 h⁻¹ to ensure catalyst stability, limiting propylene productivity to around 0.1 molC3H6·gcatalyst-1·h-1. Here, we report that controlling the formation of sub-nm PtSn alloyed clusters encapsulated in silicalite-1 affords a catalyst that can sustain high propylene productivities.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31743865.v1](https://doi.org/10.6084/m9.figshare.31743865.v1)
 
@@ -920,49 +920,49 @@ Raw data, metadata and distilled property/performance metrics from millions of h
 
 #### 🧪🔓 [A quantum resistance memristor for an intrinsically traceable International System of Units standard - Dataset](https://zenodo.org/doi/10.5281/zenodo.16788655)
 
-Dataset deposited alongside: A quantum resistance memristor for an intrinsically traceable International System of Units standard (Nature Nanotechnology, 2025-10-27). Dataset size: 2 MB.
+This is the dataset of "A quantum resistance memristor for an intrinsically traceable International System of Units standard", Nature Nanotechnology, DOI: 10.1038/s41565-025-02037-5, (2025). This work was supported by the European project MEMQuD, code 20FUN06, funder ID: 10.13039/100014132. Dataset size: 2 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16788655](https://doi.org/10.5281/zenodo.16788655)
 
 #### 🧪🔓 [A quantum resistance memristor for an intrinsically traceable International System of Units standard - Dataset](https://zenodo.org/doi/10.5281/zenodo.16788654)
 
-Dataset deposited alongside: A quantum resistance memristor for an intrinsically traceable International System of Units standard (Nature Nanotechnology, 2025-10-27). Dataset size: 2 MB.
+This is the dataset of "A quantum resistance memristor for an intrinsically traceable International System of Units standard", Nature Nanotechnology, DOI: 10.1038/s41565-025-02037-5, (2025). This work was supported by the European project MEMQuD, code 20FUN06, funder ID: 10.13039/100014132. Dataset size: 2 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16788654](https://doi.org/10.5281/zenodo.16788654)
 
 #### 🧪🔓 [Agricultural Workforce as a Potential Bottleneck of Future Cropland Supply](https://springernature.figshare.com/articles/dataset/Agricultural_Workforce_as_a_Potential_Bottleneck_of_Future_Cropland_Supply/29354609/1)
 
-Dataset deposited alongside: Agricultural workforce as a potential bottleneck of future cropland availability (Nature Sustainability, 2026-6-1). Dataset size: 3 MB.
+Here, the main manuscript of a research article is presented, along with supplementary material containing additional figures and tables, and a cover letter introducing the research. Dataset size: 3 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29354609.v1](https://doi.org/10.6084/m9.figshare.29354609.v1)
 
 #### 🧪🔓 [AllpaDB Dataset: Harmonized soil legacy and research data from Peru](https://zenodo.org/doi/10.5281/zenodo.20077332)
 
-Dataset deposited alongside: AllpaDB: a compiled repository of harmonized soil legacy data and research data from Peru (Scientific Data, 2026-6-25). Dataset size: 2.9 GB.
+This dataset are derived from from historical soil studies conducted throughout Peru. Although soil studies have been carried out in the country since 1962, this information lacked a digital archive and a structured database. This limitation hindered its usefulness for effective land management, scientific research, and education.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20077332](https://doi.org/10.5281/zenodo.20077332)
 
 #### 🧪🔓 [AllpaDB Dataset: Harmonized soil legacy and research data from Peru](https://zenodo.org/doi/10.5281/zenodo.20077331)
 
-Dataset deposited alongside: AllpaDB: a compiled repository of harmonized soil legacy data and research data from Peru (Scientific Data, 2026-6-25). Dataset size: 2.9 GB.
+This dataset are derived from from historical soil studies conducted throughout Peru. Although soil studies have been carried out in the country since 1962, this information lacked a digital archive and a structured database. This limitation hindered its usefulness for effective land management, scientific research, and education.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20077331](https://doi.org/10.5281/zenodo.20077331)
 
 #### 🧪🔓 [An iontronic reservoir for highly robust neuromorphic prosthesis](https://springernature.figshare.com/articles/dataset/An_iontronic_reservoir_for_highly_robust_neuromorphic_prosthesis/31153141)
 
-Dataset deposited alongside: An iontronic reservoir for highly robust neuromorphic prosthesis (Nature Materials, 2026-3-9). Dataset size: 16 MB.
+This dataset contains the underlying source data for the figures presented in the manuscript. Source_data.xlsx: This spreadsheet includes the numerical data and statistical analysis results for the Main Figures and relevant Extended Data Figures. MATLAB Files (.mat): Due to file size constraints, the large raw datasets corresponding to the Extended Data Figures (e.g., Extended Data Fig. 3, Fig.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31153141](https://doi.org/10.6084/m9.figshare.31153141)
 
 #### 🧪🔓 [Aneuploidy selects for the acquisition of driver genes in breast cancer](https://springernature.figshare.com/articles/dataset/Aneuploidy_selects_for_the_acquisition_of_driver_genes_in_breast_cancer/32144932/1)
 
-Dataset deposited alongside: Aneuploidy selects for the acquisition of driver genes in breast cancer (Nature, 2026-7-8). Dataset size: 266 MB.
+Gene-level copy number calls from whole genome sequencing of mouse tumors. Dataset size: 266 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32144932.v1](https://doi.org/10.6084/m9.figshare.32144932.v1)
 
 #### 🧪🔓 [Charge-Triggered Switching Mechanism in Selenium Select Enabling Ultralow Leakage-Current](https://springernature.figshare.com/articles/dataset/Charge-Triggered_Switching_Mechanism_in_Selenium_Select_Enabling_Ultralow_Leakage-Current/31047436)
 
-Dataset deposited alongside: Charge-triggered switching mechanism in selenium selector enabling ultralow leakage current (Nature Materials, 2026-3-2). Dataset size: 11 MB.
+This dataset contains the minimum source data for most figures presented in the accompanying manuscript titled "Charge-Triggered Switching Mechanism in Selenium Selector Enabling Ultralow Leakage-Current". Individual data files corresponding to each main figure. Each file contains the raw or primary processed data used to generate the specific panels within that figure.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31047436](https://doi.org/10.6084/m9.figshare.31047436)
 
@@ -974,55 +974,55 @@ Large open materials and chemicals data platform aggregating experimental proper
 
 #### 🧪🔓 [County-Level Environmental and Social Influences on EPA Criminal Prosecutions in the United States](https://springernature.figshare.com/articles/dataset/County-Level_Environmental_and_Social_Influences_on_EPA_Criminal_Prosecutions_in_the_United_States/26180530)
 
-Dataset deposited alongside: Social factors shape federal environmental crime prosecution patterns in the USA (Nature Sustainability, 2026-1-6). Dataset size: 2 MB.
+These data can be used to reproduce Extended Data Tables 1-3, Supplementary Tables 1-4 and Figures 1 and 2 in the submitted manuscript, "Social factors shape the geographic pattern of U.S. environmental crime prosecutions". The files contain the Final Data in Stata format (.dta) and .csv format, Stata code (.do) for reproduction of the tables and figures, a .
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26180530](https://doi.org/10.6084/m9.figshare.26180530)
 
 #### 🧪🔓 [Crossover of quasi-localized dynamics and diffusion in supercooled liquids](https://springernature.figshare.com/articles/dataset/Crossover_of_quasi-localized_dynamics_and_diffusion_in_supercooled_liquids/31814242/1)
 
-Dataset deposited alongside: Crossover of quasi-localized dynamics and diffusion in supercooled liquids (Nature Physics, 2026-6-9).
+This figshare repository contains the raw data used to generate Figures 1–4 of the associated publication: "At the crossover between quasi-localized dynamics and diffusion in deeply supercooled liquids." Repository structure The repository is organized into folders corresponding to the individual figures and subplots.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31814242.v1](https://doi.org/10.6084/m9.figshare.31814242.v1)
 
 #### 🧪🔓 [Data and code for: The dual impact of trade on the water-energy-food nexus globally](https://springernature.figshare.com/articles/dataset/Data_and_code_for_The_dual_impact_of_trade_on_the_water-energy-food_nexus_globally/29155031)
 
-Dataset deposited alongside: The dual impact of trade on the water–energy–food nexus globally (Nature Sustainability, 2026-4-2). Dataset size: 7 MB.
+This contains all the necessary data and code used in the study by Yin et al. (2026) for data preprocessing, network analysis, counterfactual scenario analysis, and machine learning. Dataset size: 7 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29155031](https://doi.org/10.6084/m9.figshare.29155031)
 
 #### 🧪🔓 [Data used in The Linkage between Microbial Community Dynamics and Urbanization Age](https://springernature.figshare.com/articles/dataset/Data_used_in_The_Linkage_between_Microbial_Community_Dynamics_and_Urbanization_Age/24680199)
 
-Dataset deposited alongside: The linkage between microbial community dynamics and urbanization age (Nature Sustainability, 2026-4-15). Dataset size: 61 MB.
+Raw data used in this study. Full information about data and code is available at https://doi.org/10.6084/m9.figshare.24782817. Dataset size: 61 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.24680199](https://doi.org/10.6084/m9.figshare.24680199)
 
 #### 🧪🔓 [Dataset](https://springernature.figshare.com/articles/dataset/Dataset/30670601)
 
-Dataset deposited alongside: Industrial overcapacity can enable seasonal flexibility in electricity use (Nature Energy, 2026-6-12). Dataset size: 106 MB.
+Dataset of Pypsa-China, an open optimisation model of the Chinese energy system, with aluminum asset data added. Dataset size: 106 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30670601](https://doi.org/10.6084/m9.figshare.30670601)
 
 #### 🧪🔓 [Detecting Linear Dichroism with Atomic Resolution](https://springernature.figshare.com/articles/dataset/Detecting_Linear_Dichroism_with_Atomic_Resolution/31998285)
 
-Dataset deposited alongside: Detecting linear dichroism with atomic resolution (Nature Materials, 2026-5-12). Dataset size: 36 MB.
+Source data for Detecting Linear Dichroism with Atomic Resolution. Dataset size: 36 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31998285](https://doi.org/10.6084/m9.figshare.31998285)
 
 #### 🧪🔓 [Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality](https://springernature.figshare.com/articles/dataset/Electron-Phonon_Coupling_and_Symmetry-Breaking_in_Superconducting_Oxide_Interfaces_Near_Ferroelectric_Quantum_Criticality/32324148/1)
 
-Dataset deposited alongside: Electron–phonon coupling and symmetry breaking in superconducting oxide interfaces near ferroelectric quantum criticality (Nature Materials, 2026-6-30). Dataset size: 354 MB.
+Source data for Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality. Dataset size: 354 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32324148.v1](https://doi.org/10.6084/m9.figshare.32324148.v1)
 
 #### 🧪🔓 [Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics](https://zenodo.org/doi/10.5281/zenodo.15690639)
 
-Dataset deposited alongside: Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics (Nature Chemistry, 2026-3-23). Dataset size: 7 MB.
+Additional Data to report: https://doi.org/10.1038/s41557-026-02082-0 In biomacromolecules, many amino acids or nucleotides are needed to obtain defined secondary structures and concomitant advanced functionalities. Dataset size: 7 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15690639](https://doi.org/10.5281/zenodo.15690639)
 
 #### 🧪🔓 [Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics](https://zenodo.org/doi/10.5281/zenodo.15690640)
 
-Dataset deposited alongside: Generating extended foldamer dye stacks and unravelling their evolving exciton dynamics (Nature Chemistry, 2026-3-23). Dataset size: 7 MB.
+Additional Data to report: https://doi.org/10.1038/s41557-026-02082-0 In biomacromolecules, many amino acids or nucleotides are needed to obtain defined secondary structures and concomitant advanced functionalities. Dataset size: 7 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15690640](https://doi.org/10.5281/zenodo.15690640)
 
@@ -1034,7 +1034,7 @@ FAIR, open-access archive hosting hundreds of community-contributed materials-sc
 
 #### 🧪🔓 [Microscopic signatures of imaginary charge density wave in a kagome metal](https://springernature.figshare.com/articles/dataset/Microscopic_signatures_of_imaginary_charge_density_wave_in_a_kagome_metal/32251713/1)
 
-Dataset deposited alongside: Microscopic signatures of an imaginary charge density wave in a kagome metal (Nature Physics, 2026-6-17). Dataset size: 7 MB.
+Source data for Microscopic signatures of an imaginary charge density wave in a kagome metal. Dataset size: 7 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32251713.v1](https://doi.org/10.6084/m9.figshare.32251713.v1)
 
@@ -1046,142 +1046,142 @@ Large FAIR repository and archive of raw and processed computational materials-s
 
 #### 🧪🔓 [Observation of angular momentum transfer among crystal lattice modes - Experimental data](https://zenodo.org/doi/10.5281/zenodo.19087102)
 
-Dataset deposited alongside: Observation of angular momentum transfer among crystal lattice modes (Nature Physics, 2026-5-12). Dataset size: 18 MB.
+Experimental data for the paper " Observation of angular momentum transfer among crystal lattice modes ", published with open-access in Nature Physics under https://doi.org/10.1038/s41567-026-03274-8 The data was measured at the Department of Physical Chemistry, Fritz Haber Institute of the Max Planck Society in Berlin. Contents: Data from Fig. 1 c-f Data from Fig. 2 a-d Data from Fig.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19087102](https://doi.org/10.5281/zenodo.19087102)
 
 #### 🧪🔓 [Observation of angular momentum transfer among crystal lattice modes - Experimental data](https://zenodo.org/doi/10.5281/zenodo.19087101)
 
-Dataset deposited alongside: Observation of angular momentum transfer among crystal lattice modes (Nature Physics, 2026-5-12). Dataset size: 18 MB.
+Experimental data for the paper " Observation of angular momentum transfer among crystal lattice modes ", published with open-access in Nature Physics under https://doi.org/10.1038/s41567-026-03274-8 The data was measured at the Department of Physical Chemistry, Fritz Haber Institute of the Max Planck Society in Berlin. Contents: Data from Fig. 1 c-f Data from Fig. 2 a-d Data from Fig.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19087101](https://doi.org/10.5281/zenodo.19087101)
 
 #### 🧪🔓 [Observing disorder-induced average topological order in an atom array](https://springernature.figshare.com/articles/dataset/Observing_disorder-induced_average_topological_order_in_an_atom_array/30752111/1)
 
-Dataset deposited alongside: Average topological phase in a disordered Rydberg atom array (Nature Physics, 2026-4-20). Dataset size: 0 MB.
+We have deposited the source data underlying all four figures of the manuscript in figshare. The dataset consists of four Excel files, each corresponding to one figure in the main text
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30752111.v1](https://doi.org/10.6084/m9.figshare.30752111.v1)
 
 #### 🧪🔓 [OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies](https://zenodo.org/doi/10.5281/zenodo.17248815)
 
-Dataset deposited alongside: OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies (Scientific Data, 2026-6-27). Dataset size: 0 MB.
+Description Species traits are an important facet of biodiversity and are useful for testing many ecological hypotheses. Many initiatives to centralize species traits have emerged in recent years, but there are still large gaps in species traits’ knowledge in the literature.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17248815](https://doi.org/10.5281/zenodo.17248815)
 
 #### 🧪🔓 [OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies](https://zenodo.org/doi/10.5281/zenodo.20134320)
 
-Dataset deposited alongside: OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies (Scientific Data, 2026-6-27). Dataset size: 0 MB.
+Description Species traits are an important facet of biodiversity and are useful for testing many ecological hypotheses. Many initiatives to centralize species traits have emerged in recent years, but there are still large gaps in species traits’ knowledge in the literature.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20134320](https://doi.org/10.5281/zenodo.20134320)
 
 #### 🧪🔓 [Original Data of "Scalable Generation of Massive Schrödinger Cat States via Quantum Tunneling"](https://springernature.figshare.com/articles/dataset/Original_Data_of_Scalable_Generation_of_Massive_Schr_dinger_Cat_States_via_Quantum_Tunneling_/29643506)
 
-Dataset deposited alongside: Scalable generation of massive Schrödinger cat states via quantum tunnelling (Nature Physics, 2026-5-11). Dataset size: 1 MB.
+This file provides the original experimental data associated with our massive quantum tunneling study, formatted as a .xls spreadsheet. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29643506](https://doi.org/10.6084/m9.figshare.29643506)
 
 #### 🧪🔓 [Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors](https://zenodo.org/doi/10.5281/zenodo.20692986)
 
-Dataset deposited alongside: Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors (Scientific Data, 2026-6-30). Dataset size: 156 MB.
+Ovarian Stainology is a structured, openly accessible database of evidence-based immunohistochemical (IHC) antigen and protein expression profiles in ovarian tumors, aggregated from the published literature. The final harmonized dataset comprises 12,212 tumor–stain frequency records derived from 1,450 studies, curated from 100,149 raw tumor–stain pairs gathered across 5,961 screened publications.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20692986](https://doi.org/10.5281/zenodo.20692986)
 
 #### 🧪🔓 [Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors](https://zenodo.org/doi/10.5281/zenodo.21227034)
 
-Dataset deposited alongside: Ovarian Stainology: Database of evidence-based immunohistochemical antigen expression in ovarian tumors (Scientific Data, 2026-6-30). Dataset size: 156 MB.
+Ovarian Stainology is a structured, openly accessible database of evidence-based immunohistochemical (IHC) antigen and protein expression profiles in ovarian tumors, aggregated from the published literature. The final harmonized dataset comprises 12,212 tumor–stain frequency records derived from 1,450 studies, curated from 100,149 raw tumor–stain pairs gathered across 5,961 screened publications.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.21227034](https://doi.org/10.5281/zenodo.21227034)
 
 #### 🧪🔓 [Principles of optics in Fock space for the scalable manipulation of large quantum states](https://springernature.figshare.com/articles/dataset/Principles_of_optics_in_Fock_space_for_the_scalable_manipulation_of_large_quantum_states/30892724)
 
-Dataset deposited alongside: Principles of optics in Fock space for the scalable manipulation of large quantum states (Nature Physics, 2026-7-9). Dataset size: 1 MB.
+Data for Figures in the main text of “Principles of Optics in the Fock Space: Scalable Manipulation of Giant Quantum States”. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30892724](https://doi.org/10.6084/m9.figshare.30892724)
 
 #### 🧪🔓 [Programming Local Confinements in Crystalline Frameworks through Reticular Chemistry](https://springernature.figshare.com/articles/dataset/Programming_Local_Confinements_in_Crystalline_Frameworks_through_Reticular_Chemistry/30593789/1)
 
-Dataset deposited alongside: Programming local confinements in crystalline frameworks through reticular chemistry (Nature Materials, 2026-7-3). Dataset size: 130 MB.
+PXRD, VT-PXRD, CO2 isotherm, breakthrough curves, DRIFT spectra data for NU-6000 and NU-6001. Dataset size: 130 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30593789.v1](https://doi.org/10.6084/m9.figshare.30593789.v1)
 
 #### 🧪🔓 [Protected Rivers Assessment of the United States (PRA-US) Version 1.2.](https://zenodo.org/doi/10.5281/zenodo.17279334)
 
-Dataset deposited alongside: Safeguarding, strengthening and expanding river protections for nature and people (Nature Sustainability, 2026-1-9). Dataset size: 4.5 GB.
+Conservation Science Partners, in partnership with American Rivers, has developed the Protected Rivers Assessment of the United States , a data-driven nationwide inventory of present-day river protection status. Dataset size: 4.5 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17279334](https://doi.org/10.5281/zenodo.17279334)
 
 #### 🧪🔓 [Protected Rivers Assessment of the United States (PRA-US) Version 1.2.](https://zenodo.org/doi/10.5281/zenodo.17279333)
 
-Dataset deposited alongside: Safeguarding, strengthening and expanding river protections for nature and people (Nature Sustainability, 2026-1-9). Dataset size: 4.5 GB.
+Conservation Science Partners, in partnership with American Rivers, has developed the Protected Rivers Assessment of the United States , a data-driven nationwide inventory of present-day river protection status. Dataset size: 4.5 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17279333](https://doi.org/10.5281/zenodo.17279333)
 
 #### 🧪🔓 [Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay](https://springernature.figshare.com/articles/dataset/Real-Space_Imaging_of_the_Electron-Pair_Density_Hole_in_Molecular_Auger-Meitner_Decay/32316573)
 
-Dataset deposited alongside: Real-space imaging of the electron-pair density hole in molecular Auger–Meitner decay (Nature Physics, 2026-6-30). Dataset size: 41 MB.
+Data for the figures and extended data figures in the manuscript "Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay" in Nature Physics (2026). In addition, Molpro in- and output files, as well as simulated scattering signals are provided. A Wolfram Mathematica notebook file is included for generating the figures and inspecting the electronic structure data.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32316573](https://doi.org/10.6084/m9.figshare.32316573)
 
 #### 🧪🔓 [Romanetz Driving Force Supporting Data](https://zenodo.org/doi/10.5281/zenodo.18135191)
 
-Dataset deposited alongside: Photoinduced electron-transfer distance is controlled by the driving force in solid-state organic donor–acceptor systems (Nature Chemistry, 2026-3-25). Dataset size: 262 MB.
+Source data to support the findings of manuscript entitled, "Photoinduced electron transfer distance is controlled by the driving force in solid-state organic donor-acceptors.". Dataset size: 262 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18135191](https://doi.org/10.5281/zenodo.18135191)
 
 #### 🧪🔓 [Romanetz Driving Force Supporting Data](https://zenodo.org/doi/10.5281/zenodo.18135192)
 
-Dataset deposited alongside: Photoinduced electron-transfer distance is controlled by the driving force in solid-state organic donor–acceptor systems (Nature Chemistry, 2026-3-25). Dataset size: 262 MB.
+Source data to support the findings of manuscript entitled, "Photoinduced electron transfer distance is controlled by the driving force in solid-state organic donor-acceptors.". Dataset size: 262 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18135192](https://doi.org/10.5281/zenodo.18135192)
 
 #### 🧪🔓 [Scalable large-area ZIF-8 membranes for industrial propylene/propane separations](https://springernature.figshare.com/articles/dataset/Scalable_large-area_ZIF-8_membranes_for_industrial_propylene_propane_separations/29456279)
 
-Dataset deposited alongside: Scalable large-area ZIF-8 membranes for industrial propylene/propane separations (Nature Chemical Engineering, 2026-4-7). Dataset size: 0 MB.
+This dataset includes experimental and characterization data supporting the findings reported in the manuscript entitled “Enabling scalable fabrication of large-area ZIF-8 membranes for industrial side-stream separation.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29456279](https://doi.org/10.6084/m9.figshare.29456279)
 
 #### 🧪🔓 [Supporting data: Soft-X-ray momentum microscopy of nonlinear magnon interactions](https://zenodo.org/doi/10.5281/zenodo.19471018)
 
-Dataset deposited alongside: Soft-X-ray momentum microscopy of nonlinear magnon interactions (Nature Physics, 2026-6-5). Dataset size: 4.5 GB.
+Supporting data for the research article “Soft X-ray momentum microscopy of nonlinear magnon interactions below 100 nm wavelength.” This repository contains the raw experimental data and a Jupyter notebook used to generate all data-driven figures presented in the study. Detailed information on data structure and processing can be found in the included README.md .
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19471018](https://doi.org/10.5281/zenodo.19471018)
 
 #### 🧪🔓 [Supporting data: Soft-X-ray momentum microscopy of nonlinear magnon interactions](https://zenodo.org/doi/10.5281/zenodo.19471019)
 
-Dataset deposited alongside: Soft-X-ray momentum microscopy of nonlinear magnon interactions (Nature Physics, 2026-6-5). Dataset size: 4.5 GB.
+Supporting data for the research article “Soft X-ray momentum microscopy of nonlinear magnon interactions below 100 nm wavelength.” This repository contains the raw experimental data and a Jupyter notebook used to generate all data-driven figures presented in the study. Detailed information on data structure and processing can be found in the included README.md .
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19471019](https://doi.org/10.5281/zenodo.19471019)
 
 #### 🧪🔓 [The Active Young-Dupré Equation](https://springernature.figshare.com/articles/dataset/The_Active_Young-Dupr_Equation/31148908)
 
-Dataset deposited alongside: Wetting by active fluids (Nature Physics, 2026-4-3). Dataset size: 75 MB.
+These data allow to reproduce all figures and movies included in our article. Dataset size: 75 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31148908](https://doi.org/10.6084/m9.figshare.31148908)
 
 #### 🧪🔓 [Towards Single-Crystalline Two-Dimensional Poly(arylene vinylene) Covalent Organic Frameworks](https://springernature.figshare.com/articles/dataset/Towards_Single-Crystalline_Two-Dimensional_Poly_arylene_vinylene_Covalent_Organic_Frameworks/30631367)
 
-Dataset deposited alongside: Towards single-crystalline two-dimensional poly(arylene vinylene) covalent organic frameworks (Nature Chemistry, 2026-1-20). Dataset size: 6 MB.
+Source data for main text figure. Dataset size: 6 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30631367](https://doi.org/10.6084/m9.figshare.30631367)
 
 #### 🧪🔓 [Tuning Phonon Transmission via Single-Atom Substituents](https://springernature.figshare.com/articles/dataset/Tuning_Phonon_Transmission_via_Single-Atom_Substituents/31383004)
 
-Dataset deposited alongside: Tuning phonon transmission via single-atom substituents (Nature Materials, 2026-4-2). Dataset size: 16 MB.
+Experimental materials properties dataset: Tuning Phonon Transmission via Single-Atom Substituents. Published alongside a Nature Materials study (2026). Deposited on figshare. Dataset size: 16 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31383004](https://doi.org/10.6084/m9.figshare.31383004)
 
 <a id="materials-geophysics"></a>
-### geophysics
+### Geophysics & earth sciences
 
 #### 🧪🔓 [Recalculated (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2026](https://zenodo.org/doi/10.5281/zenodo.20757578)
 
-Dataset deposited alongside: Recalculating the Surface Ocean CO2 Atlas (SOCAT) to a sea surface temperature climate data record (Scientific Data, 2026-6-9). Dataset size: 3.1 GB.
+Product Information SOCAT dataset version v2026 Recalculated SOCAT dataset version V0-1 Changelog at end of repository FluxEngine version v4.2.0 Contacts Daniel J. Ford d.ford@exeter.ac.uk Jamie D. Shutler j.d.shutler@exeter.ac.uk Introduction The Surface Ocean CO₂ Atlas (SOCAT) version 2026 dataset (Bakker et al., 2016; https://doi.org/10.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20757578](https://doi.org/10.5281/zenodo.20757578)
 
 #### 🧪🔓 [Recalculated (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2026](https://zenodo.org/doi/10.5281/zenodo.20757579)
 
-Dataset deposited alongside: Recalculating the Surface Ocean CO2 Atlas (SOCAT) to a sea surface temperature climate data record (Scientific Data, 2026-6-9). Dataset size: 3.1 GB.
+Product Information SOCAT dataset version v2026 Recalculated SOCAT dataset version V0-1 Changelog at end of repository FluxEngine version v4.2.0 Contacts Daniel J. Ford d.ford@exeter.ac.uk Jamie D. Shutler j.d.shutler@exeter.ac.uk Introduction The Surface Ocean CO₂ Atlas (SOCAT) version 2026 dataset (Bakker et al., 2016; https://doi.org/10.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20757579](https://doi.org/10.5281/zenodo.20757579)
 
@@ -1250,37 +1250,37 @@ PolyBot self-driving lab (Argonne CNM) autonomously navigated a 7-dimensional pr
 
 #### 🧪🔓 [An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises](https://zenodo.org/doi/10.5281/zenodo.14615202)
 
-Dataset deposited alongside: An Electrospinography Database of Gait-Related Tasks and Motor Imagery Exercises (Scientific Data, 2026-6-9). Dataset size: 44.5 GB.
+Description The electroespinography (ESG) signals dataset comprises recordings from fourteen able-bodied participants. A total 10 sessions were recorded for experiment 1 (age: 30.30 ± 8.60, 40 % female participants), 10 sessions for experiment 2 (age: 30.00 ± 8.99, 40 % female participants) and 5 sessions for experiment 3 (age: 26.00 ± 4.24, 40 % female participants).
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.14615202](https://doi.org/10.5281/zenodo.14615202)
 
 #### 🧪🔓 [An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises](https://zenodo.org/doi/10.5281/zenodo.19065545)
 
-Dataset deposited alongside: An Electrospinography Database of Gait-Related Tasks and Motor Imagery Exercises (Scientific Data, 2026-6-9). Dataset size: 44.5 GB.
+Description The electroespinography (ESG) signals dataset comprises recordings from fourteen able-bodied participants. A total 10 sessions were recorded for experiment 1 (age: 30.30 ± 8.60, 40 % female participants), 10 sessions for experiment 2 (age: 30.00 ± 8.99, 40 % female participants) and 5 sessions for experiment 3 (age: 26.00 ± 4.24, 40 % female participants).
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.19065545](https://doi.org/10.5281/zenodo.19065545)
 
 #### 🧪🔓 [Covalency control of photomagnetic relaxation in a manganese(II) photoswitch](https://zenodo.org/doi/10.5281/zenodo.20025667)
 
-Dataset deposited alongside: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch (Nature Chemistry, 2026-6-29). Dataset size: 4 MB.
+Experimental magnetic materials dataset: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch. Published alongside a II study (2026). Deposited on Zenodo. Dataset size: 4 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20025667](https://doi.org/10.5281/zenodo.20025667)
 
 #### 🧪🔓 [Covalency control of photomagnetic relaxation in a manganese(II) photoswitch](https://zenodo.org/doi/10.5281/zenodo.20025668)
 
-Dataset deposited alongside: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch (Nature Chemistry, 2026-6-29). Dataset size: 4 MB.
+Experimental magnetic materials dataset: Covalency control of photomagnetic relaxation in a manganese(II) photoswitch. Published alongside a II study (2026). Deposited on Zenodo. Dataset size: 4 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20025668](https://doi.org/10.5281/zenodo.20025668)
 
 #### 🧪🔓 [Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces](https://springernature.figshare.com/articles/dataset/Exchange-mediated_Spin-Electric_Control_of_Single_Molecules_on_Surfaces/31554586)
 
-Dataset deposited alongside: Exchange-mediated spin–electric control of single molecules on surfaces (Nature Physics, 2026-6-29). Dataset size: 98 MB.
+Data and Evaluation to "Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces". Sorted by the paper Figures. Dataset size: 98 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31554586](https://doi.org/10.6084/m9.figshare.31554586)
 
 #### 🧪🔓 [Homochiral Toroidal Spin State in Dy(III)-based Single-Molecule Toroics](https://springernature.figshare.com/articles/dataset/Homochiral_Toroidal_Spin_State_in_Dy_III_-based_Single-Molecule_Toroics/30937706)
 
-Dataset deposited alongside: Homochiral toroidal spin state in Dy(III)-based single-molecule toroics (Nature Chemistry, 2026-2-23). Dataset size: 2 MB.
+This folder contains the raw experimental data for the micro-SQUID and MChD measurements presented in the above publication. The data are separated into separate files corresponding to Figs. 3-6 described in the main text. Dataset size: 2 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30937706](https://doi.org/10.6084/m9.figshare.30937706)
 
@@ -1292,22 +1292,22 @@ Collection of more than 2,000 published commensurate and incommensurate magnetic
 
 #### 🧪🔓 [Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor](https://springernature.figshare.com/articles/dataset/Source_data_for_Planckian_scattering_and_parallel_conduction_channels_in_an_iron_chlacogenide_superconductor/29042909)
 
-Dataset deposited alongside: Planckian scattering and parallel conduction channels in an iron chalcogenide superconductor (Nature Physics, 2026-4-23). Dataset size: 1 MB.
+Experimental magnetic materials dataset: Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor. Published alongside a Nature Physics study (2026). Deposited on figshare. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29042909](https://doi.org/10.6084/m9.figshare.29042909)
 
 <a id="materials-mechanical"></a>
-### mechanical
+### Mechanical properties
 
 #### 🧪🔓 [Nonmonotonic Magnetic Friction from Collective Rotor Dynamics (Data)](https://zenodo.org/doi/10.5281/zenodo.18487115)
 
-Dataset deposited alongside: Non-monotonic magnetic friction from collective rotor dynamics (Nature Materials, 2026-3-18). Dataset size: 15.1 GB.
+Raw data of the manuscript Nonmonotonic Magnetic Friction from Collective Rotor Dynamics by H. Gu, A. Lüders, and C. Bechinger Reference: Gu, H., Lüders, A. & Bechinger, C. Non-monotonic magnetic friction from collective rotor dynamics. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02538-1. Dataset size: 15.1 GB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18487115](https://doi.org/10.5281/zenodo.18487115)
 
 #### 🧪🔓 [Nonmonotonic Magnetic Friction from Collective Rotor Dynamics (Data)](https://zenodo.org/doi/10.5281/zenodo.18487116)
 
-Dataset deposited alongside: Non-monotonic magnetic friction from collective rotor dynamics (Nature Materials, 2026-3-18). Dataset size: 15.1 GB.
+Raw data of the manuscript Nonmonotonic Magnetic Friction from Collective Rotor Dynamics by H. Gu, A. Lüders, and C. Bechinger Reference: Gu, H., Lüders, A. & Bechinger, C. Non-monotonic magnetic friction from collective rotor dynamics. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02538-1. Dataset size: 15.1 GB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18487116](https://doi.org/10.5281/zenodo.18487116)
 
@@ -1388,25 +1388,25 @@ AMANDA/AMADAP automated research platform (Brabec, FAU Erlangen) fabricates and 
 
 #### 🧪🔓 [Bulk heterojunction contact doping for low-resistance metal–perovskite interfaces](https://springernature.figshare.com/articles/dataset/Bulk_heterojunction_contact_doping_for_low-resistance_metal_perovskite_interfaces/30957728/1)
 
-Dataset deposited alongside: Bulk-heterojunction doping in lead halide perovskites for low-resistance metal contacts (Nature Materials, 2026-2-20). Dataset size: 0 MB.
+Source data for Fig. 1d, Figs. 2b-d,f, Figs. 3a-e, and Figs. 4a-f
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30957728.v1](https://doi.org/10.6084/m9.figshare.30957728.v1)
 
 #### 🧪🔓 [Data Accompanying 'Molecular Factors Controlling Charge Pair Generation in Organic Photovoltaic Materials'](https://zenodo.org/doi/10.5281/zenodo.18151704)
 
-Dataset deposited alongside: Molecular factors controlling charge pair generation in organic photovoltaic materials (Nature Materials, 2026-2-27). Dataset size: 0 MB.
+Data used to create the figures in the main text of Hart, L.J.F., Medranda, D.G., Yuan, S.W. et al. Molecular factors controlling charge pair generation in organic photovoltaic materials. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02509-6.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18151704](https://doi.org/10.5281/zenodo.18151704)
 
 #### 🧪🔓 [Data Accompanying 'Molecular Factors Controlling Charge Pair Generation in Organic Photovoltaic Materials'](https://zenodo.org/doi/10.5281/zenodo.18151703)
 
-Dataset deposited alongside: Molecular factors controlling charge pair generation in organic photovoltaic materials (Nature Materials, 2026-2-27). Dataset size: 0 MB.
+Data used to create the figures in the main text of Hart, L.J.F., Medranda, D.G., Yuan, S.W. et al. Molecular factors controlling charge pair generation in organic photovoltaic materials. Nat. Mater. (2026). https://doi.org/10.1038/s41563-026-02509-6.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18151703](https://doi.org/10.5281/zenodo.18151703)
 
 #### 🧪🔓 [E2M2s model and input data of the European energy system](https://springernature.figshare.com/articles/dataset/E2M2s_model_and_input_data_of_the_European_energy_system/29646350)
 
-Dataset deposited alongside: Implications of the solar rebound effect for the European energy transition (Nature Energy, 2026-4-14). Dataset size: 99 MB.
+Contains the full code, data, and workflows used to analyse the solar rebound effect in a sector-coupled European energy system model, including all scenario definitions. Dataset size: 99 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29646350](https://doi.org/10.6084/m9.figshare.29646350)
 
@@ -1424,13 +1424,13 @@ High-throughput robotic synthesis and accelerated degradation testing of multi-c
 
 #### 🧪🔓 [Hole-Transfer Cascade–Engineered Donor Polymer for Moisture-Stable Unencapsulated Perovskite Solar Cells](https://springernature.figshare.com/articles/dataset/Hole-Transfer_Cascade_Engineered_Donor_Polymer_for_Moisture-Stable_Unencapsulated_Perovskite_Solar_Cells/30405232)
 
-Dataset deposited alongside: Hole-transfer cascade-engineered donor polymer for unencapsulated perovskite solar cells with improved moisture stability (Nature Energy, 2026-5-18). Dataset size: 0 MB.
+This file provides the raw data underlying the four main figures presented in the manuscript "Hybrid kink PeSC." It includes original measurement datasets and source values used for data plotting and analysis.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30405232](https://doi.org/10.6084/m9.figshare.30405232)
 
 #### 🧪🔓 [Layer Photovoltaic Effect in a Two-dimensional Parity-Time Symmetric Antiferromagnet](https://springernature.figshare.com/articles/dataset/Layer_Photovoltaic_Effect_in_a_Two-dimensional_Parity-Time_Symmetric_Antiferromagnet/31827727/1)
 
-Dataset deposited alongside: Layer photovoltaic effect in a two-dimensional antiferromagnet with parity–time symmetry (Nature Materials, 2026-5-18). Dataset size: 1 MB.
+All source data files for the main text figures, extended data figures and supplementary figures (saved as individual excel files). Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31827727.v1](https://doi.org/10.6084/m9.figshare.31827727.v1)
 
@@ -1448,13 +1448,13 @@ Large-scale time-series database of field performance data (15-minute resolution
 
 #### 🧪🔓 [Simultaneous measurements of solar wind from L1, shocked solar wind from Magnetosheath, and measures of geomagnetic response from ground-based indices](https://zenodo.org/doi/10.5281/zenodo.17546718)
 
-Dataset deposited alongside: Regression to the mean can explain saturation of geomagnetic storms (Nature, 2026-7-15). Dataset size: 5.0 GB.
+These data are compiled from other sources and are used in the calculations and simulations for the paper Sivadas et al., 2026 "Regression to the Mean can Explain the Saturation of Geomagnetic Storms". Data.zip contains the curated data set of simultaneous measurements from L1 satellites and ground-based measurements.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17546718](https://doi.org/10.5281/zenodo.17546718)
 
 #### 🧪🔓 [Simultaneous measurements of solar wind from L1, shocked solar wind from Magnetosheath, and measures of geomagnetic response from ground-based indices](https://zenodo.org/doi/10.5281/zenodo.18291615)
 
-Dataset deposited alongside: Regression to the mean can explain saturation of geomagnetic storms (Nature, 2026-7-15). Dataset size: 5.0 GB.
+These data are compiled from other sources and are used in the calculations and simulations for the paper Sivadas et al., 2026 "Regression to the Mean can Explain the Saturation of Geomagnetic Storms". Data.zip contains the curated data set of simultaneous measurements from L1 satellites and ground-based measurements.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.18291615](https://doi.org/10.5281/zenodo.18291615)
 
@@ -1475,7 +1475,7 @@ Khazana is a searchable repository of downloadable published computational mater
 
 #### 🧪🔓 [Metadata record for: Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations](https://springernature.figshare.com/articles/dataset/Metadata_record_for_Efficient_compressed_database_of_equilibrated_configurations_of_ring-linear_polymer_blends_for_MD_simulations/18742097/1)
 
-Dataset deposited alongside: Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations (Scientific Data, 2022-2-8).
+This dataset contains key characteristics about the data described in the Data Descriptor Efficient compressed database of equilibrated configurations of ring-linear polymer blends for MD simulations. Contents: 1. human readable metadata summary table in CSV format 2. machine readable metadata file in JSON format
 
 `experimental`· `open`· 2022 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.18742097.v1](https://doi.org/10.6084/m9.figshare.18742097.v1)
 
@@ -1499,22 +1499,22 @@ NIST/CHiMaD resource (UChicago) curating experimentally measured Flory-Huggins i
 
 #### 🧪🔓 [Transient pH changes drive vacuole formation in enzyme-polymer condensates](https://springernature.figshare.com/articles/dataset/Transient_pH_changes_drive_vacuole_formation_in_enzyme-polymer_condensates/30038194)
 
-Dataset deposited alongside: Transient pH changes drive vacuole formation in enzyme–polymer condensates (Nature Chemical Engineering, 2026-1-9). Dataset size: 412 MB.
+This contains the source data - including raw, uncropped images and videos corresponding to cropped images shown in the main text and supporting information. Dataset size: 412 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30038194](https://doi.org/10.6084/m9.figshare.30038194)
 
 <a id="materials-porous-materials"></a>
-### porous-materials
+### Porous materials
 
 #### 🧪🔓 [Dataset: Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy](https://zenodo.org/doi/10.5281/zenodo.16836065)
 
-Dataset deposited alongside: Statistics makes a difference: machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy (Digital Discovery, 2026). Dataset size: 35.7 GB.
+Raw Data for the publication Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy. Dataset size: 35.7 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16836065](https://doi.org/10.5281/zenodo.16836065)
 
 #### 🧪🔓 [Dataset: Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy](https://zenodo.org/doi/10.5281/zenodo.17523493)
 
-Dataset deposited alongside: Statistics makes a difference: machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy (Digital Discovery, 2026). Dataset size: 35.7 GB.
+Raw Data for the publication Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy. Dataset size: 35.7 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17523493](https://doi.org/10.5281/zenodo.17523493)
 
@@ -1556,37 +1556,37 @@ Integrated database of high-quality Raman spectra, X-ray powder diffraction patt
 
 #### 🧪🔓 [Datasets for the computational workflow of multidimensional photoemission spectroscopy](https://zenodo.org/record/3987303)
 
-Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 8.5 GB.
+Recorded single-electron event data of bulk 2H-WSe 2 photoemission from a commercial momentum microscope (SPECS METIS 1000).These data are used for demonstration of the computational workflow explained in the following publication. R. P. Xian, Y. Acremann, S. Y. Agustsson, M. Dendzik, K. Bühlmann, D. Curcio, D. Kutnyakhov, F. Pressacco, M. Heber, S. Dong, T. Pincelli, J.
 
 `experimental`· `open`· 2020 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.3987303](https://doi.org/10.5281/zenodo.3987303)
 
 #### 🧪🔓 [Datasets for the computational workflow of multidimensional photoemission spectroscopy](https://zenodo.org/record/3987304)
 
-Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 8.5 GB.
+Recorded single-electron event data of bulk 2H-WSe 2 photoemission from a commercial momentum microscope (SPECS METIS 1000).These data are used for demonstration of the computational workflow explained in the following publication. R. P. Xian, Y. Acremann, S. Y. Agustsson, M. Dendzik, K. Bühlmann, D. Curcio, D. Kutnyakhov, F. Pressacco, M. Heber, S. Dong, T. Pincelli, J.
 
 `experimental`· `open`· 2020 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.3987304](https://doi.org/10.5281/zenodo.3987304)
 
 #### 🧪🔓 [K-edge XANES spectra data](https://springernature.figshare.com/articles/dataset/K-edge_XANES_spectra_data/5678998/1)
 
-Dataset deposited alongside: High-throughput computational X-ray absorption spectroscopy (Scientific Data, 2018-7-31). Dataset size: 5.4 GB.
+K-edge XANES spectra data computed using FEFF9. Dataset size: 5.4 GB.
 
 `experimental`· `open`· 2018 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.5678998.v1](https://doi.org/10.6084/m9.figshare.5678998.v1)
 
 #### 🧪🔓 [Multidimensional photoemission spectra of tungsten diselenide](https://zenodo.org/record/4266202)
 
-Dataset deposited alongside: An open-source, end-to-end workflow for multidimensional photoemission spectroscopy (Scientific Data, 2020-12-17). Dataset size: 6.1 GB.
+Pump-probe multidimensional photoemission spectroscopy (MPES) of tungsten diselenide (WSe2) measured using an electron momentum microscope at the FLASH Free Electron Laser. This is an example file for data standardization of MPES and has been linked to the publication, D. Kutnyakhov, R. P. Xian, M. Dendzik, M. Heber, F. Pressacco, S. Y. Agustsson, L. Wenthaus, H. Meyer, S. Gieschen, G.
 
 `experimental`· `open`· 2020 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.4266202](https://doi.org/10.5281/zenodo.4266202)
 
 #### 🧪🔓 [Support tables](https://springernature.figshare.com/articles/Support_tables/11316572/1)
 
-Dataset deposited alongside: Benchmark classification dataset for laser-induced breakdown spectroscopy (Scientific Data, 2020-2-13). Dataset size: 0 MB.
+Excel sheets providing the sample compositions with estimated uncertainties.
 
 `experimental`· `open`· 2020 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.11316572.v1](https://doi.org/10.6084/m9.figshare.11316572.v1)
 
 #### 🧪🔓 [Testing dataset](https://springernature.figshare.com/articles/Testing_dataset/11316575/1)
 
-Dataset deposited alongside: Benchmark classification dataset for laser-induced breakdown spectroscopy (Scientific Data, 2020-2-13). Dataset size: 3.1 GB.
+Testing dataset in hdf5 file format without the class labels. Scripts are provided for reading in the dataset in R, Python, and Matlab. Dataset size: 3.1 GB.
 
 `experimental`· `open`· 2020 · CC0-1.0 · figshare· DOI: [10.6084/m9.figshare.11316575.v1](https://doi.org/10.6084/m9.figshare.11316575.v1)
 

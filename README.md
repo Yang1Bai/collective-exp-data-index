@@ -50,10 +50,13 @@ scrape it.
 
 ## What's in the seed catalog
 
-The catalog holds **118 curated, verified databases** across materials
+The catalog holds **233 curated databases** across materials
 science and chemistry — with particular depth in high-throughput
-experimentation and self-driving-lab campaign datasets — each confirmed
-against its live landing page. Browse it three ways:
+experimentation, self-driving-lab campaign datasets, and a July 2026
+TDM harvest of 115 open datasets from Zenodo and figshare spanning
+batteries, photovoltaics, spectroscopy, geophysics, bioactivity, alloys,
+magnetic materials, and more — each confirmed against its live landing
+page. Browse it three ways:
 
 - **[`CATALOG.md`](CATALOG.md)** — human-readable, grouped by domain and topic
   (start here).
@@ -62,7 +65,11 @@ against its live landing page. Browse it three ways:
 - **[`catalog/catalog.json`](catalog/catalog.json)** — the machine-readable
   source of truth.
 
-Coverage includes general materials-property databases (Materials Project,
+Coverage includes the **July 2026 TDM harvest** (115 open datasets from
+Zenodo and figshare, covering batteries, photovoltaics, spectroscopy,
+geophysics, bioactivity, alloys, magnetic materials, mechanical properties,
+porous materials, polymers, and catalysis), as well as general
+materials-property databases (Materials Project,
 OQMD, AFLOW, NOMAD, JARVIS, Materials Cloud), crystallography (COD, AMCSD),
 catalysis (Open Catalyst OC20/OC22, Catalysis-Hub), batteries (BatteryArchive,
 TRI fast-charging, NASA PCoE, CALCE, Oxford), photovoltaics (The Perovskite
@@ -143,6 +150,22 @@ python scripts/localdb/build_localdb.py --query "SELECT dataset,property,COUNT(*
 
 To add a dataset: add its clone spec to `SOURCES` and a loader block in
 `load_all()`. `data/` is gitignored — the mirror stays local.
+
+## Quick load
+
+```python
+import pandas as pd
+df = pd.read_csv("catalog/catalog.csv")
+# filter by domain
+materials = df[df["domain"] == "materials"]
+# filter by subdomain
+batteries = df[df["subdomain"] == "batteries"]
+# load full metadata
+import json
+with open("catalog/catalog.json") as f:
+    cat = json.load(f)
+entries = cat["entries"]
+```
 
 ## Quick start
 
