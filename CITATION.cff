@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the catalog, analysis framework, or research package, please cite this repository and the underlying datasets listed in the analysed-resource ledger."
+title: "Collective Experimental Data Index and Falsification-Gated Knowledge Borrowing"
+type: software
+authors:
+  - family-names: "Bai"
+    given-names: "Yang"
+repository-code: "https://github.com/Yang1Bai/collective-exp-data-index"
+url: "https://github.com/Yang1Bai/collective-exp-data-index"
+date-released: "2026-07-31"
+license: MIT
+keywords:
+  - experimental materials databases
+  - materials informatics
+  - out-of-distribution prediction
+  - transfer learning
+  - scientific machine learning

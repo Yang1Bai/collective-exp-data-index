@@ -1,0 +1,98 @@
+{
+  "applicability": {
+    "exact_composition_overlap": 6,
+    "nearest_borg_l1_quantiles": {
+      "0.0": 0.0,
+      "0.25": 0.0,
+      "0.5": 0.011300699299999994,
+      "0.75": 0.12133333330000001,
+      "1.0": 0.42999999999999994
+    },
+    "supported_neighbor_l1_threshold": 0.5,
+    "supported_unique_compositions": 17
+  },
+  "claim_guard": "A passing result establishes one retrospective, outcome-unseen, cross-database mechanical borrowing edge. It does not establish prospective alloy discovery, universal fatigue transfer, or a general law relating monotonic strength to fatigue.",
+  "created_utc": "2026-07-29T15:22:30.370406+00:00",
+  "design_sha256": "e26d74d1955e6deab26ba91d235fd0d48c7e3bdb55753677d02331977ffabf6f",
+  "gate_checks": {
+    "eligible_curves": true,
+    "load_ratio_fraction": true,
+    "nonoverlapping_borg_uts_rows": true,
+    "numeric_fatigue_outcomes_unread": true,
+    "parseable_composition_fraction": true,
+    "processing_fraction": true,
+    "source_group_oof_r2": true,
+    "supported_recipient_compositions": true,
+    "test_temperature_fraction": true,
+    "unique_recipient_compositions": true,
+    "unique_recipient_dois": true
+  },
+  "metadata_csv_sha256": "1157952a01108c1e5f2688e047655df28c304956cc9c9232a8cfa080d26c8250",
+  "outcome_access": {
+    "numeric_fatigue_outcome_cells_read": 0,
+    "outcome_sheet_headers": {
+      "S-N": [
+        "dataset id",
+        "life\nN (cycle)",
+        "stress amplitude\n\u03c3a (MPa)",
+        "runout"
+      ],
+      "dadn": [
+        "dataset id",
+        "stress intensity factor range\n\u0394K (MPa*m^(1/2))",
+        "crack growth rate \nda/dN (m/cycle)"
+      ],
+      "e-N": [
+        "dataset id",
+        "life\nN (cycle)",
+        "strain amplitude\n\u03b5a (mm/mm)",
+        "runout"
+      ]
+    },
+    "parameter_rows_read": 272,
+    "workbook_sheets": [
+      "S-N",
+      "e-N",
+      "dadn",
+      "parameter"
+    ]
+  },
+  "provenance": {
+    "borg_recipient_doi_overlap_before_exclusion": 4,
+    "borg_uts_groups_after_exclusion": 93,
+    "borg_uts_rows_after_all_recipient_doi_exclusion": 534,
+    "overlap_dois": [
+      "10.1016/j.actamat.2015.07.004",
+      "10.1016/j.intermet.2019.106486",
+      "10.1016/j.jmst.2018.09.068",
+      "10.1016/j.scriptamat.2018.08.048"
+    ]
+  },
+  "recipient": {
+    "eligible_curves": 62,
+    "load_ratio_present_fraction": 1.0,
+    "measured_uts_available_curves": 47,
+    "measured_ys_available_curves": 45,
+    "parseable_composition_fraction": 1.0,
+    "processing_present_fraction": 0.9838709677419355,
+    "provenance_chemistry_components": 17,
+    "temperature_present_fraction": 1.0,
+    "test_type_counts": {
+      "3-point bending": 2,
+      "4-point bending": 9,
+      "bending fatigue": 9,
+      "rotating bending fatigue": 9,
+      "uniaxial": 33
+    },
+    "unique_compositions": 17,
+    "unique_dois": 36
+  },
+  "recipient_xlsx_md5": "d4d7456f83a4f55e3aa790acdedd2b01",
+  "recipient_xlsx_sha256": "6a9408c69cf89b91e2872af59a7cc7ff6f265c83e343ffa98378e9312415e863",
+  "source_skill": {
+    "borg_group_oof_r2_log10_uts": 0.5012769155811941,
+    "group": "unordered elemental system",
+    "outcome": "log10 UTS MPa"
+  },
+  "status": "eligible-preoutcome"
+}

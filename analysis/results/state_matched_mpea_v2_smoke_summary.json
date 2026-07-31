@@ -1,0 +1,445 @@
+{
+  "status": "complete-method-development",
+  "created_utc": "2026-07-24T00:29:39.634231+00:00",
+  "design_sha256": "a250f52f2653f90d000bd70cf6913adaf0b38106c21d1ef5e03969140baae6b4",
+  "data": {
+    "target_rows": 1067,
+    "target_groups": 150,
+    "source_rows": 539,
+    "source_groups": 93,
+    "development_rows": 639,
+    "evaluation_rows": 428,
+    "evaluation_groups": 59
+  },
+  "donor_group_oof_r2": {
+    "planned_state": 0.6538881960937428
+  },
+  "audits": [
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 0,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 334,
+      "evaluation_groups_excluded": 59
+    }
+  ],
+  "summaries": [
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.1455289157186852,
+      "ci95": [
+        -0.5384236633359244,
+        0.247365831898554
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.3647776390840566,
+      "mean_aug_r2": 0.16793216654858645,
+      "mean_delta_r2": -0.19684547253547013
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.3824199359997954,
+      "ci95": [
+        -1.6752137288498,
+        0.9103738568502092
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.23459010536636854,
+      "mean_aug_r2": -0.4622485750989428,
+      "mean_delta_r2": -0.6968386804653113
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.26736185085370323,
+      "ci95": [
+        -3.4346844089537467,
+        2.8999607072463403
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.5973620560222515,
+      "mean_aug_r2": 0.3824148193640991,
+      "mean_delta_r2": -0.21494723665815235
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.03793160451733076,
+      "ci95": [
+        -0.6795971656191326,
+        0.7554603746537942
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.32979732254210165,
+      "mean_aug_r2": 0.38236047580767474,
+      "mean_delta_r2": 0.05256315326557309
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.03069781509058069,
+      "ci95": [
+        -0.2635891728448369,
+        0.32498480302599825
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.1674677471238593,
+      "mean_aug_r2": 0.21769740681204575,
+      "mean_delta_r2": 0.050229659688186434
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.04159758626909838,
+      "ci95": [
+        -0.4971362238697926,
+        0.41394105133159587
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.3647776390840566,
+      "mean_aug_r2": 0.3077990693255674,
+      "mean_delta_r2": -0.056978569758489195
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.0031839864149819674,
+      "ci95": [
+        -0.048738071996156956,
+        0.05510604482612089
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.23459010536636854,
+      "mean_aug_r2": 0.2391993023677199,
+      "mean_delta_r2": 0.004609197001351373
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.08394370917167307,
+      "ci95": [
+        -0.18924564159621196,
+        0.02135822325286582
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.5973620560222515,
+      "mean_aug_r2": 0.5284391853097232,
+      "mean_delta_r2": -0.06892287071252828
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.01816657125167714,
+      "ci95": [
+        -0.28855672809236976,
+        0.2522235855890155
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.32979732254210165,
+      "mean_aug_r2": 0.30299943229666765,
+      "mean_delta_r2": -0.026797890245433997
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.09550685229476004,
+      "ci95": [
+        -1.6602461079457933,
+        1.4692324033562734
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.1674677471238593,
+      "mean_aug_r2": -0.013861902659559444,
+      "mean_delta_r2": -0.18132964978341876
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.285999314320131,
+      "ci95": [
+        -0.2705560315256082,
+        0.8425546601658702
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.25299355544246505,
+      "mean_aug_r2": 0.3647776390840566,
+      "mean_delta_r2": 0.6177711945265216
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.3639639288957799,
+      "ci95": [
+        -0.033280165241368675,
+        0.7612080230329284
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.9131356363582267,
+      "mean_aug_r2": 0.23459010536636854,
+      "mean_delta_r2": 1.1477257417245952
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.3699567204509644,
+      "ci95": [
+        -0.7463555521091612,
+        1.48626899301109
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.012830615093109732,
+      "mean_aug_r2": 0.5973620560222515,
+      "mean_delta_r2": 0.6101926711153611
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.19390918529440931,
+      "ci95": [
+        -0.2356130785124571,
+        0.6234314491012758
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.031136849413349377,
+      "mean_aug_r2": 0.32979732254210165,
+      "mean_delta_r2": 0.360934171955451
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.19100827351675864,
+      "ci95": [
+        -0.09634585745987179,
+        0.47836240449338907
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.2744005748027494,
+      "mean_aug_r2": 0.1674677471238593,
+      "mean_delta_r2": 0.4418683219266087
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.02229442923887832,
+      "ci95": [
+        -0.2329678750603295,
+        0.27755673353808613
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.3647776390840566,
+      "mean_aug_r2": 0.3936946839651499,
+      "mean_delta_r2": 0.028917044881093312
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.027175081046191686,
+      "ci95": [
+        -0.5107007319960197,
+        0.5650508940884031
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.23459010536636854,
+      "mean_aug_r2": 0.276724008226508,
+      "mean_delta_r2": 0.04213390286013946
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.07773079069197979,
+      "ci95": [
+        -0.7333825134708464,
+        0.5779209320868869
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.5973620560222515,
+      "mean_aug_r2": 0.5407951412783343,
+      "mean_delta_r2": -0.05656691474391723
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.026859118460692038,
+      "ci95": [
+        -0.7795112107676505,
+        0.8332294476890345
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.32979732254210165,
+      "mean_aug_r2": 0.3680969086298618,
+      "mean_delta_r2": 0.03829958608776013
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.07754669243415566,
+      "ci95": [
+        -0.2966080492950165,
+        0.45170143416332786
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.1674677471238593,
+      "mean_aug_r2": 0.2912794689584936,
+      "mean_delta_r2": 0.12381172183463429
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_shuffled_uts",
+      "scope": "all",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.00869298080393836,
+      "ci95": [
+        -0.11693088229326784,
+        0.09954492068539111
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.3647776390840566,
+      "mean_aug_r2": 0.3541493715306421,
+      "mean_delta_r2": -0.010628267553414505
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_shuffled_uts",
+      "scope": "q1",
+      "runs": 2,
+      "mean_relative_rmse_gain": 0.029934829727723534,
+      "ci95": [
+        -0.16673234923606772,
+        0.2266020086915148
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.23459010536636854,
+      "mean_aug_r2": 0.2804464632098118,
+      "mean_delta_r2": 0.045856357843443274
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_shuffled_uts",
+      "scope": "q2",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.08655296902339293,
+      "ci95": [
+        -0.10424520738960164,
+        -0.06886073065718423
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.5973620560222515,
+      "mean_aug_r2": 0.5243865906945022,
+      "mean_delta_r2": -0.07297546532774929
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_shuffled_uts",
+      "scope": "q3",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.003922166980075003,
+      "ci95": [
+        -0.31699693983257327,
+        0.3091526058724232
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.32979732254210165,
+      "mean_aug_r2": 0.32631784363802685,
+      "mean_delta_r2": -0.0034794789040747953
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_shuffled_uts",
+      "scope": "q4",
+      "runs": 2,
+      "mean_relative_rmse_gain": -0.0052687823503043355,
+      "ci95": [
+        -0.4662346834925034,
+        0.4556971187918948
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.1674677471238593,
+      "mean_aug_r2": 0.15813965904924787,
+      "mean_delta_r2": -0.00932808807461144
+    }
+  ],
+  "balam_escalation_gate": {
+    "checks": {
+      "mean_q4_gain": true,
+      "positive_q4_runs": false,
+      "positive_q4_r2": true,
+      "ood_specificity": true,
+      "beats_shuffled": true
+    },
+    "pass": false,
+    "decision": "do-not-submit-balam"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection and v1 verification exposed the control-architecture mismatch, this is a post-selection robustness and control-correction run, not an independent confirmation. V2 can validate source specificity on this programme but cannot establish prospective discovery or a universal transfer law."
+}

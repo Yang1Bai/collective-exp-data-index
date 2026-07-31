@@ -1,0 +1,80 @@
+{
+  "status": "coverage-matched-reverse-ionic-local-screen-complete",
+  "created_utc": "2026-07-23T23:10:21.772561+00:00",
+  "claim_guard": "The Caltech and OBELiX outcomes were used in earlier analyses, but this reverse source-to-target edge and coverage-aware implementation were chosen after the new source-coverage audit and before this local outcome model. It is method development, not independent confirmation.",
+  "frozen_hashes": {
+    "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+    "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f"
+  },
+  "repeats": 3,
+  "rows": 36,
+  "source_audits": [
+    {
+      "repeat": 0,
+      "caltech_entities": 230,
+      "caltech_q4_coverage_fraction": 0.32,
+      "caltech_q4_median_distance": 13.821041598635219,
+      "target_development_nn95": 10.505554018271697,
+      "caltech_median_ensemble_sd": 2.001332677817591
+    },
+    {
+      "repeat": 1,
+      "caltech_entities": 233,
+      "caltech_q4_coverage_fraction": 0.32,
+      "caltech_q4_median_distance": 12.4353569748727,
+      "target_development_nn95": 10.505554018271697,
+      "caltech_median_ensemble_sd": 1.8723479373431804
+    },
+    {
+      "repeat": 2,
+      "caltech_entities": 231,
+      "caltech_q4_coverage_fraction": 0.32,
+      "caltech_q4_median_distance": 12.4353569748727,
+      "target_development_nn95": 10.505554018271697,
+      "caltech_median_ensemble_sd": 2.032112317458568
+    }
+  ],
+  "grouped_results": [
+    {
+      "target": "electrolyte_conductivity",
+      "method": "caltech_coverage_aware",
+      "q1_relative_rmse_gain": 0.1907513323682519,
+      "q4_relative_rmse_gain": -0.09070269530861544,
+      "gain_specific": -0.28145402767686734,
+      "q4_r2": -3.6133055102650937,
+      "positive_q4_fraction": 0.4444444444444444,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "caltech_same_endpoint_scalar",
+      "q1_relative_rmse_gain": 0.2125754193479572,
+      "q4_relative_rmse_gain": -0.04605102006565656,
+      "gain_specific": -0.25862643941361374,
+      "q4_r2": -3.992406856910014,
+      "positive_q4_fraction": 0.2222222222222222,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "shuffled_caltech_control",
+      "q1_relative_rmse_gain": -0.009624818268725209,
+      "q4_relative_rmse_gain": -0.03837453452167778,
+      "gain_specific": -0.028749716252952567,
+      "q4_r2": -8.095968509945665,
+      "positive_q4_fraction": 0.2222222222222222,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "te_electrical_zero_coverage_control",
+      "q1_relative_rmse_gain": 0.002273468596446387,
+      "q4_relative_rmse_gain": -0.039487842513901486,
+      "gain_specific": -0.041761311110347865,
+      "q4_r2": -6.724996656182554,
+      "positive_q4_fraction": 0.3333333333333333,
+      "cells": 9
+    }
+  ]
+}

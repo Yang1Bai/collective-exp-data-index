@@ -1,0 +1,45 @@
+{
+  "design_name": "Post-outcome audit of target-domain OOD knowledge deficit and neighbor localization",
+  "version": 1,
+  "frozen_utc": "2026-07-18T03:49:25Z",
+  "status": "diagnostic design frozen after the OBELiX outcomes and prior transfer results were known",
+  "claim_guard": "This analysis quantifies the problem geometry and localizes existing source effects. It cannot create an independent OBELiX transfer claim or redefine the frozen screening and sequential nulls.",
+  "input": "analysis/results/obelix_ood_discovery_input.npz",
+  "input_metadata": "analysis/results/obelix_ood_discovery_input_meta.json",
+  "target_split": {
+    "development": "official train, 390 entities in 118 groups",
+    "evaluation": "official test, 110 entities in 42 groups",
+    "group_overlap_allowed": false
+  },
+  "label_budgets": [15, 30, 60, 120, 240],
+  "primary_budget": 30,
+  "repeats": 100,
+  "learners": ["extra-trees-primary", "random-forest-sensitivity"],
+  "sources": ["target_only", "thermoelectric_neighbor", "alloy_control", "catalysis_control", "shuffled_thermoelectric"],
+  "distance": {
+    "representation": "126 frozen composition features standardized with the complete official-train feature distribution only",
+    "metric": "Euclidean distance to the nearest selected target-training entity",
+    "strata": "within-repeat quartiles of the official-test distance, with deterministic rank tie breaking",
+    "fixed_sensitivity": "the previously frozen hard_ood_selected membership"
+  },
+  "primary_problem_endpoints": [
+    "target-only RMSE difference between OOD quartile 4 and quartile 1 at n=30",
+    "target-only Spearman association between absolute error and OOD distance at n=30"
+  ],
+  "primary_borrowing_endpoints": [
+    "thermoelectric-neighbor relative RMSE reduction in OOD quartile 4 at n=30",
+    "difference between thermoelectric-neighbor and best wrong/shuffled-source relative RMSE reduction in OOD quartile 4"
+  ],
+  "secondary_endpoints": ["RMSE", "MAE", "R2", "Spearman", "all-budget OOD-gap curve", "fixed hard-OOD sensitivity"],
+  "inference": {
+    "bootstrap_replicates": 5000,
+    "unit": "paired initial-target-label repeat conditional on one fixed OBELiX test set",
+    "warning": "The interval is a conditional resampling diagnostic and is not dataset-level transport uncertainty."
+  },
+  "success_interpretation": {
+    "problem": "Positive high-minus-low OOD error and positive error-distance association establish a target-only OOD deficit in this target.",
+    "localization": "A positive neighbor increment concentrated in high OOD and separated from all controls supports OOD localization only; failure remains a null diagnostic.",
+    "no_rescue": "No result from this post-outcome audit changes the completed OBELiX claim status."
+  }
+}
+

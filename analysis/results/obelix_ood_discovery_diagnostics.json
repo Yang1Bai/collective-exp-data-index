@@ -1,0 +1,95 @@
+{
+  "analysis_status": "post-result-explanatory-diagnostic",
+  "primary_decision_unchanged": "directional-only; no OOD-discovery improvement or rescue",
+  "random_reference": {
+    "official_test": {
+      "candidate_n": 110,
+      "true_hit_n": 6,
+      "budget": 40,
+      "exact_censored_random_mean": 15.297452026830054,
+      "empirical_random_mean": 15.5,
+      "empirical_random_median": 13.0,
+      "empirical_random_censor_fraction": 0.08
+    },
+    "hard_ood_40pct": {
+      "candidate_n": 44,
+      "true_hit_n": 3,
+      "budget": 40,
+      "exact_censored_random_mean": 11.249924494110545,
+      "empirical_random_mean": 11.58,
+      "empirical_random_median": 8.0,
+      "empirical_random_censor_fraction": 0.0
+    }
+  },
+  "pairwise_diagnostics": [
+    {
+      "scope": "official_test",
+      "contrast": "target_only_minus_random_control",
+      "interpretation": "positive means random_control requires fewer acquisitions",
+      "seeds": 100,
+      "left_mean": 24.34,
+      "right_mean": 15.5,
+      "mean_difference": 8.84,
+      "bootstrap_95": [
+        4.69975,
+        13.09
+      ],
+      "fraction_positive": 0.63,
+      "fraction_tied": 0.01,
+      "signflip_p_one_sided": 0.0001,
+      "status": "post-result diagnostic; does not redefine frozen decision"
+    },
+    {
+      "scope": "official_test",
+      "contrast": "thermoelectric_prior_minus_random_control",
+      "interpretation": "positive means random_control requires fewer acquisitions",
+      "seeds": 100,
+      "left_mean": 24.09,
+      "right_mean": 15.5,
+      "mean_difference": 8.59,
+      "bootstrap_95": [
+        4.139749999999999,
+        12.990249999999996
+      ],
+      "fraction_positive": 0.59,
+      "fraction_tied": 0.01,
+      "signflip_p_one_sided": 0.0002,
+      "status": "post-result diagnostic; does not redefine frozen decision"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "contrast": "target_only_minus_random_control",
+      "interpretation": "positive means random_control requires fewer acquisitions",
+      "seeds": 100,
+      "left_mean": 17.7,
+      "right_mean": 11.58,
+      "mean_difference": 6.12,
+      "bootstrap_95": [
+        3.3897500000000003,
+        8.770249999999995
+      ],
+      "fraction_positive": 0.63,
+      "fraction_tied": 0.05,
+      "signflip_p_one_sided": 0.0001,
+      "status": "post-result diagnostic; does not redefine frozen decision"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "contrast": "thermoelectric_prior_minus_random_control",
+      "interpretation": "positive means random_control requires fewer acquisitions",
+      "seeds": 100,
+      "left_mean": 15.49,
+      "right_mean": 11.58,
+      "mean_difference": 3.91,
+      "bootstrap_95": [
+        1.39,
+        6.41
+      ],
+      "fraction_positive": 0.54,
+      "fraction_tied": 0.05,
+      "signflip_p_one_sided": 0.0014,
+      "status": "post-result diagnostic; does not redefine frozen decision"
+    }
+  ],
+  "claim_guard": "Random acquisition outperforming the tested UCB policies establishes policy-level failure under this retrospective pool. It does not identify whether mean ranking, uncertainty calibration, or iterative refitting is the cause, and it does not establish random search as generally optimal."
+}

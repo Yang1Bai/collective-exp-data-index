@@ -1,0 +1,28 @@
+{
+  "design_name": "Hard coverage-gated Caltech-to-OBELiX reverse ionic screen",
+  "design_version": "2026-07-23b",
+  "status": "post-outcome exploratory amendment frozen before gated run",
+  "frozen_utc": "2026-07-23T23:15:00-04:00",
+  "parent_design": "analysis/coverage_matched_reverse_ionic_design.json",
+  "reason_for_amendment": "The parent run showed large ID improvement but harm when the Caltech expert was applied across the complete Q4, while the pre-outcome coverage audit showed that only 32 percent of Q4 lies inside the source coverage radius.",
+  "claim_guard": "This gate was added after the ungated reverse-edge outcome was inspected. It can diagnose whether transfer is candidate-local and can define a method for later independent testing, but it is not confirmatory evidence.",
+  "gate": {
+    "admit": "nearest leakage-safe Caltech composition distance <= the 95th percentile of target-development leave-one-out nearest-neighbor distance",
+    "outcomes_used": false,
+    "uncovered_action": "use the target-only prediction exactly",
+    "covered_action": "use the Caltech-augmented prediction",
+    "threshold_tuning": "none"
+  },
+  "methods": [
+    "caltech_scalar_hard_coverage_gate",
+    "caltech_features_hard_coverage_gate",
+    "shuffled_caltech_hard_coverage_gate"
+  ],
+  "local_repeats": 3,
+  "target_learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "evaluation": "reuse the frozen outcome-free OBELiX Q1 and Q4; report whole-scope and covered-Q4 effects"
+}

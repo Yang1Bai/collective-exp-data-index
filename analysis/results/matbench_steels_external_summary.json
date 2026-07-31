@@ -1,0 +1,44 @@
+{
+  "analysis_status": "designated-before-first-matbench-outcome-model-run-after-birdshot-audit-not-externally-preregistered",
+  "target": "matbench_steel_ys",
+  "target_rows": 312,
+  "official_folds": 5,
+  "target_budget_per_fold": 30,
+  "primary_source": "alloy_uts",
+  "relative_rmse_improvement": -0.012317998932695246,
+  "relative_rmse_ci": [
+    -0.15883984042093624,
+    0.024750411678667903
+  ],
+  "pooled_base_r2": -15.44579854175035,
+  "pooled_augmented_r2": -16.53286243046866,
+  "fold_effects": [
+    -0.01154291045420324,
+    -0.0055426520721470664,
+    -0.010779698002504104,
+    -0.01496303653938144,
+    -0.016731188518740035
+  ],
+  "target_equivalent_n": 29.882565412531108,
+  "target_sample_fraction_saved": -0.003929869669745518,
+  "primary_permutation_p": 0.794,
+  "positive_learners_of_three": 2,
+  "source_group_cv_r2_mean": 0.4092635025593352,
+  "raw_source_target_composition_overlap": 0,
+  "post_exclusion_overlap": 0,
+  "same_row_matbench_tensile_strength_used_as_input": false,
+  "gates": {
+    "relative_rmse_at_least_5pct": false,
+    "cluster_bootstrap_ci_above_zero": false,
+    "positive_augmented_r2": false,
+    "positive_effect_in_all_five_official_folds": false,
+    "target_sample_fraction_saved_at_least_30pct": false,
+    "at_least_two_of_three_learners_positive": true,
+    "source_group_cv_r2_positive": true,
+    "zero_post_exclusion_composition_overlap": true,
+    "primary_permutation_p_below_0_05": false,
+    "learning_curve_valid_for_equivalence": true
+  },
+  "rescue_claim_supported": false,
+  "decision": "unresolved"
+}

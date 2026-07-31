@@ -1,0 +1,12 @@
+route,metric,value,ci_low,ci_high,unit,note
+predict,relative_log_rmse_gain,28.64,24.03,33.52,percent,unseen-salt relation versus state-only
+predict,raw_r2,0.629,,,score,unseen-salt external programme
+predict,spearman,0.871,,,score,unseen-salt external programme
+screen,recipient_spearman,0.537,,,score,best five-label recipient-only model
+screen,borrowed_spearman,0.910,,,score,neighbouring-programme score
+screen,delta_spearman,0.374,0.213,0.562,score,borrowed minus recipient-only
+screen,recipient_precision_top_quartile,0.490,,,fraction,best five-label recipient-only model
+screen,borrowed_precision_top_quartile,0.933,,,fraction,neighbouring-programme score
+abstain,generic_edges_passed,0,,,count_of_40,complete OOD gate
+abstain,frozen_donor_score,0.694,,,score,frozen second recipient
+abstain,frozen_recipient_score,0.783,,,score,frozen second recipient

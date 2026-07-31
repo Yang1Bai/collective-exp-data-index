@@ -1,0 +1,17 @@
+{
+  "budgets": [
+    60,
+    120,
+    240
+  ],
+  "created_utc": "2026-07-27T00:51:57.736172+00:00",
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "development_candidate_units": 8302,
+  "draw_sha256": "c4e754192f88f9e5d475f17b55a2a0a55aaca45d32ee3d364b5413d2d090ea72",
+  "implementation_sha256": "f49e74765037a49aceafcf78a7cbf8bad312acce71ac2ae5a1c6f5ce73157012",
+  "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3",
+  "outcome_access": "No OPV outcome or target energy annotation was read.",
+  "repeats": 200,
+  "rows": 84000,
+  "status": "outcome-free-label-draws-frozen"
+}

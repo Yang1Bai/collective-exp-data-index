@@ -1,0 +1,151 @@
+{
+  "status": "schema-audited-outcome-blind",
+  "design_sha256": "91a6d65db3fd85954fe0ce37664933beb7bf07bf1340b573aed98e947e3de6c1",
+  "archive": "D:\\OneDrive - University of Toronto\\AC\\Project\\Collective exp dataset\\data\\external\\battery_conductivity_borrowing\\battery-v2.zip",
+  "archive_bytes": 97765422,
+  "archive_md5": "c7411b5da52afddef98ef868fba25e0d",
+  "archive_sha256": "8fb2aada83bddd5c4c6b38745b3a39cd860f82520726c1f083efc257053892e0",
+  "numeric_property_values_read": false,
+  "members": [
+    {
+      "name": "battery-2022.csv",
+      "bytes": 86692599,
+      "compressed_bytes": 23254784,
+      "is_directory": false,
+      "schema": {
+        "kind": "csv",
+        "columns": [
+          "Property",
+          "Name",
+          "Value",
+          "Raw_unit",
+          "Raw_value",
+          "Unit",
+          "Extracted_name",
+          "DOI",
+          "Specifier",
+          "Tag",
+          "Warning",
+          "Type",
+          "Info",
+          "name",
+          "value",
+          "Title",
+          "Journal",
+          "Date",
+          "Correctness"
+        ]
+      }
+    },
+    {
+      "name": "battery-2022.db",
+      "bytes": 83152896,
+      "compressed_bytes": 25116755,
+      "is_directory": false,
+      "schema": {
+        "kind": "sqlite",
+        "tables": {
+          "BATTERY21": [
+            "Property",
+            "Name",
+            "Value",
+            "Raw_unit",
+            "Raw_value",
+            "Unit",
+            "Extracted_name",
+            "DOI",
+            "Specifier",
+            "Tag",
+            "Warning",
+            "Type",
+            "Info",
+            "Title",
+            "Journal",
+            "Date",
+            "Correctness"
+          ]
+        }
+      }
+    },
+    {
+      "name": "battery-2022.json",
+      "bytes": 142534273,
+      "compressed_bytes": 26944727,
+      "is_directory": false,
+      "schema": {
+        "kind": "json",
+        "note": "Keys are not inspected in the schema-only stage because streaming the released JSON could expose property values."
+      }
+    },
+    {
+      "name": "battery-2022-merged.csv",
+      "bytes": 36002610,
+      "compressed_bytes": 5991430,
+      "is_directory": false,
+      "schema": {
+        "kind": "csv",
+        "columns": [
+          "Property",
+          "Name",
+          "Value",
+          "Raw_unit",
+          "Raw_value",
+          "Unit",
+          "Num_records",
+          "Extracted_name",
+          "DOI",
+          "Specifier",
+          "Tag",
+          "Warning",
+          "Type",
+          "Info",
+          "Title",
+          "Journal",
+          "Date",
+          "Correctness"
+        ]
+      }
+    },
+    {
+      "name": "battery-2022-merged.db",
+      "bytes": 40292352,
+      "compressed_bytes": 8943835,
+      "is_directory": false,
+      "schema": {
+        "kind": "sqlite",
+        "tables": {
+          "BATTERY21": [
+            "Property",
+            "Name",
+            "Value",
+            "Raw_unit",
+            "Raw_value",
+            "Unit",
+            "Num_records",
+            "Extracted_name",
+            "DOI",
+            "Specifier",
+            "Tag",
+            "Warning",
+            "Type",
+            "Info",
+            "Title",
+            "Journal",
+            "Date",
+            "Correctness"
+          ]
+        }
+      }
+    },
+    {
+      "name": "battery-2022-merged.json",
+      "bytes": 80605785,
+      "compressed_bytes": 7513179,
+      "is_directory": false,
+      "schema": {
+        "kind": "json",
+        "note": "Keys are not inspected in the schema-only stage because streaming the released JSON could expose property values."
+      }
+    }
+  ]
+}

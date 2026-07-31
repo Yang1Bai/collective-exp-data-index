@@ -1,0 +1,201 @@
+{
+  "audit_type": "outcome-blind recipient suitability audit",
+  "research_dataset": {
+    "name": "SolventSeg",
+    "data_doi": "10.5281/zenodo.6299956",
+    "publication_doi": "10.1016/j.xcrp.2022.101047"
+  },
+  "outcome_blinding": {
+    "status": "maintained for split design",
+    "statement": "No predictive models, transfer metrics, or conductivity-dependent split rules were used. Conductivity was inspected only for schema, missingness, range, duplicates, and physical boundary QC."
+  },
+  "source_verification": {
+    "zenodo_title": "ndrewwang/SolventSeg: v1.0.0",
+    "zenodo_license_field": "other-open",
+    "zenodo_related_repository": "https://github.com/ndrewwang/SolventSeg/tree/beta",
+    "archive_md5_verified": true,
+    "source_inventory": {
+      "CALiSol-23 Dataset.csv": {
+        "bytes": 1959744,
+        "sha256": "af560531c6b0d7ea0848581120f5f08a725c510bba8cbc3ae84c6b89ae32993f"
+      },
+      "downloads/solventseg/SolventSeg-beta.zip": {
+        "bytes": 824190,
+        "sha256": "81dc750c01021b9e418ffb4c884fe98ab923519f584ad998f060779152481573",
+        "md5": "a230d144ac48a7b17b48a146fc7d8556"
+      },
+      "downloads/solventseg/extracted/ndrewwang-SolventSeg-a923bd4/trainingset/Ternary_Physicochemical_Training.csv": {
+        "bytes": 9005,
+        "sha256": "0a227b593acb68253573e72d59acfd88b1bd8a658ad16d536759c7025535bdad"
+      },
+      "downloads/solventseg/extracted/ndrewwang-SolventSeg-a923bd4/LICENSE": {
+        "bytes": 1066,
+        "sha256": "f47e169899306e2aafa163b557859e014005e63bf5056f942b1f9a8571f6b21f"
+      },
+      "downloads/solventseg/extracted/ndrewwang-SolventSeg-a923bd4/README.md": {
+        "bytes": 3362,
+        "sha256": "0a0d1f3890b1106d9a4e9e0f3adc25e1d2b958c6e3286be312ef2514ea0e3e1c"
+      }
+    },
+    "source_urls": {
+      "zenodo_api": "https://zenodo.org/api/records/6299956",
+      "zenodo_archive": "https://zenodo.org/api/records/6299956/files/ndrewwang/SolventSeg-beta.zip/content",
+      "repository": "https://github.com/ndrewwang/SolventSeg/tree/beta",
+      "publication": "https://doi.org/10.1016/j.xcrp.2022.101047",
+      "oxford_record": "https://ora.ox.ac.uk/objects/uuid:d9e257ed-e2d7-48bc-9446-7866f62ea29f",
+      "glasgow_record": "https://eprints.gla.ac.uk/279039/"
+    }
+  },
+  "license_assessment": {
+    "repository_license": "MIT License, copyright 2022 ndrewwang",
+    "scope_quote": "this software and associated documentation files",
+    "csv_explicitly_named_as_licensed": false,
+    "zenodo_license_field": "other-open",
+    "conclusion": "ambiguous_not_confirmed",
+    "reason": "The root MIT file is co-archived with the CSV, but its defined scope is software and associated documentation; neither README nor Zenodo explicitly states that experimental data are MIT-licensed.",
+    "required_resolution": "Obtain explicit written confirmation from the rights holder or a data-specific license declaration before relying on MIT applicability to the measurements."
+  },
+  "provenance_assessment": {
+    "publication_authors": [
+      "Andrew A. Wang",
+      "Samuel Greenbank",
+      "Guanchen Li",
+      "David A. Howey",
+      "Charles W. Monroe"
+    ],
+    "institutions_evidenced": [
+      "University of Oxford",
+      "University of Glasgow",
+      "The Faraday Institution"
+    ],
+    "KIT_or_FZJ_listed": false,
+    "conclusion": "Oxford/Glasgow provenance confirmed; available records support organizational independence from KIT/FZJ, but absence of a listed affiliation cannot prove complete historical independence."
+  },
+  "recipient_harmonization": {
+    "source_rows": 200,
+    "retained_rows": 180,
+    "excluded_rows": 20,
+    "retention_rule": "xLiPF6 > 0",
+    "exclusion_reason": "Four salt-free formulations at five temperatures; conductivity is zero and the target calls for 180 LiPF6-containing measurements.",
+    "retained_formulations": 36,
+    "temperatures_C": [
+      10,
+      20,
+      25,
+      30,
+      40
+    ],
+    "rows_per_formulation": 5,
+    "column_mapping": {
+      "xEC": "EC_wt",
+      "xEMC": "EMC_wt",
+      "xLiPF6": "LiPF6_wt",
+      "Temp": "temperature_C",
+      "k": "conductivity_mS_cm"
+    },
+    "formulation_id_rule": "Integer IDs 1..36 after lexicographic sorting by nominal ec, xLiPF6, xEC, xEMC.",
+    "quality": {
+      "missing_cells": 0,
+      "duplicate_feature_rows": 0,
+      "duplicate_full_rows_source": 0,
+      "max_mass_fraction_closure_error": 1.0000000000065512e-05,
+      "conductivity_range_mS_cm": [
+        0.06,
+        13.44
+      ]
+    },
+    "important_boundary": "45 retained records (9 formulations \u00d7 5 temperatures) have EC_wt=0; these are LiPF6/EMC boundary formulations and are part of the stated 180-row/36-formulation target."
+  },
+  "donor_harmonization": {
+    "source_rows": 13825,
+    "retained_rows": 410,
+    "rules": [
+      "salt == LiPF6",
+      "concentration unit == mol/kg",
+      "solvent ratio type == weight fraction",
+      "EMC > 0 and EC >= 0",
+      "all non-EC/EMC solvent fractions == 0",
+      "conductivity nonmissing",
+      "temperature 243.15\u2013333.15 K inclusive"
+    ],
+    "conversion": {
+      "LiPF6_molecular_weight_g_mol": 151.905,
+      "salt_mass_fraction_formula": "m*MW/(1000 + m*MW)",
+      "solvent_fractions": "source EC:EMC ratio normalized to solvent total then multiplied by (1-LiPF6_wt)",
+      "temperature_C": "T_K - 273.15"
+    },
+    "conductivity_unit_assumption": "Source metadata reportedly labels k as S/cm, but numerical values were retained without \u00d71000 and interpreted as mS/cm, consistent with the pre-existing audit. This unresolved ambiguity must remain explicit.",
+    "quality": {
+      "missing_cells": 0,
+      "duplicate_rows": 0,
+      "max_mass_fraction_closure_error": 2.220446049250313e-16,
+      "source_dois": {
+        "10.1149/1.1403730": 310,
+        "10.1149/2.0981803jes": 80,
+        "10.1149/2.0271802jes": 20
+      }
+    }
+  },
+  "ood_splits": {
+    "unit_of_assignment": "formulation (all five temperatures remain together)",
+    "kmeans": {
+      "features": [
+        "EC_wt",
+        "EMC_wt",
+        "LiPF6_wt"
+      ],
+      "scaled": false,
+      "n_clusters": 5,
+      "random_state": 2025,
+      "n_init": 50,
+      "algorithm": "lloyd",
+      "cluster_sizes_formulations": {
+        "0": 9,
+        "1": 5,
+        "2": 9,
+        "3": 9,
+        "4": 4
+      },
+      "inertia": 0.28260293687888893,
+      "evaluation": "Leave one cluster out across five folds."
+    },
+    "edge_vs_center": {
+      "definition": "Hold out the perimeter of the 4\u00d79 structured formulation grid: nominal EC solvent fraction at its minimum or maximum, OR salt rank within an EC stratum at its minimum or maximum.",
+      "test_edge_formulations": 22,
+      "train_center_formulations": 14,
+      "evaluation": "Single manual test_edge versus train_center split."
+    },
+    "leakage_control": "Split only at formulation_id level; never split temperature rows from the same composition across train/test."
+  },
+  "suitability_decision": {
+    "data_quality": "pass_no_fatal_issue",
+    "provenance": "pass_with_epistemic_limit",
+    "ood_protocol": "pass",
+    "license": "fail_pending_clarification",
+    "overall": "conditional_not_yet_cleared_for_replication_distribution",
+    "blocking_item": "Explicit applicability of MIT (or another open data license) to the experimental CSV has not been established."
+  },
+  "software": {
+    "python": "3.13.7",
+    "pandas": "2.3.3",
+    "numpy": "2.4.3",
+    "scikit_learn": "1.8.0"
+  },
+  "outputs": {
+    "CALiSol23_LiPF6_EC_EMC_harmonized.csv": {
+      "path": "/workspace/solventseg_audit_artifacts/CALiSol23_LiPF6_EC_EMC_harmonized.csv",
+      "bytes": 33258,
+      "sha256": "56b17f0e067daa00a9ea79eb5c7810c498e6e0f4ca2f699623b1c483b2ad177c"
+    },
+    "SolventSeg_LiPF6_EC_EMC_harmonized.csv": {
+      "path": "/workspace/solventseg_audit_artifacts/SolventSeg_LiPF6_EC_EMC_harmonized.csv",
+      "bytes": 5969,
+      "sha256": "1054d95673dd5e094148eafd195e648afff190be3027dfd63921a3ad75b30597"
+    },
+    "SolventSeg_formulation_OOD_splits.csv": {
+      "path": "/workspace/solventseg_audit_artifacts/SolventSeg_formulation_OOD_splits.csv",
+      "bytes": 7309,
+      "sha256": "c6f656fd3fb1945500013702d5c433429ab510b618459b53d1883fed36e48620"
+    }
+  }
+}

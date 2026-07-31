@@ -1,6 +1,6 @@
 # Catalog
 
-_118 databases · updated 2026-07-13 · 90 experimental · 28 mixed · 0 computational_
+_127 databases · updated 2026-07-27 · 98 experimental · 29 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -15,7 +15,7 @@ _118 databases · updated 2026-07-13 · 90 experimental · 28 mixed · 0 computa
   - [Catalysis](#chemistry-catalysis) (1)
   - [Crystallography](#chemistry-crystallography) (1)
   - [Data infrastructure & portals](#chemistry-data-infrastructure) (2)
-  - [HTE / synthesis](#chemistry-hte-synthesis) (6)
+  - [HTE / synthesis](#chemistry-hte-synthesis) (8)
   - [Ionic liquids](#chemistry-ionic-liquids) (1)
   - [Reaction kinetics](#chemistry-kinetics) (2)
   - [Lab automation & robotic chemistry](#chemistry-lab-automation) (5)
@@ -29,17 +29,17 @@ _118 databases · updated 2026-07-13 · 90 experimental · 28 mixed · 0 computa
   - [Solubility](#chemistry-solubility) (2)
   - [Solvation](#chemistry-solvation) (2)
   - [Experimental spectra (XPS/Raman/XRD)](#chemistry-spectra-exp) (3)
-  - [Spectroscopy](#chemistry-spectroscopy) (4)
+  - [Spectroscopy](#chemistry-spectroscopy) (5)
   - [Thermochemistry](#chemistry-thermochemistry) (1)
 - **Materials**
-  - [Additive manufacturing](#materials-additive-manufacturing) (1)
+  - [Additive manufacturing](#materials-additive-manufacturing) (3)
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
   - [Batteries & energy storage](#materials-batteries) (9)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
   - [Catalysis](#materials-catalysis) (1)
   - [Crystallography](#materials-crystallography) (2)
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
-  - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
+  - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (3)
   - [General materials properties](#materials-general-properties) (3)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
@@ -50,11 +50,11 @@ _118 databases · updated 2026-07-13 · 90 experimental · 28 mixed · 0 computa
   - [MOFs & porous materials](#materials-mofs-porous) (5)
   - [Nanomaterials & nanosafety](#materials-nanomaterials) (1)
   - [Organic electronics](#materials-organic-electronics) (2)
-  - [Photovoltaics & solar cells](#materials-photovoltaics) (6)
+  - [Photovoltaics & solar cells](#materials-photovoltaics) (7)
   - [Polymers](#materials-polymers) (4)
-  - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (5)
+  - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (6)
   - [Superconductors](#materials-superconductors) (1)
-  - [Thermoelectrics](#materials-thermoelectrics) (2)
+  - [Thermoelectrics](#materials-thermoelectrics) (3)
   - [Thermophysical properties](#materials-thermophysical) (1)
 
 
@@ -183,6 +183,12 @@ Experimental enantioselectivity measurements for CPA-catalyzed thiol addition to
 
 `experimental`· `open`· 2019 · Other (published SI) · Science SI / Denmark Group· DOI: [10.1126/science.aau5631](https://doi.org/10.1126/science.aau5631)· tags: `enantioselectivity`, `asymmetric-catalysis`, `descriptors`, `machine-learning`
 
+#### 🧪🔓 [Pfizer HTE 'Reactome' Dataset (HiTEA)](https://github.com/emmaking-smith/HiTEA)
+
+Release of 39,000+ previously proprietary Pfizer high-throughput experimentation reactions accumulated over 10+ years of medicinal chemistry, spanning cross-coupling reactions, hydrogenations and chiral salt resolutions across 350+ target products. Published with the HiTEA statistical analysis framework; full dataset CSV and cleaned per-reaction-class subsets are in the GitHub repository.
+
+`experimental`· `open`· 2024 · GitHub· DOI: [10.1038/s41557-023-01393-w](https://doi.org/10.1038/s41557-023-01393-w)· tags: `cross-coupling`, `hydrogenation`, `chiral-resolution`, `high-throughput`, `industrial-data`, `medicinal-chemistry`
+
 #### 🧪🔓 [Reizman-Jensen Suzuki-Miyaura Flow Optimization Dataset](https://pubs.rsc.org/en/content/articlelanding/2016/re/c6re00153j)
 
 Experimental Suzuki-Miyaura cross-coupling optimization data from an automated droplet-flow microfluidic reactor with feedback, screening palladacycle/ligand combinations plus continuous variables to maximize yield and turnover. Packaged as emulator benchmarks (reizman_suzuki) in the Summit framework.
@@ -194,6 +200,12 @@ Experimental Suzuki-Miyaura cross-coupling optimization data from an automated d
 Dataset of 5,760 Pd-catalyzed Suzuki-Miyaura couplings screened on an automated nanomole-scale flow platform, varying electrophile, nucleophile, ligand, base, and solvent with LC-MS yield readouts (>1500 reactions/day). Widely used flow-chemistry HTE benchmark for yield prediction.
 
 `experimental`· `open`· 2018 · Unknown · GitHub / Science SI· DOI: [10.1126/science.aap9112](https://doi.org/10.1126/science.aap9112)· tags: `suzuki-miyaura`, `flow-chemistry`, `cross-coupling`, `yield-prediction`, `high-throughput`
+
+#### 🧪🔓 [Unified Buchwald-Hartwig HTE Dataset (BH-HTE-OOD)](https://github.com/schwallergroup/bh-hte-ood)
+
+Unified, curated Buchwald-Hartwig high-throughput experimentation dataset merging newly released Johnson & Johnson industrial HTE production data with major open-source BH/Pd-catalyzed C-N coupling datasets (Ahneman, Denmark, Merck nanomole-scale and others), with standardized SMILES, yields, binary success labels and precomputed OOD cluster splits. Released with the Schwaller-group study on out-of-distribution reaction yield prediction; CSV in the GitHub repo, full pickle on Zenodo (record 17634928).
+
+`experimental`· `open`· 2025 · Apache-2.0 · GitHub· DOI: [10.26434/chemrxiv-2025-xcr46](https://doi.org/10.26434/chemrxiv-2025-xcr46)· tags: `buchwald-hartwig`, `cross-coupling`, `yield-prediction`, `high-throughput`, `out-of-distribution`, `industrial-data`
 
 <a id="chemistry-ionic-liquids"></a>
 ### Ionic liquids
@@ -441,6 +453,12 @@ NIST Standard Reference Database of evaluated experimental thermochemical, ion-e
 
 `experimental`· `open`· 1997 · Other (NIST SRD, free to use) · NIST· tags: `thermochemistry`, `ir-spectra`, `mass-spectra`, `reference-data`, `nist`
 
+#### 🧪🔓 [NMRexp](https://zenodo.org/records/17296666)
+
+Open curated collection of 3.37 million experimental NMR records in organic chemistry across six nuclei (1H, 13C, 19F, 31P, 29Si, 11B), text-mined from ~200,000 Supporting Information documents published 2010-2024. Includes chemical shifts, multiplicities, J-couplings, solvents and source-DOI traceability; manual audit reported >99% metadata accuracy and 98% correct skeleton assignment. ~3.3 GB of CSV/Parquet files.
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17296666](https://doi.org/10.5281/zenodo.17296666)· tags: `nmr`, `spectra`, `organic-chemistry`, `literature-mining`, `structure-elucidation`, `machine-learning`
+
 #### 🧪🔓 [nmrshiftdb2](https://nmrshiftdb.nmr.uni-koeln.de/)
 
 Open-data, open-source web database of organic structures with assigned experimental NMR chemical-shift lists (13C, 1H, and other nuclei) and metadata, supporting spectrum prediction and structure/substructure search. Data downloadable under an open-content license.
@@ -468,11 +486,23 @@ Argonne National Laboratory resource deriving accurate, internally consistent en
 <a id="materials-additive-manufacturing"></a>
 ### Additive manufacturing
 
+#### 🧪🔓 [L-PBF Relative Density Dataset for Commercial Metallic Alloys](https://github.com/GermanOmar/data_LPBF)
+
+Literature-compiled dataset of 1,579 laser powder bed fusion samples of commercial metallic alloys, with eleven input columns (laser power, scan speed, hatch spacing, layer thickness, alloy, shielding gas, powder size distribution, printed geometry, etc.) and measured relative density in percent as the target. Intended as a benchmark for process-parameter/density models in metal additive manufacturing.
+
+`experimental`· `open`· 2025 · CC0-1.0 · Harvard Dataverse / GitHub· DOI: [10.7910/DVN/VPBQK8](https://doi.org/10.7910/DVN/VPBQK8)· tags: `additive-manufacturing`, `laser-powder-bed-fusion`, `relative-density`, `process-parameters`, `alloys`, `benchmark-ml`
+
 #### 🧪🔓 [NIST AM Bench (Additive Manufacturing Benchmark Test Series)](https://www.nist.gov/ambench)
 
 NIST-led series of highly controlled additive manufacturing benchmark measurements (2018/2022/2025) for validating AM process simulations: laser powder bed fusion of Ni superalloys and stainless steel, DED and polymer AM, with in-situ melt-pool, microstructure, residual strain and mechanical data. Permanently archived for public use with blind modeling challenges.
 
 `experimental`· `open`· 2018 · NIST public data (US Gov) · NIST· tags: `additive-manufacturing`, `laser-powder-bed-fusion`, `benchmark`, `in-situ`, `microstructure`
+
+#### 🧪🔓 [ORNL L-PBF In Situ Imaging + XCT + Fatigue Dataset](https://www.osti.gov/biblio/2524534)
+
+Multimodal experimental dataset from a single stainless steel 316H laser powder bed fusion build at Oak Ridge National Laboratory: 64 printed cylinders with layerwise visible-light images (pre- and post-recoat), integrated near-infrared thermal images, rasterized scan paths, post-build X-ray computed tomography of internal flaws, and high-/low-cycle fatigue test results for 60 machined coupons. All modalities are co-registered to the build-plate coordinate system, enabling process-anomaly to flaw to fatigue-life studies.
+
+`experimental`· `open`· 2025 · Unknown · OSTI / OLCF (ORNL)· DOI: [10.13139/ORNLNCCS/2524534](https://doi.org/10.13139/ORNLNCCS/2524534)· tags: `additive-manufacturing`, `laser-powder-bed-fusion`, `in-situ-monitoring`, `x-ray-ct`, `fatigue`, `stainless-steel`, `process-monitoring`
 
 <a id="materials-alloys-mechanical"></a>
 ### Alloys & mechanical properties
@@ -608,6 +638,12 @@ Open data portal of the NSF Materials Innovation Platform PARADIM (Cornell/Johns
 
 <a id="materials-electrocatalysis-exp"></a>
 ### Electrocatalysis (experimental HTE)
+
+#### 🧪🔓 [CatHubExp (Catalysis-Hub Experimental Electrocatalysis Database)](https://experimental.catalysis-hub.org)
+
+Curated research database of experimental electrocatalysis measurements from SUNCAT (Stanford/SLAC), comprising 241 experimental entries with detailed reaction conditions, material properties, characterization and performance metrics in web-based and machine-readable formats. Designed to complement the computational Catalysis-Hub and improve reproducibility and benchmarking in electrocatalysis.
+
+`experimental`· `open`· 2025 · self-hosted· DOI: [10.1063/5.0280821](https://doi.org/10.1063/5.0280821)· tags: `electrocatalysis`, `electrochemistry`, `oer`, `data-infrastructure`, `benchmarking`, `suncat`
 
 #### 🧪🔓 [In-Situ PEM Fuel Cell Cathode Catalyst Degradation Dataset](https://figshare.com/articles/dataset/_b_In-Situ_Characterization_of_Cathode_Catalyst_Degradation_in_PEM_Fuel_Cells_b_/25450177/1)
 
@@ -786,6 +822,12 @@ AMANDA/AMADAP automated research platform (Brabec, FAU Erlangen) fabricates and 
 
 `experimental`· `restricted`· 2021 · Unknown· tags: `materials-acceleration-platform`, `organic-photovoltaics`, `perovskite`, `device-aging`, `high-throughput`
 
+#### 🔀🔓 [Autonomous Closed-Loop Perovskite Solar Cell Campaign (PVK_Passivation_ML)](https://github.com/ShuaihuaLu/PVK_Passivation_ML)
+
+Code and data from an autonomous closed-loop framework coupling ML-driven passivation-molecule discovery (active learning + DFT) with an automated perovskite solar cell fabrication platform using Bayesian optimization, which identified the passivator 5ANI and produced certified 27.2%-PCE cells with ~5x better fabrication reproducibility than manual processing. Campaign data and models archived on Zenodo alongside the Nature (2026) paper.
+
+`mixed`· `open`· 2026 · Zenodo· DOI: [10.5281/zenodo.18803626](https://doi.org/10.5281/zenodo.18803626)· tags: `perovskite`, `self-driving-lab`, `bayesian-optimization`, `passivation`, `device-fabrication`, `machine-learning`
+
 #### 🧪🔓 [Emerging-PV Reports Database](https://emerging-pv.org/)
 
 Community-curated online database of research-cell device performance for emerging photovoltaics — OPV, perovskites, dye-sensitized and other next-generation devices — collected from literature and researcher submissions, with interactive efficiency graphs and annual 'Emerging PV Reports' in Adv. Energy Mater.
@@ -870,6 +912,12 @@ Open experimental powder X-ray diffraction database aggregating patterns from 18
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15298026](https://doi.org/10.5281/zenodo.15298026)· tags: `xrd`, `powder-diffraction`, `crystallography`, `machine-learning`, `characterization`
 
+#### 🧪🔓 [Raman Open Database (ROD)](https://solsa.crystallography.net/rod/index.php)
+
+Open-access collection of ~1,133 uncorrected experimental Raman spectra of minerals and crystalline materials, built for the EU SOLSA H2020 project and cross-linked to the Crystallography Open Database so Raman and XRD records for the same phase can be used together. Community deposition is open; all records are released into the public domain.
+
+`experimental`· `open`· 2019 · CC0-1.0 · self-hosted (crystallography.net)· DOI: [10.1107/S1600576719004229](https://doi.org/10.1107/S1600576719004229)· tags: `raman`, `spectroscopy`, `minerals`, `crystallography`, `open-data`, `cod-linked`
+
 #### 🧪🔓 [RRUFF Project Database](https://rruff.info/)
 
 Integrated database of high-quality Raman spectra, X-ray powder diffraction patterns, infrared spectra and measured chemistry for thousands of well-characterized mineral samples, measured at the University of Arizona from documented specimens. A reference standard for mineral identification.
@@ -899,6 +947,12 @@ Public dataset of 5,205 experimental observations covering 880 unique experiment
 Open, web-based database that crowdsources experimental material-property data digitized from published plot images, containing 190,000+ curves from 80,000+ physical samples across 13,000+ papers, heavily weighted toward experimental thermoelectric materials. All data are openly downloadable.
 
 `experimental`· `open`· 2019 · Other · self-hosted· tags: `thermoelectrics`, `experimental`, `plot-digitization`, `crowdsourced`, `property-curves`
+
+#### 🧪🔓 [teMatDb / teMatDb272](https://github.com/byungkiryu/teMatDb)
+
+High-fidelity thermoelectric materials database from the KERI ThermoElectric Physics and Science team: full digitized temperature-dependent transport property curves (Seebeck coefficient, resistivity, thermal conductivity, zT) extracted from published experimental figures, plus a self-consistent ZT (Sc-ZT) filtering protocol. Ships teMatDb v1.1.6 raw/collocated TEP sets and the curated 272-sample teMatDb272 benchmark, along with Sc-ZT-filtered Starrydata2 subsets (10,840-15,532 samples).
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · GitHub / Zenodo / Figshare· DOI: [10.5281/zenodo.15518036](https://doi.org/10.5281/zenodo.15518036)· tags: `thermoelectrics`, `transport-properties`, `zt`, `seebeck`, `digitized-figures`, `data-quality`, `benchmark`
 
 <a id="materials-thermophysical"></a>
 ### Thermophysical properties

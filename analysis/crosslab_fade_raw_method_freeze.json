@@ -1,0 +1,61 @@
+{
+  "program": "Raw-source cross-laboratory fade transfer",
+  "frozen_utc": "2026-07-29T21:56:00Z",
+  "recipient_raw_files_opened": false,
+  "selection_scope": "MATR donor only; leave-one-batch-out predictions",
+  "candidate_methods": 32,
+  "eligibility_rule": {
+    "batch_out_spearman_at_least": 0.5,
+    "absolute_log_life_r2_above": 0.0
+  },
+  "selection_rule_among_eligible": "minimum leave-one-batch-out RMSE; ties within 0.001 prefer simpler learner",
+  "primary": {
+    "transfer_object": "donor mapping from within-cell cycles-10-to-100 response to log10 cycles-to-80%-SOH",
+    "features": [
+      "log10 variance of discharge-branch DeltaQ(V) between cycles 100 and 10",
+      "log10 absolute minimum of discharge-branch DeltaQ(V) between cycles 100 and 10",
+      "discharge-capacity slope over cycles 2-100",
+      "discharge-capacity intercept over cycles 2-100",
+      "Qd(100)/Qref",
+      "coulombic-efficiency mean over cycles 10-100",
+      "coulombic-efficiency standard deviation over cycles 10-100"
+    ],
+    "learner": {
+      "class": "RandomForestRegressor",
+      "n_estimators": 800,
+      "min_samples_leaf": 2,
+      "max_features": 0.8,
+      "random_state": 20260729
+    },
+    "donor_batch_out": {
+      "spearman": 0.6681128906166818,
+      "rmse_log10_life": 0.1318664555116687,
+      "r2_log10_life": 0.40113530460618063
+    }
+  },
+  "mechanistic_sensitivity": {
+    "object": "early-response to power-law degradation coefficients with posterior combination",
+    "donor_batch_out_spearman": 0.6128411065555657
+  },
+  "rejected_high_rank_candidate": {
+    "learner": "Ridge",
+    "features": "response only",
+    "spearman": 0.7773701776869635,
+    "r2_log10_life": -3.9479863392232524,
+    "reason": "failed absolute-utility gate"
+  },
+  "controls_required_before_formal_run": [
+    "recipient own-curve extrapolation",
+    "frozen-label shuffled MATR mapping",
+    "wrong-chemistry donor using the same response-feature contract",
+    "unconditional donor mean",
+    "original coefficient-posterior sensitivity"
+  ],
+  "input_hashes_sha256": {
+    "donor_table": "bdc1020235c6458d9d890ff1d12cd5439f22988801e0d4757207e400f9788ad8",
+    "candidate_methods_csv": "7e6e75b35d2d04dd0ae71c87cac11a92a63b9d3b96d79853c658b36079d7cd05",
+    "candidate_predictions_csv_gz": "4e5327b5c6e9d1a3c03d6d77488bd155eaa93eb9f4b7d0a83ea1e2218b2c0814",
+    "development_script": "75f3e8192a81d1454eb79a5796ac3f73bd63bb5059e3f7fe4ae6d8d4140c7f7f"
+  },
+  "claim_guard": "The method was selected without opening raw HUST files, but an earlier compressed mirror exposed an approximate HUST milestone. This is a pre-specified raw-source confirmation, not a never-seen recipient."
+}

@@ -1,0 +1,86 @@
+panel,measure,estimate,target,source,donor_slot,is_designated_primary,neighborhood,gain_ood_mean,gain_ood_ci_lo,gain_ood_ci_hi,aug_ood_r2_mean,classification,criterion,pass
+a,source_internal_r2,0.789886969692373,,,,,,,,,,,,
+a,recipient_internal_r2,0.06703546705476726,,,,,,,,,,,,
+a,transported_r2,-3.0061494752292957,,,,,,,,,,,,
+a,source_median_uts_ys,1.3617021276595744,,,,,,,,,,,,
+a,recipient_median_uts_ys,2.721557648256554,,,,,,,,,,,,
+b,,,te_zt,te_seebeck,1.0,True,2.0,0.001517104731643,-0.0631429502855649,0.0107408513006578,-621.1544755434618,directional-ood-improvement,,
+b,,,te_zt,te_power_factor,2.0,False,3.0,0.0863475700065904,0.0669314397029259,0.1052193814600799,-473.990096047625,ood-improvement-not-specific,,
+b,,,te_zt,te_thermal,3.0,False,3.0,0.0035118335375376,-0.0085758163109663,0.0151952222781438,-583.1410355945309,directional-ood-improvement,,
+b,,,te_zt,alloy_ys,4.0,False,0.0,0.0033805148592106,-0.0074519713504145,0.0124557649360108,-539.1576212695273,directional-ood-improvement,,
+b,,,te_zt,catalysis_h2,5.0,False,0.0,0.0084261853855556,-0.0014669367715242,0.0186658774088647,-572.8952633018189,directional-ood-improvement,,
+b,,,alloy_ys,alloy_uts,1.0,True,3.0,0.0664752036682114,0.0352932137693162,0.1402343470938264,-0.6660551279024105,ood-improvement-not-specific,,
+b,,,alloy_ys,alloy_hardness,2.0,False,2.0,0.0719592051418843,0.061070029414233,0.0837091911845334,-0.6358058683012742,ood-improvement-not-specific,,
+b,,,alloy_ys,alloy_elongation,3.0,False,1.0,0.0352127789942744,0.0242903703634576,0.0466150691790572,-0.8210465090531833,ood-improvement-not-specific,,
+b,,,alloy_ys,catalysis_h2,4.0,False,0.0,-0.0023303218959292,-0.0038448542646135,-0.0008490486118756,-0.9575290433591286,harmful,,
+b,,,alloy_ys,te_thermal,5.0,False,0.0,0.001227235485566,-0.0018819856613762,0.0038343210635654,-0.941003693283841,directional-ood-improvement,,
+b,,,catalysis_h2,catalysis_voltage,1.0,True,2.0,-0.0096672659038956,-0.0378018363983574,0.1189761152993375,-3.012751396800111,unresolved,,
+b,,,catalysis_h2,catalysis_co,2.0,False,3.0,-0.1327198336270648,-0.1722656634428063,-0.0955738678674426,-3.699462973305466,harmful,,
+b,,,catalysis_h2,alloy_ys,3.0,False,0.0,-0.0298916857592654,-0.0443953108364467,-0.0153554163730681,-3.1907938712633337,harmful,,
+b,,,catalysis_h2,electrolyte_conductivity,4.0,False,0.0,-0.0068359028654665,-0.0159266524395064,0.0007543812181686,-3.027364456814075,unresolved,,
+b,,,catalysis_h2,te_zt,5.0,False,0.0,-0.0034459059017773,-0.0300201419821989,0.0202067841899516,-2.996991220638123,unresolved,,
+b,,,polymer_tensile,polymer_young,1.0,True,3.0,-0.000569416732812,-0.0083102952098953,0.0317688000557902,-0.3425292243855476,unresolved,,
+b,,,polymer_tensile,polymer_elongation,2.0,False,2.0,0.0114310716115977,0.0081189369195308,0.0150347795029257,-0.3131335422349591,ood-improvement-not-specific,,
+b,,,polymer_tensile,polymer_hardness,3.0,False,2.0,-0.0062290552233459,-0.0082868083794639,-0.0042881080213256,-0.3679936788890512,harmful,,
+b,,,polymer_tensile,polymer_tg,4.0,False,1.0,0.0135919496487939,0.0107444913887616,0.0164938962809578,-0.3131798817085528,ood-improvement-not-specific,,
+b,,,polymer_tensile,photo_e_pipi,5.0,False,0.0,-0.0052541800406928,-0.0074243102736072,-0.0032906616274859,-0.3652164126653291,harmful,,
+b,,,polymer_tm,polymer_crystallization,1.0,True,3.0,-0.000818084326987,-0.0132585974102682,0.0114465978466036,-0.7318889478829275,unresolved,,
+b,,,polymer_tm,polymer_tg,2.0,False,3.0,-0.0332155189150557,-0.0377164193867612,-0.0288026707570328,-0.8388562627759716,harmful,,
+b,,,polymer_tm,polymer_td,3.0,False,2.0,-0.0002547637702152,-0.0016388707938462,0.0011416727657245,-0.7356583683993186,unresolved,,
+b,,,polymer_tm,polymer_tensile,4.0,False,1.0,-0.0089988229158322,-0.0110377067447882,-0.0071314521696033,-0.7594849382828133,harmful,,
+b,,,polymer_tm,photo_e_pipi,5.0,False,0.0,-0.0109813048353469,-0.0128552969092737,-0.0090741500008843,-0.7691294752954864,harmful,,
+b,,,electrolyte_conductivity,te_electrical,1.0,True,2.0,0.0097670013605859,-0.0313794417926978,0.036950952071301,-7.683386654253062,directional-ood-improvement,,
+b,,,electrolyte_conductivity,te_power_factor,2.0,False,1.0,0.0070756316123897,-0.009114385768592,0.0215196724552183,-7.66564267224451,directional-ood-improvement,,
+b,,,electrolyte_conductivity,te_thermal,3.0,False,1.0,0.0286619751690796,0.0175607253140867,0.0404475210307397,-7.289028650474436,ood-improvement-not-specific,,
+b,,,electrolyte_conductivity,alloy_ys,4.0,False,0.0,-0.0069455394475117,-0.019451633161587,0.0054580278852916,-7.650604748768585,unresolved,,
+b,,,electrolyte_conductivity,catalysis_h2,5.0,False,0.0,-0.0002184726154724,-0.0063144838335601,0.0049652865889033,-7.6968905469604305,unresolved,,
+b,,,solubility,hydration,1.0,True,3.0,0.0008390077186868,-0.0021928290283356,0.0031156312136548,-0.0924306291388231,directional-ood-improvement,,
+b,,,solubility,pka_acid,2.0,False,2.0,-0.0006471990498175,-0.0010790993023177,-0.0002007283471927,-0.0957921685890729,harmful,,
+b,,,solubility,pka_base,3.0,False,2.0,-1.0297759303263665e-06,-0.000644206720895,0.0006363914594286,-0.0941688572258202,unresolved,,
+b,,,solubility,photo_e_pipi,4.0,False,0.0,0.0014825212313785,0.0005697333584557,0.0023798004874089,-0.0915657452133163,ood-improvement-not-specific,,
+b,,,solubility,polymer_tg,5.0,False,0.0,-0.0012066785527917,-0.0018210285141798,-0.0006610036601056,-0.0972073562363939,harmful,,
+b,,,hydration,solubility,1.0,True,3.0,-0.0035013589121708,-0.0180099917161115,0.0097158416521824,-0.1281822778934914,unresolved,,
+b,,,hydration,pka_acid,2.0,False,1.0,0.0003839493858545,-0.0007078218682467,0.0013808997351932,-0.117309970585409,directional-ood-improvement,,
+b,,,hydration,pka_base,3.0,False,1.0,0.0007887310107454,-0.001323526898536,0.0028644599649456,-0.1168385061995658,directional-ood-improvement,,
+b,,,hydration,photo_e_pipi,4.0,False,0.0,-0.0002471201338839,-0.0016862677863595,0.0011042616596148,-0.1188395293363536,unresolved,,
+b,,,hydration,polymer_tg,5.0,False,0.0,0.0102297183515482,0.0084646390778769,0.011998802604066,-0.0971749559989426,ood-improvement-not-specific,,
+c,,,te_zt,,,,,,,,,,utility,0.0
+c,,,te_zt,,,,,,,,,,robustness,0.0
+c,,,te_zt,,,,,,,,,,OOD specificity,0.0
+c,,,te_zt,,,,,,,,,,adjusted inference,0.0
+c,,,te_zt,,,,,,,,,,no overlap,1.0
+c,,,alloy_ys,,,,,,,,,,utility,0.0
+c,,,alloy_ys,,,,,,,,,,robustness,1.0
+c,,,alloy_ys,,,,,,,,,,OOD specificity,0.0
+c,,,alloy_ys,,,,,,,,,,adjusted inference,1.0
+c,,,alloy_ys,,,,,,,,,,no overlap,1.0
+c,,,catalysis_h2,,,,,,,,,,utility,0.0
+c,,,catalysis_h2,,,,,,,,,,robustness,0.0
+c,,,catalysis_h2,,,,,,,,,,OOD specificity,0.0
+c,,,catalysis_h2,,,,,,,,,,adjusted inference,0.0
+c,,,catalysis_h2,,,,,,,,,,no overlap,1.0
+c,,,polymer_tensile,,,,,,,,,,utility,0.0
+c,,,polymer_tensile,,,,,,,,,,robustness,0.0
+c,,,polymer_tensile,,,,,,,,,,OOD specificity,0.0
+c,,,polymer_tensile,,,,,,,,,,adjusted inference,0.0
+c,,,polymer_tensile,,,,,,,,,,no overlap,1.0
+c,,,polymer_tm,,,,,,,,,,utility,0.0
+c,,,polymer_tm,,,,,,,,,,robustness,0.0
+c,,,polymer_tm,,,,,,,,,,OOD specificity,0.0
+c,,,polymer_tm,,,,,,,,,,adjusted inference,0.0
+c,,,polymer_tm,,,,,,,,,,no overlap,1.0
+c,,,electrolyte_conductivity,,,,,,,,,,utility,0.0
+c,,,electrolyte_conductivity,,,,,,,,,,robustness,0.0
+c,,,electrolyte_conductivity,,,,,,,,,,OOD specificity,0.0
+c,,,electrolyte_conductivity,,,,,,,,,,adjusted inference,0.0
+c,,,electrolyte_conductivity,,,,,,,,,,no overlap,1.0
+c,,,solubility,,,,,,,,,,utility,0.0
+c,,,solubility,,,,,,,,,,robustness,0.0
+c,,,solubility,,,,,,,,,,OOD specificity,0.0
+c,,,solubility,,,,,,,,,,adjusted inference,1.0
+c,,,solubility,,,,,,,,,,no overlap,1.0
+c,,,hydration,,,,,,,,,,utility,0.0
+c,,,hydration,,,,,,,,,,robustness,0.0
+c,,,hydration,,,,,,,,,,OOD specificity,0.0
+c,,,hydration,,,,,,,,,,adjusted inference,0.0
+c,,,hydration,,,,,,,,,,no overlap,1.0

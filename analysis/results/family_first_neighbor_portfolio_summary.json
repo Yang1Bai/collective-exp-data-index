@@ -1,0 +1,340 @@
+{
+  "status": "outcome-informed-method-development-complete",
+  "design_sha256": "7e1a3e7d7b3d246fb3b049190c319ffe9e0781af1fef8678191f3f74e9241b48",
+  "claim_guard": "This audit was motivated by observed Caltech outcomes and by the failure of multiplicative local OOD gates. It may establish a transparent method-development mechanism and conditional robustness on this target, but it cannot serve as independent confirmation or prospective discovery.",
+  "candidate_pools": {
+    "external_candidate": 144,
+    "hard_ood_40pct": 58
+  },
+  "provenance_groups": {
+    "external_candidate": 63,
+    "hard_ood_40pct": 36
+  },
+  "source_quality": [
+    {
+      "source": "obelix_same_property",
+      "entities": 181,
+      "groups": 54,
+      "oof_r2": 0.067538339,
+      "oof_rmse": 1.9839890951,
+      "oof_spearman": 0.4858252032
+    },
+    {
+      "source": "estm_transport_neighbor",
+      "entities": 870,
+      "groups": 159,
+      "oof_r2": 0.2570410401,
+      "oof_rmse": 0.2414105839,
+      "oof_spearman": 0.5169407826
+    },
+    {
+      "source": "borg_mechanical_control",
+      "entities": 395,
+      "groups": 90,
+      "oof_r2": 0.1618021823,
+      "oof_rmse": 0.2626240391,
+      "oof_spearman": 0.4134716298
+    },
+    {
+      "source": "ocx_catalysis_control",
+      "entities": 212,
+      "groups": 212,
+      "oof_r2": 0.5427450288,
+      "oof_rmse": 14.1816844394,
+      "oof_spearman": 0.7377498094
+    }
+  ],
+  "primary_metrics": [
+    {
+      "scope": "external_candidate",
+      "policy": "uniform_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 10,
+      "hit_count20": 1,
+      "total_top_units": 4,
+      "recall20": 0.25,
+      "first_hit": 11,
+      "hit_positions": "11"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "composition_novelty_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 0,
+      "hit_count20": 0,
+      "total_top_units": 4,
+      "recall20": 0.0,
+      "first_hit": 21,
+      "hit_positions": ""
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "obelix_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 42,
+      "hit_count20": 3,
+      "total_top_units": 4,
+      "recall20": 0.75,
+      "first_hit": 1,
+      "hit_positions": "1;5;15"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "estm_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 49,
+      "hit_count20": 4,
+      "total_top_units": 4,
+      "recall20": 1.0,
+      "first_hit": 1,
+      "hit_positions": "1;7;11;16"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "neighbor_entity_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 47,
+      "hit_count20": 3,
+      "total_top_units": 4,
+      "recall20": 0.75,
+      "first_hit": 3,
+      "hit_positions": "3;4;9"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "neighbor_family_first_round_robin",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 59,
+      "hit_count20": 4,
+      "total_top_units": 4,
+      "recall20": 1.0,
+      "first_hit": 1,
+      "hit_positions": "1;2;6;16"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "neighbor_family_first_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 60,
+      "hit_count20": 4,
+      "total_top_units": 4,
+      "recall20": 1.0,
+      "first_hit": 3,
+      "hit_positions": "3;4;5;12"
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "wrong_source_family_first_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 6,
+      "hit_count20": 1,
+      "total_top_units": 4,
+      "recall20": 0.25,
+      "first_hit": 15,
+      "hit_positions": "15"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "uniform_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 15,
+      "hit_count20": 1,
+      "total_top_units": 2,
+      "recall20": 0.5,
+      "first_hit": 6,
+      "hit_positions": "6"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "composition_novelty_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 23,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 4,
+      "hit_positions": "4;15"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "obelix_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 29,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 2,
+      "hit_positions": "2;11"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "estm_family_first",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 39,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 1,
+      "hit_positions": "1;2"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "neighbor_entity_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 36,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 1,
+      "hit_positions": "1;5"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "neighbor_family_first_round_robin",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 36,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 2,
+      "hit_positions": "2;4"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "neighbor_family_first_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 39,
+      "hit_count20": 2,
+      "total_top_units": 2,
+      "recall20": 1.0,
+      "first_hit": 1,
+      "hit_positions": "1;2"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "wrong_source_family_first_consensus",
+      "unit": "provenance_group",
+      "group_value_aggregation": "max",
+      "auc20": 18,
+      "hit_count20": 1,
+      "total_top_units": 2,
+      "recall20": 0.5,
+      "first_hit": 3,
+      "hit_positions": "3"
+    }
+  ],
+  "conditional_null": [
+    {
+      "scope": "external_candidate",
+      "observed_auc20": 60.0,
+      "shuffled_mean_auc20": 19.9312,
+      "shuffled_q025_auc20": 0.0,
+      "shuffled_q975_auc20": 45.0,
+      "conditional_randomization_p": 0.0019996001
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "observed_auc20": 39.0,
+      "shuffled_mean_auc20": 18.7196,
+      "shuffled_q025_auc20": 3.0,
+      "shuffled_q975_auc20": 36.0,
+      "conditional_randomization_p": 0.0029994001
+    }
+  ],
+  "candidate_outcome_permutation_invariance": true,
+  "hypothesis_cards": [
+    {
+      "card_id": "caltech-group-1",
+      "scope": "external_candidate",
+      "selected_rank": 3,
+      "group": "component-fd6acb7e688a0625",
+      "selected_formula": "Li6.22Ge0.43Sb0.57S5I",
+      "element_set": "Ge-I-Li-S-Sb",
+      "obelix_entity_rank": 31,
+      "estm_entity_rank": 6,
+      "source_attribution": "ESTM-dominant",
+      "outcome_free_basis": "Family-first rank 3; OBELiX rank 31; ESTM rank 6; no candidate outcome enters the order.",
+      "source_derived_hypothesis": "The Ge-I-Li-S-Sb formulation region is enriched for high target ionic conductivity relative to an outcome-free composition-distance- and group-size-matched region.",
+      "prospective_falsifier": "Freeze the group and matched control before target measurement; reject the proposal if its first measured representative is not superior or if the source contributes no marginal distinct-group recovery.",
+      "mechanistic_follow_up": "Measure phase identity, density/grain-boundary sensitivity, impedance spectrum, temperature-dependent conductivity, and activation energy before assigning a transport mechanism.",
+      "selected_log10_conductivity": -2.2006594505,
+      "best_group_formula": "Li6.16Si0.62Sb0.38S5.07I0.93",
+      "best_group_log10_conductivity": -1.721246399,
+      "evidence_status": "retrospective method-development card; reporting template, not predeclared new science"
+    },
+    {
+      "card_id": "caltech-group-2",
+      "scope": "external_candidate",
+      "selected_rank": 4,
+      "group": "component-72e6f457205e515c",
+      "selected_formula": "Li9.81Sn0.81P2.19S12",
+      "element_set": "Li-P-S-Sn",
+      "obelix_entity_rank": 2,
+      "estm_entity_rank": 39,
+      "source_attribution": "OBELiX-dominant",
+      "outcome_free_basis": "Family-first rank 4; OBELiX rank 2; ESTM rank 39; no candidate outcome enters the order.",
+      "source_derived_hypothesis": "The Li-P-S-Sn formulation region is enriched for high target ionic conductivity relative to an outcome-free composition-distance- and group-size-matched region.",
+      "prospective_falsifier": "Freeze the group and matched control before target measurement; reject the proposal if its first measured representative is not superior or if the source contributes no marginal distinct-group recovery.",
+      "mechanistic_follow_up": "Measure phase identity, density/grain-boundary sensitivity, impedance spectrum, temperature-dependent conductivity, and activation energy before assigning a transport mechanism.",
+      "selected_log10_conductivity": -2.2596373105,
+      "best_group_formula": "Li10.35Si1.35P1.65S12",
+      "best_group_log10_conductivity": -2.1870866434,
+      "evidence_status": "retrospective method-development card; reporting template, not predeclared new science"
+    },
+    {
+      "card_id": "caltech-group-3",
+      "scope": "external_candidate",
+      "selected_rank": 5,
+      "group": "component-314d75ed53e5e991",
+      "selected_formula": "Li9.54Si1.74P1.44S11.4Cl0.3O0.3",
+      "element_set": "Cl-Li-O-P-S-Si",
+      "obelix_entity_rank": 8,
+      "estm_entity_rank": 48,
+      "source_attribution": "OBELiX-dominant",
+      "outcome_free_basis": "Family-first rank 5; OBELiX rank 8; ESTM rank 48; no candidate outcome enters the order.",
+      "source_derived_hypothesis": "The Cl-Li-O-P-S-Si formulation region is enriched for high target ionic conductivity relative to an outcome-free composition-distance- and group-size-matched region.",
+      "prospective_falsifier": "Freeze the group and matched control before target measurement; reject the proposal if its first measured representative is not superior or if the source contributes no marginal distinct-group recovery.",
+      "mechanistic_follow_up": "Measure phase identity, density/grain-boundary sensitivity, impedance spectrum, temperature-dependent conductivity, and activation energy before assigning a transport mechanism.",
+      "selected_log10_conductivity": -1.5528419687,
+      "best_group_formula": "Li9.54Si1.74P1.44S11.4Cl0.3O0.3",
+      "best_group_log10_conductivity": -1.5528419687,
+      "evidence_status": "retrospective method-development card; reporting template, not predeclared new science"
+    },
+    {
+      "card_id": "caltech-group-4",
+      "scope": "external_candidate",
+      "selected_rank": 12,
+      "group": "component-864a0973e33a172f",
+      "selected_formula": "Li5.82PS4.7ClBr",
+      "element_set": "Br-Cl-Li-P-S",
+      "obelix_entity_rank": 57,
+      "estm_entity_rank": 22,
+      "source_attribution": "ESTM-dominant",
+      "outcome_free_basis": "Family-first rank 12; OBELiX rank 57; ESTM rank 22; no candidate outcome enters the order.",
+      "source_derived_hypothesis": "The Br-Cl-Li-P-S formulation region is enriched for high target ionic conductivity relative to an outcome-free composition-distance- and group-size-matched region.",
+      "prospective_falsifier": "Freeze the group and matched control before target measurement; reject the proposal if its first measured representative is not superior or if the source contributes no marginal distinct-group recovery.",
+      "mechanistic_follow_up": "Measure phase identity, density/grain-boundary sensitivity, impedance spectrum, temperature-dependent conductivity, and activation energy before assigning a transport mechanism.",
+      "selected_log10_conductivity": -2.2992962829,
+      "best_group_formula": "Li5.52PS4.3ClBr0.7",
+      "best_group_log10_conductivity": -1.6197887583,
+      "evidence_status": "retrospective method-development card; reporting template, not predeclared new science"
+    }
+  ],
+  "tradeoff": "Family-first allocation optimizes breadth across distinct groups and can reduce repeated entity-level top-hit recovery within one group.",
+  "future_test": "The CCA family-first rule, source admission criteria, group construction, endpoints, and source-specific hypothesis cards must be frozen before outcomes on the next target are revealed."
+}

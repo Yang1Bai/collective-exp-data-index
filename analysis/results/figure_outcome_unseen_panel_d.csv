@@ -1,0 +1,7 @@
+target,card_id,effect,holm_p
+Starrydata,H1_obelix_ionic_region,0.0870925562272727,0.4454554544545545
+Starrydata,H2_caltech_ionic_region,-0.084221825171875,1.0
+Starrydata,H3_neighbor_consensus_region,-0.0072018343749999,1.0
+TRI OER,T1_same_oer_reference,-0.0037872848837209,1.0
+TRI OER,T2_adjacent_oxygen_electrocatalysis,-0.0062357616279069,1.0
+TRI OER,T3_electrocatalysis_consensus,-0.0073733953488372,1.0

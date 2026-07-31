@@ -1,0 +1,145 @@
+{
+  "audit_sha256": "bacfbf08dffec438cb347f3cfb2b11db2cd770216619b89e7b6f30e0aa6e77a2",
+  "checkpoint_sha256": {
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_seed2026072601.pt": "96be99eb740d8df4e5652f8cfd10c1c5ed772bdac220d0d6ba7bbe1598108124",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_seed2026072602.pt": "430bf8408046bac4540e122289ab56b31660b363be485ab2068e1c571cfed54e",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_seed2026072603.pt": "88af3ed772a20be164118847e764dcadf5f12e857061f586070fcd2a0e1b7f49",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_seed2026072604.pt": "af4ca3b39fc14cf4ec5202ce782dca57c1dcfc9d93a62fd497ed0dfeb01cbf6a",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_seed2026072605.pt": "318e85ccfdd663ba558e2d9934984b4a92ba5f9ea718c1d143ee5a36857211f6",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_shuffled_seed2026072691.pt": "d09633a18fba6d0be4c9fd611b58c46294529f90eac9fbcc882549aae6992217",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_shuffled_seed2026072692.pt": "64b5a66ccc9967ca8d17a07ae43d48c73ef1633aa966871d71c3c4a3ac7a6457",
+    "analysis/results/optical_supervised_source_checkpoints/self_host_solid_shuffled_seed2026072693.pt": "c421111cdf4274d9a5e8a9b5ebea33b6950c05ad177a08a7898a35a37e15b4c9",
+    "analysis/results/opv_optical_source_checkpoints/opv_global_state_blind_seed2026072601.pt": "2478d383051a178fad5174dac5c0d15aa7938b21584578bc0ae5bb061c053749",
+    "analysis/results/opv_optical_source_checkpoints/opv_global_state_blind_seed2026072602.pt": "d1fe5ed605c93bbf28d0a404b4f3688c0cce083e02c3ccec3bdec993f094eb58",
+    "analysis/results/opv_optical_source_checkpoints/opv_global_state_blind_seed2026072603.pt": "30a448ff78ed7935d24090e3f3e2ef5db68377fd9f343ec60bc39e72e244496d",
+    "analysis/results/opv_optical_source_checkpoints/opv_global_state_blind_seed2026072604.pt": "4f9a187b222acb8e17b2eccf1988e2f490b9fc8c9ea3308be72c2091a20f106e",
+    "analysis/results/opv_optical_source_checkpoints/opv_global_state_blind_seed2026072605.pt": "e0895e568f72fed4db2cfe13c4598d1dbc894b7f22a4000955405716c170e7cc"
+  },
+  "created_utc": "2026-07-27T03:03:07.042959+00:00",
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "environment": {
+    "chemprop": "2.1.2",
+    "pandas": "2.3.3",
+    "python": "3.11.5 (main, Dec 15 2023, 11:39:50) [GCC 11.4.0]",
+    "torch": "2.1.2+cu121"
+  },
+  "feature_columns": [
+    "solid_real__absorption_nm__mean",
+    "solid_real__absorption_nm__std",
+    "solid_real__emission_nm__mean",
+    "solid_real__emission_nm__std",
+    "solid_real__quantum_yield__mean",
+    "solid_real__quantum_yield__std",
+    "solid_shuffled__absorption_nm__mean",
+    "solid_shuffled__absorption_nm__std",
+    "solid_shuffled__emission_nm__mean",
+    "solid_shuffled__emission_nm__std",
+    "solid_shuffled__quantum_yield__mean",
+    "solid_shuffled__quantum_yield__std",
+    "global_state_blind__absorption_nm__mean",
+    "global_state_blind__absorption_nm__std",
+    "global_state_blind__emission_nm__mean",
+    "global_state_blind__emission_nm__std",
+    "global_state_blind__quantum_yield__mean",
+    "global_state_blind__quantum_yield__std"
+  ],
+  "feature_sha256": "082a81a262a5c11166dc35312aa211fa4c68b5aba543b63abde13331c9bd0ba1",
+  "global_mode": "strict-target-and-doi-excluded-retrain",
+  "global_oof_sha256": "124bcdbaf40f98bc9ed1e1e7adc37db8d45399858d55a3b57c57c889213ca0a3",
+  "global_source_summary": {
+    "admitted_task_count": 5,
+    "best_epochs_by_fold": [
+      127,
+      202,
+      74,
+      55,
+      119
+    ],
+    "best_validation_losses_by_fold": [
+      0.38412025570869446,
+      0.29681825637817383,
+      0.3607806861400604,
+      0.3474796712398529,
+      0.3948231339454651
+    ],
+    "final_epoch": 119,
+    "final_training_tasks": [
+      "Absorption max (nm)",
+      "Emission max (nm)",
+      "Lifetime (ns)",
+      "Quantum yield",
+      "log(e/mol-1 dm3 cm-1)"
+    ],
+    "rows": 6811,
+    "tasks": {
+      "Absorption max (nm)": {
+        "admitted": true,
+        "oof_r2": 0.8644042015075684,
+        "oof_spearman": 0.8876404773536568,
+        "scaffold_bootstrap_spearman_ci95": [
+          0.8703219274906665,
+          0.8883479616585611,
+          0.9032363693060195
+        ],
+        "unique_molecules": 6423
+      },
+      "Emission max (nm)": {
+        "admitted": true,
+        "oof_r2": 0.8080661296844482,
+        "oof_spearman": 0.8792230174102208,
+        "scaffold_bootstrap_spearman_ci95": [
+          0.8634970358805512,
+          0.8790280803210759,
+          0.8930834717687672
+        ],
+        "unique_molecules": 6410
+      },
+      "Lifetime (ns)": {
+        "admitted": true,
+        "oof_r2": 0.44988512992858887,
+        "oof_spearman": 0.6668985245649827,
+        "scaffold_bootstrap_spearman_ci95": [
+          0.6199528170574642,
+          0.6649397773358605,
+          0.71072494710698
+        ],
+        "unique_molecules": 2752
+      },
+      "Quantum yield": {
+        "admitted": true,
+        "oof_r2": 0.344016432762146,
+        "oof_spearman": 0.6150940480703833,
+        "scaffold_bootstrap_spearman_ci95": [
+          0.5894097579991691,
+          0.6156361861732065,
+          0.6405796291610006
+        ],
+        "unique_molecules": 5611
+      },
+      "log(e/mol-1 dm3 cm-1)": {
+        "admitted": true,
+        "oof_r2": 0.5792316198348999,
+        "oof_spearman": 0.7738578327666318,
+        "scaffold_bootstrap_spearman_ci95": [
+          0.7426242272483229,
+          0.7741730083287554,
+          0.7993105803390869
+        ],
+        "unique_molecules": 3847
+      }
+    },
+    "unique_scaffolds": 3565
+  },
+  "implementation_sha256": "eea77200ab85a5449c310397913a022baad13339b027cf579c6e42c73c5e83cb",
+  "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3",
+  "outcome_access": "No OPV PCE, Voc, Jsc, FF or target energy annotation was read.",
+  "shared_tasks": [
+    "Absorption max (nm)",
+    "Emission max (nm)",
+    "Quantum yield"
+  ],
+  "solid_checkpoint_provenance": "Previously verified solid-state real and shuffled ensembles; the OPV metadata audit proves zero exact target-molecule and zero target-DOI overlap in that source scope.",
+  "source_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+  "status": "strict-source-features-ready",
+  "target_unique_molecules": 3346
+}

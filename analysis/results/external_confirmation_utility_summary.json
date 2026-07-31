@@ -1,0 +1,29 @@
+{
+  "analysis_status": "post-confirmation-absolute-utility-audit",
+  "rolling_time_composition_only": {
+    "relative_rmse_improvement": 0.0430379917675469,
+    "pooled_base_r2": -1.516367778413629,
+    "pooled_augmented_r2": -1.3032640625785956
+  },
+  "rolling_time_process_aware": {
+    "relative_rmse_improvement": 0.05234145710749956,
+    "relative_rmse_ci": [
+      0.037429879246446175,
+      0.07033669746505826
+    ],
+    "pooled_base_r2": -1.2158578023551407,
+    "pooled_augmented_r2": -0.9923390066466895,
+    "features": "element-composition-plus-pretest-process"
+  },
+  "same_campaign_interpolation_n30": {
+    "base_r2_mean": 0.3513666246642866,
+    "augmented_r2_mean": 0.37735097003744883,
+    "relative_rmse_improvement_mean": 0.02051574899775635,
+    "repeat_quantile_95": [
+      -0.04420844866303836,
+      0.07539584346505172
+    ]
+  },
+  "rescue_claim_supported": false,
+  "decision": "Borrowing reduces rolling-time error and survives conditioning on available pre-test process variables, but rolling-time R2 remains negative. Same-campaign interpolation has positive absolute R2, yet its repeat-level effect interval crosses zero. The evidence supports selective error reduction, not practical rescue of the external target."
+}

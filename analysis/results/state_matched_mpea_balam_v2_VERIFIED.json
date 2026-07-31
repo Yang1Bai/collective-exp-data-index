@@ -1,0 +1,37 @@
+{
+  "status": "verified-complete",
+  "verified_utc": "2026-07-24T00:45:21.248566+00:00",
+  "design_sha256": "a250f52f2653f90d000bd70cf6913adaf0b38106c21d1ef5e03969140baae6b4",
+  "metrics_sha256": "50d91813e334684b68a50ba4389bf52235b9b7b6a4bd717e337711a2d9da2cbc",
+  "predictions_sha256": "2edf0b87e552f668338ff71e49e1048515dd13cd9b7850dff573253c283e410c",
+  "summary_sha256": "cc24de2a02439dd7273f0890361270f2a4a268f83a494101d9942183779e45a3",
+  "bootstrap_sha256": "a35d9f7644b93bc60a47ce19e34ab25dfcf4a5f1b6ad81c99a9b768aa3f83985",
+  "bootstrap_summary_sha256": "a22b28b52c9da24221577afc31ec276b2ac5f7862b93a5e3edee2ef24ed49b44",
+  "primary_runs_per_scope": 60,
+  "prediction_rows": 25680,
+  "evaluation_groups": 59,
+  "descriptive_gate": {
+    "checks": {
+      "mean_q4_gain": true,
+      "positive_q4_runs": true,
+      "positive_q4_r2": true,
+      "ood_specificity": true,
+      "beats_shuffled": true
+    },
+    "pass": true,
+    "decision": "eligible-for-frozen-balam-confirmation"
+  },
+  "primary_bootstrap_gate": {
+    "checks": {
+      "q4_gain_threshold": true,
+      "q4_gain_interval_positive": true,
+      "positive_q4_run_count": true,
+      "q4_augmented_r2_positive": true,
+      "ood_specificity_point_positive": true,
+      "beats_shuffled_interval_positive": true
+    },
+    "pass": true,
+    "decision": "stable-on-this-program"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection and v1 verification exposed the control-architecture mismatch, this is a post-selection robustness and control-correction run, not an independent confirmation. V2 can validate source specificity on this programme but cannot establish prospective discovery or a universal transfer law."
+}

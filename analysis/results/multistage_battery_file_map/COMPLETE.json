@@ -1,0 +1,45 @@
+{
+  "status": "verified-complete-metadata-only-map",
+  "created_utc": "2026-07-20T20:23:49.337452+00:00",
+  "article_id": 25975315,
+  "article_api_sha256": "da89d331ab3e83093c6c97a94ba3e02ea630d9579c3800ed45feae73b4cac408",
+  "experiments_meta_sha256": "3a0dcf34dd881be49ad06b40257ce2288a2601c3e62b1a27bb30f456b9931fc4",
+  "archives_expected": 279,
+  "archives_mapped": 279,
+  "unique_internal_serials": 261,
+  "unique_internal_serial_serial_pairs": 279,
+  "stage_counts": {
+    "1": 141,
+    "2": 138
+  },
+  "mapping_method_counts": {
+    "exact-archive-serial-plus-internal-serial": 230,
+    "archive-serial-plus-complement-of-exactly-mapped-twin-stage": 43,
+    "archive-serial-plus-validated-lab-date-envelope": 6
+  },
+  "metadata_conflict_counts": {
+    "testpoint_metadata_conflict": 3,
+    "archive_internal_serial_conflicts_with_experiments_meta": 49,
+    "validated_lab_date_envelope_required_after_both_twin_internal_serials_conflicted": 6,
+    "testpoint_format_variant": 44
+  },
+  "validated_lab_date_envelopes": {
+    "INT": {
+      "1": {
+        "n": 42,
+        "min": "2021-09-30",
+        "max": "2021-10-12"
+      },
+      "2": {
+        "n": 45,
+        "min": "2023-01-19",
+        "max": "2023-02-17"
+      }
+    }
+  },
+  "numeric_csv_entries_opened": false,
+  "mapper_sha256": "9283084cdceeb6dadef01e05125a74594d2e7cb701383826a938569a4fbcc2e0",
+  "preoutcome_freeze_sha256": "a88777a35fbae5ff4de31c3414d64764d47d6e3b99d05fd242cc48bbb1c8e935",
+  "map_csv_sha256": "56b532a14295bd1bfbcb374e445a619e69c1fb7cfaed21d36506b16dc0e490b5",
+  "validation_errors": []
+}

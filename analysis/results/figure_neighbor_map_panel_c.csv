@@ -1,0 +1,7 @@
+scope,scope_label,family,policy_label,color,mean_auc20_gain,ci_lo,ci_hi,holm_p,passes_all_frozen_gates
+external_candidate,external,same_property_increment,OBELiX residual,#238B82,-0.06,-0.3,0.12,1.0,False
+external_candidate,external,adjacent_transport_increment,ESTM residual,#4C78A8,-0.06,-0.23,0.07,1.0,False
+external_candidate,external,safe_multisource_increment,multisource residual,#7562A8,-0.09,-0.3402499999999999,0.09,1.0,False
+hard_ood_40pct,hard OOD,same_property_increment,OBELiX residual,#238B82,1.1,-0.3802499999999999,2.5904999999999925,0.588,False
+hard_ood_40pct,hard OOD,adjacent_transport_increment,ESTM residual,#4C78A8,-0.07,-1.11,0.9102499999999965,1.0,False
+hard_ood_40pct,hard OOD,safe_multisource_increment,multisource residual,#7562A8,1.27,-0.75,3.22,0.657,False

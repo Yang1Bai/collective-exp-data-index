@@ -1,0 +1,202 @@
+{
+  "all_recipient_dois_excluded_from_source": true,
+  "candidate_pass": {
+    "calibrated_hse": false,
+    "experimental_text_mined": false,
+    "retrieval_routed_fusion": true,
+    "support_weighted_fusion": false
+  },
+  "claim_guard": "This validates only donor skill for recipient-reported band gap. It is not evidence that donor knowledge improves photovoltaic OOD prediction.",
+  "created_utc": "2026-07-29T05:43:49.953169+00:00",
+  "donor_feature_rows": 1832,
+  "donor_features_sha256": "938dc0a64068aae80eb639f6247d08c69a8deb840bff1e7e6c9a60b8f7cf6a1a",
+  "donor_median_baseline_eV": 2.215,
+  "exact_recipient_compositions_excluded_from_source": true,
+  "gates": {
+    "calibrated_hse": {
+      "holm_adjusted_shuffled_p_at_most_0_05": false,
+      "positive_absolute_r2": false,
+      "relative_rmse_gain_at_least_5_percent": false,
+      "spearman_at_least_0_20": false,
+      "validation_compositions_at_least_100": true
+    },
+    "experimental_text_mined": {
+      "holm_adjusted_shuffled_p_at_most_0_05": true,
+      "positive_absolute_r2": false,
+      "relative_rmse_gain_at_least_5_percent": true,
+      "spearman_at_least_0_20": true,
+      "validation_compositions_at_least_100": true
+    },
+    "retrieval_routed_fusion": {
+      "holm_adjusted_shuffled_p_at_most_0_05": true,
+      "positive_absolute_r2": true,
+      "relative_rmse_gain_at_least_5_percent": true,
+      "spearman_at_least_0_20": true,
+      "validation_compositions_at_least_100": true
+    },
+    "support_weighted_fusion": {
+      "holm_adjusted_shuffled_p_at_most_0_05": true,
+      "positive_absolute_r2": false,
+      "relative_rmse_gain_at_least_5_percent": true,
+      "spearman_at_least_0_20": true,
+      "validation_compositions_at_least_100": true
+    }
+  },
+  "next_action": "Freeze and run the photovoltaic OOD borrowing benchmark.",
+  "predictions_sha256": "2bc7753779bff3659db84a8c874c7dfb00ea876357a7949a7904e2e2890a7380",
+  "real": {
+    "calibrated_hse": {
+      "donor_median_baseline_rmse": 0.5709944043124218,
+      "mae": 0.8924074252270615,
+      "n": 205,
+      "r2": -7.283962970015315,
+      "relative_rmse_gain_over_donor_median": -0.674688634780701,
+      "rmse": 0.9562378394253892,
+      "spearman_p": 0.07668537848182291,
+      "spearman_r": 0.12392041714528622
+    },
+    "experimental_text_mined": {
+      "donor_median_baseline_rmse": 0.5709944043124218,
+      "mae": 0.2399482981562038,
+      "n": 205,
+      "r2": -0.014983373418677282,
+      "relative_rmse_gain_over_donor_median": 0.41380182423162326,
+      "rmse": 0.3347158781818926,
+      "spearman_p": 0.0004926145139701393,
+      "spearman_r": 0.24125500804918362
+    },
+    "retrieval_routed_fusion": {
+      "donor_median_baseline_rmse": 0.5709944043124218,
+      "mae": 0.22544456234331378,
+      "n": 205,
+      "r2": 0.05882793256973029,
+      "relative_rmse_gain_over_donor_median": 0.43551875978220794,
+      "rmse": 0.32231562950369524,
+      "spearman_p": 1.3509090263796233e-05,
+      "spearman_r": 0.29879040816372904
+    },
+    "support_weighted_fusion": {
+      "donor_median_baseline_rmse": 0.5709944043124218,
+      "mae": 0.2424640761778124,
+      "n": 205,
+      "r2": -0.04478266697429034,
+      "relative_rmse_gain_over_donor_median": 0.405258863979686,
+      "rmse": 0.3395938606820122,
+      "spearman_p": 0.000423855297549511,
+      "spearman_r": 0.24394243206664415
+    }
+  },
+  "recipient_band_gap_basis_counts": {
+    "Absorption": 667,
+    "Absorption Tauc-plot": 204,
+    "Absorption Tauc-plot | UPS": 4,
+    "Composition": 21922,
+    "EQE": 341,
+    "Literature": 196,
+    "UPS": 10,
+    "Unspecified": 8620,
+    "absorption": 4
+  },
+  "recipient_direct_validation_compositions": 205,
+  "recipient_direct_validation_compositions_all": 205,
+  "recipient_direct_validation_compositions_hse_contract_eligible": 16,
+  "recipient_direct_validation_compositions_with_seen_element_system": 15,
+  "recipient_reported_validation_compositions_all": 983,
+  "secondary_all_reported_bandgaps": {
+    "calibrated_hse": {
+      "donor_median_baseline_rmse": 0.603578938790086,
+      "mae": 0.9540900191094707,
+      "n": 983,
+      "r2": -10.686132834933053,
+      "relative_rmse_gain_over_donor_median": -0.6783012496081081,
+      "rmse": 1.012987287208537,
+      "spearman_p": 5.117005813759828e-07,
+      "spearman_r": 0.15935109045169216
+    },
+    "experimental_text_mined": {
+      "donor_median_baseline_rmse": 0.603578938790086,
+      "mae": 0.2501313444355707,
+      "n": 983,
+      "r2": -0.26845279046528314,
+      "relative_rmse_gain_over_donor_median": 0.4470680789067624,
+      "rmse": 0.3337380621566199,
+      "spearman_p": 1.078249898756658e-15,
+      "spearman_r": 0.251907509531713
+    },
+    "retrieval_routed_fusion": {
+      "donor_median_baseline_rmse": 0.603578938790086,
+      "mae": 0.24616318461115297,
+      "n": 983,
+      "r2": -0.2324147641131462,
+      "relative_rmse_gain_over_donor_median": 0.45497935310370347,
+      "rmse": 0.3289629836723528,
+      "spearman_p": 2.459450393698871e-19,
+      "spearman_r": 0.28130257693100025
+    },
+    "support_weighted_fusion": {
+      "donor_median_baseline_rmse": 0.603578938790086,
+      "mae": 0.2525017690433695,
+      "n": 983,
+      "r2": -0.28142604055501486,
+      "relative_rmse_gain_over_donor_median": 0.4442476839167337,
+      "rmse": 0.3354403931716703,
+      "spearman_p": 5.1715705730123386e-18,
+      "spearman_r": 0.2710415469881242
+    }
+  },
+  "shuffled_controls": {
+    "calibrated_hse": {
+      "empirical_one_sided_p": 0.9,
+      "holm_adjusted_p": 0.9,
+      "n": 99,
+      "rmse_median": 0.7726339244881923,
+      "rmse_q05": 0.5759383457610262
+    },
+    "experimental_text_mined": {
+      "empirical_one_sided_p": 0.01,
+      "holm_adjusted_p": 0.04,
+      "n": 99,
+      "rmse_median": 0.7052826157310413,
+      "rmse_q05": 0.3966178656883807
+    },
+    "retrieval_routed_fusion": {
+      "empirical_one_sided_p": 0.01,
+      "holm_adjusted_p": 0.04,
+      "n": 99,
+      "rmse_median": 0.7336528008929956,
+      "rmse_q05": 0.5147282473230932
+    },
+    "support_weighted_fusion": {
+      "empirical_one_sided_p": 0.01,
+      "holm_adjusted_p": 0.04,
+      "n": 99,
+      "rmse_median": 0.6906454776957911,
+      "rmse_q05": 0.3976465056666418
+    }
+  },
+  "shuffled_controls_sha256": "8945252dd5233761027d5a319b47117b0b7d9f3e58956731df45b0b6733de944",
+  "sources": {
+    "experimental": {
+      "cards_all": 4160,
+      "cards_primary_replicated": 986
+    },
+    "experimental_hse_calibration_overlap": 388,
+    "hse": {
+      "cards_after_exact_recipient_exclusion": 8337,
+      "cards_all": 8398,
+      "raw_structures": 9940,
+      "zip_sha256": "6c630f40c6c8afcfa433e69591be04ed95dd128f22e9dfe11bbd7161bcd74c78"
+    },
+    "hse_calibration": {
+      "intercept": 0.5254142923165797,
+      "slope": 0.7273378466854016
+    },
+    "retrieval_route": {
+      "combined_cards": 1073,
+      "experimental_cards": 1020,
+      "hybrid3_cards": 63,
+      "primary_validation_compositions_with_lookup": 12
+    }
+  },
+  "status": "source-skill-gate-passed"
+}

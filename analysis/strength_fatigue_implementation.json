@@ -1,0 +1,28 @@
+{
+  "status": "frozen-before-formal-model-fit",
+  "created_utc": "2026-07-29T15:31:00Z",
+  "design_sha256": "e26d74d1955e6deab26ba91d235fd0d48c7e3bdb55753677d02331977ffabf6f",
+  "preoutcome_audit_sha256": "6f631072667a3d1854fcd47edd8ec289d4e3709d6125a0796180e56d82e68c63",
+  "preoutcome_verification_sha256": "02ae9106360227e90a54d47a50f752fa55cedc4067be06dca5f744c7aebf02bd",
+  "formal_release_manifest_sha256": "be20c29df6b91520f3c020f70bdc6e8ecca4bdb7687fb0c50e4526b98be4baba",
+  "code_sha256": {
+    "analysis/run_strength_to_fatigue_ood.py": "92d591e3d26b2c42752fea47b34a17a36d4b8951fe15676f88d967ab4035b71f",
+    "analysis/verify_strength_to_fatigue_results.py": "0aa750729ce53472f0fd4d5718f5805e3b92f8d35b1d153ef7ed6b70879efd3f",
+    "analysis/common.py": "3733e8feed2289089794ff48a4543f4e52e2e69b6160fc8f20d48773885d4abe"
+  },
+  "formal_execution": {
+    "target_rows_released": 503,
+    "target_curves_released": 62,
+    "target_outcomes_used_for_method_selection": false,
+    "source_card_policy": "Borg UTS with independent BIRDSHOT disagreement gate",
+    "primary_target_budget_curves": 20,
+    "repeats": 50,
+    "target_learners": [
+      "extra_trees",
+      "random_forest"
+    ],
+    "tree_estimators": 480,
+    "bootstrap_replicates": 100000
+  },
+  "claim_guard": "A passing result establishes one retrospective, outcome-unseen, cross-database mechanical borrowing edge. It does not establish prospective alloy discovery, universal fatigue transfer, or a general law relating monotonic strength to fatigue."
+}

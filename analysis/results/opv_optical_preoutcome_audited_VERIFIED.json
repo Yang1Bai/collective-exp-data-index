@@ -1,0 +1,21 @@
+{
+  "archive_verified_members": null,
+  "counts": {
+    "draw_rows": 84000,
+    "external_dois": 1044,
+    "external_rows": 4012,
+    "metadata_rows": 21720,
+    "source_qualified_external_rows": 2594
+  },
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "draw_sha256": "c4e754192f88f9e5d475f17b55a2a0a55aaca45d32ee3d364b5413d2d090ea72",
+  "freeze_sha256": "fe3557f79013b043dc7c975f8990dbc9e421fd180284503578890a67275029c9",
+  "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3",
+  "outcome_access": "No OPV PCE, Voc, Jsc, FF or target energy value was read.",
+  "preflight_sha256": "f12272c72496c52773d7e5f00b15e3db182ebec11cafe7bf04d2159f05bb90d0",
+  "source_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+  "stage": "audited",
+  "status": "verified-complete-preoutcome",
+  "target_archive_sha256": "3a8199aa3e9e78e20bbb486240972aa361d8ea69fa69d27ce42de45c3ada0095",
+  "verified_utc": "2026-07-27T00:51:58.905515+00:00"
+}

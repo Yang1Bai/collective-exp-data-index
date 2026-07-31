@@ -1,0 +1,3 @@
+contrast,programme_clusters,mean_utility_difference,bootstrap_ci_lo,bootstrap_ci_hi,sign_flip_p_raw_one_sided,holm_p
+cca_meta_minus_always_best_credibility,13,0.014179712437265794,-0.0022751067912999984,0.04075530659847992,0.135009765625,0.27001953125
+cca_meta_minus_never_borrow,13,0.01581821833053184,-0.0022814945217545495,0.04294665725449851,0.162109375,0.27001953125

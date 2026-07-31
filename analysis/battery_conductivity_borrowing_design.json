@@ -1,0 +1,172 @@
+{
+  "program": "Outcome-frozen conductivity-to-battery OOD knowledge borrowing",
+  "version": 1,
+  "frozen_utc": "2026-07-27T00:00:00-04:00",
+  "status": "Frozen before opening the Battery Materials Property Database v2.0 archive payload.",
+  "purpose": "Test whether experimental conductivity knowledge improves sparse-label prediction of rate-conditioned battery capacity in publication- and chemistry-OOD regions.",
+  "scientific_hypothesis": "A conductivity model trained on independent experimental reports supplies a transport descriptor that is missing from sparse capacity labels. Benefit should concentrate in rate-conditioned, conductivity-supported chemical OOD regions and should disappear after source-label shuffling.",
+  "claim_guard": "A positive result establishes one retrospective, rate-conditioned conductivity-to-capacity borrowing edge in a literature-mined experimental battery corpus. It does not establish universal battery transfer, prospective discovery, or improvement in cycle life.",
+  "dataset": {
+    "name": "Battery Materials Property Database v2.0",
+    "article_id": 18154715,
+    "doi": "10.6084/m9.figshare.18154715.v1",
+    "file_id": 34496339,
+    "file_name": "battery-v2.zip",
+    "download_url": "https://ndownloader.figshare.com/files/34496339",
+    "expected_bytes": 97765422,
+    "expected_md5": "c7411b5da52afddef98ef868fba25e0d",
+    "license": "MIT",
+    "local_archive": "data/external/battery_conductivity_borrowing/battery-v2.zip"
+  },
+  "roles": {
+    "donor_property": "conductivity",
+    "primary_recipient_property": "capacity",
+    "secondary_recipient_property": "coulombic efficiency",
+    "wrong_property_controls": [
+      "voltage",
+      "energy"
+    ]
+  },
+  "primary_endpoint": {
+    "description": "Gravimetric capacity with an explicit current-rate condition and an explicit or bounded early-cycle condition.",
+    "preferred_unit_family": "mAh g-1",
+    "allowed_rate_condition": "dimensionless C-rate or a source-normalized equivalent explicitly represented in the released schema",
+    "early_cycle_definition": "cycle number at most 10; an explicitly identified initial or first-cycle record is equivalent",
+    "temperature_handling": "Use explicit temperature as a state feature. Missing temperature is retained with a missingness indicator and reported as a sensitivity stratum.",
+    "forbidden_post_audit_changes": [
+      "selecting a different capacity subset because it gives a larger transfer effect",
+      "changing the primary target to cycle life or total device performance",
+      "choosing units or condition bins after inspecting capacity values"
+    ]
+  },
+  "outcome_blind_audit": {
+    "allowed": [
+      "archive and member names",
+      "file hashes and byte sizes",
+      "table and column names",
+      "property labels",
+      "material identities",
+      "units",
+      "experimental conditions",
+      "publication identifiers",
+      "row counts and missingness counts excluding numeric property values"
+    ],
+    "forbidden": [
+      "numeric property values",
+      "property-value distributions",
+      "property correlations",
+      "model fits",
+      "outcome-conditioned row selection"
+    ],
+    "minimum_donor_records": 500,
+    "minimum_donor_materials": 200,
+    "minimum_donor_publications": 50,
+    "minimum_primary_recipient_records": 300,
+    "minimum_primary_recipient_materials": 100,
+    "minimum_primary_recipient_publications": 30,
+    "minimum_condition_coverage_fraction": 0.1,
+    "maximum_exact_duplicate_fraction": 0.5,
+    "audit_output": "analysis/results/battery_conductivity_preoutcome_audit.json"
+  },
+  "split_and_ood": {
+    "external_publication_rule": "A normalized publication identifier is external when the first eight hexadecimal digits of SHA256(identifier), interpreted as an integer, are divisible by five.",
+    "development_pool": "All remaining publication groups.",
+    "label_budgets": [
+      60,
+      120,
+      240
+    ],
+    "primary_label_budget": 120,
+    "repeats": 200,
+    "sampling_unit": "one publication-material-state group",
+    "primary_scope": "the 40 percent of conductivity-supported external records with the lowest similarity to labelled recipient materials",
+    "secondary_scopes": [
+      "all conductivity-supported external records",
+      "all external records",
+      "material-exact-match excluded external records",
+      "temperature-reported external records"
+    ]
+  },
+  "source_card": {
+    "primary": "Publication-excluded conductivity ensemble mean, dispersion, source support, and missingness indicators.",
+    "strict_diagnostic": "The same card after excluding all exact recipient materials from donor training.",
+    "controls": [
+      "publication-wise shuffled conductivity labels",
+      "voltage card trained with the same pipeline",
+      "energy card trained with the same pipeline",
+      "equal-dimensional Gaussian card"
+    ]
+  },
+  "features": {
+    "material": "Elemental composition when a formula is parseable; otherwise a fixed, outcome-independent hashed character representation of the normalized material string.",
+    "state": [
+      "current rate",
+      "cycle number",
+      "temperature",
+      "normalized unit family",
+      "explicit missingness indicators"
+    ],
+    "forbidden": [
+      "numeric target property values outside model labels",
+      "article title",
+      "journal",
+      "authors",
+      "citation count"
+    ]
+  },
+  "models": {
+    "primary_learner": "ExtraTreesRegressor",
+    "secondary_learner": "RandomForestRegressor",
+    "n_estimators": 500,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "seed_pairing": "Every method uses identical recipient draws, evaluation records, and learner seeds.",
+    "methods": [
+      "recipient_only",
+      "recipient_plus_real_conductivity",
+      "recipient_plus_shuffled_conductivity",
+      "recipient_plus_voltage_control",
+      "recipient_plus_energy_control",
+      "recipient_plus_gaussian_control"
+    ]
+  },
+  "inference": {
+    "primary_contrast": "recipient_plus_real_conductivity versus recipient_only",
+    "specificity_contrasts": [
+      "real conductivity versus shuffled conductivity",
+      "real conductivity versus voltage control",
+      "real conductivity versus energy control"
+    ],
+    "metric": "relative reduction in RMSE",
+    "bootstrap_replicates": 10000,
+    "bootstrap_unit": "publication",
+    "paired_randomization": "publication-cluster sign randomization",
+    "multiplicity": "Holm correction over the four named contrasts at the primary budget and scope",
+    "success_gate": {
+      "minimum_mean_relative_rmse_gain": 0.05,
+      "publication_cluster_bootstrap_95pct_lower_gain_greater_than": 0.0,
+      "holm_p_below": 0.05,
+      "absolute_r2_greater_than": 0.0,
+      "minimum_gain_over_shuffled_source": 0.03,
+      "better_than_each_wrong_property_control": true,
+      "positive_repeat_fraction_at_least": 0.65,
+      "maximum_full_external_rmse_harm": 0.01
+    }
+  },
+  "leakage_sentinels": [
+    "The design file exists before the archive payload is opened.",
+    "Numeric property values are not read by the pre-outcome audit.",
+    "No external publication enters recipient training.",
+    "No external publication enters the donor model used for its source card.",
+    "Source-card predictions for labelled recipient records are publication-out-of-fold.",
+    "All controls share identical recipient rows and card dimensionality.",
+    "Positive, null, harmful, and abstaining outcomes are archived without replacement."
+  ],
+  "compute": {
+    "local_stage": "Download, archive verification, schema discovery, and outcome-blind eligibility audit.",
+    "balam_stage": "One checkpointed full benchmark after the audit passes.",
+    "expected_balam_runtime": "approximately one to four hours",
+    "network": "The verified public archive is packaged before compute-node execution."
+  }
+}
+

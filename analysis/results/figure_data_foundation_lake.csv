@@ -1,0 +1,14 @@
+dataset,display_name,measurements,properties,family
+estm-thermoelectric,ESTM thermoelectrics,26025,5,energy and ionic transport
+iupac-digitized-pka,IUPAC pKa,24017,170,aqueous molecular properties
+calisol-23,CALiSol-23,13301,1,aqueous molecular properties
+aqsoldb,AqSolDB,9982,1,aqueous molecular properties
+ocx24-open-catalyst-experiments-2024,OCx24 catalysis,6938,3,catalysis
+kit-electrolyte-conductivity-5035,KIT electrolyte,5035,1,energy and ionic transport
+openpoly-benchmark,OpenPoly,3985,28,polymers
+mpea-dataset-borg,Borg MPEA,2904,5,alloy mechanics
+photoswitch-dataset,Photoswitch,974,7,aqueous molecular properties
+matbench-steels,Matbench steels,927,3,alloy mechanics
+birdshot-high-entropy-alloy-campaign,BIRDSHOT,855,5,alloy mechanics
+freesolv,FreeSolv,642,1,aqueous molecular properties
+obelix-solid-electrolytes,OBELiX,599,1,energy and ionic transport

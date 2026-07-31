@@ -1,0 +1,286 @@
+{
+  "analysis_status": "post-audit synthesis; adjacency contrast was not the original ordinal primary test",
+  "edge_inventory_size": {
+    "internal_noncalibration_edges": 42,
+    "independent_birdshot_edges": 15,
+    "independent_matbench_edges": 5,
+    "within_campaign_temperature_edges_including_placebo": 5,
+    "independent_multi_article_calisol_edges_including_placebo": 5,
+    "targets_with_near_and_distant_edges": 12
+  },
+  "map_size": {
+    "internal_noncalibration_edges": 42,
+    "independent_birdshot_edges": 15,
+    "independent_matbench_edges": 5,
+    "within_campaign_temperature_edges_including_placebo": 5,
+    "independent_multi_article_calisol_edges_including_placebo": 5,
+    "targets_with_near_and_distant_edges": 12
+  },
+  "core_edge": {
+    "internal": {
+      "effect_relative_rmse": 0.0646107368522526,
+      "ci": [
+        0.0369064416232111,
+        0.1303265288563297
+      ],
+      "holm_p_999_permutations": 0.005,
+      "target_sample_fraction_saved": 0.7344716797289206,
+      "base_r2": -0.1485886115817499,
+      "augmented_r2": 0.0249130150294307,
+      "screen_status": "internally-confirmed-awaits-external-replication",
+      "interpretive_status": "internally-selected-candidate-not-externally-replicated-with-positive-utility"
+    },
+    "independent_rolling_time": {
+      "effect_relative_rmse": 0.0430379917675469,
+      "ci": [
+        0.0335808729684398,
+        0.0551085565242056
+      ],
+      "permutation_p": 0.003,
+      "year1_to_year2_effect": 0.0439368288585592,
+      "years1_2_to_year3_effect": 0.041212369969179,
+      "status": "directionally-replicated-below-practical-gate"
+    },
+    "independent_matbench": {
+      "effect_relative_rmse": -0.012317998932695246,
+      "ci": [
+        -0.15883984042093624,
+        0.024750411678667903
+      ],
+      "permutation_p": 0.794,
+      "pooled_base_r2": -15.44579854175035,
+      "pooled_augmented_r2": -16.53286243046866,
+      "rescue_claim_supported": false,
+      "status": "unresolved"
+    },
+    "within_campaign_local_rescue": {
+      "target": "electrolyte conductivity at -30 C",
+      "source": "electrolyte conductivity at -20 C",
+      "effect_relative_rmse": 0.1501882606865164,
+      "ci": [
+        0.08612303443665308,
+        0.21103013694493308
+      ],
+      "permutation_p": 0.001,
+      "pooled_base_r2": 0.7388469154309338,
+      "pooled_augmented_r2": 0.8110159488229737,
+      "target_equivalent_n": 47.88407252224965,
+      "target_sample_fraction_saved": 0.3734868731965039,
+      "target_equivalent_n_diagnostic_95": [
+        38.38118711562712,
+        59.89015142441884
+      ],
+      "target_sample_fraction_saved_diagnostic_95": [
+        0.21836706210771406,
+        0.4990829160776551
+      ],
+      "probability_fraction_saved_at_least_30pct": 0.8052,
+      "positive_learners_of_three": 3,
+      "source_feature_importance_mean": 0.7322582574304284,
+      "source_feature_rank_median": 1.0,
+      "temperature_distance_spearman_rho": -1.0,
+      "shuffled_source_effect": -0.02956270183759464,
+      "rescue_claim_supported": true,
+      "status": "within-campaign-local-neighbor-rescue-gate-passed",
+      "scope": "within-campaign local-neighbor rescue; not independent-dataset replication"
+    },
+    "independent_multi_article_local_boundary": {
+      "target": "CALiSol liquid-electrolyte conductivity at -40 C",
+      "source": "CALiSol liquid-electrolyte conductivity at -30 C",
+      "effect_relative_rmse": 0.01609237310838386,
+      "ci": [
+        -0.0213954581637092,
+        0.04210534111357568
+      ],
+      "permutation_p_fixed_subset": 0.004,
+      "pooled_base_r2": -0.04927389148754835,
+      "pooled_augmented_r2": -0.014470257543180765,
+      "target_equivalent_n": 36.11563095844004,
+      "target_sample_fraction_saved": 0.16933473945056055,
+      "positive_target_learners_of_three": 3,
+      "source_article_oof_r2": 0.1187547871527247,
+      "test_articles_seen_by_source_model": 0,
+      "exact_test_chemistries_seen_by_source_model": 0,
+      "rescue_claim_supported": false,
+      "status": "cross-article-borrowing-unresolved",
+      "scope": "independent multi-article local-condition replication within liquid-electrolyte conductivity; not cross-domain field rescue"
+    }
+  },
+  "selectivity": {
+    "internal_cochran_q": 78.6872028474544,
+    "internal_cochran_q_p": 0.000362860868473,
+    "harmful_external_edges": 8,
+    "practically_equivalent_external_edges": 2,
+    "matbench_primary_effect_relative_rmse": -0.012317998932695246,
+    "matbench_rescue_claim_supported": false,
+    "kit_distance_control_effects_relative_rmse": {
+      "0": 0.0500755801095588,
+      "30": 0.0094690150045978,
+      "60": -0.0076473701196165
+    },
+    "kit_shuffled_source_effect_relative_rmse": -0.02956270183759464,
+    "calisol_primary_effect_relative_rmse": 0.01609237310838386,
+    "calisol_article_hierarchical_ci": [
+      -0.0213954581637092,
+      0.04210534111357568
+    ],
+    "calisol_rescue_claim_supported": false,
+    "calisol_distance_control_effects_relative_rmse": {
+      "-20": 0.002848886163336,
+      "0": 0.0218147626946201,
+      "20": 0.0127347655425002
+    }
+  },
+  "absolute_utility": {
+    "composition_only_pooled_augmented_r2": -1.3032640625785956,
+    "process_aware_effect_relative_rmse": 0.05234145710749956,
+    "process_aware_ci": [
+      0.037429879246446175,
+      0.07033669746505826
+    ],
+    "process_aware_pooled_augmented_r2": -0.9923390066466895,
+    "rescue_claim_supported": false,
+    "within_campaign_local_rescue_claim_supported": true,
+    "within_campaign_target_sample_fraction_saved": 0.3734868731965039,
+    "within_campaign_target_sample_fraction_saved_diagnostic_95": [
+      0.21836706210771406,
+      0.4990829160776551
+    ],
+    "independent_multi_article_local_rescue_claim_supported": false,
+    "independent_multi_article_pooled_augmented_r2": -0.014470257543180765
+  },
+  "physical_ordering": {
+    "ordinal_spearman_rho": 0.2120701081394367,
+    "ordinal_spearman_p": 0.1132631852612589,
+    "target_level_near_minus_distant_mean": 0.024205283481670174,
+    "target_level_near_minus_distant_median": 0.007519154684166791,
+    "targets_positive_of_total": [
+      9,
+      12
+    ],
+    "wilcoxon_one_sided_p": 0.046142578125,
+    "exact_signflip_mean_p": 0.03905296558457408,
+    "leave_one_target_out_wilcoxon_p_range": [
+      0.01611328125,
+      0.08740234375
+    ],
+    "decision": "Binary direct-neighbor versus distant-control ordering is exploratory-positive, but the pre-existing 0-3 ordinal score is not statistically established and the target-level result is leave-one-target-out fragile.",
+    "kit_temperature_distance_spearman_rho": -1.0,
+    "kit_distance_ordering_scope": "Frozen within-target controls support monotonic local distance decay; this is not a universal cross-domain distance calibration.",
+    "calisol_temperature_distance_spearman_rho": 0.0,
+    "calisol_distance_ordering_scope": "Paper-disjoint CALiSol controls do not preserve monotonic temperature-distance ordering, so the KIT decay cannot be exported across experimental articles."
+  },
+  "decision_endpoints": {
+    "obelix_fixed_ood_screening": {
+      "baseline_fraction_to_first_hit": 0.12075757575757576,
+      "augmented_fraction_to_first_hit": 0.09984848484848485,
+      "effect": 0.02090909090909091,
+      "effect_95": [
+        0.009393939393939394,
+        0.034545454545454546
+      ],
+      "holm_p": 0.00030000000000000003,
+      "status": "directional-only",
+      "passes_improvement_gates": false
+    },
+    "obelix_hard_ood_screening": {
+      "baseline_fraction_to_first_hit": 0.21590909090909088,
+      "augmented_fraction_to_first_hit": 0.18106060606060606,
+      "effect": 0.034848484848484844,
+      "effect_95": [
+        0.017424242424242422,
+        0.05416666666666667
+      ],
+      "status": "exploratory-directional-only",
+      "claim_guard": "The whole-pool OOD decision extension showed directional OBELiX ranking improvement before this design was written. Therefore this hard-OOD analysis is explicitly exploratory and cannot independently confirm that edge. The subset rule, three-edge family, controls, endpoints, and gates were locked before computing any hard-OOD result."
+    },
+    "obelix_sequential_discovery": {
+      "scope": "official_test",
+      "model_family": "extra-trees-primary",
+      "strategy": "thermoelectric_prior",
+      "seeds": 100,
+      "target_only_mean_experiments": 24.34,
+      "strategy_mean_experiments": 24.09,
+      "target_only_median_experiments": 28.0,
+      "strategy_median_experiments": 26.0,
+      "mean_experiments_saved": 0.25,
+      "bootstrap_95": [
+        -1.3,
+        1.82
+      ],
+      "relative_mean_experiments_saved": 0.010271158586688579,
+      "fraction_seeds_improved": 0.28,
+      "fraction_seeds_tied": 0.49,
+      "signflip_p_one_sided": 0.3889,
+      "target_only_censor_fraction": 0.4,
+      "strategy_censor_fraction": 0.41,
+      "core_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false,
+      "improvement_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false,
+        "random_forest_sensitivity_mean_positive": true,
+        "prespecified_prior_controls_clean": true
+      },
+      "rescue_crossing": {
+        "shortlist_n": 11,
+        "target_only_median_above_shortlist": true,
+        "prior_median_within_shortlist": false
+      },
+      "passes_improvement_gates": false,
+      "passes_rescue_crossing": false,
+      "decision_status": "directional-only"
+    },
+    "obelix_sequential_random_reference": {
+      "prespecified_target_only_comparison": {
+        "scope": "official_test",
+        "model_family": "extra-trees-primary",
+        "strategy": "random_control",
+        "seeds": 100,
+        "target_only_mean_experiments": 24.34,
+        "strategy_mean_experiments": 15.5,
+        "target_only_median_experiments": 28.0,
+        "strategy_median_experiments": 13.0,
+        "mean_experiments_saved": 8.84,
+        "bootstrap_95": [
+          4.57,
+          12.90074999999999
+        ],
+        "relative_mean_experiments_saved": 0.36318816762530814,
+        "fraction_seeds_improved": 0.63,
+        "fraction_seeds_tied": 0.01,
+        "signflip_p_one_sided": 0.0001,
+        "target_only_censor_fraction": 0.4,
+        "strategy_censor_fraction": 0.08,
+        "core_gates": {
+          "p_le_0_05": true,
+          "ci_lower_above_zero": true,
+          "mean_saved_ge_5": true,
+          "relative_saved_ge_0_25": true,
+          "fraction_seed_improved_ge_0_60": true
+        },
+        "passes_core_gates": true
+      },
+      "exact_random_reference": {
+        "candidate_n": 110,
+        "true_hit_n": 6,
+        "budget": 40,
+        "exact_censored_random_mean": 15.297452026830054,
+        "empirical_random_mean": 15.5,
+        "empirical_random_median": 13.0,
+        "empirical_random_censor_fraction": 0.08
+      },
+      "claim_guard": "Random acquisition outperforming the tested UCB policies establishes policy-level failure under this retrospective pool. It does not identify whether mean ranking, uncertainty calibration, or iterative refitting is the cause, and it does not establish random search as generally optimal."
+    }
+  },
+  "claim_boundary": "Qualified neighboring domains can supply useful and complementary information when the source is leakage-audited, matched to the endpoint, and preserved independently. In KIT, an adjacent-temperature prior improves few-shot error by about 15% with positive absolute utility. In the external Caltech target, prespecified OBELiX and ESTM rankings recover 2/8 and 3/8 top-5% entities after formula and DOI exclusions, while mechanical and catalysis controls recover 0/8; an outcome-informed portfolio covers 5/8, demonstrating complementarity on the observed target. Wrong-source guards also pass. CALiSol, Matbench, OBELiX sequential UCB, and Caltech adaptive residual policies define the boundaries: adjacency alone is insufficient, and weak target surrogates or acquisition rules can erase useful source signal. Together, these results provide component-level and retrospective proof of feasibility for a selective neighborhood-borrowing strategy and instantiate an artifact-gated decision map over tested directed edges. Outcome-unseen Starrydata and TRI tests do not pass their complete prediction, policy, or hypothesis gates; their pooled effect is null and heterogeneous. The integrated portfolio therefore requires a genuinely temporal or prospective test before it can establish independent acceleration or new science."
+}

@@ -1,0 +1,181 @@
+{
+  "program": "Focused supervised optical-to-photocatalysis borrowing",
+  "version": 1,
+  "frozen_utc": "2026-07-26T04:10:00Z",
+  "status": "Post-gate focused method development; broad combinatorial screen rejected before execution; blind HER outcomes remain unopened.",
+  "purpose": "Test one mechanism-led strategy in which experimental optical source tasks shape a molecular representation that safely corrects a target-only hurdle model in scaffold-separated OOD regions.",
+  "claim_guard": "This development experiment can release at most one completely specified strategy to the still-unopened 96-molecule blind set. It cannot replace the failed direct scalar-injection gate, establish universal transfer, or prove prospective discovery.",
+  "source_scopes": {
+    "aqueous_small_alcohol": {
+      "solvent_tokens": [
+        "O",
+        "CO",
+        "CCO",
+        "CCCO",
+        "CC(C)O",
+        "CCCCO",
+        "CC(C)CO",
+        "CCC(C)O",
+        "CC(C)(C)O"
+      ],
+      "role": "solution-state expert adjacent to the methanol-water reaction medium"
+    },
+    "self_host_solid": {
+      "rule": "Solvent token exactly equals the chromophore token",
+      "role": "molecular-solid expert adjacent to the suspended photocatalyst phase"
+    },
+    "global_state_blind": {
+      "rule": "all retained source records",
+      "role": "state-alignment ablation"
+    }
+  },
+  "source_tasks": {
+    "Absorption max (nm)": "identity",
+    "Emission max (nm)": "identity",
+    "Lifetime (ns)": "log1p",
+    "Quantum yield": "identity",
+    "log(e/mol-1 dm3 cm-1)": "identity"
+  },
+  "source_task_minimum_unique_molecules": 300,
+  "source_encoder": {
+    "implementation": "Chemprop 2.1.2",
+    "architecture": "directed bond message-passing neural network with mean molecular aggregation",
+    "input": "standard Chemprop v2 atom and bond graph features",
+    "message_passing_depth": 3,
+    "hidden_dimension": 300,
+    "latent_dimension": 300,
+    "batch_normalization": true,
+    "dropout": 0.1,
+    "loss": "masked equally weighted Huber loss after source-task standardization",
+    "optimizer": "Chemprop Adam with a two-epoch Noam-like warmup and cooldown schedule",
+    "learning_rate": 0.001,
+    "batch_size": 256,
+    "maximum_epochs": 250,
+    "early_stopping_patience": 30,
+    "minimum_epochs": 30,
+    "validation_folds": 5,
+    "final_seeds": [
+      2026072601,
+      2026072602,
+      2026072603,
+      2026072604,
+      2026072605
+    ],
+    "shuffled_control_seeds": [
+      2026072691,
+      2026072692,
+      2026072693
+    ],
+    "source_skill_gate": {
+      "minimum_admitted_tasks_per_scope": 2,
+      "oof_r2_greater_than": 0.0,
+      "oof_spearman_greater_than": 0.15,
+      "scaffold_bootstrap_replicates": 1000,
+      "bootstrap_95pct_lower_spearman_greater_than": 0.0
+    }
+  },
+  "development": {
+    "reused_outcome_independent_draw_file": "analysis/results/optical_transfer_method_discovery_draws.csv",
+    "reused_draw_sha256": "1a3188cb23d8fc2fc6746cd476331650b3c4afa23adf8003b643c0189f3c8cc3",
+    "label_budgets": [
+      30,
+      60,
+      120
+    ],
+    "draws_per_budget": 300,
+    "primary_budget": 60,
+    "primary_scope": "dynamic_hard_ood_40pct",
+    "dynamic_ood_definition": "Within each scaffold-separated evaluation pool, the 40 percent with the lowest maximum Morgan Tanimoto similarity to that draw's labeled target molecules; ties are resolved by target-key SHA256.",
+    "secondary_scope": "full_scaffold_separated_evaluation"
+  },
+  "target_hurdle_model": {
+    "activity_definition": "HER greater than zero",
+    "prediction": "probability of nonzero HER multiplied by predicted log1p HER among positive training observations",
+    "classifier": "RandomForestClassifier with balanced class weights",
+    "positive_regressor": "RandomForestRegressor",
+    "n_estimators": 300,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "final_seeds_per_draw": 5,
+    "inner_oof_seeds": 1,
+    "inner_group_folds": 5,
+    "fallback": "ordinary target-only random-forest regression if a training draw has fewer than five observations in either hurdle class"
+  },
+  "target_adapter": {
+    "type": "ridge correction of target-only out-of-fold residuals",
+    "alphas": [
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "correction_weights": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "selection": "inner scaffold-group out-of-fold RMSE within each labeled target draw",
+    "selection_outer_group_folds": 3,
+    "selection_inner_group_folds": 3,
+    "nested_cross_fitting": "For every outer adapter-validation fold, target residuals are regenerated using only that outer fold's training scaffolds; no residual target may depend on an outer held scaffold.",
+    "safe_fallback": "zero correction weight is a valid selected model"
+  },
+  "source_reliability": {
+    "primary": "geometric mean of aqueous/alcohol and solid-state source support after linear scaling",
+    "zero_support_tanimoto": 0.2,
+    "full_support_tanimoto": 0.65,
+    "use": "multiply only the donor residual correction; never alter the target-only prediction"
+  },
+  "methods": [
+    {
+      "name": "target_only_direct_regression",
+      "role": "recipient-only zero-inflation diagnostic"
+    },
+    {
+      "name": "target_only_hurdle",
+      "role": "optimized recipient-only baseline"
+    },
+    {
+      "name": "state_aligned_pretrained_residual",
+      "role": "single primary transfer strategy"
+    },
+    {
+      "name": "state_blind_pretrained_residual",
+      "role": "state-alignment ablation"
+    },
+    {
+      "name": "shuffled_source_pretrained_residual",
+      "role": "matched knowledge-destruction control"
+    },
+    {
+      "name": "scalar_optical_residual",
+      "role": "original source-prediction representation control"
+    }
+  ],
+  "development_release_gate": {
+    "primary_method": "state_aligned_pretrained_residual",
+    "minimum_mean_relative_rmse_gain_primary_scope_primary_budget": 0.03,
+    "minimum_positive_draw_fraction_primary_scope_primary_budget": 0.65,
+    "minimum_mean_gain_over_shuffled_source_primary_scope_primary_budget": 0.02,
+    "minimum_mean_gain_over_state_blind_primary_scope_primary_budget": 0.0,
+    "nonnegative_mean_gain_primary_scope_other_budgets": true,
+    "maximum_mean_full_scope_harm_any_budget": 0.01,
+    "minimum_fraction_nonzero_selected_correction_primary_budget": 0.5,
+    "abstention": "If any condition fails, do not open blind outcomes."
+  },
+  "reporting": {
+    "experimental_unit": "recipient molecule with canonical-scaffold separation between labeled training and evaluation",
+    "computational_replicates": "draws and random seeds quantify sensitivity and are not treated as independent experimental samples",
+    "multiplicity": "No development p values are interpreted as confirmatory evidence; all methods, budgets and scopes are reported.",
+    "blind_boundary": "The blind HER file must not appear in any focused-development source code or input manifest."
+  },
+  "compute": {
+    "balam": "one A100 allocation and 32 CPU cores",
+    "intended_runtime": "approximately one to four hours, dominated by source scaffold validation and 900 target hurdle evaluations",
+    "no_network_compute_node": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/collective-exp-data-index/candidate_schema.json",
+  "title": "Discovery candidate queue",
+  "description": "Schema for uncurated discovery records. Candidate entries are quarantined from the validated manuscript catalog until a curator accepts and normalizes them.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_utc", "entries"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "snapshot_utc": {"type": "string", "format": "date-time"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "name",
+          "homepage_url",
+          "discovery_source",
+          "candidate_status",
+          "record_kind",
+          "outcome_access_status",
+          "review_flags",
+          "discovered_at"
+        ],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+          "name": {"type": "string", "minLength": 2},
+          "homepage_url": {"type": "string", "format": "uri"},
+          "doi": {"type": ["string", "null"]},
+          "concept_doi": {"type": ["string", "null"]},
+          "discovery_source": {
+            "type": "string",
+            "enum": ["api-discovery-tdm", "api-discovery", "community-nomination", "manual-search"]
+          },
+          "candidate_status": {
+            "type": "string",
+            "enum": ["unreviewed", "triaged", "accepted", "rejected"]
+          },
+          "record_kind": {
+            "type": "string",
+            "enum": ["database", "dataset", "source-data-package", "metadata-record", "unknown"]
+          },
+          "outcome_access_status": {
+            "type": "string",
+            "enum": ["metadata-only", "schema-only", "outcome-opened", "unknown"]
+          },
+          "canonical_record_id": {"type": ["string", "null"]},
+          "review_flags": {"type": "array", "items": {"type": "string"}},
+          "review_notes": {"type": ["string", "null"]},
+          "discovered_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    }
+  }
+}

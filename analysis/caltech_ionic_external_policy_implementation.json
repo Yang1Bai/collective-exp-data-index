@@ -1,0 +1,75 @@
+{
+  "implementation_name": "Caltech ionic external policy benchmark exact algorithms",
+  "implementation_version": 1,
+  "frozen_utc": "2026-07-16T22:54:37Z",
+  "status": "frozen after target quality and identity audit but before any target outcome summary, source-model fit, policy trajectory, or policy endpoint was calculated",
+  "parent_design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "schema_amendment_sha256": "b25e1299aabb9a509f8d40aca1a19451d3008168845f4ed5af4fa7f2942bcccd",
+  "target_audit_sha256": "1070dccfb813a9f1899dcaac32cd942b81341bb69fce999dc131876576b8b5b1",
+  "target_md5": "d1fcf7c9a7694c8f466932721b76b168",
+  "data_algorithms": {
+    "doi_normalization": "lowercase; remove doi URL or doi prefix; retain DOI tokens matching 10.<4-9 digits>/<suffix>; strip terminal punctuation",
+    "icsd_normalization": "lowercase nonempty comma/semicolon/pipe/slash-delimited tokens; convert integer-valued decimal strings to integer strings",
+    "connected_components": "union target rows sharing canonical composition, any normalized DOI, or any normalized ICSD token",
+    "entity": "one canonical composition with median log10 conductivity and its connected-component group",
+    "split": "sort connected groups by SHA256('20260716|<group id>'); select the single prefix whose cumulative entity count is closest to 70 percent as development and use the remainder as candidate",
+    "hard_ood": "standardize the 126 composition features using the full development partition; take ceil(0.40*candidate_n) candidates with largest Euclidean nearest-development distance",
+    "initial_labels": "sort development groups by SHA256('<campaign seed>|<group id>'); greedily add intact groups without exceeding 30; if fewer than 24 entities result, add the remaining group giving the smallest absolute deviation from 30",
+    "acquisition_unit": "one canonical composition; connected-component groups remain the cross-validation and split unit but do not make a multi-composition acquisition free"
+  },
+  "source_algorithms": {
+    "filtering": "remove a source row if its canonical composition or any normalized DOI occurs anywhere in the eligible target",
+    "aggregation": "median transformed outcome per canonical source composition after filtering",
+    "source_group": "connected component induced by canonical composition and normalized DOI before aggregation; missing DOI leaves composition as its own group",
+    "quality": "three-fold shuffled GroupKFold out-of-fold R2, RMSE, and Spearman rank correlation, random state 20260716",
+    "model": "ExtraTreesRegressor(n_estimators=240,min_samples_leaf=2,max_features=0.7,random_state=stable source seed,n_jobs=1)",
+    "prediction": "one fixed source-model prediction for every target entity; higher transformed source outcome always has higher static priority",
+    "shuffled_source": "for each campaign seed, permute the leakage-safe OBELiX prediction across all target entities once and hold the permutation fixed for the campaign"
+  },
+  "target_algorithms": {
+    "model": "ExtraTreesRegressor(n_estimators=80,min_samples_leaf=2,max_features=0.7,random_state=stable policy/seed/step/fold seed,n_jobs=1)",
+    "folds": "exactly five shuffled GroupKFold folds over currently labelled target connected components; fewer than five groups forces zero target and source weights",
+    "relative_gain": "(reference fold RMSE - augmented fold RMSE) / reference fold RMSE",
+    "admission": "median five-fold relative gain >= 0.02, at least three fold gains > 0, and mean fold gain > 0",
+    "weight": "clip(median five-fold relative gain / 0.10,0,1) if admitted, otherwise zero",
+    "target_reference": "training-fold mean predictor; augmented prediction is composition-only ExtraTrees",
+    "source_reference": "composition-only ExtraTrees; augmented prediction is ExtraTrees on composition features plus one fixed source prediction",
+    "rank": "average percentile rank within the current candidate pool, increasing with novelty or predicted outcome",
+    "source_correction": "percentile rank of augmented prediction minus percentile rank of composition-only prediction",
+    "novelty": "Euclidean nearest-labelled distance in composition features standardized once using the complete development partition",
+    "score": "novelty rank + target weight times composition-model rank + the sum over at most two admitted sources of source weight times source correction",
+    "source_selection": "for multisource policies, select the two admitted sources with the largest median relative gain; deterministic ties use source id",
+    "fallback": "if target and source weights are all zero, the score is exactly novelty rank",
+    "tie_break": "largest score, then largest raw novelty, then lexicographically smallest canonical composition key"
+  },
+  "endpoint_algorithms": {
+    "true_top_set": "the ceil(0.05*candidate_n) entities with largest target outcome, with canonical composition key breaking an exact outcome tie",
+    "auc20": "sum of cumulative true-top hit count after acquisitions 1 through 20",
+    "first_hit": "first acquisition containing a true-top entity; budget+1 if none",
+    "recall": "number of distinct acquired true-top entities divided by true-top-set size",
+    "regret": "maximum candidate outcome minus best acquired outcome",
+    "uncertainty": "paired campaign-seed bootstrap and paired sign flips; conditional on this database"
+  },
+  "confirmatory_policy_scope": [
+    "uniform_random",
+    "composition_novelty",
+    "safe_target_novelty",
+    "obelix_same_property_static",
+    "estm_transport_neighbor_static",
+    "borg_mechanical_static_control",
+    "ocx_catalysis_static_control",
+    "shuffled_obelix_static_control",
+    "safe_obelix_residual",
+    "safe_estm_residual",
+    "safe_borg_residual_control",
+    "safe_ocx_residual_control",
+    "safe_shuffled_obelix_control",
+    "safe_multisource_residual"
+  ],
+  "exploratory_policy": {
+    "id": "safe_multisource_novelty_band",
+    "reason": "test a stronger exploration-preserving strategy without altering the seven primary contrasts",
+    "algorithm": "run the same gates over every real and shuffled source; if any target or source component is admitted, restrict eligibility to candidates at or above the 65th percentile of current novelty and maximize the target-plus-source score inside that band; otherwise select pure novelty",
+    "interpretation": "method-development only; excluded from confirmatory multiplicity and cannot establish an external edge even if favorable"
+  }
+}

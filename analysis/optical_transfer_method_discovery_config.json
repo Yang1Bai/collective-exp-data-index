@@ -1,0 +1,145 @@
+{
+  "program": "State-aware optical-to-photocatalysis transfer method discovery",
+  "version": 1,
+  "frozen_utc": "2026-07-26T02:30:06Z",
+  "status": "Post-gate development-method discovery frozen after the original all-environment feature-injection gate failed; blind HER outcomes remain unopened.",
+  "purpose": "Determine whether experimental-state alignment, donor-support gating, property-family restriction, residual correction, or late fusion can convert a weak optical donor signal into a reproducible recipient benefit.",
+  "claim_guard": "All results from this job are development-stage method discovery. They cannot replace the failed frozen direct-injection result or establish transfer. At most one completely specified strategy may be frozen for the still-unopened blind set.",
+  "source_state_scopes": {
+    "water_methanol": {
+      "solvent_tokens": [
+        "O",
+        "CO"
+      ],
+      "rationale": "Recipient measurements use a methanol-water mixture."
+    },
+    "aqueous_small_alcohol": {
+      "solvent_tokens": [
+        "O",
+        "CO",
+        "CCO",
+        "CCCO",
+        "CC(C)O",
+        "CCCCO",
+        "CC(C)CO",
+        "CCC(C)O",
+        "CC(C)(C)O"
+      ],
+      "rationale": "Broader protic-solvent sensitivity with more source coverage."
+    },
+    "self_host_solid": {
+      "rule": "Solvent token exactly equals the chromophore token",
+      "rationale": "Recipient molecules are measured as suspended molecular solids."
+    }
+  },
+  "source_modeling": {
+    "model": "ExtraTreesRegressor",
+    "n_estimators": 300,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "folds": 5,
+    "group": "canonical Bemis-Murcko scaffold",
+    "bootstrap_replicates": 1000,
+    "property_gate": {
+      "minimum_unique_molecules": 300,
+      "oof_r2_greater_than": 0.0,
+      "oof_spearman_greater_than": 0.15,
+      "bootstrap_95pct_lower_spearman_greater_than": 0.0
+    }
+  },
+  "development_design": {
+    "label_budgets": [
+      30,
+      60,
+      120
+    ],
+    "scaffold_draws_per_budget": 300,
+    "random_forest_seeds_per_candidate_per_draw": 20,
+    "independent_experimental_unit": "recipient molecule with scaffold-group separation between labeled training and evaluation",
+    "computational_replicates": "Draws and forest seeds quantify training-set and algorithmic variability; they are not treated as independent experimental samples."
+  },
+  "recipient_random_forest": {
+    "n_estimators_per_seed": 200,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "seeds_per_candidate": 20,
+    "inner_oof_seeds_for_residual_and_fusion": 5,
+    "prediction": "mean of the 20 independently seeded forests"
+  },
+  "donor_blocks": [
+    "global_all_environment",
+    "water_methanol",
+    "aqueous_small_alcohol",
+    "self_host_solid",
+    "aqueous_plus_solid"
+  ],
+  "property_subsets": {
+    "full": [
+      "absorption_nm",
+      "emission_nm",
+      "log1p_lifetime_ns",
+      "quantum_yield",
+      "log_extinction"
+    ],
+    "light_harvesting": [
+      "absorption_nm",
+      "log_extinction"
+    ],
+    "excited_state": [
+      "emission_nm",
+      "log1p_lifetime_ns",
+      "quantum_yield"
+    ]
+  },
+  "candidate_families": {
+    "direct_rank_predictions": "Append training-ECDF ranks of donor predictions to the molecular fingerprint.",
+    "direct_rank_predictions_uncertainty": "Append prediction and ensemble-uncertainty ranks.",
+    "support_gated_rank_predictions": "Multiply centered donor-prediction ranks by a fixed reliability score derived from state-specific source similarity and donor ensemble uncertainty, and append reliability.",
+    "direct_raw_predictions": "Append raw donor predictions for the full property set.",
+    "residual_ridge": "Fit a ridge model to cross-fitted target-model residuals using ranked donor predictions and uncertainties; add the correction to the target prediction.",
+    "late_fusion_ridge": "Fit a donor-only ridge predictor and choose a convex blend with the target model from inner scaffold-group predictions; zero donor weight is allowed.",
+    "shuffled_rank_control": "Independently shuffle donor columns within training and evaluation before appending them.",
+    "gaussian_control": "Append an equal-dimensional standard-normal vector."
+  },
+  "ridge": {
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "blend_weights_for_donor": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "inner_group_folds": 5
+  },
+  "support_gate": {
+    "zero_reliability_at_or_below_tanimoto": 0.2,
+    "full_similarity_reliability_at_or_above_tanimoto": 0.8,
+    "uncertainty_factor": "one minus the mean training-ECDF rank of the selected donor uncertainties"
+  },
+  "selection_rule": {
+    "primary_budget": 60,
+    "minimum_mean_relative_rmse_gain": 0.02,
+    "minimum_positive_draw_fraction": 0.6,
+    "must_have_nonnegative_mean_gain_at_budgets": [
+      30,
+      120
+    ],
+    "must_beat_matched_shuffled_block_at_primary_budget": true,
+    "ranking_score": "minimum mean relative RMSE gain across budgets, then primary-budget mean gain",
+    "abstention": "If no candidate satisfies every condition, no blind strategy is released."
+  },
+  "multiplicity_and_reporting": "This is a declared method-discovery screen, not confirmatory inference. Report every candidate and control. Do not use p values from repeated computational draws as experimental evidence. The untouched blind set is the only confirmatory evaluation.",
+  "compute_target": {
+    "estimated_candidate_forest_fits": "approximately 0.8-1.6 million depending on state-property source admissions, across three budgets, 300 draws and 20 seeds",
+    "intended_balam_resources": "one GPU allocation with 32 CPU cores",
+    "intended_wall_time": "approximately 1-4 hours; the GPU is an allocation requirement and is not used by the tree models"
+  }
+}

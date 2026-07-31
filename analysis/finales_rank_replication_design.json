@@ -1,0 +1,149 @@
+{
+  "status": "frozen-before-row-level-outcome-download",
+  "frozen_utc": "2026-07-30T00:00:00-04:00",
+  "scientific_question": "Does the CALiSol-derived conductivity ranking fixed after the SolventSeg analysis improve low-label, temporally held-out candidate ordering in an independent LiPF6-EC-EMC experimental campaign?",
+  "claim_guard": {
+    "positive": "An unchanged cross-database donor ranking replicates on one additional experimental programme and improves retrospective OOD candidate prioritization.",
+    "null": "The SolventSeg rank-transfer result does not replicate under the unchanged contract on this programme.",
+    "harm": "The unchanged donor ranking is less concordant with held-out experimental outcomes than the strongest recipient-only baseline or a support-matched falsifier.",
+    "forbidden": [
+      "universal cross-domain transfer",
+      "improved absolute conductivity prediction",
+      "prospective laboratory discovery",
+      "discovery acceleration",
+      "a new electrolyte formulation",
+      "confirmation by changing the donor model, anchors, split, metric, or practical gate after outcome access"
+    ]
+  },
+  "recipient": {
+    "name": "FINALES electrolyte optimization for maximum conductivity and cycle life",
+    "data_doi": "10.24435/materialscloud:qt-1s",
+    "paper_doi": "10.1002/aenm.202403263",
+    "repository_url": "https://archive.materialscloud.org/records/61sz9-09m30",
+    "license": "CC-BY-4.0",
+    "chemistry": [
+      "LiPF6",
+      "EC",
+      "EMC"
+    ],
+    "primary_phase": "multitask_2023_11",
+    "secondary_phase": "singletask_2023_09",
+    "primary_archive": {
+      "filename": "FINALES (11_2023) Electrolyte Optimization for Maximum Conductivity and for Maximum Cycle Life.zip",
+      "bytes": 9176155,
+      "md5": "68e6797a70b121baa18380215d55638a"
+    },
+    "secondary_archive": {
+      "filename": "FINALES (09_2023) Electrolyte Optimization for Maximum Conductivity and for Maximum Cycle Life.zip",
+      "bytes": 219391,
+      "md5": "bc7eb8d7b741f8bba859ff3d280719cd"
+    },
+    "eligible_rows": "valid experimental ASAB conductivity results only; molecular-dynamics, calibration-only, failed, pending, low-quality, and non-conductivity records are excluded",
+    "candidate_unit": "unique reported LiPF6-EC-EMC formulation within phase",
+    "outcome": "reported experimental ionic conductivity",
+    "prediction_time_information": [
+      "reported LiPF6 fraction",
+      "reported EC fraction",
+      "reported EMC fraction",
+      "reported measurement temperature",
+      "phase",
+      "request/result timestamp",
+      "experimental method and quality/status metadata"
+    ]
+  },
+  "donor": {
+    "name": "CALiSol-23 LiPF6-EC-EMC subset used in the independently reproduced SolventSeg analysis",
+    "artifact": "analysis/review_packages/edison/legacy_kosmos_2026-07-30/solventseg_validation/CALiSol23_LiPF6_EC_EMC_harmonized.csv",
+    "rows": 410,
+    "sha256": "56b17f0e067daa00a9ea79eb5c7810c498e6e0f4ca2f699623b1c483b2ad177c",
+    "features": [
+      "EC_wt",
+      "EMC_wt",
+      "LiPF6_wt",
+      "temperature_C"
+    ],
+    "model": {
+      "class": "sklearn.ensemble.HistGradientBoostingRegressor",
+      "parameters": {
+        "random_state": 2025
+      }
+    },
+    "transferred_object": "within-candidate-pool ordinal conductivity score",
+    "refitting_on_recipient_outcomes": false
+  },
+  "split": {
+    "ordering": "chronological by recipient result timestamp, with request timestamp as the deterministic tie breaker",
+    "anchors": "the first three distinct eligible experimental formulations in the primary phase",
+    "anchor_budget_formulations": 3,
+    "evaluation": "all later unique eligible experimental formulations in the primary phase",
+    "hard_ood_scope": "the 40% of evaluation formulations farthest from the three anchors in standardized composition space; standardization is fitted on all outcome-free recipient compositions",
+    "secondary_scope": "repeat the unchanged rule in the single-task phase without pooling phases",
+    "prohibited": [
+      "random anchor search",
+      "outcome-dependent clustering",
+      "choosing a favorable temperature subset after outcome access",
+      "moving repeated formulations across anchor and evaluation sets",
+      "pooling simulation and experiment",
+      "using cycle-life outcomes"
+    ]
+  },
+  "comparators": {
+    "recipient_only": [
+      "ExtraTreesRegressor trained on the three anchor formulations with fixed random_state 2025",
+      "HistGradientBoostingRegressor trained on the same anchors with fixed random_state 2025",
+      "linear composition-temperature model trained on the same anchors"
+    ],
+    "falsifiers": [
+      "2000 global permutations of the 410 CALiSol donor labels",
+      "a deterministic size- and support-matched non-LiPF6 carbonate-electrolyte donor from CALiSol-23 if at least 205 eligible rows exist",
+      "temperature-only ranking",
+      "salt-fraction-only ranking"
+    ],
+    "strong_baseline_rule": "the recipient-only comparator with the highest primary metric is used in the donor-minus-baseline contrast; all comparator results remain reported"
+  },
+  "metrics": {
+    "primary": {
+      "name": "temperature-matched pairwise concordance advantage",
+      "definition": "Among held-out formulation pairs measured within 1 degree C, compute the fraction whose predicted ordering agrees with measured conductivity ordering; subtract the strongest recipient-only baseline.",
+      "fallback_without_outcome_tuning": "If fewer than 50 eligible held-out pairs exist, widen the temperature tolerance once to 2 degree C; if fewer than 50 pairs remain, declare the primary test ineligible.",
+      "practical_gate": 0.1
+    },
+    "secondary": [
+      "within-temperature-bin mean Spearman rho using prespecified 2 degree C bins",
+      "pooled Spearman rho, disclosed as temperature-confounded",
+      "top-quartile precision within temperature bins",
+      "normalized regret of the top-ranked candidate within temperature bins",
+      "hard-OOD versions of the primary and secondary metrics",
+      "single-task phase replication"
+    ],
+    "not_success_metrics": [
+      "top-1 hit alone",
+      "absolute RMSE",
+      "row-pooled correlation alone"
+    ]
+  },
+  "inference": {
+    "independent_unit": "unique experimental formulation",
+    "bootstrap_replicates": 20000,
+    "permutation_replicates": 2000,
+    "confidence_level": 0.95,
+    "primary_test": "one-sided formulation-cluster bootstrap interval for donor-minus-strong-baseline concordance",
+    "specificity_test": "empirical one-sided donor-label permutation p-value",
+    "multiplicity": "The primary multitask-phase concordance contrast is the sole confirmatory test. All other scopes and metrics are secondary."
+  },
+  "success_gate": {
+    "all_required": [
+      "recipient and donor archive hashes match",
+      "no exact recipient formulation or recipient DOI appears in the donor source records",
+      "at least 50 primary temperature-matched pairs",
+      "donor-minus-strong-baseline concordance is at least 0.10",
+      "95% formulation-cluster bootstrap interval is above zero",
+      "empirical donor-label permutation p is at most 0.05",
+      "donor top-quartile precision exceeds the strongest recipient-only baseline",
+      "donor normalized regret is lower than the strongest recipient-only baseline",
+      "the real donor exceeds the support-matched wrong donor when that falsifier is eligible"
+    ],
+    "abstention": "Any failed required gate prevents a replication claim. Ineligible primary comparison is reported as ineligible, not replaced."
+  },
+  "post_outcome_change_policy": "Corrections needed only to parse the published schema may be documented in an amendment before model fitting. Any change to donor, anchors, split, transferred object, primary metric, or gate creates a new exploratory analysis and cannot alter the frozen result."
+}

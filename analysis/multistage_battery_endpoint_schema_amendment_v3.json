@@ -1,0 +1,14 @@
+{
+  "amendment": "Stage 2 unitless 23-degree metadata setpoint",
+  "version": 3,
+  "frozen_utc": "2026-07-20T23:40:00Z",
+  "evidence_file_id": 47629804,
+  "evidence_scope": "Raw *_ET_T23_meta.txt bytes and Unicode code points only; numeric CSV data rows remained unopened.",
+  "observed_token": "23",
+  "accepted_tokens_after_space_removal": ["23", "23°C", "23Â°C"],
+  "additional_filename_requirement": "The member must be the unique *_ET_T23.csv or *_AT_T23.csv and have the exact matching metadata companion.",
+  "rejected": "Every other token, temperature, filename, missing field, fuzzy match, tolerance, or fallback.",
+  "numeric_endpoint_change": false,
+  "stage2_outcomes_opened_for_affected_files_before_amendment": false,
+  "claim_guard": "This repairs a unit-omission in nonnumeric metadata and cannot select or alter a capacity value."
+}

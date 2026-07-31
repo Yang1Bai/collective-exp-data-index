@@ -1,0 +1,5 @@
+scope,contrast,interpretation,seeds,left_mean,right_mean,mean_difference,bootstrap_95,fraction_positive,fraction_tied,signflip_p_one_sided,status
+official_test,target_only_minus_random_control,positive means random_control requires fewer acquisitions,100,24.34,15.5,8.84,"[4.69975, 13.09]",0.63,0.01,0.0001,post-result diagnostic; does not redefine frozen decision
+official_test,thermoelectric_prior_minus_random_control,positive means random_control requires fewer acquisitions,100,24.09,15.5,8.59,"[4.139749999999999, 12.990249999999996]",0.59,0.01,0.0002,post-result diagnostic; does not redefine frozen decision
+hard_ood_40pct,target_only_minus_random_control,positive means random_control requires fewer acquisitions,100,17.7,11.58,6.12,"[3.3897500000000003, 8.770249999999995]",0.63,0.05,0.0001,post-result diagnostic; does not redefine frozen decision
+hard_ood_40pct,thermoelectric_prior_minus_random_control,positive means random_control requires fewer acquisitions,100,15.49,11.58,3.91,"[1.39, 6.41]",0.54,0.05,0.0014,post-result diagnostic; does not redefine frozen decision

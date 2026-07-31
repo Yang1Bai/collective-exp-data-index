@@ -108,7 +108,9 @@ def normalize_entry(raw: dict) -> dict:
     e.setdefault("year", None)
     e.setdefault("source", "curated-seed")
     e.setdefault("added", date.today().isoformat())
-    e.setdefault("verified_via", e.get("homepage_url"))
+    # Do not manufacture verification evidence from the homepage. Discovery
+    # candidates may leave this null until a curator records the inspected URL.
+    e.setdefault("verified_via", None)
     # keep only known fields, in canonical order
     return {k: e.get(k) for k in FIELDS}
 

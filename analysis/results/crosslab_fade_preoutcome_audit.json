@@ -1,0 +1,21 @@
+{
+  "status": "eligible-preoutcome",
+  "design": "analysis/crosslab_fade_transfer_design.json",
+  "amendment": "analysis/CROSSLAB_FADE_INFRASTRUCTURE_AMENDMENT.md",
+  "mirror_commit": "bf7a93148de6a7e249c1b053bd60fe3c9a3dc1f0",
+  "recipient_read_cap_rows": 101,
+  "recipient_outcomes_read": false,
+  "recipient_cells": 77,
+  "recipient_cells_with_101_cycles": 77,
+  "recipient_feature_computable": 77,
+  "recipient_rate_families_known": 77,
+  "donor_files": 125,
+  "wrong_chem_files": 55,
+  "gate_checks": {
+    "recipient_cells_at_least_20": true,
+    "early_cycle_fraction_at_least_0_9": true,
+    "feature_intersection_available": true,
+    "donor_files_at_least_100": true
+  },
+  "metadata_csv_sha256": "e8463753d5d548df3769e291630adc02138a3149d0a81298dfbcd72cd3899de3"
+}

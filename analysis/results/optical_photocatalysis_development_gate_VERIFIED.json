@@ -1,0 +1,21 @@
+{
+  "status": "verified-complete",
+  "verification_mode": "portable",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "implementation_config_sha256": "ac646a5a97fd3420ea1681cdd28a1784c97d137de45f638dbc52603fb307e75d",
+  "implementation_sha256": "a0d4a84adf23284c3162a47ac59d9de5ecba62b8292aa952425b555767f22b43",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "source_skill_sha256": "88c543e77ebbc4961b9d000f189a7cdc28e273f908f10769f1df08f8d62e5570",
+  "donor_feature_sha256": "52baab7fa107b43a141e4bfac8cc5a73ae54798b75a3e0a2ba6e3da7358584f9",
+  "development_draw_manifest_sha256": "b55002b1fe7b36bed5215e5a1d58cfa3cf7258a81935eeb7a51e4207aba6dd81",
+  "development_draw_sha256": "bb306fbe9a0e13da55dba6069dd9367de3c4f80298b11b7083d7132a280a1000",
+  "metrics_sha256": "b7a307621d6a51cdf2cbe6f822de45fce97afc8b28aaa958060f44c6b02f837c",
+  "development_summary_sha256": "f073c672861cf56a819dbaba8f73f9dd3c5906df786a1a02e9156adc23e3d6c7",
+  "metric_rows": 2700,
+  "selected_feature_form": "rank",
+  "primary_mean_relative_rmse_gain": -0.0062410884484013105,
+  "matched_shuffled_median_relative_gain": -0.005732936492744352,
+  "blind_release_allowed": false,
+  "claim_guard": "A passed development gate permits the frozen blind evaluation; it does not itself establish OOD transfer."
+}

@@ -1,0 +1,40 @@
+{
+  "claim_guard": "Two retrospective target programmes quantify cross-target heterogeneity. A positive mean cannot establish prospective discovery; a null mean does not erase target-specific positive edges.",
+  "directionally_concordant_targets": 1,
+  "interpretation": "The main claim remains edge-selective. Independent positive predictive replication requires at least one new target to pass its complete gate; null or abstaining targets remain evidence for the map boundary.",
+  "random_effects": {
+    "ci95": [
+      -0.006168149969994345,
+      0.01224863680582545
+    ],
+    "i_squared_percent": 76.6848745250347,
+    "mean_relative_rmse_gain": 0.0030402434179155526,
+    "q": 4.289061197949604,
+    "targets": 2,
+    "tau_squared": 3.529599799548124e-05
+  },
+  "status": "verified-complete-boundary",
+  "target_effects": {
+    "starrydata_reverse_transport": {
+      "gate": {
+        "absolute_r2_positive": false,
+        "holm_p_below_0_05": false,
+        "positive_interval": true
+      },
+      "passes_full_prediction_gate": false,
+      "relative_rmse_gain": 0.008807528712160334,
+      "variance": 2.0038288038562305e-05
+    },
+    "tri_oer_second_family": {
+      "gate": {
+        "holm_p_below_0_05": false,
+        "positive_absolute_r2_plates": 0,
+        "positive_plates_at_least_3_of_4": false,
+        "positive_random_effects_interval": false
+      },
+      "passes_full_prediction_gate": false,
+      "relative_rmse_gain": -0.000786982953364868,
+      "variance": 1.424370070374479e-06
+    }
+  }
+}

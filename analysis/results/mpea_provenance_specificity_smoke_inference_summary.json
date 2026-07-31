@@ -1,0 +1,3697 @@
+{
+  "status": "complete",
+  "created_utc": "2026-07-27T22:34:32.860178+00:00",
+  "design_sha256": "1116aa24ac1ffcda9eb17ce413818758d32102f223cd3a16ee144159e903863c",
+  "replicates": {
+    "elemental_system_cluster_bootstrap": 1000,
+    "elemental_system_signflip": 1000
+  },
+  "primary_contrasts": [
+    {
+      "contrast": "strict_uts_vs_target_only",
+      "direction": "positive means lower mean squared error for the first named method",
+      "systems": 14,
+      "mean_system_equal_mse_reduction": -0.0035967393998062543,
+      "cluster_bootstrap_ci95": [
+        -0.011824357408536186,
+        0.004865538092486664
+      ],
+      "one_sided_signflip_p": 0.7802197802197802,
+      "holm_adjusted_p": 1.0,
+      "holm_significant_0_05": false
+    },
+    {
+      "contrast": "strict_uts_vs_shuffled_uts",
+      "direction": "positive means lower mean squared error for the first named method",
+      "systems": 14,
+      "mean_system_equal_mse_reduction": -0.00575422568645749,
+      "cluster_bootstrap_ci95": [
+        -0.018471382631966998,
+        0.007420003590569038
+      ],
+      "one_sided_signflip_p": 0.8011988011988012,
+      "holm_adjusted_p": 1.0,
+      "holm_significant_0_05": false
+    },
+    {
+      "contrast": "strict_uts_vs_hardness",
+      "direction": "positive means lower mean squared error for the first named method",
+      "systems": 14,
+      "mean_system_equal_mse_reduction": -0.004357301169309346,
+      "cluster_bootstrap_ci95": [
+        -0.030477951408561996,
+        0.02345921251770441
+      ],
+      "one_sided_signflip_p": 0.5774225774225774,
+      "holm_adjusted_p": 1.0,
+      "holm_significant_0_05": false
+    },
+    {
+      "contrast": "strict_uts_vs_elongation",
+      "direction": "positive means lower mean squared error for the first named method",
+      "systems": 14,
+      "mean_system_equal_mse_reduction": -0.002221434536318746,
+      "cluster_bootstrap_ci95": [
+        -0.014998241126417082,
+        0.01069095296711769
+      ],
+      "one_sided_signflip_p": 0.6283716283716284,
+      "holm_adjusted_p": 1.0,
+      "holm_significant_0_05": false
+    }
+  ],
+  "primary_family_holm_survivors": [],
+  "provenance_ladder": [
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0736372757495755,
+        "real_augmented_r2": 0.26861950718394434,
+        "shuffled_relative_rmse_gain": 0.03051523054018401,
+        "shuffled_augmented_r2": 0.1989433837865413,
+        "real_minus_shuffled_gain": 0.04312204520939149,
+        "base_rmse": 0.3252397189819271,
+        "real_augmented_rmse": 0.3012899521105405,
+        "shuffled_augmented_rmse": 0.31531495397636894
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.014574970221468754,
+          0.12010474019368854
+        ],
+        "real_r2": [
+          0.03532638972740958,
+          0.4393104501784267
+        ],
+        "shuffled_gain": [
+          -0.048360243708558216,
+          0.08811578677623184
+        ],
+        "real_minus_shuffled_gain": [
+          0.02005549921415266,
+          0.07557045211172837
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 130,
+      "observed": {
+        "real_relative_rmse_gain": 0.004672739503194756,
+        "real_augmented_r2": 0.1297781629965321,
+        "shuffled_relative_rmse_gain": -0.049905034866830754,
+        "shuffled_augmented_r2": 0.03172612095583771,
+        "real_minus_shuffled_gain": 0.05457777437002551,
+        "base_rmse": 0.3309972775215818,
+        "real_augmented_rmse": 0.3294506134674568,
+        "shuffled_augmented_rmse": 0.3475157081971224
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.10268485021931052,
+          0.07611732548295054
+        ],
+        "real_r2": [
+          -0.27020510664723757,
+          0.3349895298220678
+        ],
+        "shuffled_gain": [
+          -0.18726174444681365,
+          0.03187488234766703
+        ],
+        "real_minus_shuffled_gain": [
+          0.012247962873933345,
+          0.12208644633285987
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.07602504228080684,
+        "real_augmented_r2": 0.2723850196012587,
+        "shuffled_relative_rmse_gain": 0.010368855366457309,
+        "shuffled_augmented_r2": 0.16530475533045774,
+        "real_minus_shuffled_gain": 0.06565618691434953,
+        "base_rmse": 0.32523971898192705,
+        "real_augmented_rmse": 0.3005133555949283,
+        "shuffled_augmented_rmse": 0.32186735537637623
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.010929732675257337,
+          0.146551316239799
+        ],
+        "real_r2": [
+          0.08245308598395898,
+          0.4164810190480935
+        ],
+        "shuffled_gain": [
+          -0.05197863443880207,
+          0.056664319296290844
+        ],
+        "real_minus_shuffled_gain": [
+          0.014512355509607057,
+          0.09877982217551148
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 130,
+      "observed": {
+        "real_relative_rmse_gain": -0.05736694113082974,
+        "real_augmented_r2": 0.017913739615159963,
+        "shuffled_relative_rmse_gain": -0.050398848932149264,
+        "shuffled_augmented_r2": 0.030815067687293807,
+        "real_minus_shuffled_gain": -0.006968092198680477,
+        "base_rmse": 0.3309972775215818,
+        "real_augmented_rmse": 0.3499855788556273,
+        "shuffled_augmented_rmse": 0.3476791593083447
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.18210045061320024,
+          0.0390265294987002
+        ],
+        "real_r2": [
+          -0.47949060711730024,
+          0.2273709808940782
+        ],
+        "shuffled_gain": [
+          -0.17966410882017952,
+          0.026934708060892504
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10005330657358284,
+          0.06525595926605537
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.01701716248248021,
+        "real_augmented_r2": 0.255023901249538,
+        "shuffled_relative_rmse_gain": -0.04959282764997778,
+        "shuffled_augmented_r2": 0.20653553040089168,
+        "real_minus_shuffled_gain": 0.03257566516749757,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3040773919473785,
+        "shuffled_augmented_rmse": 0.3138171718355614
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.066600458889232,
+          0.03333576571367212
+        ],
+        "real_r2": [
+          0.06241225180809345,
+          0.4004324970368725
+        ],
+        "shuffled_gain": [
+          -0.0777422326260719,
+          -0.01933717574073658
+        ],
+        "real_minus_shuffled_gain": [
+          -0.019541557557772232,
+          0.0844854825226334
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.006246753907322922,
+        "real_augmented_r2": 0.2132875193861966,
+        "shuffled_relative_rmse_gain": -0.006640061394290325,
+        "shuffled_augmented_r2": 0.21267240111952612,
+        "real_minus_shuffled_gain": 0.0003933074869674029,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.2985902976661935,
+        "shuffled_augmented_rmse": 0.298707006414969
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07017377168264877,
+          0.03305717659865255
+        ],
+        "real_r2": [
+          -0.2221046260664047,
+          0.36780509655732424
+        ],
+        "shuffled_gain": [
+          -0.039737953319042785,
+          0.06945418916216725
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10434834722807372,
+          0.0636696894060827
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    }
+  ],
+  "donor_specificity": [
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.01701716248248021,
+        "real_augmented_r2": 0.255023901249538,
+        "shuffled_relative_rmse_gain": -0.04959282764997778,
+        "shuffled_augmented_r2": 0.20653553040089168,
+        "real_minus_shuffled_gain": 0.03257566516749757,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3040773919473785,
+        "shuffled_augmented_rmse": 0.3138171718355614
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.066600458889232,
+          0.03333576571367212
+        ],
+        "real_r2": [
+          0.06241225180809345,
+          0.4004324970368725
+        ],
+        "shuffled_gain": [
+          -0.0777422326260719,
+          -0.01933717574073658
+        ],
+        "real_minus_shuffled_gain": [
+          -0.019541557557772232,
+          0.0844854825226334
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.006246753907322922,
+        "real_augmented_r2": 0.2132875193861966,
+        "shuffled_relative_rmse_gain": -0.006640061394290325,
+        "shuffled_augmented_r2": 0.21267240111952612,
+        "real_minus_shuffled_gain": 0.0003933074869674029,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.2985902976661935,
+        "shuffled_augmented_rmse": 0.298707006414969
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07017377168264877,
+          0.03305717659865255
+        ],
+        "real_r2": [
+          -0.2221046260664047,
+          0.36780509655732424
+        ],
+        "shuffled_gain": [
+          -0.039737953319042785,
+          0.06945418916216725
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10434834722807372,
+          0.0636696894060827
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.014250052113390681,
+        "real_augmented_r2": 0.259072263032324,
+        "shuffled_relative_rmse_gain": -0.028942879002243644,
+        "shuffled_augmented_r2": 0.2374500314318181,
+        "real_minus_shuffled_gain": 0.014692826888852963,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3032500551675257,
+        "shuffled_augmented_rmse": 0.30764305525199936
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07747141245325724,
+          0.04335528320489908
+        ],
+        "real_r2": [
+          0.07726944836607796,
+          0.3773526912100008
+        ],
+        "shuffled_gain": [
+          -0.07610766801923609,
+          0.013235671564174035
+        ],
+        "real_minus_shuffled_gain": [
+          -0.025157656127139386,
+          0.05143181417741312
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.05092105310722744,
+        "real_augmented_r2": 0.14188154938801623,
+        "shuffled_relative_rmse_gain": 0.01305876533236974,
+        "shuffled_augmented_r2": 0.24318515217487346,
+        "real_minus_shuffled_gain": -0.06397981843959719,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.31184679985547326,
+        "shuffled_augmented_rmse": 0.292861642429298
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.12473725857452798,
+          0.08121090603361603
+        ],
+        "real_r2": [
+          -0.1456729940509439,
+          0.35451063233528396
+        ],
+        "shuffled_gain": [
+          -0.06730145211030394,
+          0.05762202347995884
+        ],
+        "real_minus_shuffled_gain": [
+          -0.1326878766946849,
+          0.07079012319313038
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.016776425526525595,
+        "real_augmented_r2": 0.2553765443686852,
+        "shuffled_relative_rmse_gain": -0.03121877949689099,
+        "shuffled_augmented_r2": 0.23407295922790317,
+        "real_minus_shuffled_gain": 0.014442353970365394,
+        "base_rmse": 0.29898944006524253,
+        "real_augmented_rmse": 0.30400541413971466,
+        "shuffled_augmented_rmse": 0.30832352546653824
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.061802613439221304,
+          0.021861070755541927
+        ],
+        "real_r2": [
+          0.11131925661482701,
+          0.35902334461572766
+        ],
+        "shuffled_gain": [
+          -0.06797752184720915,
+          0.0004581347037814318
+        ],
+        "real_minus_shuffled_gain": [
+          -0.010106493470350267,
+          0.03458918259320387
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.002358364239765907,
+        "real_augmented_r2": 0.2193558802756319,
+        "shuffled_relative_rmse_gain": -0.016144211045398413,
+        "shuffled_augmented_r2": 0.1977351772652628,
+        "real_minus_shuffled_gain": 0.013785846805632506,
+        "base_rmse": 0.2967366567959078,
+        "real_augmented_rmse": 0.297436469915923,
+        "shuffled_augmented_rmse": 0.3015272360081269
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.11625114026924901,
+          0.0901300934759072
+        ],
+        "real_r2": [
+          -0.10891206288007807,
+          0.36048091677347793
+        ],
+        "shuffled_gain": [
+          -0.06498176582477665,
+          0.03969034966645085
+        ],
+        "real_minus_shuffled_gain": [
+          -0.09592087986849321,
+          0.09753433438212955
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    }
+  ],
+  "state_dependence": [
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.01701716248248021,
+        "real_augmented_r2": 0.255023901249538,
+        "shuffled_relative_rmse_gain": -0.04959282764997778,
+        "shuffled_augmented_r2": 0.20653553040089168,
+        "real_minus_shuffled_gain": 0.03257566516749757,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3040773919473785,
+        "shuffled_augmented_rmse": 0.3138171718355614
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.066600458889232,
+          0.03333576571367212
+        ],
+        "real_r2": [
+          0.06241225180809345,
+          0.4004324970368725
+        ],
+        "shuffled_gain": [
+          -0.0777422326260719,
+          -0.01933717574073658
+        ],
+        "real_minus_shuffled_gain": [
+          -0.019541557557772232,
+          0.0844854825226334
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.006246753907322922,
+        "real_augmented_r2": 0.2132875193861966,
+        "shuffled_relative_rmse_gain": -0.006640061394290325,
+        "shuffled_augmented_r2": 0.21267240111952612,
+        "real_minus_shuffled_gain": 0.0003933074869674029,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.2985902976661935,
+        "shuffled_augmented_rmse": 0.298707006414969
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07017377168264877,
+          0.03305717659865255
+        ],
+        "real_r2": [
+          -0.2221046260664047,
+          0.36780509655732424
+        ],
+        "shuffled_gain": [
+          -0.039737953319042785,
+          0.06945418916216725
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10434834722807372,
+          0.0636696894060827
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.004094613589954616,
+        "real_augmented_r2": -0.03782008993195185,
+        "shuffled_relative_rmse_gain": 0.00704035244630472,
+        "shuffled_augmented_r2": -0.031689737159035225,
+        "real_minus_shuffled_gain": -0.0029457388563501044,
+        "base_rmse": 0.3603760472296733,
+        "real_augmented_rmse": 0.35890044656919257,
+        "shuffled_augmented_rmse": 0.35783887284397026
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.025004543658681433,
+          0.02985363263824145
+        ],
+        "real_r2": [
+          -0.16374269719954912,
+          0.04368950952336524
+        ],
+        "shuffled_gain": [
+          -0.01149732644562021,
+          0.02586203497104232
+        ],
+        "real_minus_shuffled_gain": [
+          -0.021339073379269293,
+          0.01484055364520847
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.01507897655482446,
+        "real_augmented_r2": -0.23522444237446027,
+        "shuffled_relative_rmse_gain": -0.006547785659834197,
+        "shuffled_augmented_r2": -0.29006578459030186,
+        "real_minus_shuffled_gain": 0.021626762214658656,
+        "base_rmse": 0.37987367865799176,
+        "real_augmented_rmse": 0.374145572363713,
+        "shuffled_augmented_rmse": 0.382361010083657
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.03960789339530321,
+          0.06117321540513629
+        ],
+        "real_r2": [
+          -1.093413205172593,
+          -0.001459125927303457
+        ],
+        "shuffled_gain": [
+          -0.04740761900724718,
+          0.024243698702898515
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02303269767572476,
+          0.06803992989284459
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.017334499812836364,
+        "real_augmented_r2": 0.29223922395962065,
+        "shuffled_relative_rmse_gain": -0.02104400604898161,
+        "shuffled_augmented_r2": 0.23587573168020703,
+        "real_minus_shuffled_gain": 0.03837850586181797,
+        "base_rmse": 0.3016133068984273,
+        "real_augmented_rmse": 0.29638499108644756,
+        "shuffled_augmented_rmse": 0.30796045915325115
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.027070085826371354,
+          0.06615791455018652
+        ],
+        "real_r2": [
+          0.062311044315727544,
+          0.4380764283399809
+        ],
+        "shuffled_gain": [
+          -0.06291715941583177,
+          0.021347974703924612
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02461409699048444,
+          0.09864085613233214
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.00659968104896665,
+        "real_augmented_r2": 0.34883075676761943,
+        "shuffled_relative_rmse_gain": -0.07233740996836542,
+        "shuffled_augmented_r2": 0.26100207867338365,
+        "real_minus_shuffled_gain": 0.06573772891939877,
+        "base_rmse": 0.2698719971085472,
+        "real_augmented_rmse": 0.27165306621351126,
+        "shuffled_augmented_rmse": 0.2893938384023697
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.10205287876606542,
+          0.07765211217792264
+        ],
+        "real_r2": [
+          -0.22279724977767895,
+          0.5563363866912524
+        ],
+        "shuffled_gain": [
+          -0.17345073951496912,
+          0.030636247816724506
+        ],
+        "real_minus_shuffled_gain": [
+          -0.11008410653326124,
+          0.2206688157196254
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.009899653305787137,
+        "real_augmented_r2": -0.0609284010269493,
+        "shuffled_relative_rmse_gain": -0.0029836252442427846,
+        "shuffled_augmented_r2": -0.046447187135182144,
+        "real_minus_shuffled_gain": -0.006916028061544352,
+        "base_rmse": 0.3593170096576401,
+        "real_augmented_rmse": 0.3628741234801229,
+        "shuffled_augmented_rmse": 0.36038907695834044
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.05283730738431494,
+          0.027711969230594508
+        ],
+        "real_r2": [
+          -0.2269322085683924,
+          0.07335283348590681
+        ],
+        "shuffled_gain": [
+          -0.038451456204629426,
+          0.03020972115174254
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02608287526454814,
+          0.01562433856068692
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.009063365685446833,
+        "real_augmented_r2": -0.15574466699162137,
+        "shuffled_relative_rmse_gain": -0.022087157934900608,
+        "shuffled_augmented_r2": -0.2295494297742835,
+        "real_minus_shuffled_gain": 0.03115052362034744,
+        "base_rmse": 0.3652184731474417,
+        "real_augmented_rmse": 0.3619083645702259,
+        "shuffled_augmented_rmse": 0.3732851112445925
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.08672534291295453,
+          0.13000891418381944
+        ],
+        "real_r2": [
+          -0.6985201658588222,
+          0.12564189298062164
+        ],
+        "shuffled_gain": [
+          -0.10477008398985829,
+          0.06876302572016982
+        ],
+        "real_minus_shuffled_gain": [
+          -0.023832304319404744,
+          0.08291281396760954
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.010899857395165644,
+        "real_augmented_r2": 0.32291855105037603,
+        "shuffled_relative_rmse_gain": -0.0020490471467406604,
+        "shuffled_augmented_r2": 0.3050743455266055,
+        "real_minus_shuffled_gain": 0.012948904541906305,
+        "base_rmse": 0.2930847051094464,
+        "real_augmented_rmse": 0.28989012361904926,
+        "shuffled_augmented_rmse": 0.29368524948820424
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.081170811909068,
+          0.09848559862628926
+        ],
+        "real_r2": [
+          0.08966507005166946,
+          0.480357440120647
+        ],
+        "shuffled_gain": [
+          -0.06146963061654937,
+          0.053247049653187176
+        ],
+        "real_minus_shuffled_gain": [
+          -0.03192663481345748,
+          0.05609012978507741
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.033963227623328644,
+        "real_augmented_r2": 0.26496637431737835,
+        "shuffled_relative_rmse_gain": 0.055271688277466514,
+        "shuffled_augmented_r2": 0.29703491996016074,
+        "real_minus_shuffled_gain": -0.02130846065413787,
+        "base_rmse": 0.29876355407893423,
+        "real_augmented_rmse": 0.28861657948619673,
+        "shuffled_augmented_rmse": 0.2822503880492154
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.31803566156033614,
+          0.2232636376252196
+        ],
+        "real_r2": [
+          -0.47967176621561686,
+          0.5146409899795111
+        ],
+        "shuffled_gain": [
+          -0.1801899143948199,
+          0.15613592007979615
+        ],
+        "real_minus_shuffled_gain": [
+          -0.17126547448889806,
+          0.07970550500173554
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    }
+  ],
+  "target_label_equivalence": {
+    "transferred_model_budget": 60,
+    "transferred_model_q4_rmse": 0.2985902976661935,
+    "target_only_curve": [
+      {
+        "budget": 30,
+        "q4_rmse": 0.2913371245428976
+      },
+      {
+        "budget": 60,
+        "q4_rmse": 0.29673665679590777
+      },
+      {
+        "budget": 120,
+        "q4_rmse": 0.30554019745367267
+      },
+      {
+        "budget": 240,
+        "q4_rmse": 0.23072889147364606
+      }
+    ],
+    "status": "interpolated_within_frozen_curve",
+    "estimated_equivalent_target_labels": 69.42805675426278
+  },
+  "all_condition_summaries": [
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.07602504228080684,
+        "real_augmented_r2": 0.2723850196012587,
+        "shuffled_relative_rmse_gain": 0.010368855366457309,
+        "shuffled_augmented_r2": 0.16530475533045774,
+        "real_minus_shuffled_gain": 0.06565618691434953,
+        "base_rmse": 0.32523971898192705,
+        "real_augmented_rmse": 0.3005133555949283,
+        "shuffled_augmented_rmse": 0.32186735537637623
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.010929732675257337,
+          0.146551316239799
+        ],
+        "real_r2": [
+          0.08245308598395898,
+          0.4164810190480935
+        ],
+        "shuffled_gain": [
+          -0.05197863443880207,
+          0.056664319296290844
+        ],
+        "real_minus_shuffled_gain": [
+          0.014512355509607057,
+          0.09877982217551148
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 206,
+      "observed": {
+        "real_relative_rmse_gain": 0.00711132794507773,
+        "real_augmented_r2": 0.2944157413381373,
+        "shuffled_relative_rmse_gain": -0.02344476571516514,
+        "shuffled_augmented_r2": 0.2503188518265732,
+        "real_minus_shuffled_gain": 0.030556093660242867,
+        "base_rmse": 0.324589048953946,
+        "real_augmented_rmse": 0.3222807897794536,
+        "shuffled_augmented_rmse": 0.33219896316037956
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.05010828500298539,
+          0.06633401936866964
+        ],
+        "real_r2": [
+          -0.08440428022269623,
+          0.5116207684477256
+        ],
+        "shuffled_gain": [
+          -0.07904437729359483,
+          0.04219516947403232
+        ],
+        "real_minus_shuffled_gain": [
+          -0.024631101247431206,
+          0.08034270447784024
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 172,
+      "observed": {
+        "real_relative_rmse_gain": 0.09225660618049339,
+        "real_augmented_r2": 0.45243844854247883,
+        "shuffled_relative_rmse_gain": 0.011133597498211944,
+        "shuffled_augmented_r2": 0.35019657711443675,
+        "real_minus_shuffled_gain": 0.08112300868228145,
+        "base_rmse": 0.3022106317190046,
+        "real_augmented_rmse": 0.27432970448494626,
+        "shuffled_augmented_rmse": 0.2988459401857648
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.030127128312075185,
+          0.22264067659154632
+        ],
+        "real_r2": [
+          0.31243427430184123,
+          0.630368011454154
+        ],
+        "shuffled_gain": [
+          -0.05445399081193781,
+          0.07527953121566297
+        ],
+        "real_minus_shuffled_gain": [
+          0.027269711269886754,
+          0.17677694133088417
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 348,
+      "observed": {
+        "real_relative_rmse_gain": 0.16619113727570733,
+        "real_augmented_r2": 0.1864401144079424,
+        "shuffled_relative_rmse_gain": 0.05311123955128123,
+        "shuffled_augmented_r2": -0.04919070774137957,
+        "real_minus_shuffled_gain": 0.11307989772442611,
+        "base_rmse": 0.3343074714558452,
+        "real_augmented_rmse": 0.27874853257483223,
+        "shuffled_augmented_rmse": 0.3165519872555707
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.005877397394240163,
+          0.22587139717995042
+        ],
+        "real_r2": [
+          -0.4465393589254123,
+          0.4849166246971701
+        ],
+        "shuffled_gain": [
+          -0.0971484514865763,
+          0.09997913964818522
+        ],
+        "real_minus_shuffled_gain": [
+          0.0016720418222880933,
+          0.1511174160070188
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__donor_doi_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "donor_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 130,
+      "observed": {
+        "real_relative_rmse_gain": -0.05736694113082974,
+        "real_augmented_r2": 0.017913739615159963,
+        "shuffled_relative_rmse_gain": -0.050398848932149264,
+        "shuffled_augmented_r2": 0.030815067687293807,
+        "real_minus_shuffled_gain": -0.006968092198680477,
+        "base_rmse": 0.3309972775215818,
+        "real_augmented_rmse": 0.3499855788556273,
+        "shuffled_augmented_rmse": 0.3476791593083447
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.18210045061320024,
+          0.0390265294987002
+        ],
+        "real_r2": [
+          -0.47949060711730024,
+          0.2273709808940782
+        ],
+        "shuffled_gain": [
+          -0.17966410882017952,
+          0.026934708060892504
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10005330657358284,
+          0.06525595926605537
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.01701716248248021,
+        "real_augmented_r2": 0.255023901249538,
+        "shuffled_relative_rmse_gain": -0.04959282764997778,
+        "shuffled_augmented_r2": 0.20653553040089168,
+        "real_minus_shuffled_gain": 0.03257566516749757,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3040773919473785,
+        "shuffled_augmented_rmse": 0.3138171718355614
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.066600458889232,
+          0.03333576571367212
+        ],
+        "real_r2": [
+          0.06241225180809345,
+          0.4004324970368725
+        ],
+        "shuffled_gain": [
+          -0.0777422326260719,
+          -0.01933717574073658
+        ],
+        "real_minus_shuffled_gain": [
+          -0.019541557557772232,
+          0.0844854825226334
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": -0.07936648156601751,
+        "real_augmented_r2": 0.020675797661013684,
+        "shuffled_relative_rmse_gain": -0.02597271197851513,
+        "shuffled_augmented_r2": 0.11516915748232559,
+        "real_minus_shuffled_gain": -0.05339376958750239,
+        "base_rmse": 0.3017673694834426,
+        "real_augmented_rmse": 0.32571758385077587,
+        "shuffled_augmented_rmse": 0.30960508645555024
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.10132759572403147,
+          -0.04640273392242169
+        ],
+        "real_r2": [
+          -0.4571073490936515,
+          0.47902499018375283
+        ],
+        "shuffled_gain": [
+          -0.07221892397182354,
+          0.015687821887653716
+        ],
+        "real_minus_shuffled_gain": [
+          -0.09256408717194119,
+          -0.007788063867433494
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": 0.05510588177422104,
+        "real_augmented_r2": 0.42870419280366767,
+        "shuffled_relative_rmse_gain": -0.06063355197589134,
+        "shuffled_augmented_r2": 0.2801774157865662,
+        "real_minus_shuffled_gain": 0.11573943375011238,
+        "base_rmse": 0.30476217798264016,
+        "real_augmented_rmse": 0.2879679894334747,
+        "shuffled_augmented_rmse": 0.3232409913416364
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.03284267052822839,
+          0.15613784750076873
+        ],
+        "real_r2": [
+          0.23721005877900467,
+          0.5748065315600751
+        ],
+        "shuffled_gain": [
+          -0.11276729611893278,
+          -0.011351552645813057
+        ],
+        "real_minus_shuffled_gain": [
+          0.023849376354096674,
+          0.233010368905878
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": -0.10757189736762184,
+        "real_augmented_r2": 0.03972273754684885,
+        "shuffled_relative_rmse_gain": -0.10638183244671306,
+        "shuffled_augmented_r2": 0.04178522817671826,
+        "real_minus_shuffled_gain": -0.0011900649209087705,
+        "base_rmse": 0.28119766857755535,
+        "real_augmented_rmse": 0.3114466353217947,
+        "shuffled_augmented_rmse": 0.3111119918405792
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.20192425282725135,
+          -0.028916499546094564
+        ],
+        "real_r2": [
+          -0.7870523473686917,
+          0.4404150833603148
+        ],
+        "shuffled_gain": [
+          -0.17124078595591297,
+          0.0008074700899072621
+        ],
+        "real_minus_shuffled_gain": [
+          -0.11234603401701998,
+          0.05776321265135196
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__full_doi_disjoint",
+      "arms": "provenance_ladder;donor_specificity;state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.006246753907322922,
+        "real_augmented_r2": 0.2132875193861966,
+        "shuffled_relative_rmse_gain": -0.006640061394290325,
+        "shuffled_augmented_r2": 0.21267240111952612,
+        "real_minus_shuffled_gain": 0.0003933074869674029,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.2985902976661935,
+        "shuffled_augmented_rmse": 0.298707006414969
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07017377168264877,
+          0.03305717659865255
+        ],
+        "real_r2": [
+          -0.2221046260664047,
+          0.36780509655732424
+        ],
+        "shuffled_gain": [
+          -0.039737953319042785,
+          0.06945418916216725
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10434834722807372,
+          0.0636696894060827
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0736372757495755,
+        "real_augmented_r2": 0.26861950718394434,
+        "shuffled_relative_rmse_gain": 0.03051523054018401,
+        "shuffled_augmented_r2": 0.1989433837865413,
+        "real_minus_shuffled_gain": 0.04312204520939149,
+        "base_rmse": 0.3252397189819271,
+        "real_augmented_rmse": 0.3012899521105405,
+        "shuffled_augmented_rmse": 0.31531495397636894
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.014574970221468754,
+          0.12010474019368854
+        ],
+        "real_r2": [
+          0.03532638972740958,
+          0.4393104501784267
+        ],
+        "shuffled_gain": [
+          -0.048360243708558216,
+          0.08811578677623184
+        ],
+        "real_minus_shuffled_gain": [
+          0.02005549921415266,
+          0.07557045211172837
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 206,
+      "observed": {
+        "real_relative_rmse_gain": 0.028433548865516974,
+        "real_augmented_r2": 0.3243950989348625,
+        "shuffled_relative_rmse_gain": -0.028302434949125554,
+        "shuffled_augmented_r2": 0.24318540282237433,
+        "real_minus_shuffled_gain": 0.056735983814642524,
+        "base_rmse": 0.324589048953946,
+        "real_augmented_rmse": 0.3153598303693023,
+        "shuffled_augmented_rmse": 0.3337757093971636
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.03149050241787506,
+          0.07425360736978963
+        ],
+        "real_r2": [
+          -0.00936336697207915,
+          0.5182248719041094
+        ],
+        "shuffled_gain": [
+          -0.11939755001595101,
+          0.03805836213227751
+        ],
+        "real_minus_shuffled_gain": [
+          0.016739543410438124,
+          0.10613827547951149
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 172,
+      "observed": {
+        "real_relative_rmse_gain": 0.07033049647998572,
+        "real_augmented_r2": 0.4256668012605268,
+        "shuffled_relative_rmse_gain": 0.03676571562557176,
+        "shuffled_augmented_r2": 0.38344671583545575,
+        "real_minus_shuffled_gain": 0.033564780854413966,
+        "base_rmse": 0.30221063171900464,
+        "real_augmented_rmse": 0.2809560079486769,
+        "shuffled_augmented_rmse": 0.2910996415741993
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.02003049671188977,
+          0.15977530740297097
+        ],
+        "real_r2": [
+          0.2483754778999634,
+          0.6323514582347232
+        ],
+        "shuffled_gain": [
+          -0.071579815131017,
+          0.09402751106664983
+        ],
+        "real_minus_shuffled_gain": [
+          0.003645269991908675,
+          0.12595329710215375
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 348,
+      "observed": {
+        "real_relative_rmse_gain": 0.12864429568881341,
+        "real_augmented_r2": 0.11152038116094565,
+        "shuffled_relative_rmse_gain": 0.09460696407230874,
+        "shuffled_augmented_r2": 0.04075219986580114,
+        "real_minus_shuffled_gain": 0.03403733161650467,
+        "base_rmse": 0.33430747145584533,
+        "real_augmented_rmse": 0.2913007222469,
+        "shuffled_augmented_rmse": 0.3026796565147178
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.024990277790431645,
+          0.16959753778953007
+        ],
+        "real_r2": [
+          -0.7108237064180527,
+          0.4882298634943547
+        ],
+        "shuffled_gain": [
+          -0.05390854747345848,
+          0.15244019706828452
+        ],
+        "real_minus_shuffled_gain": [
+          -0.020852752502212232,
+          0.11770856946374353
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "provenance__system_disjoint",
+      "arms": "provenance_ladder",
+      "provenance_mode": "system_disjoint",
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 130,
+      "observed": {
+        "real_relative_rmse_gain": 0.004672739503194756,
+        "real_augmented_r2": 0.1297781629965321,
+        "shuffled_relative_rmse_gain": -0.049905034866830754,
+        "shuffled_augmented_r2": 0.03172612095583771,
+        "real_minus_shuffled_gain": 0.05457777437002551,
+        "base_rmse": 0.3309972775215818,
+        "real_augmented_rmse": 0.3294506134674568,
+        "shuffled_augmented_rmse": 0.3475157081971224
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.10268485021931052,
+          0.07611732548295054
+        ],
+        "real_r2": [
+          -0.27020510664723757,
+          0.3349895298220678
+        ],
+        "shuffled_gain": [
+          -0.18726174444681365,
+          0.03187488234766703
+        ],
+        "real_minus_shuffled_gain": [
+          0.012247962873933345,
+          0.12208644633285987
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.016776425526525595,
+        "real_augmented_r2": 0.2553765443686852,
+        "shuffled_relative_rmse_gain": -0.03121877949689099,
+        "shuffled_augmented_r2": 0.23407295922790317,
+        "real_minus_shuffled_gain": 0.014442353970365394,
+        "base_rmse": 0.29898944006524253,
+        "real_augmented_rmse": 0.30400541413971466,
+        "shuffled_augmented_rmse": 0.30832352546653824
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.061802613439221304,
+          0.021861070755541927
+        ],
+        "real_r2": [
+          0.11131925661482701,
+          0.35902334461572766
+        ],
+        "shuffled_gain": [
+          -0.06797752184720915,
+          0.0004581347037814318
+        ],
+        "real_minus_shuffled_gain": [
+          -0.010106493470350267,
+          0.03458918259320387
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": 0.01239749322093713,
+        "real_augmented_r2": 0.18011488887893157,
+        "shuffled_relative_rmse_gain": 0.0006938745527724618,
+        "shuffled_augmented_r2": 0.1605675927548651,
+        "real_minus_shuffled_gain": 0.011703618668164668,
+        "base_rmse": 0.3017673694834426,
+        "real_augmented_rmse": 0.2980262105659716,
+        "shuffled_augmented_rmse": 0.301557980784901
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.06966418729151815,
+          0.041326564883927795
+        ],
+        "real_r2": [
+          -0.18644801347228374,
+          0.4659654073947895
+        ],
+        "shuffled_gain": [
+          -0.05986057747073853,
+          0.023755827628187915
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02671584721366316,
+          0.03501376424421222
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": -0.0008663815503207697,
+        "real_augmented_r2": 0.35901635389058084,
+        "shuffled_relative_rmse_gain": -0.029669350032484325,
+        "shuffled_augmented_r2": 0.32159300651034517,
+        "real_minus_shuffled_gain": 0.028802968482163554,
+        "base_rmse": 0.30476217798264016,
+        "real_augmented_rmse": 0.3050262183108799,
+        "shuffled_augmented_rmse": 0.3138042737178694
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.04726483850203587,
+          0.05099827823911724
+        ],
+        "real_r2": [
+          0.21337438818599633,
+          0.44543580785172227
+        ],
+        "shuffled_gain": [
+          -0.0586473324014217,
+          0.01410609463628811
+        ],
+        "real_minus_shuffled_gain": [
+          -0.009483453269568193,
+          0.05994732954462656
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": -0.12899513938896684,
+        "real_augmented_r2": 0.0022150832856260294,
+        "shuffled_relative_rmse_gain": -0.11006945346079403,
+        "shuffled_augmented_r2": 0.035387036272561234,
+        "real_minus_shuffled_gain": -0.018925685928172814,
+        "base_rmse": 0.28119766857755535,
+        "real_augmented_rmse": 0.3174708010315696,
+        "shuffled_augmented_rmse": 0.31214894227233636
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.21841006864721854,
+          0.015621835196765256
+        ],
+        "real_r2": [
+          -1.0860316075888208,
+          0.4748498904155292
+        ],
+        "shuffled_gain": [
+          -0.21242775597698693,
+          0.06413999956505481
+        ],
+        "real_minus_shuffled_gain": [
+          -0.08688256119761918,
+          0.012429841929047775
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__elongation",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "elongation",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.002358364239765907,
+        "real_augmented_r2": 0.2193558802756319,
+        "shuffled_relative_rmse_gain": -0.016144211045398413,
+        "shuffled_augmented_r2": 0.1977351772652628,
+        "real_minus_shuffled_gain": 0.013785846805632506,
+        "base_rmse": 0.2967366567959078,
+        "real_augmented_rmse": 0.297436469915923,
+        "shuffled_augmented_rmse": 0.3015272360081269
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.11625114026924901,
+          0.0901300934759072
+        ],
+        "real_r2": [
+          -0.10891206288007807,
+          0.36048091677347793
+        ],
+        "shuffled_gain": [
+          -0.06498176582477665,
+          0.03969034966645085
+        ],
+        "real_minus_shuffled_gain": [
+          -0.09592087986849321,
+          0.09753433438212955
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.014250052113390681,
+        "real_augmented_r2": 0.259072263032324,
+        "shuffled_relative_rmse_gain": -0.028942879002243644,
+        "shuffled_augmented_r2": 0.2374500314318181,
+        "real_minus_shuffled_gain": 0.014692826888852963,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.3032500551675257,
+        "shuffled_augmented_rmse": 0.30764305525199936
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07747141245325724,
+          0.04335528320489908
+        ],
+        "real_r2": [
+          0.07726944836607796,
+          0.3773526912100008
+        ],
+        "shuffled_gain": [
+          -0.07610766801923609,
+          0.013235671564174035
+        ],
+        "real_minus_shuffled_gain": [
+          -0.025157656127139386,
+          0.05143181417741312
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": 0.0639227233678495,
+        "real_augmented_r2": 0.26343337182918947,
+        "shuffled_relative_rmse_gain": 0.01919336183552818,
+        "shuffled_augmented_r2": 0.19135961755074704,
+        "real_minus_shuffled_gain": 0.04472936153232132,
+        "base_rmse": 0.3017673694834426,
+        "real_augmented_rmse": 0.2824775774025089,
+        "shuffled_augmented_rmse": 0.2959754391707914
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.016284540452367036,
+          0.15147674263426428
+        ],
+        "real_r2": [
+          0.01649375109734509,
+          0.5501048906241116
+        ],
+        "shuffled_gain": [
+          -0.014159031128610439,
+          0.06573791876964066
+        ],
+        "real_minus_shuffled_gain": [
+          -0.015272594617685752,
+          0.0927986564688876
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": 0.01082766839979262,
+        "real_augmented_r2": 0.3739072630790652,
+        "shuffled_relative_rmse_gain": -0.030228728837523366,
+        "shuffled_augmented_r2": 0.32085570268874575,
+        "real_minus_shuffled_gain": 0.04105639723731599,
+        "base_rmse": 0.30476217798264016,
+        "real_augmented_rmse": 0.30146231417864555,
+        "shuffled_augmented_rmse": 0.3139747512208104
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.044181972704937796,
+          0.07278572776720026
+        ],
+        "real_r2": [
+          0.2494289624613717,
+          0.460399461843197
+        ],
+        "shuffled_gain": [
+          -0.08319681301819862,
+          0.026473292324462907
+        ],
+        "real_minus_shuffled_gain": [
+          -0.009946535064623088,
+          0.0877452259747196
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": -0.179173930141449,
+        "real_augmented_r2": -0.08845011136756042,
+        "shuffled_relative_rmse_gain": -0.15371505603632848,
+        "shuffled_augmented_r2": -0.04195727343646527,
+        "real_minus_shuffled_gain": -0.025458874105120516,
+        "base_rmse": 0.28119766857755535,
+        "real_augmented_rmse": 0.3315809600032086,
+        "shuffled_augmented_rmse": 0.3244219839602392
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.3081830339776143,
+          0.021440442214619333
+        ],
+        "real_r2": [
+          -1.1398040964416911,
+          0.4552907292279698
+        ],
+        "shuffled_gain": [
+          -0.2731797438897665,
+          0.04091333457541706
+        ],
+        "real_minus_shuffled_gain": [
+          -0.10079366193066397,
+          0.04514860094268131
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "specificity__hardness",
+      "arms": "donor_specificity",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "hardness",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.05092105310722744,
+        "real_augmented_r2": 0.14188154938801623,
+        "shuffled_relative_rmse_gain": 0.01305876533236974,
+        "shuffled_augmented_r2": 0.24318515217487346,
+        "real_minus_shuffled_gain": -0.06397981843959719,
+        "base_rmse": 0.2967366567959077,
+        "real_augmented_rmse": 0.31184679985547326,
+        "shuffled_augmented_rmse": 0.292861642429298
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.12473725857452798,
+          0.08121090603361603
+        ],
+        "real_r2": [
+          -0.1456729940509439,
+          0.35451063233528396
+        ],
+        "shuffled_gain": [
+          -0.06730145211030394,
+          0.05762202347995884
+        ],
+        "real_minus_shuffled_gain": [
+          -0.1326878766946849,
+          0.07079012319313038
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.004094613589954616,
+        "real_augmented_r2": -0.03782008993195185,
+        "shuffled_relative_rmse_gain": 0.00704035244630472,
+        "shuffled_augmented_r2": -0.031689737159035225,
+        "real_minus_shuffled_gain": -0.0029457388563501044,
+        "base_rmse": 0.3603760472296733,
+        "real_augmented_rmse": 0.35890044656919257,
+        "shuffled_augmented_rmse": 0.35783887284397026
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.025004543658681433,
+          0.02985363263824145
+        ],
+        "real_r2": [
+          -0.16374269719954912,
+          0.04368950952336524
+        ],
+        "shuffled_gain": [
+          -0.01149732644562021,
+          0.02586203497104232
+        ],
+        "real_minus_shuffled_gain": [
+          -0.021339073379269293,
+          0.01484055364520847
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": -0.009345806956947117,
+        "real_augmented_r2": -0.0013857770691692028,
+        "shuffled_relative_rmse_gain": -0.009361192603767231,
+        "shuffled_augmented_r2": -0.0014163059230389852,
+        "real_minus_shuffled_gain": 1.5385646820114535e-05,
+        "base_rmse": 0.3263162391134613,
+        "real_augmented_rmse": 0.3293659276911327,
+        "shuffled_augmented_rmse": 0.3293709482775394
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.04576834714923809,
+          0.022854312249905778
+        ],
+        "real_r2": [
+          -0.14880245344658197,
+          0.0735815628017331
+        ],
+        "shuffled_gain": [
+          -0.03632333095032748,
+          0.016391480640364463
+        ],
+        "real_minus_shuffled_gain": [
+          -0.029695642980890325,
+          0.02072968878071515
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": -0.01210625617657888,
+        "real_augmented_r2": 0.0048250715444664305,
+        "shuffled_relative_rmse_gain": 0.008337406317886787,
+        "shuffled_augmented_r2": 0.04462236439882261,
+        "real_minus_shuffled_gain": -0.020443662494465664,
+        "base_rmse": 0.3755236552381031,
+        "real_augmented_rmse": 0.38006984080878087,
+        "shuffled_augmented_rmse": 0.372392761942405
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.0631081455256631,
+          0.032784441550375146
+        ],
+        "real_r2": [
+          -0.15540011194467349,
+          0.06697949164437408
+        ],
+        "shuffled_gain": [
+          -0.020735295937110806,
+          0.0479904344359351
+        ],
+        "real_minus_shuffled_gain": [
+          -0.046765196652172984,
+          0.004987630843684884
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": 0.0585464901902387,
+        "real_augmented_r2": -0.11169960724852679,
+        "shuffled_relative_rmse_gain": 0.04274584847718208,
+        "shuffled_augmented_r2": -0.14932859387634712,
+        "real_minus_shuffled_gain": 0.015800641713056618,
+        "base_rmse": 0.35594276337728453,
+        "real_augmented_rmse": 0.3351035638729299,
+        "shuffled_augmented_rmse": 0.34072768794740965
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.009855228791144807,
+          0.09523674072281191
+        ],
+        "real_r2": [
+          -0.8546498497786376,
+          0.24705119394367675
+        ],
+        "shuffled_gain": [
+          0.01579149999010267,
+          0.08308676645064401
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02790072549305133,
+          0.0442350491201022
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__composition_only",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "composition_only",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.01507897655482446,
+        "real_augmented_r2": -0.23522444237446027,
+        "shuffled_relative_rmse_gain": -0.006547785659834197,
+        "shuffled_augmented_r2": -0.29006578459030186,
+        "real_minus_shuffled_gain": 0.021626762214658656,
+        "base_rmse": 0.37987367865799176,
+        "real_augmented_rmse": 0.374145572363713,
+        "shuffled_augmented_rmse": 0.382361010083657
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.03960789339530321,
+          0.06117321540513629
+        ],
+        "real_r2": [
+          -1.093413205172593,
+          -0.001459125927303457
+        ],
+        "shuffled_gain": [
+          -0.04740761900724718,
+          0.024243698702898515
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02303269767572476,
+          0.06803992989284459
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.010899857395165644,
+        "real_augmented_r2": 0.32291855105037603,
+        "shuffled_relative_rmse_gain": -0.0020490471467406604,
+        "shuffled_augmented_r2": 0.3050743455266055,
+        "real_minus_shuffled_gain": 0.012948904541906305,
+        "base_rmse": 0.2930847051094464,
+        "real_augmented_rmse": 0.28989012361904926,
+        "shuffled_augmented_rmse": 0.29368524948820424
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.081170811909068,
+          0.09848559862628926
+        ],
+        "real_r2": [
+          0.08966507005166946,
+          0.480357440120647
+        ],
+        "shuffled_gain": [
+          -0.06146963061654937,
+          0.053247049653187176
+        ],
+        "real_minus_shuffled_gain": [
+          -0.03192663481345748,
+          0.05609012978507741
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": -0.04884086112117827,
+        "real_augmented_r2": 0.07175306078497667,
+        "shuffled_relative_rmse_gain": -0.022713368425285235,
+        "shuffled_augmented_r2": 0.11742383468463968,
+        "real_minus_shuffled_gain": -0.026127492695893033,
+        "base_rmse": 0.3023431443107626,
+        "real_augmented_rmse": 0.3171098438329849,
+        "shuffled_augmented_rmse": 0.3092103755383521
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.11370505893211515,
+          0.04002020020024989
+        ],
+        "real_r2": [
+          -0.3892106520017581,
+          0.4825919866692965
+        ],
+        "shuffled_gain": [
+          -0.07233222267226597,
+          0.047825556491435155
+        ],
+        "real_minus_shuffled_gain": [
+          -0.04800304807104281,
+          -0.001660330770179849
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": 0.11285409425178027,
+        "real_augmented_r2": 0.5363467743626095,
+        "shuffled_relative_rmse_gain": 0.032569910498680334,
+        "shuffled_augmented_r2": 0.44863097796760976,
+        "real_minus_shuffled_gain": 0.08028418375309992,
+        "base_rmse": 0.2924255302022156,
+        "real_augmented_rmse": 0.25942411185514797,
+        "shuffled_augmented_rmse": 0.2829012568560003
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.044130760288093485,
+          0.21908194176849516
+        ],
+        "real_r2": [
+          0.3053089725160153,
+          0.633645469674038
+        ],
+        "shuffled_gain": [
+          -0.09600820228608323,
+          0.1051502859446448
+        ],
+        "real_minus_shuffled_gain": [
+          0.016544286304056473,
+          0.14409442843909495
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": -0.15683911505640655,
+        "real_augmented_r2": 0.015651141148787406,
+        "shuffled_relative_rmse_gain": -0.11745532634535019,
+        "shuffled_augmented_r2": 0.08153322019138154,
+        "real_minus_shuffled_gain": -0.039383788711056356,
+        "base_rmse": 0.2725755374239222,
+        "real_augmented_rmse": 0.3153260434995146,
+        "shuffled_augmented_rmse": 0.3045909861258082
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.2845364520586741,
+          -0.0513526676085254
+        ],
+        "real_r2": [
+          -0.7910455541507045,
+          0.4486371257132789
+        ],
+        "shuffled_gain": [
+          -0.16974538003798237,
+          -0.06209333399965113
+        ],
+        "real_minus_shuffled_gain": [
+          -0.12710619718813465,
+          0.02598285483937676
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_density",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_density",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.033963227623328644,
+        "real_augmented_r2": 0.26496637431737835,
+        "shuffled_relative_rmse_gain": 0.055271688277466514,
+        "shuffled_augmented_r2": 0.29703491996016074,
+        "real_minus_shuffled_gain": -0.02130846065413787,
+        "base_rmse": 0.29876355407893423,
+        "real_augmented_rmse": 0.28861657948619673,
+        "shuffled_augmented_rmse": 0.2822503880492154
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.31803566156033614,
+          0.2232636376252196
+        ],
+        "real_r2": [
+          -0.47967176621561686,
+          0.5146409899795111
+        ],
+        "shuffled_gain": [
+          -0.1801899143948199,
+          0.15613592007979615
+        ],
+        "real_minus_shuffled_gain": [
+          -0.17126547448889806,
+          0.07970550500173554
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.017334499812836364,
+        "real_augmented_r2": 0.29223922395962065,
+        "shuffled_relative_rmse_gain": -0.02104400604898161,
+        "shuffled_augmented_r2": 0.23587573168020703,
+        "real_minus_shuffled_gain": 0.03837850586181797,
+        "base_rmse": 0.3016133068984273,
+        "real_augmented_rmse": 0.29638499108644756,
+        "shuffled_augmented_rmse": 0.30796045915325115
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.027070085826371354,
+          0.06615791455018652
+        ],
+        "real_r2": [
+          0.062311044315727544,
+          0.4380764283399809
+        ],
+        "shuffled_gain": [
+          -0.06291715941583177,
+          0.021347974703924612
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02461409699048444,
+          0.09864085613233214
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": -0.028536045986614664,
+        "real_augmented_r2": -0.0011910799000243166,
+        "shuffled_relative_rmse_gain": 0.021253307394291043,
+        "shuffled_augmented_r2": 0.0933940739420498,
+        "real_minus_shuffled_gain": -0.049789353380905704,
+        "base_rmse": 0.3201967577937126,
+        "real_augmented_rmse": 0.3293339071988789,
+        "shuffled_augmented_rmse": 0.31339151767366746
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.09204660216545475,
+          0.04958681104218342
+        ],
+        "real_r2": [
+          -0.4882195186735203,
+          0.4337710816571787
+        ],
+        "shuffled_gain": [
+          -0.03014002528100809,
+          0.08476590102328599
+        ],
+        "real_minus_shuffled_gain": [
+          -0.1365233421072227,
+          0.05351903999272988
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": 0.05404045025164605,
+        "real_augmented_r2": 0.4762004778383524,
+        "shuffled_relative_rmse_gain": -0.0653625748529342,
+        "shuffled_augmented_r2": 0.33562261814281014,
+        "real_minus_shuffled_gain": 0.11940302510458026,
+        "base_rmse": 0.29149001252124906,
+        "real_augmented_rmse": 0.2757377610007428,
+        "shuffled_augmented_rmse": 0.31054255028355193
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.030429386235712837,
+          0.15874554452900194
+        ],
+        "real_r2": [
+          0.22193579383079523,
+          0.6094296029325059
+        ],
+        "shuffled_gain": [
+          -0.12841259903014438,
+          0.011013420849913802
+        ],
+        "real_minus_shuffled_gain": [
+          -0.005118353255366588,
+          0.2275330352190107
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": 0.03729373141866046,
+        "real_augmented_r2": 0.03982232153273357,
+        "shuffled_relative_rmse_gain": 0.04198459171473549,
+        "shuffled_augmented_r2": 0.049156604081905475,
+        "real_minus_shuffled_gain": -0.004690860296075031,
+        "base_rmse": 0.32349481460173696,
+        "real_augmented_rmse": 0.3114304858706504,
+        "shuffled_augmented_rmse": 0.309913016888849
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07742752612502157,
+          0.09351913613364221
+        ],
+        "real_r2": [
+          -0.7626446509995445,
+          0.4121331109348488
+        ],
+        "shuffled_gain": [
+          -0.0617970542221747,
+          0.09852223751119024
+        ],
+        "real_minus_shuffled_gain": [
+          -0.05832175663440932,
+          0.05851309613122662
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_processing_or_phase",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_processing_or_phase",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": -0.00659968104896665,
+        "real_augmented_r2": 0.34883075676761943,
+        "shuffled_relative_rmse_gain": -0.07233740996836542,
+        "shuffled_augmented_r2": 0.26100207867338365,
+        "real_minus_shuffled_gain": 0.06573772891939877,
+        "base_rmse": 0.2698719971085472,
+        "real_augmented_rmse": 0.27165306621351126,
+        "shuffled_augmented_rmse": 0.2893938384023697
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.10205287876606542,
+          0.07765211217792264
+        ],
+        "real_r2": [
+          -0.22279724977767895,
+          0.5563363866912524
+        ],
+        "shuffled_gain": [
+          -0.17345073951496912,
+          0.030636247816724506
+        ],
+        "real_minus_shuffled_gain": [
+          -0.11008410653326124,
+          0.2206688157196254
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": -0.009899653305787137,
+        "real_augmented_r2": -0.0609284010269493,
+        "shuffled_relative_rmse_gain": -0.0029836252442427846,
+        "shuffled_augmented_r2": -0.046447187135182144,
+        "real_minus_shuffled_gain": -0.006916028061544352,
+        "base_rmse": 0.3593170096576401,
+        "real_augmented_rmse": 0.3628741234801229,
+        "shuffled_augmented_rmse": 0.36038907695834044
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.05283730738431494,
+          0.027711969230594508
+        ],
+        "real_r2": [
+          -0.2269322085683924,
+          0.07335283348590681
+        ],
+        "shuffled_gain": [
+          -0.038451456204629426,
+          0.03020972115174254
+        ],
+        "real_minus_shuffled_gain": [
+          -0.02608287526454814,
+          0.01562433856068692
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": -0.0006333007951135537,
+        "real_augmented_r2": 0.1484286770938743,
+        "shuffled_relative_rmse_gain": 0.0026456335774639244,
+        "shuffled_augmented_r2": 0.15400049162366858,
+        "real_minus_shuffled_gain": -0.0032789343725774783,
+        "base_rmse": 0.30353831769327627,
+        "real_augmented_rmse": 0.30373054875121885,
+        "shuffled_augmented_rmse": 0.30273526652794003
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.04927182178004932,
+          0.10809602506639998
+        ],
+        "real_r2": [
+          -0.0805397749946677,
+          0.36454404235566895
+        ],
+        "shuffled_gain": [
+          -0.0528562547060911,
+          0.09760726676457968
+        ],
+        "real_minus_shuffled_gain": [
+          -0.030530696631347966,
+          0.04886333717657126
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": -0.0027856719367514676,
+        "real_augmented_r2": -0.10119075843015546,
+        "shuffled_relative_rmse_gain": 0.011684680134752714,
+        "shuffled_augmented_r2": -0.06963935334669213,
+        "real_minus_shuffled_gain": -0.014470352071504182,
+        "base_rmse": 0.39869138808743165,
+        "real_augmented_rmse": 0.3998020114986513,
+        "shuffled_augmented_rmse": 0.39403280674514946
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.07577603832049604,
+          0.04757814048074234
+        ],
+        "real_r2": [
+          -0.28500127764445043,
+          0.05530398439976005
+        ],
+        "shuffled_gain": [
+          -0.0624308943972192,
+          0.05175134465469498
+        ],
+        "real_minus_shuffled_gain": [
+          -0.04526279966958813,
+          0.02134482412051827
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": -0.06884862646556249,
+        "real_augmented_r2": -0.2594345637998734,
+        "shuffled_relative_rmse_gain": -0.04005683843136537,
+        "shuffled_augmented_r2": -0.19249714682652885,
+        "real_minus_shuffled_gain": -0.028791788034197116,
+        "base_rmse": 0.3337005488665555,
+        "real_augmented_rmse": 0.35667537330682214,
+        "shuffled_augmented_rmse": 0.34706753783696104
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.11285726271252731,
+          0.04783619042672044
+        ],
+        "real_r2": [
+          -1.5414733582088231,
+          0.367454875812081
+        ],
+        "shuffled_gain": [
+          -0.07570766980574174,
+          0.03650087635424496
+        ],
+        "real_minus_shuffled_gain": [
+          -0.06205475272994961,
+          0.05181845758973686
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "state__no_test_context",
+      "arms": "state_dependence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "uts",
+      "contract": "no_test_context",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.009063365685446833,
+        "real_augmented_r2": -0.15574466699162137,
+        "shuffled_relative_rmse_gain": -0.022087157934900608,
+        "shuffled_augmented_r2": -0.2295494297742835,
+        "real_minus_shuffled_gain": 0.03115052362034744,
+        "base_rmse": 0.3652184731474417,
+        "real_augmented_rmse": 0.3619083645702259,
+        "shuffled_augmented_rmse": 0.3732851112445925
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          -0.08672534291295453,
+          0.13000891418381944
+        ],
+        "real_r2": [
+          -0.6985201658588222,
+          0.12564189298062164
+        ],
+        "shuffled_gain": [
+          -0.10477008398985829,
+          0.06876302572016982
+        ],
+        "real_minus_shuffled_gain": [
+          -0.023832304319404744,
+          0.08291281396760954
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "target_only__budget_120",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 120,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.29575910829209984,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.29575910829209984,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.29564707141320873,
+        "real_augmented_rmse": 0.29564707141320873,
+        "shuffled_augmented_rmse": 0.29564707141320873
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.1543637450361578,
+          0.40413122136806034
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_120",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 120,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 250,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.2792669928710273,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.2792669928710273,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2875359175413751,
+        "real_augmented_rmse": 0.2875359175413751,
+        "shuffled_augmented_rmse": 0.2875359175413751
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.09212510420289105,
+          0.5329850839281087
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_120",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 120,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 342,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.3385778313762904,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.3385778313762904,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2749738781252024,
+        "real_augmented_rmse": 0.2749738781252024,
+        "shuffled_augmented_rmse": 0.2749738781252024
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.18123852592311288,
+          0.44882787533132007
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_120",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 120,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 156,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.338491096864849,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.338491096864849,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.34166047167350055,
+        "real_augmented_rmse": 0.34166047167350055,
+        "shuffled_augmented_rmse": 0.34166047167350055
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.04367050941253591,
+          0.565932680867557
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_120",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 120,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 108,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": -0.06987724713295784,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": -0.06987724713295784,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.30554019745367267,
+        "real_augmented_rmse": 0.30554019745367267,
+        "shuffled_augmented_rmse": 0.30554019745367267
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -1.2851434393674306,
+          0.5523512854581176
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "target_only__budget_240",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 240,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.40092293648417976,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.40092293648417976,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2726806422136522,
+        "real_augmented_rmse": 0.2726806422136522,
+        "shuffled_augmented_rmse": 0.2726806422136522
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.19446408221419964,
+          0.5471522047099319
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_240",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 240,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 162,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.34271479316249476,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.34271479316249476,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.30790144024250043,
+        "real_augmented_rmse": 0.30790144024250043,
+        "shuffled_augmented_rmse": 0.30790144024250043
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.2608512519632271,
+          0.6422545575828507
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_240",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 240,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 228,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.30500892916928957,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.30500892916928957,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.29757658111454954,
+        "real_augmented_rmse": 0.29757658111454954,
+        "shuffled_augmented_rmse": 0.29757658111454954
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.04603069149462084,
+          0.639338988146076
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_240",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 240,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 344,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.487249531678954,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.487249531678954,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2506093243237529,
+        "real_augmented_rmse": 0.2506093243237529,
+        "shuffled_augmented_rmse": 0.2506093243237529
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.19350452579579536,
+          0.6635741968122216
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_240",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 240,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 122,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.2512659567248602,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.2512659567248602,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.23072889147364606,
+        "real_augmented_rmse": 0.23072889147364606,
+        "shuffled_augmented_rmse": 0.23072889147364606
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.591624170562677,
+          0.5896735094159139
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "target_only__budget_30",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 30,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.14600627513249076,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.14600627513249076,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.32556694310079737,
+        "real_augmented_rmse": 0.32556694310079737,
+        "shuffled_augmented_rmse": 0.32556694310079737
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.009842459636478501,
+          0.24464833407471265
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_30",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 30,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 280,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.098259066346854,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.098259066346854,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.3077251414422302,
+        "real_augmented_rmse": 0.3077251414422302,
+        "shuffled_augmented_rmse": 0.3077251414422302
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.440558181578382,
+          0.25515697661284675
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_30",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 30,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 296,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.13013263054553237,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.13013263054553237,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.34999686086531956,
+        "real_augmented_rmse": 0.34999686086531956,
+        "shuffled_augmented_rmse": 0.34999686086531956
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.08457952461537116,
+          0.3479457571647889
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_30",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 30,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 142,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.17721897479500226,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.17721897479500226,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.3382199569572598,
+        "real_augmented_rmse": 0.3382199569572598,
+        "shuffled_augmented_rmse": 0.3382199569572598
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.2003372073797636,
+          0.30999900459253116
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_30",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 30,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.19920868126772884,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.19920868126772884,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2913371245428976,
+        "real_augmented_rmse": 0.2913371245428976,
+        "shuffled_augmented_rmse": 0.2913371245428976
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.4977207129902672,
+          0.4221806275232159
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    },
+    {
+      "condition": "target_only__budget_60",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "all",
+      "evaluation_systems": 59,
+      "prediction_rows": 856,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.27974583936056197,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.27974583936056197,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2989894400652425,
+        "real_augmented_rmse": 0.2989894400652425,
+        "shuffled_augmented_rmse": 0.2989894400652425
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.13466037850125098,
+          0.39018513310873126
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_60",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q1",
+      "evaluation_systems": 15,
+      "prediction_rows": 232,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.15940145759568836,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.15940145759568836,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.30176736948344257,
+        "real_augmented_rmse": 0.30176736948344257,
+        "shuffled_augmented_rmse": 0.30176736948344257
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.26260164813372305,
+          0.5383777267579462
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_60",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q2",
+      "evaluation_systems": 15,
+      "prediction_rows": 350,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.3601255849666033,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.3601255849666033,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.3047621779826401,
+        "real_augmented_rmse": 0.3047621779826401,
+        "shuffled_augmented_rmse": 0.3047621779826401
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          0.17021200699957542,
+          0.46225220080087087
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_60",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q3",
+      "evaluation_systems": 15,
+      "prediction_rows": 138,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.21719644341566247,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.21719644341566247,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.2811976685775553,
+        "real_augmented_rmse": 0.2811976685775553,
+        "shuffled_augmented_rmse": 0.2811976685775553
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.3956709568160412,
+          0.529303620285561
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": null
+    },
+    {
+      "condition": "target_only__budget_60",
+      "arms": "target_label_equivalence",
+      "provenance_mode": "full_doi_disjoint",
+      "donor": "none",
+      "contract": "full_state",
+      "budget": 60,
+      "scope": "q4",
+      "evaluation_systems": 14,
+      "prediction_rows": 136,
+      "observed": {
+        "real_relative_rmse_gain": 0.0,
+        "real_augmented_r2": 0.2230249819146003,
+        "shuffled_relative_rmse_gain": 0.0,
+        "shuffled_augmented_r2": 0.2230249819146003,
+        "real_minus_shuffled_gain": 0.0,
+        "base_rmse": 0.29673665679590777,
+        "real_augmented_rmse": 0.29673665679590777,
+        "shuffled_augmented_rmse": 0.29673665679590777
+      },
+      "cluster_ci95": {
+        "real_gain": [
+          0.0,
+          0.0
+        ],
+        "real_r2": [
+          -0.07117388894778089,
+          0.34420463965477127
+        ],
+        "shuffled_gain": [
+          0.0,
+          0.0
+        ],
+        "real_minus_shuffled_gain": [
+          0.0,
+          0.0
+        ]
+      },
+      "q4_systems_per_model_draw": {
+        "min": 14,
+        "median": 14.0,
+        "max": 14,
+        "unique_union": 14
+      }
+    }
+  ],
+  "claim_guard": "This is a review-triggered retrospective sensitivity and mechanism analysis. It may show source-specific transfer on this programme under stronger leakage boundaries; it cannot establish prospective discovery, universal transfer, or a causal strengthening mechanism."
+}

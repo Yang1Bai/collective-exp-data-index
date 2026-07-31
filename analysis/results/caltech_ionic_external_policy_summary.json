@@ -1,0 +1,619 @@
+{
+  "status": "complete",
+  "design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "implementation_sha256": "3653c974a6fd7e82a2e4cb879c77b6abf059efb26610fcddf5327698cef924ac",
+  "inference_amendment_sha256": "3243fa5eaa354f47a0e4a303ecc4e36bb8ec1c5f9d391ee423163b08dfd116bc",
+  "state_match_amendment_sha256": "477fb243a7e5a87a0aeabf0e472f707128ab22716a933b94a3611cc75c4cf24c",
+  "infrastructure_amendment_sha256": "4962e60cdf12bf432771856f009c92000e5e886c7d51a02a9f0162315f0caba9",
+  "target_md5": "d1fcf7c9a7694c8f466932721b76b168",
+  "seeds": 100,
+  "budget": 40,
+  "workers": 64,
+  "policies": [
+    "uniform_random",
+    "composition_novelty",
+    "safe_target_novelty",
+    "obelix_same_property_static",
+    "estm_transport_neighbor_static",
+    "borg_mechanical_static_control",
+    "ocx_catalysis_static_control",
+    "shuffled_obelix_static_control",
+    "safe_obelix_residual",
+    "safe_estm_residual",
+    "safe_borg_residual_control",
+    "safe_ocx_residual_control",
+    "safe_shuffled_obelix_control",
+    "safe_multisource_residual",
+    "safe_multisource_novelty_band"
+  ],
+  "candidate_pools": {
+    "external_candidate": 144,
+    "hard_ood_40pct": 58
+  },
+  "trajectory_rows": 120000,
+  "gate_rows": 184000,
+  "source_quality": [
+    {
+      "source": "obelix_same_property",
+      "entities": 181,
+      "groups": 54,
+      "oof_r2": 0.06537689586151618,
+      "oof_rmse": 1.986287204312586,
+      "oof_spearman": 0.4854346140195888
+    },
+    {
+      "source": "estm_transport_neighbor",
+      "entities": 870,
+      "groups": 159,
+      "oof_r2": 0.25704104010882156,
+      "oof_rmse": 0.24141058394549292,
+      "oof_spearman": 0.5169407826205168
+    },
+    {
+      "source": "borg_mechanical_control",
+      "entities": 395,
+      "groups": 90,
+      "oof_r2": 0.16359530827119872,
+      "oof_rmse": 0.2623429776605991,
+      "oof_spearman": 0.41548223073618545
+    },
+    {
+      "source": "ocx_catalysis_control",
+      "entities": 212,
+      "groups": 212,
+      "oof_r2": 0.5427450288079936,
+      "oof_rmse": 14.181684439365933,
+      "oof_spearman": 0.7377498094283973
+    }
+  ],
+  "primary_contrasts": [
+    {
+      "scope": "external_candidate",
+      "family": "policy_validity",
+      "left_policy": "composition_novelty",
+      "right_policy": "uniform_random",
+      "seeds": 100,
+      "left_auc20_mean": 0.0,
+      "right_auc20_mean": 11.25,
+      "mean_auc20_gain": -11.25,
+      "relative_auc20_gain": -1.0,
+      "auc20_gain_ci95": [
+        -13.57,
+        -9.029750000000003
+      ],
+      "fraction_campaigns_improved": 0.0,
+      "signflip_p_one_sided": 1.0,
+      "left_first_hit_mean": 40.97,
+      "right_first_hit_mean": 15.77,
+      "mean_first_hit_saved": -25.2,
+      "first_hit_saved_ci95": [
+        -27.52025,
+        -22.75
+      ],
+      "left_recall_at_20_mean": 0.0,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": false,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "policy_validity",
+      "left_policy": "safe_target_novelty",
+      "right_policy": "composition_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.28,
+      "right_auc20_mean": 0.0,
+      "mean_auc20_gain": 0.28,
+      "relative_auc20_gain": NaN,
+      "auc20_gain_ci95": [
+        0.01,
+        0.65
+      ],
+      "fraction_campaigns_improved": 0.04,
+      "signflip_p_one_sided": 0.0622,
+      "left_first_hit_mean": 37.53,
+      "right_first_hit_mean": 40.97,
+      "mean_first_hit_saved": 3.44,
+      "first_hit_saved_ci95": [
+        2.18,
+        4.87
+      ],
+      "left_recall_at_20_mean": 0.00625,
+      "holm_p": 0.4976,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "same_property_increment",
+      "left_policy": "safe_obelix_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.22,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": -0.06,
+      "relative_auc20_gain": -0.21428571428571425,
+      "auc20_gain_ci95": [
+        -0.3,
+        0.12
+      ],
+      "fraction_campaigns_improved": 0.03,
+      "signflip_p_one_sided": 0.6963,
+      "left_first_hit_mean": 37.43,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": 0.1,
+      "first_hit_saved_ci95": [
+        -0.86,
+        1.03
+      ],
+      "left_recall_at_20_mean": 0.0075,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "adjacent_transport_increment",
+      "left_policy": "safe_estm_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.22,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": -0.06,
+      "relative_auc20_gain": -0.21428571428571425,
+      "auc20_gain_ci95": [
+        -0.23,
+        0.07
+      ],
+      "fraction_campaigns_improved": 0.02,
+      "signflip_p_one_sided": 0.8161,
+      "left_first_hit_mean": 37.71,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": -0.18,
+      "first_hit_saved_ci95": [
+        -1.21,
+        0.82
+      ],
+      "left_recall_at_20_mean": 0.005,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "safe_multisource_increment",
+      "left_policy": "safe_multisource_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.19,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": -0.09,
+      "relative_auc20_gain": -0.3214285714285714,
+      "auc20_gain_ci95": [
+        -0.34024999999999994,
+        0.09
+      ],
+      "fraction_campaigns_improved": 0.01,
+      "signflip_p_one_sided": 0.7474,
+      "left_first_hit_mean": 37.7,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": -0.17,
+      "first_hit_saved_ci95": [
+        -0.97,
+        0.6602499999999963
+      ],
+      "left_recall_at_20_mean": 0.005,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "negative_transfer",
+      "left_policy": "safe_borg_residual_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.23,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": -0.05,
+      "relative_auc20_gain": -0.17857142857142858,
+      "auc20_gain_ci95": [
+        -0.18,
+        0.03
+      ],
+      "fraction_campaigns_improved": 0.01,
+      "signflip_p_one_sided": 0.7532,
+      "left_first_hit_mean": 37.6,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": -0.07,
+      "first_hit_saved_ci95": [
+        -0.68,
+        0.54
+      ],
+      "left_recall_at_20_mean": 0.005,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "negative_transfer",
+      "left_policy": "safe_ocx_residual_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.18,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": -0.1,
+      "relative_auc20_gain": -0.35714285714285715,
+      "auc20_gain_ci95": [
+        -0.32,
+        0.04
+      ],
+      "fraction_campaigns_improved": 0.01,
+      "signflip_p_one_sided": 0.8739,
+      "left_first_hit_mean": 37.78,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": -0.25,
+      "first_hit_saved_ci95": [
+        -0.92,
+        0.39
+      ],
+      "left_recall_at_20_mean": 0.005,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "external_candidate",
+      "family": "negative_transfer",
+      "left_policy": "safe_shuffled_obelix_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 0.28,
+      "right_auc20_mean": 0.28,
+      "mean_auc20_gain": 0.0,
+      "relative_auc20_gain": 0.0,
+      "auc20_gain_ci95": [
+        -0.12,
+        0.12
+      ],
+      "fraction_campaigns_improved": 0.01,
+      "signflip_p_one_sided": 0.7508,
+      "left_first_hit_mean": 37.66,
+      "right_first_hit_mean": 37.53,
+      "mean_first_hit_saved": -0.13,
+      "first_hit_saved_ci95": [
+        -0.89,
+        0.64
+      ],
+      "left_recall_at_20_mean": 0.00625,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "policy_validity",
+      "left_policy": "composition_novelty",
+      "right_policy": "uniform_random",
+      "seeds": 100,
+      "left_auc20_mean": 18.19,
+      "right_auc20_mean": 9.87,
+      "mean_auc20_gain": 8.32,
+      "relative_auc20_gain": 0.8429584599797366,
+      "auc20_gain_ci95": [
+        6.11975,
+        10.260249999999996
+      ],
+      "fraction_campaigns_improved": 0.78,
+      "signflip_p_one_sided": 0.0001,
+      "left_first_hit_mean": 3.22,
+      "right_first_hit_mean": 15.3,
+      "mean_first_hit_saved": 12.08,
+      "first_hit_saved_ci95": [
+        10.06975,
+        14.16
+      ],
+      "left_recall_at_20_mean": 0.4433333333333333,
+      "holm_p": 0.0008,
+      "passes_incremental_statistical": true,
+      "passes_incremental_practical": true,
+      "passes_consistency": true,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "policy_validity",
+      "left_policy": "safe_target_novelty",
+      "right_policy": "composition_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 14.33,
+      "right_auc20_mean": 18.19,
+      "mean_auc20_gain": -3.86,
+      "relative_auc20_gain": -0.21220450797141285,
+      "auc20_gain_ci95": [
+        -5.45,
+        -2.3
+      ],
+      "fraction_campaigns_improved": 0.25,
+      "signflip_p_one_sided": 1.0,
+      "left_first_hit_mean": 8.43,
+      "right_first_hit_mean": 3.22,
+      "mean_first_hit_saved": -5.21,
+      "first_hit_saved_ci95": [
+        -6.65,
+        -3.86
+      ],
+      "left_recall_at_20_mean": 0.39333333333333337,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": false,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "same_property_increment",
+      "left_policy": "safe_obelix_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 15.43,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": 1.1,
+      "relative_auc20_gain": 0.07676203768318214,
+      "auc20_gain_ci95": [
+        -0.3802499999999999,
+        2.5904999999999925
+      ],
+      "fraction_campaigns_improved": 0.39,
+      "signflip_p_one_sided": 0.084,
+      "left_first_hit_mean": 8.05,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": 0.38,
+      "first_hit_saved_ci95": [
+        -0.98,
+        1.77
+      ],
+      "left_recall_at_20_mean": 0.4133333333333333,
+      "holm_p": 0.5880000000000001,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "adjacent_transport_increment",
+      "left_policy": "safe_estm_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 14.26,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": -0.07,
+      "relative_auc20_gain": -0.0048848569434752276,
+      "auc20_gain_ci95": [
+        -1.11,
+        0.9102499999999963
+      ],
+      "fraction_campaigns_improved": 0.21,
+      "signflip_p_one_sided": 0.5563,
+      "left_first_hit_mean": 8.77,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": -0.34,
+      "first_hit_saved_ci95": [
+        -1.59,
+        0.84
+      ],
+      "left_recall_at_20_mean": 0.40666666666666673,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "safe_multisource_increment",
+      "left_policy": "safe_multisource_residual",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 15.6,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": 1.27,
+      "relative_auc20_gain": 0.08862526168876483,
+      "auc20_gain_ci95": [
+        -0.75,
+        3.22
+      ],
+      "fraction_campaigns_improved": 0.45,
+      "signflip_p_one_sided": 0.1095,
+      "left_first_hit_mean": 8.72,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": -0.29,
+      "first_hit_saved_ci95": [
+        -2.25025,
+        1.5702499999999964
+      ],
+      "left_recall_at_20_mean": 0.41333333333333344,
+      "holm_p": 0.657,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": false,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "negative_transfer",
+      "left_policy": "safe_borg_residual_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 13.78,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": -0.55,
+      "relative_auc20_gain": -0.03838101884159107,
+      "auc20_gain_ci95": [
+        -1.51,
+        0.3
+      ],
+      "fraction_campaigns_improved": 0.18,
+      "signflip_p_one_sided": 0.8926,
+      "left_first_hit_mean": 8.98,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": -0.55,
+      "first_hit_saved_ci95": [
+        -1.4002499999999998,
+        0.21
+      ],
+      "left_recall_at_20_mean": 0.39333333333333337,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "negative_transfer",
+      "left_policy": "safe_ocx_residual_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 14.42,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": 0.09,
+      "relative_auc20_gain": 0.0062805303558967195,
+      "auc20_gain_ci95": [
+        -0.65,
+        0.7802499999999963
+      ],
+      "fraction_campaigns_improved": 0.16,
+      "signflip_p_one_sided": 0.4214,
+      "left_first_hit_mean": 8.48,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": -0.05,
+      "first_hit_saved_ci95": [
+        -0.85,
+        0.72
+      ],
+      "left_recall_at_20_mean": 0.39333333333333337,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "family": "negative_transfer",
+      "left_policy": "safe_shuffled_obelix_control",
+      "right_policy": "safe_target_novelty",
+      "seeds": 100,
+      "left_auc20_mean": 13.96,
+      "right_auc20_mean": 14.33,
+      "mean_auc20_gain": -0.37,
+      "relative_auc20_gain": -0.025819958129797628,
+      "auc20_gain_ci95": [
+        -1.29,
+        0.39
+      ],
+      "fraction_campaigns_improved": 0.12,
+      "signflip_p_one_sided": 0.8007,
+      "left_first_hit_mean": 8.86,
+      "right_first_hit_mean": 8.43,
+      "mean_first_hit_saved": -0.43,
+      "first_hit_saved_ci95": [
+        -1.41,
+        0.36
+      ],
+      "left_recall_at_20_mean": 0.3833333333333334,
+      "holm_p": 1.0,
+      "passes_incremental_statistical": false,
+      "passes_incremental_practical": false,
+      "passes_consistency": false,
+      "passes_first_hit_noninferiority": true,
+      "passes_absolute_recall": false
+    }
+  ],
+  "negative_transfer_guard": [
+    {
+      "scope": "external_candidate",
+      "policy": "safe_borg_residual_control",
+      "source": "borg_mechanical_control",
+      "admission_rate": 0.17725,
+      "mean_weight": 0.06702479238359048,
+      "passes": true
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "safe_ocx_residual_control",
+      "source": "ocx_catalysis_control",
+      "admission_rate": 0.12625,
+      "mean_weight": 0.046025110434388415,
+      "passes": true
+    },
+    {
+      "scope": "external_candidate",
+      "policy": "safe_shuffled_obelix_control",
+      "source": "shuffled_obelix",
+      "admission_rate": 0.1845,
+      "mean_weight": 0.07045109028115919,
+      "passes": true
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "safe_borg_residual_control",
+      "source": "borg_mechanical_control",
+      "admission_rate": 0.1965,
+      "mean_weight": 0.07725597802115101,
+      "passes": true
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "safe_ocx_residual_control",
+      "source": "ocx_catalysis_control",
+      "admission_rate": 0.13175,
+      "mean_weight": 0.04747624732798205,
+      "passes": true
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "safe_shuffled_obelix_control",
+      "source": "shuffled_obelix",
+      "admission_rate": 0.19,
+      "mean_weight": 0.0724232477648378,
+      "passes": true
+    }
+  ],
+  "all_negative_transfer_guards_pass": true,
+  "claim_guard": "This retrospective external benchmark can validate at most one source-to-policy edge. It does not establish prospective discovery or new science."
+}

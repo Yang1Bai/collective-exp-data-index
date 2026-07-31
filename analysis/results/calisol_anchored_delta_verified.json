@@ -1,0 +1,20 @@
+{
+  "article_metric_rows": 429,
+  "decision": "mechanistic-rescue",
+  "design_sha256": "04279e568830b14a92199d165c96a6a3b05d55b6c64ce54b5c7eb046eb2c1cfe",
+  "file_sha256": {
+    "article_metrics": "76c4c6484934320a4a8dbcfe8930cfa667fda846a239046bfb89c3dfb2ce8bbd",
+    "leakage": "a0c6836ae2fe9e517f11f6b5c0b85b7cae66b7acedf0efc58e0668058c8116b4",
+    "macro_metrics": "02d43b3edbc47eb51d43a489178e5d8b51172b25a4fe4f3d0599af0ca654d0c7",
+    "predictions": "ee35628e494a5b6383397b3f4124def9bfa0fab4cd369dcd8a05b5e127c6c31c",
+    "random_anchor": "c58995c7f2db08a9dc74d42e12ec6c652f3a2e43a0e455ad4bf43231f5d1d6c9",
+    "shuffled_null": "9666f99d851672e0723e4cba942aca5ce85a72a3c01cb9ef253b5fbecd89305c",
+    "summary": "e06ae4dcc1e52b8fc763c3cae1b60bf18fc52649a428269457d0ac4fd900e36b"
+  },
+  "prediction_rows": 33579,
+  "primary_gain": 0.06912732690938683,
+  "random_anchor_rows": 300,
+  "shuffled_null_rows": 199,
+  "status": "verified-complete",
+  "summary_sha256": "e06ae4dcc1e52b8fc763c3cae1b60bf18fc52649a428269457d0ac4fd900e36b"
+}

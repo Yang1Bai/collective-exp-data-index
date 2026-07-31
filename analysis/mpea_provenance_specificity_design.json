@@ -1,0 +1,189 @@
+{
+  "status": "frozen-review-triggered-sensitivity-and-mechanism-analysis",
+  "created_utc": "2026-07-27T22:20:00Z",
+  "research_question": "Does state-matched neighboring mechanical knowledge improve chemically held-out MPEA yield-strength prediction after publication provenance is separated, and is the effect specific to the ultimate-tensile-strength donor?",
+  "selection_history": "The target, primary donor, feature-injection architecture, 60-label budget and original split were selected after MPEA outcomes had been inspected. The provenance ladder, matched mechanical donors, state ablations, target-label learning curve and inferential corrections were frozen in response to external scientific review before this run.",
+  "claim_guard": "This is a review-triggered retrospective sensitivity and mechanism analysis. It may show source-specific transfer on this programme under stronger leakage boundaries; it cannot establish prospective discovery, universal transfer, or a causal strengthening mechanism.",
+  "data": {
+    "table": "raw_mpea",
+    "target": "PROPERTY: YS (MPa)",
+    "doi_column": "REFERENCE: doi",
+    "outcome_transform": "log10 of positive measurements",
+    "group": "unordered elemental system",
+    "partition": {
+      "development": 0.6,
+      "discovery": 0.2,
+      "confirmation": 0.2,
+      "seed": 20260723
+    }
+  },
+  "donors": {
+    "uts": {
+      "column": "PROPERTY: UTS (MPa)",
+      "label": "ultimate tensile strength",
+      "role": "primary neighboring endpoint"
+    },
+    "hardness": {
+      "column": "PROPERTY: HV",
+      "label": "Vickers hardness",
+      "role": "plausible matched mechanical donor"
+    },
+    "elongation": {
+      "column": "PROPERTY: Elongation (%)",
+      "label": "elongation at failure",
+      "role": "plausible matched mechanical donor"
+    }
+  },
+  "contracts": {
+    "full_state": {
+      "numeric": [
+        "PROPERTY: Test temperature ($^\\circ$C)",
+        "PROPERTY: Calculated Density (g/cm$^3$)"
+      ],
+      "categorical": [
+        "PROPERTY: Processing method",
+        "PROPERTY: BCC/FCC/other",
+        "PROPERTY: Type of test"
+      ]
+    },
+    "composition_only": {
+      "numeric": [],
+      "categorical": []
+    },
+    "no_processing_or_phase": {
+      "numeric": [
+        "PROPERTY: Test temperature ($^\\circ$C)",
+        "PROPERTY: Calculated Density (g/cm$^3$)"
+      ],
+      "categorical": [
+        "PROPERTY: Type of test"
+      ]
+    },
+    "no_test_context": {
+      "numeric": [
+        "PROPERTY: Calculated Density (g/cm$^3$)"
+      ],
+      "categorical": [
+        "PROPERTY: Processing method",
+        "PROPERTY: BCC/FCC/other"
+      ]
+    },
+    "no_density": {
+      "numeric": [
+        "PROPERTY: Test temperature ($^\\circ$C)"
+      ],
+      "categorical": [
+        "PROPERTY: Processing method",
+        "PROPERTY: BCC/FCC/other",
+        "PROPERTY: Type of test"
+      ]
+    }
+  },
+  "provenance_modes": {
+    "system_disjoint": {
+      "exclude_evaluation_groups_from_donor": true,
+      "exclude_evaluation_dois_from_donor": false,
+      "exclude_evaluation_dois_from_target_development": false,
+      "exclude_held_target_dois_inside_donor_crossfit": false
+    },
+    "donor_doi_disjoint": {
+      "exclude_evaluation_groups_from_donor": true,
+      "exclude_evaluation_dois_from_donor": true,
+      "exclude_evaluation_dois_from_target_development": false,
+      "exclude_held_target_dois_inside_donor_crossfit": true
+    },
+    "full_doi_disjoint": {
+      "exclude_evaluation_groups_from_donor": true,
+      "exclude_evaluation_dois_from_donor": true,
+      "exclude_evaluation_dois_from_target_development": true,
+      "exclude_held_target_dois_inside_donor_crossfit": true
+    }
+  },
+  "arms": {
+    "provenance_ladder": {
+      "donor": "uts",
+      "contract": "full_state",
+      "budget": 60,
+      "provenance_modes": [
+        "system_disjoint",
+        "donor_doi_disjoint",
+        "full_doi_disjoint"
+      ]
+    },
+    "donor_specificity": {
+      "donors": [
+        "uts",
+        "hardness",
+        "elongation"
+      ],
+      "contract": "full_state",
+      "budget": 60,
+      "provenance_mode": "full_doi_disjoint",
+      "size_match_to": "uts"
+    },
+    "state_dependence": {
+      "donor": "uts",
+      "contracts": [
+        "full_state",
+        "composition_only",
+        "no_processing_or_phase",
+        "no_test_context",
+        "no_density"
+      ],
+      "budget": 60,
+      "provenance_mode": "full_doi_disjoint"
+    },
+    "target_label_equivalence": {
+      "budgets": [
+        30,
+        60,
+        120,
+        240
+      ],
+      "contract": "full_state",
+      "provenance_mode": "full_doi_disjoint"
+    }
+  },
+  "model": {
+    "repeats": 30,
+    "target_learners": [
+      "random_forest",
+      "extra_trees"
+    ],
+    "donor_learner": "extra_trees",
+    "tree_estimators": 320,
+    "donor_folds": 5,
+    "architecture": "cross-fitted donor prediction appended as one feature to the target model",
+    "shuffled_control": "donor outcomes permuted independently inside every donor fold and final donor fit"
+  },
+  "inference": {
+    "primary_unit": "unordered elemental system",
+    "algorithmic_repetitions_are_not_independent_samples": true,
+    "bootstrap_replicates": 100000,
+    "signflip_replicates": 100000,
+    "seed": 20260727,
+    "primary_scope": "q4",
+    "primary_contrasts": [
+      "strict_uts_vs_target_only",
+      "strict_uts_vs_shuffled_uts",
+      "strict_uts_vs_hardness",
+      "strict_uts_vs_elongation"
+    ],
+    "multiplicity": "Holm family-wise error control across the four primary contrasts",
+    "secondary": [
+      "all-evaluation effects",
+      "Q1 through Q4 effects",
+      "provenance attenuation",
+      "state ablations",
+      "target-label equivalence"
+    ]
+  },
+  "reporting": {
+    "retain_all_frozen_conditions": true,
+    "report_exact_q4_system_count_per_run": true,
+    "report_absolute_r2_with_cluster_interval": true,
+    "report_relative_rmse_gain_with_cluster_interval": true,
+    "report_donor_group_oof_skill": true,
+    "same_property_labels_are_learning_curve_only": true
+  }
+}

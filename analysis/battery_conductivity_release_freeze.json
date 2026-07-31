@@ -1,0 +1,24 @@
+{
+  "status": "frozen-before-numeric-release",
+  "frozen_utc": "2026-07-27T12:45:00-04:00",
+  "implementation_sha256": "bf519994867c1b920bb331fd958725a4ada7d93601699cdf664d159cb3a223f8",
+  "release_script_sha256": "b91bd2ead125a37d5ea549a7773c16c7359ad2858be510db44b4dfc40929523e",
+  "release_verifier_sha256": "f6e00779c8c1d32013ef6da1af193e5f294f3e9b9d247790040bac3cd5668e5b",
+  "synthetic_tests": "passed",
+  "numeric_property_values_inspected": false,
+  "allowed_postfreeze_changes": [
+    "portable path handling",
+    "encoding repair",
+    "runtime or checkpoint infrastructure",
+    "verifier-only corrections that do not alter row membership or values"
+  ],
+  "forbidden_postfreeze_changes": [
+    "endpoint selection",
+    "unit conversion",
+    "physical bounds",
+    "deduplication key",
+    "model or representation selection based on observed effects",
+    "OOD definition",
+    "success gate"
+  ]
+}

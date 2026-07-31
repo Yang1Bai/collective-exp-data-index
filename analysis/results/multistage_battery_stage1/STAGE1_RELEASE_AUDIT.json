@@ -1,0 +1,22 @@
+{
+  "status": "verified-complete-stage1-release",
+  "released_stage": "1",
+  "stage2_archives_downloaded": 0,
+  "stage2_numeric_data_rows_opened": false,
+  "allowlisted_archives": 141,
+  "evaluable_stage1_cells": 138,
+  "missing_endpoint_stage1_cells": 3,
+  "status_counts": {
+    "extracted-stage1": 138,
+    "missing-endpoint": 3
+  },
+  "endpoint_table_sha256": "aa6e7ad49a10b2184af6c00b1f925bb1e665717ac48e19cdcba3fc764e7e5386",
+  "release_manifest_sha256": "98d16b5a7d70cba0e51795fafa85b77a730da75052e0b628005e88a17baaeba0",
+  "claim_guard": "Stage 1 outcomes are source-development information, not target evidence. They may generate models and hypotheses but cannot establish OOD improvement, transfer, discovery, or experiments saved until the still-sealed Stage 2 test is executed.",
+  "missing_endpoint_reasons": [
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0",
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0",
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0"
+  ],
+  "errors": []
+}

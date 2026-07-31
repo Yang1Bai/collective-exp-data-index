@@ -1,0 +1,8 @@
+metric,value,comparator,scope,evidence_status
+generic_edges_passing,0,40 declared real edges,8 OOD targets,verified benchmark
+unseen_salt_raw_r2,0.629,state-only comparator,external unseen-salt programme,verified retrospective method development
+unseen_salt_log_rmse_reduction_percent,28.64,temperature and concentration alone,external unseen-salt programme,verified retrospective method development
+five_anchor_source_spearman,0.910,0.537 strongest of 13 recipient-only configurations,SolventSeg unseen formulations,verified post-outcome ranking result
+five_anchor_delta_spearman,0.374,95% interval 0.213 to 0.562,SolventSeg unseen formulations,verified post-outcome ranking result
+five_anchor_source_precision,0.933,0.490 strongest recipient-only configuration,true high-performance quartile,verified post-outcome ranking result
+frozen_second_programme_donor_concordance,0.694,0.783 same-anchor recipient-only model,FINALES second recipient,frozen rejection

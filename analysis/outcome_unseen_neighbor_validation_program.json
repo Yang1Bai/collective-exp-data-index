@@ -1,0 +1,89 @@
+{
+  "program_name": "Outcome-unseen validation of neighborhood knowledge borrowing",
+  "version": 1,
+  "frozen_utc": "2026-07-18T03:49:25Z",
+  "status": "target programme frozen from catalog and repository metadata only; target outcome files not downloaded or inspected under this programme",
+  "catalog_sha256": "21ca28bda4a39cbad4012164e89697321422192a0aea3f8860ab734721f7fcff",
+  "purpose": "Test whether the complete borrowing strategy improves few-shot and OOD performance on new targets, including a reverse transport direction and a second scientific family.",
+  "claim_guard": "Target selection does not predict a positive result. Every frozen target and source remains in the denominator. Retrospective success cannot be called prospective discovery.",
+  "targets": [
+    {
+      "target_id": "starrydata2_thermoelectric_reverse",
+      "target_resource": "starrydata2",
+      "role": "primary reverse-direction transport target",
+      "allowed_pre_ingestion_metadata": "Experimental thermoelectric property curves with downloadable records and article provenance; no target values or high-performing identities inspected before this freeze.",
+      "target_properties": ["figure of merit ZT", "electrical conductivity or power factor as prespecified secondary endpoints"],
+      "nominated_sources": [
+        "ESTM thermoelectric measurements as same-domain reference",
+        "OBELiX experimental solid-electrolyte ionic conductivity as adjacent transport source",
+        "Caltech experimental Li-ion conductivity as an independent adjacent transport source"
+      ],
+      "wrong_sources": ["Borg alloy mechanical properties", "OCx CO2-reduction selectivity"],
+      "scientific_test": "Determine whether ionic-transport sources add target regions beyond the best same-domain thermoelectric source and whether the thermoelectric-to-ionic relation has a useful reverse direction.",
+      "leakage_exclusions": ["exact canonical composition", "DOI/article", "sample identifier", "shared repository record"],
+      "minimum_quality": ["at least 100 target entities", "at least 40 outcome-free components", "at least 20 provenance groups", "at least 20 true nonmissing observations in each primary held-out scope"]
+    },
+    {
+      "target_id": "caltechdata_acid_oer_second_family",
+      "target_resource": "CaltechDATA DOI 10.22002/tg041-j4g80",
+      "role": "second scientific-family target",
+      "allowed_pre_ingestion_metadata": "High-throughput acid-OER Mn-Sb-Sn-Ti-Co composition-spread libraries with XRF, XRD, and electrochemistry files; no OER activity values or candidate identities inspected before this freeze.",
+      "target_properties": ["prespecified OER activity figure of merit from oer_all_foms.csv"],
+      "nominated_sources": [
+        "OCx experimental CO2-reduction catalyst measurements as adjacent electrocatalysis source",
+        "an independent HTEM or MEAD optoelectrochemical source selected by metadata and provenance before outcome access"
+      ],
+      "wrong_sources": ["Borg alloy mechanical properties", "OBELiX ionic conductivity"],
+      "scientific_test": "Determine whether neighboring experimental electrocatalysis knowledge supplies OOD composition proposals beyond target-only novelty while unrelated sources abstain.",
+      "leakage_exclusions": ["exact composition", "plate or sample identifier", "DOI/article", "parent MEAD experiment lineage"],
+      "minimum_quality": ["at least 100 target samples", "at least 40 composition clusters", "at least four independently held-out plates or provenance blocks", "nondegenerate primary activity distribution"]
+    }
+  ],
+  "common_prediction_design": {
+    "label_budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "split_unit": "article, plate, campaign, or provenance component",
+    "primary_endpoint": "paired relative RMSE reduction versus target-only in the highest outcome-free OOD quartile",
+    "required_absolute_utility": "positive augmented-model R2 in the designated held-out scope",
+    "secondary_endpoints": ["global RMSE", "MAE", "Spearman rank correlation", "target-equivalent sample count"],
+    "models": ["regularized linear shrinkage", "Random Forest", "gradient-boosted trees or ExtraTrees"],
+    "representations": ["element/composition representation", "condition-aware and structure-aware representation when reported"],
+    "standard_baselines": ["target only", "naive pooling", "source only", "frozen source-feature stacking", "cross-validated residual shrinkage", "mixture of experts or multitask learner"]
+  },
+  "common_exploration_design": {
+    "budget": 20,
+    "co_primary_endpoints": ["distinct-component AUC20", "acquisitions to first distinct top-5-percent component"],
+    "required_tradeoffs": ["entity recall20", "component recall20", "marginal components contributed by each source"],
+    "policies": ["uniform family-first", "composition novelty family-first", "best admitted single source", "entity consensus", "CCA family-first consensus", "CCA round-robin", "wrong-source portfolio", "shuffled-source portfolio"],
+    "abstention": "Any source failing the frozen source-quality, target-increment, or control threshold receives zero allocation.",
+    "ood_role": "OOD distance defines scopes and quotas but cannot multiply the source score."
+  },
+  "matched_specificity_controls": {
+    "source_size": "subsample control sources to the nominated source entity count within each repeat",
+    "source_skill": "select or degrade controls to overlap the nominated source OOF-skill interval",
+    "coverage": "match nearest-source-distance distribution in the target pool",
+    "capacity": "append an equal number of cross-fitted random features to the target model",
+    "shuffle": "independently permute each nominated source rank within the fixed candidate pool"
+  },
+  "hypothesis_cards": {
+    "timing": "written, timestamped, and hashed after target features and frozen source ranks exist but before target outcomes are revealed",
+    "minimum": "one source-specific region card and one consensus-region card per target",
+    "required_fields": ["source evidence", "candidate region", "physical rationale", "matched target-only control", "falsifier", "planned mechanistic measurement"],
+    "reporting": "all cards are reported regardless of outcome"
+  },
+  "inference": {
+    "within_target": "paired article/plate/campaign-group bootstrap or randomization; seed variation is a conditional sensitivity only",
+    "multiplicity": "Holm correction over named primary contrasts within endpoint family and target",
+    "across_targets": "hierarchical or random-effects estimate with target-level effects and between-target heterogeneity shown",
+    "success": "At least one predesignated expected-positive target passes prediction and/or exploration gates beyond matched controls, while the second target has the same direction or correctly abstains without aggregate harm."
+  },
+  "audit_sentinels": [
+    "hash raw target files before parsing",
+    "hash target metadata table before outcome join",
+    "hash source predictions, components, policy orders, code, environment, and hypothesis cards before outcome reveal",
+    "verify candidate-outcome permutation invariance",
+    "record every formula, DOI, sample, plate, and parent-lineage exclusion",
+    "archive failures and abstentions in the knowledge-borrowing map"
+  ]
+}
+

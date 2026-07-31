@@ -1,0 +1,5 @@
+comparison,label,effect_percent,ci_lo_percent,ci_hi_percent,holm_adjusted_p,inferential_status
+adjacency_only minus target_only,target-only,6.122855129459648,2.5583559020170488,9.162467732722577,0.0108,post-hoc-outcome-guided
+adjacency_only minus wrong_property,wrong-property source,6.853633671096382,3.498309883169634,10.036195766104653,0.0036,post-hoc-outcome-guided
+adjacency_only minus shuffled_source,shuffled source,11.718949728082967,1.7159638033643516,24.023807308142935,0.0356,post-hoc-outcome-guided
+adjacency_only minus random_features,random features,7.466681795576541,3.422905362177072,10.745962028564007,0.014,post-hoc-outcome-guided

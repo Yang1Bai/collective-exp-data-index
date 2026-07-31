@@ -1,0 +1,2 @@
+source,target,feature,split,exact_molecule_overlap_removed,source_n,target_n_after_overlap_removal,train_n_median,test_n,repeats,delta_r2_mean,delta_r2_ci_lo,delta_r2_ci_hi,delta_rmse_mean,delta_rmse_ci_lo,delta_rmse_ci_hi,equivalent_within_abs_delta_r2_0.05
+FreeSolv dG_hydration,AqSolDB logS,"Morgan radius-2, 1024-bit",fixed scaffold-disjoint test,525,642,9455,60.0,1829,40,0.015267876131697838,0.007840639249794678,0.02277052121665568,0.017870090579395547,0.009197700857878155,0.026955735864619097,True

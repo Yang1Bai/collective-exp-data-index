@@ -1,0 +1,19 @@
+program,endpoint,status,role_defining,note
+Meyer-Neldel thermoelectrics,law or coefficient,null,false,weak pooled law
+ISODB adsorption,law or coefficient,boundary,false,strong but family-conditioned
+Borg to BIRDSHOT,law or coefficient,null,false,coefficient fails externally
+Borg to BIRDSHOT,few-shot prediction,directional,false,below practical gate
+Borg to Matbench,few-shot prediction,null,false,independent null
+FreeSolv to AqSolDB,few-shot prediction,null,false,organic physical null
+KIT -20 to -30 C,few-shot prediction,passed,true,local rescue gate passed
+ESTM to OBELiX,few-shot prediction,directional,true,internal candidate
+ESTM to OBELiX,OOD screening,directional,true,fixed ranking only
+ESTM to OBELiX,sequential or temporal,null,true,sequential policy null
+CALiSol -30 to -40 C,few-shot prediction,boundary,false,cross-article unresolved
+OBELiX and ESTM to Caltech,OOD screening,directional,true,retrospective static signal
+OBELiX and ESTM to Caltech,sequential or temporal,null,true,adaptive policy null
+Ionic sources to Starrydata,few-shot prediction,boundary,false,outcome-unseen unresolved
+OER ORR and OCx to TRI,few-shot prediction,null,false,outcome-unseen null or harm
+Battery Stage 1 to Stage 2,sequential or temporal,diagnostic,true,temporal diagnostic positive
+SpecGen OER B and D,few-shot prediction,passed,true,complete-system prediction and ranking positive
+SpecGen OER A and C,few-shot prediction,boundary,false,ranking-only and harmful controls

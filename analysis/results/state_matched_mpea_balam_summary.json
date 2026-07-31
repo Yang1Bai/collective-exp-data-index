@@ -1,0 +1,713 @@
+{
+  "status": "complete-method-development",
+  "created_utc": "2026-07-23T23:51:26.564994+00:00",
+  "design_sha256": "97913a1e53f12ad433a2583b4f548b98c88a74f1561407eba86fde5bbfc0c8b2",
+  "data": {
+    "target_rows": 1067,
+    "target_groups": 150,
+    "source_rows": 539,
+    "source_groups": 93,
+    "development_rows": 639,
+    "evaluation_rows": 428,
+    "evaluation_groups": 59
+  },
+  "donor_group_oof_r2": {
+    "planned_state": 0.6722386124669981
+  },
+  "audits": [
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 0,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 334,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 1,
+      "target_train_n": 60,
+      "target_train_groups": 9,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 2,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 3,
+      "target_train_n": 60,
+      "target_train_groups": 17,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 336,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 4,
+      "target_train_n": 60,
+      "target_train_groups": 12,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 334,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 5,
+      "target_train_n": 60,
+      "target_train_groups": 8,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 6,
+      "target_train_n": 60,
+      "target_train_groups": 9,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 318,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 7,
+      "target_train_n": 60,
+      "target_train_groups": 14,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 8,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 328,
+      "source_fold_max_n": 333,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 9,
+      "target_train_n": 60,
+      "target_train_groups": 13,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 10,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 11,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 336,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 12,
+      "target_train_n": 60,
+      "target_train_groups": 11,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 13,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 335,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 14,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 15,
+      "target_train_n": 60,
+      "target_train_groups": 8,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 16,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 17,
+      "target_train_n": 60,
+      "target_train_groups": 11,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 299,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 18,
+      "target_train_n": 60,
+      "target_train_groups": 12,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 19,
+      "target_train_n": 60,
+      "target_train_groups": 9,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 20,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 21,
+      "target_train_n": 60,
+      "target_train_groups": 8,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 324,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 22,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 23,
+      "target_train_n": 60,
+      "target_train_groups": 13,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 24,
+      "target_train_n": 60,
+      "target_train_groups": 12,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 25,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 26,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 27,
+      "target_train_n": 60,
+      "target_train_groups": 13,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 335,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 28,
+      "target_train_n": 60,
+      "target_train_groups": 8,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 299,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 29,
+      "target_train_n": 60,
+      "target_train_groups": 13,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    }
+  ],
+  "summaries": [
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.08343749392813674,
+      "ci95": [
+        0.05584324324636565,
+        0.11103174460990782
+      ],
+      "positive_runs": 50,
+      "mean_base_r2": 0.23216757827254295,
+      "mean_aug_r2": 0.37152675864861906,
+      "mean_delta_r2": 0.13935918037607606
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.025753066132371306,
+      "ci95": [
+        -0.01760889558019854,
+        0.06911502784494115
+      ],
+      "positive_runs": 38,
+      "mean_base_r2": 0.3120550458443863,
+      "mean_aug_r2": 0.32630972880537434,
+      "mean_delta_r2": 0.014254682960987908
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.07380865702044723,
+      "ci95": [
+        0.03248577783920304,
+        0.11513153620169142
+      ],
+      "positive_runs": 47,
+      "mean_base_r2": 0.2760981369756828,
+      "mean_aug_r2": 0.40937449244314256,
+      "mean_delta_r2": 0.1332763554674598
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.11005331293468967,
+      "ci95": [
+        0.07716388857149206,
+        0.14294273729788728
+      ],
+      "positive_runs": 50,
+      "mean_base_r2": 0.20508658612630468,
+      "mean_aug_r2": 0.37940604853838183,
+      "mean_delta_r2": 0.17431946241207716
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.1097468799389909,
+      "ci95": [
+        0.07086925854877006,
+        0.14862450132921173
+      ],
+      "positive_runs": 48,
+      "mean_base_r2": -0.13992687678546376,
+      "mean_aug_r2": 0.13148806834956137,
+      "mean_delta_r2": 0.27141494513502523
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 60,
+      "mean_relative_rmse_gain": -0.0688526116620247,
+      "ci95": [
+        -0.08996347401515611,
+        -0.047741749308893265
+      ],
+      "positive_runs": 10,
+      "mean_base_r2": 0.23216757827254295,
+      "mean_aug_r2": 0.12704922082540226,
+      "mean_delta_r2": -0.10511835744714065
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 60,
+      "mean_relative_rmse_gain": -0.05023682022391378,
+      "ci95": [
+        -0.08136162262857399,
+        -0.019112017819253556
+      ],
+      "positive_runs": 20,
+      "mean_base_r2": 0.3120550458443863,
+      "mean_aug_r2": 0.2572139987348905,
+      "mean_delta_r2": -0.05484104710949593
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 60,
+      "mean_relative_rmse_gain": -0.10651830103938889,
+      "ci95": [
+        -0.1301079774941019,
+        -0.08292862458467587
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.2760981369756828,
+      "mean_aug_r2": 0.1127254779873865,
+      "mean_delta_r2": -0.16337265898829623
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 60,
+      "mean_relative_rmse_gain": -0.0662433474963278,
+      "ci95": [
+        -0.0870955294250784,
+        -0.04539116556757722
+      ],
+      "positive_runs": 12,
+      "mean_base_r2": 0.20508658612630468,
+      "mean_aug_r2": 0.09982274298843884,
+      "mean_delta_r2": -0.10526384313786587
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 60,
+      "mean_relative_rmse_gain": -0.08523120057377156,
+      "ci95": [
+        -0.12185082515459343,
+        -0.0486115759929497
+      ],
+      "positive_runs": 15,
+      "mean_base_r2": -0.13992687678546376,
+      "mean_aug_r2": -0.3099036343897813,
+      "mean_delta_r2": -0.16997675760431755
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.1719511555544092,
+      "ci95": [
+        0.15055641691621574,
+        0.19334589419260267
+      ],
+      "positive_runs": 59,
+      "mean_base_r2": -0.11388192413892113,
+      "mean_aug_r2": 0.23216757827254295,
+      "mean_delta_r2": 0.34604950241146415
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.2218571068321023,
+      "ci95": [
+        0.1841198217483246,
+        0.25959439191588
+      ],
+      "positive_runs": 56,
+      "mean_base_r2": -0.13780633365910824,
+      "mean_aug_r2": 0.3120550458443863,
+      "mean_delta_r2": 0.4498613795034947
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.1981774189783341,
+      "ci95": [
+        0.1689282079362781,
+        0.2274266300203901
+      ],
+      "positive_runs": 59,
+      "mean_base_r2": -0.0907656645390532,
+      "mean_aug_r2": 0.2760981369756828,
+      "mean_delta_r2": 0.36686380151473597
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.17755865036748492,
+      "ci95": [
+        0.15245473636283874,
+        0.2026625643721311
+      ],
+      "positive_runs": 57,
+      "mean_base_r2": -0.15031434717563796,
+      "mean_aug_r2": 0.20508658612630468,
+      "mean_delta_r2": 0.3554009333019426
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.08250163921022811,
+      "ci95": [
+        0.04865836956125323,
+        0.116344908859203
+      ],
+      "positive_runs": 47,
+      "mean_base_r2": -0.33955508188513944,
+      "mean_aug_r2": -0.13992687678546376,
+      "mean_delta_r2": 0.19962820509967566
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.06755661874989459,
+      "ci95": [
+        0.055897222275450284,
+        0.0792160152243389
+      ],
+      "positive_runs": 59,
+      "mean_base_r2": 0.23216757827254295,
+      "mean_aug_r2": 0.3372654317153159,
+      "mean_delta_r2": 0.10509785344277293
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.06826556370384942,
+      "ci95": [
+        0.04801770004871416,
+        0.08851342735898468
+      ],
+      "positive_runs": 49,
+      "mean_base_r2": 0.3120550458443863,
+      "mean_aug_r2": 0.40361277500017534,
+      "mean_delta_r2": 0.0915577291557889
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.05436600952594616,
+      "ci95": [
+        0.03763968125183829,
+        0.07109233780005403
+      ],
+      "positive_runs": 50,
+      "mean_base_r2": 0.2760981369756828,
+      "mean_aug_r2": 0.35922611039948193,
+      "mean_delta_r2": 0.08312797342379925
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.055321077155524305,
+      "ci95": [
+        0.04052012822145081,
+        0.0701220260895978
+      ],
+      "positive_runs": 50,
+      "mean_base_r2": 0.20508658612630468,
+      "mean_aug_r2": 0.2965779255919957,
+      "mean_delta_r2": 0.09149133946569094
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 60,
+      "mean_relative_rmse_gain": 0.07866953846824572,
+      "ci95": [
+        0.05928034102369402,
+        0.09805873591279742
+      ],
+      "positive_runs": 55,
+      "mean_base_r2": -0.13992687678546376,
+      "mean_aug_r2": 0.0462109486478908,
+      "mean_delta_r2": 0.18613782543335455
+    }
+  ],
+  "balam_escalation_gate": {
+    "checks": {
+      "mean_q4_gain": true,
+      "positive_q4_runs": true,
+      "positive_q4_r2": true,
+      "ood_specificity": true,
+      "beats_shuffled": true
+    },
+    "pass": true,
+    "decision": "eligible-for-frozen-balam-confirmation"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection, this is a post-selection robustness validation, not an independent confirmation. It may establish resampling stability and estimate the attainable effect on this dataset; it cannot establish prospective discovery or a universal transfer law."
+}

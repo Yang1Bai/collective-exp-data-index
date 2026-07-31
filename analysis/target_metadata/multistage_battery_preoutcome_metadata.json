@@ -1,0 +1,197 @@
+{
+  "target_id": "multistage_liion_aging_stage2",
+  "snapshot_utc": "2026-07-20T21:30:00Z",
+  "status": "verified-complete metadata-only archive map plus protected endpoint-header audit; 32 disclosed CSV header lines were read across three archives, but no numeric Stage 1 or Stage 2 CSV data row was opened or parsed",
+  "claim_guard": "This snapshot establishes target identity, temporal ordering, condition geometry, candidate counts, and retrieval hazards. It contains no capacity-retention, resistance-growth, cycle-life, or high-performing-condition values.",
+  "catalog_snapshot": {
+    "path": "catalog/catalog.json",
+    "sha256": "2c92738a8d3a08eadee75a83c4faff4a939acce8cbe92112ef626fc295253c8a",
+    "validated_entries": 118,
+    "record_id": "multistage-liion-aging-dataset"
+  },
+  "record": {
+    "title": "Multi-Stage Lithium Ion Battery Aging Study",
+    "article_doi": "10.1038/s41597-024-03859-z",
+    "dataset_doi": "10.6084/m9.figshare.25975315.v1",
+    "figshare_article_id": 25975315,
+    "published_utc": "2024-08-06T00:00:00Z",
+    "modified_date": "2024-09-19",
+    "license": "CC BY 4.0",
+    "cell_model": "Samsung INR21700-50E",
+    "laboratories": ["Siemens", "Intilion", "Hochschule Muenchen"]
+  },
+  "figshare_file_manifest": {
+    "api_url": "https://api.figshare.com/v2/articles/25975315",
+    "file_count": 280,
+    "total_bytes": 10292649424,
+    "unique_file_ids": 280,
+    "duplicate_filename_groups": 138,
+    "experiments_meta": {
+      "file_id": 47627029,
+      "name": "experiments_meta.csv",
+      "bytes": 30658,
+      "download_url": "https://ndownloader.figshare.com/files/47627029",
+      "sha256": "3a0dcf34dd881be49ad06b40257ce2288a2601c3e62b1a27bb30f456b9931fc4"
+    }
+  },
+  "experiments_metadata_profile": {
+    "rows": 279,
+    "raw_columns": [
+      "serial_internal",
+      "serial",
+      "lab",
+      "type",
+      "tp",
+      "cell",
+      "amb_temp_tp",
+      "soc_max_tp",
+      "dod_tp",
+      "c_ch_tp",
+      "c_dch_tp",
+      "sampling",
+      "stage",
+      "m_0",
+      "scale",
+      "R_1khz_0",
+      "resistance_meter",
+      "U_0",
+      " volt_meter"
+    ],
+    "normalization_note": "Strip surrounding whitespace from headers; the deposited volt_meter header has one leading space.",
+    "missing_cells": 0,
+    "stage_cell_counts": {"1": 141, "2": 138},
+    "stage_type_cell_counts": {"1|calendar": 66, "1|cycle": 75, "2|calendar": 66, "2|cycle": 72},
+    "stage_lab_cell_counts": {
+      "1|HM": 60,
+      "1|INT": 54,
+      "1|SIE": 27,
+      "2|HM": 63,
+      "2|INT": 48,
+      "2|SIE": 27
+    },
+    "stage_type_sampling_cell_counts": {
+      "1|calendar|FF": 66,
+      "1|cycle|cLH": 75,
+      "2|calendar|FF": 18,
+      "2|calendar|manual": 24,
+      "2|calendar|pi": 24,
+      "2|cycle|cLH": 36,
+      "2|cycle|pi": 36
+    }
+  },
+  "outcome_free_condition_geometry": {
+    "scaling": "For each aging type, divide each condition coordinate by its Stage 1 observed range; compute Euclidean distance to the nearest Stage 1 condition.",
+    "calendar": {
+      "features": ["amb_temp_tp", "soc_max_tp"],
+      "stage1_unique_conditions": 11,
+      "stage2_unique_conditions": 8,
+      "exact_stage1_stage2_overlap": 0,
+      "stage1_ranges": {"amb_temp_tp": [10.0, 45.0], "soc_max_tp": [0.05, 1.0]},
+      "stage2_min_distance_to_stage1": {
+        "min": 0.10526315789473682,
+        "q25_nearest_rank": 0.15789473684210528,
+        "median_nearest_rank": 0.15789473684210528,
+        "q75_nearest_rank": 0.15789473684210528,
+        "max": 0.21052631578947364
+      }
+    },
+    "cycle": {
+      "features": ["amb_temp_tp", "soc_max_tp", "dod_tp", "c_ch_tp", "c_dch_tp"],
+      "stage1_unique_conditions": 25,
+      "stage2_unique_conditions": 15,
+      "exact_stage1_stage2_overlap": 0,
+      "stage1_ranges": {
+        "amb_temp_tp": [23.0, 45.0],
+        "soc_max_tp": [0.3, 0.8],
+        "dod_tp": [0.05, 0.6],
+        "c_ch_tp": [0.2, 1.0],
+        "c_dch_tp": [0.2, 2.0]
+      },
+      "stage2_min_distance_to_stage1": {
+        "min": 0.2660159070618096,
+        "q25_nearest_rank": 0.36069377593742874,
+        "median_nearest_rank": 0.4621808207954016,
+        "q75_nearest_rank": 0.6163252308022582,
+        "max": 0.7420472914420316
+      }
+    }
+  },
+  "outcome_access_record": {
+    "raw_aging_archives_downloaded_by_this_protocol": true,
+    "raw_archives_downloaded_for_schema_pilot": 3,
+    "schema_pilot_file_ids": [47627050, 47627620, 47627104],
+    "raw_archives_downloaded_for_first_full_metadata_map": 279,
+    "csv_header_members_opened": true,
+    "csv_header_lines_read": 32,
+    "numeric_csv_data_rows_opened": false,
+    "numeric_csv_data_rows_parsed": false,
+    "stage1_numeric_outcomes_parsed": false,
+    "stage2_numeric_outcomes_parsed": false,
+    "stage2_high_performing_conditions_inspected": false,
+    "allowed_material_inspected": [
+      "Scientific Data article methods and data-record description",
+      "Figshare article-level API metadata and file names, IDs, and sizes",
+      "experiments_meta.csv",
+      "ZIP directory names and the first *_meta.txt member from all 279 cell archives",
+      "all nonnumeric *_meta.txt companions and exactly one physical CSV header line from each of 32 members in three prespecified schema-audit archives"
+    ]
+  },
+  "hard_retrieval_gate": {
+    "problem": "The Figshare API exposes 138 duplicated archive names while Stage 1 and Stage 2 metadata reuse the serial field; filename order is not a valid stage assignment.",
+    "required_resolution": "Before numeric parsing, create and hash a one-to-one file_id-to-stage map. Use the exact (archive serial, archive-internal serial) key first. When the deposited internal serial conflicts, a file may use only the complementary stage of an exactly mapped same-name twin, and only when experiments_meta contains exactly one Stage 1 and one Stage 2 candidate. Retain every conflict flag. Ordering, date cutoffs, and numeric values are forbidden.",
+    "pilot_result": "File ID 47627050 contains internal serial S001 and file ID 47627620 contains internal serial 057, proving that duplicated archive names can be separated with the composite key. A complete 279-archive map is still required.",
+    "first_full_attempt": {
+      "created_utc": "2026-07-20T19:52:45.787012Z",
+      "mapped_exactly": 183,
+      "failed_before_amendment": 96,
+      "normalized_testpoint_variants": 44,
+      "genuine_testpoint_metadata_conflicts": 3,
+      "archive_internal_serial_conflicts": 49,
+      "numeric_csv_members_opened": false
+    },
+    "second_mapping_attempt": {
+      "created_utc": "2026-07-20T20:19:30.989247Z",
+      "mapped": 273,
+      "remaining": 6,
+      "remaining_structure": "three duplicated archive-name pairs for which both twins have conflicting internal serials",
+      "stage_counts_before_date_rule": {"1": 138, "2": 135},
+      "numeric_csv_members_opened": false
+    },
+    "validated_date_envelope": {
+      "laboratory": "INT",
+      "calibration_methods": ["exact composite key", "complement of exactly mapped twin stage"],
+      "minimum_calibration_files_per_stage": 20,
+      "stage1": {"n": 42, "min": "2021-09-30", "max": "2021-10-12"},
+      "stage2": {"n": 45, "min": "2023-01-19", "max": "2023-02-17"},
+      "interval_overlap": false,
+      "remaining_stage1_dates": ["2021-09-30", "2021-09-30", "2021-10-12"],
+      "remaining_stage2_dates": ["2023-01-19", "2023-02-17", "2023-02-17"],
+      "rule": "Assign only when the unresolved date falls inside exactly one same-laboratory closed interval; otherwise remain unresolved."
+    },
+    "final_mapping": {
+      "created_utc": "2026-07-20T20:23:49.337452Z",
+      "status": "verified-complete-metadata-only-map",
+      "rows": 279,
+      "stage_counts": {"1": 141, "2": 138},
+      "mapping_method_counts": {
+        "exact-archive-serial-plus-internal-serial": 230,
+        "archive-serial-plus-complement-of-exactly-mapped-twin-stage": 43,
+        "archive-serial-plus-validated-lab-date-envelope": 6
+      },
+      "metadata_conflict_counts": {
+        "testpoint_metadata_conflict": 3,
+        "archive_internal_serial_conflicts_with_experiments_meta": 49,
+        "validated_lab_date_envelope_required_after_both_twin_internal_serials_conflicted": 6,
+        "testpoint_format_variant": 44
+      },
+      "numeric_csv_members_opened": false,
+      "map_path": "analysis/results/multistage_battery_file_map/archive_file_stage_map.csv",
+      "map_sha256": "56b532a14295bd1bfbcb374e445a619e69c1fb7cfaed21d36506b16dc0e490b5",
+      "complete_path": "analysis/results/multistage_battery_file_map/COMPLETE.json",
+      "complete_sha256": "c684a71d7271b24f1af64bbfb5f5d5af14c564ae64f23ca44c9d875d51947928",
+      "independent_verification_path": "analysis/results/multistage_battery_file_map/INDEPENDENT_VERIFICATION.json",
+      "independent_verification_sha256": "e784a79785e033a6226979cc0b89a08663aacec0ea199a67eb63ffb08eb1a53c"
+    },
+    "status": "verified-complete-metadata-only-map"
+  }
+}

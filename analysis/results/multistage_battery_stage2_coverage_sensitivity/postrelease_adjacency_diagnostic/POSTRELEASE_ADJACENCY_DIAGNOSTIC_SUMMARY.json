@@ -1,0 +1,138 @@
+{
+  "status": "verified-complete-postrelease-adjacency-diagnostic",
+  "frozen_primary_status": "non-evaluable-stage2-release",
+  "confirmatory_success": false,
+  "method_selection_was_outcome_guided": true,
+  "inference": {
+    "adjacency_only minus target_only": {
+      "effect": 0.06122855129459648,
+      "calendar_effect": 0.07950578356830595,
+      "cycle_effect": 0.042951319020887,
+      "ci95": [
+        0.025583559020170486,
+        0.09162467732722578
+      ],
+      "calendar_ci95": [
+        0.01701148499886948,
+        0.12372657793579744
+      ],
+      "cycle_ci95": [
+        0.010589663558325888,
+        0.08536540911687532
+      ],
+      "one_sided_sign_flip_p": 0.0036,
+      "inferential_status": "post-hoc-outcome-guided",
+      "holm_adjusted_p": 0.0108
+    },
+    "adjacency_only minus wrong_property": {
+      "effect": 0.06853633671096382,
+      "calendar_effect": 0.07909513171695437,
+      "cycle_effect": 0.05797754170497327,
+      "ci95": [
+        0.03498309883169634,
+        0.10036195766104652
+      ],
+      "calendar_ci95": [
+        0.027423796455045498,
+        0.12664523822531845
+      ],
+      "cycle_ci95": [
+        0.014960556638236167,
+        0.10116954032424418
+      ],
+      "one_sided_sign_flip_p": 0.0009,
+      "inferential_status": "post-hoc-outcome-guided",
+      "holm_adjusted_p": 0.0036
+    },
+    "adjacency_only minus shuffled_source": {
+      "effect": 0.11718949728082967,
+      "calendar_effect": 0.2177529520819642,
+      "cycle_effect": 0.016626042479695124,
+      "ci95": [
+        0.017159638033643516,
+        0.24023807308142933
+      ],
+      "calendar_ci95": [
+        0.041551230925025655,
+        0.4527423535995675
+      ],
+      "cycle_ci95": [
+        -0.07137815828478358,
+        0.07489484160283029
+      ],
+      "one_sided_sign_flip_p": 0.0356,
+      "inferential_status": "post-hoc-outcome-guided",
+      "holm_adjusted_p": 0.0356
+    },
+    "adjacency_only minus random_features": {
+      "effect": 0.07466681795576541,
+      "calendar_effect": 0.11041059093130468,
+      "cycle_effect": 0.03892304498022614,
+      "ci95": [
+        0.03422905362177072,
+        0.10745962028564006
+      ],
+      "calendar_ci95": [
+        0.046649938504031645,
+        0.14528450502488677
+      ],
+      "cycle_ci95": [
+        -0.015496203462905044,
+        0.09456200163930613
+      ],
+      "one_sided_sign_flip_p": 0.007,
+      "inferential_status": "post-hoc-outcome-guided",
+      "holm_adjusted_p": 0.014
+    }
+  },
+  "absolute_heldout_r2_by_type": {
+    "k": 0.3339510170515134,
+    "z": 0.4617423538837011
+  },
+  "condition_group_wins": {
+    "k": {
+      "groups_improved": 7,
+      "groups_total": 8,
+      "median_group_relative_gain": 0.08381118289918832
+    },
+    "z": {
+      "groups_improved": 10,
+      "groups_total": 14,
+      "median_group_relative_gain": 0.028566256274720814
+    }
+  },
+  "hard_ood_diagnostic": {
+    "k": {
+      "source_distance_q75": 0.1710526315789473,
+      "groups": [
+        "k|10|0.8",
+        "k|23|0.8"
+      ],
+      "relative_rmse_gain_vs_target_only": -0.012388106783189246,
+      "groups_improved": 1,
+      "groups_total": 2
+    },
+    "z": {
+      "source_distance_q75": 0.6170909247445375,
+      "groups": [
+        "z|23|0.69|0.2|1|0.5",
+        "z|45|0.8|0.6|0.24|2",
+        "z|45|0.8|0.6|0.2|0.44",
+        "z|45|0.8|0.6|1|2"
+      ],
+      "relative_rmse_gain_vs_target_only": 0.05564685002992342,
+      "groups_improved": 3,
+      "groups_total": 4
+    }
+  },
+  "global_credibility_equivalence": {
+    "maximum_absolute_prediction_difference": 5.684341886080802e-14,
+    "interpretation": "The global scalar rescaling is split-order equivalent for this tree learner and is not an independent source-specificity control."
+  },
+  "condition_map_sha256": "745f234d870500d816686c6ac2ccbb4e9fdcdd234d4b914bc0a5f4760d6bd486",
+  "bootstrap_sha256": "e3de3438c95bde18ff5822e0befa1ca6e56b677105acfdd050c1d3f2a0897f97",
+  "specification_sha256": "bb41c8f70f44d23d70dd75fd04a820d19c9bb9853564596c424cee02c831cbbf",
+  "candidate_for_independent_test": "Use a credible continuous neighboring-source prediction as one target feature; compare against target-only and matched wrong, shuffled, and random controls without a hard cross-stratum abstention gate.",
+  "claim_guard": "This result is an outcome-guided diagnostic on a target whose frozen primary was non-evaluable. It nominates a policy; it does not confirm it.",
+  "errors": []
+}

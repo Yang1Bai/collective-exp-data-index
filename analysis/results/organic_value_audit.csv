@@ -1,0 +1,3 @@
+dataset,property,n,nonpositive_values,minimum,maximum
+aqsoldb,logS,9982,8920,-13.1719,2.1376816201
+freesolv,dG_hydration,642,558,-25.47,3.43

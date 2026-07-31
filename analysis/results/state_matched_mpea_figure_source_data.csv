@@ -1,0 +1,9 @@
+panel,contrast,mean_percent,ci95_low_percent,ci95_high_percent,interval
+f_or_g,real_q1,7.2074887049880925,3.049970895778255,11.517911314055066,two-way cluster bootstrap
+f_or_g,real_q4,9.20970344778705,4.430893396091993,14.372210375613703,two-way cluster bootstrap
+f_or_g,shuffled_q4,-0.2637949298610266,-1.8054294101097368,1.007548509143478,two-way cluster bootstrap
+f_or_g,q4_minus_q1,2.0022147427989565,-4.656631706373531,8.618555508683237,two-way cluster bootstrap
+f_or_g,real_minus_shuffled,9.473498377648076,4.796605752813717,14.335176768094096,two-way cluster bootstrap
+h,composition_to_planned_state_q4,8.25016392102281,4.865836956125323,11.6344908859203,descriptive t interval
+h,planned_state_to_predicted_uts_q4,9.20970344778705,4.430893396091993,14.372210375613703,two-way cluster bootstrap
+h,planned_state_to_measured_uts_q4,47.70057292509392,43.54666998758097,51.854475862606876,descriptive t interval

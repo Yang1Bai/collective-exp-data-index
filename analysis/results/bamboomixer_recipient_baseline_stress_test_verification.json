@@ -1,0 +1,12 @@
+{
+  "design_sha256": "ca9bb9dc6a47de727cf9c89ea3fece209e5bf0f0475d583d1682f83635295cb1",
+  "formal_anchor_rows_aligned": 300,
+  "metrics_sha256": "03cbf40721f676eec34f63f2a01b0e19b64ae9a4ea8fb00aac699d86562c1c26",
+  "rows": 4200,
+  "source_minus_oracle_spearman_mean": 0.29985577635695154,
+  "source_minus_strongest_spearman_mean": 0.3736614620854431,
+  "status": "verified-complete",
+  "strongest_average_recipient_model": "rbf_kernel_ridge_alpha_10",
+  "summary_sha256": "9f1b57532b980886481332a5b1e1deac730d7a42116a77b3d510e79c64c2afc1",
+  "verification_mode": "summary-recalculation-and-formal-anchor-alignment"
+}

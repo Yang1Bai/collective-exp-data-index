@@ -1,0 +1,428 @@
+{
+  "status": "verified-exploratory-method-selection-not-claim-bearing",
+  "design_sha256": "4f3d64501630e55d0ae38f2ee1a70519e51a04d5eff72253cfdce08fc0f2744d",
+  "input_sha256": "a2ccdd88de18ccdc4e11d2f87026938d42dfcd3b56567b7cc912a27905f79b7b",
+  "analysis_status": "exploratory-post-diagnostic-method-selection",
+  "prespecified_contrasts": {
+    "official_test": [
+      {
+        "scope": "official_test",
+        "left_policy": "target_mean_greedy",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": -8.63,
+        "bootstrap_95": [
+          -12.93025,
+          -4.399750000000004
+        ],
+        "holm_p": 0.9998,
+        "fraction_seeds_left_improves": 0.37,
+        "passes_development_gates": false
+      },
+      {
+        "scope": "official_test",
+        "left_policy": "composition_novelty",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": 12.08,
+        "bootstrap_95": [
+          9.74,
+          14.520249999999995
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.86,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "official_test",
+        "left_policy": "thermoelectric_prior_static",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": 12.5,
+        "bootstrap_95": [
+          10.25,
+          14.9
+        ],
+        "holm_p": 0.0004,
+        "fraction_seeds_left_improves": 0.81,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "official_test",
+        "left_policy": "thermoelectric_prior_static",
+        "right_policy": "catalysis_prior_static_control",
+        "mean_experiments_saved_by_left": 2.0,
+        "bootstrap_95": [
+          2.0,
+          2.0
+        ],
+        "holm_p": 0.0004,
+        "fraction_seeds_left_improves": 1.0,
+        "passes_development_gates": false
+      },
+      {
+        "scope": "official_test",
+        "left_policy": "target_source_rank_fusion",
+        "right_policy": "target_mean_greedy",
+        "mean_experiments_saved_by_left": 16.83,
+        "bootstrap_95": [
+          13.86,
+          19.62025
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.7,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "official_test",
+        "left_policy": "target_source_novelty_rank_fusion",
+        "right_policy": "target_mean_greedy",
+        "mean_experiments_saved_by_left": 19.94,
+        "bootstrap_95": [
+          16.54,
+          23.200249999999997
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.7,
+        "passes_development_gates": true
+      }
+    ],
+    "hard_ood_40pct": [
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "target_mean_greedy",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": -4.23,
+        "bootstrap_95": [
+          -6.7802500000000006,
+          -1.7297500000000037
+        ],
+        "holm_p": 0.9995,
+        "fraction_seeds_left_improves": 0.4,
+        "passes_development_gates": false
+      },
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "composition_novelty",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": 8.82,
+        "bootstrap_95": [
+          7.1,
+          10.58
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.86,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "thermoelectric_prior_static",
+        "right_policy": "uniform_random",
+        "mean_experiments_saved_by_left": 8.58,
+        "bootstrap_95": [
+          6.91975,
+          10.300249999999997
+        ],
+        "holm_p": 0.0004,
+        "fraction_seeds_left_improves": 0.84,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "thermoelectric_prior_static",
+        "right_policy": "catalysis_prior_static_control",
+        "mean_experiments_saved_by_left": 2.0,
+        "bootstrap_95": [
+          2.0,
+          2.0
+        ],
+        "holm_p": 0.0004,
+        "fraction_seeds_left_improves": 1.0,
+        "passes_development_gates": false
+      },
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "target_source_rank_fusion",
+        "right_policy": "target_mean_greedy",
+        "mean_experiments_saved_by_left": 5.64,
+        "bootstrap_95": [
+          4.1,
+          7.300249999999997
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.83,
+        "passes_development_gates": true
+      },
+      {
+        "scope": "hard_ood_40pct",
+        "left_policy": "target_source_novelty_rank_fusion",
+        "right_policy": "target_mean_greedy",
+        "mean_experiments_saved_by_left": 10.39,
+        "bootstrap_95": [
+          8.66,
+          12.1
+        ],
+        "holm_p": 0.0002,
+        "fraction_seeds_left_improves": 0.89,
+        "passes_development_gates": true
+      }
+    ]
+  },
+  "posthoc_first_hit_vs_composition_novelty": [
+    {
+      "scope": "official_test",
+      "left_policy": "thermoelectric_prior_static",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": 0.42,
+      "descriptive_bootstrap_95": [
+        -0.1,
+        0.98
+      ],
+      "fraction_seeds_left_improves": 0.34,
+      "fraction_seeds_tied": 0.07,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    },
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_rank_fusion",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": -3.88,
+      "descriptive_bootstrap_95": [
+        -5.59,
+        -2.25
+      ],
+      "fraction_seeds_left_improves": 0.29,
+      "fraction_seeds_tied": 0.19,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    },
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": -0.77,
+      "descriptive_bootstrap_95": [
+        -1.68,
+        0.13024999999999637
+      ],
+      "fraction_seeds_left_improves": 0.37,
+      "fraction_seeds_tied": 0.16,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "thermoelectric_prior_static",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": -0.24,
+      "descriptive_bootstrap_95": [
+        -0.59,
+        0.14
+      ],
+      "fraction_seeds_left_improves": 0.25,
+      "fraction_seeds_tied": 0.13,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_rank_fusion",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": -7.41,
+      "descriptive_bootstrap_95": [
+        -8.98,
+        -5.81
+      ],
+      "fraction_seeds_left_improves": 0.21,
+      "fraction_seeds_tied": 0.1,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "effect_definition": "right-policy acquisitions minus left-policy acquisitions; positive favors left",
+      "mean_experiments_saved_by_left": -2.66,
+      "descriptive_bootstrap_95": [
+        -3.58,
+        -1.75
+      ],
+      "fraction_seeds_left_improves": 0.26,
+      "fraction_seeds_tied": 0.14,
+      "status": "post-hoc descriptive; no confirmatory p value"
+    }
+  ],
+  "posthoc_secondary_utility_fusion_vs_composition_novelty": [
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "cumulative_hit_auc_to_40",
+      "mean_left_minus_right": 34.12,
+      "descriptive_bootstrap_95": [
+        27.63975,
+        40.180249999999994
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "top5_hits_at_20",
+      "mean_left_minus_right": 0.95,
+      "descriptive_bootstrap_95": [
+        0.71,
+        1.18
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "top5_recall_at_40",
+      "mean_left_minus_right": 0.22500000000000003,
+      "descriptive_bootstrap_95": [
+        0.18666666666666668,
+        0.265
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "official_test",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "regret_to_pool_max_at_40",
+      "mean_left_minus_right": 0.028885989018774722,
+      "descriptive_bootstrap_95": [
+        -0.05191327348102661,
+        0.1082874726941586
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "cumulative_hit_auc_to_40",
+      "mean_left_minus_right": -2.61,
+      "descriptive_bootstrap_95": [
+        -5.27,
+        0.01
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "top5_hits_at_20",
+      "mean_left_minus_right": -0.35,
+      "descriptive_bootstrap_95": [
+        -0.48,
+        -0.22
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "top5_recall_at_40",
+      "mean_left_minus_right": 0.0,
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "left_policy": "target_source_novelty_rank_fusion",
+      "right_policy": "composition_novelty",
+      "metric": "regret_to_pool_max_at_40",
+      "mean_left_minus_right": 0.0,
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "status": "post-hoc descriptive; secondary endpoint"
+    }
+  ],
+  "deterministic_static_policy_audit": [
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "alloy_prior_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "catalysis_prior_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "shuffled_thermoelectric_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "hard_ood_40pct",
+      "policy": "thermoelectric_prior_static",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "official_test",
+      "policy": "alloy_prior_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "official_test",
+      "policy": "catalysis_prior_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "official_test",
+      "policy": "shuffled_thermoelectric_static_control",
+      "unique_first_hit_counts_across_100_seeds": 1
+    },
+    {
+      "scope": "official_test",
+      "policy": "thermoelectric_prior_static",
+      "unique_first_hit_counts_across_100_seeds": 1
+    }
+  ],
+  "first_thermoelectric_static_hit": {
+    "step": 3,
+    "candidate_index": 138,
+    "candidate_key": "Br:0.6|Li:0.3|Y:0.1",
+    "target_value": -2.7166987712964503,
+    "guard": "The first hit is one fixed Li-Y-Br candidate; it is not 100 independent discoveries."
+  },
+  "global_decisions": {
+    "target_mean_backbone_fails_random_in_both_scopes": true,
+    "composition_novelty_beats_random_in_both_scopes": true,
+    "source_static_beats_random_in_both_scopes": true,
+    "source_static_separates_from_catalysis_practically_in_both_scopes": false,
+    "rank_fusions_beat_target_mean_in_both_scopes": true,
+    "rank_fusion_increment_is_attributable_to_neighbor_borrowing": false,
+    "reason_increment_not_attributable": "The target-mean comparator fails against random; composition novelty is the valid target-only backbone, and neither source-only nor source-aware fusion improves the primary first-hit endpoint over novelty in both scopes.",
+    "negative_transfer_safety_gate_passes": false,
+    "reason_negative_transfer_gate_fails": "The thermoelectric source saves only two acquisitions relative to the catalysis control in each scope, below the frozen five-acquisition practical gate.",
+    "independent_external_validation_required": true,
+    "new_science_endpoint_tested": false
+  },
+  "method_selection": {
+    "mandatory_target_only_comparator": "composition_novelty",
+    "candidate_for_first_hit_screening": [
+      "composition_novelty",
+      "thermoelectric_prior_static"
+    ],
+    "candidate_for_breadth_on_an_unseen_official-like_pool": "target_source_novelty_rank_fusion",
+    "must_not_claim": [
+      "confirmed OBELiX discovery acceleration",
+      "neighbor-specific OOD benefit beyond composition novelty",
+      "prospective discovery of new science"
+    ]
+  },
+  "claim_guard": "The method family was chosen after inspecting OBELiX outcomes. A favorable result can select a method for independent testing but cannot change the published frozen OBELiX null or establish prospective discovery acceleration."
+}

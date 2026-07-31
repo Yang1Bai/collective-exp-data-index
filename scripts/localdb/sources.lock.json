@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-07-14",
+  "sources": {
+    "estm-thermoelectric": {
+      "git": "https://github.com/KRICT-DATA/SIMD.git",
+      "directory": "SIMD",
+      "commit": "72d597cb6fdf6b79f6ca86ff759f9136de5d66ef",
+      "data_path": "dataset/estm.xlsx",
+      "redistribution_status": "unknown"
+    },
+    "aqsoldb": {
+      "git": "https://github.com/mcsorkun/AqSolDB.git",
+      "directory": "AqSolDB",
+      "commit": "8e02b548fd9a78778ff89a5aa9a460d1a289cc3a",
+      "data_path": "data/dataset-[A-I].csv",
+      "redistribution_status": "CC0-1.0"
+    },
+    "iupac-digitized-pka": {
+      "git": "https://github.com/IUPAC/Dissociation-Constants.git",
+      "directory": "Dissociation-Constants",
+      "commit": "1e65bbb75c401edfcaaf1b494e24468166fb2f16",
+      "data_path": "iupac_high-confidence_v2_3.csv",
+      "redistribution_status": "CC-BY-NC-4.0"
+    },
+    "photoswitch-dataset": {
+      "git": "https://github.com/Ryan-Rhys/The-Photoswitch-Dataset.git",
+      "directory": "The-Photoswitch-Dataset",
+      "commit": "e30d68287d7803bc0199604e2693ef50b5ee6b3b",
+      "data_path": "dataset/photoswitches.csv",
+      "redistribution_status": "MIT"
+    },
+    "freesolv": {
+      "git": "https://github.com/MobleyLab/FreeSolv.git",
+      "directory": "FreeSolv",
+      "commit": "6c7d19b4b565537365ffd22006aa2cd4643200c6",
+      "data_path": "database.txt",
+      "redistribution_status": "CC-BY-3.0"
+    },
+    "ocx24-open-catalyst-experiments-2024": {
+      "git": "https://github.com/FAIR-Chem/fairchem.git",
+      "directory": "fairchem",
+      "commit": "a838178c0b6cef68ed6b23167cc93c98ee26d2f7",
+      "data_path": "src/fairchem/applications/ocx/data/experimental_data/ExpDataDump_241113_clean.csv",
+      "raw_url": "https://raw.githubusercontent.com/FAIR-Chem/fairchem/a838178c0b6cef68ed6b23167cc93c98ee26d2f7/src/fairchem/applications/ocx/data/experimental_data/ExpDataDump_241113_clean.csv",
+      "redistribution_status": "CC-BY-4.0-data"
+    },
+    "mpea-dataset-borg": {
+      "git": "https://github.com/vahid2364/DataScribe_DeepTabularLearning.git",
+      "directory": "DataScribe_DeepTabularLearning",
+      "commit": "e4d72eabe31fad072b03ebb3788f4eb55e533dfc",
+      "data_path": "datasets/BorgHEA-DATA/data/MPEA_dataset.csv",
+      "read_with_git_show": true,
+      "redistribution_status": "MIT-repository"
+    },
+    "matbench-steels": {
+      "catalog_id": "matbench",
+      "name": "Matbench steels experimental strength subset",
+      "raw_url": "https://ndownloader.figshare.com/files/13354694",
+      "raw_sha256": "53c995e14371098ff8f6186e43c2a6d833650d352dc0d77118751cf6b06727d7",
+      "file_id": 13354694,
+      "record_doi": "10.6084/m9.figshare.7250453.v1",
+      "n_rows_expected": 312,
+      "commit": "figshare-file-13354694-sha256-53c995e14371098f",
+      "redistribution_status": "MIT"
+    },
+    "birdshot-high-entropy-alloy-campaign": {
+      "git": "https://github.com/vahid2364/DataScribe_DeepTabularLearning.git",
+      "directory": "DataScribe_DeepTabularLearning",
+      "commit": "e4d72eabe31fad072b03ebb3788f4eb55e533dfc",
+      "data_path": "datasets/BIRDSHOT-HEADATA-DeepGP-Alvi/data/HTMDEC_MasterTable_Iterations_v5_processed.csv",
+      "record_doi": "10.5281/zenodo.16396374",
+      "read_with_git_show": true,
+      "redistribution_status": "CC-BY-4.0"
+    },
+    "kit-electrolyte-conductivity-5035": {
+      "name": "5035 Conductivity Experiments for Li-Ion Battery Electrolytes",
+      "raw_url": "https://zenodo.org/api/records/7244939/files/Conductivtiy_experiment.csv/content",
+      "raw_sha256": "22b3445590b2d3a5c3ce48c9f784ca8af795dc66181eb0efc347efe31849c994",
+      "raw_md5": "f84cfeb764e5d4db22cdb8b1253a0935",
+      "file_name": "Conductivtiy_experiment.csv",
+      "record_doi": "10.5281/zenodo.7244939",
+      "n_rows_expected": 5035,
+      "commit": "zenodo-7244939-sha256-22b3445590b2d3a5",
+      "redistribution_status": "CC-BY-4.0"
+    },
+    "calisol-23": {
+      "catalog_id": "calisol-23",
+      "name": "CALiSol-23",
+      "raw_url": "https://ndownloader.figshare.com/files/43151344",
+      "raw_sha256": "850ff20eaad7abfe86fdd455b9cbf661e1b393dbdf9bb33e47769e00c2f5f617",
+      "raw_md5": "70d29b362b9728fbc010ef5320d65f9d",
+      "file_name": "calisol23_DOI_10.11583DTU.c.6929599.csv",
+      "file_id": 43151344,
+      "record_doi": "10.11583/DTU.24559960.v1",
+      "n_rows_expected": 13825,
+      "commit": "figshare-file-43151344-sha256-850ff20eaad7abfe8",
+      "redistribution_status": "CC-BY-4.0"
+    },
+    "obelix-solid-electrolytes": {
+      "git": "https://github.com/NRC-Mila/OBELiX.git",
+      "directory": "OBELiX",
+      "commit": "4eaac889809dd489e3bae468c45d5c0e02b9147a",
+      "data_path": "data/processed.csv",
+      "redistribution_status": "CC-BY-4.0"
+    },
+    "openpoly-benchmark": {
+      "git": "https://github.com/WangGroupFDU/Openpoly_benchmark.git",
+      "directory": "Openpoly_benchmark",
+      "commit": "ccaa66900747bfc576ef935e3d5f220b6c9b1f85",
+      "data_path": "data/final_polymer_properties_fromliterature.csv",
+      "redistribution_status": "MIT"
+    },
+    "nist-isodb": {
+      "git": "https://github.com/NIST-ISODB/isodb-library.git",
+      "directory": "isodb-library",
+      "commit": "4cfcd47e4402f4ff40f893cbbcaa6b86734d8ac6",
+      "archive_url": "https://codeload.github.com/NIST-ISODB/isodb-library/tar.gz/4cfcd47e4402f4ff40f893cbbcaa6b86734d8ac6",
+      "archive_sha256": "680f30a4597bf830486d8012981f03da42f1b7e64a392d6ab45fceaf9db88f45",
+      "archive_filename": "isodb-library-4cfcd47e.tar.gz",
+      "normalization_status": "analysis-only-streamed-isosteric-fits-not-in-material-schema",
+      "redistribution_status": "US-government-public-domain"
+    }
+  }
+}

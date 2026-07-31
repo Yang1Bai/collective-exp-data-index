@@ -1,0 +1,87 @@
+{
+  "design_name": "Composition-distance hard-OOD decision borrowing",
+  "design_version": 1,
+  "frozen_utc": "2026-07-14T18:16:47Z",
+  "status": "frozen-after-outcome-free-feasibility-amendment-and-before-any-hard-OOD-decision-result",
+  "selection_history": "The whole-pool OOD decision extension showed directional OBELiX ranking improvement before this design was written. Therefore this hard-OOD analysis is explicitly exploratory and cannot independently confirm that edge. The subset rule, three-edge family, controls, endpoints, and gates were locked before computing any hard-OOD result.",
+  "question": "Is knowledge-borrowing decision utility concentrated among candidates compositionally farthest from all target-domain compositions available before the held-out campaign or fold?",
+  "distance": {
+    "representation": "normalized elemental-fraction vector in atomic-number column order",
+    "metric": "minimum L1 distance to any target-domain training-reference composition",
+    "reference_scope": "all eligible target-domain compositions available outside the held-out pool, not the repeated n=30 subset",
+    "hard_ood_rule": "Within each held-out pool, select exactly ceil(0.40*N) candidates after sorting distance descending and material_key ascending.",
+    "fraction": 0.4,
+    "uses_target_outcome": false
+  },
+  "feasibility_amendment": {
+    "utc": "2026-07-14T18:19:09Z",
+    "change": "The locked hard-OOD fraction was increased from 0.25 to 0.40 while retaining the farthest-first rule.",
+    "reason": "The first execution stopped before computing any decision metric because the smallest BIRDSHOT held-out pool yielded only five candidates at the 0.25 fraction, below the locked minimum of eight. The 0.40 fraction yields at least eight candidates in every pool.",
+    "outcome_information_seen": "Candidate counts and composition distances only; no target ranking, first-hit, enrichment, regret, effect, interval, or p-value was computed or inspected."
+  },
+  "decision_endpoint": {
+    "true_positive_fraction_within_hard_ood": 0.05,
+    "shortlist_fraction_within_hard_ood": 0.1,
+    "primary_effect": "baseline minus augmented fraction of the hard-OOD pool screened before the first true top-5-percent hit",
+    "positive_direction": "positive"
+  },
+  "primary_family": [
+    {
+      "edge_id": "hard_ood_birdshot_temporal_alloy_uts_to_ys",
+      "parent_edge_id": "birdshot_temporal_alloy_uts_to_ys",
+      "prediction_file": "analysis/results/external_confirmation_predictions.csv",
+      "target": "birdshot_ys",
+      "source": "alloy_uts",
+      "learner": "ridge-primary",
+      "pool_column": "fold",
+      "repeat_column": "repeat",
+      "identity_column": "material_key",
+      "minimum_candidate_n": 8,
+      "controls": ["te_thermal", "catalysis_h2"]
+    },
+    {
+      "edge_id": "hard_ood_matbench_alloy_uts_to_ys",
+      "parent_edge_id": "matbench_composition_holdout_alloy_uts_to_ys",
+      "prediction_file": "analysis/results/matbench_steels_external_predictions.csv",
+      "target": "matbench_steel_ys",
+      "source": "alloy_uts",
+      "learner": "ridge-primary",
+      "pool_column": "fold",
+      "repeat_column": "repeat",
+      "identity_column": "material_key",
+      "minimum_candidate_n": 8,
+      "controls": ["te_thermal", "catalysis_h2"]
+    },
+    {
+      "edge_id": "hard_ood_obelix_thermoelectric_zt_to_ionic_conductivity",
+      "parent_edge_id": "obelix_official_thermoelectric_zt_to_ionic_conductivity",
+      "prediction_file": "analysis/results/primary_transfer_predictions.csv",
+      "source": "Thermoelectric ZT",
+      "learner": "Ridge (primary)",
+      "pool_column": "__single_official_pool__",
+      "repeat_column": "repeat",
+      "identity_column": "material_key",
+      "minimum_candidate_n": 8,
+      "controls": ["Alloy yield strength", "CO2R H2 Faradaic efficiency"]
+    }
+  ],
+  "inference": {
+    "bootstrap_replicates": 5000,
+    "sign_flip_draws": 9999,
+    "multiplicity": "Holm across exactly the three named composition-hard-OOD edges",
+    "unit": "fold-size-weighted repeat effect"
+  },
+  "improvement_gates": [
+    "Holm-adjusted p <= 0.05",
+    "bootstrap 95% interval lower bound > 0",
+    "at least 80% repeat effects positive",
+    "mean fraction-to-first-hit reduced by at least 25% relative to baseline",
+    "neither named control passes the same unadjusted core gates"
+  ],
+  "rescue_crossing": [
+    "all improvement gates pass",
+    "baseline median fraction-to-first-hit > 0.10",
+    "augmented median fraction-to-first-hit <= 0.10"
+  ],
+  "claim_guard": "Even a passing result is hypothesis-generating because the hard-OOD question followed inspection of the whole-pool OOD result. Independent confirmation requires a new dataset or prospectively held-out campaign."
+}

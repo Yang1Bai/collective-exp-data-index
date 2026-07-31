@@ -1,0 +1,117 @@
+{
+  "design_version": "2026-07-14a",
+  "status": "designated-before-first-conductivity-outcome-model-run-after-schema-count-and-data-quality-audit-not-externally-preregistered",
+  "seed": 20260717,
+  "dataset": {
+    "id": "calisol-23",
+    "article_doi": "10.1038/s41597-024-03575-8",
+    "record_doi": "10.11583/DTU.24559960.v1",
+    "file_name": "calisol23_DOI_10.11583DTU.c.6929599.csv",
+    "raw_url": "https://ndownloader.figshare.com/files/43151344",
+    "raw_md5": "70d29b362b9728fbc010ef5320d65f9d",
+    "raw_sha256": "850ff20eaad7abfe86fdd455b9cbf661e1b393dbdf9bb33e47769e00c2f5f617",
+    "raw_rows_expected": 13825,
+    "literature_articles_expected": 27,
+    "license": "CC-BY-4.0"
+  },
+  "analysis_unit": {
+    "unit": "paper_specific_electrolyte_formulation",
+    "chemistry_key": [
+      "salt_stripped",
+      "concentration_rounded_8dp",
+      "concentration_unit",
+      "solvent_ratio_type",
+      "all_38_solvent_ratio_columns_rounded_8dp"
+    ],
+    "unit_key": ["source_article_doi", "chemistry_key"],
+    "within_temperature_aggregation": "median_conductivity_within_source_article_chemistry_key_and_nominal_temperature_bin",
+    "temperature_bin_rule": "absolute_observed_C_minus_nominal_C_at_most_2.5",
+    "target_transform": "log10_mS_per_cm_after_excluding_nonfinite_or_k_at_most_1e-12",
+    "target_exclusion_rationale": "exact zeros and three numerical-zero values at the target cannot be logged; the threshold was fixed from the pre-model data-quality audit",
+    "composition_features": [
+      "salt_one_hot",
+      "concentration",
+      "concentration_unit_one_hot",
+      "solvent_ratio_type_one_hot",
+      "all_38_reported_solvent_ratios"
+    ],
+    "forbidden_features": [
+      "row_index",
+      "source_article_doi_as_predictor",
+      "temperature_as_predictor",
+      "conductivity_at_any_temperature_as_a_direct_feature",
+      "Arrhenius_or_VTF_fit_parameters",
+      "any_target_series_derived_summary",
+      "SMILES_or_external_descriptors_selected_after_outcome_inspection"
+    ]
+  },
+  "qualification_audit": {
+    "outcomes_not_modeled_before_freeze": true,
+    "target_selection_rationale": "minus_40_C_is_a_scientifically_relevant_low_temperature_task_and_is_the_coldest_10_C_grid_slice_with_at_least_10_articles_for_paper_disjoint_fivefold_testing",
+    "target_raw_rows_in_window": 1000,
+    "target_finite_conductivities": 917,
+    "target_positive_above_numerical_zero": 895,
+    "target_articles_before_cross_article_identity_filter": 15,
+    "cross_article_duplicate_chemistry_keys_excluded": 2,
+    "expected_target_units_after_all_frozen_filters": 891,
+    "primary_source_finite_conductivities": 922,
+    "source_and_control_sample_sizes_were_used_only_for_feasibility": true,
+    "conductivity_correlations_or_model_effects_used_to_choose_edge": false
+  },
+  "split": {
+    "type": "fivefold_grouped_by_source_article_doi",
+    "fold_assignment": "deterministic_greedy_balance_of_target_units_by_descending_article_size_then_fold_index",
+    "target_temperature_C": -40,
+    "target_budget_per_fold": 30,
+    "test_policy": "every target article is held out once; all formulations from that article remain together",
+    "source_policy": "for each outer fold every source-temperature row from held-out target articles is excluded, and exact held-out target chemistry identities are excluded even when reported by another article",
+    "development_source_feature_policy": "leave-one-article-out source predictions for target-training formulations; the final source model for target-test formulations uses only non-test articles and excludes exact test chemistry identities",
+    "target_identity_policy": "target chemistry keys appearing in more than one source article are excluded before fold assignment",
+    "target_label_sampling": "deterministic_group_balanced_sampling_across_development_articles_without_replacement"
+  },
+  "inference": {
+    "primary_source_temperature_C": -30,
+    "negative_control_source_temperatures_C": [-20, 0, 20],
+    "target_training_repeats": 100,
+    "sensitivity_repeats": 40,
+    "hierarchical_bootstrap_replicates": 5000,
+    "fixed_subset_feature_mapping_permutations": 999,
+    "learning_curve_repeats": 60,
+    "learning_curve_budgets": [15, 30, 60, 120, 240, 480],
+    "primary_source_learner": "random_forest_300_trees_min_leaf_2_max_features_1.0",
+    "primary_target_learner": "random_forest_300_trees_min_leaf_2_max_features_1.0",
+    "sensitivity_learners": [
+      "extra_trees_300_trees_min_leaf_2_max_features_1.0",
+      "ridge_alpha_10_on_standardized_one_hot_features"
+    ],
+    "minimum_relative_rmse_reduction": 0.05,
+    "minimum_target_sample_fraction_saved": 0.30,
+    "requires_bootstrap_lower_bound_above_zero": true,
+    "requires_positive_augmented_r2": true,
+    "requires_positive_effect_in_all_five_article_folds": true,
+    "minimum_positive_learners_of_three": 2,
+    "requires_positive_source_group_oof_r2": true,
+    "primary_test": "one_sided_fixed_target_subset_source_feature_mapping_permutation_stratified_within_source_article",
+    "multiplicity": "one_frozen_primary_edge; three prespecified temperature-distance controls and one shuffled-source placebo",
+    "adjacency_gate": "primary_effect_must_exceed_each_distant_temperature_control_and_effect_must_strictly_decrease_with_absolute_temperature_distance",
+    "placebo_gate": "shuffled_source_must_not_show_a_positive_95_percent_interval_and_must_be_smaller_than_the_primary_effect"
+  },
+  "primary_hypothesis": {
+    "target": "literature_aggregated_liquid_electrolyte_conductivity_at_minus_40_C",
+    "source": "literature_aggregated_liquid_electrolyte_conductivity_at_minus_30_C",
+    "relation": "adjacent_condition_borrowing_across_held_out_experimental_articles",
+    "direction": "positive",
+    "rationale": "A source model learned from nearby-temperature measurements in other experimental articles should provide a selective prior that materially reduces the target labels needed to predict a completely held-out article at minus 40 C."
+  },
+  "interpretation_policy": {
+    "allowed_if_all_gates_pass": "independent multi-article replication of local condition borrowing within liquid-electrolyte conductivity",
+    "not_allowed": [
+      "cross-domain field rescue",
+      "universal transfer law",
+      "proof that temperature distance alone defines physical adjacency",
+      "mechanistic causation from feature importance"
+    ],
+    "required_context": "Report together with the same-campaign KIT rescue and independent cross-dataset nulls; distinguish cross-article external generalization from cross-property or cross-domain transfer."
+  },
+  "decision_rule": "Call the frozen edge an independent multi-article local rescue only if every practical-effect, uncertainty, absolute-utility, article-fold direction, learner-robustness, source-quality, identity-leakage, permutation, sample-equivalence, adjacency, and placebo gate passes. Otherwise retain the exact failed gates and do not choose another primary CALiSol edge."
+}

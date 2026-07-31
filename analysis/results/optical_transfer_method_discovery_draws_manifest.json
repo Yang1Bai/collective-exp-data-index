@@ -1,0 +1,18 @@
+{
+  "status": "outcome-independent-method-discovery-draws-frozen",
+  "created_utc": "2026-07-26T02:43:01.212752+00:00",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "method_config_sha256": "6464c8288fc1e27d3036d641a8d50d209679f8dec07452a801f2db2d219fb805",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "draw_implementation_sha256": "3f23923c90b95e8d0c4179420adb59fcc2770863f02440ad9d9f0a4554189a6a",
+  "draw_sha256": "1a3188cb23d8fc2fc6746cd476331650b3c4afa23adf8003b643c0189f3c8cc3",
+  "budgets": [
+    30,
+    60,
+    120
+  ],
+  "repeats_per_budget": 300,
+  "stored_rows": 88910,
+  "outcome_access": "No recipient HER value or calculated descriptor was loaded."
+}

@@ -1,0 +1,25 @@
+{
+  "claim_guard": "One independent retrospective target; multi-target inference and prospective discovery remain separate gates.",
+  "ionic_consensus_absolute_r2_mean": -0.4189153454623529,
+  "ionic_consensus_minus_best_control": [
+    0.036740219147272754,
+    0.021309481136009313,
+    0.05217095715853619
+  ],
+  "ionic_consensus_relative_rmse_reduction": [
+    0.05522547967029224,
+    0.04106888602525652,
+    0.06938207331532796
+  ],
+  "metric_rows": 2340,
+  "outcome_audit": {
+    "entities_without_outcome": 7,
+    "frozen_entities": 7403,
+    "nonfinite_selected_values": 0,
+    "out_of_range_selected_values": 7,
+    "outcome_entities": 7396,
+    "unequal_curve_lists": 0
+  },
+  "primary_cell": "n=30, ExtraTrees, composition, frozen OOD quartile 4",
+  "status": "smoke-nonclaim"
+}

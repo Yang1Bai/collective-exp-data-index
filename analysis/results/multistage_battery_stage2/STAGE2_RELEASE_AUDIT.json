@@ -1,0 +1,24 @@
+{
+  "status": "non-evaluable-stage2-release",
+  "released_stage": "2",
+  "allowlisted_archives": 138,
+  "status_counts": {
+    "extracted-stage2": 135,
+    "missing-endpoint": 3
+  },
+  "evaluable_stage2_cells": 135,
+  "missing_endpoint_stage2_cells": 3,
+  "stage2_condition_groups": 23,
+  "minimum_cells_per_condition_group": 0,
+  "coverage_fraction": 0.9782608695652174,
+  "coverage_gate_pass": false,
+  "endpoint_table_sha256": "281a6980586465c83a2437d750dc7817ec158a7f27580b67c7b49e4bc075cfa9",
+  "release_manifest_sha256": "35e2a7f9cf4897ef10f59f55e730c36ef47c0512209892b5f9c47795f05d3d68",
+  "missing_endpoint_reasons": [
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0",
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0",
+    "CapacityExtractionError: expected exactly one *_AT_T23.csv; found 0"
+  ],
+  "errors": [],
+  "claim_guard": "A favorable result can establish retrospective outcome-unseen temporal neighboring-condition borrowing in this battery program. It cannot alone establish cross-domain transfer, prospective laboratory discovery, or experiments saved."
+}

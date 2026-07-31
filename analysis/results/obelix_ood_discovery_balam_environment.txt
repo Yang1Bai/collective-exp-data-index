@@ -1,0 +1,10 @@
+{
+  "slurm_job_id": "70624",
+  "slurm_job_node": "balam002",
+  "python": "3.11.5",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "ood_workers": "64"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "smoke-complete",
+  "created_utc": "2026-07-23T19:34:44.509851+00:00",
+  "design_sha256": "cc911d9d9677e0c523a77632f7866e9e6fedcb5625472f9004ad203fe0512d89",
+  "output_hashes": {
+    "multi_target_ood_smoke_strata.csv": "1f5c45922331b274568f1146e6d04e0235e333a8df3efdcb49598dc24da5c4e6",
+    "multi_target_ood_smoke_source_quality.csv": "ad050e79c3f36a0507284b0f7584ab09a725d0092cfead819c6ef1621c4e4b47",
+    "multi_target_ood_smoke_metrics.csv": "4c829d8039eb47c6b0bcd08a4c64b135fb7ffb981f3af6cb5283875c9eb2376d",
+    "multi_target_ood_smoke_contrasts.csv": "93802c54f40330880a2d40263144946ae4c614497bc80c53d84f5acd9a233c45",
+    "multi_target_ood_smoke_group_errors.csv": "572a3ef2c9deac23c1c07b891b5c97a523eca2096b13bfe20fbe9fe93d6e2fa6",
+    "multi_target_ood_smoke_edge_summary.csv": "aa6ae6c3468fc591e7f24822dc0ce9c3eef9445c0a1a4920d5815218126d5613",
+    "multi_target_ood_smoke_target_summary.csv": "37f61aea02641c4f731a69156fb06adfff57d488e7a95abc5a6d7353f16fded2",
+    "multi_target_ood_smoke_summary.json": "3e2eabab79a44f31751100034ed27d0f43852210065014c19cc747524b04b36e"
+  },
+  "claim_guard": "This systematic benchmark was designed after earlier component outcomes had been inspected. It can test whether a fixed borrowing procedure preferentially repairs held-out OOD regions across a declared portfolio, identify null and harmful edges, and generate hypotheses for external confirmation. It cannot retroactively create prospective validation, establish universal transfer, or prove laboratory discovery acceleration."
+}

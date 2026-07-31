@@ -1,0 +1,280 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "title": "Claude Review Package: Artifact-Gated Knowledge Borrowing in Experimental Materials Data",
+    "description": "Self-contained technical handoff for an adversarial Digital Discovery review.",
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Claude Review Package: Artifact-Gated Knowledge Borrowing in Experimental Materials Data"
+      },
+      {
+        "id": "technical-summary",
+        "type": "markdown",
+        "body": "## Technical summary\n\nThe manuscript is now defensible only as a methods-led falsification and decision-mapping paper. Its strongest positive result is a leakage-controlled, within-campaign KIT adjacent-temperature edge with 15.02% RMSE reduction; external BIRDSHOT, Matbench, CALiSol, OBELiX sequential, and Caltech adaptive tests sharply limit transportability. The independent Caltech result is especially diagnostic: the gate preferentially recognizes real neighbors and suppresses wrong domains, but every frozen adaptive source increment fails, while static neighbor rankings retain descriptive OOD signal. The safe conclusion is that source credibility, average prediction, OOD ranking, adaptive acquisition, and new-science discovery are separate claims."
+      },
+      {
+        "id": "question",
+        "type": "markdown",
+        "body": "## The question Claude must decide\n\nDoes the combination of a broad experimental-data index, a source-pinned local integration, explicit artifact/leakage/multiplicity gates, one frozen within-campaign positive edge, and multiple external null boundaries constitute a publishable operational knowledge-borrowing methodology for *Digital Discovery*? Or is the positive evidence too narrow and the map too dependent on retrospective, outcome-selected analysis to support the proposed contribution?"
+      },
+      {
+        "id": "claim-hierarchy",
+        "type": "markdown",
+        "body": "## The paper succeeds only if the claim hierarchy remains intact\n\n1. **Pooled regularity is not transport.** Strong in-domain coefficients must be tested unchanged out of domain.\n2. **Prediction borrowing is not screening.** A source-derived feature can improve average error without improving an OOD shortlist.\n3. **Screening is not sequential acquisition.** A fixed ranking can contain signal that disappears after target-label acquisition and refitting.\n4. **Retrospective acquisition is not prospective discovery.** No experiment here establishes laboratory acceleration or new science.\n5. **Credibility is necessary, not sufficient.** Caltech shows neighbor-versus-control ordering in the gate but null adaptive utility."
+      },
+      {
+        "id": "evidence",
+        "type": "markdown",
+        "body": "## Key evidence and boundaries\n\n- **Law transport:** Borg UTS–YS R²=0.790 in source data; BIRDSHOT R²=0.067; unchanged external line R²=−3.006.\n- **Local positive edge:** KIT −20→−30 °C gives +15.02% [8.61%,21.10%], p=0.001, R² 0.739→0.811. The exact label-saving magnitude remains uncertain.\n- **External boundaries:** BIRDSHOT is directional but below practical and absolute-utility gates; Matbench is null; CALiSol does not reproduce KIT rescue.\n- **Endpoint separation:** OBELiX fixed ranking is directional but sequential UCB is null; random is faster in that retrospective pool.\n- **External policy decomposition:** Caltech wrong-source protection works, real-neighbor gate ordering is visible, adaptive residual policies are null, and static real-neighbor rankings are descriptive only.\n- **Artifact discipline:** weak thermoelectric compensation remains weak; ISODB retains a strong but family-conditioned pattern after the specified Krug null."
+      },
+      {
+        "id": "caltech",
+        "type": "markdown",
+        "body": "## Caltech identifies the unresolved policy-conversion problem\n\nThe target contains 483 canonical compositions, including 144 article-disjoint candidates and a frozen 58-candidate hard-OOD subset. Exact formulas and DOIs are removed from every source fit. Across single-source policies, real neighbors have mean admission 0.355 and weight 0.168 versus 0.168 and 0.063 for wrong controls; all wrong-source guards pass. Nevertheless, OBELiX, ESTM, and multisource adaptive AUC20 increments all fail the frozen family. Prespecified static OBELiX/ESTM AUC20 values are 33/45 externally and 38/51 in hard OOD, compared with random 11.25/9.87. Because no primary static-attribution family or independent-target interval was frozen, this is descriptive method-selection evidence, not confirmation.",
+        "sourceId": "caltech-validation"
+      },
+      {
+        "id": "caltech-adaptive-chart-block",
+        "type": "chart",
+        "chartId": "caltech-adaptive-gains"
+      },
+      {
+        "id": "caltech-chart-interpretation",
+        "type": "markdown",
+        "body": "### How to read the Caltech adaptive chart\n\nBars show mean AUC20 gain relative to the state-matched target-only policy; zero is no gain. The chart intentionally retains all six policy-scope estimates, including negative values. It does not encode the paired-bootstrap intervals as marks, so the exact intervals remain in the adjacent evidence text and source data. Every interval crosses zero, and no policy passes the complete frozen decision family."
+      },
+      {
+        "id": "definitions",
+        "type": "markdown",
+        "body": "## Scope and definitions the review must preserve\n\n**Local task rescue** is an operational status used only for the frozen KIT point rules; it is not field-level rescue. **Directional** means an effect has a favorable sign but fails at least one practical, consistency, or absolute-utility gate. **Descriptive** means the policy or output existed before the result, but the attribution contrast or inferential family was not frozen. **Post-result method selection** means the method was created after outcome inspection and can only select a future independent protocol. **New science** would require a predeclared source-derived hypothesis and an independently measured outcome; that endpoint was not tested."
+      },
+      {
+        "id": "methods",
+        "type": "markdown",
+        "body": "## Methodology and validation architecture\n\nThe repository uses canonical identity and provenance groups, source-feature cross-fitting, exact target-composition exclusions, DOI/article-disjoint splits where available, wrong-domain and shuffled controls, practical and absolute-utility gates, multiplicity correction, paired resampling, learner sensitivity, and frozen machine-readable designs. Formal Caltech calculation and same-environment verification ran as Balam Jobs 70740 and 70767. Portable recomputation verified 120,000 trajectory rows, 184,000 gate rows, 3,000 utility rows, and 16 contrast rows. The final release manifest hashes 197 artifacts, and all 36 integrity tests pass."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## Limitations that could still drive rejection\n\n- The only frozen positive rescue edge is within one campaign and its target-only model is already useful.\n- No independently replicated positive source-to-policy edge exists.\n- Internal freezing is not public preregistration.\n- Caltech static ranking lacks a frozen attribution family and dataset-level uncertainty.\n- Model and representation families remain limited; different chemistry-aware representations could alter edge-specific outcomes.\n- The catalog is broad but not exhaustive; 21 license fields remain unresolved, and the SQLite database cannot be redistributed as unrestricted data.\n- No prospective laboratory campaign or new-science endpoint was performed."
+      },
+      {
+        "id": "safe-claims",
+        "type": "markdown",
+        "body": "## Safe and unsafe manuscript language\n\n**Safe:** aggregation does not establish universal transport; useful borrowing is sparse, directional, endpoint-specific, and provenance-dependent; one frozen adjacent-condition edge materially improves a controlled data-poor task; Caltech validates selective wrong-source suppression but returns an adaptive-policy null; static neighbor shortlists motivate a new frozen portfolio test.\n\n**Unsafe:** neighborhood borrowing rescues data-poor fields; physical distance is a universal transfer law; feature importance proves mechanism; prediction gain accelerates discovery; Caltech confirms OOD acceleration; the post-result portfolio is a confirmed edge; the present work discovers new science."
+      },
+      {
+        "id": "submission",
+        "type": "markdown",
+        "body": "## Submission closure still required\n\n1. Archive the exact release and insert a persistent DOI.\n2. Obtain a green clean-Linux CI record on the final commit.\n3. Resolve or explicitly exclude uncertain redistribution rights.\n4. Supply authors, affiliations, CRediT roles, funding, conflicts, RSC formatting, and a graphical abstract.\n5. Run a final numeric and terminology consistency audit across abstract, main text, SI, figures, README, and data-availability language."
+      },
+      {
+        "id": "review-task",
+        "type": "markdown",
+        "body": "## Required adversarial review\n\nFor every issue, assign fatal/major/minor severity, identify the unsupported inference or failure mode, prescribe the minimum fix, classify it as new data/compute/reanalysis/reframing, and state whether acceptance is possible without it. Audit leakage, circularity, multiplicity, bootstrap units, small-n evidence, Krug limitations, model/feature narrowness, single-positive-edge generality, Caltech source credibility versus policy utility, figure logic, novelty, related work, licensing, and reproducibility. End with a verdict, the three highest-leverage pre-submission actions, claim-by-claim wording changes, and a stronger title/abstract framing. Do not recommend additional tuning on observed Caltech outcomes as confirmatory evidence."
+      },
+      {
+        "id": "next-questions",
+        "type": "markdown",
+        "body": "## Further questions\n\n- Is a methods-led falsification paper publishable without an independently replicated positive source-to-policy edge?\n- What independent target would provide the strongest outcome-unseen test of the target-model-free neighbor portfolio?\n- Which prior work most threatens novelty in transfer cartography, task similarity, multi-fidelity optimization, compensation-law analysis, and experimental-database integration?\n- Which result should be removed from the main text if the narrative is still too broad?"
+      }
+    ],
+    "cards": [],
+    "charts": [
+      {
+        "id": "caltech-adaptive-gains",
+        "title": "Caltech adaptive AUC20 gains",
+        "subtitle": "Mean gain versus the state-matched target-only policy; 100 paired campaigns per scope",
+        "intent": "comparison",
+        "question": "Do the frozen neighbor-source policies improve cumulative top-5% recovery beyond the target-only policy?",
+        "rationale": "A horizontal signed bar chart keeps the six long policy-scope labels readable and preserves the zero-gain benchmark.",
+        "comparisonContext": {
+          "baseline": "state-matched target-only policy",
+          "grain": "policy by candidate scope",
+          "unit": "AUC20 gain"
+        },
+        "type": "horizontalBar",
+        "dataset": "caltech_adaptive_gains",
+        "sourceId": "caltech-adaptive-sql",
+        "encodings": {
+          "y": {
+            "field": "mean_auc20_gain",
+            "type": "quantitative",
+            "format": "number",
+            "label": "Mean AUC20 gain"
+          },
+          "x": {
+            "field": "label",
+            "type": "nominal",
+            "label": "Policy and scope"
+          },
+          "tooltip": [
+            {
+              "field": "scope",
+              "type": "nominal",
+              "label": "Scope"
+            },
+            {
+              "field": "mean_auc20_gain",
+              "type": "quantitative",
+              "format": "number",
+              "label": "Mean gain"
+            },
+            {
+              "field": "ci_lo",
+              "type": "quantitative",
+              "format": "number",
+              "label": "95% CI low"
+            },
+            {
+              "field": "ci_hi",
+              "type": "quantitative",
+              "format": "number",
+              "label": "95% CI high"
+            }
+          ]
+        },
+        "layout": "full",
+        "referenceLines": [
+          {
+            "axis": "y",
+            "value": 0,
+            "label": "no gain",
+            "color": "neutral",
+            "lineStyle": "solid"
+          }
+        ],
+        "surface": {
+          "showControls": false,
+          "interactiveLegend": false,
+          "labels": {
+            "values": "all"
+          }
+        }
+      }
+    ],
+    "tables": []
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "ready",
+    "generatedAt": "2026-07-17",
+    "datasets": {
+      "caltech_adaptive_gains": [
+        {
+          "label": "External — OBELiX residual",
+          "scope": "external candidate",
+          "policy": "OBELiX residual",
+          "mean_auc20_gain": -0.06,
+          "ci_lo": -0.30,
+          "ci_hi": 0.12,
+          "holm_p": 1.0,
+          "passes_all_frozen_gates": false
+        },
+        {
+          "label": "External — ESTM residual",
+          "scope": "external candidate",
+          "policy": "ESTM residual",
+          "mean_auc20_gain": -0.06,
+          "ci_lo": -0.23,
+          "ci_hi": 0.07,
+          "holm_p": 1.0,
+          "passes_all_frozen_gates": false
+        },
+        {
+          "label": "External — multisource residual",
+          "scope": "external candidate",
+          "policy": "multisource residual",
+          "mean_auc20_gain": -0.09,
+          "ci_lo": -0.34,
+          "ci_hi": 0.09,
+          "holm_p": 1.0,
+          "passes_all_frozen_gates": false
+        },
+        {
+          "label": "Hard OOD — OBELiX residual",
+          "scope": "hard OOD 40%",
+          "policy": "OBELiX residual",
+          "mean_auc20_gain": 1.10,
+          "ci_lo": -0.38,
+          "ci_hi": 2.59,
+          "holm_p": 0.588,
+          "passes_all_frozen_gates": false
+        },
+        {
+          "label": "Hard OOD — ESTM residual",
+          "scope": "hard OOD 40%",
+          "policy": "ESTM residual",
+          "mean_auc20_gain": -0.07,
+          "ci_lo": -1.11,
+          "ci_hi": 0.91,
+          "holm_p": 1.0,
+          "passes_all_frozen_gates": false
+        },
+        {
+          "label": "Hard OOD — multisource residual",
+          "scope": "hard OOD 40%",
+          "policy": "multisource residual",
+          "mean_auc20_gain": 1.27,
+          "ci_lo": -0.75,
+          "ci_hi": 3.22,
+          "holm_p": 0.657,
+          "passes_all_frozen_gates": false
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "manuscript",
+      "label": "Current manuscript draft",
+      "path": "analysis/MANUSCRIPT_DRAFT.md",
+      "description": "Main paper text, figures, claim hierarchy, limitations, and data/code availability."
+    },
+    {
+      "id": "supplement",
+      "label": "Supplementary information",
+      "path": "analysis/SUPPLEMENTARY_INFORMATION.md",
+      "description": "Detailed protocols, gate definitions, amendments, and reproducibility checklist."
+    },
+    {
+      "id": "caltech-validation",
+      "label": "Verified Caltech external-policy validation",
+      "path": "analysis/CALTECH_IONIC_EXTERNAL_POLICY_VALIDATION.md",
+      "description": "Formal adaptive null, negative-transfer safety result, descriptive static ranking, and post-result method selection."
+    },
+    {
+      "id": "caltech-adaptive-sql",
+      "label": "Caltech adaptive AUC20 chart rows",
+      "path": "analysis/review_packages/claude/caltech_adaptive_gains.sql",
+      "description": "Reviewed six-row chart snapshot transcribed from the verified Caltech contrast table."
+    },
+    {
+      "id": "paper-package",
+      "label": "Paper positioning and claim boundaries",
+      "path": "analysis/PAPER_PACKAGE.md",
+      "description": "Safe claims, unsafe claims, journal framing, figures, and submission gates."
+    },
+    {
+      "id": "presubmission-review",
+      "label": "Current adversarial pre-submission review",
+      "path": "analysis/PRESUBMISSION_REVIEW.md",
+      "description": "Reviewer-style assessment and remaining scientific and operational risks."
+    },
+    {
+      "id": "release-manifest",
+      "label": "Reproducibility manifest",
+      "path": "analysis/results/manifest.json",
+      "description": "Hashes and metadata for frozen designs, code, compact outputs, documentation, and figures."
+    }
+  ],
+  "package_info": {
+    "purpose": "Adversarial external review handoff",
+    "audience": "technical",
+    "scope": "Compact manuscript and verification evidence only"
+  }
+}

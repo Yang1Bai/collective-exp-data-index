@@ -1,0 +1,175 @@
+{
+  "design_name": "Outcome-unseen temporal CCA-v2 validation on multi-stage lithium-ion aging",
+  "version": 5,
+  "frozen_utc": "2026-07-20T21:30:00Z",
+  "status": "target-specific protocol and endpoint extractor frozen from the article, repository, experiments_meta.csv, metadata-only archive audits, and CSV header lines before any numeric Stage 1 or Stage 2 aging CSV data row was opened or parsed",
+  "schema_only_amendments": [
+    "A two-archive pilot showed that serial_internal alone is reused across stages. The primary mapping key was corrected to (archive serial, archive-internal serial) before numeric outcome access.",
+    "The first complete metadata-only attempt exposed deposited identifier conflicts. The fallback was frozen before numeric outcome access: only a filename with exactly two Stage 1/2 metadata candidates and one twin already mapped by the exact composite key may use the remaining complementary stage. Every conflict is retained. File order, dates, outcomes, and performance are forbidden for stage assignment.",
+    "Six residual archives formed three pairs for which both twins had conflicting internal serials. A third metadata-only rule was frozen: within the same laboratory, dates may be used only when at least 20 files per stage were mapped without dates, the closed stage date envelopes do not overlap, and the unresolved date falls inside exactly one envelope. The qualifying INT calibration contains 42 Stage 1 files from 2021-09-30 through 2021-10-12 and 45 Stage 2 files from 2023-01-19 through 2023-02-17.",
+    "Endpoints, models, thresholds, comparisons, and scientific decision rules were unchanged by all schema-only amendments."
+  ],
+  "preoutcome_endpoint_amendment": {
+    "reason": "Version 4 described the endpoint as discharge capacity alone, whereas the authoritative Scientific Data descriptor defines RPT capacity as the mean of charge and discharge capacity.",
+    "timing": "Corrected before any Stage 1 or Stage 2 numeric CSV data row was opened or parsed.",
+    "change": "At 23 degrees Celsius, integrate the paper-defined step_type 21 charge and step_type 22 discharge sections, average their positive capacities within ET and AT, and compute 100 times AT mean capacity divided by ET mean capacity.",
+    "unchanged": "Target, source, predictors, learners, splits, applicability function, controls, two primary comparisons, inference, thresholds, missingness gate, and claim boundary.",
+    "amendment_path": "analysis/MULTISTAGE_BATTERY_ENDPOINT_SCHEMA_AMENDMENT.md",
+    "extractor_schema_path": "analysis/multistage_battery_endpoint_schema.json",
+    "header_evidence_path": "analysis/results/multistage_battery_header_schema.json"
+  },
+  "parent_architecture": "analysis/cca_gate_v2_architecture.json",
+  "parent_architecture_sha256": "1e5249c53af8830c12655bb33d88e2261d51e15d50fc1f165191ea58f4c89bf3",
+  "target_metadata": "analysis/target_metadata/multistage_battery_preoutcome_metadata.json",
+  "claim_guard": "A positive primary result establishes temporal neighboring-condition borrowing for this battery program. It does not alone establish cross-domain transfer, prospective laboratory discovery, or a general policy. The external TRI edge is a separate upgrade and may abstain without replacement.",
+  "scientific_hypothesis": "A source model learned from Stage 1 aging conditions can reduce error on outcome-unseen Stage 2 conditions only where source support, uncertainty, and target support indicate local applicability; candidate-local abstention should outperform both unqualified Stage 1 stacking and Stage 2 target-only learning.",
+  "program_roles": {
+    "target": "Stage 2 cells and conditions",
+    "primary_temporal_source": "Stage 1 cells and conditions from the same deposited program",
+    "external_neighbor_upgrade": {
+      "catalog_id": "tri-battery-fast-charging",
+      "role": "prespecified secondary cross-program battery-aging edge",
+      "eligibility_before_stage2_outcome_access": [
+        "at least 40 independent charging-protocol groups",
+        "cycle-life or terminal-capacity endpoint available",
+        "charge-rate and protocol covariates map without target outcomes",
+        "source ranks and source audit hashed before Stage 2 outcome parsing"
+      ],
+      "failure_rule": "If any eligibility item fails, record source abstention; do not substitute another external dataset."
+    },
+    "matched_wrong_source": "A Stage 1 model predicting baseline cell mass m_0 from the same condition and provenance fields; it matches rows and support geometry but not the degradation endpoint.",
+    "shuffle_control": "Within aging type, permute Stage 1 degradation source predictions across condition groups with seed 20260720."
+  },
+  "outcome_sealing": {
+    "required_before_any_numeric_parse": [
+      "hash the complete Figshare API response and every downloaded file",
+      "resolve every archive to file_id and stage first with the exact (archive serial, archive-internal serial) key; if the deposited internal serial conflicts, allow only the remaining stage of an exactly mapped same-name twin when experiments_meta has exactly one Stage 1 and one Stage 2 candidate; for residual double-conflict twins allow only a same-lab date envelope calibrated on at least 20 independently mapped files per stage with non-overlapping closed intervals and a unique interval hit; retain all conflict and method flags",
+      "write and hash the endpoint-schema amendment from the official protocol, CSV header lines, and nonnumeric structure",
+      "separate Stage 1 source files from Stage 2 target files in a read-audited quarantine",
+      "verify that the Stage 2 target table contains no numeric endpoint values before source fitting"
+    ],
+    "stage1_release": "Stage 1 outcomes may be opened only after the retrieval map, header-only evidence, endpoint extractor, and formal endpoint amendment are frozen and independently verified.",
+    "stage2_release": "Stage 2 outcomes remain sealed until Stage 1 source models, source predictions, applicability features, outer splits, policy definitions, and hypothesis cards are hashed.",
+    "ambiguity_rule": "Any ambiguous file is excluded. If evaluable coverage falls below the endpoint gate, the target is non-evaluable; no endpoint or target replacement is allowed."
+  },
+  "analysis_units": {
+    "cell": "serial_internal after verified stage mapping",
+    "condition_group": "aging type plus the prescribed condition tuple; all replicate cells remain together",
+    "calendar_condition_tuple": ["type", "amb_temp_tp", "soc_max_tp"],
+    "cycle_condition_tuple": ["type", "amb_temp_tp", "soc_max_tp", "dod_tp", "c_ch_tp", "c_dch_tp"],
+    "independent_evaluation_unit": "Stage 2 condition group, not cell, cycle, file, split, tree, or random seed",
+    "strata": ["calendar", "cycle"]
+  },
+  "endpoints": {
+    "primary": {
+      "name": "terminal relative RPT capacity retention at 23 degrees Celsius",
+      "definition": "For ET_T23 and AT_T23, integrate the paper-defined step_type 21 charge capacity and step_type 22 discharge capacity, define Q_RPT as their arithmetic mean, and calculate 100 times final Q_RPT divided by initial Q_RPT.",
+      "symbol": "Q_rel_end_percent = 100 * Q_RPT_AT_T23 / Q_RPT_ET_T23; Q_RPT = (Q_charge_step21 + Q_discharge_step22) / 2",
+      "extractor_schema": "analysis/multistage_battery_endpoint_schema.json",
+      "aggregation": "one value per cell; no averaging across cells before prediction",
+      "transform": "none",
+      "winsorization": "none",
+      "missingness": "no imputation; require at least 80 percent evaluable cells and at least two evaluable cells in every retained Stage 2 condition group in each stratum",
+      "schema_failure": "If ET_T23, AT_T23, step_type 21, or step_type 22 cannot be mapped and integrated exactly as frozen, mark the cell missing with a reason code; if the coverage gate fails, declare the primary target non-evaluable.",
+      "sensitivities": "Charge-only and discharge-only retention, charge-discharge disagreement, and 10/45 degree results are diagnostic only and cannot replace or rescue the primary endpoint."
+    },
+    "secondary": {
+      "name": "terminal relative resistance growth at the paper-defined 50 percent SOC RPT point",
+      "definition": "100 times final resistance divided by initial resistance",
+      "status": "secondary only and tested only if the same schema-only mapping and 80 percent coverage gate pass; it cannot replace the primary endpoint"
+    }
+  },
+  "predictors": {
+    "shared_condition_features": ["amb_temp_tp", "soc_max_tp", "dod_tp", "c_ch_tp", "c_dch_tp"],
+    "baseline_cell_features": ["lab", "sampling", "m_0", "R_1khz_0", "U_0"],
+    "calendar_not_applicable_values": "Set dod_tp, c_ch_tp, and c_dch_tp to zero after adding explicit applicability masks.",
+    "categorical_encoding": "one-hot categories frozen from Stage 1 plus outcome-free Stage 2 metadata; unknown level is all zero",
+    "numeric_scaling": "Stage 1 median and range within aging type; zero-range columns are dropped",
+    "forbidden": [
+      "serial_internal, serial, tp, cell, instrument identifiers, or file_id as predictors",
+      "any post-baseline capacity, voltage, resistance, cycle count, elapsed time, or stopping reason",
+      "any feature selected using Stage 2 numeric outcomes",
+      "article-derived labels that encode final performance"
+    ]
+  },
+  "outer_evaluation": {
+    "scheme": "leave one Stage 2 condition group out",
+    "held_out_groups": 23,
+    "calendar_groups": 8,
+    "cycle_groups": 15,
+    "primary_target_label_budget": {"calendar_condition_groups": 4, "cycle_condition_groups": 6, "total_condition_groups": 10},
+    "selection": "For each held-out group, select target-training groups of the same aging type by deterministic maximin coverage in Stage 1 range-scaled condition space. Start from the lexicographically smallest SHA256 of the canonical condition tuple and break every distance tie by that hash.",
+    "secondary_budgets": [
+      {"calendar": 3, "cycle": 3, "total": 6},
+      {"calendar": 6, "cycle": 10, "total": 16}
+    ],
+    "replicate_policy": "All cells from a selected condition group are labeled; all cells from the held-out condition group are evaluated; no cell crosses the group boundary."
+  },
+  "learners": {
+    "source_model": "Separate calendar and cycle ExtraTreesRegressor models: 500 trees, min_samples_leaf=2, max_features=1.0, bootstrap=false, random_state=20260720; group cross-fitting by Stage 1 condition for training features and uncertainty calibration.",
+    "target_model": "The identical ExtraTreesRegressor specification is fit separately by aging type.",
+    "target_only": "Target predictors only.",
+    "adjacency_only": "Target predictors plus the Stage 1 source prediction; no local support, uncertainty, or abstention features.",
+    "global_source_credibility_only": "Adjacency-only multiplied by one global Stage 1 cross-fitted reliability coefficient; reported as a control, not in the primary family.",
+    "strongest_single_qualified_source": "The Stage 1 degradation source; with one eligible primary source this is numerically the adjacency-only control and is reported once.",
+    "cca_v2": "Target predictors plus a locally gated, centered Stage 1 prediction and the frozen applicability components; if the training-only borrowing gate fails, the prediction is exactly target-only."
+  },
+  "candidate_local_applicability": {
+    "source_distance": "Nearest Stage 1 condition distance in Stage 1 range-scaled condition space within aging type.",
+    "target_distance": "Nearest labeled Stage 2 condition distance in the same space within aging type.",
+    "source_uncertainty": "Standard deviation across the 500 Stage 1 trees, divided by the Stage 1 cross-fitted residual standard deviation and clipped to [0, 5].",
+    "provenance_compatibility": "One when laboratory is present in Stage 1 for the same aging type and sampling design has a documented mapping; otherwise 0.5. Aging-type mismatch is zero.",
+    "formula": "a(x) = exp(-d_source^2) * exp(-d_target^2) * exp(-0.5*u_source^2) * provenance_compatibility",
+    "local_abstention": "Set the centered source feature to zero when a(x) < 0.20.",
+    "centered_source_feature": "a(x) * (source_prediction - mean Stage 1 cross-fitted source prediction within aging type)",
+    "outcome_independence": "Distances, masks, provenance compatibility, and the 0.20 threshold are frozen without Stage 2 outcomes."
+  },
+  "training_only_borrowing_gate": {
+    "cross_validation": "Leave one labeled Stage 2 condition group out within each aging type.",
+    "dead_zone": 0.02,
+    "rule": "Use CCA-v2 source features only if the equal-stratum mean cross-validated relative RMSE gain over target-only exceeds 2 percent and the gain is positive in both calendar and cycle. Otherwise assign a point mass at zero and return the target-only prediction.",
+    "anti_tuning": "The gate is evaluated only on the labeled target-training groups inside each outer fit and is not changed after Stage 2 outcome release."
+  },
+  "controls": [
+    "target only",
+    "adjacency only",
+    "global source credibility only",
+    "strongest single qualified source",
+    "Stage 1 m_0 matched wrong-property source",
+    "within-type shuffled Stage 1 source predictions",
+    "equal-capacity random features",
+    "uniform random and condition novelty for secondary screening",
+    "oracle source use reported descriptively only"
+  ],
+  "primary_inference": {
+    "condition_error": "RMSE across replicate cells within each held-out Stage 2 condition group.",
+    "effect": "Within each aging stratum, 1 minus mean CCA-v2 condition RMSE divided by mean comparator condition RMSE; the program effect is the unweighted mean of calendar and cycle effects.",
+    "comparisons": ["CCA-v2 minus adjacency-only", "CCA-v2 minus endpoint-matched target-only"],
+    "bootstrap": "10,000 stratified condition-cluster resamples, drawing 8 calendar and 15 cycle groups with replacement and retaining all cells in a sampled group.",
+    "test": "9,999 paired condition-group sign flips, stratified by aging type; one-sided p-values for improvement.",
+    "multiplicity": "Holm correction over exactly the two named primary comparisons.",
+    "success": "Both effects exceed the 2 percent practical dead zone, both 95 percent cluster-bootstrap lower bounds exceed zero, both Holm-adjusted p-values are at most 0.05, and coverage, safety, leakage, mapping, and absolute-utility guards pass.",
+    "absolute_utility_guard": "CCA-v2 pooled held-out R2 is positive within both calendar and cycle strata.",
+    "coverage_guard": "The locally gated source feature is nonzero for at least 20 percent of the 23 held-out condition groups and for at least one group in each aging type.",
+    "safety_guard": "Neither aging stratum has an upper 95 percent interval below minus 2 percent relative to target-only.",
+    "seed_warning": "Trees, sign flips, and bootstrap resamples are computational repetitions, not independent scientific units."
+  },
+  "secondary_analyses": {
+    "hard_ood": "Report the highest outcome-free source-distance quartile within each aging type with no separate success claim.",
+    "external_tri_edge": "Apply the same Stage 2 splits and target learner with source ranks or predictions frozen before Stage 2 outcome release; multiplicity is separate and the result cannot rescue a failed temporal primary family.",
+    "fixed_screening": "At budget five condition groups per stratum, compare CCA-v2 ranking with target-only, adjacency-only, novelty, wrong-source, shuffled-source, and random. Adaptive acquisition is forbidden unless target-only beats random in the frozen fixed-screening diagnostic.",
+    "mechanism": "Report error and borrowing effects across source-distance, target-distance, uncertainty, laboratory, and sampling strata; these diagnose where borrowing applies and do not create new primary subgroups."
+  },
+  "scientific_inspiration_cards": {
+    "timing": "After Stage 1 outcomes and source models are available but before any Stage 2 outcome is parsed.",
+    "minimum": "One calendar-aging condition region and one cycle-aging condition region proposed by the Stage 1 source; one matched target-only region for each.",
+    "required_fields": ["condition region", "Stage 1 evidence", "expected retention direction", "physical rationale", "matched control", "falsifier", "planned diagnostic measurement", "timestamp", "file hash"],
+    "claim_rule": "A card is a source-inspired hypothesis, not a discovery. It becomes a validated scientific lead only after the frozen target measurement and matched falsifier are reported."
+  },
+  "compute_and_stopping": {
+    "implementation_environment": "Python 3.11, numpy 1.26.4, pandas 2.3.3, scikit-learn 1.9.0, scipy 1.17.1",
+    "parallelism": "CPU only; n_jobs may change wall time but not models, seeds, splits, or results.",
+    "stopping": "Run every retained Stage 2 condition group and report all controls. Stop without replacement if endpoint coverage, file mapping, leakage, or absolute target utility fails.",
+    "retuning": "No feature, threshold, learner, endpoint, source, control, or target may be changed after Stage 2 outcome access."
+  }
+}

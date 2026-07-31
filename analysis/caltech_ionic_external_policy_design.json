@@ -1,0 +1,178 @@
+{
+  "design_name": "External negative-transfer-safe ionic-conductor borrowing benchmark",
+  "design_version": 1,
+  "frozen_utc": "2026-07-16T22:45:00Z",
+  "status": "frozen before target-file download and row-level outcome inspection",
+  "history": "Only the CaltechDATA record metadata were inspected before freezing: 571 Li-containing compounds, reported room-temperature ionic conductivity, ICSD identifiers, source DOI, lowest measurement temperature, file name, checksum, and CC0 license. No target CSV row or conductivity value was inspected.",
+  "scientific_question": "After exact identity and article overlap removal, can same-property or transport-adjacent experimental source domains improve broad OOD recovery beyond a validated composition-novelty policy while automatically suppressing unrelated sources?",
+  "target": {
+    "name": "Experimental Li-Ion Conductivity and Crystal Structure Database",
+    "record_url": "https://data.caltech.edu/records/23mvv-6gk43",
+    "record_doi": "10.22002/23mvv-6gk43",
+    "file_name": "ionic_conductivity_database.csv",
+    "required_md5": "d1fcf7c9a7694c8f466932721b76b168",
+    "expected_record_count": 571,
+    "license": "CC0-1.0",
+    "outcome": "reported room-temperature Li ionic conductivity in S/cm",
+    "transform": "log10 after requiring finite value > 0",
+    "allowed_formula_headers": ["formula", "composition", "material", "compound", "reduced composition"],
+    "allowed_outcome_headers": ["ionic conductivity", "room temperature ionic conductivity", "rt ionic conductivity", "conductivity"],
+    "allowed_doi_headers": ["doi", "source doi", "article doi", "reference"],
+    "allowed_icsd_headers": ["icsd", "icsd code", "icsd collection code"],
+    "allowed_low_temperature_headers": ["lowest temperature", "minimum temperature", "lowest measured temperature", "tmin"],
+    "schema_rule": "case-fold, trim punctuation and units, then require exactly one allowed match for formula, outcome, DOI and ICSD; lowest-temperature is required for the prespecified sensitivity but not the primary analysis",
+    "schema_failure_rule": "stop without inspecting target outcomes if formula, outcome, DOI or ICSD cannot be resolved uniquely"
+  },
+  "target_quality_gates": {
+    "minimum_eligible_rows": 300,
+    "minimum_unique_canonical_compositions": 250,
+    "maximum_invalid_or_unparseable_formula_fraction": 0.05,
+    "maximum_nonpositive_or_nonnumeric_outcome_fraction": 0.10,
+    "minimum_nonempty_doi_fraction": 0.80,
+    "duplicate_components": "union rows connected by canonical composition, normalized DOI, or nonempty ICSD code before any split",
+    "entity_aggregation": "median log10 conductivity per canonical composition after connected-component assignment",
+    "primary_population": "all eligible reported room-temperature records",
+    "near_room_temperature_sensitivity": "retain records with lowest measured temperature <= 350 K; if temperature units are not explicit and recoverable, mark sensitivity unavailable rather than infer"
+  },
+  "fixed_representation": {
+    "features": "118 atomic-number-ordered element fractions plus the eight deterministic composition descriptors in analysis.common.composition_features",
+    "target_outcome_features_forbidden": true,
+    "structure_features_forbidden_in_primary": "ICSD is used only for grouping; structure availability must not change inclusion or features",
+    "novelty": "Euclidean distance in standardized composition-feature space to the currently labelled target set"
+  },
+  "source_tasks": [
+    {
+      "id": "obelix_same_property",
+      "role": "same-property cross-database anchor",
+      "dataset": "obelix-solid-electrolytes",
+      "property": "ionic_conductivity",
+      "transform": "log10",
+      "version": "git:4eaac889809dd489e3bae468c45d5c0e02b9147a"
+    },
+    {
+      "id": "estm_transport_neighbor",
+      "role": "transport-adjacent source",
+      "dataset": "estm-thermoelectric",
+      "property": "ZT",
+      "transform": "none",
+      "version": "git:72d597cb6fdf6b79f6ca86ff759f9136de5d66ef"
+    },
+    {
+      "id": "borg_mechanical_control",
+      "role": "unrelated-source control",
+      "dataset": "mpea-dataset-borg",
+      "property": "PROPERTY: YS (MPa)",
+      "transform": "log10",
+      "version": "git:e4d72eabe31fad072b03ebb3788f4eb55e533dfc"
+    },
+    {
+      "id": "ocx_catalysis_control",
+      "role": "unrelated-source control",
+      "dataset": "ocx24-open-catalyst-experiments-2024",
+      "property": "fe_h2",
+      "transform": "none",
+      "version": "git:a838178c0b6cef68ed6b23167cc93c98ee26d2f7"
+    }
+  ],
+  "source_leakage_rules": {
+    "formula": "exclude every source row whose canonical composition occurs anywhere in the eligible target database",
+    "article": "exclude every source row whose normalized DOI occurs anywhere in the eligible target database",
+    "minimum_remaining_source_entities": 100,
+    "source_model": "ExtraTreesRegressor with 240 trees, min_samples_leaf=2, max_features=0.7 and fixed seed",
+    "source_quality": "three-fold group-aware OOF R2 and rank correlation are reported; a source prediction is unavailable if fewer than 100 leakage-safe entities remain"
+  },
+  "target_split": {
+    "seed": 20260716,
+    "group": "connected component of canonical composition, normalized DOI and nonempty ICSD code",
+    "assignment": "outcome-blind SHA-256 ordering of group identifiers followed by row-balanced 70% development and 30% external candidate partitions",
+    "minimum_development_entities": 150,
+    "minimum_candidate_entities": 70,
+    "hard_ood_scope": "the 40% of candidate entities farthest from the full development partition by nearest-neighbor composition distance",
+    "split_failure_rule": "stop if any minimum is missed; do not alter proportions after inspecting outcomes"
+  },
+  "campaign": {
+    "paired_seeds": 100,
+    "initial_target_labels": 30,
+    "initial_sampling": "group-aware deterministic samples from the development partition",
+    "candidate_scopes": ["external_candidate", "hard_ood_40pct"],
+    "budget": 40,
+    "target_model": "ExtraTreesRegressor with 80 trees, min_samples_leaf=2, max_features=0.7, n_jobs=1",
+    "refit_after_each_acquisition": true,
+    "top_fraction": 0.05,
+    "primary_endpoint": "area under the cumulative true-top-5-percent hit curve through acquisition 20",
+    "primary_reason": "broad recovery is less vulnerable than first hit to one lucky candidate and better matches OOD exploration",
+    "guardrail_endpoint": "acquisitions to first true top-5-percent hit",
+    "secondary_endpoints": [
+      "top-5-percent recall at acquisitions 10, 20 and 40",
+      "best observed target value and regret at acquisitions 10, 20 and 40",
+      "area under the cumulative-hit curve through acquisition 40"
+    ]
+  },
+  "safe_policy": {
+    "name": "cross-validated residual-rank gating with novelty fallback",
+    "target_backbone": "novelty rank plus a target-mean rank whose weight is estimated from group-aware OOF improvement over the training-mean predictor",
+    "source_gate": "for each source, compare composition-only and composition-plus-one-source ExtraTrees models in five group-aware outer folds of the currently labelled target set",
+    "source_admission": "median relative RMSE gain >= 0.02, at least three of five folds positive, and mean signed gain positive",
+    "source_weight": "clip(median relative RMSE gain / 0.10, 0, 1)",
+    "source_correction": "rank(prediction from augmented model) minus rank(prediction from composition-only model)",
+    "acquisition_score": "novelty rank + target_weight * target-mean rank + sum of admitted source_weight * source_correction rank; at most two sources with the largest admitted gains",
+    "fallback": "if target mean and all sources fail their gates, the score is exactly composition novelty",
+    "negative_transfer_guard": "unrelated or shuffled sources must be admitted in fewer than 20% of acquisition steps and have mean weight < 0.10"
+  },
+  "policies": [
+    "uniform_random",
+    "composition_novelty",
+    "safe_target_novelty",
+    "obelix_same_property_static",
+    "estm_transport_neighbor_static",
+    "borg_mechanical_static_control",
+    "ocx_catalysis_static_control",
+    "shuffled_obelix_static_control",
+    "safe_obelix_residual",
+    "safe_estm_residual",
+    "safe_borg_residual_control",
+    "safe_ocx_residual_control",
+    "safe_shuffled_obelix_control",
+    "safe_multisource_residual"
+  ],
+  "comparisons": {
+    "policy_validity": [
+      "composition_novelty versus uniform_random",
+      "safe_target_novelty versus composition_novelty"
+    ],
+    "same_property_increment": [
+      "safe_obelix_residual versus safe_target_novelty"
+    ],
+    "adjacent_transport_increment": [
+      "safe_estm_residual versus safe_target_novelty"
+    ],
+    "safe_multisource_increment": [
+      "safe_multisource_residual versus safe_target_novelty"
+    ],
+    "negative_transfer": [
+      "safe_borg_residual_control versus safe_target_novelty",
+      "safe_ocx_residual_control versus safe_target_novelty",
+      "safe_shuffled_obelix_control versus safe_target_novelty"
+    ]
+  },
+  "inference": {
+    "paired_bootstrap_replicates": 5000,
+    "paired_sign_flip_draws": 9999,
+    "multiplicity": "Holm correction across all seven named primary AUC20 contrasts within each candidate scope",
+    "dataset_scope": "campaign-seed uncertainty is conditional on this external database; no interval is interpreted as population uncertainty over databases"
+  },
+  "decision_gates": {
+    "incremental_statistical": "Holm p <= 0.05 and paired 95% interval lower bound > 0 for AUC20",
+    "incremental_practical": "at least 20% mean AUC20 improvement relative to safe_target_novelty",
+    "consistency": "at least 60% of paired campaigns improve",
+    "first_hit_noninferiority": "source-aware mean first-hit count no more than two acquisitions worse than safe_target_novelty and paired 95% lower bound for saved acquisitions > -2",
+    "absolute_recall": "mean top-5-percent recall at acquisition 20 >= 0.50",
+    "negative_transfer": "both unrelated sources and the shuffled source satisfy the negative-transfer guard",
+    "scope_replication": "direction agrees in the external candidate and hard-OOD scopes",
+    "claim_status": "passing all gates supports one externally validated source-to-policy edge; it does not establish field-wide rescue or prospective laboratory discovery"
+  },
+  "new_science_guard": {
+    "tested_here": false,
+    "future_requirement": "before target outcomes are revealed, write a source-derived composition-family or mechanism hypothesis and a matched-control test; retrospective top-hit recovery alone is not new science"
+  }
+}

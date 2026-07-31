@@ -1,0 +1,66 @@
+{
+  "job_id": "70723",
+  "job_name": "caltech-borrow",
+  "account": "ac-sdl",
+  "partition": "compute_full_node",
+  "submitted_utc": "2026-07-16T23:14:48Z",
+  "submitted_state": "PENDING",
+  "submitted_reason": "Resources",
+  "scheduler_snapshot": {
+    "state": "PENDING",
+    "estimated_start": "2026-07-17T11:36:45",
+    "scheduled_node": "balam007",
+    "reason": "Resources"
+  },
+  "requested_walltime": "08:00:00",
+  "requested_nodes": 1,
+  "requested_gpu_allocation_units": 4,
+  "planned_workers": 64,
+  "final_scheduler_state": {
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "elapsed": "00:00:12",
+    "start": "2026-07-17T03:29:10",
+    "end": "2026-07-17T03:29:22",
+    "result_archive_present": false
+  },
+  "status_note": "The job failed during initialization before the formal trajectory benchmark began. Root cause awaits stdout/stderr inspection; do not interpret this as a scientific result.",
+  "root_cause": "Cross-platform CRLF versus LF line endings changed the byte-level SHA-256 of semantically identical audit JSON.",
+  "resolution": "Use a pinned canonical parsed-JSON hash and explicit LF audit output; scientific protocol remains unchanged.",
+  "rerun": {
+    "job_id": "70740",
+    "job_name": "caltech-borrow",
+    "submitted_utc": "2026-07-17T16:53:20Z",
+    "submitted_state": "PENDING",
+    "submitted_reason": "Resources",
+    "requested_walltime": "08:00:00",
+    "requested_nodes": 1,
+    "requested_gpu_allocation_units": 4,
+    "planned_workers": 64,
+    "protocol_note": "Cross-platform hash amendment applied; formal policy trajectories remain outcome-frozen.",
+    "final_scheduler_state": {
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "00:18:23",
+      "start": "2026-07-17T15:54:59",
+      "end": "2026-07-17T16:13:22"
+    },
+    "failure_note": "The run passed initialization and failed later; root cause awaits stdout/stderr. Hash-keyed seed checkpoints should be preserved for an exact resume."
+  },
+  "verification_recovery": {
+    "formal_results_recovered": true,
+    "formal_compute_completed_before_verifier_failure": true,
+    "remote_failure": "The original verifier incorrectly required one seed-invariant trajectory for every real static policy; OCx had valid score ties resolved by seed-specific novelty.",
+    "local_replay_result": "Platform-independent utilities and contrasts were reproducible, but Windows ExtraTrees OOF R2 differed from Balam by about 0.002 for OBELiX and Borg, changing exact static ranks.",
+    "next_action": "Run the patched strict verifier in the pinned Balam environment, create a VERIFIED sentinel, then perform portable local verification.",
+    "verification_job": {
+      "job_id": "70767",
+      "job_name": "caltech-verify",
+      "submitted_utc": "2026-07-17T21:14:45Z",
+      "requested_partition": "compute",
+      "requested_walltime": "00:30:00",
+      "requested_gpu_allocation_units": 1,
+      "purpose": "Same-environment source-model and static-policy replay only; formal job 70740 outputs remain immutable."
+    }
+  }
+}

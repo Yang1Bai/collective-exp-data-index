@@ -1,0 +1,11 @@
+policy,top_components,distinct_component_auc20,component_recall20,first_top_component,entity_recall20
+caltech_adjacent_single,10,0,0.0,21,0.0
+cca_family_first_consensus,10,41,0.4,5,0.06153846153846154
+cca_family_first_round_robin,10,36,0.4,4,0.046153846153846156
+composition_novelty_family_first,10,8,0.1,13,0.0
+estm_best_same_domain,10,71,0.6,2,0.09230769230769231
+neighbor_entity_consensus,10,0,0.0,21,0.0
+obelix_adjacent_single,10,18,0.4,11,0.046153846153846156
+shuffled_neighbor_family_first,10,35,0.3,5,0.03076923076923077
+uniform_family_first,10,1,0.1,20,0.015384615384615385
+wrong_source_family_first,10,0,0.0,21,0.0

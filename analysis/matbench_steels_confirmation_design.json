@@ -1,0 +1,88 @@
+{
+  "design_version": "2026-07-14a",
+  "status": "designated-before-first-matbench-outcome-model-run-after-birdshot-audit-not-externally-preregistered",
+  "seed": 20260715,
+  "target_dataset": {
+    "id": "matbench-steels",
+    "record_doi": "10.6084/m9.figshare.7250453.v1",
+    "file_id": 13354694,
+    "file_name": "steel_strength.csv",
+    "raw_url": "https://ndownloader.figshare.com/files/13354694",
+    "raw_sha256": "53c995e14371098ff8f6186e43c2a6d833650d352dc0d77118751cf6b06727d7",
+    "n_rows_expected": 312,
+    "target": "yield strength",
+    "target_unit": "MPa",
+    "target_transform": "log10"
+  },
+  "official_split": {
+    "type": "matbench_v0.1_fivefold",
+    "repository": "https://github.com/materialsproject/matbench.git",
+    "commit": "936176db18ca4cd7b38cbd957c017a5bac770c6b",
+    "path": "matbench/matbench_v0.1_validation.json",
+    "raw_url": "https://raw.githubusercontent.com/materialsproject/matbench/936176db18ca4cd7b38cbd957c017a5bac770c6b/matbench/matbench_v0.1_validation.json",
+    "sha256": "94c17bc3dac32c67d33d69289927a5fec174497e74bbc47293e23d3d147e9a6d",
+    "task": "matbench_steels",
+    "folds": 5,
+    "random_state_reported_upstream": 18012019,
+    "shuffle_reported_upstream": true
+  },
+  "inference": {
+    "target_budget": 30,
+    "primary_target_learner": "ridge_alpha_10",
+    "source_learner": "locked_map_extra_trees_leaf_2_max_features_0.7",
+    "training_repeats": 100,
+    "bootstrap_replicates": 5000,
+    "feature_permutations": 999,
+    "permutation_training_repeats": 20,
+    "sensitivity_repeats": 40,
+    "learning_curve_repeats": 60,
+    "learning_curve_budgets": [8, 15, 30, 45, 60, 90, 120],
+    "external_min_relative_rmse": 0.05,
+    "external_min_target_sample_fraction_saved": 0.30,
+    "external_requires_positive_augmented_r2": true,
+    "external_requires_positive_effect_in_all_five_folds": true,
+    "external_min_positive_learners_of_three": 2,
+    "primary_test": "one_sided_source_feature_mapping_permutation",
+    "multiplicity": "one_pre_specified_primary_edge; four_other_edges_are_negative_or_adjacency_controls"
+  },
+  "primary_hypothesis": {
+    "target": "matbench_steel_ys",
+    "source": "alloy_uts",
+    "neighborhood": 3,
+    "relation": "cross-dataset-physical-neighbor",
+    "direction": "positive",
+    "rationale": "A composition-derived ultimate-strength prior from an independent multi-principal-element-alloy corpus should reduce the number of steel yield-strength labels required for useful prediction."
+  },
+  "controls": [
+    {
+      "source": "alloy_hardness",
+      "neighborhood": 2,
+      "relation": "cross-dataset-physical-neighbor",
+      "rationale": "Hardness is mechanically adjacent but less directly paired with yield strength."
+    },
+    {
+      "source": "alloy_elongation",
+      "neighborhood": 1,
+      "relation": "cross-dataset-same-domain",
+      "rationale": "Ductility is a same-domain property with a non-universal strength tradeoff."
+    },
+    {
+      "source": "te_thermal",
+      "neighborhood": 0,
+      "relation": "distant-control",
+      "rationale": "Thermal transport is unrelated to steel mechanical strength."
+    },
+    {
+      "source": "catalysis_h2",
+      "neighborhood": 0,
+      "relation": "distant-control",
+      "rationale": "Electrocatalytic selectivity is unrelated to steel mechanical strength."
+    }
+  ],
+  "leakage_policy": {
+    "canonical_formula_overlap": "exclude every target composition from every source-model fit before any target fold is evaluated",
+    "target_split_overlap": "use the upstream official Matbench test identifiers; a target row is tested exactly once per repeat",
+    "feature_timing": "source predictions are generated from composition only; target outcomes, tensile strength, and elongation are not target-model inputs"
+  },
+  "decision_rule": "Call the edge externally useful enough to rescue the n=30 target only if every frozen practical, uncertainty, absolute-utility, fold-direction, learner-robustness, source-quality, leakage, permutation, and sample-equivalence gate passes. Otherwise retain the exact failed gates."
+}

@@ -1,0 +1,74 @@
+{
+  "design_name": "Source-prior warm start for OBELiX OOD discovery",
+  "design_version": 1,
+  "frozen_utc": "2026-07-14T18:20:56Z",
+  "status": "frozen-before-any-official-test-only-sequential-campaign-result",
+  "history": "Earlier whole-dataset RF-UCB and fixed-ranking results were known. This design changes the scientific estimand to sequential discovery exclusively inside the official DOI/composition-disjoint OBELiX test pool. No result from this campaign definition was computed before freezing.",
+  "target": "OBELiX log10 ionic conductivity; higher is preferred",
+  "initial_labels": {
+    "n": 30,
+    "source": "official OBELiX train split only",
+    "sampling": "group-aware deterministic sampling repeated by seed",
+    "shared_across_strategies": true
+  },
+  "ood_candidate_pool": {
+    "primary": "all 110 canonical official-test compositions after removal of canonical train/test overlap",
+    "secondary": "the fixed farthest-40-percent composition hard-OOD subset defined without target outcomes in hard_ood_composition_design.json",
+    "acquisition_unit": "one canonical composition",
+    "outcomes_hidden_until_acquisition": true
+  },
+  "true_discovery": {
+    "definition": "the first ceil(0.05*N) candidates after observed target value descending and material_key ascending within each fixed pool",
+    "primary_endpoint": "number of OOD acquisitions required to hit the true top-5-percent set",
+    "censoring": "budget plus one when no hit occurs"
+  },
+  "strategies": {
+    "target_only": "ExtraTrees UCB on composition features",
+    "thermoelectric_prior": "same ExtraTrees UCB with frozen ESTM ZT source prediction appended",
+    "alloy_control": "same ExtraTrees UCB with frozen Borg yield-strength source prediction appended",
+    "catalysis_control": "same ExtraTrees UCB with frozen OCx H2 Faradaic-efficiency source prediction appended",
+    "shuffled_thermoelectric_control": "same ExtraTrees UCB with the thermoelectric predictions deterministically permuted across target identities using seed 20260714",
+    "random_control": "uniform random OOD acquisition without a model"
+  },
+  "acquisition": {
+    "score": "ensemble mean plus one ensemble standard deviation",
+    "budget": 40,
+    "refit_after_each_acquisition": true,
+    "primary_model": {
+      "family": "ExtraTreesRegressor",
+      "n_estimators": 80,
+      "min_samples_leaf": 2,
+      "max_features": 0.7
+    },
+    "sensitivity_model": {
+      "family": "RandomForestRegressor",
+      "n_estimators": 120,
+      "min_samples_leaf": 2,
+      "max_features": 0.7,
+      "seeds": 40
+    },
+    "primary_seeds": 100
+  },
+  "inference": {
+    "comparison": "paired target-only minus thermoelectric-prior experiments-to-hit",
+    "bootstrap_replicates": 5000,
+    "sign_flip_draws": 9999,
+    "confidence_interval": "paired percentile bootstrap over campaign seeds",
+    "multiplicity": "one named primary source edge; controls cannot support a positive claim"
+  },
+  "OOD_discovery_improvement_gates": [
+    "one-sided paired sign-flip p <= 0.05",
+    "paired bootstrap 95% interval lower bound > 0 experiments saved",
+    "mean experiments saved >= 5",
+    "mean experiments saved relative to target-only >= 25%",
+    "at least 60% of seed-wise paired effects are positive",
+    "RandomForest sensitivity mean effect is positive",
+    "none of the alloy, catalysis, or shuffled-thermoelectric priors passes all non-sensitivity core gates"
+  ],
+  "OOD_discovery_rescue_crossing": [
+    "all improvement gates pass",
+    "target-only median experiments-to-hit is greater than ceil(0.10*N)",
+    "thermoelectric-prior median experiments-to-hit is at most ceil(0.10*N)"
+  ],
+  "claim_guard": "This is a retrospective sequential simulation on a genuinely held-out experimental database pool, not a prospective laboratory campaign. It can establish decision-level OOD utility under the frozen protocol but not field-wide or universal acceleration."
+}

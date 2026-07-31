@@ -1,0 +1,10 @@
+target,label,domain,kind,total_n,groups,development_n,discovery_n,confirmation_n,requested_budget,analysis_budget
+te_zt,Thermoelectric ZT,thermoelectric,formula,870,301,522,174,174,30,30
+alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,150,237,79,79,30,30
+catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,46,126,43,43,30,30
+electrolyte_conductivity,Solid-electrolyte ionic conductivity,solid electrolyte,formula,500,160,390,55,55,30,30
+solubility,Aqueous solubility,aqueous molecular thermodynamics,molecule,9980,4887,8382,848,750,30,30
+hydration,Hydration free energy,aqueous molecular thermodynamics,molecule,642,382,385,129,128,30,30
+photo_z_pipi,Photoswitch Z π-π* wavelength,molecular photoswitch,molecule,93,13,48,29,16,20,20
+polymer_tensile,Polymer tensile strength,polymer,molecule,78,63,46,16,16,15,15
+polymer_tm,Polymer melting temperature,polymer,molecule,83,66,49,17,17,15,15

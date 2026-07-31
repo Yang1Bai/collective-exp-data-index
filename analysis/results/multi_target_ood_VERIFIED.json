@@ -1,0 +1,15 @@
+{
+  "status": "verified-complete",
+  "verified_utc": "2026-07-23T22:04:59.411031+00:00",
+  "mode": "formal",
+  "design_sha256": "cc911d9d9677e0c523a77632f7866e9e6fedcb5625472f9004ad203fe0512d89",
+  "summary_sha256": "505f5c01f69fb33ba175c19cfaff6f3345798d2b47f7cece7ce50f30886eb938",
+  "complete_sha256": "a893f24e7646d3a8f25f9bc0642b533cde5e18866dcfcaf9561882b0d179034b",
+  "targets": 8,
+  "real_edges": 40,
+  "shuffled_controls": 8,
+  "metric_rows": 43200,
+  "contrast_rows": 14400,
+  "group_error_rows": 63600,
+  "claim_guard": "This systematic benchmark was designed after earlier component outcomes had been inspected. It can test whether a fixed borrowing procedure preferentially repairs held-out OOD regions across a declared portfolio, identify null and harmful edges, and generate hypotheses for external confirmation. It cannot retroactively create prospective validation, establish universal transfer, or prove laboratory discovery acceleration."
+}

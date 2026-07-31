@@ -1,0 +1,17 @@
+{
+  "claim_guard": "A positive result establishes one retrospective experimental-database borrowing edge from molecular optical spectroscopy to organic photovoltaic device prediction. It does not prove universal optoelectronic transfer, prospective device discovery, or benefit when device state is unavailable.",
+  "decision": "null-harmful-or-incomplete-edge",
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "implementation_sha256": "066e2c66e5d10d4e8b2b751f64d561047d955d218bf591e339a37a3dad0df437",
+  "metric_rows": 168000,
+  "metrics_sha256": "ee1f2afbbe74f41dfa24b0ca747bc1c9f277dbc50f6523d2fb84697ba779e566",
+  "mode": "formal",
+  "passes_complete_gate": false,
+  "predictions_sha256": "570d2c94e7039f68b99ac78216123d5ed8d4862ba0062b3c3363c70082e4649a",
+  "primary_prediction_rows": 1453200,
+  "reconstructed_primary_cells": 1400,
+  "run_sha256": "773d6459b8fa516ea5e1ee0a8014ae0453906a43c7dccc5077e0da053d616656",
+  "status": "verified-complete",
+  "summary_sha256": "164cb0373cba174d572035cf30657b21bc6f80d9395f1e2aedb437a1e01957a7",
+  "verified_utc": "2026-07-27T03:22:11.144956+00:00"
+}

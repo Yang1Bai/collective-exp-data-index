@@ -1,0 +1,213 @@
+{
+  "claim_guard": {
+    "allowed_claim": "post-outcome-motivated mechanistic rescue on one literature-aggregated electrolyte programme",
+    "forbidden_claims": [
+      "preregistered confirmation",
+      "outcome-blind independent replication",
+      "universal cross-domain transfer",
+      "zero-shot OOD prediction",
+      "prospective laboratory discovery",
+      "exact reproduction of MatEx or Bilinear Transduction"
+    ],
+    "negative": "even the within-article response relation changes across provenance; abstention is required at this rung",
+    "null": "article offsets are not the only barrier, or the adjacent-temperature response relation is not stable enough to transport",
+    "positive": "supports a reusable, few-shot neighboring-condition borrowing contract in which within-provenance response relations transport after target-provenance anchoring"
+  },
+  "common_scope_article_dois": [
+    "10.1016/0378-7753(91)80004-H",
+    "10.1016/S0378-7753(03)00153-8",
+    "10.1021/JE020219O",
+    "10.1021/je0498863",
+    "10.1149/1.1344281",
+    "10.1149/1.1403730",
+    "10.1149/1.1527939",
+    "10.1149/1.1566019",
+    "10.1149/1.1630593",
+    "10.1149/1.1833611",
+    "10.1149/1.1914757"
+  ],
+  "common_scope_articles": 11,
+  "common_scope_units": 883,
+  "decision": "mechanistic-rescue",
+  "design_sha256": "04279e568830b14a92199d165c96a6a3b05d55b6c64ce54b5c7eb046eb2c1cfe",
+  "evidential_status": "post-outcome-motivated-mechanism-reanalysis-locked-before-E6-predictions",
+  "features": 56,
+  "gates": {
+    "advantage_over_median_shuffled_at_least_3pp": true,
+    "article_bootstrap_ci_lower_above_zero": true,
+    "exact_sign_flip_p_at_most_0_05": true,
+    "gain_vs_absolute_at_least_5pct": true,
+    "gain_vs_anchor_constant_at_least_5pct": true,
+    "pooled_nonanchor_r2_positive": true,
+    "positive_articles_at_least_8_of_11": true,
+    "shuffled_permutation_p_at_most_0_05": true,
+    "zero_article_or_chemistry_leakage": true
+  },
+  "primary": {
+    "article_bootstrap_ci95": [
+      0.008822364250737489,
+      0.13998865863887436
+    ],
+    "article_effects": [
+      {
+        "article_doi": "10.1016/0378-7753(91)80004-H",
+        "relative_gain": 0.006474157656022217,
+        "rmse_neighbor_absolute": 0.9154379370835,
+        "rmse_neighbor_delta": 0.9095112475545176
+      },
+      {
+        "article_doi": "10.1016/S0378-7753(03)00153-8",
+        "relative_gain": 0.020864283434496755,
+        "rmse_neighbor_absolute": 0.3905889831315194,
+        "rmse_neighbor_delta": 0.3824396238810715
+      },
+      {
+        "article_doi": "10.1021/JE020219O",
+        "relative_gain": 0.016801474943367034,
+        "rmse_neighbor_absolute": 0.728195662045513,
+        "rmse_neighbor_delta": 0.7159609008757868
+      },
+      {
+        "article_doi": "10.1021/je0498863",
+        "relative_gain": 0.005211101016272646,
+        "rmse_neighbor_absolute": 0.22398363703946644,
+        "rmse_neighbor_delta": 0.22281643568086162
+      },
+      {
+        "article_doi": "10.1149/1.1344281",
+        "relative_gain": 0.25187841872617345,
+        "rmse_neighbor_absolute": 0.822238696430192,
+        "rmse_neighbor_delta": 0.6151345137578851
+      },
+      {
+        "article_doi": "10.1149/1.1403730",
+        "relative_gain": 0.09329697440013296,
+        "rmse_neighbor_absolute": 0.10463886430129636,
+        "rmse_neighbor_delta": 0.09487637485731933
+      },
+      {
+        "article_doi": "10.1149/1.1527939",
+        "relative_gain": 0.09385959510386599,
+        "rmse_neighbor_absolute": 0.9462253021271324,
+        "rmse_neighbor_delta": 0.8574129783924465
+      },
+      {
+        "article_doi": "10.1149/1.1566019",
+        "relative_gain": -0.03821742378577708,
+        "rmse_neighbor_absolute": 0.24757798027152608,
+        "rmse_neighbor_delta": 0.25703977286358975
+      },
+      {
+        "article_doi": "10.1149/1.1630593",
+        "relative_gain": -0.041747187234057126,
+        "rmse_neighbor_absolute": 0.25296482968082307,
+        "rmse_neighbor_delta": 0.26352539978913975
+      },
+      {
+        "article_doi": "10.1149/1.1833611",
+        "relative_gain": -0.005223717020284457,
+        "rmse_neighbor_absolute": 0.42022546068104066,
+        "rmse_neighbor_delta": 0.42242059957235706
+      },
+      {
+        "article_doi": "10.1149/1.1914757",
+        "relative_gain": 0.18219596098601853,
+        "rmse_neighbor_absolute": 0.338706640295779,
+        "rmse_neighbor_delta": 0.27699565847474383
+      }
+    ],
+    "articles": 11,
+    "exact_one_sided_sign_flip_p": 0.03515625,
+    "gain_advantage_over_median_shuffled": 0.41974274871061557,
+    "macro_rmse_anchor_constant": 0.6501736065008369,
+    "macro_rmse_neighbor_absolute": 0.4900712720988898,
+    "macro_rmse_neighbor_delta": 0.45619395506361077,
+    "median_shuffled_relative_gain": -0.35061542180122873,
+    "pooled_nonanchor_r2": 0.2336997764047447,
+    "positive_articles_vs_neighbor_absolute": 8,
+    "relative_macro_rmse_gain_vs_anchor_constant": 0.2983505474502469,
+    "relative_macro_rmse_gain_vs_neighbor_absolute": 0.06912732690938683,
+    "shuffled_delta_permutation_p": 0.005
+  },
+  "random_anchor_sensitivity": {
+    "1": {
+      "median_relative_gain": 0.062377831735811406,
+      "positive_repetitions": 100,
+      "q10_q90": [
+        0.033472986481563695,
+        0.09984786972116454
+      ],
+      "repetitions": 100
+    },
+    "2": {
+      "median_relative_gain": 0.06543798425030384,
+      "positive_repetitions": 100,
+      "q10_q90": [
+        0.04290788756232079,
+        0.09108155107399112
+      ],
+      "repetitions": 100
+    },
+    "3": {
+      "median_relative_gain": 0.06538155213256575,
+      "positive_repetitions": 99,
+      "q10_q90": [
+        0.038729204794326545,
+        0.08828299336799075
+      ],
+      "repetitions": 100
+    }
+  },
+  "raw_sha256": "850ff20eaad7abfe86fdd455b9cbf661e1b393dbdf9bb33e47769e00c2f5f617",
+  "source_structure": [
+    {
+      "active_solvent_columns": 23,
+      "articles": 15,
+      "eligible_positive_formulations": 895,
+      "nominal_temperature_C": -40,
+      "paper_specific_formulations_before_outcome_filter": 1000,
+      "raw_rows_in_window": 1000,
+      "salts": 9
+    },
+    {
+      "active_solvent_columns": 27,
+      "articles": 15,
+      "eligible_positive_formulations": 913,
+      "nominal_temperature_C": -30,
+      "paper_specific_formulations_before_outcome_filter": 974,
+      "raw_rows_in_window": 974,
+      "salts": 9
+    },
+    {
+      "active_solvent_columns": 30,
+      "articles": 17,
+      "eligible_positive_formulations": 968,
+      "nominal_temperature_C": -20,
+      "paper_specific_formulations_before_outcome_filter": 993,
+      "raw_rows_in_window": 996,
+      "salts": 12
+    },
+    {
+      "active_solvent_columns": 36,
+      "articles": 21,
+      "eligible_positive_formulations": 1130,
+      "nominal_temperature_C": 0,
+      "paper_specific_formulations_before_outcome_filter": 1139,
+      "raw_rows_in_window": 1155,
+      "salts": 12
+    },
+    {
+      "active_solvent_columns": 36,
+      "articles": 23,
+      "eligible_positive_formulations": 1306,
+      "nominal_temperature_C": 20,
+      "paper_specific_formulations_before_outcome_filter": 1308,
+      "raw_rows_in_window": 1318,
+      "salts": 12
+    }
+  ],
+  "status": "complete",
+  "target_articles_all": 15,
+  "target_units_all": 891,
+  "upstream_design_sha256": "2a6a40f8098af6fabb66ba5ee0fbf7fc4caeb573c1f857fdbc9ad80a86e5f6eb"
+}

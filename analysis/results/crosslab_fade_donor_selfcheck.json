@@ -1,0 +1,32 @@
+{
+  "donor_cells_total": 123,
+  "donor_cells_valid": 113,
+  "donor_cells_censored_or_qref_excluded": 10,
+  "per_batch_valid": {
+    "2017-05-12": 42,
+    "2017-06-30": 39,
+    "2018-04-12": 32
+  },
+  "oof_residual_cov": [
+    [
+      0.2539964367625548,
+      -0.12147156459515797
+    ],
+    [
+      -0.12147156459515797,
+      0.0675450119696832
+    ]
+  ],
+  "batch_out_oof_life_spearman": 0.5752314335271032,
+  "life_range": [
+    99.0,
+    1887.0
+  ],
+  "milestone_consistency_spearman_89_vs_85": 0.9895528659717492,
+  "milestone_consistency_n": 33,
+  "gate_checks": {
+    "donor_valid_at_least_100": true,
+    "oof_spearman_at_least_0_5": true
+  },
+  "status": "donor-selfcheck-passed"
+}

@@ -1,0 +1,83 @@
+{
+  "status": "frozen-control-correction-rerun",
+  "created_utc": "2026-07-24T00:35:00Z",
+  "parent_design_sha256": "97913a1e53f12ad433a2583b4f548b98c88a74f1561407eba86fde5bbfc0c8b2",
+  "control_amendment": "The v1 primary method concatenated cross-fitted predicted UTS, whereas its shuffled comparison used a residual-anchor architecture. V2 retains the primary method, data, split, budgets, learners, seeds and inference unchanged, and adds the architecture-matched control obtained by concatenating a fold-wise shuffled-UTS prediction.",
+  "selection_basis": "The planned-state, cross-fitted predicted-UTS concatenation candidate was selected after the local method-development screen. No architecture may replace it in this run.",
+  "research_question": "Is the selected state-matched UTS borrowing procedure stable across many target-label draws and two declared tree learners when predicting chemically held-out MPEA yield strength, and does it beat an architecture-matched shuffled donor?",
+  "claim_guard": "Because MPEA outcomes were inspected during method selection and v1 verification exposed the control-architecture mismatch, this is a post-selection robustness and control-correction run, not an independent confirmation. V2 can validate source specificity on this programme but cannot establish prospective discovery or a universal transfer law.",
+  "data": {
+    "table": "raw_mpea",
+    "target": "PROPERTY: YS (MPa)",
+    "donor": "PROPERTY: UTS (MPa)",
+    "outcome_transform": "log10 for positive MPa values",
+    "group": "unordered elemental system",
+    "partition": {
+      "development": 0.6,
+      "discovery": 0.2,
+      "confirmation": 0.2,
+      "seed": 20260723
+    }
+  },
+  "deployment_contracts": {
+    "planned_state": {
+      "description": "Composition plus processing, phase family, test mode, test temperature and calculated density; all are declared before the YS endpoint.",
+      "categorical": [
+        "PROPERTY: Processing method",
+        "PROPERTY: BCC/FCC/other",
+        "PROPERTY: Type of test"
+      ],
+      "numeric": [
+        "PROPERTY: Test temperature ($^\\circ$C)",
+        "PROPERTY: Calculated Density (g/cm$^3$)"
+      ]
+    }
+  },
+  "methods": [
+    "composition_only",
+    "state_only",
+    "state_plus_crossfitted_predicted_uts",
+    "state_plus_crossfitted_shuffled_uts",
+    "predicted_uts_residual_anchor",
+    "shuffled_uts_residual_anchor",
+    "measured_uts_residual_ceiling"
+  ],
+  "leakage_controls": [
+    "Elemental systems remain intact across development and evaluation.",
+    "Each target-training donor feature is predicted by a UTS model excluding its held elemental system and every evaluation system.",
+    "The final donor model excludes every evaluation elemental system.",
+    "The architecture-matched shuffled donor is regenerated inside every source fold and enters the identical target concatenation architecture.",
+    "Measured UTS remains a separately labelled auxiliary-measurement ceiling."
+  ],
+  "ood_definition": "Evaluation elemental systems are ranked by median nearest-neighbor composition distance to each actually labelled target-training draw; Q4 is the most distant quarter.",
+  "screen": {
+    "target_label_budgets": [
+      60
+    ],
+    "repeats": 30,
+    "learners": [
+      "random_forest",
+      "extra_trees"
+    ],
+    "tree_estimators": 320,
+    "primary_contract": "planned_state",
+    "primary_budget": 60,
+    "primary_method": "state_plus_crossfitted_predicted_uts",
+    "shuffled_control_method": "state_plus_crossfitted_shuffled_uts"
+  },
+  "balam_escalation_gate": {
+    "mean_q4_relative_rmse_gain_at_least": 0.05,
+    "positive_q4_runs_at_least": 48,
+    "total_primary_runs": 60,
+    "mean_q4_augmented_r2_must_be_positive": true,
+    "q4_minus_q1_gain_must_be_positive": true,
+    "must_outperform_shuffled_control": true
+  },
+  "inference": {
+    "primary_unit": "elemental system",
+    "reported_screen_interval": "descriptive t interval across the 60 predeclared model-by-draw runs",
+    "primary_interval": "two-way cluster bootstrap that resamples elemental systems and frozen model-by-draw runs",
+    "bootstrap_replicates": 100000,
+    "bootstrap_seed": 20260724
+  }
+}

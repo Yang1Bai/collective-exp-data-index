@@ -1,0 +1,14 @@
+{
+  "status": "verified-complete-focused-development",
+  "focused_config_sha256": "85af6621a6027bbe4b15685b464a1804cb1aaa85eb0d1f92e7a15687aa509494",
+  "source_verified_sha256": "cf31a2749265a5c99be91c3be3eb55a6576882ef148e252e5ce88dc041aaf45e",
+  "scope_manifest_sha256": "d54d1772f47341fdb589a2064af063ccab58ead9cdfcff5c69bc2b90abe9f31b",
+  "development_summary_sha256": "749b9da79bf9771a6bb700288e29e7716cec1349e914dc19fbe043c86a248ea0",
+  "development_release_sha256": "7736ec633a67ac6f6c7c0bb05d637ed1894a1b7b4c2171ec6391144cd752cb51",
+  "metric_rows": 10800,
+  "contrast_rows": 9000,
+  "insufficient_scaffold_abstention_draws": 16,
+  "admitted_to_blind": false,
+  "selected_method": null,
+  "claim_guard": "This development experiment can release at most one completely specified strategy to the still-unopened 96-molecule blind set. It cannot replace the failed direct scalar-injection gate, establish universal transfer, or prove prospective discovery."
+}

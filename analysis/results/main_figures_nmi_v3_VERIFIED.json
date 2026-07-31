@@ -1,0 +1,74 @@
+{
+  "status": "verified-complete",
+  "figure2": {
+    "real_edges": 40,
+    "declared_edges": 8,
+    "complete_passes": 0
+  },
+  "figure3": {
+    "external_rows": 1827,
+    "comparators": 6,
+    "controlled_targets": 4
+  },
+  "figure4": {
+    "models": 15,
+    "primary_delta": 0.3736614620854431,
+    "frozen_delta": -0.0887311446317657
+  },
+  "exports": {
+    "figure2_failure_benchmark_nmi_v3": {
+      ".pdf": {
+        "bytes": 101111,
+        "sha256": "8c7dd2b5091e0f1346b00c011ad431959d002a621d483754c0f6a3904e339e83"
+      },
+      ".svg": {
+        "bytes": 117096,
+        "sha256": "2ccfc0ad8ad3663f52ebf2a2215a07c89f0bbc7a40fc4164df6398083414450e"
+      },
+      ".png": {
+        "bytes": 393879,
+        "sha256": "80e7b7c4067effd86bd938c7f5a0b8cce7697d5d33f076e8f4892f52f1329f5c"
+      },
+      ".tiff": {
+        "bytes": 2426698,
+        "sha256": "d1f73d62b3e80be05f0a64505d0e92f7289ba688089ae26b4bf2057d6362c495"
+      }
+    },
+    "figure3_relation_transfer_nmi_v3": {
+      ".pdf": {
+        "bytes": 105307,
+        "sha256": "528ed4cd7c914b9c67f811b68a53507f37d4b7e14dc5ec4e1a3c249889d75ea7"
+      },
+      ".svg": {
+        "bytes": 92961,
+        "sha256": "60b9bf9b09ddc413bf966f9ef008476c363b4c6badde18ab5a9129111556e85f"
+      },
+      ".png": {
+        "bytes": 314954,
+        "sha256": "85a88bc9ce31fd0ac68f45221bb3e385c5f7c295a5798008e71e31361c8e9844"
+      },
+      ".tiff": {
+        "bytes": 1864882,
+        "sha256": "13861e71acbaa7f819f5abd28f11467c6021df6e54855a09753a268d9033f33c"
+      }
+    },
+    "figure4_ordinal_screening_nmi_v3": {
+      ".pdf": {
+        "bytes": 89438,
+        "sha256": "d842b0265867c3c46eadce5dda8f2ada3c6a2043beccc880ff8e4b20114d311d"
+      },
+      ".svg": {
+        "bytes": 59338,
+        "sha256": "938c30e89410b7e77dd5747abf294c48dcdc042c4151c50308642090116ba6c9"
+      },
+      ".png": {
+        "bytes": 273593,
+        "sha256": "6313f2595af3317ac342f8eee1c51447159a8b0cf68e8e2703327c129ab0eba9"
+      },
+      ".tiff": {
+        "bytes": 1732058,
+        "sha256": "081acb3f24abdabe00732ec41421a472bdf7c8f3a13a3482ca5aa53bb32b6d38"
+      }
+    }
+  }
+}

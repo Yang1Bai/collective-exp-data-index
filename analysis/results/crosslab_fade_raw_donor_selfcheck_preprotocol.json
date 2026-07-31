@@ -1,0 +1,26 @@
+{
+  "status": "donor-selfcheck-failed-abstain",
+  "donor_cells_total": 180,
+  "donor_cells_valid": 133,
+  "valid_by_batch": {
+    "batch1": 46,
+    "batch2": 43,
+    "batch3": 44
+  },
+  "batch_out_oof_life_spearman": -0.46208034609028215,
+  "oof_residual_covariance": [
+    [
+      0.263839056684228,
+      -0.1511872833468035
+    ],
+    [
+      -0.1511872833468035,
+      0.09911165042684189
+    ]
+  ],
+  "gate_checks": {
+    "donor_valid_at_least_150": false,
+    "batch_out_oof_spearman_at_least_0_5": false
+  },
+  "donor_table_sha256": "3c1d0b594028402e055273868603a95feb68c792d2960bfc5c4195f1cebe5428"
+}

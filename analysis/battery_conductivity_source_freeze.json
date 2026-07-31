@@ -1,0 +1,25 @@
+{
+  "status": "source-pipeline-frozen-after-smoke-before-formal-source-fit",
+  "frozen_utc": "2026-07-27T13:20:00-04:00",
+  "source_script_sha256": "1da077b592babb013b88b06a244057335f8609247f59c21de34a30bb1537ba42",
+  "source_verifier_sha256": "b05e656045d526f7e04c3d3972684adfeb16ae5a6447a861367e90c67b6283ec",
+  "smoke_n_estimators": 20,
+  "smoke_conductivity_oof_r2_transformed": 0.2488667492257075,
+  "smoke_conductivity_oof_spearman_transformed": 0.47902347063394923,
+  "smoke_gate_passed": true,
+  "formal_n_estimators": 500,
+  "allowed_postfreeze_changes": [
+    "parallel execution",
+    "unique-material caching",
+    "portable paths",
+    "checkpoint and logging infrastructure"
+  ],
+  "forbidden_postfreeze_changes": [
+    "source representation",
+    "source label transform",
+    "publication folds",
+    "source skill gate",
+    "card columns",
+    "control definitions"
+  ]
+}

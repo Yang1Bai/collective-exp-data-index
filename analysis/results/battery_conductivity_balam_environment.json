@@ -1,0 +1,13 @@
+{
+  "slurm_job_id": "71786",
+  "node": "balam009",
+  "python": "3.11.5",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scipy": "1.17.1",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "allocated_cpus": "128",
+  "source_workers": 32,
+  "recipient_workers": 64
+}

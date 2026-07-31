@@ -1,0 +1,58 @@
+{
+  "status": "specified-postrelease-exploratory-sensitivity",
+  "primary_23_group_status": "non-evaluable-stage2-release",
+  "target_outcomes_opened_before_specification": true,
+  "selection_basis": "structural endpoint availability only; no outcome value used to select the excluded group",
+  "excluded_condition_groups": [
+    "z|35|0.8|0.5|0.9|1.1"
+  ],
+  "excluded_cells": 3,
+  "retained_cells": 135,
+  "retained_condition_groups": 22,
+  "retained_groups_by_type": {
+    "k": 8,
+    "z": 14
+  },
+  "target_label_budget_by_type": {
+    "k": 4,
+    "z": 6
+  },
+  "applicability_threshold": 0.2,
+  "applicability_rows": 3435,
+  "outer_test_borrowing_groups": 14,
+  "outer_test_borrowing_groups_by_type": {
+    "k": 6,
+    "z": 8
+  },
+  "unchanged_from_frozen_analysis": [
+    "endpoint",
+    "source features",
+    "target predictors",
+    "learner",
+    "applicability formula and threshold",
+    "training-only gate",
+    "controls",
+    "two comparisons",
+    "effect definitions",
+    "10000 bootstraps",
+    "9999 sign flips",
+    "Holm correction",
+    "absolute utility and safety diagnostics"
+  ],
+  "changed_after_release": [
+    "exclude the sole structurally non-evaluable condition group",
+    "regenerate deterministic maximin target-training budgets over the 22 observable groups",
+    "downgrade every decision and p-value to exploratory sensitivity evidence"
+  ],
+  "release_audit_sha256": "ab8d658712eae44dd564b9d08e434f9ac39a841a617dfd0af612b9e1d8fe32ca",
+  "endpoint_table_sha256": "281a6980586465c83a2437d750dc7817ec158a7f27580b67c7b49e4bc075cfa9",
+  "boundary_document_sha256": "8f0537a60582994b7978e66c1a2d69cd65e1583d7a5e93c7fa13b8a8cf71a2cc",
+  "original_split_plan_sha256": "0ccd2bfa10ca1c8d15d89388ff344edf95bc739e0b17b52f6bf16f174c83d1cc",
+  "original_applicability_plan_sha256": "cee3b2f7a29215ed8290dbb17139d182411bcc714f0dda58bf698629de4c8d28",
+  "postrelease_split_plan_sha256": "b9eae162d51d9aab5f292c6276be9dc8224a342acfc1e1e5a4729bc8f1628045",
+  "postrelease_applicability_plan_sha256": "92c335cce27f988e885d2e33aaf8bdc77d64426c7fca360af5ad91dae6f9d83e",
+  "analysis_runner_sha256": "f5505b03c63dc2a71b4bde5244824ebb038ccf28edb898f95bb1fbe286c14dd3",
+  "infrastructure_amendment_sha256": "2b5dd376f767055a6a4e69b03f782e3e31bd29b4ee8d598cf30920fe8194bbe9",
+  "claim_guard": "This sensitivity cannot rescue or replace the non-evaluable frozen 23-group primary test. It may estimate plausibility and guide a new independent confirmatory program.",
+  "errors": []
+}

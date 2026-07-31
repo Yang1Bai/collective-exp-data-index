@@ -1,0 +1,272 @@
+{
+  "status": "quick-smoke-complete",
+  "created_utc": "2026-07-23T22:31:09.700068+00:00",
+  "claim_guard": "Three target-draw repeats and three learners form a screening diagnostic after prior outcomes were inspected. No interval, multiplicity correction, nested bundle selection or independent target confirmation is provided.",
+  "frozen_hashes": {
+    "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+    "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f"
+  },
+  "targets": 8,
+  "learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "repeats": 3,
+  "rows": 216,
+  "promising_mechanism_bundles": [
+    {
+      "target": "polymer_tensile",
+      "method": "mechanism_bundle",
+      "sources": "polymer_young|polymer_hardness|polymer_elongation|polymer_tg",
+      "q1_relative_rmse_gain": 0.09529016539409448,
+      "q4_relative_rmse_gain": 0.1513140649766801,
+      "gain_specific": 0.056023899582585614,
+      "q4_r2": 0.05666246736066795,
+      "cells": 9
+    }
+  ],
+  "grouped_results": [
+    {
+      "target": "alloy_ys",
+      "method": "all_five",
+      "sources": "alloy_uts|alloy_hardness|alloy_elongation|te_thermal|catalysis_h2",
+      "q1_relative_rmse_gain": 0.12405712028428434,
+      "q4_relative_rmse_gain": 0.06286622496275794,
+      "gain_specific": -0.06119089532152641,
+      "q4_r2": -0.183342101907659,
+      "cells": 9
+    },
+    {
+      "target": "alloy_ys",
+      "method": "mechanism_bundle",
+      "sources": "alloy_uts|alloy_hardness|alloy_elongation",
+      "q1_relative_rmse_gain": 0.14102205646497845,
+      "q4_relative_rmse_gain": 0.06264123663356859,
+      "gain_specific": -0.07838081983140985,
+      "q4_r2": -0.18464801559378494,
+      "cells": 9
+    },
+    {
+      "target": "alloy_ys",
+      "method": "primary",
+      "sources": "alloy_uts",
+      "q1_relative_rmse_gain": 0.09744775898989046,
+      "q4_relative_rmse_gain": 0.04532072614044532,
+      "gain_specific": -0.05212703284944513,
+      "q4_r2": -0.23629213754379297,
+      "cells": 9
+    },
+    {
+      "target": "catalysis_h2",
+      "method": "all_five",
+      "sources": "catalysis_co|catalysis_voltage|te_zt|alloy_ys|electrolyte_conductivity",
+      "q1_relative_rmse_gain": 0.13499832614938842,
+      "q4_relative_rmse_gain": 0.11078318273678164,
+      "gain_specific": -0.02421514341260677,
+      "q4_r2": -1.8943501947778687,
+      "cells": 9
+    },
+    {
+      "target": "catalysis_h2",
+      "method": "mechanism_bundle",
+      "sources": "catalysis_co|catalysis_voltage",
+      "q1_relative_rmse_gain": 0.12190990042245703,
+      "q4_relative_rmse_gain": 0.009979443200726837,
+      "gain_specific": -0.11193045722173019,
+      "q4_r2": -2.60780884113602,
+      "cells": 9
+    },
+    {
+      "target": "catalysis_h2",
+      "method": "primary",
+      "sources": "catalysis_voltage",
+      "q1_relative_rmse_gain": -0.06007968266560108,
+      "q4_relative_rmse_gain": -0.040756971351835425,
+      "gain_specific": 0.01932271131376565,
+      "q4_r2": -3.019969158899609,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "all_five",
+      "sources": "te_electrical|te_power_factor|te_thermal|alloy_ys|catalysis_h2",
+      "q1_relative_rmse_gain": 0.06522044092596643,
+      "q4_relative_rmse_gain": -0.027528531408631984,
+      "gain_specific": -0.09274897233459843,
+      "q4_r2": -4.0837402123405155,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "mechanism_bundle",
+      "sources": "te_electrical|te_power_factor|te_thermal",
+      "q1_relative_rmse_gain": 0.03866219812168639,
+      "q4_relative_rmse_gain": 0.04774270422317818,
+      "gain_specific": 0.009080506101491794,
+      "q4_r2": -5.207020921624025,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "method": "primary",
+      "sources": "te_electrical",
+      "q1_relative_rmse_gain": 0.028040514520216313,
+      "q4_relative_rmse_gain": 0.02879771888806074,
+      "gain_specific": 0.0007572043678444267,
+      "q4_r2": -5.370860943364721,
+      "cells": 9
+    },
+    {
+      "target": "hydration",
+      "method": "all_five",
+      "sources": "solubility|pka_acid|pka_base|photo_e_pipi|polymer_tg",
+      "q1_relative_rmse_gain": 0.055641502747701015,
+      "q4_relative_rmse_gain": 0.027157830663545338,
+      "gain_specific": -0.028483672084155684,
+      "q4_r2": -0.13195717797591874,
+      "cells": 9
+    },
+    {
+      "target": "hydration",
+      "method": "mechanism_bundle",
+      "sources": "solubility|pka_acid|pka_base",
+      "q1_relative_rmse_gain": 0.06189812220016852,
+      "q4_relative_rmse_gain": -0.003793847312383261,
+      "gain_specific": -0.06569196951255178,
+      "q4_r2": -0.20470291237306953,
+      "cells": 9
+    },
+    {
+      "target": "hydration",
+      "method": "primary",
+      "sources": "solubility",
+      "q1_relative_rmse_gain": 0.045487926069872904,
+      "q4_relative_rmse_gain": -0.01511798828686185,
+      "gain_specific": -0.06060591435673476,
+      "q4_r2": -0.23359944677964822,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tensile",
+      "method": "all_five",
+      "sources": "polymer_young|polymer_hardness|polymer_elongation|polymer_tg|photo_e_pipi",
+      "q1_relative_rmse_gain": 0.10172786459389473,
+      "q4_relative_rmse_gain": 0.13322905389262896,
+      "gain_specific": 0.03150118929873422,
+      "q4_r2": 0.018179214548701614,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tensile",
+      "method": "mechanism_bundle",
+      "sources": "polymer_young|polymer_hardness|polymer_elongation|polymer_tg",
+      "q1_relative_rmse_gain": 0.09529016539409448,
+      "q4_relative_rmse_gain": 0.1513140649766801,
+      "gain_specific": 0.056023899582585614,
+      "q4_r2": 0.05666246736066795,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tensile",
+      "method": "primary",
+      "sources": "polymer_young",
+      "q1_relative_rmse_gain": 0.0566485693610829,
+      "q4_relative_rmse_gain": 0.022327413503539957,
+      "gain_specific": -0.034321155857542945,
+      "q4_r2": -0.2587587159175746,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tm",
+      "method": "all_five",
+      "sources": "polymer_tg|polymer_crystallization|polymer_td|polymer_tensile|photo_e_pipi",
+      "q1_relative_rmse_gain": 0.05345896443797906,
+      "q4_relative_rmse_gain": -0.06395039327441829,
+      "gain_specific": -0.11740935771239736,
+      "q4_r2": -1.2878765055353862,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tm",
+      "method": "mechanism_bundle",
+      "sources": "polymer_tg|polymer_crystallization|polymer_td|polymer_tensile",
+      "q1_relative_rmse_gain": 0.008357437497830118,
+      "q4_relative_rmse_gain": -0.06165313117800718,
+      "gain_specific": -0.0700105686758373,
+      "q4_r2": -1.2875294656358882,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tm",
+      "method": "primary",
+      "sources": "polymer_crystallization",
+      "q1_relative_rmse_gain": -0.008222355330964933,
+      "q4_relative_rmse_gain": -0.00923226565095633,
+      "gain_specific": -0.0010099103199913988,
+      "q4_r2": -1.0627072329319032,
+      "cells": 9
+    },
+    {
+      "target": "solubility",
+      "method": "all_five",
+      "sources": "hydration|pka_acid|pka_base|photo_e_pipi|polymer_tg",
+      "q1_relative_rmse_gain": -0.009419439270987137,
+      "q4_relative_rmse_gain": 0.00814906994987396,
+      "gain_specific": 0.0175685092208611,
+      "q4_r2": -0.35125839130496705,
+      "cells": 9
+    },
+    {
+      "target": "solubility",
+      "method": "mechanism_bundle",
+      "sources": "hydration|pka_acid|pka_base",
+      "q1_relative_rmse_gain": -0.007798656620098313,
+      "q4_relative_rmse_gain": 0.006355447211374685,
+      "gain_specific": 0.014154103831473,
+      "q4_r2": -0.36029139913546704,
+      "cells": 9
+    },
+    {
+      "target": "solubility",
+      "method": "primary",
+      "sources": "hydration",
+      "q1_relative_rmse_gain": 0.014377114633653397,
+      "q4_relative_rmse_gain": 0.012105262676994263,
+      "gain_specific": -0.002271851956659136,
+      "q4_r2": -0.3448037540687823,
+      "cells": 9
+    },
+    {
+      "target": "te_zt",
+      "method": "all_five",
+      "sources": "te_power_factor|te_thermal|te_seebeck|alloy_ys|catalysis_h2",
+      "q1_relative_rmse_gain": 0.08214541021520552,
+      "q4_relative_rmse_gain": 0.04949624832358009,
+      "gain_specific": -0.03264916189162542,
+      "q4_r2": -0.5776234867445862,
+      "cells": 9
+    },
+    {
+      "target": "te_zt",
+      "method": "mechanism_bundle",
+      "sources": "te_power_factor|te_thermal|te_seebeck",
+      "q1_relative_rmse_gain": 0.091324427467146,
+      "q4_relative_rmse_gain": 0.03808196833539143,
+      "gain_specific": -0.05324245913175456,
+      "q4_r2": -0.6141166067285736,
+      "cells": 9
+    },
+    {
+      "target": "te_zt",
+      "method": "primary",
+      "sources": "te_seebeck",
+      "q1_relative_rmse_gain": 0.0026258560116903026,
+      "q4_relative_rmse_gain": 0.006001635069732387,
+      "gain_specific": 0.0033757790580420857,
+      "q4_r2": -0.7252980543577714,
+      "cells": 9
+    }
+  ]
+}

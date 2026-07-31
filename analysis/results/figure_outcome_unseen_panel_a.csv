@@ -1,0 +1,4 @@
+target,effect_percent,ci_low_percent,ci_high_percent,holm_p,absolute_utility,full_gate
+Starrydata reverse transport,0.8807528712160334,0.016525197327398794,1.7712797366170505,0.07109289071092892,R2 = -0.485,fail
+TRI OER (4 plates),-0.0786982953364868,-0.31261836848863417,0.15522177781566057,1.0,0/4 plates R2 > 0,fail
+Two-target random effects,0.30402434179155524,-0.6168149969994344,1.224863680582545,,I2 = 76.7%,boundary

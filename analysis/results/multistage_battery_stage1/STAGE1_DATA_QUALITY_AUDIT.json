@@ -1,0 +1,67 @@
+{
+  "status": "verified-stage1-source-ready",
+  "stage1_cells": 141,
+  "evaluable_stage1_cells": 138,
+  "missing_endpoint_cells": 3,
+  "missing_endpoint_condition_groups": [
+    "z|23|0.8|0.5|0.8|0.3"
+  ],
+  "evaluable_condition_groups": {
+    "k": 11,
+    "z": 24
+  },
+  "endpoint_summary": {
+    "q_rpt_et_Ah": {
+      "min": 4.762544385296308,
+      "q01": 4.778776489332123,
+      "median": 4.870290063682057,
+      "mean": 4.864152024126005,
+      "q99": 4.912943165827693,
+      "max": 4.9191350035503385
+    },
+    "q_rpt_at_Ah": {
+      "min": 3.8758220085643016,
+      "q01": 4.02273751819541,
+      "median": 4.631828385921682,
+      "mean": 4.587189929713246,
+      "q99": 4.847699164199795,
+      "max": 4.884523680701382
+    },
+    "q_rel_end_percent": {
+      "min": 79.34477847717288,
+      "q01": 82.7025005681503,
+      "median": 95.02928089501091,
+      "mean": 94.30678101064305,
+      "q99": 99.56627332528339,
+      "max": 99.78570218476338
+    },
+    "charge_discharge_disagreement_et_percent": {
+      "min": 0.0096903631106995,
+      "q01": 0.013213113686285787,
+      "median": 0.29151585379107026,
+      "mean": 0.2942001675371234,
+      "q99": 0.8207889463430138,
+      "max": 0.9622835616185198
+    },
+    "charge_discharge_disagreement_at_percent": {
+      "min": 0.0231972107977192,
+      "q01": 0.03687176381002382,
+      "median": 0.2618878293509397,
+      "mean": 0.2842231866688957,
+      "q99": 0.8263015494865282,
+      "max": 0.9221091770692602
+    }
+  },
+  "charge_discharge_sensitivity": {
+    "max_absolute_retention_difference_percentage_points": 0.48941450180794277,
+    "mean_absolute_retention_difference_percentage_points": 0.07747000532756654
+  },
+  "stage2_archives_downloaded": 0,
+  "stage2_numeric_data_rows_opened": false,
+  "endpoint_table_sha256": "aa6e7ad49a10b2184af6c00b1f925bb1e665717ac48e19cdcba3fc764e7e5386",
+  "release_audit_sha256": "2634b6233f424f2ae9f0413ca6d18abd5325744dcc9090cd833a10eda155e711",
+  "experiments_meta_sha256": "3a0dcf34dd881be49ad06b40257ce2288a2601c3e62b1a27bb30f456b9931fc4",
+  "source_table_sha256": "639ca56b9770d0ba7e4e3e53de9c71d68c6165c8fbd180c12f6eb240d21565e9",
+  "claim_guard": "This audit establishes Stage 1 source-data integrity only. It contains no Stage 2 outcome evidence and cannot support an OOD-transfer claim.",
+  "errors": []
+}

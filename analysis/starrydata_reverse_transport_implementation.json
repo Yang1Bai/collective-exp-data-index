@@ -1,0 +1,119 @@
+{
+  "implementation_name": "Frozen Starrydata reverse-transport prediction and OOD-policy implementation",
+  "version": 1,
+  "frozen_utc": "2026-07-18T04:42:00Z",
+  "outcome_status_at_freeze": "target ZT column not loaded; target identities, metadata, source predictions, fixed ranks, policy orders, and hypothesis cards only",
+  "claim_guard": "All named methods, controls, endpoints, and multiplicity families remain in the result regardless of sign. No winning learner, representation, source, or policy may replace a prespecified primary after outcome access.",
+  "preoutcome_sentinel": "analysis/results/starrydata_reverse_PREOUTCOME.json",
+  "target_join": {
+    "procedure": "For every frozen curve_row and selected_position, parse the y list at that position, require equal x/y list lengths and finite 0 <= ZT <= 10, then take the median over eligible curves for each frozen entity_id.",
+    "exclusions": ["unequal x/y list length", "nonfinite selected y", "selected ZT outside 0 to 10", "entity with no remaining selected value"],
+    "minimums": ["100 target entities", "40 connected components", "20 provenance groups", "20 observed evaluation entities in every primary scope"]
+  },
+  "target_label_sampling": {
+    "source": "development split only",
+    "budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "repeats": 100,
+    "unit": "complete connected component",
+    "selection": "SHA-256 ordered components with deterministic nearest-budget completion; no target outcome stratification"
+  },
+  "evaluation_scopes": {
+    "all_evaluation": "all outcome-bearing frozen evaluation entities",
+    "primary_hard_ood": "frozen evaluation ood_quartile equals 4",
+    "required_surface": "all four frozen evaluation OOD quartiles"
+  },
+  "representations": {
+    "composition": "118 element fractions plus eight scale-invariant composition descriptors",
+    "composition_context": "composition representation plus 64 deterministic signed-hash features from sample_name, sample_info, and composition_details; article, DOI, SID, curve identity, and target outcome are forbidden"
+  },
+  "learners": {
+    "ridge": {"alpha": 10.0, "scaling": true},
+    "random_forest": {"n_estimators": 300, "min_samples_leaf": 2, "max_features": 0.7},
+    "extra_trees": {"n_estimators": 300, "min_samples_leaf": 2, "max_features": 0.7}
+  },
+  "prediction_methods": [
+    "target_only",
+    "same_domain_estm_frozen_stack",
+    "obelix_adjacent_frozen_stack",
+    "caltech_adjacent_frozen_stack",
+    "ionic_consensus_frozen_stack",
+    "all_neighbor_frozen_stack",
+    "source_only_calibrated",
+    "naive_domain_standardized_pooling",
+    "cross_fitted_residual_shrinkage",
+    "cross_fitted_mixture_of_experts",
+    "wrong_source_frozen_stack",
+    "shuffled_source_frozen_stack",
+    "equal_capacity_random_feature_stack"
+  ],
+  "prediction_primary_family": {
+    "endpoint": "paired relative RMSE reduction in primary_hard_ood at n=30",
+    "primary_cell": "ExtraTrees with the composition representation; all other learner-representation cells are mandatory robustness results",
+    "designated_neighbor": "ionic_consensus_frozen_stack",
+    "contrasts": [
+      "ionic_consensus_frozen_stack minus target_only",
+      "ionic_consensus_frozen_stack minus same_domain_estm_frozen_stack",
+      "ionic_consensus_frozen_stack minus best wrong/shuffled/equal-capacity control"
+    ],
+    "absolute_gate": "ionic_consensus_frozen_stack R2 > 0 in primary_hard_ood",
+    "multiplicity": "Holm over the three named contrasts",
+    "robustness": "same effect direction in at least two of three learners and both representations; every cell reported"
+  },
+  "matched_specificity_controls": {
+    "source_size": "For each ionic source and wrong source pair, refit both on the smaller entity count using deterministic group-preserving SHA-256 subsamples; compare their target-rank increment on identical target splits.",
+    "source_skill": "Use the wrong source with closest grouped OOF Spearman; an absolute difference <= 0.05 is a passed match, otherwise degrade the higher-skill source by a frozen convex mixture with a group-permuted label until the closest 0.05 grid point is reached.",
+    "target_coverage": "Compute nearest-source composition distance for every target entity; within each source, weight or group-subsample source entities until target-distance decile frequencies match the nominated source within maximum standardized difference 0.10.",
+    "capacity": "Append five pre-frozen random features, equal to the five real source channels, and fit with the same learner, split, and hyperparameters.",
+    "shuffle": "Independently permute the two ionic ranks once with the pre-frozen seed; do not search over shuffles."
+  },
+  "exploration": {
+    "pool": "outcome-bearing frozen evaluation entities",
+    "budget": 20,
+    "top_component_definition": "top ceil(5 percent) connected components ranked by maximum observed entity ZT; median and mean component outcomes are required sensitivities",
+    "co_primary": ["distinct-top-component AUC20", "acquisitions to first distinct top component"],
+    "mandatory_tradeoffs": ["entity recall20", "component recall20", "marginal unique top components from OBELiX and Caltech"],
+    "policies": [
+      "uniform_family_first",
+      "composition_novelty_family_first",
+      "estm_best_same_domain",
+      "obelix_adjacent_single",
+      "caltech_adjacent_single",
+      "neighbor_entity_consensus",
+      "cca_family_first_consensus",
+      "cca_family_first_round_robin",
+      "wrong_source_family_first",
+      "shuffled_neighbor_family_first"
+    ],
+    "primary_contrasts": [
+      "cca_family_first_consensus minus uniform_family_first",
+      "cca_family_first_consensus minus composition_novelty_family_first",
+      "cca_family_first_consensus minus estm_best_same_domain",
+      "cca_family_first_consensus minus best adjacent single",
+      "cca_family_first_consensus minus wrong_source_family_first",
+      "cca_family_first_consensus minus shuffled_neighbor_family_first"
+    ],
+    "multiplicity": "Holm over six named contrasts per co-primary endpoint"
+  },
+  "hypothesis_cards": {
+    "artifact": "analysis/results/starrydata_reverse_hypothesis_cards.csv",
+    "primary_test": "paired difference in median ZT between every frozen candidate set and its OOD-distance-matched target-only controls",
+    "secondary": "top-component enrichment and unique-component count",
+    "randomization": "10,000 paired label swaps within card",
+    "multiplicity": "Holm over all frozen cards",
+    "reporting": "every card, control, falsifier, and failure is retained"
+  },
+  "inference": {
+    "prediction": "paired two-level bootstrap of target-label repeat and evaluation provenance/component block, 10,000 resamples",
+    "exploration": "10,000 component-block bootstraps plus 5,000 independent source-rank permutations",
+    "external_boundary": "This is one independent dataset-level target. Seed or component intervals do not substitute for the planned multi-target random-effects analysis.",
+    "effect_reporting": ["point estimate", "95 percent interval", "Holm-adjusted p value", "absolute utility", "target-level sample size", "independent group count"]
+  },
+  "compute": {
+    "preferred": "Balam CPU parallel job",
+    "threads_per_fit": 1,
+    "parallel_unit": "repeat x budget x learner x representation",
+    "runner": "analysis/run_starrydata_reverse_transport.py",
+    "required_completion": "row-count arithmetic, input/design/sentinel hashes, seed coverage, finite predictions, policy permutation checks, and COMPLETE sentinel"
+  }
+}

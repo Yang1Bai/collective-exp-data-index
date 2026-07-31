@@ -1,7 +1,7 @@
 {
   "catalog_version": "0.1.0",
-  "updated": "2026-07-13",
-  "entry_count": 118,
+  "updated": "2026-07-27",
+  "entry_count": 127,
   "note": "Metadata index only. This catalog links to datasets; it does not re-host source files. Purely computational databases are excluded by policy.",
   "entries": [
     {
@@ -27,7 +27,7 @@
       "associated_paper": "Rahmanian et al., 'Conductivity experiments for electrolyte formulations and their automated analysis', Sci. Data 10:43 (2023)",
       "year": 2022,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/7244939"
     },
     {
@@ -52,7 +52,7 @@
       "associated_paper": "Wu et al., MoleculeNet: a benchmark for molecular machine learning, Chem. Sci. 9:513 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://moleculenet.org/"
     },
     {
@@ -77,7 +77,7 @@
       "associated_paper": "Hu et al., Open Graph Benchmark, NeurIPS 2020",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://ogb.stanford.edu/"
     },
     {
@@ -102,7 +102,7 @@
       "associated_paper": "Huang et al., Therapeutics Data Commons, NeurIPS 2021 Datasets & Benchmarks",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://tdcommons.ai/"
     },
     {
@@ -127,7 +127,7 @@
       "associated_paper": "Schneider, Stiefl & Landrum, 'What's What: The (Nearly) Definitive Guide to Reaction Role Assignment', J. Chem. Inf. Model. 56 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/Hanjun-Dai/GLN"
     },
     {
@@ -152,7 +152,7 @@
       "associated_paper": "Gilson et al., BindingDB in 2024, Nucleic Acids Res. 53:D1633 (2025)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.bindingdb.org/rwd/bind/info.jsp"
     },
     {
@@ -177,7 +177,7 @@
       "associated_paper": "Zdrazil et al., The ChEMBL Database in 2023, Nucleic Acids Res. 2024",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.ebi.ac.uk/chembl/"
     },
     {
@@ -202,7 +202,7 @@
       "associated_paper": "Kim et al., PubChem 2023 update, Nucleic Acids Res.",
       "year": 2004,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.ncbi.nlm.nih.gov/guide/chemicals-bioassays/"
     },
     {
@@ -227,7 +227,7 @@
       "associated_paper": "Huang et al.; Tox21 10K Compound Library, Chem. Res. Toxicol. 2021",
       "year": 2014,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://tripod.nih.gov/tox21/challenge/about.jsp"
     },
     {
@@ -251,7 +251,7 @@
       "associated_paper": "Burte et al., 'CatTestHub', J. Catal. (2024)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://chemrxiv.org/engage/chemrxiv/article-details/65b1b5e5e9ebbb4db9e91c68"
     },
     {
@@ -276,7 +276,7 @@
       "associated_paper": "Groom et al., The Cambridge Structural Database, Acta Cryst. B72:171 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.ccdc.cam.ac.uk/solutions/software/csd/"
     },
     {
@@ -301,7 +301,7 @@
       "associated_paper": "Tremouilhac et al., Chemistry-Methods (2021); Nat. Protoc. (2024)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41596-024-01074-z"
     },
     {
@@ -324,7 +324,7 @@
       "associated_paper": null,
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.re3data.org/repository/r3d100014010"
     },
     {
@@ -349,7 +349,7 @@
       "associated_paper": "Saebi et al., 'On the use of real-world datasets for reaction yield prediction', Chem. Sci. 14:4997 (2023)",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://pubs.rsc.org/en/content/articlehtml/2023/sc/d2sc06041h"
     },
     {
@@ -374,7 +374,7 @@
       "associated_paper": "Ahneman, Estrada, Lin, Dreher, Doyle, Science 360:186-190 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://pubmed.ncbi.nlm.nih.gov/29449509/"
     },
     {
@@ -399,7 +399,7 @@
       "associated_paper": "Raccuglia et al., Nature 533, 73-76 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/nature17439"
     },
     {
@@ -423,8 +423,34 @@
       "associated_paper": "Zahrt et al., 'Prediction of higher-selectivity catalysts by computer-driven workflow and ML', Science 363 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://denmarkgroup.illinois.edu/chemoinformatics2/"
+    },
+    {
+      "id": "hitea-pfizer-hte-reactome",
+      "name": "Pfizer HTE 'Reactome' Dataset (HiTEA)",
+      "description": "Release of 39,000+ previously proprietary Pfizer high-throughput experimentation reactions accumulated over 10+ years of medicinal chemistry, spanning cross-coupling reactions, hydrogenations and chiral salt resolutions across 350+ target products. Published with the HiTEA statistical analysis framework; full dataset CSV and cleaned per-reaction-class subsets are in the GitHub repository.",
+      "domain": "chemistry",
+      "subdomain": "hte-synthesis",
+      "tags": [
+        "cross-coupling",
+        "hydrogenation",
+        "chiral-resolution",
+        "high-throughput",
+        "industrial-data",
+        "medicinal-chemistry"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": null,
+      "doi": "10.1038/s41557-023-01393-w",
+      "homepage_url": "https://github.com/emmaking-smith/HiTEA",
+      "repository": "GitHub",
+      "associated_paper": "King-Smith et al., 'Probing the chemical reactome with high-throughput experimentation data', Nature Chemistry 16, 633-643 (2024)",
+      "year": 2024,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://github.com/emmaking-smith/HiTEA"
     },
     {
       "id": "reizman-jensen-suzuki-optimization",
@@ -448,7 +474,7 @@
       "associated_paper": "Reizman, Wang, Buchwald & Jensen, 'Suzuki-Miyaura cross-coupling optimization enabled by automated feedback', React. Chem. Eng. 1:658 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/sustainable-processes/summit"
     },
     {
@@ -473,8 +499,34 @@
       "associated_paper": "Perera et al., Science 359:429-434 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/rxn4chemistry/rxn_yields"
+    },
+    {
+      "id": "bh-hte-unified-ood",
+      "name": "Unified Buchwald-Hartwig HTE Dataset (BH-HTE-OOD)",
+      "description": "Unified, curated Buchwald-Hartwig high-throughput experimentation dataset merging newly released Johnson & Johnson industrial HTE production data with major open-source BH/Pd-catalyzed C-N coupling datasets (Ahneman, Denmark, Merck nanomole-scale and others), with standardized SMILES, yields, binary success labels and precomputed OOD cluster splits. Released with the Schwaller-group study on out-of-distribution reaction yield prediction; CSV in the GitHub repo, full pickle on Zenodo (record 17634928).",
+      "domain": "chemistry",
+      "subdomain": "hte-synthesis",
+      "tags": [
+        "buchwald-hartwig",
+        "cross-coupling",
+        "yield-prediction",
+        "high-throughput",
+        "out-of-distribution",
+        "industrial-data"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "Apache-2.0",
+      "doi": "10.26434/chemrxiv-2025-xcr46",
+      "homepage_url": "https://github.com/schwallergroup/bh-hte-ood",
+      "repository": "GitHub",
+      "associated_paper": "Neves et al., 'Robust Out-of-Distribution Prediction of Buchwald-Hartwig Reactions', ChemRxiv (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://github.com/schwallergroup/bh-hte-ood"
     },
     {
       "id": "ilthermo-ionic-liquids",
@@ -498,7 +550,7 @@
       "associated_paper": "Kazakov et al., 'Ionic Liquids Database - ILThermo (v2.0)', NIST",
       "year": 2013,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://ilthermo.boulder.nist.gov/"
     },
     {
@@ -523,7 +575,7 @@
       "associated_paper": "Manion et al., NIST Chemical Kinetics Database, SRD 17, v7.1",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://kinetics.nist.gov/kinetics/"
     },
     {
@@ -548,7 +600,7 @@
       "associated_paper": "Varga, Zsely, Turanyi et al., 'ReSpecTh', Sci. Data (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41597-025-05272-6"
     },
     {
@@ -573,7 +625,7 @@
       "associated_paper": "Volk et al., Nat. Commun. 14, 1403 (2023)",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/AbolhasaniLab/AlphaFlow"
     },
     {
@@ -598,7 +650,7 @@
       "associated_paper": "Mehr, Craven, Leonov, Keenan & Cronin, 'A universal system for digitization and automatic execution of the chemical synthesis literature', Science 370 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/3955103"
     },
     {
@@ -623,7 +675,7 @@
       "associated_paper": "Angello et al., Science 378, 399-405 (2022)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://moleculemaker.org/datasets/closed-loop-optimization-of-general-reaction-conditions-for-heteroaryl-suzuki-miyaura-coupling/"
     },
     {
@@ -648,7 +700,7 @@
       "associated_paper": "Burger et al., 'A mobile robotic chemist', Nature 583, 237-241 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/CooperComputationalCaucus/kuka_optimizer"
     },
     {
@@ -673,7 +725,7 @@
       "associated_paper": "Lin et al., 'A Visual Dataset for Anomaly Detection in Self-Driving Laboratories', Sci. Data (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41597-025-06060-y"
     },
     {
@@ -698,7 +750,7 @@
       "associated_paper": "CALiSol-23: Experimental electrolyte conductivity data, Sci. Data 11 (2024)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41597-024-03575-8"
     },
     {
@@ -723,7 +775,7 @@
       "associated_paper": "Delaney, ESOL: Estimating Aqueous Solubility Directly from Molecular Structure, J. Chem. Inf. Comput. Sci. 44:1000 (2004)",
       "year": 2004,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://acs.figshare.com/articles/dataset/ESOL_Estimating_Aqueous_Solubility_Directly_from_Molecular_Structure/7944677"
     },
     {
@@ -748,7 +800,7 @@
       "associated_paper": "Mobley & Guthrie, FreeSolv, J. Comput. Aided Mol. Des. 28:711 (2014)",
       "year": 2014,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/MobleyLab/FreeSolv"
     },
     {
@@ -773,7 +825,7 @@
       "associated_paper": "Griffiths et al., Data-driven discovery of molecular photoswitches, Chem. Sci. 13:13541 (2022)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/Ryan-Rhys/The-Photoswitch-Dataset"
     },
     {
@@ -798,7 +850,7 @@
       "associated_paper": "Irwin et al., ZINC20, J. Chem. Inf. Model. 60:6065 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zinc20.docking.org/"
     },
     {
@@ -823,7 +875,7 @@
       "associated_paper": "Ju et al., 'ML Enables Highly Accurate Predictions of Photophysical Properties of Organic Fluorescent Materials', J. Chem. Inf. Model. 61 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/ChemFluor/12110619"
     },
     {
@@ -848,7 +900,7 @@
       "associated_paper": "Joung, Han, Jeong & Park, 'Experimental database of optical properties of organic compounds', Sci. Data 7:295 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "http://deep4chem.korea.ac.kr/"
     },
     {
@@ -872,7 +924,7 @@
       "associated_paper": null,
       "year": 2014,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/Jean_Claude_Bradley_Double_Plus_Good_Highly_Curated_and_Validated_Melting_Point_Dataset/1031638"
     },
     {
@@ -896,7 +948,7 @@
       "associated_paper": null,
       "year": 2014,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/Jean_Claude_Bradley_Open_Melting_Point_Datset/1031637"
     },
     {
@@ -921,7 +973,7 @@
       "associated_paper": "Zheng et al., 'Digitized dataset of aqueous acid dissociation constants' (2026)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/IUPAC/Dissociation-Constants"
     },
     {
@@ -946,7 +998,7 @@
       "associated_paper": null,
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/IUPAC/Dissociation-Constants-Izutsu"
     },
     {
@@ -972,7 +1024,7 @@
       "associated_paper": "Wang et al., 'OpenPoly: A Polymer Database Empowering Benchmarking and Multi-property Predictions', Chin. J. Polym. Sci. (2025)",
       "year": 2025,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/WangGroupFDU/Openpoly_benchmark"
     },
     {
@@ -997,7 +1049,7 @@
       "associated_paper": "Kearnes et al., The Open Reaction Database, J. Am. Chem. Soc. 2021",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://open-reaction-database.org/"
     },
     {
@@ -1022,7 +1074,7 @@
       "associated_paper": "Lowe, Chemical reactions from US patents (1976-Sep2016), Figshare 2017",
       "year": 2017,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/Chemical_reactions_from_US_patents_1976-Sep2016_/5104873"
     },
     {
@@ -1047,7 +1099,7 @@
       "associated_paper": "Hickman et al., 'Atlas: a brain for self-driving laboratories', Digital Discovery 4 (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://pubs.rsc.org/en/content/articlelanding/2025/dd/d4dd00115j"
     },
     {
@@ -1072,7 +1124,7 @@
       "associated_paper": "Häse et al., 'Olympus: a benchmarking framework for noisy optimization and experiment planning', Mach. Learn.: Sci. Technol. 2 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/aspuru-guzik-group/olympus"
     },
     {
@@ -1097,7 +1149,7 @@
       "associated_paper": "Felton, Rittig & Lapkin, 'Summit: Benchmarking Machine Learning Methods for Reaction Optimisation', Chemistry-Methods 1 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/sustainable-processes/summit"
     },
     {
@@ -1122,7 +1174,7 @@
       "associated_paper": "Sorkun, Khetan & Er, 'AqSolDB, a curated reference set of aqueous solubility', Sci. Data 6:143 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41597-019-0151-1"
     },
     {
@@ -1147,7 +1199,7 @@
       "associated_paper": "Krasnov et al., 'BigSolDB 2.0', Sci. Data (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/15094979"
     },
     {
@@ -1171,7 +1223,7 @@
       "associated_paper": "Vermeire & Green, 'Transfer learning for solvation free energies', Chem. Eng. J. 418 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.sciencedirect.com/science/article/abs/pii/S1385894721008925"
     },
     {
@@ -1195,7 +1247,7 @@
       "associated_paper": "Marenich, Kelly, Cramer & Truhlar, MNSol version 2012",
       "year": 2012,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://comp.chem.umn.edu/mnsol/"
     },
     {
@@ -1220,7 +1272,7 @@
       "associated_paper": "Wang et al., Nat. Biotechnol. 34, 828-837 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/nbt.3597"
     },
     {
@@ -1244,7 +1296,7 @@
       "associated_paper": "Wishart et al., 'HMDB 5.0', Nucleic Acids Res. 50, D622 (2022)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://academic.oup.com/nar/article/50/D1/D622/6431815"
     },
     {
@@ -1268,7 +1320,7 @@
       "associated_paper": null,
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://mona.fiehnlab.ucdavis.edu/"
     },
     {
@@ -1293,7 +1345,7 @@
       "associated_paper": "Horai et al., MassBank, J. Mass Spectrom. 45:703 (2010)",
       "year": 2010,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://massbank.eu/MassBank/"
     },
     {
@@ -1318,8 +1370,34 @@
       "associated_paper": "Linstrom & Mallard, The NIST Chemistry WebBook, J. Chem. Eng. Data 46:1059 (2001)",
       "year": 1997,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://webbook.nist.gov/chemistry/"
+    },
+    {
+      "id": "nmrexp",
+      "name": "NMRexp",
+      "description": "Open curated collection of 3.37 million experimental NMR records in organic chemistry across six nuclei (1H, 13C, 19F, 31P, 29Si, 11B), text-mined from ~200,000 Supporting Information documents published 2010-2024. Includes chemical shifts, multiplicities, J-couplings, solvents and source-DOI traceability; manual audit reported >99% metadata accuracy and 98% correct skeleton assignment. ~3.3 GB of CSV/Parquet files.",
+      "domain": "chemistry",
+      "subdomain": "spectroscopy",
+      "tags": [
+        "nmr",
+        "spectra",
+        "organic-chemistry",
+        "literature-mining",
+        "structure-elucidation",
+        "machine-learning"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "CC-BY-4.0",
+      "doi": "10.5281/zenodo.17296666",
+      "homepage_url": "https://zenodo.org/records/17296666",
+      "repository": "Zenodo",
+      "associated_paper": "Wang & Zhu, 'NMRexp: A database of 3.3 million experimental NMR spectra', Sci. Data (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://zenodo.org/records/17296666"
     },
     {
       "id": "nmrshiftdb2",
@@ -1343,7 +1421,7 @@
       "associated_paper": "Kuhn, Twenty years of nmrshiftdb2, Magn. Reson. Chem. 2024",
       "year": 2003,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://nmrshiftdb.nmr.uni-koeln.de/"
     },
     {
@@ -1368,7 +1446,7 @@
       "associated_paper": null,
       "year": 1997,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://sdbs.db.aist.go.jp/"
     },
     {
@@ -1392,8 +1470,34 @@
       "associated_paper": "Ruscic et al., 'Active Thermochemical Tables' (TN ver. 1.220)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://atct.anl.gov/"
+    },
+    {
+      "id": "lpbf-relative-density-alloys",
+      "name": "L-PBF Relative Density Dataset for Commercial Metallic Alloys",
+      "description": "Literature-compiled dataset of 1,579 laser powder bed fusion samples of commercial metallic alloys, with eleven input columns (laser power, scan speed, hatch spacing, layer thickness, alloy, shielding gas, powder size distribution, printed geometry, etc.) and measured relative density in percent as the target. Intended as a benchmark for process-parameter/density models in metal additive manufacturing.",
+      "domain": "materials",
+      "subdomain": "additive-manufacturing",
+      "tags": [
+        "additive-manufacturing",
+        "laser-powder-bed-fusion",
+        "relative-density",
+        "process-parameters",
+        "alloys",
+        "benchmark-ml"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "CC0-1.0",
+      "doi": "10.7910/DVN/VPBQK8",
+      "homepage_url": "https://github.com/GermanOmar/data_LPBF",
+      "repository": "Harvard Dataverse / GitHub",
+      "associated_paper": "Barrionuevo, La Fe-Perdomo & Ramos-Grez, 'Laser powder bed fusion dataset for relative density prediction of commercial metallic alloys', Sci. Data 12, 375 (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://github.com/GermanOmar/data_LPBF"
     },
     {
       "id": "nist-am-bench",
@@ -1417,8 +1521,35 @@
       "associated_paper": "AM Bench measurement papers, Integrating Materials and Manufacturing Innovation",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nist.gov/ambench"
+    },
+    {
+      "id": "ornl-lpbf-insitu-xct-fatigue",
+      "name": "ORNL L-PBF In Situ Imaging + XCT + Fatigue Dataset",
+      "description": "Multimodal experimental dataset from a single stainless steel 316H laser powder bed fusion build at Oak Ridge National Laboratory: 64 printed cylinders with layerwise visible-light images (pre- and post-recoat), integrated near-infrared thermal images, rasterized scan paths, post-build X-ray computed tomography of internal flaws, and high-/low-cycle fatigue test results for 60 machined coupons. All modalities are co-registered to the build-plate coordinate system, enabling process-anomaly to flaw to fatigue-life studies.",
+      "domain": "materials",
+      "subdomain": "additive-manufacturing",
+      "tags": [
+        "additive-manufacturing",
+        "laser-powder-bed-fusion",
+        "in-situ-monitoring",
+        "x-ray-ct",
+        "fatigue",
+        "stainless-steel",
+        "process-monitoring"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "Unknown",
+      "doi": "10.13139/ORNLNCCS/2524534",
+      "homepage_url": "https://www.osti.gov/biblio/2524534",
+      "repository": "OSTI / OLCF (ORNL)",
+      "associated_paper": "Snow et al., 'In situ Visible Light and Thermal Imaging Data from a Laser Powder Bed Fusion Additive Manufacturing Process Co-Registered to X-ray Computed Tomography and Fatigue Data', ORNL dataset (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://www.osti.gov/biblio/2524534"
     },
     {
       "id": "mpea-dataset-borg",
@@ -1442,7 +1573,7 @@
       "associated_paper": "Borg et al., 'Expanded dataset of mechanical properties and observed phases of MPEAs', Sci. Data 7, 430 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/Expanded_dataset_of_mechanical_properties_and_observed_phases_of_multi-principal_element_alloys/12642953"
     },
     {
@@ -1468,7 +1599,7 @@
       "associated_paper": null,
       "year": 2001,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://mits.nims.go.jp/en/"
     },
     {
@@ -1493,7 +1624,7 @@
       "associated_paper": "Huang & Cole, 'A database of battery materials auto-generated using ChemDataExtractor', Sci. Data (2020), doi:10.1038/s41597-020-00602-2",
       "year": 2020,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41597-020-00602-2%22"
     },
     {
@@ -1518,7 +1649,7 @@
       "associated_paper": "Dos Reis et al., 'Lithium-ion battery data and where to find it', Energy and AI (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://batteryarchive.org/index.html"
     },
     {
@@ -1543,7 +1674,7 @@
       "associated_paper": "He, Williard, Osterman & Pecht, J. Power Sources 196 (2011)",
       "year": 2011,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://calce.umd.edu/battery-data"
     },
     {
@@ -1567,7 +1698,7 @@
       "associated_paper": "'A multi-stage lithium-ion battery aging dataset using various experimental design methodologies', Sci. Data (2024), doi:10.1038/s41597-024-03859-z",
       "year": 2024,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41597-024-03859-z%22"
     },
     {
@@ -1593,7 +1724,7 @@
       "associated_paper": "Saha & Goebel, Battery Data Set, NASA Ames Prognostics Data Repository (2007)",
       "year": 2007,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
     },
     {
@@ -1618,7 +1749,7 @@
       "associated_paper": "Finegan et al., J. Power Sources 597, 234106 (2024)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.osti.gov/pages/biblio/2311883"
     },
     {
@@ -1644,7 +1775,7 @@
       "associated_paper": "Therrien et al., 'OBELiX: a curated dataset of crystal structures and experimentally measured ionic conductivities for lithium solid-state electrolytes', Digital Discovery (2026)",
       "year": 2025,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/NRC-Mila/OBELiX"
     },
     {
@@ -1669,7 +1800,7 @@
       "associated_paper": "Birkl, 'Diagnosis and Prognosis of Degradation in Lithium-Ion Batteries', DPhil thesis, Oxford (2017)",
       "year": 2017,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac"
     },
     {
@@ -1694,7 +1825,7 @@
       "associated_paper": "Severson et al., 'Data-driven prediction of battery cycle life before capacity degradation', Nat. Energy 4 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41560-019-0356-8"
     },
     {
@@ -1719,7 +1850,7 @@
       "associated_paper": "Dunn et al., 'Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm', npj Comput. Mater. 6 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://matbench.materialsproject.org/"
     },
     {
@@ -1744,7 +1875,7 @@
       "associated_paper": "Ward et al., 'Matminer: An open source toolkit for materials data mining', Comput. Mater. Sci. 152 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://hackingmaterials.lbl.gov/matminer/dataset_addition_guide.html"
     },
     {
@@ -1770,7 +1901,7 @@
       "associated_paper": "Abed et al., 'Open Catalyst Experiments 2024 (OCx24)', arXiv:2411.11783 (2024)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://fair-chem.github.io/core/datasets/ocx24.html"
     },
     {
@@ -1795,7 +1926,7 @@
       "associated_paper": "Downs & Hall-Wallace, 'The American Mineralogist Crystal Structure Database', American Mineralogist 88 (2003)",
       "year": 2003,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.rruff.net/amcsd/"
     },
     {
@@ -1821,7 +1952,7 @@
       "associated_paper": "Gražulis et al., 'Crystallography Open Database (COD)', Nucleic Acids Res. 40, D420 (2012)",
       "year": 2012,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.crystallography.net/cod/"
     },
     {
@@ -1846,7 +1977,7 @@
       "associated_paper": "Schmidt et al., 'Foundry-ML', J. Open Source Softw. 9(93) (2024)",
       "year": 2024,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://foundry-ml.org/"
     },
     {
@@ -1871,7 +2002,7 @@
       "associated_paper": "Blaiszik et al., 'The Materials Data Facility', JOM 68 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.materialsdatafacility.org/"
     },
     {
@@ -1896,8 +2027,34 @@
       "associated_paper": null,
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.paradim.org/publications/data_sets"
+    },
+    {
+      "id": "cathubexp-experimental-electrocatalysis",
+      "name": "CatHubExp (Catalysis-Hub Experimental Electrocatalysis Database)",
+      "description": "Curated research database of experimental electrocatalysis measurements from SUNCAT (Stanford/SLAC), comprising 241 experimental entries with detailed reaction conditions, material properties, characterization and performance metrics in web-based and machine-readable formats. Designed to complement the computational Catalysis-Hub and improve reproducibility and benchmarking in electrocatalysis.",
+      "domain": "materials",
+      "subdomain": "electrocatalysis-exp",
+      "tags": [
+        "electrocatalysis",
+        "electrochemistry",
+        "oer",
+        "data-infrastructure",
+        "benchmarking",
+        "suncat"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": null,
+      "doi": "10.1063/5.0280821",
+      "homepage_url": "https://experimental.catalysis-hub.org",
+      "repository": "self-hosted",
+      "associated_paper": "Mahajan et al., 'A research database for experimental electrocatalysis: Advancing data sharing and reusability', J. Chem. Phys. 163, 124704 (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://experimental.catalysis-hub.org"
     },
     {
       "id": "pem-fuel-cell-catalyst-degradation",
@@ -1920,7 +2077,7 @@
       "associated_paper": "'In-Situ Characterization of Cathode Catalyst Degradation in PEM Fuel Cells', Sci. Data (2024), doi:10.1038/s41597-024-03662-w",
       "year": 2024,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41597-024-03662-w%22"
     },
     {
@@ -1946,7 +2103,7 @@
       "associated_paper": "Soedarmadji et al., 'Tracking materials science data lineage', npj Comput. Mater. 5, 79 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://data.caltech.edu/communities/hte"
     },
     {
@@ -1970,7 +2127,7 @@
       "associated_paper": "O'Mara et al., 'Materials Data Infrastructure: A Case Study of the Citrination Platform', JOM 68 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://citrination.com/"
     },
     {
@@ -1995,7 +2152,7 @@
       "associated_paper": "Talirz et al., 'Materials Cloud, a platform for open computational science', Sci. Data 7, 299 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://archive.materialscloud.org/"
     },
     {
@@ -2020,7 +2177,7 @@
       "associated_paper": "Draxl & Scheffler, 'The NOMAD laboratory: from data sharing to artificial intelligence', J. Phys. Mater. 2, 036001 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://nomad-lab.eu/nomad-lab/nomad.html"
     },
     {
@@ -2044,7 +2201,7 @@
       "associated_paper": null,
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.newglass.jp/interglad_n/gaiyo/info_e.html"
     },
     {
@@ -2069,7 +2226,7 @@
       "associated_paper": null,
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/epam/SciGlass"
     },
     {
@@ -2094,7 +2251,7 @@
       "associated_paper": "Attari & Arroyave, Digital Discovery (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/16396374"
     },
     {
@@ -2119,7 +2276,7 @@
       "associated_paper": "Kusne et al., Nat. Commun. 11, 5966 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41467-020-19597-w"
     },
     {
@@ -2144,7 +2301,7 @@
       "associated_paper": "Zakutayev et al., 'An open experimental database for exploring inorganic materials', Sci. Data 5, 180053 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/sdata201853"
     },
     {
@@ -2170,7 +2327,7 @@
       "associated_paper": "Szymanski et al., Nature 624, 86-91 (2023)",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41586-023-06734-w"
     },
     {
@@ -2195,7 +2352,7 @@
       "associated_paper": "MacLeod et al., Sci. Adv. 6, eaaz8867 (2020)",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/berlinguette/ada"
     },
     {
@@ -2220,7 +2377,7 @@
       "associated_paper": "'Autonomous platform for solution processing of electronic polymers', Nat. Commun. (2025)",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/polybot-nexus/PEDOT_PSS_supporting_data"
     },
     {
@@ -2244,7 +2401,7 @@
       "associated_paper": "Gallego et al., 'MAGNDATA: towards a database of magnetic structures. I.', J. Appl. Cryst. 49 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.cryst.ehu.es/magndata/"
     },
     {
@@ -2269,7 +2426,7 @@
       "associated_paper": null,
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://research.csiro.au/virtualscreening/membrane-database-polymer-gas-separation-membranes/"
     },
     {
@@ -2295,7 +2452,7 @@
       "associated_paper": "Zhao et al., 'CoRE MOF DB: a curated experimental metal-organic framework database with machine-learned properties for integrated material-process screening', Matter 8 (2025)",
       "year": 2025,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/15055758"
     },
     {
@@ -2321,7 +2478,7 @@
       "associated_paper": "Chung et al., 'CoRE MOF 2019', J. Chem. Eng. Data 64 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/3677685"
     },
     {
@@ -2346,7 +2503,7 @@
       "associated_paper": "Moghadam et al., 'Development of a Cambridge Structural Database Subset: MOFs', Chem. Mater. 29 (2017)",
       "year": 2017,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://support.ccdc.cam.ac.uk/support/solutions/articles/103000306242-how-many-mofs-are-there-in-the-csd-"
     },
     {
@@ -2371,7 +2528,7 @@
       "associated_paper": "Ongari et al., 'Building a Consistent and Reproducible Database for Adsorption Evaluation in COFs', ACS Cent. Sci. 5 (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://github.com/danieleongari/CURATED-COFs"
     },
     {
@@ -2396,7 +2553,7 @@
       "associated_paper": null,
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nist.gov/programs-projects/nist-data-resources-adsorption"
     },
     {
@@ -2420,7 +2577,7 @@
       "associated_paper": "Papadiamantis et al., Front. Phys. (2023)",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2023.1271842/full"
     },
     {
@@ -2445,7 +2602,7 @@
       "associated_paper": "Lopez et al., 'The Harvard organic photovoltaic dataset', Sci. Data 3, 160086 (2016)",
       "year": 2016,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://figshare.com/articles/dataset/HOPV15_Dataset/1610063"
     },
     {
@@ -2470,7 +2627,7 @@
       "associated_paper": "Ai et al., 'OCELOT: An infrastructure for data-driven research on organic semiconductors', J. Chem. Phys. 154 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://oscar.as.uky.edu/"
     },
     {
@@ -2495,8 +2652,34 @@
       "associated_paper": "Du et al., Joule 5 (2021); Zhang/Brabec, Acc. Chem. Res. (2024)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://link.springer.com/article/10.1007/s10853-021-06281-7"
+    },
+    {
+      "id": "pvk-passivation-closed-loop",
+      "name": "Autonomous Closed-Loop Perovskite Solar Cell Campaign (PVK_Passivation_ML)",
+      "description": "Code and data from an autonomous closed-loop framework coupling ML-driven passivation-molecule discovery (active learning + DFT) with an automated perovskite solar cell fabrication platform using Bayesian optimization, which identified the passivator 5ANI and produced certified 27.2%-PCE cells with ~5x better fabrication reproducibility than manual processing. Campaign data and models archived on Zenodo alongside the Nature (2026) paper.",
+      "domain": "materials",
+      "subdomain": "photovoltaics",
+      "tags": [
+        "perovskite",
+        "self-driving-lab",
+        "bayesian-optimization",
+        "passivation",
+        "device-fabrication",
+        "machine-learning"
+      ],
+      "data_type": "mixed",
+      "access": "open",
+      "license": null,
+      "doi": "10.5281/zenodo.18803626",
+      "homepage_url": "https://github.com/ShuaihuaLu/PVK_Passivation_ML",
+      "repository": "Zenodo",
+      "associated_paper": "Gao et al., 'Autonomous closed-loop framework for reproducible perovskite solar cells', Nature (2026)",
+      "year": 2026,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://doi.org/10.5281/zenodo.18803626"
     },
     {
       "id": "emerging-pv-database",
@@ -2520,7 +2703,7 @@
       "associated_paper": "Almora et al., 'Device Performance of Emerging Photovoltaic Materials', Adv. Energy Mater. (annual)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://emerging-pv.org/"
     },
     {
@@ -2546,7 +2729,7 @@
       "associated_paper": "Zhao et al., Nat. Commun. 12, 2191 (2021)",
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41467-021-22472-x"
     },
     {
@@ -2572,7 +2755,7 @@
       "associated_paper": null,
       "year": 2021,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://data.openei.org/submissions/4568"
     },
     {
@@ -2598,7 +2781,7 @@
       "associated_paper": "Hartono et al., Nat. Commun. 14, 4869 (2023)",
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/8185883"
     },
     {
@@ -2623,7 +2806,7 @@
       "associated_paper": "Jacobsson et al., 'An open-access database and analysis tool for perovskite solar cells based on the FAIR data principles', Nat. Energy 7 (2022)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.perovskitedatabase.com/"
     },
     {
@@ -2648,7 +2831,7 @@
       "associated_paper": "Kim et al., 'Polymer Genome: A Data-Powered Polymer Informatics Platform', J. Phys. Chem. C 122 (2018)",
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://ramprasad.mse.gatech.edu/projects/"
     },
     {
@@ -2672,7 +2855,7 @@
       "associated_paper": "Brinson et al., 'NanoMine: A Knowledge Graph for Nanocomposite Materials Science', ISWC 2020",
       "year": 2020,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://materialsmine.org/"
     },
     {
@@ -2698,7 +2881,7 @@
       "associated_paper": "Ishii et al., 'NIMS polymer database PoLyInfo (I)', Sci. Technol. Adv. Mater.: Methods 4 (2024)",
       "year": 2011,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://polymer.nims.go.jp/"
     },
     {
@@ -2722,7 +2905,7 @@
       "associated_paper": null,
       "year": 2018,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nist.gov/programs-projects/polymer-property-predictor-and-database"
     },
     {
@@ -2747,7 +2930,7 @@
       "associated_paper": "'Benchmark classification dataset for laser-induced breakdown spectroscopy', Sci. Data (2020), doi:10.1038/s41597-020-0396-8",
       "year": 2020,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://springernature.figshare.com/articles/Training_dataset/11316578/1"
     },
     {
@@ -2772,7 +2955,7 @@
       "associated_paper": "'An open-source, end-to-end workflow for multidimensional photoemission spectroscopy', Sci. Data (2020), doi:10.1038/s41597-020-00769-8",
       "year": 2020,
       "source": "api-discovery",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41597-020-00769-8%22"
     },
     {
@@ -2797,7 +2980,7 @@
       "associated_paper": null,
       "year": 2023,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://srdata.nist.gov/xps/"
     },
     {
@@ -2822,8 +3005,34 @@
       "associated_paper": "Hollarek et al., 'opXRD', Adv. Intelligent Discovery (2026); arXiv:2503.05577",
       "year": 2025,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://zenodo.org/records/15298026"
+    },
+    {
+      "id": "raman-open-database",
+      "name": "Raman Open Database (ROD)",
+      "description": "Open-access collection of ~1,133 uncorrected experimental Raman spectra of minerals and crystalline materials, built for the EU SOLSA H2020 project and cross-linked to the Crystallography Open Database so Raman and XRD records for the same phase can be used together. Community deposition is open; all records are released into the public domain.",
+      "domain": "materials",
+      "subdomain": "spectra-exp",
+      "tags": [
+        "raman",
+        "spectroscopy",
+        "minerals",
+        "crystallography",
+        "open-data",
+        "cod-linked"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "CC0-1.0",
+      "doi": "10.1107/S1600576719004229",
+      "homepage_url": "https://solsa.crystallography.net/rod/index.php",
+      "repository": "self-hosted (crystallography.net)",
+      "associated_paper": "El Mendili et al., 'Raman Open Database: first interconnected Raman-X-ray diffraction open-access resource for material identification', J. Appl. Cryst. 52, 618-625 (2019)",
+      "year": 2019,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://solsa.crystallography.net/rod/index.php"
     },
     {
       "id": "rruff",
@@ -2847,7 +3056,7 @@
       "associated_paper": "Lafuente et al., 'The power of databases: the RRUFF project', in Highlights in Mineralogical Crystallography (2015)",
       "year": 2005,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://rruff.info/index.php"
     },
     {
@@ -2872,7 +3081,7 @@
       "associated_paper": "NIMS MDR SuperCon Datasheet (re-edited from the NIMS SuperCon / MatNavi database)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://mdr.nims.go.jp/concern/datasets/mw22v8634?locale=en"
     },
     {
@@ -2897,7 +3106,7 @@
       "associated_paper": "Na & Chang, 'A public database of thermoelectric materials and system-identified material representation for data-driven discovery', npj Comput. Mater. 8 (2022)",
       "year": 2022,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nature.com/articles/s41524-022-00897-2"
     },
     {
@@ -2922,8 +3131,35 @@
       "associated_paper": "Katsura et al., 'Data-driven analysis of electron relaxation times ... / Starrydata', Sci. Technol. Adv. Mater. (2019)",
       "year": 2019,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.starrydata2.org/"
+    },
+    {
+      "id": "tematdb-thermoelectric",
+      "name": "teMatDb / teMatDb272",
+      "description": "High-fidelity thermoelectric materials database from the KERI ThermoElectric Physics and Science team: full digitized temperature-dependent transport property curves (Seebeck coefficient, resistivity, thermal conductivity, zT) extracted from published experimental figures, plus a self-consistent ZT (Sc-ZT) filtering protocol. Ships teMatDb v1.1.6 raw/collocated TEP sets and the curated 272-sample teMatDb272 benchmark, along with Sc-ZT-filtered Starrydata2 subsets (10,840-15,532 samples).",
+      "domain": "materials",
+      "subdomain": "thermoelectrics",
+      "tags": [
+        "thermoelectrics",
+        "transport-properties",
+        "zt",
+        "seebeck",
+        "digitized-figures",
+        "data-quality",
+        "benchmark"
+      ],
+      "data_type": "experimental",
+      "access": "open",
+      "license": "CC-BY-4.0",
+      "doi": "10.5281/zenodo.15518036",
+      "homepage_url": "https://github.com/byungkiryu/teMatDb",
+      "repository": "GitHub / Zenodo / Figshare",
+      "associated_paper": "Ryu et al., 'teMatDb: A High-Quality Thermoelectric Material Database with Self-Consistent ZT Filtering', arXiv:2505.19150 (2025)",
+      "year": 2025,
+      "source": "api-discovery",
+      "added": "2026-07-27",
+      "verified_via": "https://github.com/byungkiryu/teMatDb"
     },
     {
       "id": "nist-trc-thermoml",
@@ -2947,7 +3183,7 @@
       "associated_paper": "Frenkel et al., 'XML-based IUPAC standard (ThermoML)', Pure Appl. Chem. 78 (2006)",
       "year": 2006,
       "source": "curated-seed",
-      "added": "2026-07-13",
+      "added": "2026-07-27",
       "verified_via": "https://www.nist.gov/mml/acmd/trc/thermoml"
     }
   ]

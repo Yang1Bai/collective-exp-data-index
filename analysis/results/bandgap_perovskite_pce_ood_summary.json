@@ -1,0 +1,164 @@
+{
+  "bootstrap_sha256": "71237ccaa23cfbea5f3a97b5e919e1eadf61340424ad4a45cea5b231372a1874",
+  "claim_guard": "A passing policy establishes retrospective chemical-OOD prediction improvement for this recipient programme only. It does not establish prospective laboratory discovery or universal cross-domain transfer.",
+  "created_utc": "2026-07-29T05:56:09.498463+00:00",
+  "decisions": {
+    "calibrated_hse_with_contract": {
+      "gates": {
+        "gain_over_permuted_control": true,
+        "holm_p_at_most_0_05": false,
+        "positive_augmented_r2": true,
+        "positive_bootstrap_interval": false,
+        "positive_draw_fraction_at_least_0_70": false,
+        "relative_rmse_gain_at_least_0_05": false,
+        "source_skill_pass": false
+      },
+      "passes": false
+    },
+    "experimental_text_mined": {
+      "gates": {
+        "gain_over_permuted_control": true,
+        "holm_p_at_most_0_05": false,
+        "positive_augmented_r2": true,
+        "positive_bootstrap_interval": false,
+        "positive_draw_fraction_at_least_0_70": false,
+        "relative_rmse_gain_at_least_0_05": false,
+        "source_skill_pass": false
+      },
+      "passes": false
+    },
+    "retrieval_routed_contract_fusion": {
+      "gates": {
+        "gain_over_permuted_control": true,
+        "holm_p_at_most_0_05": false,
+        "positive_augmented_r2": true,
+        "positive_bootstrap_interval": false,
+        "positive_draw_fraction_at_least_0_70": false,
+        "relative_rmse_gain_at_least_0_05": false,
+        "source_skill_pass": true
+      },
+      "passes": false
+    },
+    "support_weighted_contract_fusion": {
+      "gates": {
+        "gain_over_permuted_control": true,
+        "holm_p_at_most_0_05": false,
+        "positive_augmented_r2": true,
+        "positive_bootstrap_interval": false,
+        "positive_draw_fraction_at_least_0_70": false,
+        "relative_rmse_gain_at_least_0_05": false,
+        "source_skill_pass": false
+      },
+      "passes": false
+    }
+  },
+  "design_sha256": "8d370d238e5eb2072d0625b12ca2b06d7e1d18d2c63e234f87f698d3867294e0",
+  "metrics_sha256": "4b04373c4e48f8d2be1a176cb0f50dce2ec01bf0ae6539de7fc20b20b1c9f997",
+  "passing_policies": [],
+  "permuted_control_relative_rmse_gain": -0.0026755135097879636,
+  "predictions_sha256": "f82b416ae119647f9a98e55064ea9fe816636b8017b1f09979d15061a906e204",
+  "primary_budget": 100,
+  "primary_metrics": {
+    "calibrated_hse_with_contract": {
+      "aug_r2": 0.15892556928885682,
+      "aug_rmse": 5.534615493118228,
+      "aug_spearman": 0.5815258133615415,
+      "aug_worst_family_rmse": 11.984152743263907,
+      "base_r2": 0.16170988911974926,
+      "base_rmse": 5.52544691432199,
+      "base_spearman": 0.5845457745595521,
+      "base_worst_family_rmse": 11.998006140660374,
+      "bootstrap_ci95": [
+        -0.003045105854428172,
+        0.00011756690675625083
+      ],
+      "bootstrap_one_sided_p": 0.9672032796720328,
+      "delta_r2": -0.0027843198308924455,
+      "holm_adjusted_p": 1.0,
+      "mae_gain": -0.009417570062780989,
+      "median_draw_gain": 0.00031887981851629033,
+      "positive_draw_fraction": 0.52,
+      "relative_rmse_gain": -0.001659337052442299,
+      "spearman_gain": -0.0030199611980106233,
+      "worst_family_rmse_gain": 0.01385339739646696
+    },
+    "experimental_text_mined": {
+      "aug_r2": 0.1593823062445887,
+      "aug_rmse": 5.533112530588972,
+      "aug_spearman": 0.5808307382257818,
+      "aug_worst_family_rmse": 12.009320229369179,
+      "base_r2": 0.16170988911974926,
+      "base_rmse": 5.52544691432199,
+      "base_spearman": 0.5845457745595521,
+      "base_worst_family_rmse": 11.998006140660374,
+      "bootstrap_ci95": [
+        -0.003640294467665886,
+        0.002315039721518662
+      ],
+      "bootstrap_one_sided_p": 0.811918808119188,
+      "delta_r2": -0.00232758287516055,
+      "holm_adjusted_p": 1.0,
+      "mae_gain": -0.009323395811430935,
+      "median_draw_gain": 0.00010681370407382951,
+      "positive_draw_fraction": 0.52,
+      "relative_rmse_gain": -0.0013873296379180442,
+      "spearman_gain": -0.0037150363337703496,
+      "worst_family_rmse_gain": -0.011314088708804348
+    },
+    "retrieval_routed_contract_fusion": {
+      "aug_r2": 0.16017991698410083,
+      "aug_rmse": 5.530486891503815,
+      "aug_spearman": 0.5806972401027961,
+      "aug_worst_family_rmse": 11.957491390160945,
+      "base_r2": 0.16170988911974926,
+      "base_rmse": 5.52544691432199,
+      "base_spearman": 0.5845457745595521,
+      "base_worst_family_rmse": 11.998006140660374,
+      "bootstrap_ci95": [
+        -0.004237415072446711,
+        0.00280734520101249
+      ],
+      "bootstrap_one_sided_p": 0.7065293470652935,
+      "delta_r2": -0.0015299721356484275,
+      "holm_adjusted_p": 1.0,
+      "mae_gain": -0.004520351035615988,
+      "median_draw_gain": 0.0005048512419242461,
+      "positive_draw_fraction": 0.54,
+      "relative_rmse_gain": -0.0009121392821204584,
+      "spearman_gain": -0.0038485344567560364,
+      "worst_family_rmse_gain": 0.04051475049942965
+    },
+    "support_weighted_contract_fusion": {
+      "aug_r2": 0.1612578989893726,
+      "aug_rmse": 5.526936321679556,
+      "aug_spearman": 0.5809515995868555,
+      "aug_worst_family_rmse": 11.947983833596785,
+      "base_r2": 0.16170988911974926,
+      "base_rmse": 5.52544691432199,
+      "base_spearman": 0.5845457745595521,
+      "base_worst_family_rmse": 11.998006140660374,
+      "bootstrap_ci95": [
+        -0.0030105175287118424,
+        0.0035516299875490097
+      ],
+      "bootstrap_one_sided_p": 0.5656434356564344,
+      "delta_r2": -0.00045199013037666713,
+      "holm_adjusted_p": 1.0,
+      "mae_gain": -0.00507950628447329,
+      "median_draw_gain": -0.00010548427875368865,
+      "positive_draw_fraction": 0.48,
+      "relative_rmse_gain": -0.00026955418822415987,
+      "spearman_gain": -0.003594174972696651,
+      "worst_family_rmse_gain": 0.05002230706358901
+    }
+  },
+  "recipient_csv_sha256": "475c352ba11a0f19ff6d483f89808f6fe7bb5030134d5dcedfa30c6a3d35b369",
+  "source_features_sha256": "938dc0a64068aae80eb639f6247d08c69a8deb840bff1e7e6c9a60b8f7cf6a1a",
+  "source_summary_sha256": "e347d40438c6482396be6be494db9f47f92c9397fbc90f4fc5dd1802870936ca",
+  "split_sha256": "5fc9e7d1e4906cf8b6858bbd6cb72983afc125cad9737e6dfe537c9160df9e72",
+  "status": "verified-complete",
+  "test_dois": 1624,
+  "test_families": 46,
+  "test_rows": 8274,
+  "train_rows": 31453
+}

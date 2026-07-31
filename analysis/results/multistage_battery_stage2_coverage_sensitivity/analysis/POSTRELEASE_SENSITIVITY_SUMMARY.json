@@ -1,0 +1,203 @@
+{
+  "status": "verified-complete-postrelease-coverage-sensitivity",
+  "frozen_primary_status": "non-evaluable-stage2-release",
+  "confirmatory_success": false,
+  "exploratory_pattern_pass": false,
+  "primary_named_comparisons_reported_as_exploratory": {
+    "CCA-v2 minus adjacency-only": {
+      "effect": -0.027957846833443822,
+      "calendar_effect": -0.011036765484315536,
+      "cycle_effect": -0.04487892818257211,
+      "ci95": [
+        -0.08787019380721674,
+        0.05063233715644909
+      ],
+      "calendar_ci95": [
+        -0.12070724302141489,
+        0.1453693941339218
+      ],
+      "cycle_ci95": [
+        -0.09423537537243137,
+        -0.010781251542926073
+      ],
+      "one_sided_sign_flip_p": 0.766,
+      "inferential_status": "exploratory-after-coverage-failure",
+      "holm_adjusted_p": 0.766
+    },
+    "CCA-v2 minus endpoint-matched target-only": {
+      "effect": 0.03467325238594027,
+      "calendar_effect": 0.06934650477188053,
+      "cycle_effect": 0.0,
+      "ci95": [
+        -0.005925938597477587,
+        0.09303497802965191
+      ],
+      "calendar_ci95": [
+        -0.011851877194955174,
+        0.18606995605930382
+      ],
+      "cycle_ci95": [
+        0.0,
+        0.0
+      ],
+      "one_sided_sign_flip_p": 0.1846,
+      "inferential_status": "exploratory-after-coverage-failure",
+      "holm_adjusted_p": 0.3692
+    }
+  },
+  "policy_summary": {
+    "adjacency_only": {
+      "k": {
+        "mean_condition_rmse": 1.260661763204191,
+        "relative_rmse_gain_vs_target_only": 0.07950578356830595,
+        "heldout_r2": 0.3339510170515123
+      },
+      "z": {
+        "mean_condition_rmse": 2.332203484553215,
+        "relative_rmse_gain_vs_target_only": 0.042951319020887,
+        "heldout_r2": 0.46174235388370044
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": 0.06122855129459648
+    },
+    "cca_v2": {
+      "k": {
+        "mean_condition_rmse": 1.2745753914397193,
+        "relative_rmse_gain_vs_target_only": 0.06934650477188053,
+        "heldout_r2": 0.2838365765546863
+      },
+      "z": {
+        "mean_condition_rmse": 2.4368702772436235,
+        "relative_rmse_gain_vs_target_only": 0.0,
+        "heldout_r2": 0.4350520594558527
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": 0.03467325238594027
+    },
+    "global_credibility": {
+      "k": {
+        "mean_condition_rmse": 1.260661763204197,
+        "relative_rmse_gain_vs_target_only": 0.07950578356830151,
+        "heldout_r2": 0.3339510170515072
+      },
+      "z": {
+        "mean_condition_rmse": 2.3322034845532147,
+        "relative_rmse_gain_vs_target_only": 0.042951319020887224,
+        "heldout_r2": 0.4617423538837009
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": 0.06122855129459437
+    },
+    "random_features": {
+      "k": {
+        "mean_condition_rmse": 1.4171276662611896,
+        "relative_rmse_gain_vs_target_only": -0.034740529785929786,
+        "heldout_r2": 0.15316143408347593
+      },
+      "z": {
+        "mean_condition_rmse": 2.426656338362864,
+        "relative_rmse_gain_vs_target_only": 0.004191416743082765,
+        "heldout_r2": 0.44621068336573466
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": -0.01527455652142351
+    },
+    "shuffled_source": {
+      "k": {
+        "mean_condition_rmse": 1.6115903109630958,
+        "relative_rmse_gain_vs_target_only": -0.1767308280441653,
+        "heldout_r2": -0.033501454758114946
+      },
+      "z": {
+        "mean_condition_rmse": 2.371634378476064,
+        "relative_rmse_gain_vs_target_only": 0.026770361712215807,
+        "heldout_r2": 0.45032955115888096
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": -0.07498023316597474
+    },
+    "target_only": {
+      "k": {
+        "mean_condition_rmse": 1.3695488148650843,
+        "relative_rmse_gain_vs_target_only": 0.0,
+        "heldout_r2": 0.21784332018712005
+      },
+      "z": {
+        "mean_condition_rmse": 2.4368702772436235,
+        "relative_rmse_gain_vs_target_only": 0.0,
+        "heldout_r2": 0.4350520594558527
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": 0.0
+    },
+    "wrong_property": {
+      "k": {
+        "mean_condition_rmse": 1.3689381027538654,
+        "relative_rmse_gain_vs_target_only": 0.0004459221201831287,
+        "heldout_r2": 0.2387539588398353
+      },
+      "z": {
+        "mean_condition_rmse": 2.4757408531154206,
+        "relative_rmse_gain_vs_target_only": -0.015951023833638,
+        "heldout_r2": 0.42014314090127247
+      },
+      "equal_stratum_relative_rmse_gain_vs_target_only": -0.007752550856727436
+    }
+  },
+  "hard_ood_diagnostic": {
+    "k": {
+      "source_distance_q75": 0.1710526315789473,
+      "condition_groups": [
+        "k|10|0.8",
+        "k|23|0.8"
+      ],
+      "cca_v2_relative_rmse_gain_vs_target_only": 0.1401706428604157,
+      "cca_v2_relative_rmse_gain_vs_adjacency_only": 0.15069196153276876
+    },
+    "z": {
+      "source_distance_q75": 0.6170909247445375,
+      "condition_groups": [
+        "z|23|0.69|0.2|1|0.5",
+        "z|45|0.8|0.6|0.24|2",
+        "z|45|0.8|0.6|0.2|0.44",
+        "z|45|0.8|0.6|1|2"
+      ],
+      "cca_v2_relative_rmse_gain_vs_target_only": 0.0,
+      "cca_v2_relative_rmse_gain_vs_adjacency_only": -0.05892589020504291
+    }
+  },
+  "diagnostic_guards": {
+    "effect_interval_and_multiplicity_pattern": false,
+    "absolute_utility": true,
+    "borrowing_coverage": true,
+    "safety": true
+  },
+  "training_gate_passed_outer_groups": 4,
+  "training_gate_total_outer_groups": 22,
+  "hypothesis_card_results": {
+    "calendar": {
+      "lead": "k|45|0.9",
+      "control": "k|23|0.9",
+      "lead_retention": 93.5092677456302,
+      "control_retention": 96.83366934762044,
+      "directional_pass": true
+    },
+    "cycle": {
+      "lead": "z|45|0.8|0.6|1|0.26",
+      "control": "z|45|0.41|0.05|1|1",
+      "lead_retention": 88.933386433461,
+      "control_retention": 91.74810129316404,
+      "directional_pass": true
+    }
+  },
+  "stage2_cells_analyzed": 135,
+  "stage2_condition_groups": 22,
+  "postrelease_excluded_group": [
+    "z|35|0.8|0.5|0.9|1.1"
+  ],
+  "endpoint_table_sha256": "281a6980586465c83a2437d750dc7817ec158a7f27580b67c7b49e4bc075cfa9",
+  "release_audit_sha256": "ab8d658712eae44dd564b9d08e434f9ac39a841a617dfd0af612b9e1d8fe32ca",
+  "specification_sha256": "0f485c321cec3002d6565500da5637639205de3a71356d3c4948e59253203535",
+  "split_plan_sha256": "b9eae162d51d9aab5f292c6276be9dc8224a342acfc1e1e5a4729bc8f1628045",
+  "applicability_plan_sha256": "92c335cce27f988e885d2e33aaf8bdc77d64426c7fca360af5ad91dae6f9d83e",
+  "prediction_table_sha256": "54815a886dd2142c7fc233d99ac366ef2a13906bf55fd4ed8470d0901b309456",
+  "gate_table_sha256": "3dc2458907d5905c141f3064d35be2721392deb0d4bd4b5fb90c9e334359c01a",
+  "group_error_table_sha256": "2c8c36fe2535f0e7514a6375964d562d5180ce124bc98004ecf968fc074721a4",
+  "bootstrap_table_sha256": "7cf876a17c878a6b680ac27d5c03bc203f21e7747132fb5edd28cf0737f12a34",
+  "claim_guard": "This post-release sensitivity cannot rescue the non-evaluable 23-group primary test. A favorable pattern is method-plausibility evidence only and requires a new outcome-unseen target for confirmation.",
+  "errors": []
+}

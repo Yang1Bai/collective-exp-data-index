@@ -1,0 +1,49 @@
+{
+  "status": "formal-benchmark-code-frozen-after-synthetic-test",
+  "frozen_utc": "2026-07-27T13:35:00-04:00",
+  "runner_sha256": "103881611d3a442a7eb4aca7cebc2fd7e4534ae5729d130a181d58a124cb42db",
+  "verifier_sha256": "cea47a5612fdf67f1e9ef551556e12c488ff47b29cabd6a18cdd53cccbe503b6",
+  "synthetic_test": {
+    "status": "passed",
+    "cards": 260,
+    "repeats": 2,
+    "label_budget": 120,
+    "learner": "extra_trees",
+    "n_estimators": 5,
+    "metric_rows": 48,
+    "prediction_rows": 792,
+    "contrasts": 16
+  },
+  "formal_execution": {
+    "repeats": 200,
+    "label_budgets": [
+      60,
+      120,
+      240
+    ],
+    "learners": [
+      "extra_trees",
+      "random_forest"
+    ],
+    "n_estimators": 500,
+    "bootstrap_replicates": 10000
+  },
+  "allowed_postfreeze_changes": [
+    "parallel worker count",
+    "portable paths",
+    "checkpointing",
+    "logging",
+    "result packaging",
+    "verifier corrections that do not alter estimands"
+  ],
+  "forbidden_postfreeze_changes": [
+    "recipient endpoint",
+    "label budgets",
+    "model family",
+    "borrowed features",
+    "control cards",
+    "OOD scope",
+    "contrast family",
+    "success gate"
+  ]
+}

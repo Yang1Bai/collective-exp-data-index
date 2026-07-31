@@ -1,0 +1,9 @@
+{
+  "status": "verified-complete",
+  "design_sha256": "1116aa24ac1ffcda9eb17ce413818758d32102f223cd3a16ee144159e903863c",
+  "metrics_rows": 3900,
+  "prediction_rows": 333840,
+  "q4_systems_per_model_draw": 14,
+  "strict_source_size_match_n": 265,
+  "inference": "verified"
+}

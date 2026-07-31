@@ -1,0 +1,10 @@
+year,process_feature,n_rows,n_observed,n_missing
+1,cold_work_percent_reduction,80,0,80
+1,holding_time_h,80,0,80
+1,grain_size_um,80,0,80
+2,cold_work_percent_reduction,51,51,0
+2,holding_time_h,51,51,0
+2,grain_size_um,51,51,0
+3,cold_work_percent_reduction,20,20,0
+3,holding_time_h,20,20,0
+3,grain_size_um,20,20,0

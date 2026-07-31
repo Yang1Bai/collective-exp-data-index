@@ -1,0 +1,172 @@
+{
+  "status": "schema-and-coverage-valid",
+  "created_utc": "2026-07-24T19:59:06.932026+00:00",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "outcome_access": "Recipient HER values were not loaded by this audit. Only target IDs, CAS values, SMILES, split membership, and the existence of the HER column were checked.",
+  "input_files": {
+    "donor": {
+      "path": "data\\external\\optical_photocatalysis\\DB for chromophore_Sci_Data_rev02.csv",
+      "md5": "6619ca296ebbf14e8c80dda084b43ac5",
+      "sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+      "bytes": 3406886
+    },
+    "target_development": {
+      "path": "data\\external\\optical_photocatalysis\\SC-012-D1SC02150H-s005.csv",
+      "md5": "d0749b768435d9df4683222bf7eafbb8",
+      "sha256": "02e0aa0a293ddb9cf5cb2009249f0c1c2f1e7f8d4a8e3090ce67d0d69dc4e8b7",
+      "bytes": 90592
+    },
+    "target_blind": {
+      "path": "data\\external\\optical_photocatalysis\\SC-012-D1SC02150H-s006.csv",
+      "md5": "cdad40302e4debe4fea8ea0a5b742f67",
+      "sha256": "be28a176c2f855d17846711c24b7ce8d4f52d5a89c447d6c0a79a4049aeea6f6",
+      "bytes": 16271
+    },
+    "target_supplementary_archive": {
+      "path": "data\\external\\optical_photocatalysis\\PMC8372320_supplementary_files.zip",
+      "sha256": "d4243fa0b4b4fa70776b475a6eea94711417a23cea6f7f10f419c29d84cc4f52",
+      "bytes": 1892002,
+      "note": "Archive hash is recorded but only the frozen member-file hashes are normative."
+    }
+  },
+  "dataset_and_grain": {
+    "donor": "one chromophore-solvent or chromophore-solid-state experimental optical record",
+    "recipient": "one experimentally tested aromatic molecule under the common sacrificial hydrogen-evolution protocol"
+  },
+  "donor": {
+    "rows": 20236,
+    "valid_structure_rows": 20236,
+    "invalid_structure_fraction": 0.0,
+    "unique_molecules": 6815,
+    "unique_scaffolds": 3568,
+    "exact_recipient_overlap_molecules": 44,
+    "exact_recipient_overlap_rows": 185,
+    "retained_rows_after_exact_exclusion": 20051,
+    "retained_unique_molecules": 6771,
+    "retained_unique_scaffolds": 3561,
+    "properties_after_exact_exclusion": {
+      "Absorption max (nm)": {
+        "valid_rows": 17145,
+        "valid_fraction": 0.8550695725898958,
+        "unique_molecules": 6395,
+        "unique_scaffolds": 3333
+      },
+      "Emission max (nm)": {
+        "valid_rows": 17992,
+        "valid_fraction": 0.8973118547703356,
+        "unique_molecules": 6373,
+        "unique_scaffolds": 3369
+      },
+      "Lifetime (ns)": {
+        "valid_rows": 6863,
+        "valid_fraction": 0.34227719315744853,
+        "unique_molecules": 2721,
+        "unique_scaffolds": 1469
+      },
+      "Quantum yield": {
+        "valid_rows": 13688,
+        "valid_fraction": 0.6826592189915714,
+        "unique_molecules": 5574,
+        "unique_scaffolds": 2945
+      },
+      "log(e/mol-1 dm3 cm-1)": {
+        "valid_rows": 7997,
+        "valid_fraction": 0.39883297591142586,
+        "unique_molecules": 3828,
+        "unique_scaffolds": 1981
+      }
+    },
+    "properties_passing_size_gate_only": [
+      "Absorption max (nm)",
+      "Emission max (nm)",
+      "Lifetime (ns)",
+      "Quantum yield",
+      "log(e/mol-1 dm3 cm-1)"
+    ],
+    "source_skill_gate": "pending donor-only grouped cross-validation",
+    "top_solvent_tokens": {
+      "ClCCl": 2562,
+      "CC#N": 2004,
+      "Cc1ccccc1": 1580,
+      "C1CCOC1": 1437,
+      "ClC(Cl)Cl": 1312,
+      "CO": 1290,
+      "CCO": 969,
+      "CS(C)=O": 795,
+      "C1CCCCC1": 788,
+      "CN(C)C=O": 703,
+      "CCCCCC": 669,
+      "CCOC(C)=O": 667
+    },
+    "solid_state_or_self_host_rows": 956
+  },
+  "recipient": {
+    "raw_rows": {
+      "development": 572,
+      "blind": 96
+    },
+    "valid_structure_rows": {
+      "development": 572,
+      "blind": 96
+    },
+    "invalid_structure_fraction": 0.0,
+    "within_split_duplicate_canonical_rows": {
+      "development": 0,
+      "blind": 0
+    },
+    "cross_split_exact_molecule_overlap": 0,
+    "unique_scaffolds": {
+      "development": 175,
+      "blind": 47,
+      "blind_unseen_in_development": 23
+    },
+    "blind_scaffold_overlap_fraction": 0.5106382978723404,
+    "blind_max_similarity_to_development": {
+      "min": 0.16666666666666666,
+      "q10": 0.3416666666666667,
+      "q25": 0.41379310344827586,
+      "median": 0.543560606060606,
+      "q75": 0.6153846153846154,
+      "q90": 0.7247474747474747,
+      "max": 0.92
+    },
+    "blind_max_similarity_to_retained_donor": {
+      "min": 0.2,
+      "q10": 0.26061120543293714,
+      "q25": 0.35119047619047616,
+      "median": 0.4444444444444444,
+      "q75": 0.5372023809523809,
+      "q90": 0.6168478260869565,
+      "max": 0.9583333333333334
+    },
+    "development_max_similarity_to_retained_donor": {
+      "min": 0.17857142857142858,
+      "q10": 0.28125,
+      "q25": 0.34375,
+      "median": 0.4375,
+      "q75": 0.5454545454545454,
+      "q90": 0.6521739130434783,
+      "max": 1.0
+    },
+    "hard_ood_40pct_molecules": 39,
+    "hard_ood_25pct_molecules": 24,
+    "metadata_rows": 668,
+    "metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1"
+  },
+  "gates": {
+    "development_row_count": true,
+    "blind_row_count": true,
+    "target_smiles_validity": true,
+    "cross_split_exact_overlap": true,
+    "retained_donor_size": true,
+    "property_size_eligibility": true,
+    "primary_ood_size": true
+  },
+  "errors": [],
+  "warnings": [
+    "The benchmark is retrospective because the papers and their published scientific conclusions were inspected before design freeze.",
+    "The donor environments do not exactly reproduce the recipient triethylamine-methanol-water suspension; environment-specific models are sensitivities.",
+    "A property passing the size gate is not admitted until donor-only scaffold-held-out skill is demonstrated.",
+    "Blind outcomes remain locked until development-only source admission and a blind-release manifest are complete."
+  ]
+}

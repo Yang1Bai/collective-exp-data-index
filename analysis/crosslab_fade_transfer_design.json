@@ -1,0 +1,176 @@
+{
+  "program": "Cross-laboratory degradation-parameter transfer (H1 flagship)",
+  "version": 1,
+  "frozen_utc": "2026-07-29T21:30:00-04:00",
+  "status": "Frozen before any recipient data download and before any recipient outcome access.",
+  "parent_documents": [
+    "analysis/review_packages/claude/CLAUDE_SCIENCE_REVIEW_2026-07-29.md (section 10)",
+    "analysis/CROSSLAB_FADE_TRANSFER_PROTOCOL.md"
+  ],
+  "scientific_hypothesis": "The mapping from a cell's own early-life measurements to its degradation-model coefficients, and the population prior over those coefficients, transfer across laboratories; raw endpoint values do not. Each recipient cell keeps its own first-100-cycle data as the within-specimen anchor.",
+  "claim_guard": "A passing result establishes one outcome-blind, cross-laboratory, parameter-level borrowing edge for LFP capacity fade. It does not establish universal battery transfer, transfer across chemistries, or prospective cell design.",
+  "roles": {
+    "donor": {
+      "name": "MATR (Severson 2019 + Attia 2020 batches)",
+      "files": [
+        "MATR_batch_20170512.mat",
+        "MATR_batch_20170630.mat",
+        "MATR_batch_20180412.mat",
+        "MATR_batch_20190124.mat"
+      ],
+      "source": "https://data.matr.io (CC BY 4.0), URLs pinned from BatteryML batteryml/preprocess/download.py (MIT)",
+      "chemistry": "LFP/graphite A123 APR18650M1A",
+      "laboratory": "Stanford/MIT/Toyota Research Institute platform",
+      "known_errata": "Batch 20170512 cells physically continue into batch 20170630; BatteryML preprocess_MATR merge logic is adopted verbatim and its commit hash recorded in the implementation freeze."
+    },
+    "recipient_decision": {
+      "primary_declared": "SNL 18650 LFP cells (BatteryArchive)",
+      "accessibility_test_utc": "2026-07-29T21:25:00-04:00",
+      "accessibility_result": "batteryarchive.org unreachable through the execution proxy and officially application-gated per BatteryML dataprepare.md; no anonymous download route.",
+      "backup_invoked": true,
+      "recipient": {
+        "name": "HUST 77-cell LFP dataset",
+        "file": "hust_data.zip",
+        "source": "https://data.mendeley.com/datasets/nsc7hnsg4s/2 (URL pinned from BatteryML download.py)",
+        "chemistry": "LFP/graphite",
+        "laboratory": "Huazhong University of Science and Technology",
+        "ood_axis": "laboratory, cycler platform, and protocol-design family (multi-stage discharge protocols vs MATR fast-charge protocols)"
+      },
+      "note": "Backup rule and its trigger were declared in section 10.8 of the parent review before any recipient data or outcome was accessed. If the audit finds MATR and HUST use the same nominal cell model, the manuscript claim must state 'same cell model, different laboratory' explicitly."
+    },
+    "wrong_chemistry_donor": {
+      "name": "CALCE CS2/CX2 LCO prismatic cells",
+      "source": "https://web.calce.umd.edu/batteries/data/ (URLs pinned from BatteryML download.py)",
+      "role": "wrong-chemistry prior control; expected to fail or be down-weighted",
+      "fallback_if_unavailable": "If CALCE cannot be downloaded or fewer than 8 cells yield valid coefficient fits, this control is recorded as unavailable-declared-preoutcome and the Holm family shrinks to the remaining contrasts."
+    },
+    "dropped_secondary_edge": "Chemistry-OOD recipient (SNL NCA/NMC) is unavailable for the same access reason; dropped pre-outcome, recorded here."
+  },
+  "degradation_model": {
+    "capacity_reference": "Q_ref = max over cycles 1-50 of median-filtered (window 5) discharge capacity",
+    "q_loss": "Qloss(n) = max(1 - Qd_smooth(n)/Q_ref, 1e-5)",
+    "coefficient_fit": "weighted least squares of log10 Qloss vs log10 n over cycles 10..min(n_80, end), weights = 1 for Qloss > 1e-4 else 0.1",
+    "coefficients": ["log10_a", "beta"],
+    "life_label": "first cycle where Qd_smooth/Q_ref <= 0.80 (median filter window 5); right-censored if never reached",
+    "life_from_coefficients": "n_hat = (0.2 / a)^(1/beta), clipped to [100, 100000]",
+    "primary_outcome_scale": "log10 cycles to 80 percent SOH, uncensored cells only; censored cells enter a declared secondary concordance analysis"
+  },
+  "candidate_time_boundary": {
+    "early_window_cycles": 100,
+    "recipient_forbidden_before_formal_run": [
+      "any recipient measurement after cycle 100",
+      "any recipient life label",
+      "recipient total observed cycle counts (correlated with life); the audit records only the boolean 'has >= 100 usable cycles'"
+    ],
+    "donor_outcome_access": "Donor full trajectories are read; the donor is not the test."
+  },
+  "features": {
+    "frozen_candidate_list": [
+      "log10 variance of DeltaQ(V) between cycle 100 and cycle 10 on a fixed 900-point voltage grid (Severson feature)",
+      "minimum of DeltaQ(V) magnitude features: log10 |min DeltaQ(V)|",
+      "slope and intercept of linear fit of Qd over cycles 2-100",
+      "Qd(100)/Q_ref",
+      "coulombic efficiency mean and std over cycles 10-100 (if charge capacity present in both datasets)",
+      "internal resistance mean and slope over cycles 10-100 (if present in both datasets)",
+      "protocol descriptors: mean |I|/1C during charge, mean |I|/1C during discharge, mean cell temperature if present in both"
+    ],
+    "intersection_rule": "The formal feature set is the intersection of fields computable for >= 95 percent of donor cells and >= 95 percent of recipient cells; the realized intersection is frozen in the outcome-blind audit before formal fitting.",
+    "standardization": "fit on donor only"
+  },
+  "transfer_mechanism": {
+    "prior": "population prior over (log10_a, beta): mean and covariance from donor coefficient fits, conditional on protocol descriptors via the mapping g",
+    "mapping_g": {
+      "primary_learner": "RandomForestRegressor(n_estimators=500, min_samples_leaf=2, random_state=seed), multi-output on (log10_a, beta)",
+      "sensitivity_learner": "Ridge(alpha=1.0) on standardized features",
+      "prior_covariance": "residual covariance of g on donor out-of-fold predictions under protocol-block CV"
+    },
+    "posterior_combination": "precision-weighted: theta_post = (S_prior^-1 + S_own^-1)^-1 (S_prior^-1 mu_g + S_own^-1 theta_own), where theta_own and S_own come from the recipient cell's own cycles-10-100 WLS fit",
+    "budget_recalibration": "for k>0 labelled recipient cells, an intercept shift on log10 life estimated on the k cells is applied with shrinkage k/(k+tau), tau = 5",
+    "abstention": "if the recipient cell's feature Mahalanobis distance to the donor feature distribution exceeds the donor 90th percentile, the transfer prediction falls back to the own-curve prediction; abstained cells remain in the primary denominator and the abstention rate is reported"
+  },
+  "methods": [
+    "recipient_only (k=0: own-curve WLS extrapolation from cycles 10-100; k>0: own-curve plus intercept recalibration on the k labelled cells)",
+    "donor_prior_transfer (prior + mapping + posterior combination + recalibration)",
+    "shuffled_donor (donor cell feature-to-coefficient pairing permuted once with frozen seed before fitting g; identical architecture)",
+    "wrong_chemistry_prior (g and prior fitted on CALCE LCO cells; identical architecture)",
+    "prior_only (population prior without mapping g; unconditional donor mean and covariance)",
+    "gaussian_prior (equal-dimensional prior with donor marginal means and 10x inflated covariance, features replaced by frozen-seed Gaussian noise)",
+    "oracle_all_recipient (mapping fitted on all other recipient cells; upper bound, excluded from the Holm family)"
+  ],
+  "evaluation": {
+    "budgets_labelled_recipient_cells": [0, 5, 10],
+    "primary_budget": 0,
+    "draws_per_positive_budget": 200,
+    "paired_draws": true,
+    "primary_metric": "RMSE of log10 life on uncensored recipient cells",
+    "secondary_metrics": ["MAPE of life", "Spearman", "90 percent interval empirical coverage"],
+    "primary_unit": "cell",
+    "bootstrap": "cell-level cluster bootstrap, 10000 replicates; protocol-block bootstrap as declared sensitivity",
+    "significance": "one-sided sign-flip permutation over cells, 100000 permutations",
+    "multiplicity": "Holm over the five named contrasts at the primary budget",
+    "contrast_family": [
+      "donor_prior_transfer vs recipient_only",
+      "donor_prior_transfer vs shuffled_donor",
+      "donor_prior_transfer vs wrong_chemistry_prior",
+      "donor_prior_transfer vs prior_only",
+      "donor_prior_transfer vs gaussian_prior"
+    ]
+  },
+  "success_gate": {
+    "relative_rmse_reduction_vs_recipient_only_at_least": 0.10,
+    "cell_bootstrap_ci95_lower_above": 0.0,
+    "holm_p_below": 0.05,
+    "margin_over_shuffled_at_least": 0.05,
+    "margin_over_wrong_chemistry_at_least": 0.05,
+    "absolute_log_life_r2_above": 0.0,
+    "coverage_degradation_at_most": 0.05,
+    "fraction_cells_improved_at_least": 0.65,
+    "note": "All conditions must hold at the primary budget; failure of any is a null, harmful, or abstaining edge and cannot be repaired by post-outcome changes."
+  },
+  "outcome_blind_audit_gates": {
+    "recipient_cells_at_least": 20,
+    "recipient_cells_with_100_early_cycles_fraction_at_least": 0.9,
+    "required_feature_intersection": ["capacity series", "DeltaQ(V)", "protocol descriptors"],
+    "donor_cells_with_valid_fits_at_least": 150,
+    "donor_protocol_block_oof_spearman_at_least": 0.5,
+    "audit_outputs": [
+      "analysis/results/crosslab_fade_preoutcome_audit.json",
+      "analysis/results/crosslab_fade_recipient_metadata_no_outcomes.csv"
+    ],
+    "decision": "If any gate fails, record abstention and stop; do not modify gates."
+  },
+  "seeds": {
+    "master": 20260729,
+    "shuffle": 2026072901,
+    "draws": 2026072902,
+    "bootstrap": 2026072903,
+    "gaussian_control": 2026072904
+  },
+  "compute_plan": {
+    "stage_a": "download + outcome-blind audit (local container)",
+    "stage_b": "donor-internal protocol-block self-check; must pass before formal run",
+    "stage_c": "single formal run; no reruns permitted after outcome access",
+    "environment": "python 3 + numpy/pandas/scipy/scikit-learn; exact versions recorded in results"
+  },
+  "locked_outputs": {
+    "audit": "analysis/results/crosslab_fade_preoutcome_audit.json",
+    "donor_check": "analysis/results/crosslab_fade_donor_selfcheck.json",
+    "formal_summary": "analysis/results/crosslab_fade_formal_summary.json",
+    "formal_metrics": "analysis/results/crosslab_fade_formal_metrics.csv",
+    "predictions": "analysis/results/crosslab_fade_formal_predictions.csv",
+    "verified": "analysis/results/crosslab_fade_VERIFIED.json"
+  },
+  "forbidden_postfreeze_changes": [
+    "recipient dataset (beyond the declared SNL-to-HUST backup already invoked)",
+    "life-label definition, early window, degradation model, coefficient fit rule",
+    "feature candidate list (realized intersection is frozen at audit, before formal fitting)",
+    "mapping learner families and hyperparameters",
+    "contrast family, budgets, success gate, seeds",
+    "abstention rule"
+  ],
+  "allowed_postfreeze_changes": [
+    "portable path handling, checkpointing, logging",
+    "verifier-only corrections that do not alter estimands",
+    "handling of unreadable/corrupt individual cell files, disclosed in the audit"
+  ]
+}

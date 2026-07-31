@@ -1,0 +1,135 @@
+{
+  "status": "verified-stage1-source-and-stage2-outcome-free-features-frozen",
+  "stage1_numeric_outcomes_used": true,
+  "stage2_numeric_outcomes_opened": false,
+  "stage2_cells": 138,
+  "stage2_condition_groups": 23,
+  "outer_split_count": 23,
+  "model_summaries": {
+    "k": {
+      "stage1_cells": 66,
+      "stage1_condition_groups": 11,
+      "stage2_cells_predicted_without_outcomes": 66,
+      "stage2_condition_groups": 8,
+      "source_oof_r2": 0.7838040148235763,
+      "source_oof_rmse": 0.9779513291996078,
+      "source_oof_residual_sd": 0.9846157224961226,
+      "source_oof_prediction_mean": 97.13499497149634,
+      "feature_names": [
+        "amb_temp_tp",
+        "soc_max_tp",
+        "m_0",
+        "R_1khz_0",
+        "U_0",
+        "lab=HM",
+        "lab=INT",
+        "lab=SIE",
+        "sampling=FF",
+        "sampling=manual",
+        "sampling=pi"
+      ],
+      "wrong_property_feature_names": [
+        "amb_temp_tp",
+        "soc_max_tp",
+        "R_1khz_0",
+        "U_0",
+        "lab=HM",
+        "lab=INT",
+        "lab=SIE",
+        "sampling=FF",
+        "sampling=manual",
+        "sampling=pi"
+      ],
+      "condition_scaler": {
+        "columns": [
+          "amb_temp_tp",
+          "soc_max_tp"
+        ],
+        "minima": {
+          "amb_temp_tp": 10.0,
+          "soc_max_tp": 0.05
+        },
+        "ranges": {
+          "amb_temp_tp": 35.0,
+          "soc_max_tp": 0.95
+        }
+      }
+    },
+    "z": {
+      "stage1_cells": 72,
+      "stage1_condition_groups": 24,
+      "stage2_cells_predicted_without_outcomes": 72,
+      "stage2_condition_groups": 15,
+      "source_oof_r2": 0.4708133493709189,
+      "source_oof_rmse": 2.9442565749866225,
+      "source_oof_residual_sd": 2.958967339439645,
+      "source_oof_prediction_mean": 91.5645794158821,
+      "feature_names": [
+        "amb_temp_tp",
+        "soc_max_tp",
+        "dod_tp",
+        "c_ch_tp",
+        "c_dch_tp",
+        "m_0",
+        "R_1khz_0",
+        "U_0",
+        "lab=HM",
+        "lab=INT",
+        "lab=SIE",
+        "sampling=cLH",
+        "sampling=pi"
+      ],
+      "wrong_property_feature_names": [
+        "amb_temp_tp",
+        "soc_max_tp",
+        "dod_tp",
+        "c_ch_tp",
+        "c_dch_tp",
+        "R_1khz_0",
+        "U_0",
+        "lab=HM",
+        "lab=INT",
+        "lab=SIE",
+        "sampling=cLH",
+        "sampling=pi"
+      ],
+      "condition_scaler": {
+        "columns": [
+          "amb_temp_tp",
+          "soc_max_tp",
+          "dod_tp",
+          "c_ch_tp",
+          "c_dch_tp"
+        ],
+        "minima": {
+          "amb_temp_tp": 23.0,
+          "soc_max_tp": 0.3,
+          "dod_tp": 0.05,
+          "c_ch_tp": 0.2,
+          "c_dch_tp": 0.2
+        },
+        "ranges": {
+          "amb_temp_tp": 22.0,
+          "soc_max_tp": 0.5,
+          "dod_tp": 0.5499999999999999,
+          "c_ch_tp": 0.8,
+          "c_dch_tp": 1.8
+        }
+      }
+    }
+  },
+  "source_table_sha256": "639ca56b9770d0ba7e4e3e53de9c71d68c6165c8fbd180c12f6eb240d21565e9",
+  "source_audit_sha256": "27615517df59629fa0dd4d91c093ee3a37fa6962fbfbb7b5f8356886db22a749",
+  "oof_table_sha256": "7b8d47cd403ca88b31e94f8195a0b05ebe28976bf0a7bb6958add214964732f0",
+  "stage2_source_features_sha256": "4301197200fc6432762907b77e6c92c2f7bae98868a5f1320033b6630d3c2811",
+  "outer_split_plan_sha256": "0ccd2bfa10ca1c8d15d89388ff344edf95bc739e0b17b52f6bf16f174c83d1cc",
+  "preprocessing_spec_sha256": "3405157cf8fdf8ecd575dfd125b33995106eff97ecffce659a5948ec81629b8c",
+  "model_sha256": {
+    "stage1_k_mass_wrong_property_extratrees.joblib": "6c8455ff2cef29135caf69cbde3d9e97337e8fb4724e047644db16bfece59e10",
+    "stage1_k_retention_extratrees.joblib": "ebd59a830ab84a938e7ee478e25343061c31715cc4cfcd87fbb04d5fb69a7146",
+    "stage1_z_mass_wrong_property_extratrees.joblib": "8000d994449070847f9b477a3c18dee532a4a015532e8d4fb57bc99def04ac97",
+    "stage1_z_retention_extratrees.joblib": "76fddb377bfa44e5b4224e3016f9deb67b5d3f2bc9c71794c06023073f89db35"
+  },
+  "claim_guard": "These are source-only models and outcome-free target features. They generate the locked borrowing prior but provide no evidence that borrowing improves Stage 2 prediction.",
+  "errors": []
+}

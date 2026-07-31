@@ -1,0 +1,15 @@
+id,normalization_status,n_measurements,redistribution_status,source_commit
+aqsoldb,included,9982,CC0-1.0,8e02b548fd9a78778ff89a5aa9a460d1a289cc3a
+birdshot-high-entropy-alloy-campaign,included,855,CC-BY-4.0,e4d72eabe31fad072b03ebb3788f4eb55e533dfc
+calisol-23,included,13301,CC-BY-4.0,figshare-file-43151344-sha256-850ff20eaad7abfe8
+estm-thermoelectric,included,26025,unknown,72d597cb6fdf6b79f6ca86ff759f9136de5d66ef
+freesolv,included,642,CC-BY-3.0,6c7d19b4b565537365ffd22006aa2cd4643200c6
+iupac-digitized-pka,included,24017,CC-BY-NC-4.0,1e65bbb75c401edfcaaf1b494e24468166fb2f16
+kit-electrolyte-conductivity-5035,included,5035,CC-BY-4.0,zenodo-7244939-sha256-22b3445590b2d3a5
+matbench-steels,included,927,MIT,figshare-file-13354694-sha256-53c995e14371098f
+mpea-dataset-borg,included,2904,MIT-repository,e4d72eabe31fad072b03ebb3788f4eb55e533dfc
+nist-isodb,analysis-only-streamed-isosteric-fits-not-in-material-schema,0,US-government-public-domain,4cfcd47e4402f4ff40f893cbbcaa6b86734d8ac6
+obelix-solid-electrolytes,included,599,CC-BY-4.0,4eaac889809dd489e3bae468c45d5c0e02b9147a
+ocx24-open-catalyst-experiments-2024,included,6938,CC-BY-4.0-data,a838178c0b6cef68ed6b23167cc93c98ee26d2f7
+openpoly-benchmark,included,3985,MIT,ccaa66900747bfc576ef935e3d5f220b6c9b1f85
+photoswitch-dataset,included,974,MIT,e30d68287d7803bc0199604e2693ef50b5ee6b3b

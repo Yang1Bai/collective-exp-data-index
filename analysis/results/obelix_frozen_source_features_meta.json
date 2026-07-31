@@ -1,0 +1,16 @@
+{
+  "status": "incremental frozen source-prediction cache",
+  "random_seed": 20260713,
+  "source_model": "RandomForestRegressor(n_estimators=240,min_samples_leaf=2,max_features=0.7)",
+  "target_n": 500,
+  "completed_sources": [
+    "Thermoelectric ZT",
+    "Alloy yield strength",
+    "CO2R H2 Faradaic efficiency"
+  ],
+  "feature_sha256": {
+    "Thermoelectric ZT": "c174d1ed91c084913dad948c9efa25f332397dce51b45e6c4dc2c0cbc0015d3e",
+    "Alloy yield strength": "1998b4410302cf3781b93dc2f9b233ac61f4b4668ae958449102a03e014e689c",
+    "CO2R H2 Faradaic efficiency": "75c972c1d9e2b2a183420199f2432df5e627adafaba09c8fb15b93422b7fcf75"
+  }
+}

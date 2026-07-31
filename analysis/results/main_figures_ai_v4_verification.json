@@ -1,0 +1,34 @@
+{
+  "status": "verified-complete",
+  "canonical_exports": [
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.pdf",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.svg",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.png",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.tiff",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.pdf",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.svg",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.png",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.tiff",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.pdf",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.svg",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.png",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.tiff",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.pdf",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.svg",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.png",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.tiff"
+  ],
+  "figure1_asset_role": "conceptual-not-quantitative",
+  "figure1_asset_pixels": [
+    1774,
+    887
+  ],
+  "figure1_vector_labels": true,
+  "figure1_routes": [
+    "predict",
+    "screen",
+    "abstain"
+  ],
+  "figure1_source_rows": 11,
+  "figures_2_to_4_reverified": true
+}

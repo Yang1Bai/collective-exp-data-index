@@ -1,0 +1,114 @@
+{
+  "status": "verified-complete",
+  "verification_mode": "portable-after-remote",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "feature_sha256": "52baab7fa107b43a141e4bfac8cc5a73ae54798b75a3e0a2ba6e3da7358584f9",
+  "oof_sha256": "dca3ac298a877eb73ff785f75a0204fa13468b2bf68ae1a414e8e309af9ee59d",
+  "source_summary_sha256": "88c543e77ebbc4961b9d000f189a7cdc28e273f908f10769f1df08f8d62e5570",
+  "feature_rows": 668,
+  "oof_rows": 24883,
+  "admitted_properties": [
+    "Absorption max (nm)",
+    "Emission max (nm)",
+    "Lifetime (ns)",
+    "Quantum yield",
+    "log(e/mol-1 dm3 cm-1)"
+  ],
+  "recomputed_metrics": {
+    "Absorption max (nm)": {
+      "oof_r2": 0.7790328869476068,
+      "oof_spearman": 0.8331996301346971,
+      "reported_oof_spearman": 0.8331996301346971,
+      "absolute_spearman_delta_after_csv": 0.0,
+      "scaffold_bootstrap_spearman_ci95": [
+        0.8106400200464786,
+        0.8328590768855462,
+        0.8533148350808463
+      ],
+      "reported_scaffold_bootstrap_spearman_ci95": [
+        0.8106400200464786,
+        0.8328590768855462,
+        0.8533148350808463
+      ],
+      "maximum_absolute_bootstrap_ci_delta_after_csv": 0.0,
+      "admitted": true
+    },
+    "Emission max (nm)": {
+      "oof_r2": 0.707709120159526,
+      "oof_spearman": 0.8179486108087606,
+      "reported_oof_spearman": 0.8179486108087606,
+      "absolute_spearman_delta_after_csv": 0.0,
+      "scaffold_bootstrap_spearman_ci95": [
+        0.7977770514863076,
+        0.8178402950333161,
+        0.8363042405142626
+      ],
+      "reported_scaffold_bootstrap_spearman_ci95": [
+        0.7977770514863076,
+        0.8178402950333161,
+        0.8363042405142626
+      ],
+      "maximum_absolute_bootstrap_ci_delta_after_csv": 0.0,
+      "admitted": true
+    },
+    "Lifetime (ns)": {
+      "oof_r2": 0.3641719406610435,
+      "oof_spearman": 0.5963772430366494,
+      "reported_oof_spearman": 0.5963772430366494,
+      "absolute_spearman_delta_after_csv": 0.0,
+      "scaffold_bootstrap_spearman_ci95": [
+        0.546922781201734,
+        0.5958318748949383,
+        0.6416566819766247
+      ],
+      "reported_scaffold_bootstrap_spearman_ci95": [
+        0.546922781201734,
+        0.5958318748949383,
+        0.6416566819766247
+      ],
+      "maximum_absolute_bootstrap_ci_delta_after_csv": 0.0,
+      "admitted": true
+    },
+    "Quantum yield": {
+      "oof_r2": 0.28649864759491517,
+      "oof_spearman": 0.54054881738782,
+      "reported_oof_spearman": 0.540533706781683,
+      "absolute_spearman_delta_after_csv": 1.5110606137014315e-05,
+      "scaffold_bootstrap_spearman_ci95": [
+        0.5065183555112711,
+        0.5408515689627487,
+        0.575466915287976
+      ],
+      "reported_scaffold_bootstrap_spearman_ci95": [
+        0.5064877380812033,
+        0.5408506410278622,
+        0.5754402546517023
+      ],
+      "maximum_absolute_bootstrap_ci_delta_after_csv": 3.0617430067825246e-05,
+      "admitted": true
+    },
+    "log(e/mol-1 dm3 cm-1)": {
+      "oof_r2": 0.4694067441186771,
+      "oof_spearman": 0.7330278352782731,
+      "reported_oof_spearman": 0.7330276978659281,
+      "absolute_spearman_delta_after_csv": 1.3741234494712984e-07,
+      "scaffold_bootstrap_spearman_ci95": [
+        0.6995840902978414,
+        0.7332126886194329,
+        0.7620547478599226
+      ],
+      "reported_scaffold_bootstrap_spearman_ci95": [
+        0.6995845824242317,
+        0.7332127764733976,
+        0.7620549062778554
+      ],
+      "maximum_absolute_bootstrap_ci_delta_after_csv": 4.921263903057138e-07,
+      "admitted": true
+    }
+  },
+  "rank_serialization_absolute_tolerance": 5e-05,
+  "verifier_amendment": "A 5e-5 absolute tolerance is used only when comparing Spearman statistics before and after OOF CSV serialization. R2 values, file hashes, feature values, gates, and admission decisions are unchanged.",
+  "outcome_guard": "Verification used donor optical outcomes and outcome-free recipient metadata only; recipient HER values were not loaded."
+}

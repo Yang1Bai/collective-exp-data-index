@@ -1,0 +1,51 @@
+{
+  "status": "formal-benchmark-complete",
+  "design_sha256": "91a6d65db3fd85954fe0ce37664933beb7bf07bf1340b573aed98e947e3de6c1",
+  "implementation_sha256": "bf519994867c1b920bb331fd958725a4ada7d93601699cdf664d159cb3a223f8",
+  "cards_sha256": "5b02885cbdd4af9d28d0e284586bd2c932c5943df89215e84db215641c16d577",
+  "source_summary_sha256": "10e56fe23f3beb2ca8a66ad06128732d724573601318a3f7bcaea1c154a4b834",
+  "cards_rows": 15054,
+  "development_rows": 12096,
+  "external_rows": 2958,
+  "repeats": 200,
+  "budgets": [
+    60,
+    120,
+    240
+  ],
+  "learners": [
+    "extra_trees",
+    "random_forest"
+  ],
+  "n_estimators": 500,
+  "metric_rows": 28800,
+  "prediction_rows": 7099200,
+  "contrasts": 32,
+  "formal_success_gate": {
+    "passed": false,
+    "checks": {
+      "minimum_mean_relative_rmse_gain": false,
+      "cluster_ci_lower_positive": false,
+      "holm_p_below": false,
+      "absolute_r2_positive": false,
+      "minimum_gain_over_shuffled_source": false,
+      "better_than_voltage_control": false,
+      "better_than_energy_control": true,
+      "positive_repeat_fraction": false,
+      "no_full_external_harm": true
+    },
+    "primary_mean_relative_rmse_gain": 0.0004938111688234172,
+    "primary_cluster_ci95": [
+      -0.0002897555509653038,
+      0.001036626440012067
+    ],
+    "primary_holm_p": 0.5487451254874512,
+    "primary_mean_absolute_r2": -0.027267323226336515,
+    "full_external_mean_relative_rmse_gain": 0.0006204523932872541
+  },
+  "claim_guard": "A positive formal result is a retrospective within-corpus conductivity-to-rate-conditioned-capacity edge. The strict early-cycle subset is a sensitivity, and independent cross-database confirmation remains necessary.",
+  "metrics_sha256": "6550fca34c285afa983245d758fc94b81911a5475f1acb58e8fe77ef73e5cb86",
+  "predictions_sha256": "007dff99ea214cf7410398de279d9d8c0b9e4bd0af893537790947703166aeb0",
+  "contrasts_sha256": "241d4c735f6361154aac55c995388c2b3fbdaf53887e1732c0977f293563c550",
+  "summary_sha256": "cff6bf6d6f9e0586e61d77e3b5a683252d0793b720fc006db3be8c2c2c25f5b9"
+}

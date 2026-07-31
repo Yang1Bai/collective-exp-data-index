@@ -1,0 +1,13 @@
+{
+  "status": "verified-stage1-only-allowlist",
+  "rows": 141,
+  "stage_counts": {
+    "1": 141
+  },
+  "unique_file_ids": 141,
+  "stage2_file_ids_present": false,
+  "numeric_csv_data_rows_opened": false,
+  "archive_map_sha256": "56b532a14295bd1bfbcb374e445a619e69c1fb7cfaed21d36506b16dc0e490b5",
+  "figshare_api_sha256": "da89d331ab3e83093c6c97a94ba3e02ea630d9579c3800ed45feae73b4cac408",
+  "allowlist_sha256": "5f4beeaa9555588e897f53b21596f6d174d132df16e4ef543fa904e9f1c4cf09"
+}

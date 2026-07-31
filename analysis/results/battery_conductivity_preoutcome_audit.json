@@ -1,0 +1,153 @@
+{
+  "status": "eligible-preoutcome",
+  "design_sha256": "91a6d65db3fd85954fe0ce37664933beb7bf07bf1340b573aed98e947e3de6c1",
+  "schema_amendment_sha256": "45afe8fe96f724bfd2f4e6d94c8874c39bb178549e562be3cbc223b0d3bcb16d",
+  "archive_sha256": "8fb2aada83bddd5c4c6b38745b3a39cd860f82520726c1f083efc257053892e0",
+  "member": "battery-2022.csv",
+  "numeric_property_values_read": false,
+  "read_columns": [
+    "Property",
+    "Name",
+    "Raw_unit",
+    "Unit",
+    "Extracted_name",
+    "DOI",
+    "Specifier",
+    "Tag",
+    "Warning",
+    "Type",
+    "Info",
+    "Date",
+    "Correctness"
+  ],
+  "forbidden_columns": [
+    "Journal",
+    "Raw_value",
+    "Title",
+    "Value",
+    "value"
+  ],
+  "all_records": 231345,
+  "per_property": {
+    "capacity": {
+      "records": 139118,
+      "materials": 11181,
+      "publications": 26383,
+      "doi_coverage_fraction": 1.0,
+      "rate_coverage_fraction": 0.16778562083986256,
+      "cycle_coverage_fraction": 0.23369369887433689,
+      "temperature_coverage_fraction": 0.0
+    },
+    "conductivity": {
+      "records": 12697,
+      "materials": 2196,
+      "publications": 5272,
+      "doi_coverage_fraction": 1.0,
+      "rate_coverage_fraction": 0.0,
+      "cycle_coverage_fraction": 0.0,
+      "temperature_coverage_fraction": 0.0
+    },
+    "coulombic_efficiency": {
+      "records": 12692,
+      "materials": 2877,
+      "publications": 7183,
+      "doi_coverage_fraction": 1.0,
+      "rate_coverage_fraction": 0.0,
+      "cycle_coverage_fraction": 0.0,
+      "temperature_coverage_fraction": 0.0
+    },
+    "energy": {
+      "records": 14771,
+      "materials": 4729,
+      "publications": 4182,
+      "doi_coverage_fraction": 1.0,
+      "rate_coverage_fraction": 0.0,
+      "cycle_coverage_fraction": 0.0,
+      "temperature_coverage_fraction": 0.0
+    },
+    "voltage": {
+      "records": 52067,
+      "materials": 8005,
+      "publications": 24753,
+      "doi_coverage_fraction": 1.0,
+      "rate_coverage_fraction": 0.0,
+      "cycle_coverage_fraction": 0.0,
+      "temperature_coverage_fraction": 0.0
+    }
+  },
+  "primary_recipient": {
+    "records": 23325,
+    "materials": 3015,
+    "publications": 6853,
+    "doi_coverage_fraction": 1.0,
+    "rate_coverage_fraction": 1.0,
+    "cycle_coverage_fraction": 0.3297749196141479,
+    "temperature_coverage_fraction": 0.0
+  },
+  "strict_early_cycle_sensitivity": {
+    "records": 336,
+    "materials": 128,
+    "publications": 169,
+    "doi_coverage_fraction": 1.0,
+    "rate_coverage_fraction": 1.0,
+    "cycle_coverage_fraction": 1.0,
+    "temperature_coverage_fraction": 0.0
+  },
+  "capacity_unit_counts": {
+    "mAhg−1 | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 114456,
+    "mAh/g | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 14558,
+    "mAhg-1 | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 9675,
+    "Ahkg−1 | Ampere^(1.0) Hour^(1.0) KiloGram^(-1.0)": 183,
+    "Ah/kg | Ampere^(1.0) Hour^(1.0) KiloGram^(-1.0)": 126,
+    "Ahg−1 | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 66,
+    "Ah/g | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 34,
+    "Ahkg-1 | Ampere^(1.0) Hour^(1.0) KiloGram^(-1.0)": 17,
+    "Ahg-1 | Gram^(-1.0) Hour^(1.0) MilliAmpere^(1.0)": 3
+  },
+  "condition_examples": {
+    "rate": [
+      "None | CDE | None | {'current_value': '2', 'current_units': 'Ag−1'}",
+      "None | CDE | None | {'current_value': '1', 'current_units': 'Ag-1'}",
+      "None | CDE | None | {'current_value': '8', 'current_units': 'Ag−1'}",
+      "None | CDE | None | {'current_value': '2', 'current_units': 'Ag-1'}",
+      "None | CDE | None | {'current_value': '5', 'current_units': 'Ag−1'}",
+      "None | CDE | None | {'current_value': '4', 'current_units': 'Ag-1'}",
+      "None | CDE | None | {'current_value': '4', 'current_units': 'Ag−1'}",
+      "None | CDE | None | {'current_value': '5', 'current_units': 'Ag-1'}",
+      "None | CDE | None | {'current_value': '1', 'current_units': 'Ag−1'}",
+      "None | CDE | None | {'current_value': '3', 'current_units': 'Ag−1'}",
+      "None | CDE | Anode | {'current_value': '3', 'current_units': 'Ag−1'}",
+      "None | CDE | Anode | {'current_value': '1', 'current_units': 'Ag-1'}"
+    ],
+    "cycle": [
+      "None | CDE | None | {'cycle_value': '6', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '50', 'cycle_units': 'cycle'}",
+      "None | CDE | None | {'cycle_value': '8', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '5', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '9', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '3', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '56', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '28', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '75', 'cycle_units': 'cycles'}",
+      "None | CDE | None | {'cycle_value': '5th', 'cycle_units': 'cycle'}",
+      "None | CDE | None | {'cycle_value': '2nd', 'cycle_units': 'cycle'}",
+      "None | CDE | None | {'cycle_value': '10', 'cycle_units': 'cycles'}"
+    ],
+    "temperature": []
+  },
+  "metadata_duplicate_fraction": 0.387058289567529,
+  "gate_checks": {
+    "donor_records": true,
+    "donor_materials": true,
+    "donor_publications": true,
+    "primary_recipient_records": true,
+    "primary_recipient_materials": true,
+    "primary_recipient_publications": true,
+    "capacity_rate_coverage": true,
+    "capacity_cycle_coverage": true,
+    "metadata_duplicate_fraction": true
+  },
+  "errors": [],
+  "metadata_output": "D:\\OneDrive - University of Toronto\\AC\\Project\\Collective exp dataset\\analysis\\results\\battery_conductivity_metadata_no_outcomes.csv",
+  "metadata_sha256": "89b3e099ed9dfeefea40bb1c9ed2033d0f32d6b8c4bb27f358bc262e614b2823"
+}

@@ -1,0 +1,46 @@
+target,source,label,domain,kind,total_n,training_n_after_target_evaluation_exclusion,raw_evaluation_key_overlap,post_exclusion_overlap,source_groups,group_cv_r2_mean,group_cv_r2_sd
+te_zt,te_power_factor,Thermoelectric power factor,thermoelectric,formula,870,522,348,0,181,0.13861602050456057,0.10977539068657907
+te_zt,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,522,348,0,181,0.38295880651565434,0.11633606343164377
+te_zt,te_seebeck,Thermoelectric Seebeck coefficient,thermoelectric,formula,870,522,348,0,181,0.20607269066647219,0.045122618792021195
+te_zt,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.31508915319646275,0.10468838651676861
+te_zt,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097645,0.11722958780914076
+alloy_ys,alloy_uts,Alloy ultimate tensile strength,multi-principal-element alloy,formula,238,162,76,0,66,0.41769718981241183,0.042876641761220635
+alloy_ys,alloy_hardness,Alloy hardness,multi-principal-element alloy,formula,377,297,80,0,109,0.5743482399423776,0.1191751517406043
+alloy_ys,alloy_elongation,Alloy elongation,multi-principal-element alloy,formula,253,158,95,0,70,-0.0347579883564576,0.27889572047638617
+alloy_ys,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,870,0,0,301,0.5713319598750842,0.05509690235613358
+alloy_ys,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097645,0.11722958780914076
+catalysis_h2,catalysis_co,CO2R CO Faradaic efficiency,CO2 electroreduction,formula,212,126,86,0,28,-0.23968657351641762,0.1332485660691061
+catalysis_h2,catalysis_voltage,CO2R cell voltage,CO2 electroreduction,formula,212,126,86,0,28,-0.8244101594523467,0.8752038312812589
+catalysis_h2,te_zt,Thermoelectric ZT,thermoelectric,formula,870,870,0,0,301,0.27494977493967965,0.12664590959525998
+catalysis_h2,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.31508915319646275,0.10468838651676861
+catalysis_h2,electrolyte_conductivity,Solid-electrolyte ionic conductivity,solid electrolyte,formula,500,500,0,0,160,0.41006090697948716,0.07406732672827909
+electrolyte_conductivity,te_electrical,Thermoelectric electrical conductivity,thermoelectric,formula,870,870,0,0,301,0.34280316624537893,0.14674402266803604
+electrolyte_conductivity,te_power_factor,Thermoelectric power factor,thermoelectric,formula,870,870,0,0,301,0.4310351864936504,0.09939086623962314
+electrolyte_conductivity,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,870,0,0,301,0.5713319598750842,0.05509690235613358
+electrolyte_conductivity,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.31508915319646275,0.10468838651676861
+electrolyte_conductivity,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097645,0.11722958780914076
+solubility,hydration,Hydration free energy,aqueous molecular thermodynamics,molecule,642,571,71,0,335,0.4627047025931091,0.03830652573018583
+solubility,pka_acid,Molecular pKa,aqueous molecular acid-base,molecule,4966,4905,61,0,1630,0.28019714131803225,0.08419812286651242
+solubility,pka_base,Molecular conjugate-acid pKa,aqueous molecular acid-base,molecule,6711,6651,60,0,1822,0.380264346927831,0.08058395801920597
+solubility,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.29481522873372623,0.4571101313308629
+solubility,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,304,0,0,216,0.33162379106518713,0.0635445494916239
+hydration,solubility,Aqueous solubility,aqueous molecular thermodynamics,molecule,9980,9772,208,0,4775,0.40965698990125565,0.15592127572192574
+hydration,pka_acid,Molecular pKa,aqueous molecular acid-base,molecule,4966,4945,21,0,1647,0.2672451463592924,0.10860897254222104
+hydration,pka_base,Molecular conjugate-acid pKa,aqueous molecular acid-base,molecule,6711,6652,59,0,1823,0.38040489865827903,0.08764782259373835
+hydration,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.29481522873372623,0.4571101313308629
+hydration,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,304,0,0,216,0.33162379106518713,0.0635445494916239
+photo_z_pipi,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,338,45,0,40,-0.2385782814668441,0.27692597392402696
+photo_z_pipi,photo_z_npi,Photoswitch Z n-π* wavelength,molecular photoswitch,molecule,123,79,44,0,11,-0.9731151172748197,1.139854940092465
+photo_z_pipi,photo_e_npi,Photoswitch E n-π* wavelength,molecular photoswitch,molecule,141,106,35,0,13,-2.233173711312534,2.6112526798417353
+photo_z_pipi,pka_acid,Molecular pKa,aqueous molecular acid-base,molecule,4966,4966,0,0,1658,0.2614225157137268,0.10514212946839717
+photo_z_pipi,solubility,Aqueous solubility,aqueous molecular thermodynamics,molecule,9980,9980,0,0,4887,0.40762582364472083,0.14375189687560586
+polymer_tensile,polymer_young,Polymer Young's modulus,polymer,molecule,82,50,32,0,39,-0.017063945536002916,0.27204409961591136
+polymer_tensile,polymer_hardness,Polymer hardness,polymer,molecule,49,29,20,0,22,-1.2294345140638012,0.951105533858538
+polymer_tensile,polymer_elongation,Polymer elongation at break,polymer,molecule,70,40,30,0,32,-0.15101389780188748,0.2121872733841326
+polymer_tensile,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,272,32,0,194,0.33195780963379984,0.20630359574796697
+polymer_tensile,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.29481522873372623,0.4571101313308629
+polymer_tm,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,270,34,0,194,0.3201100070924658,0.04905775327145947
+polymer_tm,polymer_crystallization,Polymer crystallization temperature,polymer,molecule,64,41,23,0,31,0.009944019436370133,0.16023811907076066
+polymer_tm,polymer_td,Polymer decomposition temperature,polymer,molecule,84,50,34,0,39,-0.11399311534225683,0.19913093323858083
+polymer_tm,polymer_tensile,Polymer tensile strength,polymer,molecule,78,46,32,0,36,-0.343311334925847,0.21887977539749823
+polymer_tm,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.29481522873372623,0.4571101313308629

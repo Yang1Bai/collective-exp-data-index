@@ -1,0 +1,24 @@
+{
+  "status": "donor-selfcheck-failed-abstain",
+  "donor_cells_total": 180,
+  "donor_cells_valid": 43,
+  "valid_by_batch": {
+    "batch2": 43
+  },
+  "batch_out_oof_life_spearman": NaN,
+  "oof_residual_covariance": [
+    [
+      NaN,
+      NaN
+    ],
+    [
+      NaN,
+      NaN
+    ]
+  ],
+  "gate_checks": {
+    "donor_valid_at_least_150": false,
+    "batch_out_oof_spearman_at_least_0_5": false
+  },
+  "donor_table_sha256": "7b0a553e9533c820f4191988684db06545b1521af667ce52ba6c29165633eccd"
+}

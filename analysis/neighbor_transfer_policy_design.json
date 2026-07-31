@@ -1,0 +1,79 @@
+{
+  "design_name": "Explicit neighborhood-prior acquisition after OBELiX policy failure",
+  "design_version": 1,
+  "frozen_utc": "2026-07-15T18:20:33Z",
+  "status": "exploratory-post-diagnostic; frozen before any sequential result for the new policy definitions",
+  "history": "The completed UCB null and the stage-1 signal anatomy were known. In particular, the thermoelectric prior alone ranked the first official and hard-OOD hit third, equal target/source rank fusion was favorable, composition novelty was favorable, and positive ensemble-spread bonuses were harmful. These facts motivated the policies below. No result can confirm an OBELiX discovery claim; the goal is executable method selection for later independent validation.",
+  "input": {
+    "path": "analysis/results/obelix_ood_discovery_input.npz",
+    "required_input_sha256": "a2ccdd88de18ccdc4e11d2f87026938d42dfcd3b56567b7cc912a27905f79b7b",
+    "official_test_candidates": 110,
+    "hard_ood_candidates": 44,
+    "exact_source_target_composition_overlap": 0
+  },
+  "campaign": {
+    "initial_target_labels": 30,
+    "initial_sampling": "same deterministic group-aware sampling as the completed frozen campaign",
+    "paired_seeds": 100,
+    "budget": 40,
+    "target_model": "ExtraTreesRegressor with 80 trees, min_samples_leaf=2, max_features=0.7",
+    "refit_after_each_acquisition": true,
+    "primary_endpoint": "acquisitions to first true top-5-percent candidate; budget plus one when censored",
+    "secondary_endpoints": [
+      "cumulative number and fraction of true top-5-percent hits by acquisitions 5, 10, 20, and 40",
+      "best observed target value and regret to the fixed pool maximum by acquisitions 5, 10, 20, and 40",
+      "area under the cumulative-hit curve through acquisition 40"
+    ],
+    "secondary_endpoint_guard": "Secondary endpoints diagnose whether a first hit is an isolated lucky candidate. They cannot override a failed primary development gate."
+  },
+  "policies": {
+    "uniform_random": "paired uniform-random order",
+    "target_ucb_beta1": "completed-policy replication: target mean plus one ensemble standard deviation",
+    "target_mean_greedy": "iteratively refitted target posterior mean without an uncertainty bonus",
+    "composition_novelty": "dynamic farthest-first Euclidean composition distance from all currently labelled target compositions",
+    "thermoelectric_prior_static": "frozen thermoelectric source prediction descending; no target refit affects its order",
+    "target_source_rank_fusion": "sum of percentile ranks of the current target mean and frozen thermoelectric prior",
+    "target_source_novelty_rank_fusion": "target-mean rank plus thermoelectric-prior rank plus 0.5 times centered dynamic novelty rank",
+    "alloy_prior_static_control": "frozen wrong-source alloy prior descending",
+    "catalysis_prior_static_control": "frozen wrong-source catalysis prior descending",
+    "shuffled_thermoelectric_static_control": "thermoelectric prior deterministically permuted across identities before ranking"
+  },
+  "comparisons": {
+    "policy_validity": [
+      "target_mean_greedy versus uniform_random",
+      "composition_novelty versus uniform_random"
+    ],
+    "source_only_screening": [
+      "thermoelectric_prior_static versus uniform_random",
+      "thermoelectric_prior_static versus each wrong-source or shuffled control"
+    ],
+    "incremental_sequential_borrowing": [
+      "target_source_rank_fusion versus target_mean_greedy",
+      "target_source_novelty_rank_fusion versus target_mean_greedy"
+    ],
+    "failure_anatomy": [
+      "target_ucb_beta1 versus target_mean_greedy",
+      "target_source_rank_fusion versus target_ucb_beta1"
+    ]
+  },
+  "inference": {
+    "paired_bootstrap_replicates": 5000,
+    "paired_sign_flip_draws": 9999,
+    "multiplicity": "Holm correction within the two policy-validity contrasts, the four source-only contrasts, and the two incremental-borrowing contrasts",
+    "effect": "right-policy acquisitions minus left-policy acquisitions; positive means the first named policy saves acquisitions"
+  },
+  "development_gates": {
+    "statistical": "Holm p <= 0.05 and paired 95% interval lower bound above zero",
+    "practical": "at least 5 acquisitions and 25 percent saved relative to the comparator",
+    "consistency": "at least 60 percent of paired campaigns improve",
+    "censoring": "no higher censoring than the comparator",
+    "negative_transfer": "the shuffled thermoelectric and both wrong-source static controls must not match the thermoelectric source-only result",
+    "claim_status": "Passing is candidate-method evidence only; independent validation is still required"
+  },
+  "endpoint_guard": {
+    "thermoelectric_prior_static": "fixed source-guided screening, not adaptive sequential learning",
+    "rank_fusion_policies": "adaptive sequential borrowing because the target component is refit after every acquisition",
+    "new_science": "not tested by a top-5 hit alone"
+  },
+  "claim_guard": "The method family was chosen after inspecting OBELiX outcomes. A favorable result can select a method for independent testing but cannot change the published frozen OBELiX null or establish prospective discovery acceleration."
+}

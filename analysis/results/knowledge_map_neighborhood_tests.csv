@@ -1,0 +1,4 @@
+test,estimate,ci_lo,ci_hi,p_value,n
+spearman_neighborhood_vs_confirmation_effect,0.1544287660744757,,,0.3288247534949679,42
+within_target_pairwise_concordance,0.609375,0.35479127134724864,0.7922077922077922,0.1098,64
+cochran_q_edge_heterogeneity,78.6872028474544,,,0.000362860868473034,41

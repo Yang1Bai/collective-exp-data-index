@@ -1,0 +1,438 @@
+{
+  "candidate_family_table": [
+    {
+      "distance_to_core": 103.93576558068898,
+      "dois": 4,
+      "rows": 26,
+      "site_family": "B[Pb]"
+    },
+    {
+      "distance_to_core": 69.02557024944797,
+      "dois": 5,
+      "rows": 29,
+      "site_family": "A[Cs]|B[Sb]|C[I]"
+    },
+    {
+      "distance_to_core": 68.11672205748008,
+      "dois": 23,
+      "rows": 85,
+      "site_family": "A[Cs]|B[Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 65.6184001946298,
+      "dois": 18,
+      "rows": 37,
+      "site_family": "B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 65.38220298701577,
+      "dois": 12,
+      "rows": 41,
+      "site_family": "A[Cs]|B[Bi]|C[I]"
+    },
+    {
+      "distance_to_core": 65.37697287969777,
+      "dois": 3,
+      "rows": 14,
+      "site_family": "A[Cs]|B[Bi,Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 65.27751045543395,
+      "dois": 102,
+      "rows": 428,
+      "site_family": "A[Cs]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 53.58242277645085,
+      "dois": 3,
+      "rows": 10,
+      "site_family": "A[Cs]|B[Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 50.91343628572526,
+      "dois": 6,
+      "rows": 15,
+      "site_family": "B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 50.504055393937065,
+      "dois": 4,
+      "rows": 19,
+      "site_family": "A[Cs]|B[Sn]|C[Br]"
+    },
+    {
+      "distance_to_core": 48.4124370888533,
+      "dois": 168,
+      "rows": 887,
+      "site_family": "A[Cs]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 42.40295900373954,
+      "dois": 96,
+      "rows": 433,
+      "site_family": "A[Cs]|B[Pb]|C[Br]"
+    },
+    {
+      "distance_to_core": 35.89977779746422,
+      "dois": 6,
+      "rows": 20,
+      "site_family": "A[MA]|B[Sn]|C[Cl]"
+    },
+    {
+      "distance_to_core": 33.61558636327202,
+      "dois": 4,
+      "rows": 10,
+      "site_family": "A[MA]|B[Sn]|C[Br]"
+    },
+    {
+      "distance_to_core": 29.795589935233174,
+      "dois": 5,
+      "rows": 20,
+      "site_family": "A[FA,PEA]|B[Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 29.62916828014023,
+      "dois": 5,
+      "rows": 19,
+      "site_family": "A[FA,MA]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 29.580547437060982,
+      "dois": 6,
+      "rows": 31,
+      "site_family": "A[MA]|B[Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 29.325450700093498,
+      "dois": 3,
+      "rows": 14,
+      "site_family": "A[FA]|B[Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 29.213118198151665,
+      "dois": 9,
+      "rows": 29,
+      "site_family": "A[MA]|B[Sb]|C[I]"
+    },
+    {
+      "distance_to_core": 29.171652904830566,
+      "dois": 25,
+      "rows": 59,
+      "site_family": "A[MA]|B[Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 29.158240032456344,
+      "dois": 10,
+      "rows": 52,
+      "site_family": "A[FA,MA]|B[Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 29.090322791569466,
+      "dois": 49,
+      "rows": 203,
+      "site_family": "A[FA]|B[Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 14.064094051736351,
+      "dois": 8,
+      "rows": 12,
+      "site_family": "A[BA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 13.353699945609245,
+      "dois": 5,
+      "rows": 13,
+      "site_family": "A[PEA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 7.022380479684486,
+      "dois": 3,
+      "rows": 30,
+      "site_family": "A[HIA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 6.972814529399813,
+      "dois": 47,
+      "rows": 194,
+      "site_family": "A[BA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 6.541276464224512,
+      "dois": 6,
+      "rows": 21,
+      "site_family": "A[AN,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 5.74874747321361,
+      "dois": 23,
+      "rows": 120,
+      "site_family": "A[MA,PEA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 5.594206300435813,
+      "dois": 5,
+      "rows": 10,
+      "site_family": "A[BA,Cs,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 5.007437757800422,
+      "dois": 3,
+      "rows": 33,
+      "site_family": "A[MA]|B[Ag,Pb]|C[Br]"
+    },
+    {
+      "distance_to_core": 4.953198309837923,
+      "dois": 3,
+      "rows": 14,
+      "site_family": "A[GU]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 4.8878445474245575,
+      "dois": 22,
+      "rows": 84,
+      "site_family": "A[Cs,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 4.830845917690568,
+      "dois": 95,
+      "rows": 305,
+      "site_family": "A[MA]|B[Pb]|C[Br]"
+    },
+    {
+      "distance_to_core": 4.682468173141715,
+      "dois": 81,
+      "rows": 352,
+      "site_family": "A[Cs,FA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 4.4651862174573465,
+      "dois": 12,
+      "rows": 64,
+      "site_family": "A[Cs,FA]|B[Pb,Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 4.460717691139851,
+      "dois": 4,
+      "rows": 17,
+      "site_family": "A[BDA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 4.370973686677487,
+      "dois": 128,
+      "rows": 647,
+      "site_family": "A[Cs,FA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 4.289743256508437,
+      "dois": 18,
+      "rows": 37,
+      "site_family": "A[FA]|B[Pb]|C[Br]"
+    },
+    {
+      "distance_to_core": 4.006693693100442,
+      "dois": 35,
+      "rows": 104,
+      "site_family": "A[Cs,FA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.831192433068546,
+      "dois": 11,
+      "rows": 27,
+      "site_family": "A[Cs,MA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.6916267339873823,
+      "dois": 693,
+      "rows": 3570,
+      "site_family": "A[Cs,FA,MA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.623191990717153,
+      "dois": 7,
+      "rows": 34,
+      "site_family": "A[MA]|B[Pb,Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.5473993843055274,
+      "dois": 3,
+      "rows": 11,
+      "site_family": "A[Cs,FA]|B[Pb]|C[Br]"
+    },
+    {
+      "distance_to_core": 3.5293428148767605,
+      "dois": 3,
+      "rows": 13,
+      "site_family": "A[Cs,FA,GU,MA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.454161419124385,
+      "dois": 5,
+      "rows": 48,
+      "site_family": "A[AVA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.4182332658760246,
+      "dois": 5,
+      "rows": 33,
+      "site_family": "A[MA]|B[Pb,Sb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.3878484538106353,
+      "dois": 4,
+      "rows": 15,
+      "site_family": "A[EA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.387039385905388,
+      "dois": 3,
+      "rows": 14,
+      "site_family": "A[MA]|B[Co,Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.3717624253129532,
+      "dois": 4,
+      "rows": 29,
+      "site_family": "A[Cs,FA,MA]|B[Pb,Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.3517967516342684,
+      "dois": 189,
+      "rows": 898,
+      "site_family": "A[FA,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.32130454569484,
+      "dois": 146,
+      "rows": 608,
+      "site_family": "A[MA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 3.3063973878530306,
+      "dois": 8,
+      "rows": 56,
+      "site_family": "A[GU,MA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 3.225528661929762,
+      "dois": 172,
+      "rows": 550,
+      "site_family": "A[FA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 2.9985151846134364,
+      "dois": 517,
+      "rows": 2737,
+      "site_family": "A[FA,MA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 2.955070708436395,
+      "dois": 20,
+      "rows": 72,
+      "site_family": "A[FA]|B[Pb]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 2.917350117613137,
+      "dois": 3,
+      "rows": 13,
+      "site_family": "A[BA,FA]|B[Pb]|C[I]"
+    },
+    {
+      "distance_to_core": 2.799917729136515,
+      "dois": 3,
+      "rows": 15,
+      "site_family": "A[FA,MA]|B[Pb,Sn]|C[Br,I]"
+    },
+    {
+      "distance_to_core": 2.7691333570348267,
+      "dois": 32,
+      "rows": 93,
+      "site_family": "A[MA]|B[Bi]|C[I]"
+    },
+    {
+      "distance_to_core": 2.5164124335983713,
+      "dois": 8,
+      "rows": 38,
+      "site_family": "A[Cs,FA,MA]|B[Pb,Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 2.4687518328394846,
+      "dois": 33,
+      "rows": 153,
+      "site_family": "A[MA]|B[Pb,Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 2.169638809204066,
+      "dois": 31,
+      "rows": 122,
+      "site_family": "A[FA,MA]|B[Pb,Sn]|C[I]"
+    },
+    {
+      "distance_to_core": 1.8342895536771724,
+      "dois": 11,
+      "rows": 43,
+      "site_family": "A[FA]|B[Pb,Sn]|C[I]"
+    }
+  ],
+  "core_families": [
+    "A[MA]|B[Pb]|C[I]"
+  ],
+  "created_utc": "2026-07-29T05:43:56.509530+00:00",
+  "design_sha256": "8d370d238e5eb2072d0625b12ca2b06d7e1d18d2c63e234f87f698d3867294e0",
+  "recipient_csv_sha256": "475c352ba11a0f19ff6d483f89808f6fe7bb5030134d5dcedfa30c6a3d35b369",
+  "selected_ood_families": [
+    "B[Pb]",
+    "A[Cs]|B[Sb]|C[I]",
+    "A[Cs]|B[Sn]|C[I]",
+    "B[Pb]|C[I]",
+    "A[Cs]|B[Bi]|C[I]",
+    "A[Cs]|B[Bi,Pb]|C[I]",
+    "A[Cs]|B[Pb]|C[I]",
+    "A[Cs]|B[Sn]|C[Br,I]",
+    "B[Pb]|C[Br,I]",
+    "A[Cs]|B[Sn]|C[Br]",
+    "A[Cs]|B[Pb]|C[Br,I]",
+    "A[Cs]|B[Pb]|C[Br]",
+    "A[MA]|B[Sn]|C[Cl]",
+    "A[MA]|B[Sn]|C[Br]",
+    "A[FA,PEA]|B[Sn]|C[I]",
+    "A[FA,MA]|C[Br,I]",
+    "A[MA]|B[Sn]|C[Br,I]",
+    "A[FA]|B[Sn]|C[Br,I]",
+    "A[MA]|B[Sb]|C[I]",
+    "A[MA]|B[Sn]|C[I]",
+    "A[FA,MA]|B[Sn]|C[I]",
+    "A[FA]|B[Sn]|C[I]",
+    "A[BA]|B[Pb]|C[I]",
+    "A[PEA]|B[Pb]|C[I]",
+    "A[HIA,MA]|B[Pb]|C[I]",
+    "A[BA,MA]|B[Pb]|C[I]",
+    "A[AN,MA]|B[Pb]|C[I]",
+    "A[MA,PEA]|B[Pb]|C[I]",
+    "A[BA,Cs,MA]|B[Pb]|C[I]",
+    "A[MA]|B[Ag,Pb]|C[Br]",
+    "A[GU]|B[Pb]|C[I]",
+    "A[Cs,MA]|B[Pb]|C[I]",
+    "A[MA]|B[Pb]|C[Br]",
+    "A[Cs,FA]|B[Pb]|C[I]",
+    "A[Cs,FA]|B[Pb,Sn]|C[I]",
+    "A[BDA,MA]|B[Pb]|C[I]",
+    "A[Cs,FA]|B[Pb]|C[Br,I]",
+    "A[FA]|B[Pb]|C[Br]",
+    "A[Cs,FA,MA]|B[Pb]|C[I]",
+    "A[Cs,MA]|B[Pb]|C[Br,I]",
+    "A[Cs,FA,MA]|B[Pb]|C[Br,I]",
+    "A[MA]|B[Pb,Sn]|C[Br,I]",
+    "A[Cs,FA]|B[Pb]|C[Br]",
+    "A[Cs,FA,GU,MA]|B[Pb]|C[Br,I]",
+    "A[AVA,MA]|B[Pb]|C[I]",
+    "A[MA]|B[Pb,Sb]|C[I]"
+  ],
+  "selected_ood_family_rows": 8274,
+  "status": "frozen-outcome-blind-split",
+  "test_dois": 1624,
+  "test_fraction": 0.20073754185064777,
+  "test_rows": 8274,
+  "train_dois": 5723,
+  "train_rows": 31453,
+  "valid_rows": 41218
+}

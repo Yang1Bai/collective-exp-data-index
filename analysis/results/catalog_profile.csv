@@ -1,0 +1,10 @@
+metric,value
+catalog_records,118
+experimental_records,90
+mixed_records,28
+open_access_records,109
+registration_records,5
+restricted_records,4
+unknown_license_records,21
+missing_doi_records,56
+verification_url_equals_homepage,77

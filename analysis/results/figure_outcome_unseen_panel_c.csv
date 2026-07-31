@@ -1,0 +1,13 @@
+target,learner,representation,mean_effect_percent
+Starrydata,extra_trees,composition,0.8769595401816898
+Starrydata,extra_trees,composition_context,0.28864234084722107
+Starrydata,random_forest,composition,1.0108820044145583
+Starrydata,random_forest,composition_context,1.1104036682215144
+Starrydata,ridge,composition,-0.36586034283877755
+Starrydata,ridge,composition_context,2.5290896997732517
+TRI OER,extra_trees,element_fraction,-0.0681211944427657
+TRI OER,extra_trees,periodic_summary,0.5603418353856737
+TRI OER,random_forest,element_fraction,-0.3517002561084696
+TRI OER,random_forest,periodic_summary,0.19527530263794282
+TRI OER,ridge,element_fraction,-4.928207516129465
+TRI OER,ridge,periodic_summary,-6.90776481615967

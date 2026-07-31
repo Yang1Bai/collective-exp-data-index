@@ -1,0 +1,769 @@
+{
+  "status": "verified-structural-endpoint-absence",
+  "scope": "ZIP central-directory member names only; no member contents opened",
+  "file_ids": [
+    "47631232",
+    "47632315",
+    "47632330"
+  ],
+  "archives": [
+    {
+      "file_id": "47631232",
+      "archive_name": "TP_z10_01.zip",
+      "archive_bytes": 28601785,
+      "archive_sha256": "3e598ec1507bb0b47e46c0c1cc514a2f2f55b7cf8fcd57aea58906670e9140fb",
+      "member_count": 28,
+      "csv_member_count": 14,
+      "metadata_member_count": 14,
+      "et_t23_csv_count": 1,
+      "at_t23_csv_count": 0,
+      "members": [
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T10.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T10_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T23.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": true,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T23_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T45.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_01_ET_T45_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_02_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_02_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_03_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_03_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_04_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_04_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_05_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_05_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_06_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_06_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_07_exCU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_07_exCU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_08_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_08_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_09_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_09_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_10_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_10_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_11_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_11_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_12_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_01/TP_z10_01_12_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        }
+      ]
+    },
+    {
+      "file_id": "47632315",
+      "archive_name": "TP_z10_02.zip",
+      "archive_bytes": 44036009,
+      "archive_sha256": "a81ae6920b5edfd8ea49477291bd340b3eb790b9a714af387817a9c98c166235",
+      "member_count": 36,
+      "csv_member_count": 18,
+      "metadata_member_count": 18,
+      "et_t23_csv_count": 1,
+      "at_t23_csv_count": 0,
+      "members": [
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T10.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T10_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T23.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": true,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T23_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T45.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_01_ET_T45_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_02_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_02_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_03_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_03_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_04_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_04_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_05_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_05_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_06_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_06_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_07_exCU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_07_exCU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_08_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_08_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_09_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_09_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_10_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_10_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_11_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_11_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_12_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_12_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_13_exCU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_13_exCU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_14_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_14_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_15_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_15_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_16_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_02/TP_z10_02_16_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        }
+      ]
+    },
+    {
+      "file_id": "47632330",
+      "archive_name": "TP_z10_03.zip",
+      "archive_bytes": 44825788,
+      "archive_sha256": "6c245b93d37102546354c075da0ce95905bfef2b22f738af975fa1080bc744dd",
+      "member_count": 38,
+      "csv_member_count": 19,
+      "metadata_member_count": 19,
+      "et_t23_csv_count": 1,
+      "at_t23_csv_count": 0,
+      "members": [
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T10.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T10_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T23.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": true,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T23_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T45.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_01_ET_T45_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_02_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_02_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_03_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_03_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_04_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_04_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_05_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_05_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_06_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_06_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_07_exCU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_07_exCU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_08_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_08_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_09_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_09_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_10_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_10_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_11_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_11_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_12_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_12_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_13_exCU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_13_exCU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_14_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_14_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_15_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_15_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_16_ZYK.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_16_ZYK_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_17_CU.csv",
+          "is_csv": true,
+          "is_meta": false,
+          "is_et_t23": false,
+          "is_at_t23": false
+        },
+        {
+          "name": "TP_z10_03/TP_z10_03_17_CU_meta.txt",
+          "is_csv": false,
+          "is_meta": true,
+          "is_et_t23": false,
+          "is_at_t23": false
+        }
+      ]
+    }
+  ],
+  "all_have_exactly_one_et_t23": true,
+  "all_lack_at_t23": true,
+  "numeric_csv_rows_opened": false,
+  "substitution_attempted": false,
+  "claim_guard": "This audit proves structural absence of the frozen AT_T23 endpoint. It does not authorize another temperature, time point, endpoint, or condition group as a replacement."
+}

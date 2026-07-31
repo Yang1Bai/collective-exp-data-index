@@ -1,0 +1,182 @@
+{
+  "program_name": "Experimental optical knowledge borrowing for molecular photocatalysis",
+  "version": 1,
+  "frozen_utc": "2026-07-24T19:52:08Z",
+  "status": "retrospective design frozen after the source and target papers and file schemas were inspected; no cross-database model was fitted and no aggregate target-outcome analysis was performed before this freeze",
+  "purpose": "Test whether experimentally learned molecular optical properties repair prediction and ranking in chemically distant, data-poor regions of an independently measured molecular photocatalysis programme.",
+  "scientific_hypothesis": "For an organic molecular photocatalyst, externally learned light-absorption and excited-state behavior supplies mechanistically adjacent information that is not fully recoverable from a small recipient-only structure-activity dataset. The benefit should concentrate in recipient regions with sparse target labels but adequate optical-source support.",
+  "claim_guard": "A positive result would establish a retrospective experimental-database borrowing edge from molecular optical spectroscopy to molecular photocatalytic hydrogen evolution. It would not establish prospective laboratory discovery, a universal benefit of optical descriptors, or transfer to inorganic photocatalysts. A null or harmful result remains in the borrowing map.",
+  "source": {
+    "resource_id": "deep4chem-optical-properties",
+    "role": "donor",
+    "article_doi": "10.1038/s41597-020-00634-8",
+    "dataset_doi": "10.6084/m9.figshare.12045567.v2",
+    "file_name": "DB for chromophore_Sci_Data_rev02.csv",
+    "download_url": "https://ndownloader.figshare.com/files/23637518",
+    "required_md5": "6619ca296ebbf14e8c80dda084b43ac5",
+    "required_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+    "declared_grain": "one chromophore-solvent or chromophore-solid-state experimental optical record",
+    "candidate_properties": [
+      "Absorption max (nm)",
+      "Emission max (nm)",
+      "Lifetime (ns)",
+      "Quantum yield",
+      "log(e/mol-1 dm3 cm-1)"
+    ],
+    "source_state_policy": "The primary donor target for each property is the per-chromophore median across reported environments. Water, methanol, alcohol-family, and solid-state subsets are prespecified sensitivities because the recipient uses a triethylamine-methanol-water mixture and suspended molecular solids.",
+    "direct_entity_exclusion": "Every canonical recipient molecule is removed from donor training before any donor model is fitted.",
+    "near_neighbor_sensitivity": "A separate strict sensitivity removes donor molecules with Morgan-fingerprint Tanimoto similarity at least 0.95 to any recipient molecule; this cannot replace the exact-entity-excluded primary analysis."
+  },
+  "target": {
+    "resource_id": "liverpool-molecular-photocatalyst-library",
+    "role": "recipient",
+    "article_doi": "10.1039/D1SC02150H",
+    "pmcid": "PMC8372320",
+    "supplementary_archive_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8372320/supplementaryFiles?includeInlineImage=false",
+    "development_file": {
+      "name": "SC-012-D1SC02150H-s005.csv",
+      "required_md5": "d0749b768435d9df4683222bf7eafbb8",
+      "required_sha256": "02e0aa0a293ddb9cf5cb2009249f0c1c2f1e7f8d4a8e3090ce67d0d69dc4e8b7",
+      "expected_rows": 572
+    },
+    "blind_file": {
+      "name": "SC-012-D1SC02150H-s006.csv",
+      "required_md5": "cdad40302e4debe4fea8ea0a5b742f67",
+      "required_sha256": "be28a176c2f855d17846711c24b7ce8d4f52d5a89c447d6c0a79a4049aeea6f6",
+      "expected_rows": 96
+    },
+    "declared_grain": "one experimentally tested aromatic molecule under the common sacrificial hydrogen-evolution protocol",
+    "outcome": "HER (micromol per hour)",
+    "outcome_transform": "log1p",
+    "prespecified_activity_thresholds_micromol_per_hour": {
+      "active": 1.07,
+      "high_activity": 12.5
+    },
+    "development_use": "The 572-molecule library is the only target-outcome set available for recipient model fitting, nested admission, and method selection.",
+    "blind_use": "The published 96-molecule blind set is locked for one final evaluation after donor-property admission and model choices are frozen from the development set.",
+    "blind_outcome_sentinel": "No blind HER value may be joined to features until a blind-release manifest hashes the selected donor features, model settings, target label-budget draws, OOD scopes, controls, and analysis code."
+  },
+  "outcome_independent_audit": {
+    "structure_standardization": "RDKit canonical isomeric SMILES after sanitization; no tautomer standardization in the primary audit",
+    "fingerprint": {
+      "type": "Morgan bit vector",
+      "radius": 2,
+      "n_bits": 2048,
+      "use_chirality": true
+    },
+    "scaffold": "Bemis-Murcko canonical scaffold; acyclic molecules receive a deterministic acyclic scaffold label",
+    "ood_distance": "one minus maximum Morgan Tanimoto similarity to the eligible target-development molecules",
+    "primary_ood_scope": "the 40 percent of blind molecules with the lowest maximum similarity to target development, with ties broken by canonical-SMILES hash",
+    "secondary_ood_scope": "the 25 percent of blind molecules with the lowest maximum similarity to target development",
+    "source_support": "maximum Morgan Tanimoto similarity to exact-recipient-excluded donor molecules plus donor ensemble uncertainty",
+    "minimum_quality": {
+      "development_rows": 572,
+      "blind_rows": 96,
+      "maximum_invalid_smiles_fraction": 0.01,
+      "maximum_cross_split_exact_molecule_overlap": 0,
+      "minimum_retained_donor_unique_molecules": 5000,
+      "minimum_admissible_donor_properties": 1,
+      "minimum_primary_ood_molecules": 35
+    }
+  },
+  "donor_modeling": {
+    "representation": "Morgan fingerprint of the chromophore; solvent is not used in the primary per-molecule-median donor model",
+    "models": [
+      "ExtraTreesRegressor",
+      "RandomForestRegressor"
+    ],
+    "primary_model": "ExtraTreesRegressor",
+    "validation": "five-fold canonical-scaffold grouped cross-validation with all records for a chromophore kept together",
+    "property_admission_gate": {
+      "minimum_unique_molecules": 300,
+      "oof_r2_greater_than": 0.0,
+      "oof_spearman_greater_than": 0.15,
+      "bootstrap_95pct_lower_spearman_greater_than": 0.0
+    },
+    "prediction_vector": "one prediction and one ensemble uncertainty per admitted optical property",
+    "abstention": "No optical property failing its donor-only skill gate can enter the recipient model."
+  },
+  "recipient_modeling": {
+    "target_representation": "Morgan fingerprint with radius 2 and 2048 bits",
+    "label_budgets": [
+      30,
+      60,
+      120,
+      572
+    ],
+    "primary_label_budget": 60,
+    "budget_sampling": "100 deterministic scaffold-group draws made without target outcomes; all model comparisons share the same draws",
+    "models": [
+      "RandomForestRegressor",
+      "ExtraTreesRegressor"
+    ],
+    "primary_model": "RandomForestRegressor",
+    "nested_development_admission": "Within the 572-molecule development set, admitted donor properties are retained as a single prespecified vector only if scaffold-group cross-validation at the primary label budget improves log1p-HER RMSE by at least 2 percent versus target-only and exceeds the matched shuffled-vector median. The 96 blind outcomes cannot influence this decision.",
+    "feature_forms": [
+      "raw admitted donor predictions and uncertainties",
+      "rank-normalized admitted donor predictions and uncertainties"
+    ],
+    "feature_form_selection": "select once by nested development performance, then freeze before blind release"
+  },
+  "baselines_and_controls": {
+    "required": [
+      "target molecular structure only",
+      "published target-side calculated electronic descriptors only plus target structure",
+      "admitted donor optical vector plus target structure",
+      "admitted donor optical vector plus published calculated descriptors plus target structure",
+      "column-wise shuffled admitted donor vector plus target structure",
+      "equal-dimensional Gaussian random feature vector plus target structure"
+    ],
+    "wrong_domain_control": "A molecular melting-point donor prediction is a prespecified secondary wrong-domain control if its independently versioned open dataset passes the same source-only skill and coverage gates.",
+    "lookup_upper_bound": "Direct optical measurements for exact recipient molecules, when present, may be reported only as a labeled real-world lookup upper bound and never as the strict-transfer primary result."
+  },
+  "endpoints": {
+    "primary": "paired relative reduction in log1p-HER RMSE versus target-only in the frozen hard-OOD 40 percent of the 96-molecule blind set at target label budget 60",
+    "required_absolute_utility": "positive donor-augmented R2 in the primary blind OOD scope",
+    "secondary_prediction": [
+      "full-blind RMSE and MAE",
+      "hard-OOD 25-percent RMSE",
+      "Spearman rank correlation",
+      "active and high-activity average precision",
+      "calibration of donor-support and prediction uncertainty"
+    ],
+    "secondary_exploration": [
+      "high-activity enrichment among the top 5, 10, and 20 ranked blind molecules",
+      "experiments required to recover 25 and 50 percent of high-activity blind molecules",
+      "coverage-benefit curve for source-support-gated abstention"
+    ]
+  },
+  "inference": {
+    "resampling_unit": "Bemis-Murcko scaffold in the blind set",
+    "bootstrap_replicates": 10000,
+    "paired_test": "paired scaffold-cluster bootstrap and paired scaffold-sign randomization where evaluable",
+    "multiplicity": "Holm correction over three named primary-family contrasts: donor versus target-only, donor versus shuffled donor, and donor-plus-calculated versus calculated-only",
+    "success_gate": {
+      "minimum_relative_rmse_gain": 0.05,
+      "bootstrap_95pct_lower_gain_greater_than": 0.0,
+      "holm_p_below": 0.05,
+      "absolute_r2_greater_than": 0.0,
+      "minimum_gain_over_shuffled_donor": 0.0,
+      "maximum_allowed_full_blind_relative_rmse_harm": 0.02
+    },
+    "reporting": "Report every frozen baseline, control, label budget, OOD scope, and admitted or rejected optical property. Do not replace a failed primary endpoint with a favorable secondary endpoint."
+  },
+  "leakage_exclusions": [
+    "canonical recipient molecule from donor training",
+    "recipient article DOI or supplementary record from donor provenance",
+    "blind HER values from all development, feature selection, source admission, and hyperparameter decisions",
+    "blind membership from label-budget selection except for the already published fixed split",
+    "same canonical scaffold crossing a resampling unit",
+    "post-outcome feature engineering"
+  ],
+  "audit_sentinels": [
+    "verify exact source and target file hashes before parsing",
+    "save a no-outcome target metadata table containing split, canonical structure, scaffold, OOD distance, and source support",
+    "hash the no-outcome metadata table",
+    "hash donor out-of-fold predictions and donor admission decisions",
+    "hash development-only target label-budget draws and nested admission results",
+    "write and hash a blind-release manifest before joining blind HER values",
+    "verify that permuting blind outcomes cannot change features, scopes, admissions, or model settings",
+    "archive positive, null, harmful, and abstaining outcomes in the knowledge-borrowing map"
+  ]
+}

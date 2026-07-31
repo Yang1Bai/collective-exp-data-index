@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2",
+  "claim_guard": "Verified retrospective within-programme perturbation result; external confirmation remains required.",
+  "composition_null_rows": 500,
+  "composition_summary_sha256": "47db8c67c94fcc2d2e08c9ed9077920c743478530f5a8433ed2ba90f387149ed",
+  "decisions": {
+    "A": "ranking-only",
+    "B": "positive-predictive-and-ranking",
+    "C": "abstain-or-negative",
+    "D": "positive-predictive-and-ranking"
+  },
+  "design_sha256": "765d53d4a3d90f4532ef7699e91b8d6df2cf595d3fcff0b34a53fcfa6577a734",
+  "five_label_draw_rows": 800,
+  "status": "verified-complete",
+  "temporal_candidate_rows": 80,
+  "temporal_summary_sha256": "c5963fc62fb3ecf7c2832e6b1e590d3634b7f3bdb2d94c0c411b0efca00003b3"
+}

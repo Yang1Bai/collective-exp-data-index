@@ -1,0 +1,1458 @@
+{
+  "status": "complete-method-development",
+  "created_utc": "2026-07-23T23:25:18.445664+00:00",
+  "design_sha256": "a9052c01554ff43916065e4f2870765f2247fbc672899c6f7f3f4578336bf37e",
+  "data": {
+    "target_rows": 1067,
+    "target_groups": 150,
+    "source_rows": 539,
+    "source_groups": 93,
+    "development_rows": 639,
+    "evaluation_rows": 428,
+    "evaluation_groups": 59
+  },
+  "donor_group_oof_r2": {
+    "planned_state": 0.6672380409152855,
+    "characterized_state": 0.6876268642308287
+  },
+  "audits": [
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "repeat": 0,
+      "target_train_n": 30,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "repeat": 1,
+      "target_train_n": 30,
+      "target_train_groups": 5,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 328,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "repeat": 2,
+      "target_train_n": 30,
+      "target_train_groups": 12,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 333,
+      "source_fold_max_n": 336,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 0,
+      "target_train_n": 60,
+      "target_train_groups": 15,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 334,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 1,
+      "target_train_n": 60,
+      "target_train_groups": 9,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 325,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "repeat": 2,
+      "target_train_n": 60,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 329,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "repeat": 0,
+      "target_train_n": 30,
+      "target_train_groups": 9,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "repeat": 1,
+      "target_train_n": 30,
+      "target_train_groups": 10,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 330,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "repeat": 2,
+      "target_train_n": 30,
+      "target_train_groups": 8,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 333,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "repeat": 0,
+      "target_train_n": 60,
+      "target_train_groups": 14,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 331,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "repeat": 1,
+      "target_train_n": 60,
+      "target_train_groups": 11,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 328,
+      "source_fold_max_n": 337,
+      "evaluation_groups_excluded": 59
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "repeat": 2,
+      "target_train_n": 60,
+      "target_train_groups": 12,
+      "source_final_n": 338,
+      "source_final_groups": 60,
+      "source_fold_min_n": 328,
+      "source_fold_max_n": 338,
+      "evaluation_groups_excluded": 59
+    }
+  ],
+  "summaries": [
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.19361629472233943,
+      "ci95": [
+        -0.9094395228096857,
+        0.5222069333650068
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": 0.08287841480636288,
+      "mean_aug_r2": -1.410942820492558,
+      "mean_delta_r2": -1.4938212352989209
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.02955586497387591,
+      "ci95": [
+        -0.10952727989278102,
+        0.0504155499450292
+      ],
+      "positive_runs": 3,
+      "mean_base_r2": 0.3352502901741434,
+      "mean_aug_r2": 0.29266159677748654,
+      "mean_delta_r2": -0.04258869339665686
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.13586317398643358,
+      "ci95": [
+        0.08038405470811236,
+        0.1913422932647548
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": 0.20317007534829382,
+      "mean_aug_r2": 0.3947875166160446,
+      "mean_delta_r2": 0.19161744126775077
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.1974286019856534,
+      "ci95": [
+        -1.0269993795458465,
+        0.6321421755745398
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -0.30589886799967814,
+      "mean_aug_r2": -2.2417825606095323,
+      "mean_delta_r2": -1.9358836926098542
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.26507368472210946,
+      "ci95": [
+        -1.2533479544692123,
+        0.7232005850249933
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": -0.38595886342824254,
+      "mean_aug_r2": -3.3730789471142635,
+      "mean_delta_r2": -2.9871200836860203
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.2179758814514014,
+      "ci95": [
+        -0.5103938297600268,
+        0.07444206685722399
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.08287841480636288,
+      "mean_aug_r2": -0.5891281280892521,
+      "mean_delta_r2": -0.6720065428956149
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.1596093201442748,
+      "ci95": [
+        -0.28340270712417137,
+        -0.03581593316437823
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.3352502901741434,
+      "mean_aug_r2": 0.1439238222889364,
+      "mean_delta_r2": -0.191326467885207
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.0887435728617799,
+      "ci95": [
+        -0.1577406967829387,
+        -0.01974644894062111
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.20317007534829382,
+      "mean_aug_r2": 0.11899255124601311,
+      "mean_delta_r2": -0.08417752410228072
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.2671764837621637,
+      "ci95": [
+        -0.721441461020571,
+        0.18708849349624368
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": -0.30589886799967814,
+      "mean_aug_r2": -1.5413753083951243,
+      "mean_delta_r2": -1.235476440395446
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.22175859500830258,
+      "ci95": [
+        -0.5582386275463636,
+        0.11472143752975844
+      ],
+      "positive_runs": 3,
+      "mean_base_r2": -0.38595886342824254,
+      "mean_aug_r2": -1.217012190731712,
+      "mean_delta_r2": -0.8310533273034694
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1388016432809306,
+      "ci95": [
+        0.06734667414399746,
+        0.2102566124178637
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.2337126180854636,
+      "mean_aug_r2": 0.08287841480636288,
+      "mean_delta_r2": 0.3165910328918265
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.24667778311683886,
+      "ci95": [
+        0.16596601138337896,
+        0.32738955485029875
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.1568861738633588,
+      "mean_aug_r2": 0.3352502901741434,
+      "mean_delta_r2": 0.4921364640375021
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.2067871606649898,
+      "ci95": [
+        0.11895813830023651,
+        0.29461618302974313
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.16589217075135138,
+      "mean_aug_r2": 0.20317007534829382,
+      "mean_delta_r2": 0.3690622460996453
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.05636202631874643,
+      "ci95": [
+        -0.06630503903790173,
+        0.1790290916753946
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -0.4858269647222396,
+      "mean_aug_r2": -0.30589886799967814,
+      "mean_delta_r2": 0.1799280967225615
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.049827657417359596,
+      "ci95": [
+        -0.04887920461532599,
+        0.14853451945004517
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -0.6107815122547978,
+      "mean_aug_r2": -0.38595886342824254,
+      "mean_delta_r2": 0.22482264882655517
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.046726720698152376,
+      "ci95": [
+        -0.003814641846770321,
+        0.09726808324307507
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.08287841480636288,
+      "mean_aug_r2": 0.16802993015924222,
+      "mean_delta_r2": 0.08515151535287938
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.0212314429017208,
+      "ci95": [
+        -0.017063252705563317,
+        0.059526138509004914
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": 0.3352502901741434,
+      "mean_aug_r2": 0.35262998105410215,
+      "mean_delta_r2": 0.017379690879958793
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.03771257768052211,
+      "ci95": [
+        -0.017377563348605997,
+        0.0928027187096502
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": 0.20317007534829382,
+      "mean_aug_r2": 0.22490690169466646,
+      "mean_delta_r2": 0.02173682634637264
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.051820998334877,
+      "ci95": [
+        0.004082418897705546,
+        0.09955957777204846
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -0.30589886799967814,
+      "mean_aug_r2": -0.12848173810024927,
+      "mean_delta_r2": 0.17741712989942882
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.06379481353365155,
+      "ci95": [
+        -0.02043032618928102,
+        0.14801995325658412
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -0.38595886342824254,
+      "mean_aug_r2": -0.15428587416674208,
+      "mean_delta_r2": 0.23167298926150048
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.03264301119917872,
+      "ci95": [
+        -0.23449683891289602,
+        0.2997828613112535
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": -18.60544119815887,
+      "mean_aug_r2": -0.7100044523322545,
+      "mean_delta_r2": 17.895436745826615
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.04635923573795934,
+      "ci95": [
+        -0.27306034358867814,
+        0.18034187211275948
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.3252928271466403,
+      "mean_aug_r2": 0.1449936951727159,
+      "mean_delta_r2": -0.18029913197392433
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.08347364478594604,
+      "ci95": [
+        -0.04877452246725461,
+        0.2157218120391467
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.4017971400519293,
+      "mean_aug_r2": 0.4971368922859165,
+      "mean_delta_r2": 0.09533975223398722
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.0023924914557297097,
+      "ci95": [
+        -0.06251371697784519,
+        0.06729869988930462
+      ],
+      "positive_runs": 4,
+      "mean_base_r2": 0.17893109013951214,
+      "mean_aug_r2": 0.15419361945603013,
+      "mean_delta_r2": -0.024737470683482
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.04080884208032852,
+      "ci95": [
+        -0.39318680447760396,
+        0.3115691203169469
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": -202.41398073703624,
+      "mean_aug_r2": -10.52589282346485,
+      "mean_delta_r2": 191.8880879135714
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.13289758256084325,
+      "ci95": [
+        -0.23145938835981933,
+        -0.03433577676186718
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": -18.60544119815887,
+      "mean_aug_r2": -15.25622837466643,
+      "mean_delta_r2": 3.349212823492438
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.18941534512457725,
+      "ci95": [
+        -0.2751785316861572,
+        -0.1036521585629973
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.3252928271466403,
+      "mean_aug_r2": 0.02710014014704312,
+      "mean_delta_r2": -0.29819268699959717
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.17022887758868493,
+      "ci95": [
+        -0.26903262365632635,
+        -0.0714251315210435
+      ],
+      "positive_runs": 0,
+      "mean_base_r2": 0.4017971400519293,
+      "mean_aug_r2": 0.1605458462892745,
+      "mean_delta_r2": -0.2412512937626548
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.1256309331897372,
+      "ci95": [
+        -0.2504281759647369,
+        -0.0008336904147375063
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": 0.17893109013951214,
+      "mean_aug_r2": -0.08249328200957777,
+      "mean_delta_r2": -0.26142437214908987
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.13849926282099576,
+      "ci95": [
+        -0.2360739137918224,
+        -0.04092461185016909
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": -202.41398073703624,
+      "mean_aug_r2": -164.09955548575647,
+      "mean_delta_r2": 38.3144252512798
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1125233599537368,
+      "ci95": [
+        -0.03127209821741425,
+        0.2563188181248879
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -9.969843673132447,
+      "mean_aug_r2": -18.60544119815887,
+      "mean_delta_r2": -8.635597525026423
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.18106966783023537,
+      "ci95": [
+        0.10829714674589479,
+        0.25384218891457594
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": 0.008557731775305154,
+      "mean_aug_r2": 0.3252928271466403,
+      "mean_delta_r2": 0.31673509537133515
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.2460403151075424,
+      "ci95": [
+        0.20965319157953166,
+        0.28242743863555314
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.05766859548042723,
+      "mean_aug_r2": 0.4017971400519293,
+      "mean_delta_r2": 0.4594657355323566
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1557281669951327,
+      "ci95": [
+        0.06482657567563893,
+        0.24662975831462647
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -0.14926295000472034,
+      "mean_aug_r2": 0.17893109013951214,
+      "mean_delta_r2": 0.3281940401442325
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.03345722914778948,
+      "ci95": [
+        -0.09320906602559098,
+        0.16012352432116994
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -106.41751286553348,
+      "mean_aug_r2": -202.41398073703624,
+      "mean_delta_r2": -95.99646787150279
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.07419704444838415,
+      "ci95": [
+        -0.10119482133411417,
+        0.24958891023088248
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -18.60544119815887,
+      "mean_aug_r2": -2.288054471613226,
+      "mean_delta_r2": 16.317386726545646
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.032919974756366696,
+      "ci95": [
+        -0.03421435684940399,
+        0.10005430636213739
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": 0.3252928271466403,
+      "mean_aug_r2": 0.3393381787149185,
+      "mean_delta_r2": 0.014045351568278205
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.058796759448693656,
+      "ci95": [
+        -0.010820479439839395,
+        0.12841399833722672
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.4017971400519293,
+      "mean_aug_r2": 0.47161885116410474,
+      "mean_delta_r2": 0.06982171111217544
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.022875886821981176,
+      "ci95": [
+        -0.002730349236636523,
+        0.048482122880598874
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.17893109013951214,
+      "mean_aug_r2": 0.20648931194533526,
+      "mean_delta_r2": 0.02755822180582311
+    },
+    {
+      "contract": "characterized_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.053382924826274304,
+      "ci95": [
+        -0.16484569443464134,
+        0.27161154408718996
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -202.41398073703624,
+      "mean_aug_r2": -27.97084386014465,
+      "mean_delta_r2": 174.4431368768916
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.0851997173096783,
+      "ci95": [
+        0.0005225512134635069,
+        0.1698768834058931
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": 0.19653926228476332,
+      "mean_aug_r2": 0.34886419344658254,
+      "mean_delta_r2": 0.15232493116181922
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.016320413544348874,
+      "ci95": [
+        -0.042270804296437134,
+        0.07491163138513489
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": 0.3247293692061139,
+      "mean_aug_r2": 0.3483572426500504,
+      "mean_delta_r2": 0.023627873443936576
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.12459360311855432,
+      "ci95": [
+        0.03482781370660358,
+        0.21435939253050507
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -0.001825688477083556,
+      "mean_aug_r2": 0.2844789935119401,
+      "mean_delta_r2": 0.28630468198902365
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1386330783616415,
+      "ci95": [
+        0.02353553514615439,
+        0.25373062157712856
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": 0.3333657243197161,
+      "mean_aug_r2": 0.5217685442929113,
+      "mean_delta_r2": 0.18840281997319513
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.006356887876984857,
+      "ci95": [
+        -0.12583455266206361,
+        0.11312077690809391
+      ],
+      "positive_runs": 4,
+      "mean_base_r2": -0.1343556218746931,
+      "mean_aug_r2": -0.16248345598981248,
+      "mean_delta_r2": -0.028127834115119384
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.08891370566033491,
+      "ci95": [
+        -0.1304986299482051,
+        -0.0473287813724647
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.19653926228476332,
+      "mean_aug_r2": 0.04112086310141377,
+      "mean_delta_r2": -0.15541839918334954
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.08520691407017764,
+      "ci95": [
+        -0.14421397927208687,
+        -0.0261998488682684
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.3247293692061139,
+      "mean_aug_r2": 0.2024825858621858,
+      "mean_delta_r2": -0.12224678334392805
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.07350662264945443,
+      "ci95": [
+        -0.14499126088185493,
+        -0.0020219844170539236
+      ],
+      "positive_runs": 2,
+      "mean_base_r2": -0.001825688477083556,
+      "mean_aug_r2": -0.18174401780983263,
+      "mean_delta_r2": -0.17991832933274907
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.15455461832433018,
+      "ci95": [
+        -0.23742337658711685,
+        -0.07168586006154351
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": 0.3333657243197161,
+      "mean_aug_r2": 0.10638028502392696,
+      "mean_delta_r2": -0.22698543929578918
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.06598920513433991,
+      "ci95": [
+        -0.1616727532793048,
+        0.029694343010625
+      ],
+      "positive_runs": 3,
+      "mean_base_r2": -0.1343556218746931,
+      "mean_aug_r2": -0.23433109552360687,
+      "mean_delta_r2": -0.09997547364891375
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.18310912414678399,
+      "ci95": [
+        0.1256620294032886,
+        0.24055621889027937
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.21128626574574966,
+      "mean_aug_r2": 0.19653926228476332,
+      "mean_delta_r2": 0.407825528030513
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.2031868256173493,
+      "ci95": [
+        0.10330288526403861,
+        0.30307076597065996
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.1304000320170372,
+      "mean_aug_r2": 0.3247293692061139,
+      "mean_delta_r2": 0.45512940122315104
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.15532545084961805,
+      "ci95": [
+        0.09825418715254533,
+        0.21239671454669076
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.4062081974660189,
+      "mean_aug_r2": -0.001825688477083556,
+      "mean_delta_r2": 0.40438250898893535
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.2251883677446426,
+      "ci95": [
+        0.1580712934036922,
+        0.292305442085593
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.10062219639476587,
+      "mean_aug_r2": 0.3333657243197161,
+      "mean_delta_r2": 0.43398792071448195
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.10503374306048904,
+      "ci95": [
+        0.035947186510318696,
+        0.1741202996106594
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -0.4391476991655141,
+      "mean_aug_r2": -0.1343556218746931,
+      "mean_delta_r2": 0.30479207729082103
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.03045170459933267,
+      "ci95": [
+        -0.022445910261738165,
+        0.0833493194604035
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.19653926228476332,
+      "mean_aug_r2": 0.2630748277492247,
+      "mean_delta_r2": 0.06653556546446135
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.02932433080983527,
+      "ci95": [
+        -0.12338584736266678,
+        0.06473718574299622
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.3247293692061139,
+      "mean_aug_r2": 0.2850637561240786,
+      "mean_delta_r2": -0.03966561308203526
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.049281036213952106,
+      "ci95": [
+        -0.021768399939562408,
+        0.12033047236746662
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -0.001825688477083556,
+      "mean_aug_r2": 0.13404058197488072,
+      "mean_delta_r2": 0.13586627045196428
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.07619740830933434,
+      "ci95": [
+        0.03519611329190725,
+        0.11719870332676144
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": 0.3333657243197161,
+      "mean_aug_r2": 0.43284428357789334,
+      "mean_delta_r2": 0.09947855925817722
+    },
+    {
+      "contract": "planned_state",
+      "budget": 30,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.02554050505672163,
+      "ci95": [
+        -0.017296460370856307,
+        0.06837747048429957
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -0.1343556218746931,
+      "mean_aug_r2": -0.08349750369496849,
+      "mean_delta_r2": 0.05085811817972463
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1028444570386913,
+      "ci95": [
+        -0.06175825401858287,
+        0.26744716809596547
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": 0.04756609255154301,
+      "mean_aug_r2": 0.3228689873092774,
+      "mean_delta_r2": 0.27530289475773434
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.03688320104507445,
+      "ci95": [
+        -0.25114595663075034,
+        0.17737955454060148
+      ],
+      "positive_runs": 4,
+      "mean_base_r2": 0.16517974972019625,
+      "mean_aug_r2": 0.10265747714181081,
+      "mean_delta_r2": -0.06252227257838545
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.0856111883714486,
+      "ci95": [
+        -0.11463530606957248,
+        0.2858576828124697
+      ],
+      "positive_runs": 5,
+      "mean_base_r2": -0.01120942573795964,
+      "mean_aug_r2": 0.27966082163260736,
+      "mean_delta_r2": 0.29087024737056694
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.18506169322177368,
+      "ci95": [
+        0.046409194806743326,
+        0.32371419163680404
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": 0.055550698994552165,
+      "mean_aug_r2": 0.4641039965879432,
+      "mean_delta_r2": 0.4085532975933911
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "predicted_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.1801704555321581,
+      "ci95": [
+        -0.016458867795381915,
+        0.3767997788596981
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": -0.3263036828271901,
+      "mean_aug_r2": 0.257709286863862,
+      "mean_delta_r2": 0.5840129696910521
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.01280739893746422,
+      "ci95": [
+        -0.06308875869773715,
+        0.08870355657266558
+      ],
+      "positive_runs": 3,
+      "mean_base_r2": 0.04756609255154301,
+      "mean_aug_r2": 0.12881426094619586,
+      "mean_delta_r2": 0.08124816839465283
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.0025480999282528525,
+      "ci95": [
+        -0.10520003490532338,
+        0.10010383504881769
+      ],
+      "positive_runs": 3,
+      "mean_base_r2": 0.16517974972019625,
+      "mean_aug_r2": 0.16275936226382962,
+      "mean_delta_r2": -0.0024203874563666597
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": -0.040219193367417735,
+      "ci95": [
+        -0.08528558571997422,
+        0.004847198985138738
+      ],
+      "positive_runs": 1,
+      "mean_base_r2": -0.01120942573795964,
+      "mean_aug_r2": -0.06854356341470022,
+      "mean_delta_r2": -0.05733413767674059
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.02161726207477095,
+      "ci95": [
+        -0.07708362373032253,
+        0.12031814787986443
+      ],
+      "positive_runs": 4,
+      "mean_base_r2": 0.055550698994552165,
+      "mean_aug_r2": 0.19089204824992326,
+      "mean_delta_r2": 0.13534134925537109
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "shuffled_uts_residual_anchor",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.015720559164145928,
+      "ci95": [
+        -0.11841500224444458,
+        0.14985612057273645
+      ],
+      "positive_runs": 4,
+      "mean_base_r2": -0.3263036828271901,
+      "mean_aug_r2": -0.11606542934107214,
+      "mean_delta_r2": 0.210238253486118
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.18782552669956104,
+      "ci95": [
+        0.086612278129236,
+        0.2890387752698861
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.47761017898472385,
+      "mean_aug_r2": 0.04756609255154301,
+      "mean_delta_r2": 0.5251762715362668
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.19595273848690942,
+      "ci95": [
+        0.025772638921814695,
+        0.36613283805200414
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -0.41990933188836965,
+      "mean_aug_r2": 0.16517974972019625,
+      "mean_delta_r2": 0.585089081608566
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.17110442191621222,
+      "ci95": [
+        0.06233865336048336,
+        0.27987019047194106
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.4411955498479387,
+      "mean_aug_r2": -0.01120942573795964,
+      "mean_delta_r2": 0.4299861241099791
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.19007167788296872,
+      "ci95": [
+        0.116538488218081,
+        0.26360486754785645
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -0.481415923762976,
+      "mean_aug_r2": 0.055550698994552165,
+      "mean_delta_r2": 0.5369666227575283
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_only",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.15589756024826207,
+      "ci95": [
+        0.07132443561229,
+        0.24047068488423412
+      ],
+      "positive_runs": 8,
+      "mean_base_r2": -1.0099925024086391,
+      "mean_aug_r2": -0.3263036828271901,
+      "mean_delta_r2": 0.6836888195814491
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "all",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.09103852448498012,
+      "ci95": [
+        0.04136782672525657,
+        0.14070922224470367
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": 0.04756609255154301,
+      "mean_aug_r2": 0.24302129596694494,
+      "mean_delta_r2": 0.1954552034154019
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q1",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.06016825107752916,
+      "ci95": [
+        -0.027829550608276486,
+        0.1481660527633348
+      ],
+      "positive_runs": 6,
+      "mean_base_r2": 0.16517974972019625,
+      "mean_aug_r2": 0.2896511507628036,
+      "mean_delta_r2": 0.12447140104260737
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q2",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.06898942806412459,
+      "ci95": [
+        -0.001126604128112177,
+        0.13910546025636134
+      ],
+      "positive_runs": 7,
+      "mean_base_r2": -0.01120942573795964,
+      "mean_aug_r2": 0.1689628107003767,
+      "mean_delta_r2": 0.18017223643833633
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q3",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.09732052030577412,
+      "ci95": [
+        0.05832867138404539,
+        0.13631236922750284
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": 0.055550698994552165,
+      "mean_aug_r2": 0.26788402380710874,
+      "mean_delta_r2": 0.2123333248125565
+    },
+    {
+      "contract": "planned_state",
+      "budget": 60,
+      "method": "state_plus_crossfitted_predicted_uts",
+      "scope": "q4",
+      "runs": 9,
+      "mean_relative_rmse_gain": 0.12242541404349759,
+      "ci95": [
+        0.07782902089664645,
+        0.16702180719034873
+      ],
+      "positive_runs": 9,
+      "mean_base_r2": -0.3263036828271901,
+      "mean_aug_r2": 0.008187414183896655,
+      "mean_delta_r2": 0.3344910970110867
+    }
+  ],
+  "balam_escalation_gate": {
+    "checks": {
+      "mean_q4_gain": false,
+      "positive_q4_runs": false,
+      "positive_q4_r2": false,
+      "ood_specificity": false,
+      "beats_shuffled": true
+    },
+    "pass": false,
+    "decision": "do-not-submit-balam"
+  },
+  "claim_guard": "This experiment was designed after outcomes from the earlier aggregate MPEA benchmark and other transfer screens had been inspected. It is method development, not prospective or confirmatory evidence. A favorable local result can justify a frozen Balam run; it cannot replace independent external validation."
+}
