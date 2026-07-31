@@ -1,346 +1,219 @@
 # Collective Experimental Data Index
 
-> **Research release (31 July 2026).** Start with the
-> [organized project package](research/README.md). It separates the latest
-> manuscript, main-text evidence, supplementary and negative results, analysed
-> database access records, Edison/Kosmos reports, and reproducibility assets.
-> The current 127-resource discovery catalog is an index, not a claim that all
-> 127 resources entered the paper. Third-party raw data are linked rather than
-> relicensed or re-hosted.
+**Experimental-data infrastructure and a falsification-gated method for borrowing knowledge across neighbouring scientific programmes.**
 
-**Current manuscript:**
-[`analysis/MANUSCRIPT_DRAFT_STREAMLINED.md`](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
-| **Supplement:**
-[`analysis/SUPPLEMENTARY_INFORMATION.md`](analysis/SUPPLEMENTARY_INFORMATION.md)
-| **Paper package:**
-[`analysis/PAPER_PACKAGE.md`](analysis/PAPER_PACKAGE.md)
-| **Edison reports:**
-[`analysis/review_packages/edison/README.md`](analysis/review_packages/edison/README.md)
-| **All tested edges:**
-[`research/evidence/ATTEMPT_LEDGER.csv`](research/evidence/ATTEMPT_LEDGER.csv)
+[![Catalog](https://img.shields.io/badge/catalog-127%20resources-2F6B8A)](CATALOG.md)
+[![Analysed resources](https://img.shields.io/badge/analysed%20or%20audited-31%20resources-2A9D8F)](research/data/ANALYSED_RESOURCE_LEDGER.csv)
+[![Transfer attempts](https://img.shields.io/badge/transfer%20attempts-27-DB7C26)](research/evidence/ATTEMPT_LEDGER.csv)
+[![Target journal](https://img.shields.io/badge/target-Digital%20Discovery-6C5B7B)](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
 
-An artifact-gated neighborhood-borrowing strategy for strengthening few-shot
-prediction and OOD exploration, supported by an experimental-first metadata
-index and pinned integration workflow. Reported measurements are retained with
-identity, conditions, provenance, and reuse constraints rather than treated as
-context-free labels. The repository does not assume that every indexed resource
-is openly licensed, experimentally complete, or immediately interoperable.
+![Falsification-gated knowledge borrowing workflow](analysis/figures/knowledge_borrowing_overview_ai_v4.png)
 
-## Scientific question
+## The project in one sentence
 
-When target-domain evidence is sparse in few-shot and OOD regions, can
-neighboring experimental domains supply missing knowledge without reproducing a
-data-only illusion? The evidence here says yes—but only selectively and only
-when experimental context is preserved and the borrowing mechanism survives
-attempts to falsify it. The
-strategy qualifies sources under leakage and wrong-source controls, matches
-soft-prior injection to prediction, keeps source rankings separate for OOD
-exploration, and combines complementary neighbors as a safe shortlist
-portfolio.
+Neighbouring experimental programmes can improve selected out-of-distribution
+(OOD) predictions and candidate rankings when the shared relation,
+experimental state, transferable object, leakage boundary, and decision
+endpoint are matched; otherwise the method should abstain.
 
-The evidence contains one material within-campaign few-shot improvement. A
-−20 °C liquid-electrolyte conductivity model reduces error at −30 °C, with a point
-estimate of 37% equivalent target labels saved, decays with temperature distance,
-and fails under source scrambling. The effect is not automatically portable:
-a separately frozen CALiSol test that holds out entire source articles gives
-only +1.61% [−2.14%,+4.21%], negative absolute R², and no distance ordering.
-BIRDSHOT gives directional cross-dataset error reduction without absolute
-utility, Matbench is an independent null, many candidate edges are harmful, and the
-pre-existing 0–3 cross-domain distance score is not established.
+## Why this project exists
 
-A systematic benchmark across eight targets then tests the stronger OOD-repair
-claim. Among 40 real donor–recipient edges, alloy UTS→YS gives the strongest
-designated OOD error reduction (+6.65% [3.53,14.02%]), but improves
-in-distribution error slightly more and retains negative OOD R². No designated
-edge passes the complete OOD-repair gate; the seven-programme mean is +0.92%
-[−0.35,2.92%]. Generic donor-feature injection is therefore insufficient for
-OOD repair, even when it transfers useful correlation.
+Scientific exploration is most valuable outside the region that has already
+been measured, but this is also where a data-poor model has the weakest
+empirical support. Experimental databases from nearby fields may contain
+useful information about common compositions, transport processes, structural
+motifs, processing histories, or measurement conditions. Simply pooling these
+databases, however, can import provenance effects, fitted-parameter artefacts,
+or negative transfer instead of knowledge.
 
-An independently frozen Caltech ionic-conductor benchmark shows why policy
-design matters. Prespecified OBELiX and ESTM rankings recover 2/8 and 3/8
-external top-5% entities after exact composition and DOI exclusions, while
-mechanical and catalysis controls recover 0/8. A post-outcome neighbor portfolio
-recovers 5/8 externally and 3/3 in hard OOD, demonstrating complementary source
-proposals. A CCA family-first allocation then recovers all 4/4 distinct top
-external formula/DOI/ICSD components and both 2/2 hard-OOD components by
-acquisition 20, while deliberately reducing repeated within-component entity
-hits. In contrast, every target-refitted adaptive source increment fails.
+This repository addresses both sides of that problem. It provides a curated
+index of experimental materials and chemistry databases, and it tests a
+directed **knowledge-borrowing contract**. Rather than moving an entire donor
+database or a generic pretrained model into a sparse recipient task, the
+contract transfers a qualified relation or candidate ordering, tests it
+against matched falsifiers, and routes it to numerical prediction, candidate
+screening, or rejection.
 
-The Caltech-derived strategy was then frozen on two outcome-unseen programmes.
-Ionic-to-thermoelectric borrowing on Starrydata gives a small +0.88%
-[0.02,1.77%] far-OOD effect but fails Holm multiplicity (p=0.071), source
-specificity, and absolute utility (R²=-0.485). Multi-neighbor borrowing across
-four TRI OER plates gives -0.079% [-0.313,0.155%] and negative absolute R² on
-every plate. Their random-effects mean is +0.304% [-0.617,1.225%], I²=76.7%.
-Neither target passes its complete gate. The formal result is therefore a
-selective map with abstention, not a general transfer law.
+## What the study shows
 
-Together, these results instantiate a selective knowledge-borrowing map over
-the tested relations. The KIT edge shows that neighboring evidence can deliver
-a material few-shot gain; Caltech shows that neighboring domains can generate
-complementary OOD proposals; and the null, harmful, and endpoint-changing edges
-show where the same idea should be rejected or redesigned. “Map” here means an
-auditable decision object, not a universal distance law or a guarantee for
-untested datasets.
+The paper is built around four claim-bearing results:
 
-The current paper-facing files are
-[`analysis/MANUSCRIPT_DRAFT_STREAMLINED.md`](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md),
-[`analysis/SUPPLEMENTARY_INFORMATION.md`](analysis/SUPPLEMENTARY_INFORMATION.md),
-the executable strategy specification
-[`analysis/SELECTIVE_NEIGHBOR_BORROWING_STRATEGY.md`](analysis/SELECTIVE_NEIGHBOR_BORROWING_STRATEGY.md),
-the outcome-unseen validation protocol
-[`analysis/CCA_FAMILY_FIRST_PROTOCOL.md`](analysis/CCA_FAMILY_FIRST_PROTOCOL.md),
-the data-foundation and evidence-scope figure
-[`analysis/figures/data_foundation_scope.svg`](analysis/figures/data_foundation_scope.svg),
-the editable knowledge-map figure
-[`analysis/figures/main_knowledge_borrowing.svg`](analysis/figures/main_knowledge_borrowing.svg),
-the systematic multi-target OOD figure
-[`analysis/figures/multi_target_ood_borrowing.svg`](analysis/figures/multi_target_ood_borrowing.svg),
-and the OOD decision-endpoint figure
-[`analysis/figures/ood_decision_borrowing.svg`](analysis/figures/ood_decision_borrowing.svg),
-plus the combined knowledge-borrowing map and exploration figure
-[`analysis/figures/neighbor_map_exploration.svg`](analysis/figures/neighbor_map_exploration.svg),
-plus the outcome-unseen validation figure
-[`analysis/figures/outcome_unseen_validation.svg`](analysis/figures/outcome_unseen_validation.svg),
-and the temporal battery strategy figure
-[`analysis/figures/battery_continuous_borrowing.svg`](analysis/figures/battery_continuous_borrowing.svg).
+1. **Generic transfer is not enough.** Cross-fitted donor predictions repaired
+   0 of 40 declared OOD edges across eight recipients under the complete
+   prediction gate.
+2. **A qualified relation can cross database and chemistry identity.** A
+   component-order-invariant electrolyte relation learned from 10,407
+   measurements across 22 salts predicted an external unseen-salt programme
+   with raw R² = 0.629, Spearman ρ = 0.871, and 28.64% lower log-RMSE than a
+   temperature–concentration baseline.
+3. **Borrowed order can improve data-poor screening even when absolute
+   calibration is not portable.** With five recipient measurements, a
+   programme-balanced ordinal score ranked unseen formulations at
+   ρ = 0.910, compared with 0.537 for the strongest of 13 recipient-only
+   configurations. The gain was Δρ = 0.374, with a 95% interval of
+   0.213–0.562.
+4. **Failure and abstention are part of the map.** The same frozen ordinal
+   route did not beat a same-anchor recipient model in a second programme, and
+   controlled catalyst perturbations separated predictive, ranking-only, and
+   harmful edges.
 
-## Repository snapshot
+These are retrospective experimental-data tests. They support selective OOD
+prediction and screening, not a universal transfer model, a unified physical
+law, or prospective laboratory discovery acceleration.
 
-As of 31 July 2026, the catalog contains **127 resources with experimental
-content**:
+## How knowledge borrowing works
 
-- 98 experimental and 29 mixed experimental/computational resources;
-- 118 open-access, 5 registration-gated, and 4 restricted resources;
-- 22 records with an unresolved (`Unknown`) data license;
-- a source/evidence URL for every record, without implying current
-  availability, reuse rights, or independent scientific validation.
+| Stage | Question | Required evidence | Possible outcome |
+|---|---|---|---|
+| **1. Qualify** | Are the donor and recipient neighbours for this task? | Shared candidate representation, relevant experimental state, and a falsifiable physical or experimental relation | Eligible or reject |
+| **2. Transfer** | What exactly crosses the boundary? | A relation, response function, correction, or ordinal score; not automatically the raw database or model weights | Declared transferable object |
+| **3. Falsify** | Is the signal more than leakage, weak baselines, or generic regularization? | Grouped OOD splits, identity and provenance exclusions, strong recipient-only baselines, shuffled donors, and matched wrong donors | Supported, null, or harmful |
+| **4. Route** | What decision can the signal support? | Endpoint-specific utility and absolute-performance gates | Predict, rank, or abstain |
 
-The catalog links to authoritative sources and does not re-host their files.
-See [CATALOG.md](CATALOG.md), [catalog/catalog.csv](catalog/catalog.csv), and
-[catalog/catalog.json](catalog/catalog.json).
+The method is directional: a resource may be a donor for one endpoint, a
+recipient for another, and ineligible for a third. “Neighbouring” is therefore
+a property of a declared donor–recipient relation, not a permanent label
+attached to a database.
 
-## Local integrated snapshot
+## Data scope: three layers that should not be confused
 
-[`scripts/localdb/build_localdb.py`](scripts/localdb/build_localdb.py) builds a
-local SQLite snapshot from commits pinned in
-[`scripts/localdb/sources.lock.json`](scripts/localdb/sources.lock.json). The
-current build registers 14 sources (13 normalized and NIST ISODB analysis-only)
-and contains **96,184 measurements, 230 property labels, and 29,516 canonical
-formula, molecule, or mixture entities**. Each measurement records:
+| Layer | Current scope | What it means |
+|---|---:|---|
+| **Discovery catalog** | 127 resources | Resources with experimental content discovered and curated for access, domain, licence, and provenance. Catalog presence does not mean that a resource entered the paper. |
+| **Analysed-resource ledger** | 31 resources | Databases used, screened, or formally audited during the project, including unsuccessful candidates and controls. |
+| **Paper evidence layer** | Selected claim-bearing experiments | The small set of positive, boundary, and falsification results needed to support the manuscript's argument. |
 
-`dataset · source row · raw material · canonical entity · property · value · unit · conditions JSON · reference · source commit · quality flags`
+The catalog currently contains 98 experimental and 29 mixed
+experimental/computational resources: 118 are open, 5 require registration,
+and 4 are restricted. Twenty-two records still have an unresolved data
+licence. The local integrated snapshot registers 14 sources (13 normalized and
+one analysis-only) and contains 96,184 measurements, 230 property labels, and
+29,516 canonical formula, molecule, or mixture entities.
 
-NIST ISODB is analyzed directly from a hash-verified commit archive because its
-adsorbent identifiers do not fit the formula/SMILES entity schema and one
-historical path is invalid on Windows. The isosteric workflow streams 54,253
-JSON files without extracting them and produces one matched-loading fit per
-eligible adsorbent–adsorbate system.
+- Browse the catalog: [CATALOG.md](CATALOG.md) or
+  [catalog/catalog.csv](catalog/catalog.csv)
+- See what the project actually used: [analysed-resource
+  ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv)
+- See every retained transfer attempt: [attempt
+  ledger](research/evidence/ATTEMPT_LEDGER.csv)
 
-## Main results
+## Start here
 
-1. **A strong source calibration fails to travel.** Same-record Borg UTS–yield-strength
-   pairs give log–log R²=0.790. BIRDSHOT gives R²=0.067, and the Borg line
-   evaluated unchanged on BIRDSHOT gives R²=−3.006. Composition-cluster
-   bootstrap places the Borg-minus-BIRDSHOT slope difference at 0.510–0.854
-   (95% interval); exact composition overlap is zero.
-2. **One neighboring-task borrowing edge is an internally selected candidate.** With 30
-   target observations, the Borg UTS prediction feature reduces held-out Borg
-   yield-strength RMSE by 6.46% [3.69%,13.03%]. A uniform 999-permutation
-   refinement over all five discovery-selected edges gives Holm p=0.005. Mean
-   R² moves from −0.149 to +0.025, and the monotone target-only learning curve
-   corresponds to 73.4% target-equivalent samples saved.
-3. **The direction replicates independently but misses the frozen practical
-   gate.** In BIRDSHOT rolling-time tests (Year 1→2 and Years 1–2→3), the same
-   Borg UTS feature reduces RMSE by 4.30% [3.36%,5.51%], with both folds
-   positive, within-year feature permutation p=0.003, and all three learners
-   positive. It remains below the predeclared 5% external threshold and is
-   labelled `directionally-replicated-below-practical-gate`, not externally
-   confirmed. The temporal learning curve is nonmonotone, so no external
-   sample-saving number is claimed. A post hoc process-aware model including
-   cold work, holding time and grain size retains a 5.23% [3.74%,7.03%]
-   reduction, so the signal is not explained by those omitted variables.
-   However, rolling-time pooled R² remains negative (−1.216 to −0.992): this is
-   robust error reduction, not demonstrated practical rescue.
-4. **Independent mechanical adjacency is not sufficient.** On the official
-   five Matbench steel folds, Borg UTS→steel yield strength gives −1.23%
-   [−15.88%,2.48%], mapping-permutation p=0.794, and five negative fold means.
-   Tree sensitivities are below 1%, far short of the 5% practical gate.
-5. **A local neighbor materially improves KIT few-shot performance.** In the KIT electrolyte
-   campaign, formulations rather than EIS runs are the independent units. A
-   −20 °C prior reduces n=30 target RMSE at −30 °C by 15.02%
-   [8.61%,21.10%], p=0.001, and improves pooled R² from 0.739 to 0.811. All five
-   formulation folds and three learners are positive. The augmented error is
-   equivalent to 47.884 target-only labels, or 37.35% saved. A post-outcome
-   formulation/subset bootstrap spans 21.84–49.91%, so the direction of the
-   sample-efficiency gain is supported but its magnitude relative to the frozen
-   30% point threshold is uncertain.
-6. **The KIT improvement fails to transport across experimental articles.** CALiSol-23
-   aggregates 13,825 measurements from 27 publications. A separately frozen
-   −30→−40 °C test holds out all formulations from each target article, removes
-   exact held-out chemistry identities from source fits, and hierarchically
-   resamples articles. At n=30, RMSE changes by only +1.61%
-   [−2.14%,+4.21%]; pooled R² remains negative (−0.049→−0.014), two of five
-   article folds are harmful, estimated label savings are 16.9%, and the
-   distance controls are not ordered. A p=0.004 result on the single fixed
-   permutation subset does not override the failed repeated-effect,
-   practical, absolute-utility, fold, saving, and adjacency gates.
-7. **Borrowing is physically selective.** Frozen KIT temperature-distance effects
-   are 15.02%, 5.01%, 0.95%, and −0.76% at ΔT=10, 30, 60, and 90 °C; a shuffled
-   adjacent source is harmful (−2.96% [−4.32%,−1.44%]). The internal
-   non-calibration map contains 42 directed edges and BIRDSHOT adds 15. Internal edge
-   heterogeneity is strong (Cochran Q p=0.00036); eight external edges are
-   harmful and two practically equivalent. A post-map direct-neighbor versus
-   distant-control contrast favors neighbors in 9/12 targets (one-sided
-   Wilcoxon p=0.046), but is leave-one-target-out fragile. The original ordinal
-   0–3 score is not established (Spearman p=0.113).
-8. **Generic donor-feature injection does not constitute OOD repair.** The
-   systematic benchmark retains 40 real edges across eight targets, three
-   learners, wrong and shuffled controls, and outcome-free Q1/Q4 groups. The
-   strongest designated edge, alloy UTS→YS, lowers OOD RMSE by 6.65%
-   [3.53,14.02%] but lowers ID RMSE by 7.74% and retains augmented OOD
-   R²=−0.666. No designated edge passes the complete gate; the seven-programme
-   mean is +0.92% [−0.35,2.92%], and 0/3 cross-database edges pass.
-9. **Artifact gates change the meaning of pooled regularities.** Reference-
-   separated thermoelectric Arrhenius series show only a weak Meyer–Neldel
-   association (n=112, R²=0.107). ISODB instead shows a strong pooled isosteric
-   heat–intercept relation (n=1,103, R²=0.637) that is not reproduced by the
-   independent-parameter Krug null and whose T_iso=513 K is far from the median
-   harmonic temperature of 301 K. It must not be discarded as a simple Krug
-   artifact; however, DOI-clustered family intercept shifts are required
-   (wild-cluster p=0.0002), so one unconditional line is still inadequate.
-10. **OOD screening does not become sequential discovery for the tested policy.** A frozen
-   fixed-ranking OBELiX test gives a directional 2.09 percentage-point reduction
-   [0.94,3.46] in the pool fraction inspected before the first top-5% hit, but
-   fails the practical and repeat-consistency gates. The sequential design was
-   prespecified after this fixed-ranking direction was known and is not an
-   independent confirmation. In the completed 100-seed sequential test,
-   target-only and thermoelectric-prior RF-UCB require 24.34
-   and 24.09 acquisitions: only 0.25 saved [−1.30,1.82], p=0.3889. Uniform
-   random acquisition is substantially faster than either UCB policy, locating
-   the failure at the tested policy level without identifying its cause.
-11. **Family-first borrowing broadens OOD exploration.** The eight external
-   top entities collapse to four connected formula/DOI/ICSD components. CCA
-   family-first consensus raises distinct-component AUC20 from 47 to 60 and
-   recovers 4/4 external top components; in hard OOD it ranks both 2/2 top
-   components first and second. Wrong-source AUC20 is 6/18 and 5,000 shuffled-
-   rank pairs give conditional p=0.0020/0.0030. Entity recall falls because
-   repeated members of one component are deferred: this is a distinct-region
-   discovery gain, not a claim that every ML metric improves.
-12. **Outcome-unseen tests reject general transfer while preserving edge
-    selectivity.** Starrydata ionic→thermoelectric borrowing gives +0.88%
-    [0.02,1.77%], but Holm p=0.071 and R²=-0.485; its CCA policy trails the
-    same-domain ESTM reference and all three hypothesis cards fail. Across four
-    TRI OER plates, all-neighbor borrowing gives -0.079% [-0.313,0.155%], every
-    absolute R² is negative, and no policy or card is confirmed. The pooled
-    effect is +0.304% [-0.617,1.225%] with I²=76.7%. This is the evidence that
-    borrowing is sparse, directed, representation-sensitive, and endpoint-
-    specific.
-13. **Previously attractive claims remain withdrawn.** The designated
-   thermoelectric→OBELiX ridge result is negative/model-dependent, the organic
-   FreeSolv→AqSolDB effect is practically small, and no OBELiX
-   OOD-discovery-improvement or rescue claim passes its frozen gates.
+| If you want to... | Read this first |
+|---|---|
+| Understand the scientific story | [Latest manuscript](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md) |
+| See the evidence hierarchy and safe claims | [Paper package](analysis/PAPER_PACKAGE.md) |
+| Check methods, robustness, nulls, and amendments | [Supplementary Information](analysis/SUPPLEMENTARY_INFORMATION.md) |
+| Inspect all positive, null, harmful, abstaining, and non-evaluable attempts | [Attempt ledger](research/evidence/ATTEMPT_LEDGER.csv) |
+| Identify data access, DOI, licence, and redistribution status | [Analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) |
+| Review the four manuscript figures and their source data | [Figure directory](analysis/figures/) and [figure QA](analysis/figures/FIGURE_QA_NMI_V3.md) |
+| Reproduce or extend an analysis | [Analysis guide](analysis/README.md) |
+| Run the frozen high-performance-computing workflows | [Balam guide](analysis/balam/README.md) |
+| Review Edison, Hypothesis Generation, and Legacy Kosmos outputs | [Edison report index](analysis/review_packages/edison/README.md) |
+| See exactly what is included in this release | [Release manifest](research/RELEASE_MANIFEST.md) |
 
-The defensible conclusion is not that all global regularities are false. It is
-that pooled correlation, coefficient transport, predictive borrowing, and OOD
-proposal generation are different claims and require different validation
-gates. The present data show a material KIT few-shot improvement, selective
-transferable correlations that do not meet OOD-repair criteria, selective
-external Caltech OOD rankings, and complementary neighbor proposals whose
-diagnostic portfolio covers 5/8 top entities versus 2/8 and 3/8 individually.
-CCA family-first allocation additionally covers 4/4 distinct top external
-components and 2/2 hard-OOD components, making broader OOD region discovery the
-operational objective rather than average fit improvement. Outcome-unseen
-Starrydata and TRI tests then show that the integrated strategy does not
-automatically generalize: it abstains on one edge and rejects another.
-Together these results provide component-level proof of a selective,
-falsification-first neighborhood-borrowing strategy. The operational local-task-
-rescue status remains restricted to its table definition, and prospective
-acceleration or field-level rescue is not established.
+## Repository structure
 
-## Reproduce
+```text
+.
+├── catalog/                  machine-readable experimental-resource index
+├── scripts/localdb/          pinned ingestion and unified SQLite builder
+├── analysis/
+│   ├── MANUSCRIPT_*.md       manuscript drafts and paper package
+│   ├── figures/              main and supplementary figures plus source data
+│   ├── results/              compact formal outputs and verification records
+│   ├── review_packages/      Edison, Claude, and independent audit materials
+│   └── balam/                frozen remote-run, fetch, and verification helpers
+├── research/
+│   ├── data/                 analysed-resource ledger and data policy
+│   ├── evidence/             complete transfer-attempt ledger
+│   └── manuscript/           canonical manuscript navigation
+├── tests/                    integrity and scientific-workflow tests
+├── CATALOG.md                human-readable catalog
+└── CITATION.cff              repository citation metadata
+```
+
+## Reproduce the release checks
+
+Python 3.11 or newer is recommended. From the repository root:
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\python -m pip install -r analysis\requirements.txt
-# POSIX:   .venv/bin/python -m pip install -r analysis/requirements.txt
+# PowerShell: .\.venv\Scripts\Activate.ps1
+# POSIX:      source .venv/bin/activate
+python -m pip install -r scripts/requirements.txt -r analysis/requirements.txt
 
-python scripts/localdb/build_localdb.py
-python analysis/audit_snapshot.py
-python analysis/run_confirmatory.py
-python analysis/run_knowledge_map.py
-python analysis/refine_candidate_permutations.py
-python analysis/run_external_confirmation.py
-python analysis/run_external_sensitivities.py
-python analysis/run_matbench_steels_confirmation.py
-python analysis/run_kit_temperature_borrowing.py --jobs 8
-python analysis/run_kit_sample_equivalence_uncertainty.py --jobs 8
-python analysis/run_calisol_external_borrowing.py --jobs 8
-python analysis/run_strength_law_external.py
-python analysis/run_isodb_isosteric.py
-python analysis/run_isodb_universality.py
-python analysis/run_ood_decision_borrowing.py
-python analysis/run_hard_ood_composition.py
-python analysis/write_obelix_ood_discovery_input.py
-python analysis/run_obelix_ood_discovery.py
-python analysis/verify_obelix_ood_discovery_results.py
-python analysis/analyze_obelix_ood_discovery_diagnostics.py
-python analysis/synthesize_knowledge_map.py
-python analysis/make_data_foundation_figure.py
-python analysis/make_main_knowledge_map_figure.py
-python analysis/make_ood_decision_figure.py
-python analysis/make_caltech_external_policy_figure.py
-python analysis/run_local_gated_neighbor_portfolio.py
-python analysis/audit_family_first_neighbor_portfolio.py
-python analysis/make_family_first_neighbor_portfolio_figure.py
-python analysis/make_neighbor_map_exploration_figure.py
-python analysis/make_outcome_unseen_validation_figure.py
-python analysis/make_battery_continuous_borrowing_figure.py
-python analysis/write_release_manifest.py
+python scripts/validate_catalog.py
+python scripts/validate_candidates.py
+python -m unittest discover -s tests -v
+python analysis/check_core_story_experiments.py
+python analysis/verify_main_figures_nmi_v3.py
 ```
 
-The six main figures are
-[analysis/figures/data_foundation_scope.pdf](analysis/figures/data_foundation_scope.pdf),
-[analysis/figures/main_knowledge_borrowing.pdf](analysis/figures/main_knowledge_borrowing.pdf),
-[analysis/figures/ood_decision_borrowing.pdf](analysis/figures/ood_decision_borrowing.pdf),
-[analysis/figures/neighbor_map_exploration.pdf](analysis/figures/neighbor_map_exploration.pdf),
-[analysis/figures/outcome_unseen_validation.pdf](analysis/figures/outcome_unseen_validation.pdf),
-and [analysis/figures/battery_continuous_borrowing.pdf](analysis/figures/battery_continuous_borrowing.pdf),
-with editable SVG, 600 dpi TIFF, PNG, and panel-level source CSVs. Full methods,
-evidence status, and machine-readable outputs are in
-[analysis/README.md](analysis/README.md),
-[analysis/PAPER_PACKAGE.md](analysis/PAPER_PACKAGE.md),
-[analysis/SUPPLEMENTARY_INFORMATION.md](analysis/SUPPLEMENTARY_INFORMATION.md),
-and [analysis/results](analysis/results).
-
-## Catalog policy
-
-Purely computational resources are excluded at build time and retained in
-[`catalog/excluded_computational.json`](catalog/excluded_computational.json).
-Mixed resources remain when they contain a meaningful experimental component.
-Automated discoveries remain candidates until human review; unknown licenses
-stay visible rather than being silently treated as open.
-
-## Repository layout
-
-```text
-catalog/                    machine-readable catalog and schema
-scripts/                    discovery, export, validation, and pinned integration
-analysis/                   protocols, analyses, figures, and result tables
-analysis/results/           machine-readable evidence and source data
-docs/methodology.md         sourcing, verification, and licensing policy
-tests/                      identity, leakage, schema, and analysis smoke tests
-```
-
-## Validation and licensing
+To rebuild the pinned local snapshot:
 
 ```bash
-python scripts/validate_catalog.py
+python scripts/localdb/build_localdb.py
 python analysis/audit_snapshot.py
-python -m unittest discover -s tests -v
 ```
 
-- Code: MIT; see [LICENSE](LICENSE).
-- Catalog metadata authored here: CC-BY-4.0; see
-  [LICENSE-DATA.md](LICENSE-DATA.md).
-- Source datasets retain their own licenses and access terms.
+Some analyses require external upstream data, substantial CPU time, or the
+frozen Balam packages. Follow [analysis/README.md](analysis/README.md) for the
+analysis-specific commands instead of treating one monolithic command list as
+a complete reproduction.
+
+## How collaborators should add evidence
+
+1. **Declare the scientific relation first.** Name the donor, recipient,
+   candidate representation, experimental state, transferable object, OOD
+   unit, and decision endpoint.
+2. **Freeze the evaluation before reading the target outcome.** Record splits,
+   baselines, falsifiers, metrics, thresholds, seeds, and leakage exclusions in
+   a protocol or design file.
+3. **Keep recipient-only baselines competitive.** A donor should not receive
+   credit merely because the target model was weak.
+4. **Verify independently.** Retain compact summaries, checksums, and a script
+   that reconstructs the claim-bearing metrics.
+5. **Record every result.** Positive, null, harmful, abstaining, and
+   non-evaluable attempts all belong in
+   [ATTEMPT_LEDGER.csv](research/evidence/ATTEMPT_LEDGER.csv).
+6. **Update claims only after the gate is passed.** Exploratory diagnostics and
+   AI-generated hypotheses cannot overwrite a frozen primary result.
+
+## External AI research reports
+
+Edison Literature High, Edison clean-sheet research, Hypothesis Generation,
+and Legacy Kosmos reports are preserved with their prompts, task identifiers,
+source links, local audits, and validation outputs in
+[analysis/review_packages/edison/](analysis/review_packages/edison/). These
+reports are hypothesis-generation records, not manuscript evidence by
+themselves. The SolventSeg ranking hypothesis entered the paper only after its
+reported effect was reproduced locally and then stress-tested against 13
+recipient-only configurations. The initial Edison CALiSol-to-KIT proposal was
+retained as a harmful result rather than removed.
+
+## Data, licensing, and citation
+
+The repository does not re-host third-party raw datasets by default. It stores
+source-pinned metadata, compact derived summaries, protocols, and validation
+subsets only where reuse is appropriate. Consult the
+[analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) before
+redistributing any upstream data; an open download link does not by itself
+establish reuse rights.
+
+If you use this repository, cite [CITATION.cff](CITATION.cff) and also cite the
+original datasets and papers listed in the analysed-resource ledger. Repository
+code is released under the [MIT License](LICENSE), catalog metadata authored in
+this repository is released under
+[CC BY 4.0](LICENSE-DATA.md), and upstream datasets retain their own terms.
+
+## Current status
+
+- **Target journal:** *Digital Discovery*
+- **Article type:** methods-led full paper
+- **Canonical manuscript:**
+  [analysis/MANUSCRIPT_DRAFT_STREAMLINED.md](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
+- **Release date:** 31 July 2026
+- **Claim boundary:** retrospective evidence supports selective prediction and
+  screening improvements with explicit abstention; prospective discovery
+  acceleration remains unestablished.
