@@ -140,7 +140,9 @@ def dedupe(entries: list) -> tuple[list, list]:
 def write_csv(entries: list, path: str = CATALOG_CSV) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh)
+        # The csv module defaults to CRLF even on Linux.  Pin LF explicitly so
+        # generated exports are byte-identical on Windows and GitHub Actions.
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(FIELDS)
         for e in entries:
             row = []
