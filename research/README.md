@@ -46,6 +46,7 @@ and boundary evidence.
 | Machine-readable experiment registry | [`analysis/core_story_experiment_registry.json`](../analysis/core_story_experiment_registry.json) |
 | Complete positive/null/harm attempt ledger | [`evidence/ATTEMPT_LEDGER.csv`](evidence/ATTEMPT_LEDGER.csv) |
 | Analysed database access and licence ledger | [`data/ANALYSED_RESOURCE_LEDGER.csv`](data/ANALYSED_RESOURCE_LEDGER.csv) |
+| Collaborator-facing database guide | [`data/DATABASE_GUIDE.md`](data/DATABASE_GUIDE.md) |
 | Edison/Kosmos reports and validation | [`../analysis/review_packages/edison/README.md`](../analysis/review_packages/edison/README.md) |
 | Full experimental-resource catalog | [`../CATALOG.md`](../CATALOG.md) and [`../catalog/catalog.csv`](../catalog/catalog.csv) |
 | Reproducibility index | [`../analysis/README.md`](../analysis/README.md) |

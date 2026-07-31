@@ -106,6 +106,7 @@ one analysis-only) and contains 96,184 measurements, 230 property labels, and
 | Check methods, robustness, nulls, and amendments | [Supplementary Information](analysis/SUPPLEMENTARY_INFORMATION.md) |
 | Inspect all positive, null, harmful, abstaining, and non-evaluable attempts | [Attempt ledger](research/evidence/ATTEMPT_LEDGER.csv) |
 | Identify data access, DOI, licence, and redistribution status | [Analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) |
+| Browse every broad and task-specific database connected to the project | [Database guide](research/data/DATABASE_GUIDE.md) |
 | Review the four manuscript figures and their source data | [Figure directory](analysis/figures/) and [figure QA](analysis/figures/FIGURE_QA_NMI_V3.md) |
 | Reproduce or extend an analysis | [Analysis guide](analysis/README.md) |
 | Run the frozen high-performance-computing workflows | [Balam guide](analysis/balam/README.md) |

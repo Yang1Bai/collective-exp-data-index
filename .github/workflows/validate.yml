@@ -18,6 +18,15 @@ jobs:
         run: python -m pip install -r scripts/requirements.txt -r analysis/requirements.txt
       - name: Validate catalog metadata
         run: python scripts/validate_catalog.py
+      - name: Verify database summaries and generated indexes
+        run: |
+          python scripts/build_exports.py
+          python scripts/build_database_guide.py
+          git diff --exit-code -- \
+            CATALOG.md \
+            catalog/catalog.csv \
+            catalog_map.html \
+            research/data/DATABASE_GUIDE.md
       - name: Build pinned local snapshot
         run: python scripts/localdb/build_localdb.py
       - name: Audit snapshot

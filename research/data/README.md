@@ -1,10 +1,15 @@
 # Analysed data resources
 
+Start with the collaborator-facing
+[`DATABASE_GUIDE.md`](DATABASE_GUIDE.md). It connects the complete broad
+catalog to every task-specific resource that entered this project and explains
+the difference between discovery, analysis, and paper evidence.
+
 [`ANALYSED_RESOURCE_LEDGER.csv`](ANALYSED_RESOURCE_LEDGER.csv) records every
 named external resource that materially entered an audit, donor model,
 recipient model, control, readiness screen, or Edison-generated research path.
 It is intentionally broader than the few databases showcased in the main
-paper and narrower than the 118-resource discovery catalog.
+paper and narrower than the 127-resource discovery catalog.
 
 The ledger distinguishes `catalogued`, `analysed`, `audit-only`, and
 `AI-proposed` resources. Inclusion does not imply that an edge was successful.

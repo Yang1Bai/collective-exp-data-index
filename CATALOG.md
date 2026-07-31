@@ -1,8 +1,10 @@
-# Catalog
+# Experimental database and data-resource catalog
 
-_127 databases · updated 2026-07-27 · 98 experimental · 29 mixed · 0 computational_
+_127 resources · updated 2026-07-27 · 98 experimental · 29 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
+
+> For the project-use status, task-specific resources, scientific disposition, and access/licence audit, see the [database guide](research/data/DATABASE_GUIDE.md) and [analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv). Catalog presence does not mean that a resource entered the paper.
 
 > Legend: 🧪 experimental · 🧮 computational · 🔀 mixed · 🔓 open · 🔑 registration · 🔒 restricted
 

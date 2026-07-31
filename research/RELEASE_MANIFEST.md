@@ -14,6 +14,8 @@
   independent verification outputs for positive, null, harmful, abstaining,
   and non-evaluable attempts;
 - complete public attempt and analysed-resource ledgers;
+- collaborator-facing database guide joining the 127-resource discovery
+  catalog to 31 analysed or audited resources, including task-specific data;
 - Edison Literature, Edison clean-sheet/hypothesis, Hypothesis Generation, and
   Legacy Kosmos reports, together with local audits and independent validation.
 
