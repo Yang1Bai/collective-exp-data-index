@@ -18,6 +18,9 @@
   catalog to 31 analysed or audited resources, including task-specific data;
 - Edison Literature, Edison clean-sheet/hypothesis, Hypothesis Generation, and
   Legacy Kosmos reports, together with local audits and independent validation.
+- the current Claude Science manuscript audit, proposed English revisions,
+  Chinese decision notes, selective integration record, and reusable
+  Hypothesis Generation input bundle.
 
 ## Excluded by design
 

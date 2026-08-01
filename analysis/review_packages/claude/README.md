@@ -1,7 +1,21 @@
 # Claude review package
 
-Current archive: `collective-exp-claude-review-bundle-gate-v5.zip`
-(SHA-256 recorded in `BUNDLE_SHA256.txt`).
+Current manuscript-review archive:
+`CLAUDE_SCIENCE_CURRENT_INPUT_2026-07-31.zip`. Start with
+`CLAUDE_SCIENCE_HANDOFF_CURRENT.md` (included in the archive as
+`START_HERE.md`). The resulting audit and proposed revisions are retained as
+`MANUSCRIPT_AUDIT_2026-07-31.md`, `REVISED_SECTIONS_EN_2026-07-31.md`, and
+`DECISIONS_ZH_2026-07-31.md`.
+
+The accepted wording changes were merged selectively into
+`analysis/MANUSCRIPT_DRAFT_STREAMLINED.md`. One audit statement was narrowed:
+the evidence supports that all fully frozen **independent external** route
+validations are currently null, rejected, or abstaining; it does not support
+the broader statement that every outcome-frozen analysis is negative, because
+the within-campaign KIT analysis used an internal freeze and was positive.
+
+Older archives below are retained as provenance and are not current manuscript
+inputs.
 
 Start with `analysis/ADVERSARIAL_REVIEW_RESPONSE.md`, then inspect
 `ADVERSARIAL_REFEREE_REPORT_ORIGINAL.md`, `PROMPT_FOR_CLAUDE.md`, and the revised

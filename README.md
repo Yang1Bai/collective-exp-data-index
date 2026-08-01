@@ -47,11 +47,11 @@ The paper is built around four claim-bearing results:
    with raw R² = 0.629, Spearman ρ = 0.871, and 28.64% lower log-RMSE than a
    temperature–concentration baseline.
 3. **Borrowed order can improve data-poor screening even when absolute
-   calibration is not portable.** With five recipient measurements, a
-   programme-balanced ordinal score ranked unseen formulations at
-   ρ = 0.910, compared with 0.537 for the strongest of 13 recipient-only
-   configurations. The gain was Δρ = 0.374, with a 95% interval of
-   0.213–0.562.
+   calibration is not portable.** A zero-label, programme-balanced ordinal
+   score ranked unseen formulations at ρ = 0.910, compared with 0.537 for the
+   strongest of 13 recipient-only configurations trained on five measured
+   formulations. The gain was Δρ = 0.374, with a 95% interval of 0.213–0.562
+   over anchor selections within this recipient.
 4. **Failure and abstention are part of the map.** The same frozen ordinal
    route did not beat a same-anchor recipient model in a second programme, and
    controlled catalyst perturbations separated predictive, ranking-only, and

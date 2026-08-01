@@ -27,8 +27,10 @@ be pooled.
 The main positive evidence is intentionally compact: a relation trained on
 10,407 experimental electrolyte measurements crossed an unseen-salt database
 boundary with raw-scale R2 = 0.629 and Spearman rho = 0.871; a programme-balanced
-source score then improved five-label OOD candidate ranking from rho = 0.537 to
-0.910 (delta rho = 0.374, 95% interval 0.213-0.562). A controlled catalyst
+zero-label source score then ranked OOD candidates at rho = 0.910, versus 0.537
+for the strongest recipient-only model trained on five measured formulations
+(delta rho = 0.374, 95% interval 0.213-0.562 over anchor selections within this
+recipient). A controlled catalyst
 series shows that the same transferred relation can yield numerical benefit,
 ranking-only benefit, or harm. The 40-edge generic-injection benchmark and the
 frozen second-recipient electrolyte test provide the principal falsification
@@ -47,6 +49,7 @@ and boundary evidence.
 | Complete positive/null/harm attempt ledger | [`evidence/ATTEMPT_LEDGER.csv`](evidence/ATTEMPT_LEDGER.csv) |
 | Analysed database access and licence ledger | [`data/ANALYSED_RESOURCE_LEDGER.csv`](data/ANALYSED_RESOURCE_LEDGER.csv) |
 | Collaborator-facing database guide | [`data/DATABASE_GUIDE.md`](data/DATABASE_GUIDE.md) |
+| Current Claude Science manuscript audit and integration | [`../analysis/review_packages/claude/README.md`](../analysis/review_packages/claude/README.md) |
 | Edison/Kosmos reports and validation | [`../analysis/review_packages/edison/README.md`](../analysis/review_packages/edison/README.md) |
 | Full experimental-resource catalog | [`../CATALOG.md`](../CATALOG.md) and [`../catalog/catalog.csv`](../catalog/catalog.csv) |
 | Reproducibility index | [`../analysis/README.md`](../analysis/README.md) |

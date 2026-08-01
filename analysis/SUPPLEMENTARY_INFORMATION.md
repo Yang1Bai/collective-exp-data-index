@@ -1,8 +1,8 @@
 # Supplementary information
 
-## From pooled regularities to selective priors: artifact-gated knowledge borrowing in experimental materials data
+## Falsification-gated borrowing routes neighbouring experimental knowledge to out-of-distribution prediction, screening or abstention
 
-This document is the reporting companion to `MANUSCRIPT_DRAFT.md`. It records
+This document is the reporting companion to `MANUSCRIPT_DRAFT_STREAMLINED.md`. It records
 the evidence hierarchy, frozen decision rules, negative controls, amendments,
 and reproducibility entry points. Exact machine-readable values remain in
 `analysis/results/`; rounded values below are for readability.
@@ -65,7 +65,7 @@ design specified them.
 
 The analysed cohort contains exactly 21 accessible experimental resources.
 Thirteen form the normalized SQLite layer, which contains 96,184 measurements,
-230 source-level property labels, and 29,516 canonical entities. Six enter as
+230 source-level property labels, and 29,516 canonical entities. Seven enter as
 frozen external or temporal programmes, and NIST ISODB is streamed only for the
 artifact analysis. Nineteen resources participate in directed borrowing: 15 in
 candidate-donor roles, 16 as recipients, and 12 in both roles. Two normalized
