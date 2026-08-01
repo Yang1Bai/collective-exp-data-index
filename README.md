@@ -44,7 +44,7 @@ The paper is built around four claim-bearing results:
 2. **A qualified relation can cross database and chemistry identity.** A
    component-order-invariant electrolyte relation learned from 10,407
    measurements across 22 salts predicted an external unseen-salt programme
-   with raw R² = 0.629, Spearman ρ = 0.871, and 28.64% lower log-RMSE than a
+   with raw R² = 0.607, Spearman ρ = 0.864, and 27.41% lower log-RMSE than a
    temperature–concentration baseline.
 3. **Borrowed order can improve data-poor screening even when absolute
    calibration is not portable.** A zero-label, programme-balanced ordinal

@@ -15,17 +15,19 @@ falsifiable contract: donor and recipient must share candidate-level inputs,
 the relevant experimental state, a declared transferable relation, and a
 decision endpoint; otherwise the method abstains. Generic injection of a donor
 prediction repaired 0 of 40 declared out-of-distribution (OOD) edges across
-eight recipients. In contrast, a component-order-invariant electrolyte
-relation learned from 10,407 measurements across 22 salts predicted an external
-programme for a salt absent from the source with raw \(R^2=0.629\), Spearman
-\(\rho=0.871\), and 28.6% lower log-scale error than a
+eight recipients, including all three declared cross-database edges. On
+separate recipients, where the transferred object could instead be declared
+explicitly, a component-order-invariant electrolyte relation learned from
+10,407 measurements across 22 salts predicted 1,660 measurements of a salt
+absent from the source with raw \(R^2=0.607\), Spearman \(\rho=0.864\), and
+27.4% lower log-scale error than a
 temperature--concentration baseline. Where absolute calibration was not
 portable, a programme-balanced ordinal score computed without recipient labels
 ranked unmeasured formulations at \(\rho=0.910\), whereas the strongest of 13
 recipient-only models trained on five measured formulations reached
 \(\rho=0.537\) (\(\Delta\rho=0.374\), 95% anchor-selection interval within
 this recipient 0.213--0.562). Controlled chemical perturbations separated
-predictive, ranking-only, and harmful edges, and the unchanged ordinal route
+predictive, ranking-only, and harmful edges, and the predeclared ordinal route
 failed to qualify in a frozen second recipient and was withheld. These
 retrospective benchmarks show that neighbouring experiments can materially
 improve selected OOD predictions and screening decisions, provided that the
@@ -62,7 +64,16 @@ offer more active forms of reuse
 @Chang2022MixtureExperts; @Zamir2018Taskonomy; @Kandasamy2017Multifidelity].
 Yet a related database is not automatically a calibrated fidelity, and a
 strong in-domain fit is not evidence that its knowledge survives a new
-experimental programme.
+experimental programme. That failure mode is itself an established field:
+negative transfer has a systematic taxonomy of causes and mitigations
+[@Zhang2023NegativeTransfer], reliable prediction has long been bounded by an
+explicit applicability domain [@Sahigara2012ApplicabilityDomain], the option to
+withhold a decision rather than issue an unreliable one dates to the classical
+error--reject trade-off [@Chow1970Reject], and combining independent candidate
+orders without calibrated scores is standard rank fusion [@Cormack2009RRF].
+What is missing is not any one of these components but their conjunction at the
+level of an experimental donor--recipient edge, where the transferred object
+and decision endpoint are declared together.
 
 The missing unit is not another database but a qualified relation. We call two
 programmes neighbours for a particular task only if they share a
@@ -84,14 +95,15 @@ cross into the sparse OOD recipient, and routes that object to prediction,
 screening, or abstention (Fig. 1). We test the idea along increasing transfer
 distance. The obvious alternatives fail first: unchanged coefficient transport
 collapses across alloy programmes, and generic donor-feature injection repairs
-0 of 40 declared OOD edges. A component-order-invariant relation learned from
-10,407 conductivity measurements then reduces log-scale error by 28.64% for a
+0 of 40 declared OOD edges. On a separate recipient, a
+component-order-invariant relation learned from 10,407 conductivity measurements
+then reduces log-scale error by 27.4% for a
 salt absent from the source, and a controlled catalyst series shows why the
 same kind of relation must be routed separately to prediction, ranking, or
 rejection. Finally, where numerical calibration fails, an ordinal score from
 three independently trained programmes orders unmeasured formulations at
 \(\rho=0.910\), compared with \(\rho=0.537\) for the strongest recipient-only
-model trained on five measured formulations, yet the unchanged score fails to
+model trained on five measured formulations, yet the predeclared score fails to
 qualify in a frozen second recipient. The result is not a universal transfer
 model. It is an operational map from a qualified neighbouring relation to
 numerical prediction, candidate screening, or abstention, together with the
@@ -257,11 +269,15 @@ ordinal use; a harmful edge was rejected.
 ### 2.6 Cross-database prediction of an unseen electrolyte component
 
 The electrolyte source contained 10,407 experimental conductivity
-measurements covering 22 salt identities [@Yang2026BambooMixer]. The external
-recipient contained 1,827 measurements from 176 formulations of lithium
-hexafluoroarsenate, a salt absent from the source
-[@Lai2026BambooMixerExtension]. Exact formulation identities, including all
-temperature and concentration rows, remained indivisible during resampling.
+measurements covering 22 salt identities [@Yang2026BambooMixer]. The downloaded
+external archive contained 1,827 measurements, but a semantic audit found that
+167 belonged to four reference salts. The declared recipient was therefore
+restricted to 1,660 lithium hexafluoroarsenate measurements from 156 exact
+formulations; this salt was absent from the source
+[@Lai2026BambooMixerExtension]. The archive-level mistake was identified after
+the original analysis and corrected without refitting any model. Exact
+formulation identities, including all temperature and concentration rows,
+remained indivisible during resampling.
 
 Random Forest source relations used 400 trees and three fixed seeds. The full
 component-order-invariant mixture relation was compared with temperature and
@@ -308,6 +324,16 @@ chronologically distinct formulations were anchors and the remaining 16
 formed the primary evaluation pool. The donor was compared with the strongest
 recipient-only model fitted to the same anchors. No donor, split, metric, or
 threshold was changed after outcome access.
+The elements frozen identically across the two recipients were the donor
+models, chemistry conversion, transferred object, metrics, practical
+thresholds, and inferential procedure. Two elements differed: FINALES used the
+first three chronologically distinct formulations rather than maximin coverage,
+and its contrast used that single anchor set rather than repeated
+outcome-independent selections. The chronological rule was chosen before
+outcome access to reproduce deployment inside a temporally ordered autonomous
+campaign. A disclosed post-outcome maximin sensitivity diagnoses this design
+difference but does not replace the frozen result (Supplementary Section
+S10.4).
 
 ### 2.8 Reproducibility
 
@@ -349,50 +375,67 @@ failed the operational test: none of the
 negative absolute \(R^2\) and improved the near region by a comparable amount.
 Across the seven independent experimental programmes represented in the
 benchmark, the mean designated-edge far-OOD gain was 0.92% (95% interval
-\(-0.35\) to 2.92%). Adding a physically adjacent model output was therefore
-not a reliable way to repair recipient OOD prediction.
+\(-0.35\) to 2.92%). Five of the eight designated edges paired two properties
+measured within the same database, and three crossed a database boundary; none
+of the three cross-database edges passed. Adding a physically adjacent model
+output was therefore not a reliable way to repair recipient OOD prediction,
+either within or across programmes.
 
 Nor was model capacity the explanation. Strong pretrained molecular encoders
 that passed every source-skill gate made a scaffold-OOD photocatalysis recipient
 28.1% worse on average and failed against their own shuffled controls
 (Supplementary Section S10.2).
 
-These negative controls do more than motivate a different model. They identify
-the scientific object that the remaining experiments must preserve: the
-relation that survives the boundary, while discarding the absolute scale or
-state dependence that does not.
+These negative controls bound the generic mechanism within its tested envelope;
+they do not show that the edges themselves are unrepairable, because no
+declared-relation route was applied to them. What they identify is the
+scientific object that the remaining experiments must preserve: the relation
+that survives the boundary, while discarding the absolute scale or state
+dependence that does not. The experiments that follow therefore test that
+object on separate recipients where it can be declared and falsified, not on
+the benchmark edges themselves.
 
 ### 3.2 A component-order-invariant relation crosses database and salt identity
 
 The strongest numerical test placed both experimental provenance and component
 identity outside the source. The donor contained 10,407 conductivity
-measurements spanning 22 salts; the independent recipient contained 1,827
-measurements of lithium hexafluoroarsenate, a salt absent from the source
-(Fig. 3a). Without recipient labels, the frozen mixture relation achieved
-log-scale \(R^2=0.732\), raw-scale \(R^2=0.629\), log-RMSE 0.336, and
-\(\rho=0.871\) (Fig. 3b).
+measurements spanning 22 salts; the external archive contained 1,827
+measurements, of which 1,660 measurements and 156 formulations were strictly
+lithium hexafluoroarsenate, a salt absent from the source (Fig. 3a). All
+headline estimates below use only that declared salt. Without recipient labels,
+the frozen mixture relation achieved log-scale \(R^2=0.718\), raw-scale
+\(R^2=0.607\), log-RMSE 0.342, and \(\rho=0.864\) (Fig. 3b).
 
 Matched falsifiers identified what crossed the boundary (Fig. 3c). Relative to
 temperature and concentration alone, the full relation reduced log-RMSE by
-28.64% (95% formulation-bootstrap interval 24.03--33.52%), increased
-\(\rho\) by 0.160 (0.132--0.188), and increased raw \(R^2\) by 0.230
-(0.182--0.279). Relative to a chemistry-permuted source, it reduced log-RMSE
-by 27.16% (22.78--31.90%) and increased \(\rho\) by 0.134
-(0.108--0.162). The portable signal therefore contained formulation chemistry,
+27.41% (95% formulation-bootstrap interval 21.79--32.92%), increased
+\(\rho\) by 0.158 (0.130--0.190), and increased raw \(R^2\) by 0.216
+(0.167--0.270). Relative to a chemistry-permuted source, it reduced log-RMSE
+by 25.88% (20.73--31.09%) and increased \(\rho\) by 0.129
+(0.102--0.159). The portable signal therefore contained formulation chemistry,
 not only a shared temperature--concentration surface.
 
 Salt ablations separated local chemical adjacency from source breadth.
-Removing the closest abundant fluorinated lithium-salt neighbour worsened
-log-RMSE by 16.38% (12.66--20.24%) and ranking by 0.041
-(0.023--0.062). Yet that neighbour alone was also insufficient: the complete
-source improved log-RMSE by 28.76% (22.94--33.88%) and ranking by 0.055
-(0.037--0.075). Local chemical similarity and broad state coverage were thus
-complementary rather than interchangeable.
+Removing the abundant fluorinated LiPF\(_6\) analogue worsened log-RMSE by
+16.08% (12.10--19.80%) and ranking by 0.040 (0.022--0.061). Yet LiPF\(_6\)
+alone was also insufficient: the complete source improved log-RMSE by 28.50%
+(22.25--34.22%) and ranking by 0.047 (0.030--0.067). Local chemical similarity
+and source breadth were therefore complementary rather than interchangeable.
+
+The identity split was not an extreme representation-distance split. The
+target salt descriptor lay at the 50th percentile of leave-one-salt-out source
+distances. Temperature and concentration were entirely inside the source
+ranges, whereas only 30.4% of target solvent identities had appeared in the
+source; in the combined solvent--state representation, the target median
+nearest-source distance was at the 94.8th reference percentile and 50.4% of
+rows lay within the source 95th-percentile boundary. The benchmark is thus OOD
+in salt identity, solvent coverage, and experimental provenance, but not in
+every state variable (Supplementary Section S10.3).
 
 Five recipient anchors mainly restored scale. The frozen relation achieved
-log-RMSE 0.331 and raw \(R^2=0.631\), whereas a recipient-only Ridge model
-fitted to the same five formulations had log-RMSE 0.766 and \(R^2=-0.376\).
-Shrinkage calibration increased raw \(R^2\) to 0.653 while leaving candidate
+mean log-RMSE 0.337 and raw \(R^2=0.609\), whereas a recipient-only Ridge model
+fitted to the same five formulations had mean log-RMSE 0.711 and
+\(R^2=-0.412\). Shrinkage calibration increased raw \(R^2\) to 0.667 while leaving candidate
 order essentially unchanged. This retrospective external benchmark establishes
 the feasibility of numerical relation transfer, not prospective confirmation
 in a previously unseen programme, and it leaves open whether one qualified
@@ -411,7 +454,7 @@ remaining metal-substitution system had \(\rho=0.259\) and failed the practical
 gate.
 
 In the disclosed post-primary composition analysis, five anchors converted the
-relation into useful numerical prediction in two systems (Fig. 3d). Relative
+relation into useful numerical prediction in two systems (Fig. 4b,c). Relative
 to the matched target-only model, RMSE fell by 16.3% (95% interval
 9.2--22.9%) and 26.1% (20.0--31.7%), while Spearman correlation increased by
 0.347 (0.260--0.426) and 0.407 (0.352--0.459), respectively. Each effect was
@@ -434,12 +477,13 @@ therefore asked a narrower question: can neighbouring knowledge identify which
 unseen candidates should be measured first, even when their property values
 cannot be calibrated, and can it do so better than any model built from the few
 labels the recipient actually has?
-The data-poor SolventSeg recipient contained
-36 formulations. At 25 \(^{\circ}\)C, the unchanged
-three-programme source score achieved \(\rho=0.918\), high-performance-quartile
-precision of 1.000, and zero normalized regret. No source record
-matched a recipient record under the frozen composition, temperature, and
-outcome fingerprint.
+The data-poor SolventSeg recipient contained 36 formulations, and no source
+record matched a recipient record under the frozen composition, temperature,
+and outcome fingerprint. Scoring all 36 formulations at 25 \(^{\circ}\)C, the
+unchanged three-programme source order achieved \(\rho=0.918\),
+high-performance-quartile precision of 1.000, and zero normalized regret; the
+claim below is based instead on anchor-excluded evaluation, in which measured
+formulations are withheld from scoring.
 
 Across 100 outcome-independent selections of five measured recipient
 formulations, the zero-label source score retained mean \(\rho=0.910\),
@@ -448,11 +492,18 @@ of 13 recipient-only configurations trained on those same five formulations
 was radial-basis kernel ridge regression, with \(\rho=0.537\), precision 0.490,
 and regret 0.0393. The source advantage was \(\Delta\rho=0.374\) (95% interval
 0.213--0.562 over anchor selections, conditional on this recipient programme;
-Fig. 4b). Even the per-draw oracle, which selected the best
+Fig. 5a). Even the per-draw oracle, which selected the best
 recipient-only model after observing each evaluation, remained below the
 source score by \(\Delta\rho=0.300\) (0.183--0.540). The zero-label ordering
 was non-random under 10,000 outcome permutations (Holm-adjusted one-sided
 \(p=0.00070\)).
+
+The advantage did not close within the tested label budget: across three, five,
+and ten measured formulations, no fixed recipient-only configuration reached
+the zero-label source score, which itself did not use the added labels (Fig.
+5b). Ten formulations exceed one quarter of the recipient candidate pool, so
+the borrowed order replaced a substantial measurement campaign rather than one
+or two missing observations.
 
 Programme-balanced weighting across separately trained programmes produced a
 smaller but reproducible gain over the broad single donor. The
@@ -473,14 +524,15 @@ required to test whether even this narrower route was portable.
 
 ### 3.5 A frozen second recipient fails to qualify, and the map abstains
 
-The accepted ordinal route was carried unchanged into a second experimental
-programme, with the donor, chemistry conversion, anchor budget, metrics,
-thresholds, and inference frozen before any outcome was accessed. It did not
+The accepted ordinal object and its decision thresholds were frozen before
+application to a second experimental programme; the deployment used the first
+three chronological recipient formulations rather than repeated maximin anchor
+sets. It did not
 qualify. In the frozen Fast INtention-Agnostic LEarning Server electrolyte
 recipient, the donor ranking achieved pairwise concordance of 0.694, whereas
 the strongest recipient-only model fitted to the same three chronological
 anchors achieved 0.783. The donor advantage was \(-0.089\) (95% bootstrap
-interval \(-0.293\) to 0.096; permutation \(p=0.131\); Fig. 4d), which was
+interval \(-0.293\) to 0.096; permutation \(p=0.131\); Fig. 5c), which was
 compatible with harm, no effect, or a modest donor advantage. Under the frozen
 contract, this is the situation in which the method must withhold the edge
 rather than defend it.
@@ -488,10 +540,22 @@ High-performance-quartile precision tied at 0.50, and donor regret was worse
 (0.563 versus 0.180). The edge was rejected without changing its donor,
 anchors, representation, metric, or threshold.
 
+A disclosed post-outcome sensitivity replaced the chronological anchors with
+the SolventSeg-style maximin policy over 100 deterministic starts (17 unique
+anchor sets). The donor again trailed the strongest average recipient model:
+mean concordance was 0.568 versus 0.686 and mean advantage was \(-0.119\)
+(2.5th--97.5th anchor-selection interval \(-0.232\) to 0.101), positive in only
+9% of draws. This result shows that the directional non-qualification is not
+unique to the chronological anchor set, but it cannot replace the frozen test.
+
 Named chemistry and endpoint were matched across the two recipients, but
 experimental programme, sampling policy, and measurement provenance were not.
-The contrast between the strong SolventSeg result and the frozen rejection
-shows why physical adjacency can nominate an edge but cannot validate it. A
+The contrast between the strong SolventSeg result and frozen non-qualification
+shows why physical adjacency can nominate an edge but cannot validate it.
+Because the recipients also differed in anchor policy and in the number of
+evaluated candidates, the comparison is a failure of the fixed donor object and
+decision thresholds to qualify in the second programme, not an estimate of how
+much of the SolventSeg advantage is programme-specific. A
 usable knowledge-borrowing map must encode positive, ranking-only, null, and
 harmful outcomes because each leads to a different experimental action.
 
@@ -508,9 +572,17 @@ relation invariant to component order, or an ordinal score that did not require
 absolute calibration. Generic feature injection failed because it treated one
 donor prediction as though it could serve all of these roles.
 
+We therefore do not introduce a transfer model. The contribution is an
+endpoint-resolved falsification protocol in which the transferred object, the
+decision endpoint, and the matched falsifier are declared before recipient
+outcomes are accessed, and null and harmful edges remain in the reported
+denominator.
+
 This distinction also explains why neither source size nor physical similarity
-alone determined utility. The unseen-salt result required the closest salt
-chemistry together with the broader programme's solvent and state coverage.
+alone determined utility. The unseen-salt result combined a local fluorinated
+salt analogue with broader, but incomplete, solvent--state support; the
+applicability audit shows that neither chemical identity nor state coverage
+alone explains the transfer.
 The ordinal result benefited modestly from equal weighting across independently
 trained programmes, but its main advantage came from preserving source-derived
 order rather than adding recipient parameters. Experimental neighbourhood is
@@ -537,6 +609,20 @@ which candidates, at which endpoint, and against which falsifier?" That change
 turns positive and negative transfer into decision-relevant scientific
 evidence rather than post hoc model selection.
 
+Two claims must be separated. The evidence-generating protocol--declared
+object, declared endpoint, matched falsifier, grouped inference, and retained
+null and harmful edges--is what the present experiments exercise. The
+edge-selection rule is a different and weaker object. In the leave-one-programme
+benchmark (Supplementary Section S9), an outcome-free gate trained on 97 edges
+across 13 programme clusters admitted 17 of 20 held-out tasks with one clearly
+harmful admission, but retained a clearly beneficial edge in only four of the
+ten tasks where one existed and did not outperform never borrowing after Holm
+correction; adjacency alone was numerically stronger. The gate therefore
+avoids much harm but misses benefit. We do not claim that it identifies useful
+untested edges better than a domain expert. The map determines what an
+already-tested edge may support; it is not yet a validated selector for new
+edges.
+
 ### 4.3 Retrospective evidence defines the next prospective test
 
 The strongest cross-programme positive results remain retrospective, and the
@@ -556,8 +642,8 @@ into prospective confirmation.
 This asymmetry does not erase the retrospective positives, nor does a frozen
 negative validate the framework by itself. Together they establish two bounded
 facts. First, large OOD improvements are possible under explicit contracts.
-Second, those contracts can fail when carried unchanged into an independent
-programme. The current evidence therefore does not estimate the probability
+Second, a fixed donor object and decision thresholds can fail to qualify in an
+independent programme. The current evidence therefore does not estimate the probability
 that a newly nominated neighbouring programme will transfer. Positive evidence
 is concentrated in selected catalyst and electrolyte programmes, SolventSeg
 contains 36 formulations, and the frozen second recipient was withheld. The
@@ -579,9 +665,9 @@ supplies the contract, falsifiers, and failure criteria for that experiment.
 
 Neighbouring experimental data can materially improve data-poor OOD decisions,
 but adjacency is not itself transferable knowledge. Generic donor-feature
-injection repaired 0 of 40 declared edges. Once the shared relation and
-decision endpoint were qualified, a mixture relation reduced external
-unseen-salt error by 28.64%, and a zero-label ordinal score ordered unmeasured
+injection repaired 0 of 40 declared edges. On separate recipients where the
+shared relation and decision endpoint were explicit, a mixture relation reduced
+external LiAsF\(_6\) error by 27.41%, and a zero-label ordinal score ordered unmeasured
 formulations at \(\rho=0.910\), where the strongest five-label recipient-only
 model reached 0.537. Controlled predictive, ranking-only, harmful, and
 frozen-abstention cases showed where those gains stopped. The
@@ -635,8 +721,8 @@ recipient landscape, in which filled blue cubes denote measured anchors and
 open orange cubes denote unmeasured OOD candidates; the coral branch denotes
 abstention. Panel **a** is explanatory rather than quantitative. **b,**
 Decision-level evidence from the committed result tables. Numerical prediction
-is accepted for the external unseen-salt programme: 28.64% lower log-RMSE than
-a temperature--concentration baseline, raw \(R^2=0.629\), and \(\rho=0.871\).
+is accepted for the external LiAsF\(_6\) programme: 27.41% lower log-RMSE than
+a temperature--concentration baseline, raw \(R^2=0.607\), and \(\rho=0.864\).
 Ordinal screening is accepted when a programme-balanced score computed without
 recipient labels orders unmeasured formulations at \(\rho=0.910\)
 (high-performance-quartile precision 0.933), whereas the strongest
@@ -656,35 +742,48 @@ column contains the declared donors; positive values denote lower error.
 **c,** Collapsed audit of the declared edges. A complete pass requires useful
 absolute performance, repeat and learner robustness, OOD- and
 donor-specificity, multiplicity-adjusted inference, and exclusion of record
-overlap. No real edge passes the complete gate; the seven-programme mean
-far-OOD gain is 0.92% (95% interval \(-0.35\) to 2.92%).
+overlap. No real edge passes the complete gate; five of the eight designated
+edges are within-database property pairs and three cross a database boundary,
+with no cross-database pass. The seven-programme mean far-OOD gain is 0.92%
+(95% interval \(-0.35\) to 2.92%).
 
 **Figure 3 | Qualified relations improve selected complete OOD prediction
 tasks.** **a,** A component-order-invariant relation trained on 10,407
-measurements from 22 salts is applied without recipient labels to 1,827
-measurements of lithium hexafluoroarsenate, a salt absent from the source.
+measurements from 22 salts is applied without recipient labels to 1,660
+measurements (156 formulations) of lithium hexafluoroarsenate, a salt absent
+from the source. A post-outcome semantic audit excluded 167 archive rows from
+four reference salts without refitting the model.
 **b,** Zero-label external prediction. Colour density denotes overlapping
 observations and the dashed line denotes equality; raw and log-scale \(R^2\)
 are reported separately. **c,** Relative log-RMSE gain of the full relation
 over matched state-only, chemistry-permuted, salt-exclusion, nearest-salt and
 wrong-salt comparators. Points are formulation-grouped bootstrap means and bars
 are 95% intervals. This benchmark was designed after the recipient outcomes
-were public and is retrospective (Methods 2.6). **d,** Five-anchor effects in four controlled catalyst
-perturbations from the disclosed post-primary composition relation. Positive
-values denote lower RMSE or higher Spearman correlation; the right labels give
-the resulting route for each complete non-anchor candidate set.
+were public and is retrospective (Methods 2.6); the split is defined by salt
+identity and experimental provenance rather than by representation distance.
 
-**Figure 4 | Cross-programme knowledge recovers candidate ordering but remains
-programme-specific.** **a,** Three independently trained conductivity sources
-produce a programme-balanced score. The endpoint gate routes the score to
-candidate screening and rejects its interpretation as calibrated conductivity.
-**b,** The zero-label source ranking compared with 13 recipient-only
+**Figure 4 | A controlled chemical perturbation routes one relation to
+prediction, ranking or rejection.** **a,** One oxygen-evolution assay,
+composition grid and endpoint are retained while a single ligand or metal
+factor changes, producing four complete 126-catalyst recipient systems. The
+route is assigned from the joint numerical and ordinal gates, not from chemical
+adjacency alone. **b,** Relative RMSE gain over the matched target-only model
+after five recipient anchors. **c,** Spearman gain on the same non-anchor
+candidates. Points are bootstrap means and bars are 95% intervals. The
+amino-ligand system is admitted for ranking only, two systems for numerical
+prediction and ranking, and the harmful iron-substitution edge is rejected.
+These composition-relation analyses are disclosed as post-primary.
+
+**Figure 5 | Cross-programme knowledge recovers candidate ordering but remains
+programme-specific.** **a,** The zero-label source ranking compared with 13 recipient-only
 configurations trained on five measured formulations and with a non-deployable
-per-draw recipient oracle. Points are means and bars are 2.5th--97.5th
+per-draw recipient oracle (15 rows in total). Points are means and bars are 2.5th--97.5th
 percentiles over 100 outcome-independent anchor selections, conditional on this
-recipient programme. **c,** Source and fixed recipient-only ordering across
+recipient programme. **b,** Source and fixed recipient-only ordering across
 three, five, and ten measured formulations; shaded regions are the corresponding
-percentile intervals, including their negative lower tails. **d,** Donor
-advantage with 95% intervals in the primary recipient and under an unchanged,
-frozen contract in a second programme. The ordinal route is accepted only in
+percentile intervals, including their negative lower tails. No recipient-only
+configuration reaches the source score at any tested budget. **c,** Donor
+advantage with 95% intervals in the primary recipient and under a frozen
+contract in a second programme, where anchors were the first three
+chronologically distinct formulations. The ordinal route is accepted only in
 the first; in the second it fails to qualify and is withheld.

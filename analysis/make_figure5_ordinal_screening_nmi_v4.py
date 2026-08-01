@@ -1,4 +1,4 @@
-"""NMI-v3 Figure 4: ordinal borrowing supports screening, not universal transfer."""
+"""NMI-v4 Figure 5: ordinal borrowing supports screening, with abstention."""
 from __future__ import annotations
 
 import json
@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "analysis" / "results"
 FIGURES = ROOT / "analysis" / "figures"
 SOURCE_DIR = FIGURES / "source_data"
-OUT = FIGURES / "figure4_ordinal_screening_nmi_v3"
-SOURCE = SOURCE_DIR / "figure4_ordinal_screening_nmi_v3.csv"
+OUT = FIGURES / "figure5_ordinal_screening_nmi_v4"
+SOURCE = SOURCE_DIR / "figure5_ordinal_screening_nmi_v4.csv"
 
 NAVY = "#173B6C"
 TEAL = "#1E9189"
@@ -155,7 +155,7 @@ def panel_a(ax: plt.Axes) -> None:
 
 
 def panel_b(ax: plt.Axes, stress: pd.DataFrame, summary: dict) -> pd.DataFrame:
-    panel_label(ax, "b", -.17, 1.03)
+    panel_label(ax, "a", -.13, 1.03)
     ax.set_title("Neighbouring programmes recover order beyond five-label models",
                  loc="left", pad=7)
     frame = stress_frame(stress, 5)
@@ -173,7 +173,7 @@ def panel_b(ax: plt.Axes, stress: pd.DataFrame, summary: dict) -> pd.DataFrame:
                 solid_capstyle="round")
         ax.scatter(mean, yi, s=size, color=colour, edgecolor="white",
                    linewidth=.45, zorder=3)
-        rows.append({"panel": "b", "model": name, "anchor_budget": 5,
+        rows.append({"panel": "a", "model": name, "anchor_budget": 5,
                      "estimate": mean, "ci95_low": low, "ci95_high": high})
     ax.axvline(0, color=INK, lw=.7)
     ax.grid(axis="x", color=GRID, lw=.42)
@@ -201,7 +201,7 @@ def panel_b(ax: plt.Axes, stress: pd.DataFrame, summary: dict) -> pd.DataFrame:
 
 
 def panel_c(ax: plt.Axes, stress: pd.DataFrame) -> pd.DataFrame:
-    panel_label(ax, "c", -.12, 1.04)
+    panel_label(ax, "b", -.12, 1.04)
     ax.set_title("Borrowed order persists across sparse anchor budgets",
                  loc="left", pad=7)
     budgets = [3, 5, 10]
@@ -220,7 +220,7 @@ def panel_c(ax: plt.Axes, stress: pd.DataFrame) -> pd.DataFrame:
             means.append(mean)
             lows.append(low)
             highs.append(high)
-            rows.append({"panel": "c", "model": model,
+            rows.append({"panel": "b", "model": model,
                          "anchor_budget": budget, "estimate": mean,
                          "ci95_low": low, "ci95_high": high})
         ax.plot(budgets, means, marker="o", ms=3.4, color=colour, lw=1.65,
@@ -238,7 +238,7 @@ def panel_c(ax: plt.Axes, stress: pd.DataFrame) -> pd.DataFrame:
 
 
 def panel_d(ax: plt.Axes, summary: dict, finales: dict) -> pd.DataFrame:
-    panel_label(ax, "d", -.12, 1.04)
+    panel_label(ax, "c", -.12, 1.04)
     ax.set_title("A frozen second recipient defines the boundary", loc="left", pad=7)
     solvent = summary["five_anchor"]["source_minus_strongest_spearman"]
     frozen = finales["primary"]
@@ -265,7 +265,7 @@ def panel_d(ax: plt.Axes, summary: dict, finales: dict) -> pd.DataFrame:
     y = [1, 0]
     colours = [GREEN, CORAL]
     labels = ["primary recipient\n36 formulations",
-              "frozen second recipient\n16 evaluated formulations"]
+              "frozen recipient\n16 formulations"]
     ax.axvline(0, color=INK, lw=.7)
     ax.axvspan(0, .65, color=PALE_TEAL, zorder=0)
     for yi, row, colour in zip(y, rows, colours):
@@ -289,7 +289,7 @@ def panel_d(ax: plt.Axes, summary: dict, finales: dict) -> pd.DataFrame:
     ax.set_ylim(-.55, 1.48)
     ax.set_xlabel("donor advantage in candidate order")
     ax.grid(axis="x", color=GRID, lw=.42)
-    return pd.DataFrame([dict(panel="d", **row) for row in rows])
+    return pd.DataFrame([dict(panel="c", **row) for row in rows])
 
 
 def main() -> None:
@@ -305,17 +305,11 @@ def main() -> None:
     if finales.get("status") != "verified-complete":
         raise RuntimeError("Frozen second-recipient result is not verified")
 
-    fig = plt.figure(figsize=(7.204724, 5.433071))  # 183 x 138 mm
-    outer = fig.add_gridspec(2, 1, height_ratios=[.57, .43], left=.115,
-                             right=.975, bottom=.095, top=.945, hspace=.43)
-    top = outer[0, 0].subgridspec(1, 2, width_ratios=[.30, .70], wspace=.50)
-    bottom = outer[1, 0].subgridspec(1, 2, width_ratios=[.56, .44], wspace=.46)
-    ax_a = fig.add_subplot(top[0, 0])
-    ax_b = fig.add_subplot(top[0, 1])
-    ax_c = fig.add_subplot(bottom[0, 0])
-    ax_d = fig.add_subplot(bottom[0, 1])
+    fig = plt.figure(figsize=(7.204724, 4.409449))  # 183 x 112 mm
+    ax_b = fig.add_axes([.235, .59, .735, .34])
+    ax_c = fig.add_axes([.115, .105, .38, .34])
+    ax_d = fig.add_axes([.65, .105, .32, .34])
 
-    panel_a(ax_a)
     outputs = [panel_b(ax_b, stress, summary), panel_c(ax_c, stress),
                panel_d(ax_d, summary, finales)]
     pd.concat(outputs, ignore_index=True, sort=False).to_csv(SOURCE, index=False)

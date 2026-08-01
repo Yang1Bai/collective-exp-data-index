@@ -1,4 +1,4 @@
-"""NMI-v3 Figure 3: a qualified relation supports selected OOD prediction."""
+"""Figure 3: strict LiAsF6 relation transfer after semantic correction."""
 from __future__ import annotations
 
 import json
@@ -119,9 +119,9 @@ def panel_a(ax: plt.Axes) -> None:
     flask(ax, .80, .50, .55, [CORAL])
     ax.text(.86, .67, "unseen LiAsF$_6$", ha="left", va="center",
             fontsize=6.5, color=INK, fontweight="bold")
-    ax.text(.86, .45, "176 formulations", ha="left", va="center",
+    ax.text(.86, .45, "156 formulations", ha="left", va="center",
             fontsize=5.6, color=MID)
-    ax.text(.86, .25, "1,827 held-out rows", ha="left", va="center",
+    ax.text(.86, .25, "1,660 held-out rows", ha="left", va="center",
             fontsize=5.3, color=MID)
 
 
@@ -167,14 +167,14 @@ def interval(values: pd.Series) -> tuple[float, float, float]:
 
 def panel_c(ax: plt.Axes, bootstrap: pd.DataFrame) -> pd.DataFrame:
     panel_label(ax, "c", -.08, 1.03)
-    ax.set_title("Matched falsifiers isolate the chemistry-specific gain", loc="left", pad=7)
+    ax.set_title("Matched falsifiers delimit what the relation carries", loc="left", pad=7)
     order = ["state_only", "chemistry_permuted", "without_LiPF6", "LiPF6_only",
              "LiBOB_wrong_salt_control", "LiBF4_fluorinated_control"]
     labels = {
         "state_only": "state only",
         "chemistry_permuted": "permuted chemistry",
-        "without_LiPF6": "without nearest salt",
-        "LiPF6_only": "nearest salt only",
+        "without_LiPF6": "without LiPF$_6$",
+        "LiPF6_only": "LiPF$_6$ only",
         "LiBOB_wrong_salt_control": "wrong-salt control",
         "LiBF4_fluorinated_control": "fluorinated control",
     }
@@ -268,31 +268,24 @@ def panel_d(ax_left: plt.Axes, ax_right: plt.Axes, ax_route: plt.Axes,
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     SOURCE_DIR.mkdir(parents=True, exist_ok=True)
-    catalyst = pd.read_csv(RESULTS / "specgen_derivative_oer_figure_source_data.csv")
-    predictions = pd.read_csv(RESULTS / "bamboomixer_response_transfer_external_predictions.csv")
-    bootstrap = pd.read_csv(RESULTS / "bamboomixer_response_transfer_external_group_bootstrap.csv")
-    summary = json.loads((RESULTS / "bamboomixer_response_transfer_summary.json").read_text(encoding="utf-8"))
-    if summary.get("status") not in {"verified-complete", "complete",
-                                      "complete-method-development"}:
+    predictions = pd.read_csv(RESULTS / "bamboomixer_LiAsF6_only_external_predictions.csv")
+    bootstrap = pd.read_csv(RESULTS / "bamboomixer_LiAsF6_only_group_bootstrap.csv")
+    summary = json.loads((RESULTS / "bamboomixer_LiAsF6_only_summary.json").read_text(encoding="utf-8"))
+    if summary.get("status") != "verified-semantic-correction-post-outcome":
         raise RuntimeError("External unseen-salt result is not complete")
 
-    fig = plt.figure(figsize=(7.204724, 5.708661))  # 183 x 145 mm
-    outer = fig.add_gridspec(3, 1, height_ratios=[.18, .49, .33],
-                             left=.095, right=.975, bottom=.085, top=.950,
+    fig = plt.figure(figsize=(7.204724, 4.133858))  # 183 x 105 mm
+    outer = fig.add_gridspec(2, 1, height_ratios=[.27, .73],
+                             left=.095, right=.975, bottom=.125, top=.940,
                              hspace=.42)
     ax_a = fig.add_subplot(outer[0, 0])
     middle = outer[1, 0].subgridspec(1, 2, width_ratios=[.47, .53], wspace=.42)
     ax_b = fig.add_subplot(middle[0, 0])
     ax_c = fig.add_subplot(middle[0, 1])
-    lower = outer[2, 0].subgridspec(1, 3, width_ratios=[1.04, .93, .22], wspace=.24)
-    ax_d1 = fig.add_subplot(lower[0, 0])
-    ax_d2 = fig.add_subplot(lower[0, 1])
-    ax_dr = fig.add_subplot(lower[0, 2])
 
     panel_a(ax_a)
     pred_source, metrics = panel_b(ax_b, predictions)
-    outputs = [pred_source, panel_c(ax_c, bootstrap),
-               panel_d(ax_d1, ax_d2, ax_dr, catalyst)]
+    outputs = [pred_source, panel_c(ax_c, bootstrap)]
     pd.concat(outputs, ignore_index=True, sort=False).to_csv(SOURCE, index=False)
     (RESULTS / "figure3_relation_transfer_nmi_v3_metrics.json").write_text(
         json.dumps(metrics, indent=2) + "\n", encoding="utf-8")

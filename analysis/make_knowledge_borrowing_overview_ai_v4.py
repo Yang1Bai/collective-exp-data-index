@@ -218,9 +218,9 @@ def evidence_panel(fig: plt.Figure, data: pd.DataFrame) -> None:
     p_borrow = metric(data, "screen", "borrowed_precision_top_quartile")
     evidence_card(
         ax, 0.346, PALE_BLUE, BLUE, "Screen",
-        rf"candidate order $\rho$: {rho_rec:.3f} to {rho_borrow:.3f}",
-        "five measured recipient formulations",
-        f"top-quartile precision: {p_rec:.3f} to {p_borrow:.3f}",
+        rf"zero-label donor order $\rho$ = {rho_borrow:.3f}",
+        rf"best five-label recipient: $\rho$ = {rho_rec:.3f}",
+        f"top-quartile precision: {p_borrow:.3f} vs {p_rec:.3f}",
         screen_icon,
     )
 

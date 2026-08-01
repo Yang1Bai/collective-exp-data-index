@@ -333,11 +333,11 @@ def panel_b(ax: plt.Axes, data: pd.DataFrame) -> None:
     ax.add_patch(Rectangle((0.358, 0.820), 0.012, 0.055, facecolor=GREEN, edgecolor="none"))
     ax.text(0.383, 0.848, "Screen", ha="left", va="center", color=INK,
             fontsize=6.4, fontweight="bold")
-    ax.text(0.442, 0.645, f"candidate order {rec_rho:.3f} to {donor_rho:.3f}",
+    ax.text(0.442, 0.645, f"zero-label donor order {donor_rho:.3f}",
             ha="left", va="center", color=INK, fontsize=6.8, fontweight="bold")
-    ax.text(0.442, 0.500, "five measured recipient formulations", ha="left", va="center",
+    ax.text(0.442, 0.500, f"best five-label recipient model {rec_rho:.3f}", ha="left", va="center",
             color=INK, fontsize=5.4)
-    ax.text(0.442, 0.355, f"top-quartile precision {rec_p:.3f} to {donor_p:.3f}",
+    ax.text(0.442, 0.355, f"top-quartile precision {donor_p:.3f} vs {rec_p:.3f}",
             ha="left", va="center", color=MID, fontsize=5.2)
 
     n_pass = int(metric(data, "abstain", "generic_edges_passed"))

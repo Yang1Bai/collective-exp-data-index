@@ -1,11 +1,18 @@
 # Claude review package
 
-Current manuscript-review archive:
-`CLAUDE_SCIENCE_CURRENT_INPUT_2026-07-31.zip`. Start with
-`CLAUDE_SCIENCE_HANDOFF_CURRENT.md` (included in the archive as
-`START_HERE.md`). The resulting audit and proposed revisions are retained as
+Current handoff starts with `CLAUDE_SCIENCE_HANDOFF_CURRENT.md` and the
+authoritative repository files it names. The first-pass audit is retained as
 `MANUSCRIPT_AUDIT_2026-07-31.md`, `REVISED_SECTIONS_EN_2026-07-31.md`, and
-`DECISIONS_ZH_2026-07-31.md`.
+`DECISIONS_ZH_2026-07-31.md`. The second-pass source review and its proposed
+patches are retained unchanged as `SECOND_PASS_REVIEW_2026-08-01.md` and
+`TARGETED_REPLACEMENTS_2026-08-01.md`; the actual dispositions, additional
+LiAsF6 semantic correction, and five-figure restructuring are recorded in
+`CLAUDE_SECOND_PASS_INTEGRATION_2026-08-01.md`.
+
+The current headline numerical-prediction result is the strict LiAsF6 subset:
+1,660 rows, 156 formulations, raw (R^2=0.607), Spearman (ho=0.864), and
+27.41% lower log-RMSE than state-only. Older Claude reports contain the
+pre-audit mixed-salt values and are provenance records, not current evidence.
 
 The accepted wording changes were merged selectively into
 `analysis/MANUSCRIPT_DRAFT_STREAMLINED.md`. One audit statement was narrowed:

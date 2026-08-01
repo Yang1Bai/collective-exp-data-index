@@ -3,9 +3,10 @@
 ## Canonical exports
 
 - `knowledge_borrowing_overview_ai_v4`
-- `figure2_failure_benchmark_nmi_v2`
-- `figure3_relation_transfer_nmi_v2`
-- `figure4_ordinal_screening_nmi_v2`
+- `figure2_failure_benchmark_nmi_v3`
+- `figure3_relation_transfer_nmi_v3`
+- `figure4_routing_nmi_v4`
+- `figure5_ordinal_screening_nmi_v4`
 
 Each canonical figure is available as PDF, SVG, 300 dpi PNG and 600 dpi
 LZW-compressed TIFF at 183 mm double-column width.
@@ -23,7 +24,7 @@ The generated panel is explicitly conceptual. It contains no dataset names,
 measurements, numerical claims or generated labels. All scientific words are
 editable vector overlays. All numbers in panel b are loaded from
 `source_data/knowledge_borrowing_overview_ai_v4.csv` and are checked against the
-committed analysis outputs by `analysis/verify_main_figures_ai_v4.py`.
+committed analysis outputs by `analysis/verify_main_figures_v4.py`.
 
 ## Generative-asset provenance
 
@@ -38,7 +39,7 @@ source paths, asset dimensions and scientific safeguards are recorded in
 - no clipping, overlap or illegible gate labels at full size or half size;
 - generated conceptual image remains visually subordinate to vector labels and
   committed quantitative evidence;
-- consistent navy/blue, teal, orange and coral semantics across Figures 1-4;
+- consistent navy/blue, teal, orange and coral semantics across Figures 1-5;
 - no fabricated data marks or pseudo-text in the generated asset;
 - editable text in PDF and SVG, with the conceptual raster embedded once;
 - final PDF independently rendered with Poppler before release.
@@ -53,3 +54,11 @@ three headline decisions; small supporting statistics remain legible at the
 intended double-column placement. The four gate labels were shortened to
 Inputs, State, Relation and Falsifier after the first composite revealed label
 crowding.
+
+After the second-pass scientific audit, the strict LiAsF6 subset replaced the
+mixed-salt archive values in Figure 1, and the screening card was rewritten as
+a zero-label donor versus five-label recipient comparison. The former Figure
+3d was promoted to standalone Figure 4, and the redundant ordinal schematic
+was removed before renumbering the screening figure as Figure 5. The semantic
+verifier confirms 1,660 strict LiAsF6 rows, 156 formulations, raw
+(R^2=0.607), Spearman (ho=0.864), and all five canonical export families.

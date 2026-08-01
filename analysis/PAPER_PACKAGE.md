@@ -24,7 +24,7 @@ decision endpoint are matched; otherwise the method abstains.
    pass validity, utility, robustness, and specificity gates.
 4. **Strong prediction evidence:** A component-order-invariant electrolyte relation
    learned from 10,407 measurements across 22 salts predicts an external
-   unseen-salt programme with raw \(R^2=0.629\), \(\rho=0.871\), and 28.64%
+   unseen-salt programme with raw \(R^2=0.607\), \(\rho=0.864\), and 27.41%
    lower log-RMSE than temperature and concentration alone.
 5. **Strong screening evidence:** A zero-label, programme-balanced conductivity
    score ranks unseen formulations at \(\rho=0.910\), versus 0.537 for the
@@ -48,7 +48,7 @@ decision endpoint are matched; otherwise the method abstains.
 |---|---|---|
 | Generic donor-feature benchmark | 0/40 real edges pass the complete OOD-repair gate | Establishes that naive transfer is insufficient |
 | Controlled catalyst derivatives | Five anchors reduce RMSE by 16.3% and 26.1% in two complete held-out systems; one edge is ranking-only and one is harmful | Shows selective relation transfer under controlled perturbations |
-| External unseen-salt electrolyte programme | Raw \(R^2=0.629\), \(\rho=0.871\), and 28.64% lower log-RMSE than state-only | Strong cross-database absolute-prediction example |
+| External unseen-salt electrolyte programme | Raw \(R^2=0.607\), \(\rho=0.864\), and 27.41% lower log-RMSE than state-only on 1,660 strict LiAsF\(_6\) rows | Strong cross-database absolute-prediction example |
 | SolventSeg unseen-formulation screening | Zero-label source score \(\rho=0.910\) versus 0.537 for the strongest five-label recipient-only model; \(\Delta\rho=0.374\) [0.213, 0.562] over anchor selections within this recipient; precision 0.933 versus 0.490 | Flagship data-poor OOD-ranking example |
 | Frozen FINALES boundary | Donor concordance 0.694 versus 0.783 for the same-anchor recipient model; \(\Delta=-0.089\) [\(-0.293\), 0.096] | Establishes programme-specific abstention |
 
@@ -79,15 +79,15 @@ decision endpoint; otherwise the method abstains. Generic injection of a donor
 prediction repaired 0 of 40 declared out-of-distribution (OOD) edges across
 eight recipients. In contrast, a component-order-invariant electrolyte
 relation learned from 10,407 measurements across 22 salts predicted an external
-programme for a salt absent from the source with raw \(R^2=0.629\), Spearman
-\(\rho=0.871\), and 28.6% lower log-scale error than a
+programme for a salt absent from the source with raw \(R^2=0.607\), Spearman
+\(\rho=0.864\), and 27.4% lower log-scale error than a
 temperature--concentration baseline. Where absolute calibration was not
 portable, a programme-balanced ordinal score computed without recipient labels
 ranked unmeasured formulations at \(\rho=0.910\), whereas the strongest of 13
 recipient-only models trained on five measured formulations reached
 \(\rho=0.537\) (\(\Delta\rho=0.374\), 95% anchor-selection interval within
 this recipient 0.213--0.562). Controlled chemical perturbations separated
-predictive, ranking-only, and harmful edges, and the unchanged ordinal route
+predictive, ranking-only, and harmful edges, and the predeclared ordinal route
 failed to qualify in a frozen second recipient and was withheld. These
 retrospective benchmarks show that neighbouring experiments can materially
 improve selected OOD predictions and screening decisions, provided that the
@@ -174,8 +174,10 @@ added to the main text merely because they are available.
 - Main workflow figure: `analysis/figures/knowledge_borrowing_overview_ai_v4.pdf`
 - Failure benchmark: `analysis/figures/figure2_failure_benchmark_nmi_v3.pdf`
 - Qualified-relation prediction: `analysis/figures/figure3_relation_transfer_nmi_v3.pdf`
-- Ordinal screening and boundary: `analysis/figures/figure4_ordinal_screening_nmi_v3.pdf`
-- Main-figure QA: `analysis/figures/FIGURE_QA_NMI_V3.md`
+- Controlled endpoint routing: `analysis/figures/figure4_routing_nmi_v4.pdf`
+- Ordinal screening and boundary: `analysis/figures/figure5_ordinal_screening_nmi_v4.pdf`
+- Main-figure semantic verification: `analysis/results/main_figures_v4_verification.json`
+- Main-figure contract: `analysis/FIGURE_CONTRACT_SECOND_PASS_2026-08-01.md`
 - Evidence selection: `analysis/CORE_STORY_EVIDENCE_SELECTION_2026-07-30.md`
 - Terminology ledger: `analysis/CORE_STORY_TERMINOLOGY_LEDGER_2026-07-30.md`
 - Supplementary Information: `analysis/SUPPLEMENTARY_INFORMATION.md`

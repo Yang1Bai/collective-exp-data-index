@@ -26,11 +26,14 @@ map, not a claim that physical adjacency guarantees benefit.
 ## Claim-bearing evidence
 
 - A relation trained on 10,407 experimental electrolyte measurements crossed
-  an unseen-salt database boundary with raw-scale R2 = 0.629 and Spearman rho =
-  0.871.
-- In a five-label OOD screening task, a programme-balanced donor score improved
-  ranking from rho = 0.537 to 0.910: delta rho = 0.374, with a 95% interval of
-  0.213 to 0.562.
+  an unseen-salt database boundary. A semantic audit restricted the public
+  archive to 1,660 strict LiAsF6 rows (156 formulations), yielding raw-scale
+  R2 = 0.607, Spearman rho = 0.864, and 27.41% lower log-RMSE than state-only.
+- In an OOD screening task, a zero-label programme-balanced donor score ranked
+  candidates at rho = 0.910, versus rho = 0.537 for the strongest of 13
+  recipient-only configurations trained on five measured formulations. The
+  contrast is delta rho = 0.374, with a 95% anchor-selection interval of 0.213
+  to 0.562 conditional on this recipient.
 - A controlled catalyst series shows that the same kind of transferred relation
   may support numerical prediction, ranking only, or harm, depending on state
   and endpoint alignment.
@@ -63,11 +66,11 @@ summary, experiment matrix, attempt ledger, or supplementary information.
 3. `02_evidence/CORE_STORY_EVIDENCE_SELECTION_2026-07-30.md`
 4. `02_evidence/CORE_STORY_EXPERIMENT_MATRIX.md`
 5. `02_evidence/ATTEMPT_LEDGER.csv`
-6. `02_evidence/main_figures_nmi_v3_VERIFIED.json`
+6. `analysis/results/main_figures_v4_verification.json`
 7. `03_reviews/PRESUBMISSION_REVIEW.md`
 8. `03_reviews/MANUSCRIPT_STORY_AND_FLOW_AUDIT_2026-07-31.md`
 9. `04_data/DATABASE_GUIDE.md`
-10. the four figures in `05_figures/`
+10. the five canonical figures listed in `analysis/PAPER_PACKAGE.md`
 
 ## Requested work
 

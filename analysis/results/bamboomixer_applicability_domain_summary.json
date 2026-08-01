@@ -1,0 +1,84 @@
+{
+  "status": "complete-post-outcome-descriptive-applicability-audit",
+  "claim_guard": "Recipient outcomes were already public. Outcome values only reproduce the frozen eligibility filter and are not used in features, distances, thresholds, or interpretation. This audit quantifies representation support but cannot establish confirmatory transfer.",
+  "source_sha256": "592ba3643251f1e07bfdd31fd84c4188c6af20c3b9eeadb3f93e703efd7b6061",
+  "target_sha256": "39c31b90bd7fdcf24530bec7eaa379c19e270ddc54fdc910bf72d5ed021ac543",
+  "source_rows": 10407,
+  "target_rows": 1660,
+  "target_archive_rows": 1827,
+  "target_archive_salts": [
+    "LiAsF6",
+    "LiBF4",
+    "LiCF3SO3",
+    "LiNC2F6S2O4",
+    "LiPF6"
+  ],
+  "source_salts": 22,
+  "target_exact_formulations": 156,
+  "identity_boundary": {
+    "target_salt_absent_from_source": true,
+    "target_salt": "LiAsF6"
+  },
+  "full_representation": {
+    "representation": "full_mixture_representation",
+    "active_standardized_dimensions": 449,
+    "pca_dimensions": 50,
+    "variance_explained": 0.9405185153411673,
+    "reference_definition": "source row to nearest row from a different source salt",
+    "reference_median_distance": 8.728008087975464,
+    "reference_q95_distance": 21.153117323492143,
+    "target_median_distance": 19.257603523460425,
+    "target_q95_distance": 59.67105762035887,
+    "target_median_reference_percentile": 92.42817334486404,
+    "target_fraction_within_reference_q95": 0.6078313253012049
+  },
+  "environment_without_salt_identity": {
+    "representation": "solvent_and_state_without_salt_identity",
+    "active_standardized_dimensions": 336,
+    "pca_dimensions": 43,
+    "variance_explained": 0.9504051114303783,
+    "reference_definition": "source row to nearest row from a different source salt",
+    "reference_median_distance": 0.14383015981816377,
+    "reference_q95_distance": 13.179158194854296,
+    "target_median_distance": 13.06994693261509,
+    "target_q95_distance": 58.25932708973758,
+    "target_median_reference_percentile": 94.81118477947535,
+    "target_fraction_within_reference_q95": 0.5042168674698795
+  },
+  "salt_descriptor": {
+    "active_standardized_dimensions": 113,
+    "nearest_source_salt": "LiFSI+LiPF6",
+    "target_nearest_distance": 8.776205191324989,
+    "source_leave_one_salt_out_median_distance": 8.98910388312205,
+    "source_leave_one_salt_out_q95_distance": 15.122303910978943,
+    "target_distance_reference_percentile": 50.0
+  },
+  "explicit_state_support": {
+    "temperature_C": {
+      "source_range": [
+        -79.0,
+        120.0294211
+      ],
+      "target_range": [
+        -59.99999999999997,
+        80.0
+      ],
+      "target_fraction_inside_source_range": 1.0
+    },
+    "salt_molar_ratio": {
+      "source_range": [
+        0.00045885184879471916,
+        0.7235851525909247
+      ],
+      "target_range": [
+        0.01673640167364017,
+        0.27313076135199726
+      ],
+      "target_fraction_inside_source_range": 1.0
+    },
+    "source_unique_solvent_smiles": 62,
+    "target_unique_solvent_smiles": 23,
+    "target_solvent_identity_fraction_seen_in_source": 0.30434782608695654
+  },
+  "distance_rows_sha256": "a9a0a56b891bc137e01750881d80c86e92e646baaeac6fa991453934762e5604"
+}

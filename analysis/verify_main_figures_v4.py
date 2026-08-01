@@ -1,4 +1,4 @@
-"""Semantic verification for the Nature-v3 canonical main-figure set."""
+"""Semantic verification for the five-figure canonical manuscript set."""
 from __future__ import annotations
 
 import json
@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "analysis" / "results"
 FIGURES = ROOT / "analysis" / "figures"
 SOURCE = FIGURES / "source_data"
-REPORT = RESULTS / "main_figures_nature_v3_verification.json"
+REPORT = RESULTS / "main_figures_v4_verification.json"
 
 
 def close(actual: float, expected: float, tolerance: float = 5e-6) -> None:
@@ -30,10 +30,11 @@ def source_value(frame: pd.DataFrame, route: str, metric: str) -> float:
 def main() -> None:
     expected_files: list[str] = []
     for stem in [
-        "knowledge_borrowing_overview_nature_v3",
-        "figure2_failure_benchmark_nmi_v2",
-        "figure3_relation_transfer_nmi_v2",
-        "figure4_ordinal_screening_nmi_v2",
+        "knowledge_borrowing_overview_ai_v4",
+        "figure2_failure_benchmark_nmi_v3",
+        "figure3_relation_transfer_nmi_v3",
+        "figure4_routing_nmi_v4",
+        "figure5_ordinal_screening_nmi_v4",
     ]:
         for suffix in ["pdf", "svg", "png", "tiff"]:
             path = FIGURES / f"{stem}.{suffix}"
@@ -41,9 +42,10 @@ def main() -> None:
                 raise AssertionError(f"missing or empty figure export: {path}")
             expected_files.append(str(path.relative_to(ROOT)))
 
-    fig1 = pd.read_csv(SOURCE / "knowledge_borrowing_overview_nature_v3.csv")
-    close(source_value(fig1, "predict", "raw_r2"), .629, .0005)
-    close(source_value(fig1, "predict", "spearman"), .871, .0005)
+    fig1 = pd.read_csv(SOURCE / "knowledge_borrowing_overview_ai_v4.csv")
+    close(source_value(fig1, "predict", "relative_log_rmse_gain"), 27.41, .005)
+    close(source_value(fig1, "predict", "raw_r2"), .607, .0005)
+    close(source_value(fig1, "predict", "spearman"), .864, .0005)
     close(source_value(fig1, "screen", "recipient_spearman"), .537, .0005)
     close(source_value(fig1, "screen", "borrowed_spearman"), .910, .0005)
     close(source_value(fig1, "screen", "recipient_precision_top_quartile"), .490, .0005)
@@ -51,7 +53,7 @@ def main() -> None:
     close(source_value(fig1, "abstain", "frozen_donor_score"), .694, .0005)
     close(source_value(fig1, "abstain", "frozen_recipient_score"), .783, .0005)
 
-    fig2 = pd.read_csv(SOURCE / "figure2_failure_benchmark_nmi_v2.csv")
+    fig2 = pd.read_csv(SOURCE / "figure2_failure_benchmark_nmi_v3.csv")
     edges = pd.read_csv(RESULTS / "multi_target_ood_edge_summary.csv")
     real_edges = int((~edges["is_shuffled_control"].astype(bool)).sum())
     if real_edges != 40:
@@ -66,9 +68,13 @@ def main() -> None:
                          (catalyst.measure.eq("relative_rmse_gain"))].estimate.iloc[0]
         close(float(value), expected)
 
-    external = pd.read_csv(RESULTS / "bamboomixer_response_transfer_external_metrics.csv").set_index("scope")
-    close(float(external.loc["all_source_salts", "raw_r2"]), .6294395422)
-    close(float(external.loc["all_source_salts", "spearman"]), .8708256451)
+    external = pd.read_csv(RESULTS / "bamboomixer_LiAsF6_only_external_metrics.csv").set_index("scope")
+    close(float(external.loc["all_source_salts", "raw_r2"]), .6070800827)
+    close(float(external.loc["all_source_salts", "spearman"]), .8639511089)
+    external_predictions = pd.read_csv(RESULTS / "bamboomixer_LiAsF6_only_external_predictions.csv")
+    external_primary = external_predictions[external_predictions["scope"].eq("all_source_salts")]
+    if len(external_primary) != 1660 or external_primary["formula_group"].nunique() != 156:
+        raise AssertionError("Figure 3 must use 1,660 strict LiAsF6 rows and 156 formulations")
 
     stress = pd.read_csv(RESULTS / "bamboomixer_recipient_baseline_stress_test_metrics.csv")
     five = stress[stress.anchor_budget.eq(5)]
@@ -95,13 +101,16 @@ def main() -> None:
         "figure1_routes": ["predict", "screen", "abstain"],
         "figure2_real_edges": real_edges,
         "figure2_complete_passes": 0,
+        "figure3_strict_LiAsF6_rows": len(external_primary),
+        "figure3_strict_LiAsF6_formulations": int(external_primary["formula_group"].nunique()),
         "figure3_external_raw_r2": float(external.loc["all_source_salts", "raw_r2"]),
         "figure3_external_spearman": float(external.loc["all_source_salts", "spearman"]),
-        "figure4_five_anchor_source_spearman": source_rho,
-        "figure4_five_anchor_recipient_spearman": recipient_rho,
-        "figure4_five_anchor_source_precision": source_precision,
-        "figure4_five_anchor_recipient_precision": recipient_precision,
-        "figure4_frozen_decision": finales["decision"],
+        "figure4_controlled_targets": 4,
+        "figure5_five_anchor_source_spearman": source_rho,
+        "figure5_five_anchor_recipient_spearman": recipient_rho,
+        "figure5_five_anchor_source_precision": source_precision,
+        "figure5_five_anchor_recipient_precision": recipient_precision,
+        "figure5_frozen_decision": finales["decision"],
     }
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))

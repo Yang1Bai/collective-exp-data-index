@@ -126,6 +126,25 @@ Gaussian-process acquisition. A future policy may combine the present gates
 with learned task distances and cost-aware multi-source optimization, but it
 must be frozen before a genuinely temporal or prospective target is revealed.
 
+### Negative transfer, applicability domains, rejection and rank fusion
+
+Negative transfer, applicability-domain estimation, reject-option decisions,
+and rank aggregation are each established literatures rather than inventions
+of this study. Zhang *et al.* systematized the causes, detection and mitigation
+of negative transfer. Sahigara *et al.* compared quantitative applicability-
+domain definitions for structure--activity models. Chow formalized the
+recognition-error versus rejection trade-off, and Cormack *et al.* showed that
+independent ranked lists can be fused without treating their raw scores as
+calibrated quantities.
+
+**Defensible distinction.** The contribution is the conjunction of these ideas
+at the level of an experimental donor--recipient edge. The transferred object,
+decision endpoint and matched falsifier are declared together; prediction,
+ordinal screening and abstention are separated; and null and harmful edges
+remain in the denominator. The study does not introduce per-instance reject-
+option classification, a new rank-fusion algorithm, or a validated automatic
+source selector.
+
 ## 3. Experimental alloy data and external confirmation
 
 Attari and Arroyave used the BIRDSHOT high-entropy-alloy dataset to compare

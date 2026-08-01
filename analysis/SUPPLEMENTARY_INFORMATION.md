@@ -72,6 +72,12 @@ candidate-donor roles, 16 as recipients, and 12 in both roles. Two normalized
 measurements lack canonical identities; both are flagged and excluded from
 modeling.
 
+A post-outcome semantic audit of the BambooMixer extension archive found that
+its 1,827 eligible rows comprised 1,660 LiAsF\(_6\) rows and 167 rows from four
+reference salts. All revised LiAsF\(_6\) claims and figure panels use only the
+1,660 declared-target rows (156 exact formulations); the audit did not refit or
+tune the source model.
+
 ### Table S1. Complete analysed-resource inventory
 
 | Resource | Analysis layer | Directed role | Analysis use |
@@ -707,9 +713,10 @@ absolute OOD R² remained negative.
 
 ### Portfolio-level inference and interpretation
 
-The seven-programme bootstrap mean of the eight designated OOD gains was +0.92%
+Five designated edges paired properties within one database and three crossed a
+database boundary. The seven-programme bootstrap mean of the eight designated OOD gains was +0.92%
 [−0.35,2.92%]. No programme cluster contained a complete designated-edge pass.
-Zero of three designated cross-database edges passed the upgrade gate. Among all
+Zero of the three designated cross-database edges passed the upgrade gate. Among all
 40 real edges, classifications were 10 directional OOD improvements, nine OOD
 improvements that were not OOD-specific, ten harmful edges, and eleven
 unresolved edges. Non-designated positive edges remain exploratory because they
@@ -803,7 +810,50 @@ methods, amendments, metrics, and verification are reported in
 `OPTICAL_SUPERVISED_VERIFIER_AMENDMENT.md`, and
 `OPTICAL_SUPERVISED_BORROWING_FINDINGS.md`.
 
-### S10.3 Cross-database electrolyte ranking and recipient-baseline stress test
+### S10.3 External LiAsF6 semantic correction and applicability domain
+
+The downloaded extension file was named for LiAsF\(_6\), but salt identities
+inside the records showed 1,660 LiAsF\(_6\), 70 LiNC\(_2\)F\(_6\)S\(_2\)O\(_4\),
+39 LiCF\(_3\)SO\(_3\), 33 LiPF\(_6\), and 25 LiBF\(_4\) measurements. The
+original retrospective analysis mistakenly evaluated all 1,827 rows as the
+declared LiAsF\(_6\) target. We corrected this by subsetting the existing,
+seed-averaged predictions to the 1,660 exact LiAsF\(_6\) rows and repeating the
+frozen formulation-group bootstrap over 156 formulations. No model was refitted
+and no hyperparameter or comparator changed.
+
+On the corrected target, the zero-label source relation achieved log-RMSE
+0.342, log-scale \(R^2=0.718\), raw-scale \(R^2=0.607\), and Spearman
+\(\rho=0.864\). Relative to the state-only comparator, formulation-grouped
+bootstrap means were 27.41% lower log-RMSE (95% interval 21.79--32.92%),
+\(\Delta\rho=0.158\) (0.130--0.190), and \(\Delta R^2=0.216\)
+(0.167--0.270). Relative to chemistry permutation, the corresponding values
+were 25.88% (20.73--31.09%), 0.129 (0.102--0.159), and 0.164
+(0.126--0.205). The correction therefore weakens but does not reverse the
+reported effect.
+
+Applicability was then quantified without using outcome values in features,
+distances, or thresholds. The LiAsF\(_6\) salt descriptor lay at the 50th
+percentile of leave-one-salt-out nearest-neighbour distances among the 22
+source salt identities. All target temperatures (\(-60\) to 80 \(^{\circ}\)C)
+and concentrations fell inside source ranges, but only 7 of 23 target solvent
+identities (30.4%) appeared in the source. In a standardized solvent--state
+representation reduced to 43 principal components (95.0% source variance), the
+target median nearest-source distance was at the 94.8th percentile of the
+cross-salt source reference, and 50.4% of target rows fell inside its 95th-
+percentile boundary. In the full representation, 50 principal components
+captured 94.1% of source variance, the target median was at the 92.4th
+reference percentile, and 60.8% of target rows lay inside the 95th-percentile
+boundary. Thus the task is an identity and provenance holdout with partial,
+not absent, representation support; it is not an extreme-distance OOD claim.
+The audit is descriptive and post-outcome.
+
+At five maximin anchors, the corrected 100-draw means were log-RMSE 0.337 and
+raw \(R^2=0.609\) for the frozen source, 0.711 and \(-0.412\) for target-only
+Ridge, and 0.322 and 0.667 after shrinkage calibration. The correction records
+are `results/bamboomixer_LiAsF6_only_summary.json` and
+`results/bamboomixer_applicability_domain_summary.json`.
+
+### S10.4 Cross-database electrolyte ranking and recipient-baseline stress test
 
 This analysis was specified after SolventSeg and FINALES outcomes had been
 inspected and is therefore post-outcome method development. Three conductivity
@@ -853,6 +903,26 @@ SolventSeg predictions, 72 metric cells, 45,000 formulation-bootstrap rows,
 tests, and 40 FINALES metric cells. The recipient stress-test verifier aligned
 all 300 source rows with the formal anchor table and independently reconstructed
 the strongest-recipient and oracle contrasts.
+
+#### Post-outcome FINALES anchor-policy sensitivity
+
+The frozen FINALES result used the first three chronological formulations. To
+separate the recipient from this anchor-policy choice, a disclosed post-outcome
+sensitivity applied the SolventSeg-style outcome-independent maximin rule at
+the same three-anchor budget over 100 deterministic starts, producing 17 unique
+anchor sets and 16 evaluated formulations per draw. The CALiSol donor score,
+recipient model family, endpoint, temperature tolerance, and candidate pool
+remained fixed.
+
+The donor mean concordance was 0.568, compared with 0.686 for the strongest
+average recipient-only model (ExtraTrees). The mean donor advantage was
+\(-0.119\), with a 2.5th--97.5th anchor-selection interval of
+\(-0.232\) to 0.101, and was positive in 9 of 100 draws. The per-draw recipient
+oracle increased the mean deficit to \(-0.139\). The frozen chronological
+contrast remains the claim-bearing result (0.694 versus 0.783;
+\(\Delta=-0.089\)); this post-outcome sensitivity only shows that its direction
+is not unique to the chronological anchor set. Results are recorded in
+`results/finales_anchor_policy_sensitivity_summary.json`.
 
 ## S11. Amendments and outcome-blind boundaries
 
