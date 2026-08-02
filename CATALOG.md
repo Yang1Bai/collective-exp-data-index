@@ -1,6 +1,6 @@
 # Catalog
 
-_233 databases · updated 2026-07-19 · 205 experimental · 28 mixed · 0 computational_
+_252 databases · updated 2026-08-02 · 224 experimental · 28 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -37,24 +37,24 @@ _233 databases · updated 2026-07-19 · 205 experimental · 28 mixed · 0 comput
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
   - [Batteries & energy storage](#materials-batteries) (19)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
-  - [Bioactivity & screening](#materials-bioactivity) (10)
-  - [Catalysis](#materials-catalysis) (27)
+  - [Bioactivity & screening](#materials-bioactivity) (13)
+  - [Catalysis](#materials-catalysis) (28)
   - [Crystallography](#materials-crystallography) (2)
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
   - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
-  - [General materials properties](#materials-general-properties) (42)
-  - [Geophysics & earth sciences](#materials-geophysics) (2)
+  - [General materials properties](#materials-general-properties) (52)
+  - [Geophysics & earth sciences](#materials-geophysics) (4)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
   - [HTE / synthesis](#materials-hte-synthesis) (1)
   - [Lab automation & robotic chemistry](#materials-lab-automation) (2)
-  - [Magnetic materials](#materials-magnetic) (8)
+  - [Magnetic materials](#materials-magnetic) (9)
   - [Mechanical properties](#materials-mechanical) (2)
   - [Membranes & separations](#materials-membranes) (1)
   - [MOFs & porous materials](#materials-mofs-porous) (5)
   - [Nanomaterials & nanosafety](#materials-nanomaterials) (1)
   - [Organic electronics](#materials-organic-electronics) (2)
-  - [Photovoltaics & solar cells](#materials-photovoltaics) (14)
+  - [Photovoltaics & solar cells](#materials-photovoltaics) (16)
   - [Polymers](#materials-polymers) (6)
   - [Porous materials](#materials-porous-materials) (2)
   - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (5)
@@ -681,6 +681,12 @@ Experimental and simulation data. Dataset size: 20 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28429202.v1](https://doi.org/10.6084/m9.figshare.28429202.v1)
 
+#### 🧪🔓 [Efficient and reversible chirality induction between protein and achiral plasmonic assemblies](https://springernature.figshare.com/articles/dataset/Efficient_and_reversible_chirality_induction_between_protein_and_achiral_plasmonic_assemblies/28429202)
+
+Experimental and simulation data. Dataset size: 20 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28429202](https://doi.org/10.6084/m9.figshare.28429202)
+
 #### 🧪🔓 [Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming](https://springernature.figshare.com/articles/dataset/Optimizing_biodiversity_multifunctionality_and_yield_when_transitioning_to_organic_farming/27302391)
 
 Experimental biological activity dataset: Optimizing biodiversity, multifunctionality and yield when transitioning to organic farming. Published alongside a Nature Sustainability study (2026). Deposited on figshare.
@@ -693,11 +699,23 @@ Source data in .xlsx format for preparing the figures in the main text. Dataset 
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31161145.v1](https://doi.org/10.6084/m9.figshare.31161145.v1)
 
+#### 🧪🔓 [Purcell-enhanced two-photon emission from a quantum dot via dark-state biexciton loading](https://springernature.figshare.com/articles/dataset/Purcell-enhanced_two-photon_emission_from_a_quantum_dot_via_dark-state_biexciton_loading/31161145)
+
+Source data in .xlsx format for preparing the figures in the main text. Dataset size: 2 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31161145](https://doi.org/10.6084/m9.figshare.31161145)
+
 #### 🧪🔓 [Versatile heavy metal ion separation via biological ion-channel-inspired membranes](https://springernature.figshare.com/articles/dataset/Versatile_heavy_metal_ion_separation_via_biological_ion-channel-inspired_membranes/30687980/1)
 
 Raw data of uranium extraction from seawater by TpPa-AO membrane.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30687980.v1](https://doi.org/10.6084/m9.figshare.30687980.v1)
+
+#### 🧪🔓 [Versatile heavy metal ion separation via biological ion-channel-inspired membranes](https://springernature.figshare.com/articles/dataset/Versatile_heavy_metal_ion_separation_via_biological_ion-channel-inspired_membranes/30687980)
+
+Raw data of uranium extraction from seawater by TpPa-AO membrane.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30687980](https://doi.org/10.6084/m9.figshare.30687980)
 
 <a id="materials-catalysis"></a>
 ### Catalysis
@@ -852,6 +870,12 @@ Original datas for the manuscript. Dataset size: 1 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28531955.v1](https://doi.org/10.6084/m9.figshare.28531955.v1)
 
+#### 🧪🔓 [Resolving Non-Covalent Interactions Between Surface Hydroxyl on Cu and Interfacial Water in Alkaline CO Electroreduction](https://springernature.figshare.com/articles/dataset/Resolving_Non-Covalent_Interactions_Between_Surface_Hydroxyl_on_Cu_and_Interfacial_Water_in_Alkaline_CO_Electroreduction/28531955)
+
+Original datas for the manuscript. Dataset size: 1 MB.
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28531955](https://doi.org/10.6084/m9.figshare.28531955)
+
 #### 🧪🔓 [Single cell transcriptome profiling of peripheral blood mononuclear cells in Guillain–Barré syndrome patients](https://springernature.figshare.com/articles/dataset/Single_cell_transcriptome_profiling_of_peripheral_blood_mononuclear_cells_in_Guillain_Barr_syndrome_patients/31975524/1)
 
 We collected a total of 5 human peripheral blood mononuclear cells and performed single-cell RNAseq sequencing. Among them, PBMC1, PBMC2, and PBMC3 were data from three GBS patients, while HPBMC1 and HPBMC2 were data from two healthy controls matched for age and gender. Dataset size: 3.9 GB.
@@ -954,6 +978,12 @@ This dataset contains the underlying source data for the figures presented in th
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31153141](https://doi.org/10.6084/m9.figshare.31153141)
 
+#### 🧪🔓 [An iontronic reservoir for highly robust neuromorphic prosthesis](https://springernature.figshare.com/articles/dataset/An_iontronic_reservoir_for_highly_robust_neuromorphic_prosthesis/31153141/1)
+
+This dataset contains the underlying source data for the figures presented in the manuscript. Source_data.xlsx: This spreadsheet includes the numerical data and statistical analysis results for the Main Figures and relevant Extended Data Figures. MATLAB Files (.mat): Due to file size constraints, the large raw datasets corresponding to the Extended Data Figures (e.g., Extended Data Fig. 3, Fig.…
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31153141.v1](https://doi.org/10.6084/m9.figshare.31153141.v1)
+
 #### 🧪🔓 [Aneuploidy selects for the acquisition of driver genes in breast cancer](https://springernature.figshare.com/articles/dataset/Aneuploidy_selects_for_the_acquisition_of_driver_genes_in_breast_cancer/32144932/1)
 
 Gene-level copy number calls from whole genome sequencing of mouse tumors. Dataset size: 266 MB.
@@ -965,6 +995,12 @@ Gene-level copy number calls from whole genome sequencing of mouse tumors. Datas
 This dataset contains the minimum source data for most figures presented in the accompanying manuscript titled "Charge-Triggered Switching Mechanism in Selenium Selector Enabling Ultralow Leakage-Current". Individual data files corresponding to each main figure. Each file contains the raw or primary processed data used to generate the specific panels within that figure.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31047436](https://doi.org/10.6084/m9.figshare.31047436)
+
+#### 🧪🔓 [Charge-Triggered Switching Mechanism in Selenium Select Enabling Ultralow Leakage-Current](https://springernature.figshare.com/articles/dataset/Charge-Triggered_Switching_Mechanism_in_Selenium_Select_Enabling_Ultralow_Leakage-Current/31047436/1)
+
+This dataset contains the minimum source data for most figures presented in the accompanying manuscript titled "Charge-Triggered Switching Mechanism in Selenium Selector Enabling Ultralow Leakage-Current". Individual data files corresponding to each main figure. Each file contains the raw or primary processed data used to generate the specific panels within that figure. The detailed…. Dataset size: 11 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31047436.v1](https://doi.org/10.6084/m9.figshare.31047436.v1)
 
 #### 🔀🔑 [Citrination / Open Citrination (Citrine Informatics)](https://citrination.com)
 
@@ -978,11 +1014,23 @@ These data can be used to reproduce Extended Data Tables 1-3, Supplementary Tabl
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26180530](https://doi.org/10.6084/m9.figshare.26180530)
 
+#### 🧪🔓 [County-Level Environmental and Social Influences on EPA Criminal Prosecutions in the United States](https://springernature.figshare.com/articles/dataset/County-Level_Environmental_and_Social_Influences_on_EPA_Criminal_Prosecutions_in_the_United_States/26180530/1)
+
+These data can be used to reproduce Extended Data Tables 1-3, Supplementary Tables 1-4 and Figures 1 and 2 in the submitted manuscript, "Social factors shape the geographic pattern of U.S. environmental crime prosecutions". The files contain the Final Data in Stata format (.dta) and .csv format, Stata code (.do) for reproduction of the tables and figures, a .xls codebook with a description of…. Dataset size: 2 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26180530.v1](https://doi.org/10.6084/m9.figshare.26180530.v1)
+
 #### 🧪🔓 [Crossover of quasi-localized dynamics and diffusion in supercooled liquids](https://springernature.figshare.com/articles/dataset/Crossover_of_quasi-localized_dynamics_and_diffusion_in_supercooled_liquids/31814242/1)
 
 This figshare repository contains the raw data used to generate Figures 1–4 of the associated publication: "At the crossover between quasi-localized dynamics and diffusion in deeply supercooled liquids." Repository structure The repository is organized into folders corresponding to the individual figures and subplots.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31814242.v1](https://doi.org/10.6084/m9.figshare.31814242.v1)
+
+#### 🧪🔓 [Crossover of quasi-localized dynamics and diffusion in supercooled liquids](https://springernature.figshare.com/articles/dataset/Crossover_of_quasi-localized_dynamics_and_diffusion_in_supercooled_liquids/31814242)
+
+This figshare repository contains the raw data used to generate Figures 1–4 of the associated publication: "At the crossover between quasi-localized dynamics and diffusion in deeply supercooled liquids." Repository structure The repository is organized into folders corresponding to the individual figures and subplots. Each folder contains the raw data used for the preparation of the relevant…
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31814242](https://doi.org/10.6084/m9.figshare.31814242)
 
 #### 🧪🔓 [Data and code for: The dual impact of trade on the water-energy-food nexus globally](https://springernature.figshare.com/articles/dataset/Data_and_code_for_The_dual_impact_of_trade_on_the_water-energy-food_nexus_globally/29155031)
 
@@ -996,11 +1044,23 @@ Raw data used in this study. Full information about data and code is available a
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.24680199](https://doi.org/10.6084/m9.figshare.24680199)
 
+#### 🧪🔓 [Data used in The Linkage between Microbial Community Dynamics and Urbanization Age](https://springernature.figshare.com/articles/dataset/Data_used_in_The_Linkage_between_Microbial_Community_Dynamics_and_Urbanization_Age/24680199/1)
+
+Raw data used in this study. Full information about data and code is available at https://doi.org/10.6084/m9.figshare.24782817. Dataset size: 61 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.24680199.v1](https://doi.org/10.6084/m9.figshare.24680199.v1)
+
 #### 🧪🔓 [Dataset](https://springernature.figshare.com/articles/dataset/Dataset/30670601)
 
 Dataset of Pypsa-China, an open optimisation model of the Chinese energy system, with aluminum asset data added. Dataset size: 106 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30670601](https://doi.org/10.6084/m9.figshare.30670601)
+
+#### 🧪🔓 [Dataset](https://springernature.figshare.com/articles/dataset/Dataset/30670601/1)
+
+Dataset of Pypsa-China, an open optimisation model of the Chinese energy system, with aluminum asset data added. Dataset size: 106 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30670601.v1](https://doi.org/10.6084/m9.figshare.30670601.v1)
 
 #### 🧪🔓 [Detecting Linear Dichroism with Atomic Resolution](https://springernature.figshare.com/articles/dataset/Detecting_Linear_Dichroism_with_Atomic_Resolution/31998285)
 
@@ -1037,6 +1097,12 @@ FAIR, open-access archive hosting hundreds of community-contributed materials-sc
 Source data for Microscopic signatures of an imaginary charge density wave in a kagome metal. Dataset size: 7 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32251713.v1](https://doi.org/10.6084/m9.figshare.32251713.v1)
+
+#### 🧪🔓 [Microscopic signatures of imaginary charge density wave in a kagome metal](https://springernature.figshare.com/articles/dataset/Microscopic_signatures_of_imaginary_charge_density_wave_in_a_kagome_metal/32251713)
+
+Source data for Microscopic signatures of an imaginary charge density wave in a kagome metal. Dataset size: 7 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32251713](https://doi.org/10.6084/m9.figshare.32251713)
 
 #### 🔀🔓 [NOMAD (Novel Materials Discovery) Repository & Archive](https://nomad-lab.eu)
 
@@ -1122,6 +1188,12 @@ Data for the figures and extended data figures in the manuscript "Real-Space Ima
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32316573](https://doi.org/10.6084/m9.figshare.32316573)
 
+#### 🧪🔓 [Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay](https://springernature.figshare.com/articles/dataset/Real-Space_Imaging_of_the_Electron-Pair_Density_Hole_in_Molecular_Auger-Meitner_Decay/32316573/1)
+
+Data for the figures and extended data figures in the manuscript "Real-Space Imaging of the Electron-Pair Density Hole in Molecular Auger-Meitner Decay" in Nature Physics (2026). In addition, Molpro in- and output files, as well as simulated scattering signals are provided. A Wolfram Mathematica notebook file is included for generating the figures and inspecting the electronic structure data.…. Dataset size: 41 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32316573.v1](https://doi.org/10.6084/m9.figshare.32316573.v1)
+
 #### 🧪🔓 [Romanetz Driving Force Supporting Data](https://zenodo.org/doi/10.5281/zenodo.18135191)
 
 Source data to support the findings of manuscript entitled, "Photoinduced electron transfer distance is controlled by the driving force in solid-state organic donor-acceptors.". Dataset size: 262 MB.
@@ -1158,11 +1230,23 @@ These data allow to reproduce all figures and movies included in our article. Da
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31148908](https://doi.org/10.6084/m9.figshare.31148908)
 
+#### 🧪🔓 [The Active Young-Dupré Equation](https://springernature.figshare.com/articles/dataset/The_Active_Young-Dupr_Equation/31148908/1)
+
+These data allow to reproduce all figures and movies included in our article. Dataset size: 75 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31148908.v1](https://doi.org/10.6084/m9.figshare.31148908.v1)
+
 #### 🧪🔓 [Towards Single-Crystalline Two-Dimensional Poly(arylene vinylene) Covalent Organic Frameworks](https://springernature.figshare.com/articles/dataset/Towards_Single-Crystalline_Two-Dimensional_Poly_arylene_vinylene_Covalent_Organic_Frameworks/30631367)
 
 Source data for main text figure. Dataset size: 6 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30631367](https://doi.org/10.6084/m9.figshare.30631367)
+
+#### 🧪🔓 [Towards Single-Crystalline Two-Dimensional Poly(arylene vinylene) Covalent Organic Frameworks](https://springernature.figshare.com/articles/dataset/Towards_Single-Crystalline_Two-Dimensional_Poly_arylene_vinylene_Covalent_Organic_Frameworks/30631367/1)
+
+Source data for main text figure. Dataset size: 6 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30631367.v1](https://doi.org/10.6084/m9.figshare.30631367.v1)
 
 #### 🧪🔓 [Tuning Phonon Transmission via Single-Atom Substituents](https://springernature.figshare.com/articles/dataset/Tuning_Phonon_Transmission_via_Single-Atom_Substituents/31383004)
 
@@ -1172,6 +1256,18 @@ Experimental materials properties dataset: Tuning Phonon Transmission via Single
 
 <a id="materials-geophysics"></a>
 ### Geophysics & earth sciences
+
+#### 🧪🔓 [Dataset: The past and future impact of climate change on childhood malaria in Africa](https://zenodo.org/doi/10.5281/zenodo.20399793)
+
+Data files necessary to reproduce the figures in the manuscript "The past and future impact of climate change on childhood malaria in Africa". Nature (2026). https://doi.org/10.1038/s41586-026-10840-w Abstract : Despite recent advances in climate change attribution, many health impacts remain unmeasured (Carlson et al., 2025). Here we leverage over a century of clinical data (Snow et al., 2017)…. Dataset size: 12.2 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20399793](https://doi.org/10.5281/zenodo.20399793)
+
+#### 🧪🔓 [Dataset: The past and future impact of climate change on childhood malaria in Africa](https://zenodo.org/doi/10.5281/zenodo.20399792)
+
+Data files necessary to reproduce the figures in the manuscript "The past and future impact of climate change on childhood malaria in Africa". Nature (2026). https://doi.org/10.1038/s41586-026-10840-w Abstract : Despite recent advances in climate change attribution, many health impacts remain unmeasured (Carlson et al., 2025). Here we leverage over a century of clinical data (Snow et al., 2017)…. Dataset size: 12.2 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20399792](https://doi.org/10.5281/zenodo.20399792)
 
 #### 🧪🔓 [Recalculated (depth and temperature consistent) surface ocean CO₂ atlas (SOCAT) version 2026](https://zenodo.org/doi/10.5281/zenodo.20757578)
 
@@ -1295,6 +1391,12 @@ Collection of more than 2,000 published commensurate and incommensurate magnetic
 Experimental magnetic materials dataset: Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor. Published alongside a Nature Physics study (2026). Deposited on figshare. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29042909](https://doi.org/10.6084/m9.figshare.29042909)
+
+#### 🧪🔓 [Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor](https://springernature.figshare.com/articles/dataset/Source_data_for_Planckian_scattering_and_parallel_conduction_channels_in_an_iron_chlacogenide_superconductor/29042909/1)
+
+Experimental dataset associated with a figshare publication. Data covers: Source data for Planckian scattering and parallel conduction channels in an iron chlacogenide superconductor. Dataset size: 1 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29042909.v1](https://doi.org/10.6084/m9.figshare.29042909.v1)
 
 <a id="materials-mechanical"></a>
 ### Mechanical properties
@@ -1428,11 +1530,23 @@ This file provides the raw data underlying the four main figures presented in th
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30405232](https://doi.org/10.6084/m9.figshare.30405232)
 
+#### 🧪🔓 [Hole-Transfer Cascade–Engineered Donor Polymer for Moisture-Stable Unencapsulated Perovskite Solar Cells](https://springernature.figshare.com/articles/dataset/Hole-Transfer_Cascade_Engineered_Donor_Polymer_for_Moisture-Stable_Unencapsulated_Perovskite_Solar_Cells/30405232/1)
+
+This file provides the raw data underlying the four main figures presented in the manuscript "Hybrid kink PeSC." It includes original measurement datasets and source values used for data plotting and analysis. Dataset size: 0 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30405232.v1](https://doi.org/10.6084/m9.figshare.30405232.v1)
+
 #### 🧪🔓 [Layer Photovoltaic Effect in a Two-dimensional Parity-Time Symmetric Antiferromagnet](https://springernature.figshare.com/articles/dataset/Layer_Photovoltaic_Effect_in_a_Two-dimensional_Parity-Time_Symmetric_Antiferromagnet/31827727/1)
 
 All source data files for the main text figures, extended data figures and supplementary figures (saved as individual excel files). Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31827727.v1](https://doi.org/10.6084/m9.figshare.31827727.v1)
+
+#### 🧪🔓 [Layer Photovoltaic Effect in a Two-dimensional Parity-Time Symmetric Antiferromagnet](https://springernature.figshare.com/articles/dataset/Layer_Photovoltaic_Effect_in_a_Two-dimensional_Parity-Time_Symmetric_Antiferromagnet/31827727)
+
+All source data files for the main text figures, extended data figures and supplementary figures (saved as individual excel files). Dataset size: 1 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31827727](https://doi.org/10.6084/m9.figshare.31827727)
 
 #### 🧪🔓 [NREL Photovoltaic Data Acquisition (PVDAQ) Public Datasets](https://data.openei.org/submissions/4568)
 
