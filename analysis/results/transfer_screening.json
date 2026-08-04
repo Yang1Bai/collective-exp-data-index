@@ -1,0 +1,609 @@
+{
+  "aggregate": {
+    "best_method": "contrastive",
+    "comparison": [
+      {
+        "median_gain_vs_baseline": 0.014318858165647375,
+        "median_spearman": 0.5994560361010429,
+        "method": "contrastive",
+        "positive_directions": 3,
+        "source_spearman": 0.9006127572345483
+      },
+      {
+        "median_gain_vs_baseline": 0.002158659340336544,
+        "median_spearman": 0.5893325574855108,
+        "method": "adversarial_contrastive",
+        "positive_directions": 3,
+        "source_spearman": 0.9007080139560467
+      },
+      {
+        "median_gain_vs_baseline": null,
+        "median_spearman": 0.5836792647722425,
+        "method": "baseline",
+        "positive_directions": null,
+        "source_spearman": 0.9067063501347016
+      },
+      {
+        "median_gain_vs_baseline": -0.012547565325010418,
+        "median_spearman": 0.575388162067723,
+        "method": "adversarial",
+        "positive_directions": 1,
+        "source_spearman": 0.9056571875642047
+      },
+      {
+        "median_gain_vs_baseline": -0.3830458293067904,
+        "median_spearman": 0.3108129588488174,
+        "method": "adversarial_pairwise",
+        "positive_directions": 1,
+        "source_spearman": 0.8643671006368713
+      },
+      {
+        "median_gain_vs_baseline": -0.5289254860217631,
+        "median_spearman": 0.16493330213384455,
+        "method": "contrastive_pairwise",
+        "positive_directions": 0,
+        "source_spearman": 0.7601919859462735
+      },
+      {
+        "median_gain_vs_baseline": -0.5228494408613571,
+        "median_spearman": 0.083408850846871,
+        "method": "full_pipeline",
+        "positive_directions": 0,
+        "source_spearman": 0.8204641206805295
+      },
+      {
+        "median_gain_vs_baseline": -0.5173800882484916,
+        "median_spearman": -0.021158292333750585,
+        "method": "pairwise",
+        "positive_directions": 0,
+        "source_spearman": 0.1569979069439417
+      }
+    ],
+    "wall_time_total_seconds": 221.6
+  },
+  "methods": {
+    "adversarial": {
+      "aggregate": {
+        "all_gains": [
+          0.0030506644272561,
+          -0.019632869836294975,
+          -0.010576836549169355,
+          -0.014518294100851481
+        ],
+        "mean_transfer_spearman": 0.5463422285481091,
+        "median_gain_vs_baseline": -0.012547565325010418,
+        "median_transfer_spearman": 0.575388162067723,
+        "positive_directions": 1,
+        "transfer_spearmans": [
+          0.5445181030699139,
+          0.6062582210655323,
+          0.28728439874845363,
+          0.7473081913085368
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.1,
+        "composition_mode": "set_query",
+        "contrastive_weight": 0.0,
+        "depth_routing": "standard"
+      },
+      "description": "Gradient reversal domain adaptation",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 27.23296920534165,
+            "r2": -0.06845593128944594,
+            "rmse": 44.68783796092796,
+            "spearman": 0.5445181030699139
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 31.80157974485368,
+            "r2": -0.38830357847012276,
+            "rmse": 38.494305065893975,
+            "spearman": 0.6062582210655323
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 49.14237467447915,
+            "r2": -2.9863614473434743,
+            "rmse": 56.321491562673316,
+            "spearman": 0.28728439874845363
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 18.63884316096231,
+            "r2": 0.47238791297428695,
+            "rmse": 25.032769930518146,
+            "spearman": 0.7473081913085368
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 40,
+        "parameter_count": 368198,
+        "source_spearman": 0.9056571875642047,
+        "validation_spearman": 0.8909430542943677
+      },
+      "wall_time_seconds": 23.5
+    },
+    "adversarial_contrastive": {
+      "aggregate": {
+        "all_gains": [
+          0.0015306461146212813,
+          0.009775939311915227,
+          -0.04306326304590902,
+          0.0027866725660518066
+        ],
+        "mean_transfer_spearman": 0.549519061299544,
+        "median_gain_vs_baseline": 0.002158659340336544,
+        "median_transfer_spearman": 0.5893325574855108,
+        "positive_directions": 3,
+        "transfer_spearmans": [
+          0.5429980847572791,
+          0.6356670302137425,
+          0.25479797225171397,
+          0.76461315797544
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.08,
+        "composition_mode": "set_query",
+        "contrastive_weight": 0.08,
+        "depth_routing": "standard"
+      },
+      "description": "Adversarial + contrastive combined",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 26.916769021654897,
+            "r2": -0.053676186917414936,
+            "rmse": 44.377682533508185,
+            "spearman": 0.5429980847572791
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 29.641406104678214,
+            "r2": -0.22578989420426931,
+            "rmse": 36.171146990366154,
+            "spearman": 0.6356670302137425
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 51.05551719060019,
+            "r2": -3.4335393664002227,
+            "rmse": 59.39653292012028,
+            "spearman": 0.25479797225171397
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 17.313294280521454,
+            "r2": 0.5346674640691942,
+            "rmse": 23.508950929517724,
+            "spearman": 0.76461315797544
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 35,
+        "parameter_count": 368198,
+        "source_spearman": 0.9007080139560467,
+        "validation_spearman": 0.8877436860683054
+      },
+      "wall_time_seconds": 27.1
+    },
+    "adversarial_pairwise": {
+      "aggregate": {
+        "all_gains": [
+          -0.5836068033172838,
+          -0.2971477595085381,
+          0.07584065753620212,
+          -0.46894389910504264
+        ],
+        "mean_transfer_spearman": 0.23829711146420846,
+        "median_gain_vs_baseline": -0.3830458293067904,
+        "median_transfer_spearman": 0.3108129588488174,
+        "positive_directions": 1,
+        "transfer_spearmans": [
+          -0.04213936467462595,
+          0.32874333139328915,
+          0.3737018928338251,
+          0.2928825863043456
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.1,
+        "composition_mode": "pairwise",
+        "contrastive_weight": 0.0,
+        "depth_routing": "standard"
+      },
+      "description": "Adversarial + pairwise encoder",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 42.16406981453063,
+            "r2": -0.8281453530494767,
+            "rmse": 58.45429108334147,
+            "spearman": -0.04213936467462595
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 27.64515158032615,
+            "r2": -0.05764321589411181,
+            "rmse": 33.59880693385563,
+            "spearman": 0.32874333139328915
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 31.347207641601553,
+            "r2": -0.658243531438401,
+            "rmse": 36.325363309884466,
+            "spearman": 0.3737018928338251
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 40.134087359716034,
+            "r2": -1.055151660720231,
+            "rmse": 49.405292854153,
+            "spearman": 0.2928825863043456
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 37,
+        "parameter_count": 393094,
+        "source_spearman": 0.8643671006368713,
+        "validation_spearman": 0.8249105240083628
+      },
+      "wall_time_seconds": 33.1
+    },
+    "baseline": {
+      "aggregate": {
+        "mean_transfer_spearman": 0.5567615625628741,
+        "median_transfer_spearman": 0.5836792647722425,
+        "transfer_spearmans": [
+          0.5414674386426578,
+          0.6258910909018273,
+          0.297861235297623,
+          0.7618264854093882
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.0,
+        "composition_mode": "set_query",
+        "contrastive_weight": 0.0,
+        "depth_routing": "standard"
+      },
+      "description": "Standard hierarchical cross-attention v1",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 26.521172950381324,
+            "r2": -0.03386890159849387,
+            "rmse": 43.95859190313884,
+            "spearman": 0.5414674386426578
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 30.939322044735874,
+            "r2": -0.3146130211010292,
+            "rmse": 37.458745356050514,
+            "spearman": 0.6258910909018273
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 51.80954497806608,
+            "r2": -3.2410439212631887,
+            "rmse": 58.092784794055305,
+            "spearman": 0.297861235297623
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 18.591386825319326,
+            "r2": 0.46561710283319735,
+            "rmse": 25.19287981782593,
+            "spearman": 0.7618264854093882
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 40,
+        "parameter_count": 368198,
+        "source_spearman": 0.9067063501347016,
+        "validation_spearman": 0.8918238930148343
+      },
+      "wall_time_seconds": 23.4
+    },
+    "contrastive": {
+      "aggregate": {
+        "all_gains": [
+          0.022524522305080064,
+          0.009029020352520734,
+          -0.045696973338073155,
+          0.019608695978774016
+        ],
+        "mean_transfer_spearman": 0.5581278788874495,
+        "median_gain_vs_baseline": 0.014318858165647375,
+        "median_transfer_spearman": 0.5994560361010429,
+        "positive_directions": 3,
+        "transfer_spearmans": [
+          0.5639919609477378,
+          0.634920111254348,
+          0.25216426195954983,
+          0.7814351813881623
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.0,
+        "composition_mode": "set_query",
+        "contrastive_weight": 0.1,
+        "depth_routing": "standard"
+      },
+      "description": "Composition-structured contrastive learning",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 26.629542711046014,
+            "r2": -0.04510450607779415,
+            "rmse": 44.19680717457191,
+            "spearman": 0.5639919609477378
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 32.20954497806611,
+            "r2": -0.40119452133674205,
+            "rmse": 38.67260947082834,
+            "spearman": 0.634920111254348
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 49.87032097710503,
+            "r2": -3.0912446408065293,
+            "rmse": 57.05760463940759,
+            "spearman": 0.25216426195954983
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 22.698031761532754,
+            "r2": 0.26061851112573664,
+            "rmse": 29.63369635292684,
+            "spearman": 0.7814351813881623
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 40,
+        "parameter_count": 368198,
+        "source_spearman": 0.9006127572345483,
+        "validation_spearman": 0.8790466692765732
+      },
+      "wall_time_seconds": 27.1
+    },
+    "contrastive_pairwise": {
+      "aggregate": {
+        "all_gains": [
+          -0.6257791643623126,
+          -0.4743835294516229,
+          -0.08027117018030971,
+          -0.5834674425919035
+        ],
+        "mean_transfer_spearman": 0.11578623591633688,
+        "median_gain_vs_baseline": -0.5289254860217631,
+        "median_transfer_spearman": 0.16493330213384455,
+        "positive_directions": 0,
+        "transfer_spearmans": [
+          -0.08431172571965485,
+          0.1515075614502044,
+          0.21759006511731327,
+          0.17835904281748471
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.0,
+        "composition_mode": "pairwise",
+        "contrastive_weight": 0.1,
+        "depth_routing": "standard"
+      },
+      "description": "Contrastive + pairwise encoder",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 46.39049692305308,
+            "r2": -1.0225291255613684,
+            "rmse": 61.483478275767546,
+            "spearman": -0.08431172571965485
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 26.140399896530884,
+            "r2": 0.03521145570726125,
+            "rmse": 32.09004538078081,
+            "spearman": 0.1515075614502044
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 27.95900627015128,
+            "r2": -0.5213835715795319,
+            "rmse": 34.79406510976851,
+            "spearman": 0.21759006511731327
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 32.22098156156995,
+            "r2": -0.35401727060496113,
+            "rmse": 40.10177922576752,
+            "spearman": 0.17835904281748471
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 38,
+        "parameter_count": 393094,
+        "source_spearman": 0.7601919859462735,
+        "validation_spearman": 0.7009147560824655
+      },
+      "wall_time_seconds": 36.5
+    },
+    "full_pipeline": {
+      "aggregate": {
+        "all_gains": [
+          -0.5070521726958772,
+          -0.6042244417303133,
+          -0.1654587995506615,
+          -0.538646709026837
+        ],
+        "mean_transfer_spearman": 0.1029160318119518,
+        "median_gain_vs_baseline": -0.5228494408613571,
+        "median_transfer_spearman": 0.083408850846871,
+        "positive_directions": 0,
+        "transfer_spearmans": [
+          0.03441526594678052,
+          0.02166664917151394,
+          0.13240243574696148,
+          0.22317977638255124
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.07,
+        "composition_mode": "pairwise",
+        "contrastive_weight": 0.07,
+        "depth_routing": "standard"
+      },
+      "description": "Adversarial + contrastive + pairwise (all combined)",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 46.93368103996156,
+            "r2": -1.0514312144482658,
+            "rmse": 61.9212216737961,
+            "spearman": 0.03441526594678052
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 27.229065086728056,
+            "r2": -0.04213179317329696,
+            "rmse": 33.351516407410635,
+            "spearman": 0.02166664917151394
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 24.04452175564235,
+            "r2": -0.18271978040662362,
+            "rmse": 30.677978645069917,
+            "spearman": 0.13240243574696148
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 32.76275828528027,
+            "r2": -0.430925577220439,
+            "rmse": 41.224942928927646,
+            "spearman": 0.22317977638255124
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 40,
+        "parameter_count": 393094,
+        "source_spearman": 0.8204641206805295,
+        "validation_spearman": 0.7770617447793442
+      },
+      "wall_time_seconds": 36.8
+    },
+    "pairwise": {
+      "aggregate": {
+        "all_gains": [
+          -0.6157152713894076,
+          -0.3398866933401944,
+          -0.4190449051075755,
+          -0.7298952373301396
+        ],
+        "mean_transfer_spearman": 0.030626035771044783,
+        "median_gain_vs_baseline": -0.5173800882484916,
+        "median_transfer_spearman": -0.021158292333750585,
+        "positive_directions": 0,
+        "transfer_spearmans": [
+          -0.07424783274674981,
+          0.2860043975616329,
+          -0.12118366980995257,
+          0.031931248079248645
+        ]
+      },
+      "config": {
+        "adversarial_weight": 0.0,
+        "composition_mode": "pairwise",
+        "contrastive_weight": 0.0,
+        "depth_routing": "standard"
+      },
+      "description": "Pairwise element interaction encoder",
+      "directions": {
+        "specgen_A": {
+          "zero_shot": {
+            "mae": 30.565981474376862,
+            "r2": -0.07325760726187758,
+            "rmse": 44.78813970161505,
+            "spearman": -0.07424783274674981
+          }
+        },
+        "specgen_B": {
+          "zero_shot": {
+            "mae": 38.35331348237539,
+            "r2": -0.9010111705991655,
+            "rmse": 45.04500055805435,
+            "spearman": 0.2860043975616329
+          }
+        },
+        "specgen_C": {
+          "zero_shot": {
+            "mae": 45.28883487761965,
+            "r2": -2.2532746632675726,
+            "rmse": 50.879891453459756,
+            "spearman": -0.12118366980995257
+          }
+        },
+        "specgen_D": {
+          "zero_shot": {
+            "mae": 30.14580271887402,
+            "r2": -0.17611282528472416,
+            "rmse": 37.3745551983027,
+            "spearman": 0.031931248079248645
+          }
+        }
+      },
+      "source": {
+        "best_epoch": 3,
+        "parameter_count": 393094,
+        "source_spearman": 0.1569979069439417,
+        "validation_spearman": 0.10809004804253132
+      },
+      "wall_time_seconds": 11.3
+    }
+  },
+  "screening_config": {
+    "adaptation_enabled": false,
+    "anchors": 5,
+    "draws": 10,
+    "epochs": 40,
+    "seed": 20260802
+  }
+}

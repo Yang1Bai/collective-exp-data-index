@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2026-08-04T15:52:12.503Z" version="30.3.6">
+  <diagram id="page-1" name="Figure">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0" background="#1a1a2e">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="__figure_title__" value="Contrastive Catalyst Transfer Architecture" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontSize=22;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="Contrastive Cross-Domain Catalyst Knowledge Transfer" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontColor=#e0e0e0;fontSize=28;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="800" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Constrastive Representation Learning + Hierarchical Cross-Attention Transformer" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontColor=#a0a0c0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="450" y="55" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="input_box" value="&lt;b&gt;Input Batch&lt;/b&gt;&lt;hr&gt;• Elemental composition (Fe, Co, Ir...)&lt;br&gt;• Stoichiometric fractions&lt;br&gt;• UV-vis spectra (patching)&lt;br&gt;• Synthesis conditions&lt;br&gt;• Reaction type" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#0f3460;fontColor=#e0e0e0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="encoder_box" value="&lt;b&gt;Hierarchical Cross-Attention Encoder&lt;/b&gt;&lt;hr&gt;&lt;b&gt;CompositionSetEncoder&lt;/b&gt;&lt;br&gt;Element Embedding → TransformerEncoder (self-attn) → Query Pooling&lt;br&gt;&lt;br&gt;&lt;b&gt;CurveTransformer&lt;/b&gt;&lt;br&gt;Patching → FourierAxisEncoding → TransformerEncoder (self-attn)&lt;br&gt;&lt;br&gt;&lt;b&gt;ConditionTokenEncoder&lt;/b&gt;  |  &lt;b&gt;TaskTokenEncoder&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;CrossModalFusion&lt;/b&gt;&lt;br&gt;MultiheadAttention (queries attend over all modalities)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#e94560;fontColor=#e0e0e0;fontSize=13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="110" width="680" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="latent_box" value="&lt;b&gt;Fused Latent z&lt;/b&gt;&lt;br&gt;&lt;font color='#a0a0c0'&gt;d_model = 64&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#533483;strokeColor=#e94560;fontColor=#ffffff;fontSize=16;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pred_head" value="&lt;b&gt;Prediction Head&lt;/b&gt;&lt;br&gt;MLP → log_variance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#533483;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="345" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_loss" value="&lt;b&gt;Regression Loss&lt;/b&gt;&lt;br&gt;SmoothL1 + Rank + NLL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e94560;strokeColor=#e94560;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="410" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="contrast_proj" value="&lt;b&gt;ContrastiveProjection&lt;/b&gt;&lt;br&gt;Linear → BN → ReLU → Linear → L2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#533483;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_sim" value="&lt;b&gt;Composition Cosine Similarity&lt;/b&gt;&lt;br&gt;118-dim periodic table vectors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#533483;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="570" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pos_pairs" value="&lt;b&gt;Positive Pairs&lt;/b&gt;&lt;br&gt;sim &gt; 0.7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1b4332;strokeColor=#2d6a4f;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="380" y="650" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="neg_pairs" value="&lt;b&gt;Negative Pairs&lt;/b&gt;&lt;br&gt;sim &lt; 0.7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3c1518;strokeColor=#e94560;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="650" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ntxent" value="&lt;b&gt;NT‑Xent Loss&lt;/b&gt;&lt;br&gt;−log[exp(sim⁺/τ) / Σ exp(sim⁻/τ)]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e94560;strokeColor=#e94560;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="740" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="total_loss" value="&lt;b&gt;Total Loss&lt;/b&gt;&lt;br&gt;regression + 0.1 × contrastive" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e94560;strokeColor=#ffffff;fontColor=#ffffff;fontSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="830" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="result_box" value="&lt;b&gt;Results (40-epoch screening, SpecGen zero-shot transfer)&lt;/b&gt;&lt;hr&gt;Baseline median: 0.5837  |  &lt;b&gt;Contrastive median: 0.5995  (+0.0158)&lt;/b&gt;&lt;hr&gt;A: 0.5640 (+0.0225)  |  B: 0.6349 (+0.0090)  |  C: 0.2522 (−0.0457)  |  D: 0.7814 (+0.0196)&lt;br&gt;3/4 directions improved. C remains bottleneck (Fe‑doping out of source domain)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#0f3460;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="920" width="1100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="key_box" value="&lt;b&gt;Key Insight&lt;/b&gt;&lt;hr&gt;Contrastive learning organizes the latent space by &lt;b&gt;chemistry&lt;/b&gt;, not by programme identity.&lt;br&gt;&lt;br&gt;&lt;b&gt;Before:&lt;/b&gt; samples cluster by lab/programme&lt;br&gt;&lt;b&gt;After:&lt;/b&gt; Fe₀.₄Co₀.₆ → Fe₀.₄₂Co₀.₅₈&lt;br&gt;(same chemistry, different lab)&lt;br&gt;&lt;br&gt;This cross-domain soft data augmentation bridges the source→target gap.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Comparison (21 models)&lt;/b&gt;&lt;hr&gt;✅ &lt;b&gt;Contrastive: +0.0158&lt;/b&gt;&lt;br&gt;≈ k-NN Ensemble: +0.0118&lt;br&gt;≈ Baseline: 0.0000&lt;br&gt;❌ Adversarial: −0.008&lt;br&gt;❌ Pairwise: −0.605&lt;br&gt;❌ Diffusion: −0.186&lt;br&gt;❌ KL-Shampoo: −0.375&lt;hr&gt;&lt;b&gt;Why it works:&lt;/b&gt;&lt;br&gt;Composition similarity is &lt;b&gt;domain-invariant&lt;/b&gt; — it only depends on the periodic table, not on which lab measured the catalyst." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#533483;fontColor=#e0e0e0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="110" width="280" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#a0a0c0;strokeWidth=2;" edge="1" parent="1" source="input_box" target="encoder_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#e94560;strokeWidth=3;" edge="1" parent="1" source="encoder_box" target="latent_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#a0a0c0;strokeWidth=2;" edge="1" parent="1" source="latent_box" target="pred_head">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#a0a0c0;strokeWidth=2;" edge="1" parent="1" source="pred_head" target="reg_loss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#a0a0c0;strokeWidth=2;" edge="1" parent="1" source="latent_box" target="contrast_proj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="composition" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#533483;strokeWidth=2;dashed=1;" edge="1" parent="1" source="input_box" target="comp_sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2d6a4f;strokeWidth=2;" edge="1" parent="1" source="contrast_proj" target="pos_pairs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#e94560;strokeWidth=2;" edge="1" parent="1" source="contrast_proj" target="neg_pairs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="sim &gt; 0.7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2d6a4f;strokeWidth=2;" edge="1" parent="1" source="comp_sim" target="pos_pairs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="sim &lt; 0.7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#e94560;strokeWidth=2;" edge="1" parent="1" source="comp_sim" target="neg_pairs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2d6a4f;strokeWidth=2;" edge="1" parent="1" source="pos_pairs" target="ntxent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#e94560;strokeWidth=2;" edge="1" parent="1" source="neg_pairs" target="ntxent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;strokeWidth=2;" edge="1" parent="1" source="reg_loss" target="total_loss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;strokeWidth=2;" edge="1" parent="1" source="ntxent" target="total_loss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="transfer prediction" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#533483;strokeWidth=1;dashed=1;" edge="1" parent="1" source="latent_box" target="result_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
