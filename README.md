@@ -151,6 +151,21 @@ python scripts/localdb/build_localdb.py --query "SELECT dataset,property,COUNT(*
 To add a dataset: add its clone spec to `SOURCES` and a loader block in
 `load_all()`. `data/` is gitignored — the mirror stays local.
 
+## Private collaborator data snapshot
+
+Authorized collaborators can download the complete working snapshot from the
+private [collaborator data workspace](collaboration_data/README.md). The
+snapshot contains the unified SQLite lake, locally retained external inputs,
+and additional cross-domain candidate tables for testing new transfer,
+representation-learning, calibration, ranking, and OOD methods.
+
+Large files are supplied as verified GitHub pre-release assets rather than
+ordinary Git blobs. The workspace includes a 474-file manifest, SHA-256
+checksums, a source/licence matrix, and one-command download helpers. This
+private access route does not relicense upstream datasets and must be removed
+or replaced before the repository is made public unless all redistribution
+rights have been confirmed.
+
 ## Quick load
 
 ```python
