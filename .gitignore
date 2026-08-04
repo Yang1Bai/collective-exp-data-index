@@ -30,6 +30,4 @@ Thumbs.db
 scratch/
 *.local.md
 
-data/
-
-data/
+/data/
