@@ -1,0 +1,21 @@
+{
+  "tag": "collaborator-data-v2026.08.04",
+  "status": "validated",
+  "core_files": 422,
+  "candidate_files": 52,
+  "manifest_rows": 474,
+  "assets": [
+    {
+      "name": "collective-exp-analysis-ready-v2026.08.04.zip",
+      "bytes": 224382606,
+      "sha256": "493dbd56a990f380198292b0fd6e2089a48d393bf0bb2e1837aa4b36bb3ab13f"
+    },
+    {
+      "name": "collective-exp-candidate-tables-v2026.08.04.zip",
+      "bytes": 22428008,
+      "sha256": "5dee98a9bc82016424d2fe485de1b0520e9477c6ca66ce489b1a86ca9628f831"
+    }
+  ],
+  "excluded_from_candidate_asset": "PDFs, images, notebooks, code, logs, and derived presentation figures",
+  "visibility_guard": "Private collaborators only until every verify-upstream or unknown source is cleared."
+}

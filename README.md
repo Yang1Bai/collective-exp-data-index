@@ -109,6 +109,7 @@ one analysis-only) and contains 96,184 measurements, 230 property labels, and
 | Browse every broad and task-specific database connected to the project | [Database guide](research/data/DATABASE_GUIDE.md) |
 | Review the four manuscript figures and their source data | [Figure directory](analysis/figures/) and [figure QA](analysis/figures/FIGURE_QA_NMI_V3.md) |
 | Reproduce or extend an analysis | [Analysis guide](analysis/README.md) |
+| Download the complete private collaborator data snapshot | [Collaborator data workspace](collaboration_data/README.md) |
 | Run the frozen high-performance-computing workflows | [Balam guide](analysis/balam/README.md) |
 | Review Edison, Hypothesis Generation, and Legacy Kosmos outputs | [Edison report index](analysis/review_packages/edison/README.md) |
 | See exactly what is included in this release | [Release manifest](research/RELEASE_MANIFEST.md) |
@@ -194,6 +195,13 @@ recipient-only configurations. The initial Edison CALiSol-to-KIT proposal was
 retained as a harmful result rather than removed.
 
 ## Data, licensing, and citation
+
+Authorized collaborators can download the complete local research snapshot
+from the private [collaborator data workspace](collaboration_data/README.md).
+It includes the unified SQLite lake, locally retained external inputs, and the
+additional cross-domain candidate tables used to search for new transfer
+edges. Large files are attached to a private GitHub pre-release rather than
+stored as ordinary Git blobs.
 
 The repository does not re-host third-party raw datasets by default. It stores
 source-pinned metadata, compact derived summaries, protocols, and validation

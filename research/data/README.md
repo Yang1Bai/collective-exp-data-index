@@ -26,4 +26,12 @@ The repository contains only original analysis code, hashes, compact derived
 summaries, and small validation artefacts whose inclusion is necessary for the
 scientific audit trail.
 
+Authorized project collaborators can obtain the complete working snapshot
+through the private [`collaboration_data/`](../../collaboration_data/README.md)
+release. That private snapshot is an access mechanism for method development,
+not a public relicensing decision. Its file-level manifest and source matrix
+distinguish redistributable records from `verify-upstream`, unknown, and
+collaborator-restricted inputs. If repository visibility changes, the private
+assets must be removed or replaced before the change.
+
 The broader resource index is available in [`catalog/catalog.csv`](../../catalog/catalog.csv).
