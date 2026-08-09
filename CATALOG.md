@@ -1,6 +1,6 @@
 # Catalog
 
-_252 databases · updated 2026-08-02 · 224 experimental · 28 mixed · 0 computational_
+_266 databases · updated 2026-08-09 · 238 experimental · 28 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -35,20 +35,20 @@ _252 databases · updated 2026-08-02 · 224 experimental · 28 mixed · 0 comput
   - [Additive manufacturing](#materials-additive-manufacturing) (1)
   - [Alloys & high-entropy alloys](#materials-alloys) (1)
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
-  - [Batteries & energy storage](#materials-batteries) (19)
+  - [Batteries & energy storage](#materials-batteries) (20)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
-  - [Bioactivity & screening](#materials-bioactivity) (13)
+  - [Bioactivity & screening](#materials-bioactivity) (15)
   - [Catalysis](#materials-catalysis) (28)
   - [Crystallography](#materials-crystallography) (2)
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
   - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
-  - [General materials properties](#materials-general-properties) (52)
+  - [General materials properties](#materials-general-properties) (60)
   - [Geophysics & earth sciences](#materials-geophysics) (4)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
   - [HTE / synthesis](#materials-hte-synthesis) (1)
   - [Lab automation & robotic chemistry](#materials-lab-automation) (2)
-  - [Magnetic materials](#materials-magnetic) (9)
+  - [Magnetic materials](#materials-magnetic) (12)
   - [Mechanical properties](#materials-mechanical) (2)
   - [Membranes & separations](#materials-membranes) (1)
   - [MOFs & porous materials](#materials-mofs-porous) (5)
@@ -573,6 +573,12 @@ Molecular design for ultrafast-charging practical lithium metal batteries. Datas
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29257265.v1](https://doi.org/10.6084/m9.figshare.29257265.v1)
 
+#### 🧪🔓 [Molecularly aligned electron-channels for ultrafast-charging practical lithium metal batteries](https://springernature.figshare.com/articles/dataset/Molecularly_aligned_electron-channels_for_ultrafast-charging_practical_lithium_metal_batteries/29257265)
+
+Molecular design for ultrafast-charging practical lithium metal batteries. Dataset size: 2 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29257265](https://doi.org/10.6084/m9.figshare.29257265)
+
 #### 🧪🔓 [Multi-Stage Lithium-Ion Battery Aging Dataset](https://figshare.com/articles/dataset/Multi-Stage_Lithium_Ion_Battery_Aging_Study/25975315/1)
 
 Experimental Li-ion aging dataset built with multiple design-of-experiment methodologies: 280 files (10.3 GB) of cycling/aging measurements across stages and conditions. Deposited with the Scientific Data descriptor (2024).
@@ -657,6 +663,12 @@ These data were used to support the results and include data used in bioinformat
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32257284](https://doi.org/10.6084/m9.figshare.32257284)
 
+#### 🧪🔓 [A tumour-derived organoid biobank maps cancer gene dependencies](https://springernature.figshare.com/articles/dataset/A_tumour-derived_organoid_biobank_maps_cancer_gene_dependencies/28339340/1)
+
+Additional files needed to reproduce analyses included in this manuscript using CRISPR and genomic data from cancer patient-derived organoids. Dataset size: 287 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28339340.v1](https://doi.org/10.6084/m9.figshare.28339340.v1)
+
 #### 🧪🔓 [Biophysical and Molecular mechanisms that control active wetting and tissue fluidification in epithelial tissues](https://springernature.figshare.com/articles/dataset/Biophysical_and_Molecular_mechanisms_that_control_active_wetting_and_tissue_fluidification_in_epithelial_tissues/31231516/1)
 
 contains the raw data underlying any graphs and charts presented as Excel file
@@ -674,6 +686,12 @@ Source data for all the results presented in the submitted paper.
 The zip file includes raw image data obtained from fluorescence microscopy. Dataset size: 17 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26161684](https://doi.org/10.6084/m9.figshare.26161684)
+
+#### 🧪🔓 [Construction of synthetic non-genetic DNA-protein systems in living cells](https://springernature.figshare.com/articles/dataset/Construction_of_synthetic_non-genetic_DNA-protein_systems_in_living_cells/26161684/1)
+
+The zip file includes raw image data obtained from fluorescence microscopy. Dataset size: 17 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.26161684.v1](https://doi.org/10.6084/m9.figshare.26161684.v1)
 
 #### 🧪🔓 [Efficient and reversible chirality induction between protein and achiral plasmonic assemblies](https://springernature.figshare.com/articles/dataset/Efficient_and_reversible_chirality_induction_between_protein_and_achiral_plasmonic_assemblies/28429202/1)
 
@@ -1038,6 +1056,24 @@ This contains all the necessary data and code used in the study by Yin et al. (2
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29155031](https://doi.org/10.6084/m9.figshare.29155031)
 
+#### 🧪🔓 [Data files associated with A Dependency Map Enhanced with Next-Generation 3D Cancer Models](https://springernature.figshare.com/articles/dataset/Data_files_associated_with_A_Dependency_Map_Enhanced_with_Next-Generation_3D_Cancer_Models/29472362)
+
+This file set includes metadata files (6 files) and analysis result files (29 files) associated with Neiswender, Maffa, Brenan et al. "A Dependency Map Enhanced with Next-Generation 3D Cancer Models" (Nature, 2026). The custom analysis code used for generating these results is available at a GitHub repository (https://github.com/broadinstitute/DepMap-NextGen-Public). In addition, raw profiling…. Dataset size: 106 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29472362](https://doi.org/10.6084/m9.figshare.29472362)
+
+#### 🧪🔓 [Data for: An entangling gate for dual-rail erasure qubits](https://zenodo.org/doi/10.5281/zenodo.20433753)
+
+Datasets for characterization and benchmarking experiments for manuscript: An entangling gate for dual-rail erasure qubits See README.md for description for each dataset. Dataset size: 0 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20433753](https://doi.org/10.5281/zenodo.20433753)
+
+#### 🧪🔓 [Data for: An entangling gate for dual-rail erasure qubits](https://zenodo.org/doi/10.5281/zenodo.20433754)
+
+Datasets for characterization and benchmarking experiments for manuscript: An entangling gate for dual-rail erasure qubits See README.md for description for each dataset. Dataset size: 0 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20433754](https://doi.org/10.5281/zenodo.20433754)
+
 #### 🧪🔓 [Data used in The Linkage between Microbial Community Dynamics and Urbanization Age](https://springernature.figshare.com/articles/dataset/Data_used_in_The_Linkage_between_Microbial_Community_Dynamics_and_Urbanization_Age/24680199)
 
 Raw data used in this study. Full information about data and code is available at https://doi.org/10.6084/m9.figshare.24782817. Dataset size: 61 MB.
@@ -1068,6 +1104,12 @@ Source data for Detecting Linear Dichroism with Atomic Resolution. Dataset size:
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31998285](https://doi.org/10.6084/m9.figshare.31998285)
 
+#### 🧪🔓 [Detecting Linear Dichroism with Atomic Resolution](https://springernature.figshare.com/articles/dataset/Detecting_Linear_Dichroism_with_Atomic_Resolution/31998285/1)
+
+Source data for Detecting Linear Dichroism with Atomic Resolution. Dataset size: 36 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31998285.v1](https://doi.org/10.6084/m9.figshare.31998285.v1)
+
 #### 🧪🔓 [Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality](https://springernature.figshare.com/articles/dataset/Electron-Phonon_Coupling_and_Symmetry-Breaking_in_Superconducting_Oxide_Interfaces_Near_Ferroelectric_Quantum_Criticality/32324148/1)
 
 Source data for Electron-Phonon Coupling and Symmetry-Breaking in Superconducting Oxide Interfaces Near Ferroelectric Quantum Criticality. Dataset size: 354 MB.
@@ -1086,11 +1128,29 @@ Additional Data to report: https://doi.org/10.1038/s41557-026-02082-0 In biomacr
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.15690640](https://doi.org/10.5281/zenodo.15690640)
 
+#### 🧪🔓 [HCMI model-tumour DNA methylation beta matrices, restricted to the flagship epigenetic-concordance probe sets](https://zenodo.org/doi/10.5281/zenodo.21838909)
+
+What this is. Per-cancer-type DNA methylation beta-value matrices for Human Cancer Models Initiative (HCMI) patient-derived cancer models and their matched parental tumours, restricted to the probe sets used by the HCMI flagship paper's epigenetic-concordance analysis. 23 Parquet files, one per cancer type, 42.3 MB total. Each file is probes (rows) x samples (columns), Float32, with a leading…
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.21838909](https://doi.org/10.5281/zenodo.21838909)
+
+#### 🧪🔓 [HCMI model-tumour DNA methylation beta matrices, restricted to the flagship epigenetic-concordance probe sets](https://zenodo.org/doi/10.5281/zenodo.21838908)
+
+What this is. Per-cancer-type DNA methylation beta-value matrices for Human Cancer Models Initiative (HCMI) patient-derived cancer models and their matched parental tumours, restricted to the probe sets used by the HCMI flagship paper's epigenetic-concordance analysis. 23 Parquet files, one per cancer type, 42.3 MB total. Each file is probes (rows) x samples (columns), Float32, with a leading…
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.21838908](https://doi.org/10.5281/zenodo.21838908)
+
 #### 🔀🔓 [Materials Cloud Archive](https://archive.materialscloud.org)
 
 FAIR, open-access archive hosting hundreds of community-contributed materials-science datasets (often with full provenance via AiiDA), spanning DFT calculations, workflows and some experimental data. Each dataset receives a persistent DOI.
 
 `mixed`· `open`· 2020 · Other · Materials Cloud· DOI: [10.1038/s41597-020-0637-x](https://doi.org/10.1038/s41597-020-0637-x)· tags: `fair-data`, `repository`, `aiida`, `provenance`, `doi`
+
+#### 🧪🔓 [Metadata for a global atlas of soil microbial genetic resources](https://springernature.figshare.com/articles/dataset/Metadata_for_a_global_atlas_of_soil_microbial_genetic_resources/29482997)
+
+We compiled a global database of 1,609 soil metagenomes and found that hotspots exhibiting both high functional gene richness and dissimilarity are rare. Overall, fewer than 25% of hotspots of soil microbial genetic resources fell within designated protected areas. Meanwhile, global patterns of microbial gene richness and dissimilarity were largely decoupled from those in taxonomic biodiversity. Dataset size: 1 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29482997](https://doi.org/10.6084/m9.figshare.29482997)
 
 #### 🧪🔓 [Microscopic signatures of imaginary charge density wave in a kagome metal](https://springernature.figshare.com/articles/dataset/Microscopic_signatures_of_imaginary_charge_density_wave_in_a_kagome_metal/32251713/1)
 
@@ -1127,6 +1187,12 @@ Experimental data for the paper " Observation of angular momentum transfer among
 We have deposited the source data underlying all four figures of the manuscript in figshare. The dataset consists of four Excel files, each corresponding to one figure in the main text
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30752111.v1](https://doi.org/10.6084/m9.figshare.30752111.v1)
+
+#### 🧪🔓 [Observing disorder-induced average topological order in an atom array](https://springernature.figshare.com/articles/dataset/Observing_disorder-induced_average_topological_order_in_an_atom_array/30752111)
+
+We have deposited the source data underlying all four figures of the manuscript in figshare. The dataset consists of four Excel files, each corresponding to one figure in the main text. Dataset size: 0 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30752111](https://doi.org/10.6084/m9.figshare.30752111)
 
 #### 🧪🔓 [OdonTraits Europe. A comprehensive traits dataset for European dragonflies and damselflies](https://zenodo.org/doi/10.5281/zenodo.17248815)
 
@@ -1344,6 +1410,12 @@ PolyBot self-driving lab (Argonne CNM) autonomously navigated a 7-dimensional pr
 <a id="materials-magnetic"></a>
 ### Magnetic materials
 
+#### 🧪🔓 [Altermagnetic photonic crystals](https://springernature.figshare.com/articles/dataset/Altermagnetic_photonic_crystals/32229984/1)
+
+Altermagnetic photonic crystals. Dataset size: 13 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32229984.v1](https://doi.org/10.6084/m9.figshare.32229984.v1)
+
 #### 🧪🔓 [An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises](https://zenodo.org/doi/10.5281/zenodo.14615202)
 
 Description The electroespinography (ESG) signals dataset comprises recordings from fourteen able-bodied participants. A total 10 sessions were recorded for experiment 1 (age: 30.30 ± 8.60, 40 % female participants), 10 sessions for experiment 2 (age: 30.00 ± 8.99, 40 % female participants) and 5 sessions for experiment 3 (age: 26.00 ± 4.24, 40 % female participants).
@@ -1374,11 +1446,23 @@ Data and Evaluation to "Exchange-mediated Spin-Electric Control of Single Molecu
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31554586](https://doi.org/10.6084/m9.figshare.31554586)
 
+#### 🧪🔓 [Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces](https://springernature.figshare.com/articles/dataset/Exchange-mediated_Spin-Electric_Control_of_Single_Molecules_on_Surfaces/31554586/1)
+
+Data and Evaluation to "Exchange-mediated Spin-Electric Control of Single Molecules on Surfaces". Sorted by the paper Figures. Dataset size: 98 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31554586.v1](https://doi.org/10.6084/m9.figshare.31554586.v1)
+
 #### 🧪🔓 [Homochiral Toroidal Spin State in Dy(III)-based Single-Molecule Toroics](https://springernature.figshare.com/articles/dataset/Homochiral_Toroidal_Spin_State_in_Dy_III_-based_Single-Molecule_Toroics/30937706)
 
 This folder contains the raw experimental data for the micro-SQUID and MChD measurements presented in the above publication. The data are separated into separate files corresponding to Figs. 3-6 described in the main text. Dataset size: 2 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30937706](https://doi.org/10.6084/m9.figshare.30937706)
+
+#### 🧪🔓 [Homochiral Toroidal Spin State in Dy(III)-based Single-Molecule Toroics](https://springernature.figshare.com/articles/dataset/Homochiral_Toroidal_Spin_State_in_Dy_III_-based_Single-Molecule_Toroics/30937706/1)
+
+This folder contains the raw experimental data for the micro-SQUID and MChD measurements presented in the above publication. The data are separated into separate files corresponding to Figs. 3-6 described in the main text. Dataset size: 2 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30937706.v1](https://doi.org/10.6084/m9.figshare.30937706.v1)
 
 #### 🧪🔓 [MAGNDATA (Bilbao Crystallographic Server)](https://www.cryst.ehu.es/magndata/)
 
