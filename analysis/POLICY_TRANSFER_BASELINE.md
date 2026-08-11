@@ -25,9 +25,15 @@ comparison matrix:
 | Standard attention Transformer | representation |
 | Contrastive latent alignment | representation |
 | **Frozen transfer policy** | **decision** |
+| **Learned policy (GBM, leave-one-pair-out)** | **decision (learned)** |
+| **LLM policy (pinned prompt/decision artifact)** | **reasoning** |
 
-This is the baseline that any future *learned* or *LLM-reasoned* policy
-must beat.
+The frozen policy is the baseline that any *learned* or *LLM-reasoned*
+policy must beat; the learned policy is trained strictly
+leave-one-pair-out so a deciding model never sees its own pair's
+outcome; the LLM policy replays decisions recorded over
+`as_prompt_dict()` JSON only, pinned as a hashed artifact in
+`analysis/results/llm_policy_decisions.json`.
 
 ## Contract
 
@@ -50,15 +56,23 @@ must beat.
 ## Running
 
 ```bash
-# fast screen (alloy pairs only, ~15 min)
-.venv/bin/python analysis/run_policy_transfer_benchmark.py \
-    --skip-specgen --alloy-epochs 100
-
-# full suite (alloy bidirectional + SpecGen zero-shot, ~2-4 h CPU)
+# full suite (15 directed edges: 6 alloy + 2 OCx24 + 3 SECCM + 4 SpecGen)
 .venv/bin/python analysis/run_policy_transfer_benchmark.py \
     --alloy-epochs 100 --specgen-epochs 40 \
     --out analysis/results/policy_transfer_benchmark.json
+
+# policy comparison (frozen vs learned vs LLM vs anchors)
+.venv/bin/python analysis/run_policy_comparison.py
 ```
+
+Edge suite:
+
+| Edges | Role |
+|---|---|
+| 6 alloy bidirectional | composition-only, historically weak/harmful |
+| 2 OCx24 uoft↔vsp | cross-lab CO2R, known positive ranking transfer |
+| 3 SECCM cross-library | documented negative-transfer boundary |
+| 4 SpecGen zero-shot | spectra+conditions, known positive |
 
 Output: `analysis/results/policy_transfer_benchmark.json` with per-edge
 geometry, per-method realized ρ, policy decisions, harm accounting, and a

@@ -41,7 +41,9 @@ sys.path.insert(0, str(ROOT / "analysis"))
 from catalyst_attention.alloy_loader import (  # noqa: E402
     load_birdshot, load_mpea, load_steels,
 )
-from catalyst_attention.data import load_specgen_archive  # noqa: E402
+from catalyst_attention.data import (  # noqa: E402
+    load_ocx24_csv, load_seccm_archives, load_specgen_archive,
+)
 from catalyst_attention.model import CatalystAttentionConfig  # noqa: E402
 from catalyst_attention.policy_transfer import (  # noqa: E402
     FrozenThresholdPolicy,
@@ -58,6 +60,8 @@ from catalyst_attention.training import (  # noqa: E402
 
 DB_PATH = Path("collaborator_workspace/data/data/collective.sqlite")
 SPECGEN_PATH = Path("research/data/specgen.zip")
+OCX24_PATH = Path("research/data/ocx24.csv")
+SECCM_CACHE = Path.home() / ".collective_data_cache" / "catalyst_attention"
 RESULTS_DIR = ROOT / "analysis" / "results"
 
 SEED = 20260810
@@ -102,6 +106,16 @@ def build_pairs(args):
         fusion_layers=1, feedforward_multiplier=3,
         use_curve=False, use_conditions=False, use_surface=False, dropout=0.1,
     )
+    ocx24_config = CatalystAttentionConfig(
+        d_model=48, n_heads=4, composition_layers=3, curve_layers=1,
+        fusion_layers=1, feedforward_multiplier=3,
+        use_curve=False, use_conditions=True, use_surface=False, dropout=0.1,
+    )
+    seccm_config = CatalystAttentionConfig(
+        d_model=64, n_heads=4, composition_layers=2, curve_layers=3,
+        fusion_layers=2, feedforward_multiplier=3,
+        use_curve=True, use_conditions=False, use_surface=True, dropout=0.1,
+    )
     pairs = []
 
     print("Loading alloy datasets ...", flush=True)
@@ -119,6 +133,34 @@ def build_pairs(args):
     ]
     for name, src, tgt, sfam, tfam in alloy:
         pairs.append((name, src, tgt, sfam, tfam, 0.0, composition_config))
+
+    if not args.skip_ocx24 and OCX24_PATH.exists():
+        print("Loading OCx24 (fe_co) ...", flush=True)
+        ocx24 = load_ocx24_csv(OCX24_PATH, "fe_co")
+        uoft = [s for s in ocx24 if s.program == "ocx24_uoft"]
+        vsp = [s for s in ocx24 if s.program == "ocx24_vsp"]
+        print(f"  uoft={len(uoft)} vsp={len(vsp)}", flush=True)
+        pairs.append(("ocx24_uoft→vsp", uoft, vsp, "ocx24_uoft", "ocx24_vsp", 0.3, ocx24_config))
+        pairs.append(("ocx24_vsp→uoft", vsp, uoft, "ocx24_vsp", "ocx24_uoft", 0.3, ocx24_config))
+
+    if not args.skip_seccm:
+        seccm_zip = SECCM_CACHE / "SECCM_dataset.zip"
+        edx_zip = SECCM_CACHE / "EDX_dataset.zip"
+        xps_zip = SECCM_CACHE / "XPS_dataset.zip"
+        if seccm_zip.exists() and edx_zip.exists():
+            print("Loading SECCM Au-Ir-Rh (log10_k0) ...", flush=True)
+            seccm = load_seccm_archives(seccm_zip, edx_zip, xps_zip if xps_zip.exists() else None)
+            libs = {}
+            for s in seccm:
+                libs.setdefault(s.program, []).append(s)
+            for k, v in libs.items():
+                print(f"  {k}={len(v)}", flush=True)
+            # The repo's documented negative-transfer boundary: cross-library
+            # HER transfer inside one ternary system.
+            au, ir, rh = libs["seccm_Au-rich"], libs["seccm_Ir-rich"], libs["seccm_Rh-rich"]
+            pairs.append(("seccm_Ir→Au", ir, au, "seccm_Ir-rich", "seccm_Au-rich", 0.7, seccm_config))
+            pairs.append(("seccm_Au→Ir", au, ir, "seccm_Au-rich", "seccm_Ir-rich", 0.7, seccm_config))
+            pairs.append(("seccm_Rh→Au", rh, au, "seccm_Rh-rich", "seccm_Au-rich", 0.7, seccm_config))
 
     if not args.skip_specgen and SPECGEN_PATH.exists():
         print("Loading SpecGen archive ...", flush=True)
@@ -146,7 +188,9 @@ def _load_specgen():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skip-specgen", action="store_true", help="alloy pairs only (fast)")
+    parser.add_argument("--skip-specgen", action="store_true", help="skip SpecGen pairs")
+    parser.add_argument("--skip-ocx24", action="store_true", help="skip OCx24 pairs")
+    parser.add_argument("--skip-seccm", action="store_true", help="skip SECCM pairs")
     parser.add_argument("--specgen-epochs", type=int, default=40)
     parser.add_argument("--alloy-epochs", type=int, default=100)
     parser.add_argument("--out", default=str(RESULTS_DIR / "policy_transfer_benchmark.json"))

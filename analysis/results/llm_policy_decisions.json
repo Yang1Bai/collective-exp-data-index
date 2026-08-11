@@ -1,0 +1,90 @@
+{
+ "policy": "llm_policy_v1",
+ "model": "claude-opus-4-8 (Cindy session 2026-08-10)",
+ "protocol": "Decisions recorded from TransferEdgeState.as_prompt_dict() fields only; the deciding agent did not read realized target Spearman values for this suite before writing this file.",
+ "decision_rule_notes": {
+  "fit_floor": "source_fit_spearman < 0.3 cannot support a transferable relation at all -> abstain; 0.3-0.5 with full coverage -> rank_only at best",
+  "size_floor": "attention transfer with source_n < ~400 rows -> abstain (repo finding)",
+  "coverage": "coverage < 0.15 -> abstain; 0.15-0.35 -> rank_only at best even with strong fit",
+  "contrastive": "contrastive amplifies weak-fit failure: require fit >= 0.6, else one tier more conservative than standard",
+  "cross_family_alloys": "composition-only cross-family alloy edges (steels/mpea/birdshot) carry known negative-transfer risk: cap at rank_only unless fit strong AND donor >= 400",
+  "seccm_boundary": "cross-library HER edges inside one ternary are a documented negative-transfer boundary: high fit + full coverage but capped at rank_only when donor < 400 rows"
+ },
+ "decisions": {
+  "steels→mpea": {
+   "standard": "abstain",
+   "contrastive": "abstain",
+   "rationale": "fit 0.06-0.07 is noise-level; coverage 0.06; nothing transferable"
+  },
+  "steels→birdshot": {
+   "standard": "abstain",
+   "contrastive": "abstain",
+   "rationale": "noise-level fit + coverage 0.13 below rank floor"
+  },
+  "mpea→steels": {
+   "standard": "rank_only",
+   "contrastive": "rank_only",
+   "rationale": "fit 0.67-0.71 and full coverage, but donor 395 < 400 floor and composition-only cross-family -> ordinal claim at most"
+  },
+  "mpea→birdshot": {
+   "standard": "rank_only",
+   "contrastive": "rank_only",
+   "rationale": "same as mpea→steels; birdshot recipient is small (171)"
+  },
+  "birdshot→steels": {
+   "standard": "abstain",
+   "contrastive": "abstain",
+   "rationale": "donor 171 rows is far below the attention floor; full coverage cannot rescue it"
+  },
+  "birdshot→mpea": {
+   "standard": "abstain",
+   "contrastive": "abstain",
+   "rationale": "donor 171 rows below floor; coverage 0.51 partial"
+  },
+  "ocx24_uoft→vsp": {
+   "standard": "apply",
+   "contrastive": "apply",
+   "rationale": "fit 0.89-0.91, 1230 rows, same reaction family across labs; coverage 0.53 acceptable for ranking-calibrated transfer"
+  },
+  "ocx24_vsp→uoft": {
+   "standard": "apply",
+   "contrastive": "apply",
+   "rationale": "fit 0.85-0.87, 940 rows, coverage 0.77; strongest cross-lab edge in the suite"
+  },
+  "seccm_Ir→Au": {
+   "standard": "rank_only",
+   "contrastive": "rank_only",
+   "rationale": "excellent fit (0.96-0.97) and full coverage, but 322 rows < 400 floor and this is the documented negative-transfer boundary: cap at ordinal claim"
+  },
+  "seccm_Au→Ir": {
+   "standard": "abstain",
+   "contrastive": "abstain",
+   "rationale": "fit 0.28-0.39 too weak for a donor relation regardless of coverage"
+  },
+  "seccm_Rh→Au": {
+   "standard": "rank_only",
+   "contrastive": "rank_only",
+   "rationale": "fit 0.98 with full coverage but 322 rows and the boundary caveat -> ordinal only"
+  },
+  "specgen→specgen_A": {
+   "standard": "apply",
+   "contrastive": "apply",
+   "rationale": "fit 0.90, 462 rows, full coverage, spectra+conditions richness 1.0"
+  },
+  "specgen→specgen_B": {
+   "standard": "apply",
+   "contrastive": "apply",
+   "rationale": "same donor strength; ligand-variant recipient fully covered"
+  },
+  "specgen→specgen_C": {
+   "standard": "rank_only",
+   "contrastive": "rank_only",
+   "rationale": "coverage 0.83 but recipient is the Fe-substituted system; donor has no Fe-rich rows (documented bottleneck) -> downgrade to ordinal claim"
+  },
+  "specgen→specgen_D": {
+   "standard": "apply",
+   "contrastive": "apply",
+   "rationale": "coverage 0.83, Mn substitution; donor strength sufficient for point transfer"
+  }
+ }
+}

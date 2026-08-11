@@ -1,7 +1,7 @@
 {
  "design": "policy-transfer-benchmark-v1",
  "seed": 20260810,
- "wall_time_s": 221.8,
+ "wall_time_s": 333.6,
  "edges": [
   {
    "pair": "steels\u2192mpea",
@@ -74,6 +74,66 @@
    "standard_rho": -0.14461086189575548,
    "contrastive_rho": -0.08504220659423199,
    "extra_trees_rho": 0.22752115437372195
+  },
+  {
+   "pair": "ocx24_uoft\u2192vsp",
+   "donor_family": "ocx24_uoft",
+   "recipient_family": "ocx24_vsp",
+   "source_n": 1230,
+   "target_n": 940,
+   "coverage": 0.526595744680851,
+   "mean_min_distance": 0.2882585288831463,
+   "standard_rho": 0.5613359218046533,
+   "contrastive_rho": 0.5260270926021434,
+   "extra_trees_rho": 0.3533022419734641
+  },
+  {
+   "pair": "ocx24_vsp\u2192uoft",
+   "donor_family": "ocx24_vsp",
+   "recipient_family": "ocx24_uoft",
+   "source_n": 940,
+   "target_n": 1230,
+   "coverage": 0.7682926829268293,
+   "mean_min_distance": 0.18613959953430986,
+   "standard_rho": 0.534387101835161,
+   "contrastive_rho": 0.4777694168522713,
+   "extra_trees_rho": 0.35955312110993726
+  },
+  {
+   "pair": "seccm_Ir\u2192Au",
+   "donor_family": "seccm_Ir-rich",
+   "recipient_family": "seccm_Au-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.07174458875249669,
+   "standard_rho": 0.1922399875923765,
+   "contrastive_rho": 0.22184970996461204,
+   "extra_trees_rho": -0.2604550036171751
+  },
+  {
+   "pair": "seccm_Au\u2192Ir",
+   "donor_family": "seccm_Au-rich",
+   "recipient_family": "seccm_Ir-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.07161678958896253,
+   "standard_rho": 0.5071151551312731,
+   "contrastive_rho": 0.317441966414231,
+   "extra_trees_rho": 0.6151298470974451
+  },
+  {
+   "pair": "seccm_Rh\u2192Au",
+   "donor_family": "seccm_Rh-rich",
+   "recipient_family": "seccm_Au-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.06262948769598549,
+   "standard_rho": 0.1406450510255618,
+   "contrastive_rho": 0.04228710785864289,
+   "extra_trees_rho": -0.31801437168080865
   },
   {
    "pair": "specgen\u2192specgen_A",
@@ -344,6 +404,186 @@
     "target_spearman": -0.085042
    },
    {
+    "pair": "ocx24_uoft\u2192vsp",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_uoft\u2192vsp",
+     "method": "standard",
+     "source_n": 1230,
+     "target_n": 940,
+     "source_fit_spearman": 0.8928,
+     "coverage": 0.5266,
+     "mean_min_distance": 0.2883,
+     "donor_family": "ocx24_uoft",
+     "recipient_family": "ocx24_vsp",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.561336
+   },
+   {
+    "pair": "ocx24_uoft\u2192vsp",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_uoft\u2192vsp",
+     "method": "contrastive",
+     "source_n": 1230,
+     "target_n": 940,
+     "source_fit_spearman": 0.9087,
+     "coverage": 0.5266,
+     "mean_min_distance": 0.2883,
+     "donor_family": "ocx24_uoft",
+     "recipient_family": "ocx24_vsp",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.526027
+   },
+   {
+    "pair": "ocx24_vsp\u2192uoft",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_vsp\u2192uoft",
+     "method": "standard",
+     "source_n": 940,
+     "target_n": 1230,
+     "source_fit_spearman": 0.867,
+     "coverage": 0.7683,
+     "mean_min_distance": 0.1861,
+     "donor_family": "ocx24_vsp",
+     "recipient_family": "ocx24_uoft",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.534387
+   },
+   {
+    "pair": "ocx24_vsp\u2192uoft",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_vsp\u2192uoft",
+     "method": "contrastive",
+     "source_n": 940,
+     "target_n": 1230,
+     "source_fit_spearman": 0.852,
+     "coverage": 0.7683,
+     "mean_min_distance": 0.1861,
+     "donor_family": "ocx24_vsp",
+     "recipient_family": "ocx24_uoft",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.477769
+   },
+   {
+    "pair": "seccm_Ir\u2192Au",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Ir\u2192Au",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9714,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0717,
+     "donor_family": "seccm_Ir-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.19224
+   },
+   {
+    "pair": "seccm_Ir\u2192Au",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Ir\u2192Au",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9575,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0717,
+     "donor_family": "seccm_Ir-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.22185
+   },
+   {
+    "pair": "seccm_Au\u2192Ir",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Au\u2192Ir",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.3872,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0716,
+     "donor_family": "seccm_Au-rich",
+     "recipient_family": "seccm_Ir-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.507115
+   },
+   {
+    "pair": "seccm_Au\u2192Ir",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Au\u2192Ir",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.2795,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0716,
+     "donor_family": "seccm_Au-rich",
+     "recipient_family": "seccm_Ir-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.317442
+   },
+   {
+    "pair": "seccm_Rh\u2192Au",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Rh\u2192Au",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9816,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0626,
+     "donor_family": "seccm_Rh-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.140645
+   },
+   {
+    "pair": "seccm_Rh\u2192Au",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Rh\u2192Au",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9805,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0626,
+     "donor_family": "seccm_Rh-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.042287
+   },
+   {
     "pair": "specgen\u2192specgen_A",
     "method": "standard",
     "decision": "apply",
@@ -489,20 +729,20 @@
    }
   ],
   "summary": {
-   "n_edges": 20,
-   "n_apply": 8,
+   "n_edges": 30,
+   "n_apply": 12,
    "n_rank_only": 0,
-   "n_abstain": 12,
-   "mean_realized_spearman": 0.21261089852555104,
+   "n_abstain": 18,
+   "mean_realized_spearman": 0.21172458345350834,
    "harm_edges": 0,
-   "missed_positive_edges": 1
+   "missed_positive_edges": 3
   },
-  "sha256": "07e488ba361057a1b5e3ad4d925135121977f1cceb4151b32eb56b464321680a"
+  "sha256": "809c6d61d0ec081653c4843253263ddb86d6883e1e5b4781db35c193d42ab5b6"
  },
  "always_transfer": {
   "mean_realized_spearman_by_method": {
-   "standard": 0.16293726725986463,
-   "contrastive": 0.13065232620317463
+   "standard": 0.23767305933251145,
+   "contrastive": 0.19279323704824314
   },
   "harm_edges_by_method": {
    "standard": 4,
@@ -516,6 +756,11 @@
   "mpea\u2192birdshot": 0.4158668082008177,
   "birdshot\u2192steels": 0.29919727351369435,
   "birdshot\u2192mpea": 0.22752115437372195,
+  "ocx24_uoft\u2192vsp": 0.3533022419734641,
+  "ocx24_vsp\u2192uoft": 0.35955312110993726,
+  "seccm_Ir\u2192Au": -0.2604550036171751,
+  "seccm_Au\u2192Ir": 0.6151298470974451,
+  "seccm_Rh\u2192Au": -0.31801437168080865,
   "specgen\u2192specgen_A": 0.5552299247707317,
   "specgen\u2192specgen_B": 0.6101697966601127,
   "specgen\u2192specgen_C": 0.26169721333597074,
