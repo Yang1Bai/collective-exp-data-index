@@ -1,0 +1,367 @@
+{
+ "design": "opd-router-real-states-v1",
+ "seed": 20260810,
+ "wall_time_s": 370.4,
+ "rows": [
+  {
+   "example_id": "steels\u2192mpea",
+   "split_group": "steels",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 312,
+    "target_candidate_count": 395,
+    "source_validation_spearman": 0.064,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 1.7704,
+    "standard_domain_share": 0.0633,
+    "composition_support": 0.0633
+   },
+   "evaluation": {
+    "standard_spearman": -0.3192,
+    "mhar_spearman": -0.2141,
+    "ensemble_spearman": -0.3124,
+    "oracle_expert": "mhar"
+   }
+  },
+  {
+   "example_id": "steels\u2192birdshot",
+   "split_group": "steels",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 312,
+    "target_candidate_count": 171,
+    "source_validation_spearman": 0.064,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 3.784,
+    "standard_domain_share": 0.1287,
+    "composition_support": 0.1287
+   },
+   "evaluation": {
+    "standard_spearman": 0.3313,
+    "mhar_spearman": 0.1204,
+    "ensemble_spearman": 0.2956,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "mpea\u2192steels",
+   "split_group": "mpea",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 395,
+    "target_candidate_count": 312,
+    "source_validation_spearman": 0.6676,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 14.0583,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.0112,
+    "mhar_spearman": 0.0732,
+    "ensemble_spearman": 0.1432,
+    "oracle_expert": "ensemble"
+   }
+  },
+  {
+   "example_id": "mpea\u2192birdshot",
+   "split_group": "mpea",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 395,
+    "target_candidate_count": 171,
+    "source_validation_spearman": 0.6676,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.4323,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": -0.395,
+    "mhar_spearman": 0.0566,
+    "ensemble_spearman": -0.0125,
+    "oracle_expert": "mhar"
+   }
+  },
+  {
+   "example_id": "birdshot\u2192steels",
+   "split_group": "birdshot",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 171,
+    "target_candidate_count": 312,
+    "source_validation_spearman": 0.6851,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 1.6093,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": -0.045,
+    "mhar_spearman": -0.0001,
+    "ensemble_spearman": -0.0142,
+    "oracle_expert": "mhar"
+   }
+  },
+  {
+   "example_id": "birdshot\u2192mpea",
+   "split_group": "birdshot",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 171,
+    "target_candidate_count": 395,
+    "source_validation_spearman": 0.6851,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.2153,
+    "standard_domain_share": 0.5063,
+    "composition_support": 0.5063
+   },
+   "evaluation": {
+    "standard_spearman": -0.1446,
+    "mhar_spearman": 0.0739,
+    "ensemble_spearman": -0.0638,
+    "oracle_expert": "mhar"
+   }
+  },
+  {
+   "example_id": "ocx24_uoft\u2192vsp",
+   "split_group": "ocx24_uoft",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 1230,
+    "target_candidate_count": 940,
+    "source_validation_spearman": 0.8928,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.1667,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.1553,
+    "standard_domain_share": 0.5266,
+    "composition_support": 0.5266
+   },
+   "evaluation": {
+    "standard_spearman": 0.5613,
+    "mhar_spearman": 0.5539,
+    "ensemble_spearman": 0.5664,
+    "oracle_expert": "ensemble"
+   }
+  },
+  {
+   "example_id": "ocx24_vsp\u2192uoft",
+   "split_group": "ocx24_vsp",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 940,
+    "target_candidate_count": 1230,
+    "source_validation_spearman": 0.867,
+    "curve_available": false,
+    "surface_available": false,
+    "condition_observed_fraction": 0.1667,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.16,
+    "standard_domain_share": 0.7683,
+    "composition_support": 0.7683
+   },
+   "evaluation": {
+    "standard_spearman": 0.5344,
+    "mhar_spearman": 0.5944,
+    "ensemble_spearman": 0.5724,
+    "oracle_expert": "mhar"
+   }
+  },
+  {
+   "example_id": "seccm_Ir\u2192Au",
+   "split_group": "Ir",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 322,
+    "target_candidate_count": 322,
+    "source_validation_spearman": 0.9714,
+    "curve_available": true,
+    "surface_available": true,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.1236,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.1922,
+    "mhar_spearman": 0.1538,
+    "ensemble_spearman": 0.181,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "seccm_Au\u2192Ir",
+   "split_group": "Au",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 322,
+    "target_candidate_count": 322,
+    "source_validation_spearman": 0.3872,
+    "curve_available": true,
+    "surface_available": true,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.3527,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.5071,
+    "mhar_spearman": 0.3598,
+    "ensemble_spearman": 0.6241,
+    "oracle_expert": "ensemble"
+   }
+  },
+  {
+   "example_id": "seccm_Rh\u2192Au",
+   "split_group": "Rh",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 322,
+    "target_candidate_count": 322,
+    "source_validation_spearman": 0.9816,
+    "curve_available": true,
+    "surface_available": true,
+    "condition_observed_fraction": 0.0,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 2.7115,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.1406,
+    "mhar_spearman": -0.1999,
+    "ensemble_spearman": -0.1184,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "specgen\u2192specgen_A",
+   "split_group": "specgen",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 462,
+    "target_candidate_count": 126,
+    "source_validation_spearman": 0.9038,
+    "curve_available": true,
+    "surface_available": false,
+    "condition_observed_fraction": 0.5,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.0772,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.5418,
+    "mhar_spearman": 0.5134,
+    "ensemble_spearman": 0.53,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "specgen\u2192specgen_B",
+   "split_group": "specgen",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 462,
+    "target_candidate_count": 126,
+    "source_validation_spearman": 0.9038,
+    "curve_available": true,
+    "surface_available": false,
+    "condition_observed_fraction": 0.5,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.0569,
+    "standard_domain_share": 1.0,
+    "composition_support": 1.0
+   },
+   "evaluation": {
+    "standard_spearman": 0.6134,
+    "mhar_spearman": 0.5963,
+    "ensemble_spearman": 0.6057,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "specgen\u2192specgen_C",
+   "split_group": "specgen",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 462,
+    "target_candidate_count": 126,
+    "source_validation_spearman": 0.9038,
+    "curve_available": true,
+    "surface_available": false,
+    "condition_observed_fraction": 0.6667,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.29,
+    "standard_domain_share": 0.8333,
+    "composition_support": 0.8333
+   },
+   "evaluation": {
+    "standard_spearman": 0.2938,
+    "mhar_spearman": 0.28,
+    "ensemble_spearman": 0.2885,
+    "oracle_expert": "standard"
+   }
+  },
+  {
+   "example_id": "specgen\u2192specgen_D",
+   "split_group": "specgen",
+   "state": {
+    "task_kind": "catalyst_ranking",
+    "source_sample_count": 462,
+    "target_candidate_count": 126,
+    "source_validation_spearman": 0.9038,
+    "curve_available": true,
+    "surface_available": false,
+    "condition_observed_fraction": 0.6667,
+    "standard_predictive_std": 0.0,
+    "mhar_predictive_std": 0.0,
+    "normalized_expert_disagreement": 0.1561,
+    "standard_domain_share": 0.8333,
+    "composition_support": 0.8333
+   },
+   "evaluation": {
+    "standard_spearman": 0.7417,
+    "mhar_spearman": 0.729,
+    "ensemble_spearman": 0.7321,
+    "oracle_expert": "standard"
+   }
+  }
+ ]
+}
