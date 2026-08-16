@@ -21,7 +21,7 @@
     "associated_paper": "Sorkun et al., 'RedDB, a computational database of electroactive molecules', Sci. Data 9:718 (2022)",
     "year": 2022,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://www.nature.com/articles/s41597-022-01832-2"
   },
   {
@@ -46,7 +46,7 @@
     "associated_paper": "Ramakrishnan, Dral, Rupp, von Lilienfeld, Sci. Data 1:140022 (2014)",
     "year": 2014,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://quantum-machine.org/datasets/"
   },
   {
@@ -71,7 +71,7 @@
     "associated_paper": "Rupp et al., Phys. Rev. Lett. 2012 (QM7); Ramakrishnan et al., J. Chem. Phys. 143:084111 (2015) (QM8)",
     "year": 2015,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://quantum-machine.org/datasets/"
   },
   {
@@ -96,7 +96,7 @@
     "associated_paper": "Smith et al., The ANI-1ccx and ANI-1x data sets, Sci. Data 7:134 (2020)",
     "year": 2020,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://springernature.figshare.com/articles/dataset/ANI-1x_Dataset_Release/10047041"
   },
   {
@@ -120,7 +120,7 @@
     "associated_paper": "France-Lanord/Khajeh et al., APL Machine Learning (2023)",
     "year": 2022,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://github.com/TRI-AMDD/htp_md"
   },
   {
@@ -145,7 +145,7 @@
     "associated_paper": "Rosen et al., 'Machine Learning the Quantum-Chemical Properties of MOFs', Matter 4 (2021)",
     "year": 2021,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://github.com/Andrew-S-Rosen/QMOF"
   },
   {
@@ -170,7 +170,7 @@
     "associated_paper": "Wilmer et al., 'Large-scale screening of hypothetical metal-organic frameworks', Nat. Chem. 4 (2012)",
     "year": 2012,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://mof.tech.northwestern.edu/databases"
   },
   {
@@ -195,7 +195,7 @@
     "associated_paper": "Bobbitt et al., 'MOFX-DB: An Online Reference Database', J. Chem. Eng. Data (2023)",
     "year": 2022,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://mof.tech.northwestern.edu/"
   },
   {
@@ -220,7 +220,7 @@
     "associated_paper": "Jain et al., 'Commentary: The Materials Project', APL Materials 1, 011002 (2013)",
     "year": 2013,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://materialsproject.org"
   },
   {
@@ -245,7 +245,7 @@
     "associated_paper": "Kirklin et al., 'The Open Quantum Materials Database (OQMD)', npj Comput. Mater. 1, 15010 (2015)",
     "year": 2015,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://oqmd.org"
   },
   {
@@ -270,7 +270,7 @@
     "associated_paper": "Curtarolo et al., 'AFLOW: An automatic framework for high-throughput materials discovery', Comput. Mater. Sci. 58 (2012)",
     "year": 2012,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "http://aflowlib.org"
   },
   {
@@ -295,7 +295,7 @@
     "associated_paper": "Choudhary et al., 'The joint automated repository for various integrated simulations (JARVIS)', npj Comput. Mater. 6, 173 (2020)",
     "year": 2020,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://jarvis.nist.gov/"
   },
   {
@@ -320,7 +320,7 @@
     "associated_paper": "Chanussot et al., 'The Open Catalyst 2020 (OC20) Dataset and Community Challenges', ACS Catal. 11 (2021)",
     "year": 2020,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://opencatalystproject.org/"
   },
   {
@@ -345,7 +345,7 @@
     "associated_paper": "Tran et al., 'The Open Catalyst 2022 (OC22) Dataset and Challenges for Oxide Electrocatalysts', ACS Catal. 13 (2023)",
     "year": 2022,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://pubs.acs.org/doi/abs/10.1021/acscatal.2c05426"
   },
   {
@@ -370,7 +370,7 @@
     "associated_paper": "Winther et al., 'Catalysis-Hub.org, an open electronic structure database for surface reactions', Sci. Data 6, 75 (2019)",
     "year": 2019,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://www.nature.com/articles/s41597-019-0081-y"
   },
   {
@@ -395,7 +395,7 @@
     "associated_paper": "Haastrup et al., 'The Computational 2D Materials Database (C2DB)', 2D Mater. 5, 042002 (2018)",
     "year": 2018,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://c2db.fysik.dtu.dk/"
   },
   {
@@ -420,7 +420,7 @@
     "associated_paper": "Zhou et al., '2DMatPedia, an open computational database of two-dimensional materials', Sci. Data 6, 86 (2019)",
     "year": 2019,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://www.nature.com/articles/s41597-019-0097-3"
   },
   {
@@ -445,7 +445,7 @@
     "associated_paper": "Riebesell et al., 'Matbench Discovery', Nature Machine Intelligence (2025)",
     "year": 2025,
     "source": "curated-seed",
-    "added": "2026-08-09",
+    "added": "2026-08-16",
     "verified_via": "https://matbench-discovery.materialsproject.org/"
   }
 ]

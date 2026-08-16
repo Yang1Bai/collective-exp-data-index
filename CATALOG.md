@@ -1,6 +1,6 @@
 # Catalog
 
-_266 databases · updated 2026-08-09 · 238 experimental · 28 mixed · 0 computational_
+_268 databases · updated 2026-08-16 · 240 experimental · 28 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -53,6 +53,7 @@ _266 databases · updated 2026-08-09 · 238 experimental · 28 mixed · 0 comput
   - [Membranes & separations](#materials-membranes) (1)
   - [MOFs & porous materials](#materials-mofs-porous) (5)
   - [Nanomaterials & nanosafety](#materials-nanomaterials) (1)
+  - [Optical properties & chromophores](#materials-optical-properties) (2)
   - [Organic electronics](#materials-organic-electronics) (2)
   - [Photovoltaics & solar cells](#materials-photovoltaics) (16)
   - [Polymers](#materials-polymers) (6)
@@ -1547,6 +1548,21 @@ Free, continuously updated NIST database of experimentally measured gas/vapor ad
 EU nanoinformatics resource for nanosafety: experimental physicochemical and (eco)toxicological characterization for >1,400 nanomaterials aggregated from projects (nanoMILE, NanoFASE, SmartNanoTox) with harmonized metadata.
 
 `experimental`· `registration`· 2023 · Unknown · eNanoMapper· tags: `nanosafety`, `nanomaterials`, `toxicology`, `physicochemical`
+
+<a id="materials-optical-properties"></a>
+### Optical properties & chromophores
+
+#### 🧪🔓 [Data for "Degree-of-polarization modulation for high-dimensional optical computing"](https://zenodo.org/doi/10.5281/zenodo.20775839)
+
+This repository contains the MATLAB (.mat) files with the experimental and numerical data supporting the figures presented in the article: Alessandro Petrini, Claudio Conti, and Davide Pierangeli, Degree-of-polarization modulation for high-dimensional optical computing , Nature (2026). https://doi.org/10.1038/s41586-026-10891-z. Dataset size: 30.6 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20775839](https://doi.org/10.5281/zenodo.20775839)
+
+#### 🧪🔓 [Data for "Degree-of-polarization modulation for high-dimensional optical computing"](https://zenodo.org/doi/10.5281/zenodo.20775840)
+
+This repository contains the MATLAB (.mat) files with the experimental and numerical data supporting the figures presented in the article: Alessandro Petrini, Claudio Conti, and Davide Pierangeli, Degree-of-polarization modulation for high-dimensional optical computing , Nature (2026). https://doi.org/10.1038/s41586-026-10891-z. Dataset size: 30.6 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20775840](https://doi.org/10.5281/zenodo.20775840)
 
 <a id="materials-organic-electronics"></a>
 ### Organic electronics

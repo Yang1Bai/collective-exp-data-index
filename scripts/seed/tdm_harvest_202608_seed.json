@@ -625,5 +625,43 @@
     "source": "api-discovery-tdm",
     "added": "2026-08-09",
     "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41567-026-03271-x%22"
+  },
+  {
+    "id": "zenodo-20775839",
+    "name": "Data for \"Degree-of-polarization modulation for high-dimensional optical computing\"",
+    "description": "This repository contains the MATLAB (.mat) files with the experimental and numerical data supporting the figures presented in the article: Alessandro Petrini, Claudio Conti, and Davide Pierangeli, Degree-of-polarization modulation for high-dimensional optical computing , Nature (2026). https://doi.org/10.1038/s41586-026-10891-z. Dataset size: 30.6 GB.",
+    "domain": "materials",
+    "subdomain": "optical-properties",
+    "tags": [],
+    "data_type": "experimental",
+    "access": "open",
+    "license": "CC-BY-4.0",
+    "doi": "10.5281/zenodo.20775839",
+    "homepage_url": "https://zenodo.org/doi/10.5281/zenodo.20775839",
+    "repository": "Zenodo",
+    "associated_paper": "Degree-of-polarization modulation for high-dimensional optical computing (Nature), doi:10.1038/s41586-026-10891-z",
+    "year": 2026,
+    "source": "api-discovery-tdm",
+    "added": "2026-08-16",
+    "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41586-026-10891-z%22"
+  },
+  {
+    "id": "zenodo-20775840",
+    "name": "Data for \"Degree-of-polarization modulation for high-dimensional optical computing\"",
+    "description": "This repository contains the MATLAB (.mat) files with the experimental and numerical data supporting the figures presented in the article: Alessandro Petrini, Claudio Conti, and Davide Pierangeli, Degree-of-polarization modulation for high-dimensional optical computing , Nature (2026). https://doi.org/10.1038/s41586-026-10891-z. Dataset size: 30.6 GB.",
+    "domain": "materials",
+    "subdomain": "optical-properties",
+    "tags": [],
+    "data_type": "experimental",
+    "access": "open",
+    "license": "CC-BY-4.0",
+    "doi": "10.5281/zenodo.20775840",
+    "homepage_url": "https://zenodo.org/doi/10.5281/zenodo.20775840",
+    "repository": "Zenodo",
+    "associated_paper": "Degree-of-polarization modulation for high-dimensional optical computing (Nature), doi:10.1038/s41586-026-10891-z",
+    "year": 2026,
+    "source": "api-discovery-tdm",
+    "added": "2026-08-16",
+    "verified_via": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:%2210.1038/s41586-026-10891-z%22"
   }
 ]
