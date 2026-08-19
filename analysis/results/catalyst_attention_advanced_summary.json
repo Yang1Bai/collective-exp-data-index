@@ -1,0 +1,39 @@
+{
+  "any_advanced_gate_passed": false,
+  "completed_datasets": [
+    "ocx24",
+    "seccm",
+    "specgen"
+  ],
+  "dataset_artifacts": {
+    "ocx24": {
+      "path": "analysis/results/catalyst_attention_advanced_ocx24.json",
+      "sha256": "6b6f650c5278cbce2a98bd3c08910f28e23c66f369fcabd4a2752b3b33b33be8"
+    },
+    "seccm": {
+      "path": "analysis/results/catalyst_attention_advanced_seccm.json",
+      "sha256": "add764b05913e0e6dbe2403966437a16d80e7d70cb9266f9b819398abff14902"
+    },
+    "specgen": {
+      "path": "analysis/results/catalyst_attention_advanced_specgen.json",
+      "sha256": "ed21e40198ea591f2a4ce457148ef37dc24d00cd3e8be20c2cf4074cfe1b354b"
+    }
+  },
+  "design_path": "analysis/catalyst_attention_advanced_design.json",
+  "design_sha256": "2c18dff3b11a21b9c7ea81c9d05018ef073a87edb5c009b43e26a9e61a823ad7",
+  "gate_evaluations": {
+    "ocx24": {
+      "passed": false,
+      "selected": null
+    },
+    "specgen": {
+      "passed": false,
+      "selected": null
+    }
+  },
+  "missing_datasets": [],
+  "non_gate_boundaries": {
+    "seccm": "The log10(k0) target is fitted from the input LSV"
+  },
+  "status": "complete"
+}

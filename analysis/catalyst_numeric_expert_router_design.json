@@ -1,0 +1,80 @@
+{
+  "design_version": "catalyst-numeric-expert-router-v1",
+  "status": "frozen-before-expanded-edge-outcomes",
+  "objective": "Test whether the target-label-free RouterState contains enough transferable signal for a small numeric model to select Standard, MHAR, ensemble, or abstention without an LLM.",
+  "evidence_boundary": "Retrospective shadow-only method development. Existing datasets are not a newly sealed external programme, so even a passing result cannot promote the router or replace a numerical expert.",
+  "edge_inventory": {
+    "construction": "all directed donor-recipient combinations within each compatible suite",
+    "suites": {
+      "alloy_yield_strength": 6,
+      "ocx24_fe_co": 2,
+      "seccm_her": 6,
+      "specgen": 20
+    },
+    "expected_total_edges": 34,
+    "expected_unique_donor_programmes": 13,
+    "cross_endpoint_edges_allowed": false
+  },
+  "prompt_visible_features": [
+    "log10_source_sample_count",
+    "log10_target_candidate_count",
+    "source_validation_spearman",
+    "curve_available",
+    "surface_available",
+    "condition_observed_fraction",
+    "log_standard_to_mhar_predictive_std_ratio",
+    "normalized_expert_disagreement",
+    "standard_domain_share",
+    "composition_support"
+  ],
+  "forbidden_training_features": [
+    "suite identity",
+    "donor programme identity",
+    "recipient programme identity",
+    "target outcomes",
+    "oracle expert identity"
+  ],
+  "learner": {
+    "family": "three-output standardized Ridge regression",
+    "targets": [
+      "standard_spearman",
+      "mhar_spearman",
+      "ensemble_spearman"
+    ],
+    "alpha_grid": [0.1, 1.0, 10.0, 100.0],
+    "alpha_selection": "inner group cross-validation minimizing mean squared error over all three expert outcomes",
+    "prediction_clip": "each predicted Spearman is clipped to [-1, 1]",
+    "randomness": "none after deterministic edge generation"
+  },
+  "decision_decoder": {
+    "expert": "argmax of the three predicted expert Spearman values",
+    "abstain": "maximum predicted Spearman below 0.0",
+    "rank": "maximum predicted Spearman in [0.0, 0.25)",
+    "predict": "maximum predicted Spearman at least 0.25",
+    "nonfinite_prediction": "fail closed to abstain"
+  },
+  "evaluation": {
+    "primary_outer_split": "leave-one-suite-out",
+    "secondary_outer_split": "leave-one-donor-programme-out",
+    "all edges from an outer group are excluded from model fitting and alpha selection": true,
+    "baselines": [
+      "always_standard",
+      "always_mhar",
+      "always_ensemble",
+      "deterministic_target_free_router",
+      "oracle_upper_bound"
+    ],
+    "primary_endpoint": "median downstream routed Spearman with abstention scored as 0",
+    "paired_uncertainty": "2000 outer-group bootstrap resamples"
+  },
+  "qualification_gate": {
+    "must_pass_both_outer_splits": true,
+    "median_spearman_gain_over_always_standard_minimum": 0.02,
+    "paired_group_bootstrap_gain_lower_bound_minimum": 0.0,
+    "harmful_transfer_rate_must_not_exceed_always_standard": true,
+    "useful_edge_retention_minimum": 0.5,
+    "useful_edge_retention_definition": "fraction of edges with oracle-best Spearman at least 0.25 whose routed realized Spearman is also at least 0.25",
+    "minimum_non_abstain_fraction": 0.5
+  },
+  "promotion_rule": "Do not promote. A passing retrospective screen only justifies freezing the numeric router for one newly sealed external programme."
+}

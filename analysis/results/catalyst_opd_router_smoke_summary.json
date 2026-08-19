@@ -1,0 +1,69 @@
+{
+  "status": "algorithm-smoke-complete-teacher-rejected",
+  "scientific_effect_verified": false,
+  "design_version": "catalyst-opd-router-shadow-v1",
+  "artifacts": {
+    "design": {
+      "path": "analysis/catalyst_opd_router_design.json",
+      "sha256": "5213c00741a34c084c4d9400443c41686343aa99a6a939470a4d66ebceffd3bc",
+      "bytes": 3483
+    },
+    "synthetic_prompts": {
+      "path": "analysis/catalyst_opd_router_smoke_prompts.jsonl",
+      "sha256": "b903b3d84d368ddd0ebcb31e3d6884b6004d11ccc593414a0e724ff6bbfc3bec",
+      "bytes": 1736,
+      "examples": 4,
+      "scientific_evidence": false
+    },
+    "full_local_report": {
+      "path": "analysis/results/catalyst_opd_router_checkpoint_chat/report.json",
+      "sha256": "b42e6b8eae2f211e614fbe50cf66bee9d39dbf9ae131ce81b844c20d51861c7f",
+      "bytes": 9180,
+      "versioned": false
+    }
+  },
+  "models": {
+    "student": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "teacher": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "license": "Apache-2.0",
+    "vocab_size": 49152,
+    "tokenizer_fingerprint": "1bebeaafdf3d99c550847222dbb50d63ed93b0962e4f81b19639e0a1c350f2b2",
+    "student_update": "LoRA rank 4"
+  },
+  "execution": {
+    "hardware": "Apple MPS",
+    "steps": 1,
+    "maximum_prompt_tokens": 384,
+    "maximum_new_tokens": 64,
+    "teacher_top_k": 64,
+    "prompt_tokens_in_training_step": 311,
+    "response_tokens_in_training_step": 11,
+    "reverse_kl_loss": 0.8311471939086914,
+    "gradient_norm": 1.45242440700531,
+    "token_top1_agreement": 0.4545454680919647
+  },
+  "router_contract": {
+    "teacher_json_syntax_valid": "4/4",
+    "teacher_strict_schema_valid": "0/4",
+    "student_strict_schema_valid_before": "0/4",
+    "student_strict_schema_valid_after": "0/4",
+    "fail_closed_action": "abstain",
+    "teacher_input_responsiveness": "failed: all four states selected standard + predict",
+    "teacher_schema_failure": "all four outputs used mhar and ensemble as invalid reason codes"
+  },
+  "verification": {
+    "scoped_tests": "67 passed, 1 skipped",
+    "full_repo_tests": "175 passed, 19 skipped, 12 failed",
+    "full_repo_failure_boundary": "All 12 failures are pre-existing or unrelated to the OPD pilot: missing ignored analysis artifacts, existing freeze/registry hash mismatches, one PyTorch/Chemprop checkpoint compatibility failure, and missing figure/metadata outputs. No OPD test failed.",
+    "ruff": "passed",
+    "format": "passed",
+    "git_diff_check": "passed"
+  },
+  "decision": {
+    "teacher_qualified_for_opd": false,
+    "student_qualified_for_router_evaluation": false,
+    "continue_tuning_this_teacher": false,
+    "reason": "The OPD optimization path works, but the teacher does not satisfy the routing contract or respond correctly to distinct target-free states. Distilling it cannot test scientific routing benefit.",
+    "next_valid_step": "Use an SFT-cold-started or stronger same-tokenizer white-box teacher, demonstrate held-out routing advantage before OPD, and only then evaluate downstream predictions on a sealed programme."
+  }
+}

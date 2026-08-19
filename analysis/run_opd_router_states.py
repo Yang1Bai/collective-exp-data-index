@@ -21,6 +21,7 @@ Each emitted row contains:
 Outputs ``analysis/results/opd_router_real_states.json`` plus a JSONL
 rendering for the pilot runner.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -35,17 +36,27 @@ import torch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "analysis"))
 
-from catalyst_attention.alloy_loader import (  # noqa: E402
-    load_birdshot, load_mpea, load_steels,
+from catalyst_attention.alloy_loader import (
+    load_birdshot,
+    load_mpea,
+    load_steels,
 )
-from catalyst_attention.data import (  # noqa: E402
-    load_ocx24_csv, load_seccm_archives, load_specgen_archive,
+from catalyst_attention.data import (
+    load_ocx24_csv,
+    load_seccm_archives,
+    load_specgen_archive,
 )
-from catalyst_attention.expert_router import train_expert_pair  # noqa: E402
-from catalyst_attention.model import CatalystAttentionConfig  # noqa: E402
-from catalyst_attention.policy_transfer import edge_geometry  # noqa: E402
-from catalyst_attention.training import (  # noqa: E402
-    TrainingConfig, metrics, predict, set_deterministic, targets_array,
+from catalyst_attention.expert_router import (
+    ExpertRouter,
+    train_expert_pair,
+)
+from catalyst_attention.model import CatalystAttentionConfig
+from catalyst_attention.policy_transfer import edge_geometry
+from catalyst_attention.training import (
+    TrainingConfig,
+    metrics,
+    set_deterministic,
+    targets_array,
 )
 
 DB_PATH = Path("collaborator_workspace/data/data/collective.sqlite")
@@ -62,34 +73,52 @@ def _condition_fraction(samples) -> float:
     return float(np.mean(observed)) if observed else 0.0
 
 
-def _predict_std(pred: dict[str, np.ndarray]) -> float:
-    """Mean predictive std, normalizer-scale (target z-units)."""
-    var = pred.get("variance")
-    if var is None:
-        return 0.0
-    return float(np.mean(np.sqrt(np.clip(var, 1e-12, None))))
-
-
 def build_edges(args):
     """Return list of dicts: name, split_group (donor family), source, target, model_config."""
     composition_config = CatalystAttentionConfig(
-        d_model=48, n_heads=4, composition_layers=3, curve_layers=1,
-        fusion_layers=1, feedforward_multiplier=3,
-        use_curve=False, use_conditions=False, use_surface=False, dropout=0.1,
+        d_model=48,
+        n_heads=4,
+        composition_layers=3,
+        curve_layers=1,
+        fusion_layers=1,
+        feedforward_multiplier=3,
+        use_curve=False,
+        use_conditions=False,
+        use_surface=False,
+        dropout=0.1,
     )
     ocx24_config = CatalystAttentionConfig(
-        d_model=48, n_heads=4, composition_layers=3, curve_layers=1,
-        fusion_layers=1, feedforward_multiplier=3,
-        use_curve=False, use_conditions=True, use_surface=False, dropout=0.1,
+        d_model=48,
+        n_heads=4,
+        composition_layers=3,
+        curve_layers=1,
+        fusion_layers=1,
+        feedforward_multiplier=3,
+        use_curve=False,
+        use_conditions=True,
+        use_surface=False,
+        dropout=0.1,
     )
     rich_config = CatalystAttentionConfig(
-        d_model=64, n_heads=4, composition_layers=2, curve_layers=3,
-        fusion_layers=2, feedforward_multiplier=3, dropout=0.1,
+        d_model=64,
+        n_heads=4,
+        composition_layers=2,
+        curve_layers=3,
+        fusion_layers=2,
+        feedforward_multiplier=3,
+        dropout=0.1,
     )
     seccm_config = CatalystAttentionConfig(
-        d_model=64, n_heads=4, composition_layers=2, curve_layers=3,
-        fusion_layers=2, feedforward_multiplier=3,
-        use_curve=True, use_conditions=False, use_surface=True, dropout=0.1,
+        d_model=64,
+        n_heads=4,
+        composition_layers=2,
+        curve_layers=3,
+        fusion_layers=2,
+        feedforward_multiplier=3,
+        use_curve=True,
+        use_conditions=False,
+        use_surface=True,
+        dropout=0.1,
     )
     edges = []
 
@@ -98,22 +127,49 @@ def build_edges(args):
     mpea = load_mpea(DB_PATH, "YS (MPa)")
     birdshot = load_birdshot(DB_PATH, "Yield Strength (MPa)")
     for name, src, tgt in [
-        ("steels→mpea", steels, mpea), ("steels→birdshot", steels, birdshot),
-        ("mpea→steels", mpea, steels), ("mpea→birdshot", mpea, birdshot),
-        ("birdshot→steels", birdshot, steels), ("birdshot→mpea", birdshot, mpea),
+        ("steels→mpea", steels, mpea),
+        ("steels→birdshot", steels, birdshot),
+        ("mpea→steels", mpea, steels),
+        ("mpea→birdshot", mpea, birdshot),
+        ("birdshot→steels", birdshot, steels),
+        ("birdshot→mpea", birdshot, mpea),
     ]:
-        edges.append(dict(name=name, split=name.split("→")[0], source=src, target=tgt,
-                          config=composition_config, richness=0.0))
+        edges.append(
+            {
+                "name": name,
+                "split": name.split("→")[0],
+                "source": src,
+                "target": tgt,
+                "config": composition_config,
+                "richness": 0.0,
+            }
+        )
 
     if not args.skip_ocx24 and OCX24_PATH.exists():
         print("Loading OCx24 ...", flush=True)
         ocx24 = load_ocx24_csv(OCX24_PATH, "fe_co")
         uoft = [s for s in ocx24 if s.program == "ocx24_uoft"]
         vsp = [s for s in ocx24 if s.program == "ocx24_vsp"]
-        edges.append(dict(name="ocx24_uoft→vsp", split="ocx24_uoft", source=uoft, target=vsp,
-                          config=ocx24_config, richness=0.3))
-        edges.append(dict(name="ocx24_vsp→uoft", split="ocx24_vsp", source=vsp, target=uoft,
-                          config=ocx24_config, richness=0.3))
+        edges.append(
+            {
+                "name": "ocx24_uoft→vsp",
+                "split": "ocx24_uoft",
+                "source": uoft,
+                "target": vsp,
+                "config": ocx24_config,
+                "richness": 0.3,
+            }
+        )
+        edges.append(
+            {
+                "name": "ocx24_vsp→uoft",
+                "split": "ocx24_vsp",
+                "source": vsp,
+                "target": uoft,
+                "config": ocx24_config,
+                "richness": 0.3,
+            }
+        )
 
     if not args.skip_seccm:
         seccm_zip = SECCM_CACHE / "SECCM_dataset.zip"
@@ -121,16 +177,32 @@ def build_edges(args):
         xps_zip = SECCM_CACHE / "XPS_dataset.zip"
         if seccm_zip.exists() and edx_zip.exists():
             print("Loading SECCM ...", flush=True)
-            seccm = load_seccm_archives(seccm_zip, edx_zip, xps_zip if xps_zip.exists() else None)
+            seccm = load_seccm_archives(
+                seccm_zip, edx_zip, xps_zip if xps_zip.exists() else None
+            )
             libs = {}
             for s in seccm:
                 libs.setdefault(s.program, []).append(s)
-            au, ir, rh = libs["seccm_Au-rich"], libs["seccm_Ir-rich"], libs["seccm_Rh-rich"]
+            au, ir, rh = (
+                libs["seccm_Au-rich"],
+                libs["seccm_Ir-rich"],
+                libs["seccm_Rh-rich"],
+            )
             for name, src, tgt in [
-                ("seccm_Ir→Au", ir, au), ("seccm_Au→Ir", au, ir), ("seccm_Rh→Au", rh, au),
+                ("seccm_Ir→Au", ir, au),
+                ("seccm_Au→Ir", au, ir),
+                ("seccm_Rh→Au", rh, au),
             ]:
-                edges.append(dict(name=name, split=name.split("→")[0].split("_")[1],
-                                  source=src, target=tgt, config=seccm_config, richness=0.7))
+                edges.append(
+                    {
+                        "name": name,
+                        "split": name.split("→")[0].split("_")[1],
+                        "source": src,
+                        "target": tgt,
+                        "config": seccm_config,
+                        "richness": 0.7,
+                    }
+                )
 
     if not args.skip_specgen and SPECGEN_PATH.exists():
         print("Loading SpecGen ...", flush=True)
@@ -141,8 +213,16 @@ def build_edges(args):
             if s.program != "specgen_source":
                 targets.setdefault(s.program, []).append(s)
         for tname, tdata in targets.items():
-            edges.append(dict(name=f"specgen→{tname}", split="specgen", source=source,
-                              target=tdata, config=rich_config, richness=1.0))
+            edges.append(
+                {
+                    "name": f"specgen→{tname}",
+                    "split": "specgen",
+                    "source": source,
+                    "target": tdata,
+                    "config": rich_config,
+                    "richness": 1.0,
+                }
+            )
     return edges
 
 
@@ -153,7 +233,9 @@ def main():
     parser.add_argument("--skip-seccm", action="store_true")
     parser.add_argument("--alloy-epochs", type=int, default=100)
     parser.add_argument("--rich-epochs", type=int, default=40)
-    parser.add_argument("--out", default=str(RESULTS_DIR / "opd_router_real_states.json"))
+    parser.add_argument(
+        "--out", default=str(RESULTS_DIR / "opd_router_real_states.json")
+    )
     args = parser.parse_args()
 
     device = torch.device("cpu")
@@ -168,33 +250,50 @@ def main():
         name, source, target = edge["name"], edge["source"], edge["target"]
         epochs = args.rich_epochs if edge["richness"] > 0 else args.alloy_epochs
         cfg = TrainingConfig(
-            seed=SEED, epochs=epochs, patience=20, batch_size=32,
-            learning_rate=8e-4, rank_weight=0.15, nll_weight=0.10,
+            seed=SEED,
+            epochs=epochs,
+            patience=20,
+            batch_size=32,
+            learning_rate=8e-4,
+            rank_weight=0.15,
+            nll_weight=0.10,
         )
-        print(f"=== {name} (src_n={len(source)}, tgt_n={len(target)}, epochs={epochs}) ===", flush=True)
+        print(
+            f"=== {name} (src_n={len(source)}, tgt_n={len(target)}, epochs={epochs}) ===",
+            flush=True,
+        )
 
         pair = train_expert_pair(source, edge["config"], cfg, device=device)
-        src_fit = float(pair.standard_report["source_apparent_metrics"]["spearman"])
+        src_fit = float(pair.standard_report["validation_metrics"]["spearman"])
 
         # Zero-shot routing states; no target labels are touched here.
-        pred_std = predict(pair.standard, target, pair.normalizer, device=device,
-                           unknown_program=True)
-        pred_mhar = predict(pair.mhar, target, pair.normalizer, device=device,
-                            unknown_program=True)
+        router = ExpertRouter(
+            pair.standard,
+            pair.mhar,
+            pair.standard_calibrator,
+            pair.mhar_calibrator,
+            strategy="domain_preferring",
+        )
+        diagnostics = router.route(
+            target,
+            pair.normalizer,
+            device=device,
+        )
         geo = edge_geometry(source, target)
 
-        # Predictive uncertainty (target-z units) and expert disagreement.
-        std_std = _predict_std(pred_std)
-        mhar_std = _predict_std(pred_mhar)
-        diff = np.abs(pred_std["mean"] - pred_mhar["mean"])
-        scale = float(np.std(pred_std["mean"]) + np.std(pred_mhar["mean"]) + 1e-9)
-        disagreement = float(np.mean(diff) / scale)
+        # Predictive uncertainty is on the target's raw property scale.  Only
+        # within-edge Standard/MHAR comparisons are meaningful.  Disagreement
+        # is normalized by their pooled predictive uncertainty.
+        std_std = float(np.mean(diagnostics.standard_std))
+        mhar_std = float(np.mean(diagnostics.mhar_std))
+        disagreement = float(np.mean(diagnostics.disagreement))
+        standard_domain_share = float(np.mean(1.0 - diagnostics.domain_distance_ratio))
         support = geo["coverage"]
 
         state = {
             "task_kind": "catalyst_ranking",
-            "source_sample_count": int(len(source)),
-            "target_candidate_count": int(len(target)),
+            "source_sample_count": len(source),
+            "target_candidate_count": len(target),
             "source_validation_spearman": round(src_fit, 4),
             "curve_available": bool(edge["config"].use_curve),
             "surface_available": bool(edge["config"].use_surface),
@@ -202,36 +301,44 @@ def main():
             "standard_predictive_std": round(std_std, 4),
             "mhar_predictive_std": round(mhar_std, 4),
             "normalized_expert_disagreement": round(disagreement, 4),
-            "standard_domain_share": round(support, 4),
+            "standard_domain_share": round(standard_domain_share, 4),
             "composition_support": round(support, 4),
         }
 
         # Evaluation-only payload (never prompted).
         y_true = targets_array(target)
-        m_std = metrics(y_true, pred_std["mean"])
-        m_mhar = metrics(y_true, pred_mhar["mean"])
-        ens = (pred_std["mean"] + pred_mhar["mean"]) / 2.0
+        m_std = metrics(y_true, diagnostics.standard_mean)
+        m_mhar = metrics(y_true, diagnostics.mhar_mean)
+        ens = (diagnostics.standard_mean + diagnostics.mhar_mean) / 2.0
         m_ens = metrics(y_true, ens)
         oracle = max(
-            (("standard", m_std["spearman"]), ("mhar", m_mhar["spearman"]),
-             ("ensemble", m_ens["spearman"])),
+            (
+                ("standard", m_std["spearman"]),
+                ("mhar", m_mhar["spearman"]),
+                ("ensemble", m_ens["spearman"]),
+            ),
             key=lambda kv: kv[1],
         )[0]
 
-        rows.append({
-            "example_id": name,
-            "split_group": edge["split"],
-            "state": state,
-            "evaluation": {
-                "standard_spearman": round(m_std["spearman"], 4),
-                "mhar_spearman": round(m_mhar["spearman"], 4),
-                "ensemble_spearman": round(m_ens["spearman"], 4),
-                "oracle_expert": oracle,
-            },
-        })
-        print(f"  src_fit={src_fit:.3f} disagree={disagreement:.3f} support={support:.3f} | "
-              f"std={m_std['spearman']:+.3f} mhar={m_mhar['spearman']:+.3f} "
-              f"ens={m_ens['spearman']:+.3f} oracle={oracle}", flush=True)
+        rows.append(
+            {
+                "example_id": name,
+                "split_group": edge["split"],
+                "state": state,
+                "evaluation": {
+                    "standard_spearman": round(m_std["spearman"], 4),
+                    "mhar_spearman": round(m_mhar["spearman"], 4),
+                    "ensemble_spearman": round(m_ens["spearman"], 4),
+                    "oracle_expert": oracle,
+                },
+            }
+        )
+        print(
+            f"  src_fit={src_fit:.3f} disagree={disagreement:.3f} support={support:.3f} | "
+            f"std={m_std['spearman']:+.3f} mhar={m_mhar['spearman']:+.3f} "
+            f"ens={m_ens['spearman']:+.3f} oracle={oracle}",
+            flush=True,
+        )
 
     payload = {
         "design": "opd-router-real-states-v1",
@@ -246,11 +353,16 @@ def main():
     jsonl = out.with_suffix(".jsonl")
     with jsonl.open("w") as fh:
         for row in rows:
-            fh.write(json.dumps({
-                "example_id": row["example_id"],
-                "split_group": row["split_group"],
-                "state": row["state"],
-            }) + "\n")
+            fh.write(
+                json.dumps(
+                    {
+                        "example_id": row["example_id"],
+                        "split_group": row["split_group"],
+                        "state": row["state"],
+                    }
+                )
+                + "\n"
+            )
     print(f"\nWrote {out} and {jsonl}")
 
 

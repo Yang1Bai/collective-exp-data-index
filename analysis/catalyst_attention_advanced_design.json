@@ -1,0 +1,236 @@
+{
+  "design_version": "catalyst-attention-advanced-v1",
+  "status": "frozen-before-outcomes-with-audited-contract-amendment",
+  "freeze_history": {
+    "original_design_sha256": "5946812c2ee2ca94473faa807fedf3af0795d03b1649e11e17ece47fdb3a71ef",
+    "amendment": "After the outcomes were known, the unchanged runner hyperparameters, seed counts, and reference-artifact hashes were copied into this manifest. No model setting, metric, threshold, prediction, or gate decision changed."
+  },
+  "evidence_boundary": "Post-outcome architecture development on previously inspected programmes. Results may select an architecture for a future blind programme but cannot confirm prospective catalyst discovery.",
+  "source_models": {
+    "crabnet_cross": {
+      "composition_mode": "crabnet",
+      "fusion_mode": "cross_attention",
+      "modality_dropout": 0.0
+    },
+    "set_perceiver": {
+      "composition_mode": "set_query",
+      "fusion_mode": "perceiver",
+      "modality_dropout": 0.08
+    },
+    "crabnet_perceiver": {
+      "composition_mode": "crabnet",
+      "fusion_mode": "perceiver",
+      "modality_dropout": 0.08
+    }
+  },
+  "tabpfn": {
+    "package_version": "8.1.0",
+    "model_version": "v2",
+    "regressor_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+    "regressor_bytes": 44390977,
+    "license_boundary": "Prior Labs v2 model licence: Apache-2.0 plus attribution requirement",
+    "curve_representation": "source-only StandardScaler and PCA with at most 24 components",
+    "programme_identity_feature": false
+  },
+  "execution": {
+    "specgen": {
+      "seed_count": 3,
+      "source_program": "specgen_source",
+      "source_validation": {
+        "split": "row-held-out-insufficient-source-groups",
+        "overlap": [
+          "specgen_source"
+        ]
+      },
+      "target_systems": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "tabpfn": {
+        "seed_index": 0,
+        "include_curve": true,
+        "include_surface": false,
+        "include_conditions": true
+      },
+      "model": {
+        "d_model": 64,
+        "n_heads": 4,
+        "composition_layers": 3,
+        "curve_layers": 3,
+        "condition_layers": 1,
+        "fusion_layers": 1,
+        "perceiver_latents": 12,
+        "perceiver_layers": 2,
+        "patch_size": 8,
+        "dropout": 0.1
+      },
+      "training": {
+        "epochs": 180,
+        "patience": 30,
+        "batch_size": 32,
+        "learning_rate": 0.0007
+      }
+    },
+    "ocx24": {
+      "seed_count": 3,
+      "target_name": "fe_co",
+      "source_validation": {
+        "split": "group-held-out",
+        "overlap": []
+      },
+      "directions": [
+        [
+          "ocx24_uoft",
+          "ocx24_vsp"
+        ],
+        [
+          "ocx24_vsp",
+          "ocx24_uoft"
+        ]
+      ],
+      "tabpfn": {
+        "seed_index": 0,
+        "include_curve": false,
+        "include_surface": false,
+        "include_conditions": true
+      },
+      "model": {
+        "d_model": 48,
+        "n_heads": 4,
+        "composition_layers": 3,
+        "curve_layers": 1,
+        "condition_layers": 1,
+        "fusion_layers": 1,
+        "perceiver_latents": 10,
+        "perceiver_layers": 2,
+        "use_curve": false,
+        "patch_size": 8,
+        "dropout": 0.1
+      },
+      "training": {
+        "epochs": 140,
+        "patience": 24,
+        "batch_size": 64,
+        "learning_rate": 0.0007
+      }
+    },
+    "seccm": {
+      "seed_count": 1,
+      "target_name": "log10_k0",
+      "source_validation": {
+        "split": "row-held-out-insufficient-source-groups",
+        "overlap": "source_libraries"
+      },
+      "held_out_libraries": [
+        "Au-rich",
+        "Ir-rich",
+        "Rh-rich"
+      ],
+      "tabpfn": {
+        "seed_index": 0,
+        "include_curve": true,
+        "include_surface": true,
+        "include_conditions": true
+      },
+      "model": {
+        "d_model": 48,
+        "n_heads": 4,
+        "composition_layers": 3,
+        "curve_layers": 2,
+        "condition_layers": 1,
+        "fusion_layers": 1,
+        "perceiver_latents": 10,
+        "perceiver_layers": 2,
+        "use_surface": true,
+        "patch_size": 8,
+        "dropout": 0.1
+      },
+      "training": {
+        "epochs": 110,
+        "patience": 22,
+        "batch_size": 48,
+        "learning_rate": 0.0007
+      }
+    }
+  },
+  "input_artifacts": {
+    "specgen": {
+      "sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2",
+      "bytes": 7759603
+    },
+    "ocx24": {
+      "sha256": "e55446ee81b26c0ceaa6e9d532186954124ff11a51f854ca13511c7c8b31de99",
+      "bytes": 526042
+    },
+    "seccm": {
+      "sha256": "6e30cdb3a5ecd257daa091bfc2b6cfaa7889d27938e27ae614977d8845f0ffc0",
+      "bytes": 6608379
+    },
+    "seccm_edx": {
+      "sha256": "95340043ccecec0e9c92c75900c1992d3f92e98fc72cc80c895b53289f5b8791",
+      "bytes": 11963
+    },
+    "seccm_xps": {
+      "sha256": "67d1aef3c2d8d640828d241540c21f0d32a8c7923257f323d32403fe8d3d998a",
+      "bytes": 20949
+    }
+  },
+  "reference_artifacts": {
+    "hierarchical_specgen": {
+      "path": "results/catalyst_attention_specgen_summary.json",
+      "sha256": "0220762651126ba90b2fd5897f860c4a1aa878f133354477732cb2e8b4bbbe2f"
+    },
+    "hierarchical_ocx24": {
+      "path": "results/catalyst_attention_ocx24_summary.json",
+      "sha256": "398cb73348ff55e4fe689cc738eb3ff2d19ac4e4656aa68f0be1373f01872f23"
+    },
+    "author_specgen": {
+      "path": "results/specgen_composition_secondary_summary.json",
+      "sha256": "5ec534d5569042b9e3e83e9cf9f7c691fda5f3109d2b2730958f7db9364d4ca5"
+    }
+  },
+  "result_contract": {
+    "required_datasets": [
+      "specgen",
+      "ocx24",
+      "seccm"
+    ],
+    "gate_eligible_datasets": [
+      "specgen",
+      "ocx24"
+    ]
+  },
+  "splits": {
+    "specgen": "train on 462-source system and evaluate complete derivative systems A-D",
+    "ocx24": "train on one complete source and evaluate the complete other source in both directions; source validation grouped by physical sample",
+    "seccm": "train on two complete libraries and evaluate the third library"
+  },
+  "reference_models": [
+    "author_specgen_random_forest",
+    "extra_trees_composition_condition",
+    "hierarchical_cross_attention_v1"
+  ],
+  "development_gates": {
+    "specgen": {
+      "median_A_to_D_spearman_gain_over_best_reference": 0.02,
+      "maximum_allowed_system_regression": 0.03,
+      "minimum_systems_with_nonnegative_gain": 3
+    },
+    "ocx24": {
+      "median_spearman_gain_over_existing_attention": 0.02,
+      "must_beat_fair_extra_trees_in_both_directions": true
+    },
+    "seccm": {
+      "independent_discovery_claim_allowed": false,
+      "reason": "The log10(k0) target is fitted from the input LSV"
+    }
+  },
+  "selection_rule": "Select one architecture only if a complete predeclared gate passes. Otherwise retain the current model and report the advanced-model null.",
+  "seeds": [
+    20260731,
+    20260732,
+    20260733
+  ]
+}

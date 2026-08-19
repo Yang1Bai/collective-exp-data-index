@@ -11,33 +11,33 @@
   "primary_source_temperature_C": -30,
   "target_budget_per_fold": 30,
   "primary_source": "temperature_-30_C",
-  "relative_rmse_improvement": 0.01609237310838386,
+  "relative_rmse_improvement": 0.01512729082241556,
   "relative_rmse_ci": [
-    -0.0213954581637092,
-    0.04210534111357568
+    -0.022051271726139604,
+    0.04150914244640879
   ],
-  "pooled_base_r2": -0.04927389148754835,
-  "pooled_augmented_r2": -0.014470257543180765,
+  "pooled_base_r2": -0.04880598597502406,
+  "pooled_augmented_r2": -0.01609483204114648,
   "fold_effects": [
-    -0.00778436204964862,
-    2.863177503236591e-05,
-    -0.038523057890446334,
-    0.03113778384905233,
-    0.06451425431083002
+    -0.007489395670951813,
+    -0.00013170497537761693,
+    -0.03859223341562541,
+    0.028642784743460083,
+    0.0641249833195401
   ],
-  "target_equivalent_n": 36.11563095844004,
-  "target_sample_fraction_saved": 0.16933473945056055,
+  "target_equivalent_n": 35.767557877509724,
+  "target_sample_fraction_saved": 0.16125109511981262,
   "primary_permutation_p": 0.004,
-  "permutation_observed_relative_mse_improvement": 0.08020323014252395,
+  "permutation_observed_relative_mse_improvement": 0.08253837371343709,
   "positive_target_learners_of_three": 3,
-  "source_article_oof_r2": 0.1187547871527247,
-  "source_feature_importance_mean": 0.20292043982984534,
+  "source_article_oof_r2": 0.1187049183961818,
+  "source_feature_importance_mean": 0.20814435939887374,
   "source_feature_rank_median": 2.0,
   "temperature_distance_spearman_rho": 0.0,
-  "shuffled_source_effect": 0.008334640335610098,
+  "shuffled_source_effect": 0.008399162253100329,
   "shuffled_source_ci": [
-    -0.013828924241576186,
-    0.03793340514255223
+    -0.01364256839696474,
+    0.03799018309849982
   ],
   "test_articles_seen_by_source_model": 0,
   "exact_test_chemistries_seen_by_source_model": 0,

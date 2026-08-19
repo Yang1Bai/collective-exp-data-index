@@ -1,0 +1,89 @@
+{
+  "design_version": "catalyst-opd-router-shadow-v1",
+  "status": "frozen-before-opd-training-outcomes",
+  "objective": "Test whether on-policy distillation can transfer a stronger language-model teacher's target-label-free expert-routing behaviour into a smaller student without replacing the numerical catalyst predictors.",
+  "evidence_boundary": "Shadow-only method development. Existing catalyst programme outcomes may evaluate development behaviour but may not establish prospective discovery or promotion. A new programme with sealed outcomes is required for confirmation.",
+  "authority_boundary": {
+    "llm_router": "advisory selection among frozen experts and predict/rank/abstain actions",
+    "numerical_experts": "produce property predictions and uncertainty",
+    "deterministic_decoder": "validates the router decision and fails closed to abstain",
+    "operator": "retains authority to promote or execute any recommendation"
+  },
+  "training_contract": {
+    "method": "student on-policy rollout followed by teacher token-distribution supervision",
+    "divergence": "reverse_kl_student_to_teacher",
+    "teacher_access": "white-box logits required",
+    "tokenizer": "teacher and student tokenization fingerprints must match exactly",
+    "teacher_advantage": "must be demonstrated on held-out routing prompts before scientific evaluation",
+    "network_default": "local_files_only",
+    "target_outcomes_in_prompt": false
+  },
+  "allowed_prompt_fields": [
+    "task_kind",
+    "source_sample_count",
+    "target_candidate_count",
+    "source_validation_spearman",
+    "curve_available",
+    "surface_available",
+    "condition_observed_fraction",
+    "standard_predictive_std",
+    "mhar_predictive_std",
+    "normalized_expert_disagreement",
+    "standard_domain_share",
+    "composition_support"
+  ],
+  "forbidden_prompt_information": [
+    "target outcomes",
+    "target labels",
+    "target performance metrics",
+    "oracle expert identity",
+    "post-outcome literature summaries",
+    "programme-name shortcuts"
+  ],
+  "decision_schema": {
+    "expert": [
+      "standard",
+      "mhar",
+      "ensemble"
+    ],
+    "action": [
+      "predict",
+      "rank",
+      "abstain"
+    ],
+    "confidence": "closed interval [0, 1]",
+    "reason_codes": [
+      "source_supported",
+      "experts_agree",
+      "high_disagreement",
+      "standard_closer",
+      "mhar_closer",
+      "high_uncertainty",
+      "out_of_support",
+      "missing_state",
+      "low_source_skill"
+    ]
+  },
+  "baselines": [
+    "deterministic_target_free_router",
+    "prompt_only_student",
+    "supervised_fine_tuning",
+    "off_policy_teacher_distillation",
+    "teacher_policy"
+  ],
+  "implementation_gate": {
+    "strict_json_valid_fraction_minimum": 0.95,
+    "invalid_output_action": "abstain",
+    "prompt_schema_leakage_violations_allowed": 0,
+    "teacher_student_tokenizer_mismatch_allowed": false
+  },
+  "scientific_gate": {
+    "split": "leave-one-programme-out during development, then one sealed external programme",
+    "primary_endpoint": "downstream Spearman after routing",
+    "median_spearman_gain_over_best_frozen_single_expert_minimum": 0.02,
+    "maximum_allowed_direction_regression": 0.03,
+    "harmful_transfer_rate_must_not_increase": true,
+    "invalid_or_unsupported_decisions_count_as": "abstain"
+  },
+  "promotion_rule": "Do not replace the existing router or any numerical expert unless both the implementation gate and sealed scientific gate pass."
+}

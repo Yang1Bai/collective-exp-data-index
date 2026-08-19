@@ -7,17 +7,17 @@
   ],
   "bootstrap_replicates": 5000,
   "target_budget": 30,
-  "point_target_equivalent_n": 47.88407252224965,
-  "point_target_sample_fraction_saved": 0.3734868731965039,
+  "point_target_equivalent_n": 47.816832200442676,
+  "point_target_sample_fraction_saved": 0.37260586660690026,
   "bootstrap_target_equivalent_n_95": [
-    38.38118711562712,
-    59.89015142441884
+    38.34087131840973,
+    59.70784223733069
   ],
   "bootstrap_target_sample_fraction_saved_95": [
-    0.21836706210771406,
-    0.4990829160776551
+    0.21754516868090906,
+    0.4975534184302318
   ],
-  "bootstrap_probability_fraction_saved_at_least_30pct": 0.8052,
+  "bootstrap_probability_fraction_saved_at_least_30pct": 0.8038,
   "interpolation_status_counts": {
     "interpolated": 4996,
     "right-censored-at-largest-learning-curve-budget": 4

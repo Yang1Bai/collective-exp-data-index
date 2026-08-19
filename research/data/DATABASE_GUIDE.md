@@ -7,10 +7,10 @@ This page is the collaborator-facing map of every database or data resource curr
 | Inventory | Records | Meaning |
 |---|---:|---|
 | Broad discovery catalog | 127 | Experimental or mixed resources curated for scientific scope, access, licence, provenance, and an original-home link |
-| Analysed-resource ledger | 31 | Resources that entered an audit, donor or recipient model, control, readiness screen, or AI-generated research path |
+| Analysed-resource ledger | 32 | Resources that entered an audit, donor or recipient model, control, readiness screen, or AI-generated research path |
 | Exact overlap | 14 | Analysed resources already present under the same identifier in the broad catalog |
-| Task-specific additions | 17 | Project resources, subsets, extensions, or external recipients not represented by the same identifier in the broad catalog |
-| Union of project resource identifiers | 144 | Index records, not necessarily physically independent archives |
+| Task-specific additions | 18 | Project resources, subsets, extensions, or external recipients not represented by the same identifier in the broad catalog |
+| Union of project resource identifiers | 145 | Index records, not necessarily physically independent archives |
 
 A resource can be catalogued without being analysed, analysed without supporting a positive transfer edge, or represented by a task-specific subset of a larger upstream archive. These distinctions are retained rather than collapsed into one inflated database count.
 
@@ -123,6 +123,7 @@ The following resources materially entered the research process. `Disposition` r
 
 | Resource | Project role | Disposition | What it contributed | Access and licence |
 |---|---|---|---|---|
+| [Au-Ir-Rh SECCM libraries](https://zenodo.org/records/20439519) | donor and recipient | attention representation boundary | Three complete composition libraries with EDX XPS LSV and fitted kinetics; fitted target is derived from the input LSV | open; CC-BY-4.0; [DOI](https://doi.org/10.5281/zenodo.20439519) |
 | [Caltech high-throughput Acid-OER](https://data.caltech.edu/records/tg041-j4g80) | donor/control | null portfolio component | Mn/Sb/Sn/Ti/Co oxide libraries | open; repository record; [DOI](https://doi.org/10.22002/tg041-j4g80) |
 | [Caltech metal-oxide ORR](https://data.caltech.edu/records/1km87-52j70) | donor/control | null portfolio component | Mn/Ni/Mg/Ca/Fe/La/Y/In oxide catalysts | open; repository record; [DOI](https://doi.org/10.22002/D1.1632) |
 | [OCx24](https://fair-chem.github.io/core/datasets/ocx24.html) | donor/control | null portfolio component | Experimental and computational catalyst resource | open; CC-BY-4.0 data; MIT code; [DOI](https://doi.org/10.48550/arXiv.2411.11783) |
@@ -190,6 +191,7 @@ These records are included in the analysed-resource ledger but do not share an i
 | [HUST battery lifecycle](https://data.mendeley.com/datasets/nsc7hnsg4s/2) | battery aging | Recipient source used through a constrained mirror in the completed audit | cross-lab abstention |
 | [MATR fast-charging battery life](https://data.matr.io) | battery aging | Raw source required for complete rerun | cross-lab abstention |
 | [Multi-stage lithium-ion battery aging](https://figshare.com/articles/dataset/Multi-Stage_Lithium_Ion_Battery_Aging_Study/25975315) | battery aging | 279 cells and 71 aging conditions; associated paper DOI 10.1038/s41597-024-03859-z | non-evaluable frozen primary and diagnostic |
+| [Au-Ir-Rh SECCM libraries](https://zenodo.org/records/20439519) | electrocatalysis | Three complete composition libraries with EDX XPS LSV and fitted kinetics; fitted target is derived from the input LSV | attention representation boundary |
 | [Caltech high-throughput Acid-OER](https://data.caltech.edu/records/tg041-j4g80) | electrocatalysis | Mn/Sb/Sn/Ti/Co oxide libraries | null portfolio component |
 | [Caltech metal-oxide ORR](https://data.caltech.edu/records/1km87-52j70) | electrocatalysis | Mn/Ni/Mg/Ca/Fe/La/Y/In oxide catalysts | null portfolio component |
 | [SpecGen robotic derivative OER](https://doi.org/10.1038/s44160-025-00983-5) | electrocatalysis | Controlled catalyst derivative systems | main controlled routing case |

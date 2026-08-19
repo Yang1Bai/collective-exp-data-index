@@ -3,6 +3,31 @@
 This directory contains the protocols, deterministic analyses, claim-bearing
 outputs and publication figures for the knowledge-borrowing study.
 
+The experimental-catalyst attention model, pinned data contract, transfer
+benchmarks, ablations, audit results, and exact reproduction commands are in
+[`CATALYST_ATTENTION_TRANSFORMER.md`](CATALYST_ATTENTION_TRANSFORMER.md).
+The frozen CrabNet, Perceiver, TabPFN-v2, and expert-disagreement comparison is
+in
+[`ADVANCED_CATALYST_MODEL_COMPARISON.md`](ADVANCED_CATALYST_MODEL_COMPARISON.md).
+The KL-Shampoo, Adam-grafting, per-sublayer Multi-Head Attention Residual, and
+unlabelled-domain-alignment experiments are in
+[`CATALYST_KL_SHAMPOO_MHAR_RESULTS.md`](CATALYST_KL_SHAMPOO_MHAR_RESULTS.md).
+No candidate passed both frozen catalyst transfer gates; Delta-MHAR is retained
+as a complementary research expert rather than the universal default.
+The shadow-only On-Policy Distillation implementation for a target-label-free
+language-model expert router is documented in
+[`CATALYST_OPD_ROUTER.md`](CATALYST_OPD_ROUTER.md). It retains the numerical
+experts, fails malformed decisions closed to abstention, and makes no
+scientific-effect claim without a stronger held-out teacher and a new sealed
+programme.
+The two gated SFT cold-start attempts and the decision not to run OPD with the
+failed 360M teacher are recorded in
+[`OPD_SFT_COLD_START_RESULT.md`](OPD_SFT_COLD_START_RESULT.md).
+The subsequent 34-edge Ridge-router screen, including strict leave-one-suite
+and leave-one-donor evaluation, is recorded in
+[`NUMERIC_EXPERT_ROUTER_RESULT.md`](NUMERIC_EXPERT_ROUTER_RESULT.md). It failed
+both frozen benefit gates and remains shadow-only.
+
 ## Current manuscript entry points
 
 - `MANUSCRIPT_DRAFT_STREAMLINED.md` — the current four-step main-text

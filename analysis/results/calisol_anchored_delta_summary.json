@@ -45,115 +45,115 @@
   },
   "primary": {
     "article_bootstrap_ci95": [
-      0.008822364250737489,
-      0.13998865863887436
+      0.008822364250738086,
+      0.13998865863886675
     ],
     "article_effects": [
       {
         "article_doi": "10.1016/0378-7753(91)80004-H",
-        "relative_gain": 0.006474157656022217,
-        "rmse_neighbor_absolute": 0.9154379370835,
-        "rmse_neighbor_delta": 0.9095112475545176
+        "relative_gain": 0.00647415765602577,
+        "rmse_neighbor_absolute": 0.915437937083504,
+        "rmse_neighbor_delta": 0.9095112475545184
       },
       {
         "article_doi": "10.1016/S0378-7753(03)00153-8",
-        "relative_gain": 0.020864283434496755,
-        "rmse_neighbor_absolute": 0.3905889831315194,
-        "rmse_neighbor_delta": 0.3824396238810715
+        "relative_gain": 0.02086428343449609,
+        "rmse_neighbor_absolute": 0.3905889831315192,
+        "rmse_neighbor_delta": 0.38243962388107156
       },
       {
         "article_doi": "10.1021/JE020219O",
-        "relative_gain": 0.016801474943367034,
+        "relative_gain": 0.016801474943367256,
         "rmse_neighbor_absolute": 0.728195662045513,
-        "rmse_neighbor_delta": 0.7159609008757868
+        "rmse_neighbor_delta": 0.7159609008757866
       },
       {
         "article_doi": "10.1021/je0498863",
-        "relative_gain": 0.005211101016272646,
-        "rmse_neighbor_absolute": 0.22398363703946644,
+        "relative_gain": 0.005211101016272535,
+        "rmse_neighbor_absolute": 0.22398363703946642,
         "rmse_neighbor_delta": 0.22281643568086162
       },
       {
         "article_doi": "10.1149/1.1344281",
-        "relative_gain": 0.25187841872617345,
-        "rmse_neighbor_absolute": 0.822238696430192,
-        "rmse_neighbor_delta": 0.6151345137578851
+        "relative_gain": 0.2518784187261538,
+        "rmse_neighbor_absolute": 0.8222386964301769,
+        "rmse_neighbor_delta": 0.61513451375789
       },
       {
         "article_doi": "10.1149/1.1403730",
-        "relative_gain": 0.09329697440013296,
-        "rmse_neighbor_absolute": 0.10463886430129636,
-        "rmse_neighbor_delta": 0.09487637485731933
+        "relative_gain": 0.09329697440015194,
+        "rmse_neighbor_absolute": 0.10463886430129879,
+        "rmse_neighbor_delta": 0.09487637485731955
       },
       {
         "article_doi": "10.1149/1.1527939",
-        "relative_gain": 0.09385959510386599,
-        "rmse_neighbor_absolute": 0.9462253021271324,
-        "rmse_neighbor_delta": 0.8574129783924465
+        "relative_gain": 0.09385959510386799,
+        "rmse_neighbor_absolute": 0.9462253021271352,
+        "rmse_neighbor_delta": 0.8574129783924471
       },
       {
         "article_doi": "10.1149/1.1566019",
-        "relative_gain": -0.03821742378577708,
-        "rmse_neighbor_absolute": 0.24757798027152608,
-        "rmse_neighbor_delta": 0.25703977286358975
+        "relative_gain": -0.038217423785769755,
+        "rmse_neighbor_absolute": 0.2475779802715274,
+        "rmse_neighbor_delta": 0.2570397728635893
       },
       {
         "article_doi": "10.1149/1.1630593",
-        "relative_gain": -0.041747187234057126,
-        "rmse_neighbor_absolute": 0.25296482968082307,
-        "rmse_neighbor_delta": 0.26352539978913975
+        "relative_gain": -0.041747187234058014,
+        "rmse_neighbor_absolute": 0.25296482968082296,
+        "rmse_neighbor_delta": 0.26352539978913986
       },
       {
         "article_doi": "10.1149/1.1833611",
-        "relative_gain": -0.005223717020284457,
-        "rmse_neighbor_absolute": 0.42022546068104066,
-        "rmse_neighbor_delta": 0.42242059957235706
+        "relative_gain": -0.005223717020282681,
+        "rmse_neighbor_absolute": 0.4202254606810412,
+        "rmse_neighbor_delta": 0.42242059957235695
       },
       {
         "article_doi": "10.1149/1.1914757",
-        "relative_gain": 0.18219596098601853,
+        "relative_gain": 0.18219596098603252,
         "rmse_neighbor_absolute": 0.338706640295779,
-        "rmse_neighbor_delta": 0.27699565847474383
+        "rmse_neighbor_delta": 0.2769956584747391
       }
     ],
     "articles": 11,
     "exact_one_sided_sign_flip_p": 0.03515625,
-    "gain_advantage_over_median_shuffled": 0.41974274871061557,
+    "gain_advantage_over_median_shuffled": 0.4197427487106151,
     "macro_rmse_anchor_constant": 0.6501736065008369,
-    "macro_rmse_neighbor_absolute": 0.4900712720988898,
-    "macro_rmse_neighbor_delta": 0.45619395506361077,
-    "median_shuffled_relative_gain": -0.35061542180122873,
-    "pooled_nonanchor_r2": 0.2336997764047447,
+    "macro_rmse_neighbor_absolute": 0.4900712720988895,
+    "macro_rmse_neighbor_delta": 0.45619395506361093,
+    "median_shuffled_relative_gain": -0.3506154218012292,
+    "pooled_nonanchor_r2": 0.23369977640474482,
     "positive_articles_vs_neighbor_absolute": 8,
-    "relative_macro_rmse_gain_vs_anchor_constant": 0.2983505474502469,
-    "relative_macro_rmse_gain_vs_neighbor_absolute": 0.06912732690938683,
+    "relative_macro_rmse_gain_vs_anchor_constant": 0.2983505474502467,
+    "relative_macro_rmse_gain_vs_neighbor_absolute": 0.06912732690938594,
     "shuffled_delta_permutation_p": 0.005
   },
   "random_anchor_sensitivity": {
     "1": {
-      "median_relative_gain": 0.062377831735811406,
+      "median_relative_gain": 0.06237783173581102,
       "positive_repetitions": 100,
       "q10_q90": [
-        0.033472986481563695,
-        0.09984786972116454
+        0.03347298648156335,
+        0.09984786972116474
       ],
       "repetitions": 100
     },
     "2": {
-      "median_relative_gain": 0.06543798425030384,
+      "median_relative_gain": 0.06543798425030184,
       "positive_repetitions": 100,
       "q10_q90": [
-        0.04290788756232079,
-        0.09108155107399112
+        0.042907887562319835,
+        0.09108155107399084
       ],
       "repetitions": 100
     },
     "3": {
-      "median_relative_gain": 0.06538155213256575,
+      "median_relative_gain": 0.06538155213256336,
       "positive_repetitions": 99,
       "q10_q90": [
-        0.038729204794326545,
-        0.08828299336799075
+        0.03872920479432766,
+        0.0882829933679878
       ],
       "repetitions": 100
     }

@@ -9,33 +9,33 @@
   "primary_source_temperature_C": -20,
   "target_budget_per_fold": 30,
   "primary_source": "temperature_-20_C",
-  "relative_rmse_improvement": 0.1501882606865164,
+  "relative_rmse_improvement": 0.1496659426283968,
   "relative_rmse_ci": [
-    0.08612303443665308,
-    0.21103013694493308
+    0.08554634328552989,
+    0.21003907722205267
   ],
-  "pooled_base_r2": 0.7388469154309338,
-  "pooled_augmented_r2": 0.8110159488229737,
+  "pooled_base_r2": 0.738877609221734,
+  "pooled_augmented_r2": 0.8108173343128487,
   "fold_effects": [
-    0.1556448157735799,
-    0.10805753453407592,
-    0.18077440658409316,
-    0.021295713745982926,
-    0.2575193417879278
+    0.15620699737920854,
+    0.10497453908720765,
+    0.1802927905555715,
+    0.02132984064691583,
+    0.2580775366503062
   ],
-  "target_equivalent_n": 47.88407252224965,
-  "target_sample_fraction_saved": 0.3734868731965039,
+  "target_equivalent_n": 47.816832200442676,
+  "target_sample_fraction_saved": 0.37260586660690026,
   "primary_permutation_p": 0.001,
-  "permutation_observed_relative_mse_improvement": 0.348040071692652,
+  "permutation_observed_relative_mse_improvement": 0.3250863117204243,
   "positive_learners_of_three": 3,
-  "source_oof_r2": 0.8592808928736606,
-  "source_feature_importance_mean": 0.7322582574304284,
+  "source_oof_r2": 0.8584344466583936,
+  "source_feature_importance_mean": 0.7318466876039207,
   "source_feature_rank_median": 1.0,
   "temperature_distance_spearman_rho": -1.0,
-  "shuffled_source_effect": -0.02956270183759464,
+  "shuffled_source_effect": -0.029443263107323592,
   "shuffled_source_ci": [
-    -0.043186023930154575,
-    -0.014391608718072936
+    -0.042658813925972976,
+    -0.014755888924091895
   ],
   "test_formulations_seen_by_source_model": 0,
   "arrhenius_or_eis_fit_features_used": false,

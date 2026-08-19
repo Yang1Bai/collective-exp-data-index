@@ -1,0 +1,42 @@
+{
+  "status": "frozen-self-contained-input-for-prespecified-sequential-campaign",
+  "design_sha256": "b310b508468ce844c4a231224b8f4d669e40fdb59a7cbfb04c3ecae31bee75c3",
+  "source_cache_sha256": "f97259a80050f4c4fefda5c3fca0c449126ca85d5570d89def762dd89234bdfe",
+  "source_metadata_sha256": "ec99cd2551fe85a3ed0864138c6920650d3ec1d4f96c917e67eca6f643d787b0",
+  "hard_ood_membership_sha256": "7dd07b89182231806524078581f6832896a87d791bbadd3e5a67bf27ab7f4637",
+  "input_sha256": "a2ccdd88de18ccdc4e11d2f87026938d42dfcd3b56567b7cc912a27905f79b7b",
+  "array_sha256": {
+    "row_index": "0c3fc3e2e8b0514136a044efedc6d6aa32df05e1f58c8cca9cc665e1521f4c8c",
+    "material_key": "a2f72cc7806a5d5ea3ff41d8d1bb6ff3b2d90aad6baae162c028896a1eb37dab",
+    "value": "9f4815839132c6e5296e713dab89dbffc5d663a803fc00c592db839e0d2d0b94",
+    "split": "4e73494601ceed1dcbf9a7264d8658b8f43841bcf50a49493a2f5498adc3884d",
+    "group": "3dab0f5c97cfaa86366e46def5d66985a181eae6e494f7b51a4527c56c1816a0",
+    "hard_ood_selected": "2a5bcb9c596b31382a639bea9a6bd3472300a418cdaf7595530df12c2f547b59",
+    "composition_features": "2dfb2cb3d7cdad6d5644163d33cbd9edb609bf1bb3aa08438b55d9e69b5e5515",
+    "thermoelectric_prior": "1ccc12da383ea4874081898e7edbb461f99ccbbeb3af966ac7a04e1e3f471612",
+    "alloy_control": "7f4b23b9d5e240c24c5107fbd173752720bc654f61d11c838595283c665616dc",
+    "catalysis_control": "49f9150178e4a6a2d6c4a7feec9cfbd72251aec4c8cfab20463e3462248c5034"
+  },
+  "rows": 500,
+  "composition_feature_count": 126,
+  "official_train_n": 390,
+  "official_test_n": 110,
+  "hard_ood_test_n": 44,
+  "source_target_exact_overlaps": {
+    "Thermoelectric ZT": 0,
+    "Alloy yield strength": 0,
+    "CO2R H2 Faradaic efficiency": 0
+  },
+  "source_pre_serialization_sha256": {
+    "Thermoelectric ZT": "c174d1ed91c084913dad948c9efa25f332397dce51b45e6c4dc2c0cbc0015d3e",
+    "Alloy yield strength": "1998b4410302cf3781b93dc2f9b233ac61f4b4668ae958449102a03e014e689c",
+    "CO2R H2 Faradaic efficiency": "75c972c1d9e2b2a183420199f2432df5e627adafaba09c8fb15b93422b7fcf75"
+  },
+  "source_refit_max_abs_difference": {
+    "Thermoelectric ZT": 1.6653345369377348e-16,
+    "Alloy yield strength": 2.2737367544323206e-13,
+    "CO2R H2 Faradaic efficiency": 3.552713678800501e-14
+  },
+  "source_refit_tolerance": 1e-10,
+  "source_value_note": "The NPZ uses the already-frozen CSV cache values. Pre-serialization binary hashes are retained for provenance but are not expected to survive decimal CSV round-trip or parallel forest last-bit variation."
+}

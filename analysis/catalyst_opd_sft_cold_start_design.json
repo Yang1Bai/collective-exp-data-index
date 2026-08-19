@@ -1,0 +1,56 @@
+{
+  "design_version": "catalyst-opd-sft-cold-start-v1",
+  "status": "frozen-before-cold-start-outcomes",
+  "objective": "Teach a same-tokenizer white-box teacher the exact router JSON contract and a frozen target-free baseline policy before attempting OPD into the smaller student.",
+  "evidence_boundary": "Synthetic SFT states and retrospective real transfer edges may validate formatting, policy imitation, and execution only. They cannot establish scientific routing benefit or authorize promotion.",
+  "training_information": {
+    "prompt_fields": "the 12 target-label-free RouterState fields from catalyst-opd-router-shadow-v1",
+    "sft_targets": "decisions from deterministic_target_free_decision only",
+    "target_outcomes_used_for_sft": false,
+    "oracle_expert_used_for_sft": false,
+    "programme_identity_used_for_sft": false
+  },
+  "frozen_policy": {
+    "missing_uncertainty": "abstain if either expert predictive standard deviation is zero",
+    "low_source_skill": "abstain if source validation Spearman is below 0.50",
+    "out_of_support": "abstain if composition support is below 0.15",
+    "experts_agree": "use ensemble when normalized disagreement is at most 0.50",
+    "domain_preference": "standard_domain_share at least 0.55 favours Standard; at most 0.45 favours MHAR, unless predictive uncertainty strongly disagrees",
+    "uncertainty_preference": "an expert is more certain when its predictive standard deviation is at most 0.90 times the other expert's",
+    "cautious_action": "rank if composition support is below 0.35, disagreement exceeds 2.50, or source validation Spearman is below 0.65; otherwise predict"
+  },
+  "synthetic_state_generation": {
+    "seed": 20260812,
+    "train_examples": 96,
+    "held_out_examples": 48,
+    "independent_rng_streams": true,
+    "stratification": "near-equal frozen quotas across ensemble-abstain and Standard, MHAR, ensemble crossed with predict or rank",
+    "duplicate_states_allowed": false,
+    "outcomes_present": false
+  },
+  "teacher": {
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "update": "LoRA",
+    "implementation_gate": {
+      "held_out_strict_json_valid_fraction_minimum": 0.95,
+      "held_out_expert_action_agreement_with_frozen_policy_minimum": 0.90
+    }
+  },
+  "opd_handoff": {
+    "student_base_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "allowed_only_after_teacher_implementation_gate": true,
+    "teacher_student_tokenizer_fingerprint_must_match": true,
+    "student_gate": {
+      "held_out_strict_json_valid_fraction_minimum": 0.95,
+      "held_out_expert_action_agreement_with_teacher_minimum": 0.90
+    }
+  },
+  "real_state_evaluation": {
+    "input": "corrected target-label-free programme transfer states",
+    "outcomes": "evaluation-only downstream Spearman values",
+    "baseline": "the same frozen deterministic target-free policy",
+    "scientific_effect_verified": false,
+    "reason": "the real outcomes were already inspected during method development and are not sealed external confirmation"
+  },
+  "promotion_rule": "Remain shadow-only regardless of retrospective performance. Promotion requires a newly sealed external programme under catalyst-opd-router-shadow-v1."
+}

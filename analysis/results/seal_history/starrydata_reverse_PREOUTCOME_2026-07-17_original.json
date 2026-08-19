@@ -1,0 +1,40 @@
+{
+  "artifact_hashes": {
+    "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md": "2bce9940d88dbcc82ef28efd62456275e29c20e4065c97602d365661dbe7f125",
+    "analysis/prepare_starrydata_reverse_transport.py": "d3e910dfa4260d29258570b11800ec4d6954683ca7cc850806f647744eb3b853",
+    "analysis/results/starrydata_reverse_hypothesis_cards.csv": "9a7920682cace1477ebcc5ccf198828de8d1790bd784bbbdb9fa9fd490750140",
+    "analysis/results/starrydata_reverse_policy_orders.csv": "fbcedf91eb772583b47bd77b45791e6b4454ba4887c841cd2ca70af08d2e66ea",
+    "analysis/results/starrydata_reverse_source_predictions.csv": "a3dd53c5b7ee2d53f4a204cb56218a87ff24fd0d96d1d7f732ac89b102605c1a",
+    "analysis/results/starrydata_reverse_source_quality.csv": "e76b9e60a18e938d20c86aeeb73a7a67d0f543156372afb950e76791719a3850",
+    "analysis/results/starrydata_reverse_target_metadata.csv": "a7e11defcae67291f7e9c7d31e42ae8af490f750ee19249fc2588a9e73cb4ab5",
+    "analysis/run_starrydata_reverse_transport.py": "d52c249f0179612ed04c0913f72f61fd07267a4bc2204daa9202fc5e2fc23c8e",
+    "analysis/starrydata_reverse_transport_design.json": "a389ac6fd927280e44d14c6885676f1ab2c622b630195ede5357699dec260566",
+    "analysis/starrydata_reverse_transport_implementation.json": "56184ac4b13d83bbf4f355eb2cec41e48ce23c00c9ed32ba2a09e290f425d0c8",
+    "analysis/verify_starrydata_reverse_preoutcome.py": "2a82b32e822339c410cad5ee6430d82fa2bd432628dfa2e5264f38fc9512df51"
+  },
+  "audit_counts": {
+    "descriptor_rows": 20529,
+    "doi_disagreement_rows": 0,
+    "temperature_window_rows": 7568,
+    "unparsed_formula_rows": 83
+  },
+  "claim_guard": "Target ZT values were not loaded. Any subsequent design change is outcome-informed and cannot alter the primary family.",
+  "composition_clusters": 160,
+  "hypothesis_cards": 3,
+  "input_hashes": {
+    "curves": "eb17491ce9a9ff3e96295f8ab2b2be8c9a0e2e1b1e75459dff0e9f82e9c32e83",
+    "papers": "96852da8483e2742aef948ae1f9d33da85ff732f088dbf72d062c8a608205176",
+    "samples": "a09cec97df60d47b6a9300c835db58bf64f8f7142279a58ddc09201a96b8b1ed"
+  },
+  "policy_rows": 13010,
+  "provenance_groups": 1594,
+  "source_quality_rows": 5,
+  "split_counts": {
+    "development": 4427,
+    "evaluation": 1301,
+    "validation": 1675
+  },
+  "status": "preoutcome-frozen",
+  "target_components": 745,
+  "target_entities": 7403
+}

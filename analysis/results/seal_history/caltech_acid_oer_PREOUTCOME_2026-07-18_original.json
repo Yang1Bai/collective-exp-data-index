@@ -1,0 +1,38 @@
+{
+  "artifact_hashes": {
+    "analysis/CALTECH_ACID_OER_ACCIDENTAL_ACCESS_AMENDMENT.md": "4fb3ddc02b98a2d58a89947fc03a623a4cad785f39aa713b8786189da000e36c",
+    "analysis/caltech_acid_oer_neighbor_design.json": "c314a82c01b43a060378fcaa703871d35ca01cdb502029841e29861aa8d16ccf",
+    "analysis/outcome_unseen_neighbor_validation_program.json": "88162fd564fd80fce334335ab13cd295eadf8932bcfe678bb776496d0285d947",
+    "analysis/prepare_caltech_acid_oer_neighbor.py": "28aec0d7f7f439d8e2ce040ecf8ca6a257fe52628ccb785ad389e90397039101",
+    "analysis/results/caltech_acid_oer_hypothesis_cards.csv": "d470471b5d09987b78818ffffb4bff3a46539f7ee315265ed74e8d85ca7bd245",
+    "analysis/results/caltech_acid_oer_policy_orders.csv": "44ffb031be77032a15ca68a1e17708af2150c7ebd874f9dd726cee995af90a7e",
+    "analysis/results/caltech_acid_oer_source_predictions.csv": "eef4f580dff6292f83ec6760b6b64312c57ba28d4fc528f165c7e869338fef31",
+    "analysis/results/caltech_acid_oer_source_quality.csv": "969abff297723eff0e10f391c9efcb3388e30d69760a1c5b4584dd430dbca975",
+    "analysis/results/caltech_acid_oer_target_metadata.csv": "426f0f8e901cc2a115b8e0c5060ce224a3541ad2bd925a04d585691fb8bfd089"
+  },
+  "claim_guard": "Remaining target outcomes were not loaded. The two accidental-access exclusions are immutable.",
+  "composition_clusters": 40,
+  "hypothesis_cards": 3,
+  "orr_source_sha256": "f9f74e75d1c6dafe359593b16c81e71cbb605546194da6d8016f5020c2b9c26e",
+  "permanent_exclusions": {
+    "plate_5029": "all rows",
+    "plate_5411_exposed_composition": "Mn0.58 Sb0.09 Sn0.26 Ti0.07 Co0"
+  },
+  "plate_counts": {
+    "5411": 63,
+    "5412": 62,
+    "5413": 48,
+    "5414": 8
+  },
+  "plates": [
+    5411,
+    5412,
+    5413,
+    5414
+  ],
+  "policy_rows": 1629,
+  "source_quality_rows": 4,
+  "status": "preoutcome-frozen-with-recorded-exclusions",
+  "target_entities": 181,
+  "target_zip_sha256": "f06152021cbbe0008d50ecf4cf4a8a16cd502f9b86033cb80d3d999700eb69b3"
+}

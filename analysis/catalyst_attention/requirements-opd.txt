@@ -1,0 +1,10 @@
+-r requirements.txt
+
+# White-box teacher/student logits are required by the OPD pilot. Model weights
+# are not downloaded implicitly; the runner defaults to local_files_only.
+transformers>=4.48,<5
+accelerate>=1.3,<2
+
+# Optional low-rank student updates. The runner imports this only when
+# --lora-rank is greater than zero.
+peft>=0.14,<1
