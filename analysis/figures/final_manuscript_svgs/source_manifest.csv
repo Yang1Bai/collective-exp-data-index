@@ -1,0 +1,13 @@
+file,role,source
+Figure_1.svg,full manuscript Figure 1,analysis/figures/figure1_coherent_architecture/figure1_coherent_manuscript.svg
+Figure_1a.svg,standalone Figure 1a,analysis/figures/figure1_coherent_architecture/figure1a_preserved_evidence_landscape.svg
+Figure_1b.svg,standalone Figure 1b,analysis/figures/figure1_coherent_architecture/figure1b_liasf6_learner_transformer_style.svg
+Figure_1c.svg,standalone Figure 1c,analysis/figures/figure1_coherent_architecture/figure1c_approved_contrastive_transformer.svg
+Figure_1d.svg,standalone Figure 1d,analysis/figures/figure1_coherent_architecture/figure1d_falsification_gate_transformer_style.svg
+Figure_2.svg,full manuscript Figure 2,analysis/figures/draft_v2_restructured_round2/figure2_selected_plus_matrix.svg
+Figure_3.svg,full manuscript Figure 3,analysis/figures/draft_v2_restructured_round2/figure3_support_prediction_falsifiers.svg
+Figure_4.svg,full manuscript Figure 4,analysis/figures/figure4_three_row/figure4_three_row_manuscript.svg
+Figure_4a.svg,standalone Figure 4a,analysis/figures/figure4_three_row/figure4a_temperature_resolved_landscapes.svg
+Figure_4b.svg,standalone Figure 4b,analysis/figures/figure4_three_row/figure4b_screening_endpoints.svg
+Figure_4c.svg,standalone Figure 4c,analysis/figures/figure4_three_row/figure4c_budget_robustness.svg
+Figure_4d.svg,standalone Figure 4d,analysis/figures/figure4_three_row/figure4d_recipient_specific_routing.svg
