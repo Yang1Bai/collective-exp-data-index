@@ -1,6 +1,6 @@
 # Catalog
 
-_268 databases · updated 2026-08-16 · 240 experimental · 28 mixed · 0 computational_
+_279 databases · updated 2026-08-23 · 251 experimental · 28 mixed · 0 computational_
 
 > This is a metadata index. Each entry links to the dataset at its original home; nothing is re-hosted here. `data_type` marks whether the underlying data is measured (**experimental**), simulated (**computational**), or **mixed**. Purely computational databases are excluded by policy (see catalog/excluded_computational.json).
 
@@ -35,20 +35,20 @@ _268 databases · updated 2026-08-16 · 240 experimental · 28 mixed · 0 comput
   - [Additive manufacturing](#materials-additive-manufacturing) (1)
   - [Alloys & high-entropy alloys](#materials-alloys) (1)
   - [Alloys & mechanical properties](#materials-alloys-mechanical) (2)
-  - [Batteries & energy storage](#materials-batteries) (20)
+  - [Batteries & energy storage](#materials-batteries) (22)
   - [ML benchmark datasets](#materials-benchmark-ml) (2)
   - [Bioactivity & screening](#materials-bioactivity) (15)
-  - [Catalysis](#materials-catalysis) (28)
+  - [Catalysis](#materials-catalysis) (30)
   - [Crystallography](#materials-crystallography) (2)
   - [Data infrastructure & portals](#materials-data-infrastructure) (3)
   - [Electrocatalysis (experimental HTE)](#materials-electrocatalysis-exp) (2)
-  - [General materials properties](#materials-general-properties) (60)
+  - [General materials properties](#materials-general-properties) (65)
   - [Geophysics & earth sciences](#materials-geophysics) (4)
   - [Glasses](#materials-glasses) (2)
   - [High-throughput experimental](#materials-high-throughput-exp) (3)
   - [HTE / synthesis](#materials-hte-synthesis) (1)
   - [Lab automation & robotic chemistry](#materials-lab-automation) (2)
-  - [Magnetic materials](#materials-magnetic) (12)
+  - [Magnetic materials](#materials-magnetic) (13)
   - [Mechanical properties](#materials-mechanical) (2)
   - [Membranes & separations](#materials-membranes) (1)
   - [MOFs & porous materials](#materials-mofs-porous) (5)
@@ -58,6 +58,7 @@ _268 databases · updated 2026-08-16 · 240 experimental · 28 mixed · 0 comput
   - [Photovoltaics & solar cells](#materials-photovoltaics) (16)
   - [Polymers](#materials-polymers) (6)
   - [Porous materials](#materials-porous-materials) (2)
+  - [Reaction data](#materials-reactions) (1)
   - [Experimental spectra (XPS/Raman/XRD)](#materials-spectra-exp) (5)
   - [Spectroscopy](#materials-spectroscopy) (6)
   - [Superconductors](#materials-superconductors) (1)
@@ -544,11 +545,23 @@ Experimental data from diamond I09 and B07 regarding X-ray absorption and RPES t
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28915994](https://doi.org/10.6084/m9.figshare.28915994)
 
+#### 🧪🔓 [Direct Evidence of Metal-Ligand Redox in Li-ion Battery Cathodes](https://springernature.figshare.com/articles/dataset/Direct_Evidence_of_Metal-Ligand_Redox_in_Li-ion_Battery_Cathodes/28915994/1)
+
+Experimental data from diamond I09 and B07 regarding X-ray absorption and RPES to understand redox mechanisms. Dataset size: 39 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.28915994.v1](https://doi.org/10.6084/m9.figshare.28915994.v1)
+
 #### 🧪🔓 [Flow-Synchronized Ring-shaped Electrochemical Ion Pumping for Redox-Free Desalination without Terminal Electrodes](https://springernature.figshare.com/articles/dataset/Flow-Synchronized_Ring-shaped_Electrochemical_Ion_Pumping_for_Redox-Free_Desalination_without_Terminal_Electrodes/30279262/1)
 
 data for figures in main text and SI. Dataset size: 3 MB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30279262.v1](https://doi.org/10.6084/m9.figshare.30279262.v1)
+
+#### 🧪🔓 [Flow-Synchronized Ring-shaped Electrochemical Ion Pumping for Redox-Free Desalination without Terminal Electrodes](https://springernature.figshare.com/articles/dataset/Flow-Synchronized_Ring-shaped_Electrochemical_Ion_Pumping_for_Redox-Free_Desalination_without_Terminal_Electrodes/30279262)
+
+data for figures in main text and SI. Dataset size: 3 MB.
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.30279262](https://doi.org/10.6084/m9.figshare.30279262)
 
 #### 🧪🔓 [Hydration entropy of cations regulates chloride ion diffusion during electrochemical chlorine evolution](https://springernature.figshare.com/articles/dataset/Hydration_entropy_of_cations_regulates_chloride_ion_diffusion_during_electrochemical_chlorine_evolution/28158095)
 
@@ -768,6 +781,18 @@ This repository contains the results associated to the article "An end-to-end fr
 This repository contains the results associated to the article "An end-to-end framework for reactivity in heterogeneous catalysis" published in Nature Chemical Engineering (DOI: https://doi.org/10.1038/s44286-026-00361-8 ). Dataset size: 1008 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17977394](https://doi.org/10.5281/zenodo.17977394)
+
+#### 🧪🔓 [Data for DFT polarization calculations in "Supramolecular assembly of metal halide molecular wires"](https://zenodo.org/doi/10.5281/zenodo.16914630)
+
+Data for DFT polarization calculations in "Supramolecular assembly of metal halide molecular wires" This dataset is the data for the density functional theory (DFT) calculations used to calculate the polarization of (18-crown-6@Ba)MnBr4. If you use this data, please cite: Heqing Zhu, Cheng Zhu, Han K.D. Le, Daniel Cabeda, Bernard Field, Chuxi Wen, Alexander M. Oddo, Yuxin Jiang, Lihini…
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16914630](https://doi.org/10.5281/zenodo.16914630)
+
+#### 🧪🔓 [Data for DFT polarization calculations in "Supramolecular assembly of metal halide molecular wires"](https://zenodo.org/doi/10.5281/zenodo.16930115)
+
+Data for DFT polarization calculations in "Supramolecular assembly of metal halide molecular wires" This dataset is the data for the density functional theory (DFT) calculations used to calculate the polarization of (18-crown-6@Ba)MnBr4. If you use this data, please cite: Heqing Zhu, Cheng Zhu, Han K.D. Le, Daniel Cabeda, Bernard Field, Chuxi Wen, Alexander M. Oddo, Yuxin Jiang, Lihini…
+
+`experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.16930115](https://doi.org/10.5281/zenodo.16930115)
 
 #### 🧪🔓 [Data for the publication "Quantum Fisher information in a strange metal"](https://zenodo.org/doi/10.5281/zenodo.19349955)
 
@@ -1009,6 +1034,18 @@ Gene-level copy number calls from whole genome sequencing of mouse tumors. Datas
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32144932.v1](https://doi.org/10.6084/m9.figshare.32144932.v1)
 
+#### 🧪🔓 [Asymmetric Prefrontal Representations for Leader-Follower Dynamics](https://zenodo.org/doi/10.5281/zenodo.20723194)
+
+This dataset accompanies the Nature publication "Asymmetric Prefrontal Representations for Leader–Follower Dynamics". It contains behavioral, tracking, and medial prefrontal cortex (mPFC) calcium-imaging data collected from mice engaged in a cooperative foraging task that generates stable leader–follower social roles. The dataset includes processed behavioral and neural measurements, social-role…. Dataset size: 168.4 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20723194](https://doi.org/10.5281/zenodo.20723194)
+
+#### 🧪🔓 [Asymmetric Prefrontal Representations for Leader-Follower Dynamics](https://zenodo.org/doi/10.5281/zenodo.20723195)
+
+This dataset accompanies the Nature publication "Asymmetric Prefrontal Representations for Leader–Follower Dynamics". It contains behavioral, tracking, and medial prefrontal cortex (mPFC) calcium-imaging data collected from mice engaged in a cooperative foraging task that generates stable leader–follower social roles. The dataset includes processed behavioral and neural measurements, social-role…. Dataset size: 168.4 GB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.20723195](https://doi.org/10.5281/zenodo.20723195)
+
 #### 🧪🔓 [Charge-Triggered Switching Mechanism in Selenium Select Enabling Ultralow Leakage-Current](https://springernature.figshare.com/articles/dataset/Charge-Triggered_Switching_Mechanism_in_Selenium_Select_Enabling_Ultralow_Leakage-Current/31047436)
 
 This dataset contains the minimum source data for most figures presented in the accompanying manuscript titled "Charge-Triggered Switching Mechanism in Selenium Selector Enabling Ultralow Leakage-Current". Individual data files corresponding to each main figure. Each file contains the raw or primary processed data used to generate the specific panels within that figure.
@@ -1062,6 +1099,12 @@ This contains all the necessary data and code used in the study by Yin et al. (2
 This file set includes metadata files (6 files) and analysis result files (29 files) associated with Neiswender, Maffa, Brenan et al. "A Dependency Map Enhanced with Next-Generation 3D Cancer Models" (Nature, 2026). The custom analysis code used for generating these results is available at a GitHub repository (https://github.com/broadinstitute/DepMap-NextGen-Public). In addition, raw profiling…. Dataset size: 106 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29472362](https://doi.org/10.6084/m9.figshare.29472362)
+
+#### 🧪🔓 [Data files associated with A Dependency Map Enhanced with Next-Generation 3D Cancer Models](https://springernature.figshare.com/articles/dataset/Data_files_associated_with_A_Dependency_Map_Enhanced_with_Next-Generation_3D_Cancer_Models/29472362/1)
+
+This file set includes metadata files (6 files) and analysis result files (29 files) associated with Neiswender, Maffa, Brenan et al. "A Dependency Map Enhanced with Next-Generation 3D Cancer Models" (Nature, 2026). The custom analysis code used for generating these results is available at a GitHub repository (https://github.com/broadinstitute/DepMap-NextGen-Public). In addition, raw profiling…. Dataset size: 106 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29472362.v1](https://doi.org/10.6084/m9.figshare.29472362.v1)
 
 #### 🧪🔓 [Data for: An entangling gate for dual-rail erasure qubits](https://zenodo.org/doi/10.5281/zenodo.20433753)
 
@@ -1141,6 +1184,12 @@ What this is. Per-cancer-type DNA methylation beta-value matrices for Human Canc
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.21838908](https://doi.org/10.5281/zenodo.21838908)
 
+#### 🧪🔓 [Hotspots, refuges, and rising accessibility: predicting tropical hunting probability across space and time](https://springernature.figshare.com/articles/dataset/Hotspots_refuges_and_rising_accessibility_predicting_tropical_hunting_probability_across_space_and_time/29626361/1)
+
+Dataset_of_hunting_sites.xlsx: Contains the dataset used to train the random forest (RF) models presented in the study. However, some sites are excluded due to non-disclosure agreements. hunting_probability_XXX.tif: Raster layers of mean hunting probrability predictions (mean across the 10 models trained on the 10 folds) for the years 2000 and 2015, provided in both calibrated (used in the…. Dataset size: 1002 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29626361.v1](https://doi.org/10.6084/m9.figshare.29626361.v1)
+
 #### 🔀🔓 [Materials Cloud Archive](https://archive.materialscloud.org)
 
 FAIR, open-access archive hosting hundreds of community-contributed materials-science datasets (often with full provenance via AiiDA), spanning DFT calculations, workflows and some experimental data. Each dataset receives a persistent DOI.
@@ -1152,6 +1201,12 @@ FAIR, open-access archive hosting hundreds of community-contributed materials-sc
 We compiled a global database of 1,609 soil metagenomes and found that hotspots exhibiting both high functional gene richness and dissimilarity are rare. Overall, fewer than 25% of hotspots of soil microbial genetic resources fell within designated protected areas. Meanwhile, global patterns of microbial gene richness and dissimilarity were largely decoupled from those in taxonomic biodiversity. Dataset size: 1 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29482997](https://doi.org/10.6084/m9.figshare.29482997)
+
+#### 🧪🔓 [Metadata for a global atlas of soil microbial genetic resources](https://springernature.figshare.com/articles/dataset/Metadata_for_a_global_atlas_of_soil_microbial_genetic_resources/29482997/1)
+
+We compiled a global database of 1,609 soil metagenomes and found that hotspots exhibiting both high functional gene richness and dissimilarity are rare. Overall, fewer than 25% of hotspots of soil microbial genetic resources fell within designated protected areas. Meanwhile, global patterns of microbial gene richness and dissimilarity were largely decoupled from those in taxonomic biodiversity. Dataset size: 1 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.29482997.v1](https://doi.org/10.6084/m9.figshare.29482997.v1)
 
 #### 🧪🔓 [Microscopic signatures of imaginary charge density wave in a kagome metal](https://springernature.figshare.com/articles/dataset/Microscopic_signatures_of_imaginary_charge_density_wave_in_a_kagome_metal/32251713/1)
 
@@ -1416,6 +1471,12 @@ PolyBot self-driving lab (Argonne CNM) autonomously navigated a 7-dimensional pr
 Altermagnetic photonic crystals. Dataset size: 13 MB.
 
 `experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32229984.v1](https://doi.org/10.6084/m9.figshare.32229984.v1)
+
+#### 🧪🔓 [Altermagnetic photonic crystals](https://springernature.figshare.com/articles/dataset/Altermagnetic_photonic_crystals/32229984)
+
+Altermagnetic photonic crystals. Dataset size: 13 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.32229984](https://doi.org/10.6084/m9.figshare.32229984)
 
 #### 🧪🔓 [An Electrospinography Database of Spinal Cord Activity During Gait-Related Tasks and Motor Imagery Exercises](https://zenodo.org/doi/10.5281/zenodo.14615202)
 
@@ -1731,6 +1792,15 @@ Raw Data for the publication Statistics makes a difference: Machine learning ads
 Raw Data for the publication Statistics makes a difference: Machine learning adsorption dynamics of functionalized cyclooctyne on Si(001) at DFT accuracy. Dataset size: 35.7 GB.
 
 `experimental`· `open`· 2025 · CC-BY-4.0 · Zenodo· DOI: [10.5281/zenodo.17523493](https://doi.org/10.5281/zenodo.17523493)
+
+<a id="materials-reactions"></a>
+### Reaction data
+
+#### 🧪🔓 [Harnessing Nitrene Transfer for Unnatural Biosynthesis in Cells](https://springernature.figshare.com/articles/dataset/Harnessing_Nitrene_Transfer_for_Unnatural_Biosynthesis_in_Cells/31817437/1)
+
+This data set contains source data for biocatalytic yields and biosynthetic titers for nitrene transfer. Yields were determined by HPLC peak area compared to an internal standard. Dataset size: 0 MB.
+
+`experimental`· `open`· 2026 · CC-BY-4.0 · figshare· DOI: [10.6084/m9.figshare.31817437.v1](https://doi.org/10.6084/m9.figshare.31817437.v1)
 
 <a id="materials-spectra-exp"></a>
 ### Experimental spectra (XPS/Raman/XRD)
