@@ -45,6 +45,13 @@ jobs:
             analysis/results/transfer_action_policy_summary.json \
             analysis/results/transfer_action_policy_actions.csv \
             analysis/results/synthesis_route_readiness_checklist.csv
+      - name: Preserve committed PNG exports
+        run: |
+          mkdir -p "$RUNNER_TEMP/committed-transfer-policy"
+          cp analysis/figures/transfer_action_policy/figure5_transfer_action_map.png \
+            "$RUNNER_TEMP/committed-transfer-policy/figure5_transfer_action_map.png"
+          cp analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.png \
+            "$RUNNER_TEMP/committed-transfer-policy/figure6_route_bridge_readiness.png"
       - name: Regenerate figures
         run: python analysis/submission/make_transfer_action_policy_figures.py
       - name: Verify figure sources and exports
@@ -55,20 +62,33 @@ jobs:
             analysis/figures/transfer_action_policy/FIGURE_CONTRACT.md \
             analysis/figures/transfer_action_policy/figure5_transfer_action_map.svg \
             analysis/figures/transfer_action_policy/figure5_transfer_action_map.pdf \
-            analysis/figures/transfer_action_policy/figure5_transfer_action_map.png \
             analysis/figures/transfer_action_policy/figure5_transfer_action_map.tiff \
             analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.svg \
             analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.pdf \
-            analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.png \
             analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.tiff
           python - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET
+          import os
+
+          from PIL import Image, ImageChops
 
           root = Path("analysis/figures/transfer_action_policy")
+          committed_root = Path(os.environ["RUNNER_TEMP"]) / "committed-transfer-policy"
           for stem in ("figure5_transfer_action_map", "figure6_route_bridge_readiness"):
               for suffix in (".svg", ".pdf", ".png", ".tiff"):
                   path = root / f"{stem}{suffix}"
                   assert path.stat().st_size > 1_000, path
               ET.parse(root / f"{stem}.svg")
+              with (
+                  Image.open(committed_root / f"{stem}.png") as committed,
+                  Image.open(root / f"{stem}.png") as generated,
+              ):
+                  assert committed.size == generated.size, stem
+                  assert committed.mode == generated.mode, stem
+                  assert committed.info["dpi"] == generated.info["dpi"], stem
+                  pixel_diff = ImageChops.difference(
+                      committed.convert("RGB"), generated.convert("RGB")
+                  )
+                  assert pixel_diff.getbbox() is None, f"{stem} pixels changed"
           PY
