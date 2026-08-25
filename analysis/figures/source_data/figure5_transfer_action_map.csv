@@ -1,0 +1,4 @@
+recipient,metric,estimate,ci_low,ci_high,action
+LiAsF6,relative_log_rmse_gain_percent,27.40993466742442,21.79051296986863,32.92258138611114,PREDICT
+SolventSeg,source_minus_recipient_spearman,0.3736614620854431,0.21257687374893036,0.5622189765440571,RANK
+FINALES,donor_minus_recipient_concordance,-0.08873114463176579,-0.2932013494453841,0.095926068941845,WITHHOLD

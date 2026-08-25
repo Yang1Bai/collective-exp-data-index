@@ -1,0 +1,66 @@
+name: Validate transfer policy
+
+on:
+  pull_request:
+    paths:
+      - "analysis/**"
+      - "tests/test_transfer_action_*.py"
+      - "tests/test_transferability_evidence_cards.py"
+      - ".github/workflows/validate-transfer-policy.yml"
+  push:
+    paths:
+      - "analysis/**"
+      - "tests/test_transfer_action_*.py"
+      - "tests/test_transferability_evidence_cards.py"
+      - ".github/workflows/validate-transfer-policy.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: analysis/requirements-transfer-policy.txt
+      - name: Install figure dependency
+        run: python -m pip install --only-binary=:all: -r analysis/requirements-transfer-policy.txt
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Regenerate quantitative evidence and policy
+        run: |
+          python analysis/build_transferability_evidence_cards.py
+          python analysis/run_transfer_action_policy.py
+      - name: Verify committed quantitative artifacts
+        run: |
+          git diff --exit-code -- \
+            analysis/TRANSFERABILITY_EVIDENCE_CARDS.md \
+            analysis/results/transferability_evidence_cards.json \
+            analysis/results/transferability_evidence_cards.csv \
+            analysis/results/transfer_action_policy_summary.json \
+            analysis/results/transfer_action_policy_actions.csv \
+            analysis/results/synthesis_route_readiness_checklist.csv
+      - name: Regenerate figures
+        run: python analysis/submission/make_transfer_action_policy_figures.py
+      - name: Verify figure sources and exports
+        run: |
+          git diff --exit-code -- \
+            analysis/figures/source_data/figure5_transfer_action_map.csv \
+            analysis/figures/source_data/figure6_route_bridge_readiness.csv \
+            analysis/figures/transfer_action_policy/FIGURE_CONTRACT.md
+          python - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          root = Path("analysis/figures/transfer_action_policy")
+          for stem in ("figure5_transfer_action_map", "figure6_route_bridge_readiness"):
+              for suffix in (".svg", ".pdf", ".png", ".tiff"):
+                  path = root / f"{stem}{suffix}"
+                  assert path.stat().st_size > 1_000, path
+              ET.parse(root / f"{stem}.svg")
+          PY
