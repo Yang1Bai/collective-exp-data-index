@@ -607,6 +607,7 @@ def _render_report(cards: list[dict[str, Any]]) -> str:
     li, solvent, finales = cards
     li_support = li["data_support"]
     li_abs = li["absolute_endpoint"]
+    sol_support = solvent["data_support"]
     sol_abs = solvent["absolute_endpoint"]
     sol_rank = solvent["rank_endpoint"]
     fin_rank = finales["rank_endpoint"]
@@ -622,7 +623,7 @@ donor--recipient relation and decision endpoint.
 | Recipient | Quantitative data support | Observed endpoint evidence | Route |
 |---|---|---|---|
 | LiAsF6 | Salt overlap 0%; solvent overlap {_pct(li_support['solvent_identity_overlap_fraction'])}; temperature and concentration coverage 100%; {_pct(li_support['full_representation_inside_donor_q95_fraction'])} within donor q95 relation boundary | log-RMSE gain vs state-only {_pct(li_abs['relative_log_rmse_gain_vs_state_only'])} (95% CI {_pct(li_abs['relative_log_rmse_gain_vs_state_only_ci95']['low'])} to {_pct(li_abs['relative_log_rmse_gain_vs_state_only_ci95']['high'])}); raw R2 {li_abs['raw_r2']:.3f}; rho {li_abs['spearman']:.3f}; gain vs chemistry-shuffled {_pct(li_abs['relative_log_rmse_gain_vs_chemistry_permuted'])} | **predict** |
-| SolventSeg | 3 separate source programmes; 36 recipient formulations at 5 temperatures; exact formulation overlap 0%; source ranking uses 0 recipient labels | absolute log-RMSE gain vs state-only {_pct(sol_abs['relative_log_rmse_gain_vs_state_only'])}; five-anchor rank rho {sol_rank['five_anchor_source_spearman']:.3f} vs {sol_rank['five_anchor_recipient_baseline_spearman']:.3f}; delta {sol_rank['source_minus_recipient_spearman']:.3f} (95% CI {sol_rank['source_minus_recipient_spearman_ci95']['low']:.3f} to {sol_rank['source_minus_recipient_spearman_ci95']['high']:.3f}); top-quartile precision {sol_rank['source_top_quartile_precision']:.3f} vs {sol_rank['recipient_top_quartile_precision']:.3f} | **rank** |
+| SolventSeg | {sol_support['source_programmes']} separate source programmes; {sol_support['recipient_formulations']} recipient formulations at {sol_support['recipient_temperatures']} temperatures; strict source--recipient record overlap {sol_support['strict_record_overlap_count']}; source ranking uses {sol_support['recipient_labels_used_by_source_rank']} recipient labels | absolute log-RMSE gain vs state-only {_pct(sol_abs['relative_log_rmse_gain_vs_state_only'])}; five-anchor rank rho {sol_rank['five_anchor_source_spearman']:.3f} vs {sol_rank['five_anchor_recipient_baseline_spearman']:.3f}; delta {sol_rank['source_minus_recipient_spearman']:.3f} (95% CI {sol_rank['source_minus_recipient_spearman_ci95']['low']:.3f} to {sol_rank['source_minus_recipient_spearman_ci95']['high']:.3f}); top-quartile precision {sol_rank['source_top_quartile_precision']:.3f} vs {sol_rank['recipient_top_quartile_precision']:.3f} | **rank** |
 | FINALES | 16 evaluation formulations; 98 temperature-matched pairs; 3 recipient anchors; donor and recipient DOI do not overlap | donor concordance {fin_rank['donor_concordance']:.3f} vs recipient {fin_rank['recipient_baseline_concordance']:.3f}; delta {fin_rank['donor_minus_recipient_concordance']:.3f} (95% CI {fin_rank['donor_minus_recipient_concordance_ci95']['low']:.3f} to {fin_rank['donor_minus_recipient_concordance_ci95']['high']:.3f}); p={fin_rank['permutation_p']:.3f}; regret {fin_rank['donor_normalized_regret']:.3f} vs {fin_rank['recipient_normalized_regret']:.3f} | **withhold** |
 
 ## Interpretation
@@ -639,6 +640,39 @@ donor--recipient relation and decision endpoint.
   The frozen donor order loses to the recipient baseline and fails uncertainty,
   significance, precision, and regret checks. The supported action is to
   withhold.
+
+## Frozen decision gates
+
+- **LiAsF6 absolute prediction:** temperature and concentration coverage must
+  both equal 100%, some recipient rows must lie inside the donor relation
+  boundary, and the 95% interval lower bounds against both the state-only and
+  chemistry-shuffled controls must exceed zero.
+- **SolventSeg absolute prediction:** the gains against state-only and the
+  five-anchor target-only baseline must each be at least
+  {100 * MIN_ENDPOINT_GAIN:.0f}% with positive 95% lower bounds; log-R2 must
+  be positive; and the gain against chemistry permutation must be positive
+  with a positive 95% lower bound.
+- **SolventSeg ranking:** absolute prediction must fail; the source-minus-
+  recipient rank advantage must be at least {MIN_ENDPOINT_GAIN:.2f} with a
+  positive 95% lower bound; Holm-adjusted permutation P must be at most
+  {MAX_ADJUSTED_P:.2f}; top-quartile precision must improve; and normalized
+  regret must decrease.
+- **FINALES ranking:** every frozen replication gate in
+  `analysis/results/finales_rank_replication_summary.json` must pass. Failure
+  of any gate yields `withhold`.
+
+## Reproduce the package
+
+```bash
+python -m pip install --only-binary=:all: -r analysis/requirements-transfer-policy.txt
+python analysis/build_transferability_evidence_cards.py
+python -m analysis.run_transfer_action_policy
+python analysis/submission/make_transfer_action_policy_figures.py
+python -m unittest discover -s tests -v
+```
+
+The committed JSON, CSV, SVG, PDF, PNG, and TIFF files are generated artifacts.
+The dedicated GitHub Actions workflow reruns these commands and rejects drift.
 
 ## Recommended manuscript use
 

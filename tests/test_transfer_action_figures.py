@@ -1,8 +1,11 @@
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+
+from PIL import Image
 
 from analysis.submission import make_transfer_action_policy_figures as figures
 
@@ -50,6 +53,36 @@ class TransferActionFigureTests(unittest.TestCase):
             self.assertEqual(len(rows6), 8)
             self.assertTrue((Path(temp_dir) / "figure5_transfer_action_map.csv").is_file())
             self.assertTrue((Path(temp_dir) / "figure6_route_bridge_readiness.csv").is_file())
+
+    def test_committed_exports_match_qa_contract(self):
+        figure_root = ROOT / "analysis" / "figures" / "transfer_action_policy"
+        expected = {
+            "figure5_transfer_action_map": {"text_nodes": 38, "png_dpi": 450.0},
+            "figure6_route_bridge_readiness": {"text_nodes": 48, "png_dpi": 450.0},
+        }
+        expected_pdf_width_points = 183.0 * 72.0 / 25.4
+
+        for stem, contract in expected.items():
+            svg = (figure_root / f"{stem}.svg").read_text(encoding="utf-8")
+            self.assertEqual(svg.count("<text"), contract["text_nodes"])
+
+            pdf = (figure_root / f"{stem}.pdf").read_bytes()
+            media_box = re.search(rb"/MediaBox\s*\[([^\]]+)\]", pdf)
+            self.assertIsNotNone(media_box)
+            coordinates = [float(value) for value in media_box.group(1).split()]
+            self.assertEqual(len(coordinates), 4)
+            self.assertAlmostEqual(
+                coordinates[2] - coordinates[0], expected_pdf_width_points, places=6
+            )
+
+            with Image.open(figure_root / f"{stem}.png") as png:
+                self.assertAlmostEqual(png.info["dpi"][0], contract["png_dpi"], delta=0.1)
+                self.assertAlmostEqual(png.info["dpi"][1], contract["png_dpi"], delta=0.1)
+
+            with Image.open(figure_root / f"{stem}.tiff") as tiff:
+                self.assertEqual(tiff.info["compression"], "tiff_lzw")
+                self.assertAlmostEqual(tiff.info["dpi"][0], 600.0, places=6)
+                self.assertAlmostEqual(tiff.info["dpi"][1], 600.0, places=6)
 
 
 if __name__ == "__main__":
