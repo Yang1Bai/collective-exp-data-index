@@ -7,8 +7,12 @@ import csv
 import json
 from pathlib import Path
 
-from build_transferability_evidence_cards import build_cards
-from transfer_action_policy import build_policy_summary
+if __package__:
+    from .build_transferability_evidence_cards import build_cards
+    from .transfer_action_policy import build_policy_summary
+else:
+    from build_transferability_evidence_cards import build_cards
+    from transfer_action_policy import build_policy_summary
 
 
 ROOT = Path(__file__).resolve().parents[1]

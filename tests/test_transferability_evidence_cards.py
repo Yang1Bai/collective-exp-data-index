@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from analysis import build_transferability_evidence_cards as evidence
+from analysis import run_transfer_action_policy as policy_runner
 
 
 class TransferabilityEvidenceCardTests(unittest.TestCase):
@@ -19,6 +20,23 @@ class TransferabilityEvidenceCardTests(unittest.TestCase):
         self.assertEqual(self.by_recipient["LiAsF6"]["decision"], "predict")
         self.assertEqual(self.by_recipient["SolventSeg"]["decision"], "rank")
         self.assertEqual(self.by_recipient["FINALES"]["decision"], "withhold")
+
+    def test_policy_runner_is_importable_as_a_module(self):
+        self.assertTrue(callable(policy_runner.main))
+
+    def test_frozen_inputs_are_strict_json(self):
+        def reject_constant(value):
+            raise ValueError(f"non-standard JSON constant: {value}")
+
+        for name in (
+            "bamboomixer_LiAsF6_only_summary.json",
+            "bamboomixer_cross_database_interaction_summary.json",
+        ):
+            with self.subTest(name=name):
+                json.loads(
+                    (evidence.RESULTS / name).read_text(),
+                    parse_constant=reject_constant,
+                )
 
     def test_decision_selector_uses_highest_supported_endpoint(self):
         self.assertEqual(

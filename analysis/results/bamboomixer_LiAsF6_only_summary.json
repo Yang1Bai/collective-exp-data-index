@@ -130,7 +130,7 @@
     "anchor_constant": {
       "log_rmse": 0.6794183473623938,
       "raw_r2": -0.4385118987935448,
-      "spearman": NaN
+      "spearman": null
     },
     "source_frozen": {
       "log_rmse": 0.33708414879565074,
