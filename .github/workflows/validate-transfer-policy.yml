@@ -52,7 +52,15 @@ jobs:
           git diff --exit-code -- \
             analysis/figures/source_data/figure5_transfer_action_map.csv \
             analysis/figures/source_data/figure6_route_bridge_readiness.csv \
-            analysis/figures/transfer_action_policy/FIGURE_CONTRACT.md
+            analysis/figures/transfer_action_policy/FIGURE_CONTRACT.md \
+            analysis/figures/transfer_action_policy/figure5_transfer_action_map.svg \
+            analysis/figures/transfer_action_policy/figure5_transfer_action_map.pdf \
+            analysis/figures/transfer_action_policy/figure5_transfer_action_map.png \
+            analysis/figures/transfer_action_policy/figure5_transfer_action_map.tiff \
+            analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.svg \
+            analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.pdf \
+            analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.png \
+            analysis/figures/transfer_action_policy/figure6_route_bridge_readiness.tiff
           python - <<'PY'
           from pathlib import Path
           import xml.etree.ElementTree as ET

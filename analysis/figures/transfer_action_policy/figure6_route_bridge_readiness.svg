@@ -249,56 +249,56 @@ z
 " clip-path="url(#p7f9369aa10)" style="fill: #f6dad7; stroke: #b64342; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="4.876157" y="49.388179" transform="rotate(-0 4.876157 49.388179)">a</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="4.876157" y="49.303179" transform="rotate(-0 4.876157 49.303179)">a</text>
    </g>
    <g id="text_2">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="28.530709" y="57.872126" transform="rotate(-0 28.530709 57.872126)">Fail-closed experimental action policy</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="28.530709" y="57.872126" transform="rotate(-0 28.530709 57.872126)">Fail-closed experimental action policy</text>
    </g>
    <g id="text_3">
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(45.578645 103.873827)">Candidate-available</text>
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(51.692669 109.092855)">route metadata</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(40.494583 103.809331)">Candidate-available</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(47.168919 109.341257)">route metadata</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(152.531732 103.871249)">Feasibility · safety</text>
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(154.827122 109.162464)">process support</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(147.778529 103.787847)">Feasibility · safety</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(151.340638 109.362741)">process support</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(255.032542 103.873827)">Endpoint interval +</text>
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #0f4d92" transform="translate(256.477581 109.092855)">matched falsifiers</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(249.736643 103.809331)">Endpoint interval +</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(251.874338 109.341257)">matched falsifiers</text>
    </g>
    <g id="text_6">
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #c47a15" transform="translate(54.032176 164.877999)">INCOMPLETE</text>
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #c47a15" transform="translate(38.126794 169.907244)">route labels or target table</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #c47a15" transform="translate(52.306778 164.829927)">INCOMPLETE</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #c47a15" transform="translate(30.652137 170.160691)">route labels or target table</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 700; font-size: 6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #c47a15" x="176.371654" y="167.608856" transform="rotate(-0 176.371654 167.608856)">DATA RECOVERY</text>
+    <text style="font-weight: 700; font-size: 6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c47a15" x="176.371654" y="167.709168" transform="rotate(-0 176.371654 167.709168)">DATA RECOVERY</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #c47a15" x="176.371654" y="191.41425" transform="rotate(-0 176.371654 191.41425)">Current solid-synthesis direction</text>
+    <text style="font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c47a15" x="176.371654" y="191.56725" transform="rotate(-0 176.371654 191.56725)">Current solid-synthesis direction</text>
    </g>
    <g id="text_9">
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #2e8b83" transform="translate(54.912887 229.326503)">SUPPORTED</text>
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #2e8b83" transform="translate(41.071606 234.355748)">lower bound clears gate</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #2e8b83" transform="translate(53.467395 229.27843)">SUPPORTED</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #2e8b83" transform="translate(35.269762 234.609195)">lower bound clears gate</text>
    </g>
    <g id="text_10">
-    <text style="font-weight: 700; font-size: 6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #2e8b83" x="176.371654" y="232.05736" transform="rotate(-0 176.371654 232.05736)">TRANSFER NOW</text>
+    <text style="font-weight: 700; font-size: 6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #2e8b83" x="176.371654" y="232.157672" transform="rotate(-0 176.371654 232.157672)">TRANSFER NOW</text>
    </g>
    <g id="text_11">
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #7c6ccf" transform="translate(261.893109 176.386661)">AMBIGUOUS</text>
-    <text style="font-weight: 700; font-size: 5.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #7c6ccf" transform="translate(252.017304 181.415905)">interval crosses gate</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #7c6ccf" transform="translate(260.048046 176.338588)">AMBIGUOUS</text>
+    <text style="font-weight: 700; font-size: 5.3px; font-family: 'DejaVu Sans', sans-serif; fill: #7c6ccf" transform="translate(246.970296 181.669353)">interval crosses gate</text>
    </g>
    <g id="text_12">
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #7c6ccf" transform="translate(249.044562 229.246952)">BRIDGE EXPERIMENT</text>
-    <text style="font-weight: 700; font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #7c6ccf" transform="translate(254.466788 234.536362)">only if EVSI &gt; cost</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #7c6ccf" transform="translate(245.943077 229.232256)">BRIDGE EXPERIMENT</text>
+    <text style="font-weight: 700; font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; fill: #7c6ccf" transform="translate(250.045734 234.764182)">only if EVSI &gt; cost</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 4.55px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #7c6ccf" x="276.903496" y="259.273701" transform="rotate(-0 276.903496 259.273701)">paired contrast updates the frozen gate</text>
+    <text style="font-size: 4.55px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #7c6ccf" x="276.903496" y="259.273701" transform="rotate(-0 276.903496 259.273701)">paired contrast updates the frozen gate</text>
    </g>
    <g id="text_14">
-    <text style="font-weight: 700; font-size: 6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #b64342" x="176.371654" y="276.941139" transform="rotate(-0 176.371654 276.941139)">WITHHOLD</text>
+    <text style="font-weight: 700; font-size: 6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #b64342" x="176.371654" y="277.041452" transform="rotate(-0 176.371654 277.041452)">WITHHOLD</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 4.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: middle; fill: #b64342" x="176.371654" y="295.997475" transform="rotate(-0 176.371654 295.997475)">hard negative · falsifier failure · no feasible route</text>
+    <text style="font-size: 4.6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #b64342" x="176.371654" y="296.1441" transform="rotate(-0 176.371654 296.1441)">hard negative · falsifier failure · no feasible route</text>
    </g>
   </g>
   <g id="axes_2">
@@ -343,64 +343,64 @@ L 500.584252 87.630236
 " clip-path="url(#p0e228065fd)" style="fill: none; stroke: #e7e9ed; stroke-width: 0.45; stroke-linecap: square"/>
    </g>
    <g id="text_16">
-    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="340.916031" y="52.511959" transform="rotate(-0 340.916031 52.511959)">b</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="340.916031" y="52.426959" transform="rotate(-0 340.916031 52.426959)">b</text>
    </g>
    <g id="text_17">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="352.743307" y="59.121638" transform="rotate(-0 352.743307 59.121638)">Current route-selection readiness</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="352.743307" y="59.121638" transform="rotate(-0 352.743307 59.121638)">Current route-selection readiness</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="223.196043" transform="rotate(-0 355.700126 223.196043)">frozen target checksum and grouped split</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="223.275965" transform="rotate(-0 355.700126 223.275965)">frozen target checksum and grouped split</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="223.237106" transform="rotate(-0 494.670614 223.237106)">NO</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="223.317356" transform="rotate(-0 494.670614 223.317356)">NO</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="202.744022" transform="rotate(-0 355.700126 202.744022)">two or more comparable route alternatives</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="202.825034" transform="rotate(-0 355.700126 202.825034)">two or more comparable route alternatives</text>
    </g>
    <g id="text_21">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="202.786174" transform="rotate(-0 494.670614 202.786174)">NO</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="202.866424" transform="rotate(-0 494.670614 202.866424)">NO</text>
    </g>
    <g id="text_22">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="182.29418" transform="rotate(-0 355.700126 182.29418)">candidate-level synthesis route identifiers</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="182.374102" transform="rotate(-0 355.700126 182.374102)">candidate-level synthesis route identifiers</text>
    </g>
    <g id="text_23">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="182.335243" transform="rotate(-0 494.670614 182.335243)">NO</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="182.415493" transform="rotate(-0 494.670614 182.415493)">NO</text>
    </g>
    <g id="text_24">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="161.870495" transform="rotate(-0 355.700126 161.870495)">recipient failed and partial outcomes</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="161.923171" transform="rotate(-0 355.700126 161.923171)">recipient failed and partial outcomes</text>
    </g>
    <g id="text_25">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="161.884311" transform="rotate(-0 494.670614 161.884311)">NO</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="161.964561" transform="rotate(-0 494.670614 161.964561)">NO</text>
    </g>
    <g id="text_26">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="141.391228" transform="rotate(-0 355.700126 141.391228)">complete recipient attempt table</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="141.472239" transform="rotate(-0 355.700126 141.472239)">complete recipient attempt table</text>
    </g>
    <g id="text_27">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="141.43338" transform="rotate(-0 494.670614 141.43338)">NO</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b64342" x="494.670614" y="141.51363" transform="rotate(-0 494.670614 141.51363)">NO</text>
    </g>
    <g id="text_28">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="120.91305" transform="rotate(-0 355.700126 120.91305)">donor negative and partial outcomes</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="121.021308" transform="rotate(-0 355.700126 121.021308)">donor negative and partial outcomes</text>
    </g>
    <g id="text_29">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="120.982449" transform="rotate(-0 494.670614 120.982449)">YES</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="121.062699" transform="rotate(-0 494.670614 121.062699)">YES</text>
    </g>
    <g id="text_30">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="100.517701" transform="rotate(-0 355.700126 100.517701)">donor temperature and time fields</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="100.570377" transform="rotate(-0 355.700126 100.570377)">donor temperature and time fields</text>
    </g>
    <g id="text_31">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="100.531517" transform="rotate(-0 494.670614 100.531517)">YES</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="100.611767" transform="rotate(-0 494.670614 100.611767)">YES</text>
    </g>
    <g id="text_32">
-    <text style="font-size: 4.65px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="80.039523" transform="rotate(-0 355.700126 80.039523)">donor precursor and stoichiometry fields</text>
+    <text style="font-size: 4.65px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="355.700126" y="80.119445" transform="rotate(-0 355.700126 80.119445)">donor precursor and stoichiometry fields</text>
    </g>
    <g id="text_33">
-    <text style="font-weight: 700; font-size: 4.8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="80.080586" transform="rotate(-0 494.670614 80.080586)">YES</text>
+    <text style="font-weight: 700; font-size: 4.8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #2e8b83" x="494.670614" y="80.160836" transform="rotate(-0 494.670614 80.160836)">YES</text>
    </g>
    <g id="text_34">
-    <text style="font-weight: 700; font-size: 4.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #6f7480" x="355.700126" y="65.54323" transform="rotate(-0 355.700126 65.54323)">Requirement</text>
+    <text style="font-weight: 700; font-size: 4.6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6f7480" x="355.700126" y="65.54323" transform="rotate(-0 355.700126 65.54323)">Requirement</text>
    </g>
    <g id="text_35">
-    <text style="font-weight: 700; font-size: 4.6px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: end; fill: #6f7480" x="494.670614" y="65.54323" transform="rotate(-0 494.670614 65.54323)">Ready</text>
+    <text style="font-weight: 700; font-size: 4.6px; font-family: 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6f7480" x="494.670614" y="65.54323" transform="rotate(-0 494.670614 65.54323)">Ready</text>
    </g>
   </g>
   <g id="axes_3">
@@ -418,19 +418,19 @@ z
 " clip-path="url(#pb8aad0ad07)" style="fill: #f5e7cb; stroke: #c47a15; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_36">
-    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="340.916031" y="249.310069" transform="rotate(-0 340.916031 249.310069)">c</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="340.916031" y="249.225069" transform="rotate(-0 340.916031 249.225069)">c</text>
    </g>
    <g id="text_37">
-    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #c47a15" transform="translate(383.233217 272.545957)">ROUTE CHOICE: NOT EVALUABLE</text>
-    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #c47a15" transform="translate(362.371873 277.496519)">1,035 donor reactions · 355 reported target attempts</text>
-    <text style="font-weight: 700; font-size: 5.2px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #c47a15" transform="translate(355.875123 282.565666)">complete attempt table and route alternatives not verified</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans', sans-serif; fill: #c47a15" transform="translate(379.28528 272.392252)">ROUTE CHOICE: NOT EVALUABLE</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans', sans-serif; fill: #c47a15" transform="translate(348.109655 277.622437)">1,035 donor reactions · 355 reported target attempts</text>
+    <text style="font-weight: 700; font-size: 5.2px; font-family: 'DejaVu Sans', sans-serif; fill: #c47a15" transform="translate(340.208905 282.893246)">complete attempt table and route alternatives not verified</text>
    </g>
   </g>
   <g id="text_38">
-   <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #272727" x="28.530709" y="18.06038" transform="rotate(-0 28.530709 18.06038)">Bridge experiments are conditional actions, not a substitute for missing route data</text>
+   <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #272727" x="28.530709" y="18.347255" transform="rotate(-0 28.530709 18.347255)">Bridge experiments are conditional actions, not a substitute for missing route data</text>
   </g>
   <g id="text_39">
-   <text style="font-size: 5.5px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #6f7480" x="28.530709" y="33.597529" transform="rotate(-0 28.530709 33.597529)">The current synthesis evidence supports data recovery before route selection; no specific synthesis route is nominated.</text>
+   <text style="font-size: 5.5px; font-family: 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6f7480" x="28.530709" y="33.772841" transform="rotate(-0 28.530709 33.772841)">The current synthesis evidence supports data recovery before route selection; no specific synthesis route is nominated.</text>
   </g>
  </g>
  <defs>

@@ -178,6 +178,19 @@ class TransferActionPolicyTests(unittest.TestCase):
         )
         self.assertEqual(decision.action, "withhold")
 
+    def test_bridge_requires_two_feasible_route_alternatives(self):
+        decision = decide_bridge(
+            route_candidates_complete=True,
+            feasible_route_count=1,
+            endpoint_interval=(-0.02, 0.11),
+            endpoint_threshold=0.05,
+            falsifier_failed=False,
+            bridge_designable=True,
+            expected_information_value=12.0,
+            experiment_cost=4.0,
+        )
+        self.assertEqual(decision.action, "withhold")
+
     def test_bridge_is_not_authorised_without_value_of_information(self):
         decision = decide_bridge(
             route_candidates_complete=True,
@@ -290,6 +303,29 @@ class TransferActionPolicyTests(unittest.TestCase):
         audit = audit_synthesis_route_readiness(complete)
         self.assertTrue(audit["route_choice_supported"])
         self.assertEqual(audit["current_action"], "evaluate_route_evidence")
+
+    def test_missing_donor_fields_block_route_readiness(self):
+        readiness = json.loads(
+            (ROOT / "analysis" / "xrd_to_synthesis_readiness.json").read_text()
+        )
+        incomplete = copy.deepcopy(readiness)
+        donor = incomplete["primary_candidate"]["donor"]
+        donor["candidate_available_fields"] = []
+        donor["outcome_classes"] = []
+        route_evidence = incomplete["route_readiness_evidence"]
+        for key in (
+            "complete_recipient_attempt_table",
+            "recipient_failed_and_partial_outcomes",
+            "candidate_level_synthesis_route_identifiers",
+            "target_checksum_frozen",
+            "grouped_split_frozen",
+        ):
+            route_evidence[key] = True
+        route_evidence["comparable_route_alternative_count"] = 2
+
+        audit = audit_synthesis_route_readiness(incomplete)
+        self.assertFalse(audit["route_choice_supported"])
+        self.assertEqual(audit["current_action"], "data_recovery")
 
     def test_invalid_route_readiness_evidence_is_rejected(self):
         readiness = json.loads(

@@ -1,3 +1,4 @@
+import copy
 import csv
 import json
 import tempfile
@@ -69,6 +70,56 @@ class TransferabilityEvidenceCardTests(unittest.TestCase):
         self.assertLessEqual(
             card["rank_endpoint"]["holm_adjusted_permutation_p"], 0.05
         )
+
+    def test_solventseg_gate_rejects_nonfinite_and_impossible_metrics(self):
+        cross = json.loads(
+            (
+                evidence.RESULTS
+                / "bamboomixer_cross_database_interaction_summary.json"
+            ).read_text()
+        )["solventseg"]
+        stress = json.loads(
+            (
+                evidence.RESULTS
+                / "bamboomixer_recipient_baseline_stress_test_summary.json"
+            ).read_text()
+        )["five_anchor"]
+        original = {
+            "prediction": cross["routing"]["prediction_gate"],
+            "advantage": stress["source_minus_strongest_spearman"],
+            "p": cross["rank_permutation_p"]["programme_balanced_portfolio"],
+            "source": stress["source_portfolio"],
+            "recipient": stress["recipient_macro"][0],
+        }
+        absolute, ranking = evidence.evaluate_solventseg_gates(
+            original["prediction"],
+            original["advantage"],
+            original["p"],
+            original["source"],
+            original["recipient"],
+        )
+        self.assertFalse(absolute)
+        self.assertTrue(ranking)
+
+        corruptions = (
+            ("advantage", "mean", float("inf")),
+            ("advantage", "ci95", [float("nan"), 0.5]),
+            ("p", "holm_p", -0.01),
+            ("source", "top_quartile_precision", float("inf")),
+            ("source", "normalized_regret", -float("inf")),
+        )
+        for section, field, value in corruptions:
+            case = copy.deepcopy(original)
+            case[section][field] = value
+            with self.subTest(section=section, field=field):
+                with self.assertRaises((TypeError, ValueError)):
+                    evidence.evaluate_solventseg_gates(
+                        case["prediction"],
+                        case["advantage"],
+                        case["p"],
+                        case["source"],
+                        case["recipient"],
+                    )
 
     def test_finales_withholds_when_rank_evidence_fails(self):
         endpoint = self.by_recipient["FINALES"]["rank_endpoint"]

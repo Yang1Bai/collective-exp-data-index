@@ -168,6 +168,12 @@ def decide_bridge(
             "endpoint upper bound does not exceed the frozen threshold",
             endpoint_interval,
         )
+    if feasible_route_count < 2:
+        return BridgeDecision(
+            "withhold",
+            "an ambiguous endpoint needs at least two feasible route alternatives for a paired bridge contrast",
+            endpoint_interval,
+        )
     if not bridge_designable:
         return BridgeDecision(
             "withhold",
@@ -272,10 +278,9 @@ def audit_synthesis_route_readiness(readiness: dict[str, Any]) -> dict[str, Any]
         },
     ]
 
-    route_specific_requirements = checklist[3:]
     route_choice_supported = all(
         item["status"] in {"available", "not_required"}
-        for item in route_specific_requirements
+        for item in checklist
     )
     return {
         "programme": f"{donor['name']} -> {recipient['name']}",

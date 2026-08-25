@@ -14,6 +14,8 @@ from __future__ import annotations
 
 import csv
 import json
+import math
+from numbers import Real
 from pathlib import Path
 from typing import Any
 
@@ -34,8 +36,48 @@ def _read_analysis_json(name: str) -> dict[str, Any]:
         return json.load(handle)
 
 
+def _finite_number(name: str, value: Any) -> float:
+    if isinstance(value, bool) or not isinstance(value, Real):
+        raise TypeError(f"{name} must be a finite real number")
+    number = float(value)
+    if not math.isfinite(number):
+        raise ValueError(f"{name} must be finite")
+    return number
+
+
+def _validate_finite_tree(value: Any, path: str) -> None:
+    if isinstance(value, dict):
+        for key, child in value.items():
+            _validate_finite_tree(child, f"{path}.{key}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            _validate_finite_tree(child, f"{path}[{index}]")
+    elif isinstance(value, Real) and not isinstance(value, bool):
+        _finite_number(path, value)
+
+
+def _bounded_number(name: str, value: Any, low: float, high: float) -> float:
+    number = _finite_number(name, value)
+    if not low <= number <= high:
+        raise ValueError(f"{name} must be between {low} and {high}")
+    return number
+
+
+def _nonnegative_number(name: str, value: Any) -> float:
+    number = _finite_number(name, value)
+    if number < 0.0:
+        raise ValueError(f"{name} must be nonnegative")
+    return number
+
+
 def _interval(values: list[float]) -> dict[str, float]:
-    return {"low": float(values[0]), "high": float(values[1])}
+    if not isinstance(values, list) or len(values) != 2:
+        raise ValueError("confidence interval must contain exactly two values")
+    low = _finite_number("confidence interval low", values[0])
+    high = _finite_number("confidence interval high", values[1])
+    if low > high:
+        raise ValueError("confidence interval must be ordered")
+    return {"low": low, "high": high}
 
 
 def choose_evidence_decision(
@@ -48,6 +90,80 @@ def choose_evidence_decision(
     if candidate_ranking_supported:
         return "rank"
     return "withhold"
+
+
+def evaluate_solventseg_gates(
+    prediction: dict[str, Any],
+    rank_advantage: dict[str, Any],
+    rank_p: dict[str, Any],
+    source_rank: dict[str, Any],
+    recipient_rank: dict[str, Any],
+) -> tuple[bool, bool]:
+    """Evaluate the complete frozen absolute and ranking conjunctions."""
+
+    for name, payload in (
+        ("prediction", prediction),
+        ("rank_advantage", rank_advantage),
+        ("rank_p", rank_p),
+        ("source_rank", source_rank),
+        ("recipient_rank", recipient_rank),
+    ):
+        _validate_finite_tree(payload, name)
+
+    state_interval = _interval(
+        prediction["portfolio_vs_state_relative_log_rmse_gain_ci95"]
+    )
+    target_interval = _interval(
+        prediction["five_anchor_vs_target_only_relative_log_rmse_gain_ci95"]
+    )
+    permuted_interval = _interval(
+        prediction["portfolio_vs_permuted_relative_log_rmse_gain_ci95"]
+    )
+    advantage_interval = _interval(rank_advantage["ci95"])
+    holm_p = _bounded_number("rank_p.holm_p", rank_p["holm_p"], 0.0, 1.0)
+    source_precision = _bounded_number(
+        "source_rank.top_quartile_precision",
+        source_rank["top_quartile_precision"],
+        0.0,
+        1.0,
+    )
+    recipient_precision = _bounded_number(
+        "recipient_rank.top_quartile_precision",
+        recipient_rank["top_quartile_precision"],
+        0.0,
+        1.0,
+    )
+    source_regret = _nonnegative_number(
+        "source_rank.normalized_regret", source_rank["normalized_regret"]
+    )
+    recipient_regret = _nonnegative_number(
+        "recipient_rank.normalized_regret", recipient_rank["normalized_regret"]
+    )
+
+    absolute_supported = all(
+        (
+            prediction["portfolio_vs_state_relative_log_rmse_gain"]
+            >= MIN_ENDPOINT_GAIN,
+            state_interval["low"] > 0.0,
+            prediction["five_anchor_vs_target_only_relative_log_rmse_gain"]
+            >= MIN_ENDPOINT_GAIN,
+            target_interval["low"] > 0.0,
+            prediction["portfolio_log_r2"] > 0.0,
+            prediction["portfolio_vs_permuted_relative_log_rmse_gain"] > 0.0,
+            permuted_interval["low"] > 0.0,
+        )
+    )
+    ranking_supported = all(
+        (
+            not absolute_supported,
+            rank_advantage["mean"] >= MIN_ENDPOINT_GAIN,
+            advantage_interval["low"] > 0.0,
+            holm_p <= MAX_ADJUSTED_P,
+            source_precision > recipient_precision,
+            source_regret < recipient_regret,
+        )
+    )
+    return absolute_supported, ranking_supported
 
 
 def build_cards() -> list[dict[str, Any]]:
@@ -87,57 +203,62 @@ def build_cards() -> list[dict[str, Any]]:
 
     finales_primary = finales["primary"]
 
+    for name, payload in (
+        ("LiAsF6 corrected_external_metrics", li_metrics),
+        ("LiAsF6 state_only contrast", li_state),
+        ("LiAsF6 chemistry_permuted contrast", li_shuffle),
+        ("SolventSeg fixed_25_C", solvent_fixed),
+        ("FINALES primary", finales_primary),
+    ):
+        _validate_finite_tree(payload, name)
+
+    li_temperature_coverage = _bounded_number(
+        "LiAsF6 temperature coverage",
+        li_support["temperature_C"]["target_fraction_inside_source_range"],
+        0.0,
+        1.0,
+    )
+    li_concentration_coverage = _bounded_number(
+        "LiAsF6 concentration coverage",
+        li_support["salt_molar_ratio"]["target_fraction_inside_source_range"],
+        0.0,
+        1.0,
+    )
+    li_solvent_overlap = _bounded_number(
+        "LiAsF6 solvent overlap",
+        li_support["target_solvent_identity_fraction_seen_in_source"],
+        0.0,
+        1.0,
+    )
+    li_relation_support = _bounded_number(
+        "LiAsF6 relation support",
+        applicability["full_representation"][
+            "target_fraction_within_reference_q95"
+        ],
+        0.0,
+        1.0,
+    )
+    li_state_interval = _interval(li_state["relative_log_rmse_gain_ci95"])
+    li_shuffle_interval = _interval(
+        li_shuffle["relative_log_rmse_gain_ci95"]
+    )
+
     li_absolute_supported = all(
         (
-            li_support["temperature_C"]["target_fraction_inside_source_range"]
-            == 1.0,
-            li_support["salt_molar_ratio"]["target_fraction_inside_source_range"]
-            == 1.0,
-            applicability["full_representation"][
-                "target_fraction_within_reference_q95"
-            ]
-            > 0.0,
-            li_state["relative_log_rmse_gain_ci95"][0] > 0.0,
-            li_shuffle["relative_log_rmse_gain_ci95"][0] > 0.0,
+            li_temperature_coverage == 1.0,
+            li_concentration_coverage == 1.0,
+            li_relation_support > 0.0,
+            li_state_interval["low"] > 0.0,
+            li_shuffle_interval["low"] > 0.0,
         )
     )
-    solvent_absolute_supported = all(
-        (
-            solvent_prediction["portfolio_vs_state_relative_log_rmse_gain"]
-            >= MIN_ENDPOINT_GAIN,
-            solvent_prediction[
-                "portfolio_vs_state_relative_log_rmse_gain_ci95"
-            ][0]
-            > 0.0,
-            solvent_prediction[
-                "five_anchor_vs_target_only_relative_log_rmse_gain"
-            ]
-            >= MIN_ENDPOINT_GAIN,
-            solvent_prediction[
-                "five_anchor_vs_target_only_relative_log_rmse_gain_ci95"
-            ][0]
-            > 0.0,
-            solvent_prediction["portfolio_log_r2"] > 0.0,
-            solvent_prediction[
-                "portfolio_vs_permuted_relative_log_rmse_gain"
-            ]
-            > 0.0,
-            solvent_prediction[
-                "portfolio_vs_permuted_relative_log_rmse_gain_ci95"
-            ][0]
-            > 0.0,
-        )
-    )
-    solvent_ranking_supported = all(
-        (
-            not solvent_absolute_supported,
-            solvent_advantage["mean"] >= MIN_ENDPOINT_GAIN,
-            solvent_advantage["ci95"][0] > 0.0,
-            solvent_p["holm_p"] <= MAX_ADJUSTED_P,
-            solvent_rank["top_quartile_precision"]
-            > solvent_baseline["top_quartile_precision"],
-            solvent_rank["normalized_regret"]
-            < solvent_baseline["normalized_regret"],
+    solvent_absolute_supported, solvent_ranking_supported = (
+        evaluate_solventseg_gates(
+            solvent_prediction,
+            solvent_advantage,
+            solvent_p,
+            solvent_rank,
+            solvent_baseline,
         )
     )
     solvent_decision = choose_evidence_decision(
@@ -157,8 +278,35 @@ def build_cards() -> list[dict[str, Any]]:
     finales_ranking_supported = finales["success_gate_passed"]
     if not isinstance(finales_ranking_supported, bool):
         raise TypeError("FINALES success_gate_passed must be boolean")
+    if not all(isinstance(value, bool) for value in finales["gates"].values()):
+        raise TypeError("FINALES gate values must be booleans")
     if finales_ranking_supported != all(finales["gates"].values()):
         raise ValueError("FINALES success gate disagrees with its stored gate booleans")
+
+    _bounded_number(
+        "FINALES permutation_p", finales_primary["permutation_p"], 0.0, 1.0
+    )
+    _bounded_number(
+        "FINALES donor_top_quartile_precision",
+        finales_primary["donor_top_quartile_precision"],
+        0.0,
+        1.0,
+    )
+    _bounded_number(
+        "FINALES baseline_top_quartile_precision",
+        finales_primary["baseline_top_quartile_precision"],
+        0.0,
+        1.0,
+    )
+    _nonnegative_number(
+        "FINALES donor_normalized_regret",
+        finales_primary["donor_normalized_regret"],
+    )
+    _nonnegative_number(
+        "FINALES baseline_normalized_regret",
+        finales_primary["baseline_normalized_regret"],
+    )
+    _interval(finales_primary["bootstrap_ci95"])
 
     return [
         {
@@ -177,18 +325,10 @@ def build_cards() -> list[dict[str, Any]]:
                     "target_exact_formulations"
                 ],
                 "exact_salt_identity_overlap_fraction": 0.0,
-                "solvent_identity_overlap_fraction": li_support[
-                    "target_solvent_identity_fraction_seen_in_source"
-                ],
-                "temperature_inside_source_range_fraction": li_support[
-                    "temperature_C"
-                ]["target_fraction_inside_source_range"],
-                "concentration_inside_source_range_fraction": li_support[
-                    "salt_molar_ratio"
-                ]["target_fraction_inside_source_range"],
-                "full_representation_inside_donor_q95_fraction": applicability[
-                    "full_representation"
-                ]["target_fraction_within_reference_q95"],
+                "solvent_identity_overlap_fraction": li_solvent_overlap,
+                "temperature_inside_source_range_fraction": li_temperature_coverage,
+                "concentration_inside_source_range_fraction": li_concentration_coverage,
+                "full_representation_inside_donor_q95_fraction": li_relation_support,
                 "salt_descriptor_reference_percentile": applicability[
                     "salt_descriptor"
                 ]["target_distance_reference_percentile"],
@@ -234,7 +374,7 @@ def build_cards() -> list[dict[str, Any]]:
             "plain_language_reason": (
                 "The salt identity is unseen, but temperature and concentration are "
                 "fully covered, "
-                f"{100 * applicability['full_representation']['target_fraction_within_reference_q95']:.1f}% "
+                f"{100 * li_relation_support:.1f}% "
                 "of recipient rows lie inside the donor's relation-distance boundary, "
                 "and the lower confidence bounds for both state-only and "
                 "chemistry-shuffled comparisons remain positive."
@@ -437,7 +577,8 @@ def write_outputs(cards: list[dict[str, Any]]) -> tuple[Path, Path, Path]:
         "cards": cards,
     }
     json_path.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(payload, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
+        encoding="utf-8",
     )
 
     flat_cards: list[dict[str, Any]] = []

@@ -24,7 +24,8 @@ def main() -> None:
     summary = build_policy_summary(build_cards(), readiness)
     json_path = RESULTS / "transfer_action_policy_summary.json"
     json_path.write_text(
-        json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(summary, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
+        encoding="utf-8",
     )
 
     csv_path = RESULTS / "transfer_action_policy_actions.csv"

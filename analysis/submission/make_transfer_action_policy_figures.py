@@ -32,7 +32,7 @@ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 
 plt.rcParams["font.family"] = "sans-serif"
-plt.rcParams["font.sans-serif"] = ["Arial", "DejaVu Sans", "Liberation Sans"]
+plt.rcParams["font.sans-serif"] = ["DejaVu Sans"]
 plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["svg.hashsalt"] = "transfer-action-policy-v1"
 plt.rcParams["pdf.fonttype"] = 42
