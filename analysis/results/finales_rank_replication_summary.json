@@ -1,0 +1,101 @@
+{
+  "claim_guard": {
+    "forbidden": [
+      "universal cross-domain transfer",
+      "improved absolute conductivity prediction",
+      "prospective laboratory discovery",
+      "discovery acceleration",
+      "a new electrolyte formulation",
+      "confirmation by changing the donor model, anchors, split, metric, or practical gate after outcome access"
+    ],
+    "harm": "The unchanged donor ranking is less concordant with held-out experimental outcomes than the strongest recipient-only baseline or a support-matched falsifier.",
+    "null": "The SolventSeg rank-transfer result does not replicate under the unchanged contract on this programme.",
+    "positive": "An unchanged cross-database donor ranking replicates on one additional experimental programme and improves retrospective OOD candidate prioritization."
+  },
+  "decision": "not-replicated",
+  "design_sha256": "74ac3f226f8add1e039595e0e28b60f1afda7bae18cfdb7e4ec045c5fcc4a8bf",
+  "donor_sha256": "56b17f0e067daa00a9ea79eb5c7810c498e6e0f4ca2f699623b1c483b2ad177c",
+  "freeze_sha256": "33fa976c6a1ce5d883fda02d5466ab05dce4d029e530567905a659950f24a29c",
+  "gates": {
+    "archive_and_donor_hashes_match": true,
+    "at_least_50_temperature_matched_pairs": true,
+    "bootstrap_interval_above_zero": false,
+    "concordance_advantage_at_least_0_10": false,
+    "normalized_regret_improved": false,
+    "permutation_p_at_most_0_05": false,
+    "recipient_doi_absent_from_donor": true,
+    "top_quartile_precision_improved": false,
+    "wrong_donor_gate": true
+  },
+  "primary": {
+    "anchors": 3,
+    "baseline_normalized_regret": 0.1804503774293165,
+    "baseline_top_quartile_precision": 0.5,
+    "bootstrap_ci95": [
+      -0.2932013494453841,
+      0.095926068941845
+    ],
+    "concordance_advantage": -0.08873114463176579,
+    "donor_concordance": 0.6938775510204082,
+    "donor_normalized_regret": 0.5630256405707067,
+    "donor_top_quartile_precision": 0.5,
+    "eligible_pairs": 98,
+    "evaluation_formulations": 16,
+    "permutation_p": 0.13093453273363317,
+    "strongest_baseline_concordance": 0.782608695652174,
+    "strongest_recipient_baseline": "target_extra_trees",
+    "temperature_tolerance_C": 1.0
+  },
+  "recipient_audit": {
+    "primary": {
+      "all_result_records": 274,
+      "duplicate_measurement_events_collapsed": 6,
+      "eligible_measurement_events": 25,
+      "eligible_unique_formulations": 19,
+      "phase": "multitask_2023_11",
+      "ratings": [
+        4.0
+      ],
+      "temperature_C_range": [
+        25.899999999999977,
+        27.30000000000001
+      ],
+      "two_electrode_status_counts": {
+        "original": 44
+      }
+    },
+    "secondary": {
+      "all_result_records": 81,
+      "duplicate_measurement_events_collapsed": 21,
+      "eligible_measurement_events": 31,
+      "eligible_unique_formulations": 10,
+      "phase": "singletask_2023_09",
+      "ratings": [
+        4.0
+      ],
+      "temperature_C_range": [
+        26.900000000000034,
+        27.850000000000023
+      ],
+      "two_electrode_status_counts": {
+        "deleted": 9,
+        "original": 34
+      }
+    }
+  },
+  "secondary": {
+    "strongest_recipient_baseline": "target_extra_trees"
+  },
+  "status": "verified-complete",
+  "success_gate_passed": false,
+  "wrong_donor_control": {
+    "eligible": false,
+    "minimum_rows": 205,
+    "reason": "fewer than half the real-donor rows",
+    "salt_counts": {
+      "LiBF4": 32,
+      "LiFSI": 19
+    },
+    "strict_EC_EMC_non_LiPF6_rows": 51
+  }
+}

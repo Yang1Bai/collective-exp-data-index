@@ -1,0 +1,96 @@
+{
+  "assessment_date": "2026-07-29",
+  "status": "hold-recipient-attempt-table-not-verified",
+  "scientific_question": "Can independent experimental reaction knowledge computed from precursor, composition, process, and thermodynamic variables before a target experiment improve OOD prediction of solid-state synthesis outcomes?",
+  "primary_candidate": {
+    "donor": {
+      "name": "Precursor Genome",
+      "record": "arXiv:2607.09903",
+      "github": "https://github.com/lauren-walters/precursor-genome",
+      "archive": "https://doi.org/10.5281/zenodo.21285546",
+      "reactions": 1035,
+      "precursors": 46,
+      "elements": 39,
+      "xrd_scans": 1351,
+      "refinement_cases": 1950,
+      "candidate_available_fields": [
+        "precursor_formulae",
+        "target_stoichiometry",
+        "reaction_energy_ev_per_atom",
+        "heating_temperature",
+        "heating_time",
+        "furnace",
+        "precursor_masses"
+      ],
+      "outcome_classes": [
+        "unreacted",
+        "transformed",
+        "partially_reacted",
+        "completely_reacted"
+      ]
+    },
+    "recipient": {
+      "name": "A-Lab target-synthesis campaign",
+      "doi": "10.1038/s41586-023-06734-w",
+      "reported_attempts": 355,
+      "reported_targets": 58,
+      "blocking_issue": "A machine-readable table linking every attempted recipe, including failed and partial attempts, to candidate metadata and target-phase outcome has not been verified."
+    }
+  },
+  "prohibited_features": [
+    "recipient_raw_xrd",
+    "recipient_refined_phase_fractions",
+    "recipient_post_heating_measurements",
+    "any_measurement_unavailable_when_the_candidate_is_selected"
+  ],
+  "required_recipient_fields": [
+    "attempt_id",
+    "target_id",
+    "precursor_identities",
+    "precursor_amounts",
+    "target_stoichiometry",
+    "temperature",
+    "time",
+    "atmosphere",
+    "iteration_order",
+    "target_phase_outcome",
+    "failed_and_partial_outcomes",
+    "campaign_or_batch_group",
+    "stable_download_route",
+    "license",
+    "checksum"
+  ],
+  "route_readiness_evidence": {
+    "complete_recipient_attempt_table": false,
+    "recipient_failed_and_partial_outcomes": false,
+    "candidate_level_synthesis_route_identifiers": false,
+    "comparable_route_alternative_count": 0,
+    "target_checksum_frozen": false,
+    "grouped_split_frozen": false
+  },
+  "formal_controls": [
+    "target_only",
+    "shuffled_donor_outcomes",
+    "thermodynamics_only",
+    "temperature_process_only",
+    "htem_wrong_process",
+    "generic_any_reaction_donor",
+    "recipient_xrd_oracle_upper_bound"
+  ],
+  "acceptance_gate": {
+    "minimum_relative_proper_score_gain": 0.05,
+    "cluster_bootstrap_lower_bound_above_zero": true,
+    "holm_adjusted_p_below": 0.05,
+    "calibration_must_improve": true,
+    "both_model_families_nonnegative": true,
+    "must_beat_all_matched_controls": true,
+    "minimum_ood_applicability_coverage": 0.25
+  },
+  "role_limits": {
+    "precursor_genome_to_a_lab": "cross-programme, same-platform validation; not cross-laboratory generality",
+    "opxrd": "post-measurement characterization donor only unless a pre-synthesis candidate mapping is supplied",
+    "htem": "wrong-process control or separate thin-film recipient"
+  },
+  "go_rule": "Launch only after the complete 355-attempt recipient table passes all required-field checks and the target checksum, exclusions, OOD groups, and primary metric are frozen before numerical outcomes are opened.",
+  "no_go_rule": "Stop if only successful structures are public, failures cannot be linked to recipes, or target XRD is required at prediction time."
+}
