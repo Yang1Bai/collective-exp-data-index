@@ -27,12 +27,12 @@ jobs:
             catalog/catalog.csv \
             catalog_map.html \
             research/data/DATABASE_GUIDE.md
+      - name: Verify manuscript-facing evidence package
+        run: python paper/reproduction/verify_paper_package.py
       - name: Build pinned local snapshot
         run: python scripts/localdb/build_localdb.py
       - name: Audit snapshot
         run: python analysis/audit_snapshot.py
-      - name: Verify manuscript-facing evidence package
-        run: python paper/reproduction/verify_paper_package.py
       - name: Run manuscript model contract tests
         run: >-
           python -m pytest -q
