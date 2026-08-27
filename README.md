@@ -47,15 +47,20 @@ The paper is built around four claim-bearing results:
    with raw R² = 0.607, Spearman ρ = 0.864, and 27.41% lower log-RMSE than a
    temperature–concentration baseline.
 3. **Borrowed order can improve data-poor screening even when absolute
-   calibration is not portable.** A zero-label, programme-balanced ordinal
-   score ranked unseen formulations at ρ = 0.910, compared with 0.537 for the
-   strongest of 13 recipient-only configurations trained on five measured
-   formulations. The gain was Δρ = 0.374, with a 95% interval of 0.213–0.562
-   over anchor selections within this recipient.
-4. **Failure and abstention are part of the map.** The same frozen ordinal
-   route did not beat a same-anchor recipient model in a second programme, and
-   controlled catalyst perturbations separated predictive, ranking-only, and
-   harmful edges.
+   calibration is not portable.** Under the prespecified five-anchor
+   comparison, an equal-programme percentile-rank consensus ranked held-out
+   SolventSeg formulations at mean ρ = 0.885, compared with 0.162 for the
+   prespecified recipient-only Ridge model (Δρ = 0.723; 95% interval
+   0.329–1.349). In a separate 13-model recipient-only stress test, the source
+   numerical portfolio also remained ahead of the strongest tested recipient
+   model (0.910 versus 0.537). The first comparison is the formal routing
+   result; the second is a baseline-sensitivity analysis.
+4. **Failure and abstention are part of the map.** In the second recipient,
+   FINALES, the unchanged donor ordering reached concordance 0.694 versus 0.783
+   for the strongest same-anchor recipient model (difference −0.089; 95%
+   interval −0.293 to 0.096; permutation P = 0.131). The frozen route is
+   therefore WITHHOLD: evidence is insufficient for transfer, while the
+   interval crossing zero does not prove harmful transfer.
 
 These are retrospective experimental-data tests. They support selective OOD
 prediction and screening, not a universal transfer model, a unified physical
@@ -101,8 +106,8 @@ one analysis-only) and contains 96,184 measurements, 230 property labels, and
 
 | If you want to... | Read this first |
 |---|---|
-| Understand the scientific story | [Latest manuscript](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md) |
-| See the evidence hierarchy and safe claims | [Paper package](analysis/PAPER_PACKAGE.md) |
+| Audit the exact models, data and result files used by the submitted article | [Submission evidence package](paper/README.md) |
+| Read the repository-native narrative draft (the external Word submission may be newer) | [Markdown manuscript](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md) |
 | Check methods, robustness, nulls, and amendments | [Supplementary Information](analysis/SUPPLEMENTARY_INFORMATION.md) |
 | Inspect all positive, null, harmful, abstaining, and non-evaluable attempts | [Attempt ledger](research/evidence/ATTEMPT_LEDGER.csv) |
 | Identify data access, DOI, licence, and redistribution status | [Analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) |
@@ -129,6 +134,7 @@ one analysis-only) and contains 96,184 measurements, 230 property labels, and
 │   ├── data/                 analysed-resource ledger and data policy
 │   ├── evidence/             complete transfer-attempt ledger
 │   └── manuscript/           canonical manuscript navigation
+├── paper/                    submission evidence allowlist, article links and checks
 ├── tests/                    integrity and scientific-workflow tests
 ├── CATALOG.md                human-readable catalog
 └── CITATION.cff              repository citation metadata
@@ -146,9 +152,11 @@ python -m pip install -r scripts/requirements.txt -r analysis/requirements.txt
 
 python scripts/validate_catalog.py
 python scripts/validate_candidates.py
-python -m unittest discover -s tests -v
-python analysis/check_core_story_experiments.py
-python analysis/verify_main_figures_nmi_v3.py
+python paper/reproduction/verify_paper_package.py
+python -m pytest -q \
+  tests/test_multi_target_ood_borrowing.py \
+  tests/test_mixture_response_transfer.py \
+  tests/test_electrolyte_programme_interaction.py
 ```
 
 To rebuild the pinned local snapshot:
@@ -212,8 +220,10 @@ this repository is released under
 
 - **Target journal:** *Digital Discovery*
 - **Article type:** methods-led full paper
-- **Canonical manuscript:**
+- **Manuscript-facing evidence index:** [paper/README.md](paper/README.md)
+- **Repository-native narrative draft:**
   [analysis/MANUSCRIPT_DRAFT_STREAMLINED.md](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
+  (retained for provenance; the external Word submission may be newer)
 - **Release date:** 31 July 2026
 - **Claim boundary:** retrospective evidence supports selective prediction and
   screening improvements with explicit abstention; prospective discovery

@@ -31,8 +31,14 @@ jobs:
         run: python scripts/localdb/build_localdb.py
       - name: Audit snapshot
         run: python analysis/audit_snapshot.py
-      - name: Run integrity tests
-        run: python -m unittest discover -s tests -v
+      - name: Verify manuscript-facing evidence package
+        run: python paper/reproduction/verify_paper_package.py
+      - name: Run manuscript model contract tests
+        run: >-
+          python -m pytest -q
+          tests/test_multi_target_ood_borrowing.py
+          tests/test_mixture_response_transfer.py
+          tests/test_electrolyte_programme_interaction.py
       - name: Regenerate Caltech external-policy figure data
         run: python analysis/make_caltech_external_policy_figure.py
       - name: Verify deterministic Caltech figure source tables

@@ -5,7 +5,7 @@ URLS = {
  'AqSolDB solubility':'https://github.com/mcsorkun/AqSolDB',
  'Photoswitches':'https://github.com/Ryan-Rhys/The-Photoswitch-Dataset',
  'FreeSolv hydration':'https://github.com/MobleyLab/FreeSolv',
- 'OCx24 electrocatalysts':'https://fair-chem.github.io/core/datasets/ocx24.html',
+ 'OCx24 electrocatalysts':'https://fair-chem.github.io/fair-chemistry-papers/#open-catalyst-experiments-2024-ocx24',
  'MPEA alloys (Borg)':'https://doi.org/10.1038/s41597-020-00768-9',
  'IUPAC pKa':'https://github.com/IUPAC/Dissociation-Constants',
 }

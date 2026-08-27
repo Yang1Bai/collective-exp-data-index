@@ -3,6 +3,12 @@
 This directory contains the protocols, deterministic analyses, claim-bearing
 outputs and publication figures for the knowledge-borrowing study.
 
+> **Current submission alignment:** use [`paper/README.md`](../paper/README.md)
+> for the article-facing allowlist and the distinction between the formal
+> SolventSeg rank contrast (0.885 versus 0.162) and the separate 13-model
+> pressure test (0.910 versus 0.537). Older narrative documents below are
+> retained for provenance and may predate the current Word submission.
+
 The experimental-catalyst attention model, pinned data contract, transfer
 benchmarks, ablations, audit results, and exact reproduction commands are in
 [`CATALYST_ATTENTION_TRANSFORMER.md`](CATALYST_ATTENTION_TRANSFORMER.md).

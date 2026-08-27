@@ -16,10 +16,16 @@ Candidate layouts and superseded versions are intentionally excluded.
 - `Figure_4a.svg` through `Figure_4d.svg`
 
 Figures 2 and 3 were authored as single editable SVG canvases, so their panels remain grouped within the full-figure files.
-See `source_manifest.csv` for the exact source asset mapped to every delivered file.
+See `source_manifest.csv` for the tracked figure path and the claim-bearing
+evidence mapped to every delivered file. The release SVGs are the authoritative
+repository copies; temporary authoring directories are not required to use or
+audit them.
 
 ## Editability note
 
 All delivered files are valid SVG canvases with editable text, axes, annotations, and layout.
 Figure 1a intentionally preserves the supplied manuscript artwork as an embedded image layer.
 The dense matrix/heatmap layers in Figures 2 and 3 are also embedded image layers, while their surrounding scientific annotations remain vector objects.
+
+The submission-wide claim map, model allowlist and article-ready links are in
+[`paper/`](../../../paper/README.md).

@@ -596,7 +596,7 @@ Collection of standardized, benchmark-ready materials datasets bundled with the 
 <a id="materials-catalysis"></a>
 ### Catalysis
 
-#### 🔀🔓 [Open Catalyst Experiments 2024 (OCx24)](https://fair-chem.github.io/core/datasets/ocx24.html)
+#### 🔀🔓 [Open Catalyst Experiments 2024 (OCx24)](https://fair-chem.github.io/fair-chemistry-papers/#open-catalyst-experiments-2024-ocx24)
 
 First large open experimental electrocatalyst database from Meta FAIR, VSParticle and the University of Toronto: ~572 catalyst samples synthesized by wet-chemistry and dry spark-ablation and tested for HER and CO2 reduction, with XRF, XRD and electrochemical measurements, plus paired DFT screening data to bridge models and experiment.
 

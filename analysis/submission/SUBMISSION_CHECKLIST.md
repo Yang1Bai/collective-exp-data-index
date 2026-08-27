@@ -1,5 +1,11 @@
 # Digital Discovery submission checklist
 
+> **Historical checkpoint:** this checklist was frozen on 2026-08-14 and is
+> retained for provenance. The current claim, model, data and figure allowlist
+> is [`paper/README.md`](../../paper/README.md). In particular, 0.885 versus
+> 0.162 is the formal SolventSeg route-defining comparison; 0.910 versus 0.537
+> is the separate 13-model baseline-sensitivity analysis.
+
 **Canonical manuscript:** `analysis/submission/SUBMISSION_MANUSCRIPT.md`
 **Frozen on:** 2026-08-14, from `analysis/MANUSCRIPT_DRAFT_STREAMLINED.md` + verified result JSONs.
 
