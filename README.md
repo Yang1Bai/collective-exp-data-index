@@ -216,15 +216,3 @@ code is released under the [MIT License](LICENSE), catalog metadata authored in
 this repository is released under
 [CC BY 4.0](LICENSE-DATA.md), and upstream datasets retain their own terms.
 
-## Current status
-
-- **Target journal:** *Digital Discovery*
-- **Article type:** methods-led full paper
-- **Manuscript-facing evidence index:** [paper/README.md](paper/README.md)
-- **Repository-native narrative draft:**
-  [analysis/MANUSCRIPT_DRAFT_STREAMLINED.md](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
-  (retained for provenance; the external Word submission may be newer)
-- **Release date:** 31 July 2026
-- **Claim boundary:** retrospective evidence supports selective prediction and
-  screening improvements with explicit abstention; prospective discovery
-  acceleration remains unestablished.
