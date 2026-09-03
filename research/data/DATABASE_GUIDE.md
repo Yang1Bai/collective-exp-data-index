@@ -99,15 +99,15 @@ The following resources materially entered the research process. `Disposition` r
 | Resource | Project role | Disposition | What it contributed | Access and licence |
 |---|---|---|---|---|
 | [BIRDSHOT HTE alloys](https://zenodo.org/records/16396374) | recipient | below-gate external boundary | Temporal alloy campaign | open; CC-BY-4.0; [DOI](https://doi.org/10.5281/zenodo.16396374) |
-| [Borg expanded MPEA dataset](https://figshare.com/articles/dataset/Expanded_dataset_of_mechanical_properties_and_observed_phases_of_multi-principal_element_alloys/12642953) | donor and recipient | provenance-specific positive and portability failure | UTS and yield-strength relations | open; Unknown; [DOI](https://doi.org/10.1038/s41597-020-00768-9) |
+| [Borg expanded MPEA dataset](https://figshare.com/articles/dataset/Expanded_dataset_of_mechanical_properties_and_observed_phases_of_multi-principal_element_alloys/12642953) | donor and recipient | provenance-specific positive and portability failure | UTS and yield-strength relations; associated publication DOI 10.1038/s41597-020-00768-9 | open; CC-BY-4.0; [DOI](https://doi.org/10.6084/m9.figshare.12642953.v9) |
 | [Matbench steels](https://figshare.com/articles/dataset/steels/7250453) | recipient | independent null | Official Matbench steel folds | open; CC-BY-4.0; [DOI](https://doi.org/10.6084/m9.figshare.7250453.v1) |
 
 ### Aqueous molecular properties
 
 | Resource | Project role | Disposition | What it contributed | Access and licence |
 |---|---|---|---|---|
-| [AqSolDB](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OVHAW8) | donor and recipient | null control | Organic solubility target/source portfolio | open; CC0-1.0; [DOI](https://doi.org/10.1038/s41597-019-0151-1) |
-| [FreeSolv](https://github.com/MobleyLab/FreeSolv) | donor and recipient | null control | Hydration free-energy source | open; CC-BY-3.0; [DOI](https://doi.org/10.1007/s10822-014-9747-x) |
+| [AqSolDB](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OVHAW8) | donor and recipient | null control | Organic solubility target/source portfolio | open; CC0-1.0; [DOI](https://doi.org/10.7910/DVN/OVHAW8) |
+| [FreeSolv](https://github.com/MobleyLab/FreeSolv) | donor and recipient | null control | Hydration free-energy source | open; CC-BY-4.0; [DOI](https://doi.org/10.1007/s10822-014-9747-x) |
 | [IUPAC digitized pKa](https://github.com/IUPAC/Dissociation-Constants) | donor | null/control portfolio | Non-commercial upstream licence | open; CC-BY-NC-4.0; [DOI](https://doi.org/10.5281/zenodo.7236452) |
 
 ### Battery aging
@@ -134,12 +134,12 @@ The following resources materially entered the research process. `Disposition` r
 
 | Resource | Project role | Disposition | What it contributed | Access and licence |
 |---|---|---|---|---|
-| [BambooMixer electrolyte conductivity](https://huggingface.co/ByteDance-Seed/bamboo_mixer/resolve/main/dataset/data.json) | donor | main positive relation transfer | Source data associated with BambooMixer | open; verify-upstream; [DOI](https://doi.org/10.1038/s42256-025-01173-w) |
-| [CALiSol-23](https://www.nature.com/articles/s41597-024-03575-8) | donor and recipient | main and supplementary analyses | Literature-aggregated conductivity programme | open; CC-BY-4.0; [DOI](https://doi.org/10.1038/s41597-024-03575-8) |
+| [BambooMixer electrolyte conductivity](https://huggingface.co/ByteDance-Seed/bamboo_mixer/resolve/main/dataset/data.json) | donor | main positive relation transfer | Source data associated with BambooMixer | open; CC-BY-4.0; [DOI](https://doi.org/10.1038/s42256-025-01173-w) |
+| [CALiSol-23](https://data.dtu.dk/articles/dataset/CALiSol-23/24559960) | donor and recipient | main and supplementary analyses | Literature-aggregated conductivity programme; associated publication DOI 10.1038/s41597-024-03575-8 | open; CC-BY-4.0; [DOI](https://doi.org/10.11583/DTU.24559960.v1) |
 | [FINALES electrolyte optimization](https://archive.materialscloud.org/records/61sz9-09m30) | recipient | main boundary | Associated paper DOI 10.1002/aenm.202403263 | open; CC-BY-4.0; [DOI](https://doi.org/10.24435/materialscloud:qt-1s) |
 | [KIT/Juelich 5035 conductivity experiments](https://zenodo.org/records/7244939) | donor and recipient | supplement positive and Edison target | Controlled formulation-temperature series | open; CC-BY-4.0; [DOI](https://doi.org/10.5281/zenodo.7244939) |
-| [LiAsF6 BambooMixer extension](https://huggingface.co/datasets/PKUAIBDA/Dataset_Bamboomixer_extension/resolve/main/LiAsF6_conductivity.json) | recipient | main positive unseen-salt test | External salt absent from source training | open; verify-upstream; [DOI](https://doi.org/10.1038/s42256-026-01277-x) |
-| [SolventSeg LiPF6/EC/EMC](https://github.com/ndrewwang/SolventSeg/tree/beta) | recipient | main positive ranking test | Independent Oxford/Glasgow formulation programme | open; verify-upstream; [DOI](https://doi.org/10.5281/zenodo.6299956) |
+| [LiAsF6 BambooMixer extension](https://huggingface.co/datasets/PKUAIBDA/Dataset_Bamboomixer_extension/resolve/main/LiAsF6_conductivity.json) | recipient | main positive unseen-salt test | External salt absent from source training | open; Apache-2.0; [DOI](https://doi.org/10.1038/s42256-026-01277-x) |
+| [SolventSeg LiPF6/EC/EMC](https://github.com/ndrewwang/SolventSeg/tree/beta) | recipient | main positive ranking test | Independent Oxford/Glasgow formulation programme | open; MIT; [DOI](https://doi.org/10.5281/zenodo.6299956) |
 
 ### Molecular photochemistry
 
@@ -176,7 +176,7 @@ The following resources materially entered the research process. `Disposition` r
 
 | Resource | Project role | Disposition | What it contributed | Access and licence |
 |---|---|---|---|---|
-| [ESTM thermoelectrics](https://github.com/KRICT-DATA/SIMD) | donor and recipient | null and ranking controls | Experimental thermoelectric transport | open; Unknown; [DOI](https://doi.org/10.1038/s41524-022-00897-2) |
+| [ESTM thermoelectrics](https://github.com/KRICT-DATA/SIMD) | donor and recipient | null and ranking controls | Experimental thermoelectric transport; raw data not redistributed | open; No explicit data licence stated upstream; [DOI](https://doi.org/10.1038/s41524-022-00897-2) |
 | [Starrydata2](https://www.starrydata2.org/) | recipient | outcome-unseen null | Reference-separated transport series | open; upstream-specific |
 
 ## Task-specific resources outside the broad catalog
