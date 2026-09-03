@@ -1,0 +1,99 @@
+{
+  "aggregate": {
+    "median_baseline_spearman": 0.5836792647722425,
+    "median_diffusion_spearman": 0.39786322462906876,
+    "median_gain": -0.2023331807369735,
+    "positive_directions": 0,
+    "total_directions": 4
+  },
+  "baseline": {
+    "specgen_A": {
+      "mae": 26.521172950381324,
+      "r2": -0.03386890159849387,
+      "rmse": 43.95859190313884,
+      "spearman": 0.5414674386426578
+    },
+    "specgen_B": {
+      "mae": 30.939322044735874,
+      "r2": -0.3146130211010292,
+      "rmse": 37.458745356050514,
+      "spearman": 0.6258910909018273
+    },
+    "specgen_C": {
+      "mae": 51.80954497806608,
+      "r2": -3.2410439212631887,
+      "rmse": 58.092784794055305,
+      "spearman": 0.297861235297623
+    },
+    "specgen_D": {
+      "mae": 18.591386825319326,
+      "r2": 0.46561710283319735,
+      "rmse": 25.19287981782593,
+      "spearman": 0.7618264854093882
+    }
+  },
+  "comparison": {
+    "specgen_A": {
+      "baseline": 0.5414674386426578,
+      "diffusion": 0.3672246561582665,
+      "gain": -0.1742427824843913
+    },
+    "specgen_B": {
+      "baseline": 0.6258910909018273,
+      "diffusion": 0.428501793099871,
+      "gain": -0.19738929780195624
+    },
+    "specgen_C": {
+      "baseline": 0.297861235297623,
+      "diffusion": 0.0905841716256322,
+      "gain": -0.20727706367199078
+    },
+    "specgen_D": {
+      "baseline": 0.7618264854093882,
+      "diffusion": 0.5214857254419256,
+      "gain": -0.24034075996746262
+    }
+  },
+  "diffusion_augmented": {
+    "specgen_A": {
+      "mae": 30.37924218556236,
+      "r2": -0.006828577445319395,
+      "rmse": 43.379925657318275,
+      "spearman": 0.3672246561582665
+    },
+    "specgen_B": {
+      "mae": 35.445369272383445,
+      "r2": -0.6360288458793315,
+      "rmse": 41.787822429701016,
+      "spearman": 0.428501793099871
+    },
+    "specgen_C": {
+      "mae": 52.295667472718236,
+      "r2": -3.160330802182542,
+      "rmse": 57.53733504340045,
+      "spearman": 0.0905841716256322
+    },
+    "specgen_D": {
+      "mae": 29.290521821521597,
+      "r2": -0.11041814487181756,
+      "rmse": 36.31573302210489,
+      "spearman": 0.5214857254419256
+    }
+  },
+  "diffusion_epochs": 200,
+  "diffusion_report": {
+    "best_epoch": 180,
+    "best_loss": 0.03855784283950925,
+    "d_model": 64,
+    "epochs_run": 200,
+    "final_loss": 0.04237244022078812,
+    "n_timesteps": 1000,
+    "parameter_count": 1248832
+  },
+  "encoder_epochs": 40,
+  "experiment": "latent_diffusion_augmentation",
+  "n_augment": 8,
+  "seed": 20260802,
+  "source_spearman": 0.9067063501347016,
+  "wall_time_s": 38.8
+}

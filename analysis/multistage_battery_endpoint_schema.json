@@ -1,0 +1,74 @@
+{
+  "schema_name": "Pre-outcome RPT capacity-retention extractor for multi-stage lithium-ion aging",
+  "version": 1,
+  "frozen_utc": "2026-07-20T21:30:00Z",
+  "status": "frozen before any Stage 1 or Stage 2 numeric CSV data row was opened",
+  "authoritative_sources": [
+    {
+      "source": "Scientific Data article, Methods and Data Records",
+      "url": "https://www.nature.com/articles/s41597-024-03859-z",
+      "facts_used": [
+        "ET and AT are comprehensive RPTs performed at 10, 45, and 23 degrees Celsius",
+        "RPT capacity is the mean of charge and discharge capacity",
+        "all measurement files include step_type"
+      ]
+    },
+    {
+      "source": "Scientific Data Table 5",
+      "url": "https://www.nature.com/articles/s41597-024-03859-z/tables/5",
+      "facts_used": [
+        "run_time is time from measurement start in HH:mm:ss.SSS",
+        "c_cur is in ampere and is negative during discharge"
+      ]
+    },
+    {
+      "source": "Scientific Data Table 6",
+      "url": "https://www.nature.com/articles/s41597-024-03859-z/tables/6",
+      "facts_used": [
+        "step_type 21 is the C/2 CCCV capacity charge",
+        "step_type 22 is the 1C CCCV capacity discharge"
+      ]
+    }
+  ],
+  "required_csv_header": ["run_time", "c_vol", "c_cur", "c_surf_temp", "amb_temp", "step_type"],
+  "primary_files": {
+    "initial": "exactly one *_ET_T23.csv per mapped cell archive",
+    "final": "exactly one *_AT_T23.csv per mapped cell archive",
+    "temperature_rule": "the companion metadata temperature setpoint must equal 23 degrees Celsius",
+    "identity_rule": "cell identity and stage come only from the frozen archive_file_stage_map.csv; raw internal-serial formatting inside ET and AT metadata cannot alter identity"
+  },
+  "time_parser": {
+    "format": "HH:mm:ss.SSS with nonnegative integer HH allowed to exceed 23",
+    "conversion": "seconds = 3600*HH + 60*mm + ss + fractional_seconds",
+    "validity": "minutes and seconds must be in [0,60); parsed time must be nondecreasing within a file"
+  },
+  "capacity_extractor": {
+    "charge_step_type": 21,
+    "discharge_step_type": 22,
+    "integration": "For adjacent rows i and i+1, contribute trapezoidal current only when both rows have the same selected step_type. Q_signed_Ah = sum(0.5*(I_i + I_{i+1})*(t_{i+1} - t_i))/3600.",
+    "charge_capacity_Ah": "Q_charge = Q_signed_Ah(step_type=21)",
+    "discharge_capacity_Ah": "Q_discharge = -Q_signed_Ah(step_type=22)",
+    "rpt_capacity_Ah": "Q_RPT = (Q_charge + Q_discharge)/2",
+    "primary_endpoint": "Q_rel_end_percent = 100 * Q_RPT_AT_T23 / Q_RPT_ET_T23",
+    "row_filtering": "none beyond the frozen step_type selection; no smoothing, clipping, interpolation, outlier deletion, or current-sign replacement",
+    "block_rule": "step_type 21 and 22 must each form exactly one contiguous block; transitions to other steps are never bridged"
+  },
+  "cell_level_validity": [
+    "both ET_T23 and AT_T23 files and their metadata companions exist uniquely",
+    "required header matches exactly after UTF-8 BOM removal",
+    "all run_time, c_cur, and step_type values needed by the selected blocks parse without missing or nonfinite values",
+    "selected-block time increments are nonnegative and each block contains at least two distinct timestamps",
+    "Q_charge and Q_discharge are finite and strictly positive for ET and AT",
+    "Q_RPT_ET_T23 is strictly positive"
+  ],
+  "missingness": "A cell failing any validity item is missing with a reason code; no imputation, endpoint substitution, file substitution, or condition substitution is allowed.",
+  "coverage_gate": "At least 80 percent of cells must be evaluable overall and at least two cells must be evaluable in every retained Stage 2 condition group in both aging strata.",
+  "prespecified_sensitivities": [
+    "repeat the endpoint with charge capacity only",
+    "repeat the endpoint with discharge capacity only",
+    "report absolute and relative charge-discharge disagreement at ET and AT",
+    "report 10 and 45 degree ET-to-AT retention descriptively when both files pass the same extractor"
+  ],
+  "sensitivity_claim_rule": "Sensitivities diagnose robustness and measurement consistency; they cannot replace, rescue, or retune the 23 degree mean-capacity primary endpoint and are outside the two-comparison primary efficacy family.",
+  "outcome_access_guard": "This schema was frozen from the official article, tables, CSV header lines, ZIP member names, and nonnumeric metadata text. No numeric CSV data row was opened or parsed."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "verified-outcome-free-controls-frozen",
+  "rows": 138,
+  "random_features": 6,
+  "shuffle_scope": "condition-group mean predictions permuted separately within calendar and cycle strata",
+  "global_credibility": {
+    "k": 0.7838040148235763,
+    "z": 0.4708133493709189
+  },
+  "stage2_numeric_outcomes_opened": false,
+  "source_features_sha256": "4301197200fc6432762907b77e6c92c2f7bae98868a5f1320033b6630d3c2811",
+  "control_features_sha256": "6a8981943b193e9050d2dabfce7f56b4a8b170af0a887c7dc6a36c18fae5b0b3",
+  "claim_guard": "Wrong-property, shuffled-source, global-credibility, and random features are fixed controls and cannot be regenerated after Stage 2 release.",
+  "errors": []
+}

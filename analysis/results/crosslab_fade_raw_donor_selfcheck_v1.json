@@ -1,0 +1,27 @@
+{
+  "status": "donor-selfcheck-passed",
+  "donor_cells_total": 180,
+  "donor_cells_valid": 178,
+  "valid_by_batch": {
+    "batch1": 46,
+    "batch2": 43,
+    "batch3": 44,
+    "batch4": 45
+  },
+  "batch_out_oof_life_spearman": 0.6128411065555657,
+  "oof_residual_covariance": [
+    [
+      0.13172112583891948,
+      -0.06101689481134181
+    ],
+    [
+      -0.06101689481134181,
+      0.03400020499919391
+    ]
+  ],
+  "gate_checks": {
+    "donor_valid_at_least_150": true,
+    "batch_out_oof_spearman_at_least_0_5": true
+  },
+  "donor_table_sha256": "bdc1020235c6458d9d890ff1d12cd5439f22988801e0d4757207e400f9788ad8"
+}

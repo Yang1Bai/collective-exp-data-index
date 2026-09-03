@@ -1,0 +1,5 @@
+layer,primary_count,primary_label,secondary_label
+analysed cohort,21,experimental data resources,13 normalized; 7 external; 1 analysis-only
+transfer-active cohort,20,resources in directed borrowing,16 donors; 17 recipients; 13 both
+directed benchmark,97,evaluated source-target edges,20 tasks
+programme synthesis,13,programme clusters,positive null harmful and unresolved outcomes retained

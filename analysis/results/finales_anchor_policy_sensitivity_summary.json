@@ -1,0 +1,44 @@
+{
+  "status": "complete-post-outcome-anchor-policy-sensitivity",
+  "claim_guard": "This analysis was performed after FINALES outcomes and the frozen chronological result were known. It diagnoses anchor-policy dependence but cannot replace or confirm the frozen decision.",
+  "candidate_pool": 19,
+  "anchor_budget": 3,
+  "evaluation_formulations_per_draw": 16,
+  "draws": 100,
+  "unique_anchor_sets": 17,
+  "anchor_policy": "outcome-independent maximin coverage with deterministic start seeds",
+  "unchanged_elements": [
+    "CALiSol donor score",
+    "recipient model family",
+    "conductivity endpoint",
+    "temperature tolerance",
+    "candidate pool"
+  ],
+  "strongest_average_recipient_model": "target_extra_trees",
+  "mean_concordance": {
+    "donor": 0.5677689696809197,
+    "strongest_recipient": 0.6863711362346591
+  },
+  "donor_minus_strongest_recipient": {
+    "mean": -0.11860216655373959,
+    "anchor_selection_interval95": [
+      -0.23232323232323226,
+      0.1008522135351016
+    ],
+    "positive_draw_fraction": 0.09,
+    "valid_draws": 100
+  },
+  "donor_minus_per_draw_oracle": {
+    "mean": -0.13886548983176875,
+    "anchor_selection_interval95": [
+      -0.23232323232323226,
+      0.03782692863481709
+    ]
+  },
+  "frozen_chronological_result": {
+    "donor_concordance": 0.6938775510204082,
+    "strongest_recipient_concordance": 0.782608695652174,
+    "donor_advantage": -0.08873114463176579
+  },
+  "metrics_sha256": "a8da79bc5afd72278657ebd7f98c064eff4da5dae046a86cd0c0a77d91797a4a"
+}

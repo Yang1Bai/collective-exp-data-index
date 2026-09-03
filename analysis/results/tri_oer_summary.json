@@ -1,0 +1,43 @@
+{
+  "absolute_all_neighbor_r2_mean": -0.14103988029353817,
+  "adjacent_consensus_minus_same_reaction_mean": -0.0010358474562992149,
+  "all_neighbor_minus_best_control_mean": -0.012949063738781267,
+  "all_neighbor_minus_same_reaction_mean": 4.28836588858221e-05,
+  "all_neighbor_relative_gain_mean": -0.0006812119444276032,
+  "claim_guard": "One second-family retrospective benchmark; prospective discovery remains separate.",
+  "outcome_audit": {
+    "frozen_entities": 8447,
+    "nonfinite_excluded": 0,
+    "outcome_entities": 8447,
+    "plate_counts": {
+      "3496": 2112,
+      "3851": 2111,
+      "3860": 2112,
+      "4098": 2112
+    }
+  },
+  "plate_effects": [
+    {
+      "mean_all_neighbor_relative_gain": -0.000922372340404681,
+      "plate": "3496",
+      "positive_repeats": 53
+    },
+    {
+      "mean_all_neighbor_relative_gain": -0.0005277322355732307,
+      "plate": "3851",
+      "positive_repeats": 53
+    },
+    {
+      "mean_all_neighbor_relative_gain": -0.0023430047625094983,
+      "plate": "3860",
+      "positive_repeats": 50
+    },
+    {
+      "mean_all_neighbor_relative_gain": 0.001068261560776998,
+      "plate": "4098",
+      "positive_repeats": 50
+    }
+  ],
+  "primary_cell": "n=30, ExtraTrees, element_fraction, dynamic OOD quartile 4",
+  "status": "formal-complete"
+}

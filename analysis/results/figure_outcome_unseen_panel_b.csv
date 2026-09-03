@@ -1,0 +1,29 @@
+target,gate,pass
+Starrydata,"Positive
+interval",1
+Starrydata,"Holm
+p < 0.05",0
+Starrydata,"Absolute
+utility",0
+Starrydata,"Robust
+envelope",1
+Starrydata,"Matched
+specificity",0
+Starrydata,"Exploration
+policy",0
+Starrydata,"Hypothesis
+cards",0
+TRI OER,"Positive
+interval",0
+TRI OER,"Holm
+p < 0.05",0
+TRI OER,"Absolute
+utility",0
+TRI OER,"Robust
+envelope",0
+TRI OER,"Matched
+specificity",0
+TRI OER,"Exploration
+policy",0
+TRI OER,"Hypothesis
+cards",0

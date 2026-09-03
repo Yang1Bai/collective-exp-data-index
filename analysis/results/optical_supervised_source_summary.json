@@ -1,0 +1,381 @@
+{
+  "status": "source-representation-ready",
+  "created_utc": "2026-07-26T20:18:09.157828+00:00",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "focused_config_sha256": "85af6621a6027bbe4b15685b464a1804cb1aaa85eb0d1f92e7a15687aa509494",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "source_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+  "implementation_sha256": "759998c27339b8c2301834d70fd0701240c04d2d09da3e94f2c5f99e2d649543",
+  "embedding_sha256": "3db83f28f703be59a1037a61f79fce7c0aa2679c980eb101247052a41a8087c8",
+  "oof_sha256": "d11ce8889b067d283fdd1f051c9d70620a03d667900acdb65dae3f98253541b2",
+  "checkpoint_sha256": {
+    "aqueous_small_alcohol_seed2026072601.pt": "61dc85c77e46a42d5c4b6aacdcdca77b05fb23a8e378a88789ce80c78b045580",
+    "aqueous_small_alcohol_seed2026072602.pt": "5ff72ffa8d3157dbbbdbee10811ca39dfacb6937885eda2e04ee8105cce855eb",
+    "aqueous_small_alcohol_seed2026072603.pt": "bbe9a88a31d975fec01199d6be6f63efac57c13b78a9e0fd9501dd2058717d36",
+    "aqueous_small_alcohol_seed2026072604.pt": "cd0c8fe6c01a2859e81c15b69480dddce9d12b91a1a653b22f7b91794e50a4dd",
+    "aqueous_small_alcohol_seed2026072605.pt": "1dd7c6c32f1cf6c12d36e0215f4956f0810a73a79059296f23da0a61de351a1b",
+    "aqueous_small_alcohol_shuffled_seed2026072691.pt": "840fe24baf4e47b82c99fb46212da03fb9e3f42f2bdeddbbdb6cade68179af2e",
+    "aqueous_small_alcohol_shuffled_seed2026072692.pt": "0e25090a8e167c77e04eb088c21ae563ca0a6bae1890bf93283e5b5f791efd94",
+    "aqueous_small_alcohol_shuffled_seed2026072693.pt": "b8746f93912b5db8d6d7a7a316a6ac7207318787eccc0c3b3534d6c6c43d8b95",
+    "global_state_blind_seed2026072601.pt": "db0d2ed1f28f55f2ae91956a61a6cd7be59f9a3376e1d8231567bc7dab236aec",
+    "global_state_blind_seed2026072602.pt": "945d5f4629c887a066c706ff8cf47d88874b2e14ba7699bc867670bdae031ccb",
+    "global_state_blind_seed2026072603.pt": "e7e63a8256d9264fefa81bb336ec7551ffaf3f326f496097fff7f054621cae3f",
+    "global_state_blind_seed2026072604.pt": "7662891746fab54ed73f463760edb686131ef76604efac9ce7845b28f8140ffd",
+    "global_state_blind_seed2026072605.pt": "77b281679b6d8bbaf08d96e49e566bcc65f831a609c546a29e239c91c740bfe7",
+    "self_host_solid_seed2026072601.pt": "96be99eb740d8df4e5652f8cfd10c1c5ed772bdac220d0d6ba7bbe1598108124",
+    "self_host_solid_seed2026072602.pt": "430bf8408046bac4540e122289ab56b31660b363be485ab2068e1c571cfed54e",
+    "self_host_solid_seed2026072603.pt": "88af3ed772a20be164118847e764dcadf5f12e857061f586070fcd2a0e1b7f49",
+    "self_host_solid_seed2026072604.pt": "af4ca3b39fc14cf4ec5202ce782dca57c1dcfc9d93a62fd497ed0dfeb01cbf6a",
+    "self_host_solid_seed2026072605.pt": "318e85ccfdd663ba558e2d9934984b4a92ba5f9ea718c1d143ee5a36857211f6",
+    "self_host_solid_shuffled_seed2026072691.pt": "d09633a18fba6d0be4c9fd611b58c46294529f90eac9fbcc882549aae6992217",
+    "self_host_solid_shuffled_seed2026072692.pt": "64b5a66ccc9967ca8d17a07ae43d48c73ef1633aa966871d71c3c4a3ac7a6457",
+    "self_host_solid_shuffled_seed2026072693.pt": "c421111cdf4274d9a5e8a9b5ebea33b6950c05ad177a08a7898a35a37e15b4c9"
+  },
+  "target_rows": 668,
+  "source_scopes": {
+    "aqueous_small_alcohol": {
+      "rows": 2064,
+      "unique_scaffolds": 934,
+      "tasks": {
+        "Absorption max (nm)": {
+          "unique_molecules": 1929,
+          "oof_r2": 0.8221896290779114,
+          "oof_spearman": 0.8674993913290212,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.8308692118869239,
+            0.867201379431809,
+            0.8957914964353678
+          ],
+          "admitted": true
+        },
+        "Emission max (nm)": {
+          "unique_molecules": 1857,
+          "oof_r2": 0.7631630897521973,
+          "oof_spearman": 0.842111675778194,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.8105687127391271,
+            0.8417083023392201,
+            0.8684069802483605
+          ],
+          "admitted": true
+        },
+        "Lifetime (ns)": {
+          "unique_molecules": 681,
+          "oof_r2": 0.3601933717727661,
+          "oof_spearman": 0.5969355042400761,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.4918516227654153,
+            0.5954864438753888,
+            0.6863774176694496
+          ],
+          "admitted": true
+        },
+        "Quantum yield": {
+          "unique_molecules": 1477,
+          "oof_r2": 0.15368294715881348,
+          "oof_spearman": 0.48344575931450984,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.41431287541531925,
+            0.482792955251802,
+            0.5488645957642732
+          ],
+          "admitted": true
+        },
+        "log(e/mol-1 dm3 cm-1)": {
+          "unique_molecules": 958,
+          "oof_r2": 0.6386493444442749,
+          "oof_spearman": 0.7392796772110858,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.6733478331605338,
+            0.7379334251038661,
+            0.7915564686493193
+          ],
+          "admitted": true
+        }
+      },
+      "best_epochs_by_fold": [
+        45,
+        54,
+        44,
+        99,
+        64
+      ],
+      "best_validation_losses_by_fold": [
+        0.331175297498703,
+        0.3616894781589508,
+        0.4502619206905365,
+        0.5388547778129578,
+        0.3814217150211334
+      ],
+      "final_epoch": 54,
+      "admitted_task_count": 5,
+      "final_training_tasks": [
+        "Absorption max (nm)",
+        "Emission max (nm)",
+        "Lifetime (ns)",
+        "Quantum yield",
+        "log(e/mol-1 dm3 cm-1)"
+      ]
+    },
+    "self_host_solid": {
+      "rows": 944,
+      "unique_scaffolds": 632,
+      "tasks": {
+        "Absorption max (nm)": {
+          "unique_molecules": 365,
+          "oof_r2": 0.7236489057540894,
+          "oof_spearman": 0.8096319100508128,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.7346446175098541,
+            0.8099892746326618,
+            0.8661103006352762
+          ],
+          "admitted": true
+        },
+        "Emission max (nm)": {
+          "unique_molecules": 892,
+          "oof_r2": 0.7000848054885864,
+          "oof_spearman": 0.8435312897030234,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.8096835313037481,
+            0.8430379886088466,
+            0.8675240779235636
+          ],
+          "admitted": true
+        },
+        "Quantum yield": {
+          "unique_molecules": 515,
+          "oof_r2": 0.2930418848991394,
+          "oof_spearman": 0.5633913521000139,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.48647291320541736,
+            0.5638871174618652,
+            0.6271063320331223
+          ],
+          "admitted": true
+        }
+      },
+      "best_epochs_by_fold": [
+        88,
+        81,
+        38,
+        48,
+        81
+      ],
+      "best_validation_losses_by_fold": [
+        0.4086477756500244,
+        0.3829440176486969,
+        0.4219006896018982,
+        0.3841598927974701,
+        0.4807533323764801
+      ],
+      "final_epoch": 81,
+      "admitted_task_count": 3,
+      "final_training_tasks": [
+        "Absorption max (nm)",
+        "Emission max (nm)",
+        "Quantum yield"
+      ]
+    },
+    "global_state_blind": {
+      "rows": 6771,
+      "unique_scaffolds": 3561,
+      "tasks": {
+        "Absorption max (nm)": {
+          "unique_molecules": 6387,
+          "oof_r2": 0.8656982779502869,
+          "oof_spearman": 0.8966794726979048,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.8814643910402443,
+            0.8967994839423886,
+            0.9100420171014344
+          ],
+          "admitted": true
+        },
+        "Emission max (nm)": {
+          "unique_molecules": 6373,
+          "oof_r2": 0.8031052350997925,
+          "oof_spearman": 0.8773189034582897,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.8622836884639592,
+            0.8767731595796611,
+            0.8907422797557966
+          ],
+          "admitted": true
+        },
+        "Lifetime (ns)": {
+          "unique_molecules": 2721,
+          "oof_r2": 0.46434932947158813,
+          "oof_spearman": 0.6792671666057142,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.635134552551645,
+            0.6782370038412742,
+            0.7179521424789385
+          ],
+          "admitted": true
+        },
+        "Quantum yield": {
+          "unique_molecules": 5574,
+          "oof_r2": 0.32866352796554565,
+          "oof_spearman": 0.6044259875966541,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.5720841410854721,
+            0.6048190632858765,
+            0.6340541193305944
+          ],
+          "admitted": true
+        },
+        "log(e/mol-1 dm3 cm-1)": {
+          "unique_molecules": 3828,
+          "oof_r2": 0.5689606666564941,
+          "oof_spearman": 0.766216754069482,
+          "scaffold_bootstrap_spearman_ci95": [
+            0.7350336702992761,
+            0.7667007474000368,
+            0.7943809514469187
+          ],
+          "admitted": true
+        }
+      },
+      "best_epochs_by_fold": [
+        96,
+        113,
+        85,
+        112,
+        50
+      ],
+      "best_validation_losses_by_fold": [
+        0.37028682231903076,
+        0.3306988775730133,
+        0.3713364005088806,
+        0.34658801555633545,
+        0.3838087320327759
+      ],
+      "final_epoch": 96,
+      "admitted_task_count": 5,
+      "final_training_tasks": [
+        "Absorption max (nm)",
+        "Emission max (nm)",
+        "Lifetime (ns)",
+        "Quantum yield",
+        "log(e/mol-1 dm3 cm-1)"
+      ]
+    },
+    "aqueous_small_alcohol_shuffled": {
+      "rows": 2064,
+      "tasks": {
+        "Absorption max (nm)": {
+          "unique_molecules": 1929
+        },
+        "Emission max (nm)": {
+          "unique_molecules": 1857
+        },
+        "Lifetime (ns)": {
+          "unique_molecules": 681
+        },
+        "Quantum yield": {
+          "unique_molecules": 1477
+        },
+        "log(e/mol-1 dm3 cm-1)": {
+          "unique_molecules": 958
+        }
+      },
+      "final_epoch": 54,
+      "control": "Source labels were independently permuted within each task; the molecular graphs, architecture, task masks, epochs and recipient structures match the real source expert."
+    },
+    "self_host_solid_shuffled": {
+      "rows": 944,
+      "tasks": {
+        "Absorption max (nm)": {
+          "unique_molecules": 365
+        },
+        "Emission max (nm)": {
+          "unique_molecules": 892
+        },
+        "Quantum yield": {
+          "unique_molecules": 515
+        }
+      },
+      "final_epoch": 81,
+      "control": "Source labels were independently permuted within each task; the molecular graphs, architecture, task masks, epochs and recipient structures match the real source expert."
+    }
+  },
+  "primary_scope_gate_passed": true,
+  "embedding_arrays": {
+    "aligned_seed_2026072601": [
+      668,
+      600
+    ],
+    "global_seed_2026072601": [
+      668,
+      300
+    ],
+    "aligned_seed_2026072602": [
+      668,
+      600
+    ],
+    "global_seed_2026072602": [
+      668,
+      300
+    ],
+    "aligned_seed_2026072603": [
+      668,
+      600
+    ],
+    "global_seed_2026072603": [
+      668,
+      300
+    ],
+    "aligned_seed_2026072604": [
+      668,
+      600
+    ],
+    "global_seed_2026072604": [
+      668,
+      300
+    ],
+    "aligned_seed_2026072605": [
+      668,
+      600
+    ],
+    "global_seed_2026072605": [
+      668,
+      300
+    ],
+    "shuffled_seed_2026072691": [
+      668,
+      600
+    ],
+    "shuffled_seed_2026072692": [
+      668,
+      600
+    ],
+    "shuffled_seed_2026072693": [
+      668,
+      600
+    ],
+    "support_aqueous_small_alcohol": [
+      668
+    ],
+    "support_self_host_solid": [
+      668
+    ],
+    "state_aligned_reliability": [
+      668
+    ]
+  },
+  "outcome_access": "Only donor optical outcomes and outcome-free recipient structures were loaded; no recipient HER outcome was accessed.",
+  "environment": {
+    "python": "3.11.5",
+    "chemprop": "2.1.2",
+    "lightning": "2.1.2",
+    "torch": "2.1.2+cu121",
+    "accelerator": "gpu",
+    "cuda_available": true,
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "rdkit": "2026.03.3"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "design_name": "Safe neighborhood transfer for OOD exploration",
+  "design_version": 1,
+  "frozen_utc": "2026-07-15T18:08:13Z",
+  "status": "post-result-method-development; frozen before new signal-anatomy outputs",
+  "history": "The fixed-ranking OBELiX direction, the null frozen sequential campaign, and the superiority of the random reference were known before this design. Consequently, no OBELiX result from this extension can be called confirmatory. The purpose is to diagnose failure modes, develop safe transfer policies, and define an independent validation program.",
+  "scientific_question": "Can a neighboring source task improve OOD exploration after separating source relevance, target-model exploitation, uncertainty, and candidate-space coverage?",
+  "claim_hierarchy": [
+    "source signal exists on target labels",
+    "source signal is complementary to a target-only model",
+    "target-only acquisition is valid relative to random acquisition",
+    "source-aware acquisition improves the same valid target-only policy",
+    "the improvement survives negative-transfer controls and an independent target",
+    "selected experiments expose a reproducible scientific relation rather than only a high target value"
+  ],
+  "stage_1_signal_anatomy": {
+    "input": "the hash-frozen OBELiX sequential-campaign NPZ",
+    "seeds": 100,
+    "model": "the frozen 80-tree ExtraTrees target-only surrogate",
+    "candidate_scopes": [
+      "official_test",
+      "hard_ood_40pct"
+    ],
+    "scores": [
+      "target_mean",
+      "UCB beta in {0.25,0.5,1,2}",
+      "ensemble_spread_only",
+      "composition_novelty_only",
+      "thermoelectric_prior_only",
+      "equal positive target/source rank fusion",
+      "initial-label credibility-weighted signed rank fusion",
+      "target-mean/novelty rank fusion"
+    ],
+    "diagnostics": [
+      "first-hit rank and pool fraction",
+      "top-10-percent recall and enrichment",
+      "Spearman score-outcome association",
+      "ensemble-spread versus absolute-error association",
+      "source-prior association with target-model residuals",
+      "initial-label source credibility and its relation to realized source utility"
+    ],
+    "claim_guard": "All target outcomes have already been inspected indirectly through prior analyses. These outputs are mechanism-finding diagnostics, not a new positive OOD claim."
+  },
+  "stage_2_policy_validity_gate": {
+    "rule": "A target-only acquisition family must first beat uniform random acquisition before any source-prior increment is interpreted.",
+    "candidate_target_only_policies": [
+      "greedy posterior mean",
+      "calibrated UCB or expected improvement",
+      "Thompson sampling",
+      "composition-space k-center or farthest-first coverage",
+      "adaptive portfolio over mean, diversity, and random policies"
+    ],
+    "minimum_evidence": [
+      "paired interval above zero experiments saved versus random",
+      "positive effect in at least 60 percent of campaigns",
+      "no materially worse censoring than random",
+      "robust direction across at least two surrogate families"
+    ]
+  },
+  "stage_3_safe_source_integration": {
+    "priority_methods": [
+      {
+        "name": "cross-validated residual shrinkage",
+        "description": "Use the source prediction as an offset or residual covariate with a coefficient estimated only from target-training folds and shrunk continuously to zero."
+      },
+      {
+        "name": "credibility-weighted rank fusion",
+        "description": "Estimate source direction and weight from initial target labels; fuse target and source ranks rather than raw, differently scaled properties; allow a zero-weight fallback."
+      },
+      {
+        "name": "safe acquisition portfolio",
+        "description": "Adaptively weight target-only, source-aware, diversity, and uniform-random policies using observed online rewards so that a harmful prior can be abandoned."
+      },
+      {
+        "name": "novelty-gated borrowing",
+        "description": "Use the source prior only where target-space coverage is poor and the source signal is locally credible; otherwise use the validated target-only policy."
+      }
+    ],
+    "negative_transfer_controls": [
+      "shuffled source predictions",
+      "alloy and catalysis wrong-source predictions",
+      "sign-reversed source prior",
+      "source-weight trace showing collapse toward zero for irrelevant sources"
+    ]
+  },
+  "stage_4_higher_complexity_methods": {
+    "methods": [
+      "multi-information-source Gaussian process with learned task-specific means and scales",
+      "non-negative task covariance with partial source-target co-location",
+      "task-conditioned shared representation with leave-one-task-out validation",
+      "meta-learned acquisition function across multiple source-target campaigns"
+    ],
+    "entry_rule": "Attempt only after the safe rank/residual baselines and policy-validity gate; otherwise model complexity is not scientifically identifiable."
+  },
+  "independent_validation": {
+    "retrospective_boundaries": [
+      "BIRDSHOT chronological campaigns",
+      "CALiSol paper-disjoint campaigns",
+      "Matbench official composition folds"
+    ],
+    "required_positive_test": "a new outcome-blind target or prospective campaign not used to design or select the method",
+    "unit": "campaign, article, time block, or canonical composition rather than measurement row"
+  },
+  "new_science_endpoint": {
+    "requirement": "A high-value hit alone is not new science.",
+    "evidence": [
+      "a source-informed hypothesis specified before revealing the target result",
+      "a reproducible composition-family, condition, or mechanism-level contrast",
+      "a matched negative control or intervention",
+      "confirmation in an independent experiment or dataset"
+    ]
+  },
+  "claim_guard": "The next paper may claim safer or more effective neighborhood transfer only after a target-only policy passes the random gate and the source increment survives independent validation. It may claim new scientific insight only after a source-informed hypothesis is independently confirmed."
+}

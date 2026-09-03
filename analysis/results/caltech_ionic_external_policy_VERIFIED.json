@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "formal_job_id": "70740",
+  "verification_job_id": "70767",
+  "verifier_sha256": "4763f4c53fc26a02982507a506546bd41983f3f0e9a377876b9513339484db45",
+  "verifier_amendment_sha256": "4b3939e3a978d56ee1223a053ece2bdf7747f74b8c30e6e04f9d57080a813020",
+  "remote_amendment_sha256": "0f34efca5f0ce97027d2b8f89a244213ae9536eb284ecba3e16046ef53fc53ad",
+  "checksums_sha256": "bc67c2eab9132d44de1cc36c18789a92e2632a32cd0f857c58b9ac90f339de52",
+  "summary_sha256": "3c86d19d8aa1ca52bdd3d411d03fdc95314f89668f0c50f352196d5b8acced73"
+}

@@ -1,0 +1,81 @@
+{
+  "design_name": "Mechanism-aligned modular borrowing method development",
+  "design_version": "2026-07-23a",
+  "status": "quick-smoke-complete-before-full-nested-implementation",
+  "created_utc": "2026-07-23T22:30:00-04:00",
+  "claim_guard": "This redesign follows inspection of the completed eight-target benchmark. It can compare prespecified transfer objects on the retained development panel, but it cannot create independent confirmation. The final selected implementation must be frozen on an outcome-unseen temporal, external, or prospective target.",
+  "parent_design": "analysis/multi_target_ood_borrowing_design.json",
+  "parent_result": "analysis/results/multi_target_ood_summary.json",
+  "scientific_hypothesis": "Neighbor knowledge improves OOD prediction when the transferred object matches the recipient mechanism or endpoint, multiple complementary source modules are retained, and a target-only fallback can suppress negative transfer.",
+  "contracts": [
+    "condition_transport",
+    "constitutive_bundle",
+    "hybrid_component",
+    "shared_latent_mechanism",
+    "rank_only",
+    "abstain"
+  ],
+  "fixed_safety_rules": {
+    "target_only_expert_always_present": true,
+    "donor_weights_nonnegative": true,
+    "total_donor_weight_at_most_one": true,
+    "wrong_shuffled_and_random_experts_in_development": true,
+    "raw_ood_distance_never_multiplied_into_donor_score": true,
+    "evaluation_outcomes_forbidden_in_descriptor_selection": true,
+    "evaluation_outcomes_forbidden_in_gate_training": true,
+    "exact_identity_and_provenance_exclusion": true
+  },
+  "development_objective": {
+    "primary": "grouped pseudo-OOD Q4 RMSE",
+    "tail": "CVaR of the worst 25 percent group squared errors",
+    "rank": "pairwise ranking loss for prespecified rank-only contracts",
+    "id_guard": "noninferiority to target-only in pseudo-Q1",
+    "negative_transfer_guard": "penalty and zero-allocation check for wrong, shuffled and random experts"
+  },
+  "ablation_order": [
+    "target_only",
+    "best_single_scalar_donor",
+    "all_donor_scalar_stack",
+    "global_sparse_mechanism_bundle",
+    "conditional_sparse_mamb",
+    "mamb_without_shared_codescriptors",
+    "mamb_without_target_fallback",
+    "mamb_average_error_only",
+    "wrong_shuffled_random_expert_bank",
+    "rank_only_head"
+  ],
+  "primary_evaluation": {
+    "frozen_raw_q1_q4_reused": true,
+    "metrics": [
+      "q4_relative_rmse_gain",
+      "q4_r2",
+      "q4_minus_q1_gain",
+      "wrong_source_difference",
+      "shuffled_source_difference",
+      "positive_learner_count",
+      "holm_adjusted_p"
+    ],
+    "cohort_rule": "At least two independent programme clusters pass the complete gate and the programme-bootstrap lower interval for mean Q4 gain is positive.",
+    "cross_database_rule": "At least one cross-database edge must pass before making a cross-database OOD prediction claim."
+  },
+  "implementation_stages": {
+    "local_smoke": "complete: three grouped draws and three fixed learners; polymer tensile mechanism bundle is the sole escalation signal",
+    "balam_development": "100 grouped draws; nested pseudo-OOD tuning; three learners; 5000 bootstraps; 9999 sign flips",
+    "independent_confirmation": "one completely outcome-unseen temporal, external, or prospective target"
+  },
+  "quick_smoke": {
+    "result_path": "analysis/results/mamb_quick_smoke_summary.json",
+    "promising_target": "polymer_tensile",
+    "bundle": [
+      "polymer_young",
+      "polymer_hardness",
+      "polymer_elongation",
+      "polymer_tg"
+    ],
+    "q4_relative_rmse_gain": 0.1513140649766801,
+    "q1_relative_rmse_gain": 0.09529016539409448,
+    "gain_specific": 0.056023899582585614,
+    "q4_r2": 0.05666246736066795,
+    "interpretation": "Screening signal only; no intervals, multiplicity correction, nested bundle selection or independent confirmation."
+  }
+}

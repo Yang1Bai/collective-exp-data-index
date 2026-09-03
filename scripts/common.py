@@ -112,7 +112,9 @@ def normalize_entry(raw: dict) -> dict:
     e.setdefault("year", None)
     e.setdefault("source", "curated-seed")
     e.setdefault("added", date.today().isoformat())
-    e.setdefault("verified_via", e.get("homepage_url"))
+    # Do not manufacture verification evidence from the homepage. Discovery
+    # candidates may leave this null until a curator records the inspected URL.
+    e.setdefault("verified_via", None)
     # keep only known fields, in canonical order
     return {k: e.get(k) for k in FIELDS}
 
@@ -142,7 +144,9 @@ def dedupe(entries: list) -> tuple[list, list]:
 def write_csv(entries: list, path: str = CATALOG_CSV) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh)
+        # The csv module defaults to CRLF even on Linux.  Pin LF explicitly so
+        # generated exports are byte-identical on Windows and GitHub Actions.
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(FIELDS)
         for e in entries:
             row = []

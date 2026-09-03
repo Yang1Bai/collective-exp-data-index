@@ -1,0 +1,61 @@
+{
+  "status": "independently-verified-postrelease-coverage-sensitivity",
+  "frozen_primary_status": "non-evaluable-stage2-release",
+  "retained_cells": 135,
+  "independent_condition_groups": 22,
+  "policies": [
+    "adjacency_only",
+    "cca_v2",
+    "global_credibility",
+    "random_features",
+    "shuffled_source",
+    "target_only",
+    "wrong_property"
+  ],
+  "prediction_rows": 945,
+  "bootstrap_rows": 20000,
+  "reconstructed_inference": {
+    "CCA-v2 minus adjacency-only": {
+      "effect": -0.027957846833443933,
+      "calendar_effect": -0.011036765484315536,
+      "cycle_effect": -0.04487892818257233,
+      "ci95": [
+        -0.08787019380721674,
+        0.05063233715644909
+      ],
+      "calendar_ci95": [
+        -0.12070724302141489,
+        0.1453693941339218
+      ],
+      "cycle_ci95": [
+        -0.09423537537243137,
+        -0.010781251542926073
+      ],
+      "one_sided_sign_flip_p": 0.766,
+      "holm_adjusted_p": 0.766
+    },
+    "CCA-v2 minus endpoint-matched target-only": {
+      "effect": 0.03467325238594027,
+      "calendar_effect": 0.06934650477188053,
+      "cycle_effect": 0.0,
+      "ci95": [
+        -0.005925938597477587,
+        0.09303497802965191
+      ],
+      "calendar_ci95": [
+        -0.011851877194955174,
+        0.18606995605930382
+      ],
+      "cycle_ci95": [
+        0.0,
+        0.0
+      ],
+      "one_sided_sign_flip_p": 0.1846,
+      "holm_adjusted_p": 0.3692
+    }
+  },
+  "summary_sha256": "9b1a1d3a11f010f8104d5edf12e6e15b9f39a8e1050cd173e4639c33d0232032",
+  "specification_sha256": "0f485c321cec3002d6565500da5637639205de3a71356d3c4948e59253203535",
+  "claim_guard": "Verification establishes numerical reproducibility only; it does not upgrade this post-release sensitivity to confirmatory evidence.",
+  "errors": []
+}

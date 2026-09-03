@@ -1,0 +1,61 @@
+{
+  "status": "smoke-complete",
+  "design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "implementation_sha256": "3653c974a6fd7e82a2e4cb879c77b6abf059efb26610fcddf5327698cef924ac",
+  "inference_amendment_sha256": "3243fa5eaa354f47a0e4a303ecc4e36bb8ec1c5f9d391ee423163b08dfd116bc",
+  "state_match_amendment_sha256": "477fb243a7e5a87a0aeabf0e472f707128ab22716a933b94a3611cc75c4cf24c",
+  "target_md5": "d1fcf7c9a7694c8f466932721b76b168",
+  "seeds": 2,
+  "budget": 3,
+  "workers": 2,
+  "policies": [
+    "uniform_random",
+    "composition_novelty",
+    "safe_target_novelty",
+    "safe_obelix_residual",
+    "safe_estm_residual",
+    "safe_borg_residual_control",
+    "safe_multisource_residual",
+    "safe_multisource_novelty_band"
+  ],
+  "candidate_pools": {
+    "external_candidate": 144,
+    "hard_ood_40pct": 58
+  },
+  "trajectory_rows": 96,
+  "gate_rows": 228,
+  "source_quality": [
+    {
+      "source": "obelix_same_property",
+      "entities": 181,
+      "groups": 54,
+      "oof_r2": 0.06753833899990369,
+      "oof_rmse": 1.9839890951157493,
+      "oof_spearman": 0.4858252032477428
+    },
+    {
+      "source": "estm_transport_neighbor",
+      "entities": 870,
+      "groups": 159,
+      "oof_r2": 0.25704104010882156,
+      "oof_rmse": 0.24141058394549292,
+      "oof_spearman": 0.5169407826205168
+    },
+    {
+      "source": "borg_mechanical_control",
+      "entities": 395,
+      "groups": 90,
+      "oof_r2": 0.16180218227010623,
+      "oof_rmse": 0.2626240390682824,
+      "oof_spearman": 0.4134716298106726
+    },
+    {
+      "source": "ocx_catalysis_control",
+      "entities": 212,
+      "groups": 212,
+      "oof_r2": 0.5427450288079936,
+      "oof_rmse": 14.181684439365933,
+      "oof_spearman": 0.7377498094283973
+    }
+  ]
+}

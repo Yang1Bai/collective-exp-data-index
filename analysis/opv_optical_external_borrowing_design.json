@@ -1,0 +1,181 @@
+{
+  "program": "Outcome-frozen optical-to-organic-photovoltaic knowledge borrowing",
+  "version": 1,
+  "frozen_utc": "2026-07-26T22:55:00Z",
+  "status": "Frozen after outcome-free target identity/state/structure audit and aggregate release-summary inspection; no row-level OPV target outcome has been read.",
+  "purpose": "Test whether experimental optical knowledge learned outside the photovoltaic literature improves prediction of sparsely labelled, DOI-disjoint and molecular-scaffold-OOD organic photovoltaic devices.",
+  "scientific_hypothesis": "A donor/acceptor optical property card learned from an independent spectroscopy database constrains light harvesting and excited-state energetics that are incompletely recoverable from a small photovoltaic recipient set. Benefit should concentrate where recipient labels are chemically distant but both device molecules retain support in the optical source.",
+  "claim_guard": "A positive result establishes one retrospective experimental-database borrowing edge from molecular optical spectroscopy to organic photovoltaic device prediction. It does not prove universal optoelectronic transfer, prospective device discovery, or benefit when device state is unavailable.",
+  "source": {
+    "dataset": "Deep4Chem experimental optical properties",
+    "article_doi": "10.1038/s41597-020-00634-8",
+    "dataset_doi": "10.6084/m9.figshare.12045567.v2",
+    "file": "data/external/optical_photocatalysis/DB for chromophore_Sci_Data_rev02.csv",
+    "required_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+    "primary_scope": "self_host_solid",
+    "state_ablation_scope": "global_state_blind",
+    "properties": [
+      "Absorption max (nm)",
+      "Emission max (nm)",
+      "Lifetime (ns)",
+      "Quantum yield",
+      "log(e/mol-1 dm3 cm-1)"
+    ],
+    "strict_exclusions": [
+      "every exact canonical donor or acceptor molecule in the OPV recipient",
+      "every DOI present in the OPV recipient",
+      "every source task failing grouped out-of-fold skill"
+    ],
+    "source_skill_gate": {
+      "minimum_unique_molecules": 300,
+      "oof_r2_greater_than": 0.0,
+      "oof_spearman_greater_than": 0.15,
+      "scaffold_bootstrap_95pct_lower_spearman_greater_than": 0.0
+    },
+    "lookup_upper_bound": "A source model retaining exact target molecules is descriptive only and cannot satisfy the primary gate."
+  },
+  "target": {
+    "dataset": "OPV-DB strict molecular benchmark",
+    "dataset_doi": "10.5281/zenodo.20841543",
+    "archive": "data/external/opv_borrowing/opvdb.zip",
+    "required_archive_sha256": "3a8199aa3e9e78e20bbb486240972aa361d8ea69fa69d27ce42de45c3ada0095",
+    "member": "data/opv_devices_strict_molecular_benchmark.csv",
+    "expected_rows": 21720,
+    "declared_grain": "one literature-mined single-junction OPV device record with donor and acceptor molecular structures",
+    "outcomes": [
+      "pce",
+      "voc",
+      "jsc",
+      "ff"
+    ],
+    "primary_outcome": "pce",
+    "mechanistic_diagnostic_outcomes": [
+      "jsc",
+      "voc",
+      "ff"
+    ],
+    "aggregate_information_inspected_before_freeze": "The public release manifest reports tier counts and aggregate field coverage, including aggregate outcome summaries. No row-level target outcome was opened."
+  },
+  "outcome_free_audit": {
+    "audit_file": "analysis/results/opv_optical_external_pair_audit.json",
+    "metadata_file": "analysis/results/opv_optical_target_metadata_no_outcomes.csv",
+    "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3",
+    "records": 21720,
+    "unique_dois": 5459,
+    "unique_donor_acceptor_pairs": 4856,
+    "external_holdout_rows": 4012,
+    "external_holdout_dois": 1044,
+    "source_qualified_external_rows": 2594,
+    "source_qualification": "donor and acceptor self-host-solid source support are each at least 0.20 after all exact target molecules are excluded"
+  },
+  "split_and_ood": {
+    "external_holdout": "A DOI is external when the first eight hexadecimal digits of SHA256(normalized DOI), interpreted as an integer, are divisible by five.",
+    "development_pool": "All remaining DOI groups.",
+    "label_budgets": [
+      60,
+      120,
+      240
+    ],
+    "primary_label_budget": 120,
+    "repeats": 200,
+    "sampling_unit": "one deterministic representative device record per unique development DOI and donor-acceptor pair, sampled without target outcomes",
+    "evaluation_pool": "all records from external DOI groups; no external DOI can contribute a labelled target record",
+    "target_distance": "geometric mean of donor and acceptor maximum Morgan-Tanimoto similarity to the labelled target molecules in their corresponding device roles",
+    "primary_scope": "the 40 percent of source-qualified external records with the lowest target-distance score",
+    "secondary_scopes": [
+      "all source-qualified external records",
+      "all external records",
+      "double-scaffold-OOD records for which neither donor nor acceptor scaffold is represented in labelled target data"
+    ],
+    "grouping": "DOI is the inferential resampling unit; donor and acceptor scaffold membership is reported and used for OOD diagnostics"
+  },
+  "recipient_features": {
+    "molecular": "Separate radius-2 2048-bit Morgan fingerprints for donor and acceptor.",
+    "state": [
+      "donor:acceptor ratio",
+      "additive and additive ratio",
+      "device structure and architecture",
+      "electron- and hole-transport layers",
+      "active-layer thickness",
+      "solvent",
+      "annealing temperature",
+      "explicit missingness indicators"
+    ],
+    "state_encoding": "Training-only frequency-limited one-hot categories with an other/missing level plus robust-scaled numeric variables.",
+    "forbidden_primary_features": [
+      "target-database HOMO/LUMO/gap annotations",
+      "any OPV outcome-derived feature",
+      "article title, journal, author or citation count"
+    ],
+    "target_energy_upper_bound": "Target-database HOMO/LUMO annotations may be evaluated only as a labelled target-side property upper bound, never as external borrowing."
+  },
+  "borrowed_feature_card": {
+    "construction": "For donor and acceptor separately, ensemble means and standard deviations of every admitted source property are combined with signed differences, absolute differences and products for matched properties.",
+    "primary": "target-excluded self-host-solid optical card",
+    "controls": [
+      "same-dimensional card from source-label-permuted self-host-solid models",
+      "state-blind global optical card",
+      "column-permuted real card within target role",
+      "equal-dimensional Gaussian random card"
+    ],
+    "support_use": "Source support is supplied to the model and is also used to define the frozen qualified scope; it cannot be tuned from target outcomes."
+  },
+  "models": {
+    "primary_learner": "ExtraTreesRegressor",
+    "secondary_learner": "RandomForestRegressor",
+    "n_estimators": 500,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "seed_pairing": "Every method uses the same target-label draw and learner seed.",
+    "methods": [
+      "structure_only",
+      "state_aware_target_only",
+      "state_aware_plus_real_solid_optical_card",
+      "state_aware_plus_shuffled_source_card",
+      "state_aware_plus_state_blind_optical_card",
+      "state_aware_plus_permuted_real_card",
+      "state_aware_plus_gaussian_card"
+    ],
+    "physics_recombination": "A secondary PCE prediction is computed as predicted Voc times predicted Jsc times predicted FF divided by 100; the directly fitted PCE remains primary."
+  },
+  "inference": {
+    "primary_contrast": "state-aware plus real solid optical card versus state-aware target-only",
+    "specificity_contrasts": [
+      "real solid optical card versus shuffled-source card",
+      "real solid optical card versus state-blind optical card",
+      "real solid optical card versus permuted-real card"
+    ],
+    "metric": "relative reduction in RMSE",
+    "bootstrap_replicates": 10000,
+    "bootstrap_unit": "external DOI",
+    "paired_randomization": "DOI-cluster sign randomization where evaluable",
+    "multiplicity": "Holm correction over the four named primary-family contrasts at the primary budget and scope",
+    "success_gate": {
+      "minimum_mean_relative_pce_rmse_gain": 0.03,
+      "doi_cluster_bootstrap_95pct_lower_gain_greater_than": 0.0,
+      "holm_p_below": 0.05,
+      "absolute_pce_r2_greater_than": 0.0,
+      "minimum_gain_over_shuffled_source": 0.02,
+      "minimum_gain_over_permuted_real": 0.0,
+      "nonnegative_mean_jsc_gain": true,
+      "maximum_full_external_pce_rmse_harm": 0.01,
+      "positive_repeat_fraction_at_least": 0.65
+    }
+  },
+  "leakage_sentinels": [
+    "Target outcome columns are not read during metadata audit, source exclusion, source training, feature construction, DOI splitting or label-draw generation.",
+    "No exact target molecule or target DOI remains in strict source training.",
+    "No external DOI enters target training.",
+    "All rows sharing a DOI remain in the same external/development partition.",
+    "Source task admission uses source outcomes only.",
+    "Target-database energy annotations are absent from every primary design matrix.",
+    "All real, shuffled and random cards have identical row membership and declared dimensionality.",
+    "Positive, null, harmful and abstaining results are archived without replacement."
+  ],
+  "compute": {
+    "balam": "one full node with four GPU allocation units and 64 CPU workers; source Chemprop training uses one GPU at a time and recipient repeats use CPU workers",
+    "expected_runtime": "approximately one to four hours",
+    "checkpointing": "source scope, repeat and label budget checkpoints keyed by design, source, target archive and metadata hashes",
+    "network": "all public data are packaged before compute-node execution"
+  }
+}

@@ -1,0 +1,774 @@
+{
+  "status": "verified-header-only",
+  "created_utc": "2026-07-20T21:30:00Z",
+  "audit_scope": "ZIP member names, complete nonnumeric *_meta.txt companions, and exactly the first physical line of each CSV member",
+  "csv_read_method": "ZipExtFile.readline(MAX_HEADER_BYTES + 1) exactly once per CSV member; no csv/pandas parser constructed",
+  "numeric_csv_data_rows_opened": false,
+  "numeric_csv_data_rows_parsed": false,
+  "stage1_numeric_outcomes_parsed": false,
+  "stage2_numeric_outcomes_parsed": false,
+  "inspected_archive_count": 3,
+  "csv_header_lines_read": 32,
+  "expected_header": "run_time,c_vol,c_cur,c_surf_temp,amb_temp,step_type",
+  "distinct_csv_headers": [
+    "run_time,c_vol,c_cur,c_surf_temp,amb_temp,step_type"
+  ],
+  "archives": [
+    {
+      "file_id": 47627050,
+      "expected_stage": "1",
+      "archive_name": "figshare_47627050.zip",
+      "archive_sha256": "ffcd328738636f2ce0cd9239bdbf8466b48c169f240beac95260bc74a6c52b14",
+      "archive_size_bytes": 9946178,
+      "member_count": 27,
+      "csv_header_count": 13,
+      "meta_member_count": 13,
+      "csv_role_counts": {
+        "AT_T10": 1,
+        "AT_T23": 1,
+        "AT_T45": 1,
+        "CU": 5,
+        "ET_T10": 1,
+        "ET_T23": 1,
+        "ET_T45": 1,
+        "exCU": 2
+      },
+      "distinct_csv_headers": [
+        "run_time,c_vol,c_cur,c_surf_temp,amb_temp,step_type"
+      ],
+      "primary_endpoint_members": {
+        "ET_T23": {
+          "csv_member": "TP_k01_01/TP_k01_01_01_ET_T23.csv",
+          "meta_member": "TP_k01_01/TP_k01_01_01_ET_T23_meta.txt",
+          "setpoint": "23°C"
+        },
+        "AT_T23": {
+          "csv_member": "TP_k01_01/TP_k01_01_09_AT_T23.csv",
+          "meta_member": "TP_k01_01/TP_k01_01_09_AT_T23_meta.txt",
+          "setpoint": "23°C"
+        }
+      },
+      "metadata_records": {
+        "TP_k01_01/TP_k01_01_01_ET_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "08.09.2021",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_01_ET_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "15.09.2021",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_01_ET_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "11.09.2021",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_02_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "26.10.2021",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_03_exCU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "30.11.2021",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_04_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "18.01.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_05_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "15.03.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_06_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "10.05.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_07_exCU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "05.06.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_08_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "30.08.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "12.09.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "12.09.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "S001",
+            "Testpoint": "k01",
+            "Measurement start date": "12.09.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "CTS C-70/200 SN: 092061",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        }
+      }
+    },
+    {
+      "file_id": 47627620,
+      "expected_stage": "2",
+      "archive_name": "figshare_47627620.zip",
+      "archive_sha256": "60b28208872c536af93f88d75b7db3d88c64038e6ba6cdf9fe269ac4bd1e3091",
+      "archive_size_bytes": 9666605,
+      "member_count": 27,
+      "csv_header_count": 13,
+      "meta_member_count": 13,
+      "csv_role_counts": {
+        "AT_T10": 1,
+        "AT_T23": 1,
+        "AT_T45": 1,
+        "CU": 4,
+        "ET_T10": 1,
+        "ET_T23": 1,
+        "ET_T45": 1,
+        "exCU": 3
+      },
+      "distinct_csv_headers": [
+        "run_time,c_vol,c_cur,c_surf_temp,amb_temp,step_type"
+      ],
+      "primary_endpoint_members": {
+        "ET_T23": {
+          "csv_member": "TP_k01_01/TP_k01_01_01_ET_T23.csv",
+          "meta_member": "TP_k01_01/TP_k01_01_01_ET_T23_meta.txt",
+          "setpoint": "23°C"
+        },
+        "AT_T23": {
+          "csv_member": "TP_k01_01/TP_k01_01_09_AT_T23.csv",
+          "meta_member": "TP_k01_01/TP_k01_01_09_AT_T23_meta.txt",
+          "setpoint": "23°C"
+        }
+      },
+      "metadata_records": {
+        "TP_k01_01/TP_k01_01_01_ET_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "06.12.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB115 #11-00467",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_01_ET_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "11.12.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB115 #11-00467",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_01_ET_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "08.12.2022",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB115 #11-00467",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_02_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "23.01.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_03_exCU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "21.02.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_04_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "25.04.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_05_exCU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "13.06.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_06_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "08.08.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_07_exCU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "04.10.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_08_CU_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "057",
+            "Testpoint": "k01",
+            "Measurement start date": "27.11.2023",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "KB53 #03-50970",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "57",
+            "Testpoint": "k01",
+            "Measurement start date": "15.01.2024",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "Binder KB115 #11-00467",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "57",
+            "Testpoint": "k01",
+            "Measurement start date": "15.01.2024",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "Binder KB115 #11-00467",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        },
+        "TP_k01_01/TP_k01_01_09_AT_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "SIE",
+            "Internal cell serial": "57",
+            "Testpoint": "k01",
+            "Measurement start date": "15.01.2024",
+            "Measurement device used": "BaSyTec X50.X.13.13.0864",
+            "Test channel": "CH01",
+            "Climate chamber used": "Binder KB115 #11-00467",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "left (Position 1 of 6)"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]"
+          }
+        }
+      }
+    },
+    {
+      "file_id": 47627104,
+      "expected_stage": "1",
+      "archive_name": "figshare_47627104.zip",
+      "archive_sha256": "0e356b05719950ed71e4f91e7070c60353ee1cdf01859ed333241fd0e41ca1c5",
+      "archive_size_bytes": 11660912,
+      "member_count": 13,
+      "csv_header_count": 6,
+      "meta_member_count": 6,
+      "csv_role_counts": {
+        "AT_T10": 1,
+        "AT_T23": 1,
+        "AT_T45": 1,
+        "ET_T10": 1,
+        "ET_T23": 1,
+        "ET_T45": 1
+      },
+      "distinct_csv_headers": [
+        "run_time,c_vol,c_cur,c_surf_temp,amb_temp,step_type"
+      ],
+      "primary_endpoint_members": {
+        "ET_T23": {
+          "csv_member": "TP_k04_06/TP_k04_06_01_ET_T23.csv",
+          "meta_member": "TP_k04_06/TP_k04_06_01_ET_T23_meta.txt",
+          "setpoint": "23°C"
+        },
+        "AT_T23": {
+          "csv_member": "TP_k04_06/TP_k04_06_02_AT_T23.csv",
+          "meta_member": "TP_k04_06/TP_k04_06_02_AT_T23_meta.txt",
+          "setpoint": "23°C"
+        }
+      },
+      "metadata_records": {
+        "TP_k04_06/TP_k04_06_01_ET_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "30.09.2021",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        },
+        "TP_k04_06/TP_k04_06_01_ET_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "07.10.2021",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        },
+        "TP_k04_06/TP_k04_06_01_ET_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "04.10.2021",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        },
+        "TP_k04_06/TP_k04_06_02_AT_T10_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "06.10.2022",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "10°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        },
+        "TP_k04_06/TP_k04_06_02_AT_T23_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "12.10.2022",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "23°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        },
+        "TP_k04_06/TP_k04_06_02_AT_T45_meta.txt": {
+          "fields": {
+            "Laboratory identifier": "INT",
+            "Internal cell serial": "INT048",
+            "Testpoint": "k04",
+            "Measurement start date": "09.10.2022",
+            "Measurement device used": "Basytec CTS, SN:CTS.X.13.00.0354",
+            "Test channel": "CH06/07",
+            "Climate chamber used": "Binder MK240 #Schroedinger",
+            "Climate chamber temperature setpoint": "45°C",
+            "Position within climate chamber": "14"
+          },
+          "column_descriptions": {
+            "run_time": "Time since start of measurement [HH:MM:SS.sss]",
+            "c_vol": "Cell voltage [V]",
+            "c_cur": "Cell current, negative during discharging [A]",
+            "c_surf_temp": "Cell surface temperature, measured on the cylinder mantle [°C]",
+            "amb_temp": "Ambient temperature, i.e. climate chamber temperatur [°C]",
+            "step_type": "Test section code"
+          }
+        }
+      }
+    }
+  ],
+  "errors": []
+}

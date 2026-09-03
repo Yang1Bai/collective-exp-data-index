@@ -1,0 +1,11 @@
+policy,source,label,source_class,scopes,admission_rate_mean,mean_weight_mean,source_oof_r2
+safe_obelix_residual,obelix_same_property,"OBELiX
+same property",real neighbor,2,0.387625,0.20241164080000001,0.0653768958615161
+safe_estm_residual,estm_transport_neighbor,"ESTM
+transport neighbor",real neighbor,2,0.32199999999999995,0.13345348865,0.2570410401088215
+safe_borg_residual_control,borg_mechanical_control,"Borg
+mechanical",wrong control,2,0.186875,0.0721403852,0.1635953082711987
+safe_ocx_residual_control,ocx_catalysis_control,"OCx
+catalysis",wrong control,2,0.129,0.046750678850000005,0.5427450288079936
+safe_shuffled_obelix_control,shuffled_obelix,"shuffled
+OBELiX",wrong control,2,0.18725,0.07143716905,

@@ -1,0 +1,98 @@
+{
+  "status": "pass",
+  "design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "schema_amendment_sha256": "b25e1299aabb9a509f8d40aca1a19451d3008168845f4ed5af4fa7f2942bcccd",
+  "target_md5": "d1fcf7c9a7694c8f466932721b76b168",
+  "resolved_columns": {
+    "formula": "compound",
+    "outcome": "conductivity_siemens_per_cm",
+    "doi": "conductivity_doi",
+    "icsd": "icsd_collectioncode",
+    "temperature": "lowest_extrapolation_temperature_K"
+  },
+  "target_metrics": {
+    "raw_rows": 571,
+    "invalid_formula_rows": 5,
+    "invalid_formula_fraction": 0.008756567425569177,
+    "invalid_outcome_rows": 0,
+    "invalid_outcome_fraction": 0.0,
+    "nonempty_doi_rows": 570,
+    "nonempty_doi_fraction": 0.9982486865148862,
+    "nonempty_icsd_rows": 571,
+    "eligible_rows": 566,
+    "unique_canonical_compositions": 483,
+    "connected_components": 229,
+    "largest_component_entities": 51,
+    "temperature_numeric_rows": 135,
+    "near_room_temperature_eligible_rows": 18,
+    "development_entities": 339,
+    "candidate_entities": 144,
+    "hard_ood_entities": 58
+  },
+  "target_gates": {
+    "minimum_eligible_rows": true,
+    "minimum_unique_canonical_compositions": true,
+    "maximum_invalid_formula_fraction": true,
+    "maximum_invalid_outcome_fraction": true,
+    "minimum_nonempty_doi_fraction": true,
+    "minimum_development_entities": true,
+    "minimum_candidate_entities": true
+  },
+  "source_leakage_audit": {
+    "obelix_same_property": {
+      "raw_valid_rows": 599,
+      "raw_valid_entities": 500,
+      "formula_overlap_rows": 323,
+      "formula_overlap_entities": 256,
+      "doi_overlap_rows": 353,
+      "doi_overlap_entities": 320,
+      "union_overlap_rows": 412,
+      "remaining_rows": 187,
+      "remaining_entities": 181,
+      "remaining_unique_dois": 60,
+      "minimum_entity_gate": true
+    },
+    "estm_transport_neighbor": {
+      "raw_valid_rows": 5205,
+      "raw_valid_entities": 870,
+      "formula_overlap_rows": 0,
+      "formula_overlap_entities": 0,
+      "doi_overlap_rows": 0,
+      "doi_overlap_entities": 0,
+      "union_overlap_rows": 0,
+      "remaining_rows": 5205,
+      "remaining_entities": 870,
+      "remaining_unique_dois": 197,
+      "minimum_entity_gate": true
+    },
+    "borg_mechanical_control": {
+      "raw_valid_rows": 1067,
+      "raw_valid_entities": 395,
+      "formula_overlap_rows": 0,
+      "formula_overlap_entities": 0,
+      "doi_overlap_rows": 0,
+      "doi_overlap_entities": 0,
+      "union_overlap_rows": 0,
+      "remaining_rows": 1067,
+      "remaining_entities": 395,
+      "remaining_unique_dois": 191,
+      "minimum_entity_gate": true
+    },
+    "ocx_catalysis_control": {
+      "raw_valid_rows": 2167,
+      "raw_valid_entities": 212,
+      "formula_overlap_rows": 0,
+      "formula_overlap_entities": 0,
+      "doi_overlap_rows": 0,
+      "doi_overlap_entities": 0,
+      "union_overlap_rows": 0,
+      "remaining_rows": 2167,
+      "remaining_entities": 212,
+      "remaining_unique_dois": 0,
+      "minimum_entity_gate": true
+    }
+  },
+  "all_target_gates_pass": true,
+  "all_source_minimums_pass": true,
+  "protocol_deviation": "Header inspection accidentally displayed two target data rows; no analysis rule changed."
+}

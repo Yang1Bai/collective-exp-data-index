@@ -1,0 +1,270 @@
+{
+  "analysis_status": "frozen-post-existing-results-official-test-OOD-sequential-discovery",
+  "design_sha256": "b310b508468ce844c4a231224b8f4d669e40fdb59a7cbfb04c3ecae31bee75c3",
+  "input_sha256": "a2ccdd88de18ccdc4e11d2f87026938d42dfcd3b56567b7cc912a27905f79b7b",
+  "execution_checkpoint_namespace": "b310b508468c-a2ccdd88de18",
+  "design_frozen_utc": "2026-07-14T18:20:56Z",
+  "candidate_pools": {
+    "official_test": 110,
+    "hard_ood_40pct": 44
+  },
+  "source_target_exact_overlaps": {
+    "Thermoelectric ZT": 0,
+    "Alloy yield strength": 0,
+    "CO2R H2 Faradaic efficiency": 0
+  },
+  "primary_official_test_result": {
+    "scope": "official_test",
+    "model_family": "extra-trees-primary",
+    "strategy": "thermoelectric_prior",
+    "seeds": 100,
+    "target_only_mean_experiments": 24.34,
+    "strategy_mean_experiments": 24.09,
+    "target_only_median_experiments": 28.0,
+    "strategy_median_experiments": 26.0,
+    "mean_experiments_saved": 0.25,
+    "bootstrap_95": [
+      -1.3,
+      1.82
+    ],
+    "relative_mean_experiments_saved": 0.010271158586688579,
+    "fraction_seeds_improved": 0.28,
+    "fraction_seeds_tied": 0.49,
+    "signflip_p_one_sided": 0.3889,
+    "target_only_censor_fraction": 0.4,
+    "strategy_censor_fraction": 0.41,
+    "core_gates": {
+      "p_le_0_05": false,
+      "ci_lower_above_zero": false,
+      "mean_saved_ge_5": false,
+      "relative_saved_ge_0_25": false,
+      "fraction_seed_improved_ge_0_60": false
+    },
+    "passes_core_gates": false,
+    "improvement_gates": {
+      "p_le_0_05": false,
+      "ci_lower_above_zero": false,
+      "mean_saved_ge_5": false,
+      "relative_saved_ge_0_25": false,
+      "fraction_seed_improved_ge_0_60": false,
+      "random_forest_sensitivity_mean_positive": true,
+      "prespecified_prior_controls_clean": true
+    },
+    "rescue_crossing": {
+      "shortlist_n": 11,
+      "target_only_median_above_shortlist": true,
+      "prior_median_within_shortlist": false
+    },
+    "passes_improvement_gates": false,
+    "passes_rescue_crossing": false,
+    "decision_status": "directional-only"
+  },
+  "random_forest_sensitivity": {
+    "scope": "official_test",
+    "model_family": "random-forest-sensitivity",
+    "strategy": "thermoelectric_prior",
+    "seeds": 40,
+    "target_only_mean_experiments": 26.825,
+    "strategy_mean_experiments": 26.3,
+    "target_only_median_experiments": 37.5,
+    "strategy_median_experiments": 32.0,
+    "mean_experiments_saved": 0.525,
+    "bootstrap_95": [
+      -1.85,
+      3.1
+    ],
+    "relative_mean_experiments_saved": 0.0195712954333644,
+    "fraction_seeds_improved": 0.275,
+    "fraction_seeds_tied": 0.45,
+    "signflip_p_one_sided": 0.3538,
+    "target_only_censor_fraction": 0.475,
+    "strategy_censor_fraction": 0.375,
+    "core_gates": {
+      "p_le_0_05": false,
+      "ci_lower_above_zero": false,
+      "mean_saved_ge_5": false,
+      "relative_saved_ge_0_25": false,
+      "fraction_seed_improved_ge_0_60": false
+    },
+    "passes_core_gates": false
+  },
+  "official_test_controls": {
+    "alloy_control": {
+      "scope": "official_test",
+      "model_family": "extra-trees-primary",
+      "strategy": "alloy_control",
+      "seeds": 100,
+      "target_only_mean_experiments": 24.34,
+      "strategy_mean_experiments": 23.77,
+      "target_only_median_experiments": 28.0,
+      "strategy_median_experiments": 27.0,
+      "mean_experiments_saved": 0.57,
+      "bootstrap_95": [
+        -0.94,
+        2.13
+      ],
+      "relative_mean_experiments_saved": 0.02341824157764996,
+      "fraction_seeds_improved": 0.31,
+      "fraction_seeds_tied": 0.47,
+      "signflip_p_one_sided": 0.2449,
+      "target_only_censor_fraction": 0.4,
+      "strategy_censor_fraction": 0.43,
+      "core_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false
+    },
+    "catalysis_control": {
+      "scope": "official_test",
+      "model_family": "extra-trees-primary",
+      "strategy": "catalysis_control",
+      "seeds": 100,
+      "target_only_mean_experiments": 24.34,
+      "strategy_mean_experiments": 24.42,
+      "target_only_median_experiments": 28.0,
+      "strategy_median_experiments": 29.5,
+      "mean_experiments_saved": -0.08,
+      "bootstrap_95": [
+        -1.32025,
+        1.01
+      ],
+      "relative_mean_experiments_saved": -0.0032867707477403454,
+      "fraction_seeds_improved": 0.31,
+      "fraction_seeds_tied": 0.46,
+      "signflip_p_one_sided": 0.5506,
+      "target_only_censor_fraction": 0.4,
+      "strategy_censor_fraction": 0.43,
+      "core_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false
+    },
+    "shuffled_thermoelectric_control": {
+      "scope": "official_test",
+      "model_family": "extra-trees-primary",
+      "strategy": "shuffled_thermoelectric_control",
+      "seeds": 100,
+      "target_only_mean_experiments": 24.34,
+      "strategy_mean_experiments": 23.72,
+      "target_only_median_experiments": 28.0,
+      "strategy_median_experiments": 28.0,
+      "mean_experiments_saved": 0.62,
+      "bootstrap_95": [
+        -0.97,
+        2.12
+      ],
+      "relative_mean_experiments_saved": 0.025472473294987676,
+      "fraction_seeds_improved": 0.38,
+      "fraction_seeds_tied": 0.38,
+      "signflip_p_one_sided": 0.2256,
+      "target_only_censor_fraction": 0.4,
+      "strategy_censor_fraction": 0.38,
+      "core_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false
+    },
+    "random_control": {
+      "scope": "official_test",
+      "model_family": "extra-trees-primary",
+      "strategy": "random_control",
+      "seeds": 100,
+      "target_only_mean_experiments": 24.34,
+      "strategy_mean_experiments": 15.5,
+      "target_only_median_experiments": 28.0,
+      "strategy_median_experiments": 13.0,
+      "mean_experiments_saved": 8.84,
+      "bootstrap_95": [
+        4.57,
+        12.90074999999999
+      ],
+      "relative_mean_experiments_saved": 0.36318816762530814,
+      "fraction_seeds_improved": 0.63,
+      "fraction_seeds_tied": 0.01,
+      "signflip_p_one_sided": 0.0001,
+      "target_only_censor_fraction": 0.4,
+      "strategy_censor_fraction": 0.08,
+      "core_gates": {
+        "p_le_0_05": true,
+        "ci_lower_above_zero": true,
+        "mean_saved_ge_5": true,
+        "relative_saved_ge_0_25": true,
+        "fraction_seed_improved_ge_0_60": true
+      },
+      "passes_core_gates": true
+    }
+  },
+  "hard_ood_secondary": {
+    "thermoelectric_primary_model": {
+      "scope": "hard_ood_40pct",
+      "model_family": "extra-trees-primary",
+      "strategy": "thermoelectric_prior",
+      "seeds": 100,
+      "target_only_mean_experiments": 17.7,
+      "strategy_mean_experiments": 15.49,
+      "target_only_median_experiments": 19.0,
+      "strategy_median_experiments": 15.0,
+      "mean_experiments_saved": 2.21,
+      "bootstrap_95": [
+        0.97,
+        3.49
+      ],
+      "relative_mean_experiments_saved": 0.1248587570621469,
+      "fraction_seeds_improved": 0.58,
+      "fraction_seeds_tied": 0.14,
+      "signflip_p_one_sided": 0.0004,
+      "target_only_censor_fraction": 0.0,
+      "strategy_censor_fraction": 0.0,
+      "core_gates": {
+        "p_le_0_05": true,
+        "ci_lower_above_zero": true,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false
+    },
+    "thermoelectric_sensitivity_model": {
+      "scope": "hard_ood_40pct",
+      "model_family": "random-forest-sensitivity",
+      "strategy": "thermoelectric_prior",
+      "seeds": 40,
+      "target_only_mean_experiments": 16.0,
+      "strategy_mean_experiments": 14.975,
+      "target_only_median_experiments": 16.0,
+      "strategy_median_experiments": 14.5,
+      "mean_experiments_saved": 1.025,
+      "bootstrap_95": [
+        -0.9,
+        2.925
+      ],
+      "relative_mean_experiments_saved": 0.0640625,
+      "fraction_seeds_improved": 0.575,
+      "fraction_seeds_tied": 0.125,
+      "signflip_p_one_sided": 0.1608,
+      "target_only_censor_fraction": 0.0,
+      "strategy_censor_fraction": 0.0,
+      "core_gates": {
+        "p_le_0_05": false,
+        "ci_lower_above_zero": false,
+        "mean_saved_ge_5": false,
+        "relative_saved_ge_0_25": false,
+        "fraction_seed_improved_ge_0_60": false
+      },
+      "passes_core_gates": false
+    }
+  },
+  "claim_guard": "This is a retrospective sequential simulation on a genuinely held-out experimental database pool, not a prospective laboratory campaign. It can establish decision-level OOD utility under the frozen protocol but not field-wide or universal acceleration."
+}

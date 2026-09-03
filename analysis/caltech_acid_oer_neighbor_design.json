@@ -1,0 +1,82 @@
+{
+  "design_name": "Outcome-unseen neighboring-electrocatalysis borrowing on Caltech acid OER",
+  "version": 1,
+  "frozen_utc": "2026-07-18T05:18:00Z",
+  "status": "archive hash verified; target header known; one accidental target row and one raw record permanently excluded; remaining target outcomes unopened",
+  "parent_program": "analysis/outcome_unseen_neighbor_validation_program.json",
+  "accidental_access_amendment": "analysis/CALTECH_ACID_OER_ACCIDENTAL_ACCESS_AMENDMENT.md",
+  "claim_guard": "This is the prespecified second scientific-family opportunity. Every remaining plate and every source/control stays in the denominator; failure or abstention cannot be replaced by another analysis of the same outcomes.",
+  "target_snapshot": {
+    "record_url": "https://data.caltech.edu/records/tg041-j4g80",
+    "doi": "10.22002/tg041-j4g80",
+    "file": "AcidOER-MnSbSnTiCo.zip",
+    "bytes": 7688060,
+    "md5": "280ec6b569246f8e3a714900c1645e0c",
+    "sha256": "f06152021cbbe0008d50ecf4cf4a8a16cd502f9b86033cb80d3d999700eb69b3",
+    "license": "CC0-1.0"
+  },
+  "target": {
+    "file": "data/OER/oer_all_foms.csv",
+    "entity": "original row identity plus plate and normalized Mn/Sb/Sn/Ti/Co composition",
+    "primary_outcome": "J_t200",
+    "direction": "maximize",
+    "secondary_outcomes": ["J_t20", "Jmax_post", "Jmax_pre"],
+    "representations": ["five normalized element fractions", "element fractions plus frozen XRD phase/context features when an exact plate/composition join exists"],
+    "permanent_exclusions": [
+      "all rows with plate 5029",
+      "plate 5411 row with Mn=0.58, Sb=0.09, Sn=0.26, Ti=0.07, Co=0"
+    ],
+    "groups": "plate is the outer independent unit; outcome-free composition clusters are the inner exploration unit",
+    "outer_evaluation": "four leave-one-remaining-plate-out folds over plates 5411, 5412, 5413, and 5414",
+    "minimums": ["100 retained entities", "4 retained plates", "40 composition clusters", "20 retained observations per evaluation plate"]
+  },
+  "sources": {
+    "expected_positive": [
+      {
+        "id": "caltech_orr_metal_oxide",
+        "record": "https://data.caltech.edu/records/1km87-52j70",
+        "doi": "10.22002/D1.1632",
+        "endpoint": "J.uAcm2_0.63_secondCA",
+        "rationale": "independent high-throughput metal-oxide oxygen-electrocatalysis current after two hours"
+      },
+      {
+        "id": "ocx_electrocatalysis",
+        "dataset": "ocx24-open-catalyst-experiments-2024",
+        "endpoint": "fe_h2",
+        "rationale": "independent experimental electrocatalysis composition-performance source"
+      }
+    ],
+    "wrong_controls": [
+      "mpea-dataset-borg yield strength",
+      "obelix-solid-electrolytes ionic conductivity"
+    ],
+    "leakage_exclusions": ["exact normalized composition", "plate/sample lineage", "DOI/article", "shared MEAD parent record"]
+  },
+  "prediction": {
+    "label_budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "repeats_per_outer_plate": 100,
+    "primary_endpoint": "paired relative RMSE reduction on the held-out plate and its highest outcome-free OOD quartile",
+    "absolute_gate": "positive augmented-model R2 on held-out plate",
+    "methods": ["target only", "source only", "naive standardized pooling", "frozen stacking", "residual shrinkage", "mixture of experts"],
+    "learners": ["ridge", "Random Forest", "ExtraTrees"],
+    "specificity_controls": ["source-size match", "source-skill match", "target-coverage match", "equal-capacity random feature", "source shuffle"]
+  },
+  "exploration": {
+    "budget": 20,
+    "co_primary": ["distinct-composition-cluster AUC20", "acquisitions to first distinct top-5-percent cluster"],
+    "policies": ["uniform family-first", "composition novelty family-first", "best ORR source", "best OCx source", "entity consensus", "CCA family-first consensus", "CCA round-robin", "wrong-source portfolio", "shuffled-source portfolio"],
+    "mandatory_tradeoffs": ["entity recall20", "component recall20", "marginal unique components by source"]
+  },
+  "hypothesis_cards": {
+    "timing": "after outcome-free target metadata and source ranks, before any remaining target outcome is parsed",
+    "minimum": "one ORR-specific card, one OCx-specific card, and one consensus card",
+    "fields": ["candidate region", "source evidence", "physical rationale", "OOD-matched target-only control", "falsifier", "planned phase/electrochemistry measurement"]
+  },
+  "inference": {
+    "unit": "held-out plate and outcome-free composition cluster",
+    "within_target": "paired plate/cluster bootstrap and source-rank randomization",
+    "multiplicity": "Holm within target and endpoint family",
+    "across_targets": "combine only after Starrydata and acid-OER target-level effects are fixed; report random-effects mean and heterogeneity"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "coverage_scopes_reported": [
+    "coverage_matched_hard_ood|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched_hard_ood|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|caltech_adjacent_ionic_vs_ocx_wrong_catalysis",
+    "coverage_matched|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|obelix_adjacent_ionic_vs_ocx_wrong_catalysis"
+  ],
+  "formal_amendment_sha256": "5053143dd46253849c690df0457a089ead126a1d79fe80315041f60483698b43",
+  "ionic_consensus_relative_rmse_gain": [
+    0.008041785148804971,
+    0.00039540980625237616,
+    0.015791064528473345
+  ],
+  "ionic_minus_equal_capacity_random": [
+    0.008900188114782635,
+    0.00020572678694733755,
+    0.017252099505010093
+  ],
+  "ionic_minus_skill_matched_ocx": [
+    0.009025492378444203,
+    0.0009047787063701811,
+    0.01665044595507618
+  ],
+  "original_preoutcome_sha256": "438d449b1970556e5b31fa2d517b85488c55fd955243bb3e8c2d0ae26218dadf",
+  "outcome_audit": {
+    "entities_without_outcome": 7,
+    "frozen_entities": 7403,
+    "nonfinite_selected_values": 0,
+    "out_of_range_selected_values": 7,
+    "outcome_entities": 7396,
+    "unequal_curve_lists": 0
+  },
+  "primary_scope": "n=30, ExtraTrees, composition, frozen OOD quartile 4",
+  "size_matched_adjacent_minus_wrong": {
+    "caltech_adjacent_ionic_minus_borg_wrong_mechanical": [
+      0.009549464907239428,
+      0.0017251512809430439,
+      0.017853833430318454
+    ],
+    "caltech_adjacent_ionic_minus_ocx_wrong_catalysis": [
+      0.006324932999020082,
+      -0.00045249962992500265,
+      0.013447205045044769
+    ],
+    "obelix_adjacent_ionic_minus_borg_wrong_mechanical": [
+      0.0069194524306375686,
+      4.034374285424127e-05,
+      0.01402312197180123
+    ],
+    "obelix_adjacent_ionic_minus_ocx_wrong_catalysis": [
+      -0.004800130798626864,
+      -0.010859188423339591,
+      0.0011180510011860757
+    ]
+  },
+  "status": "formal-complete"
+}

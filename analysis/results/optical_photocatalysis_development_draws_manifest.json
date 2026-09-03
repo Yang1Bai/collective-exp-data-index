@@ -1,0 +1,32 @@
+{
+  "status": "outcome-independent-development-draws-frozen",
+  "created_utc": "2026-07-24T20:29:13.353461+00:00",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "draw_sha256": "bb306fbe9a0e13da55dba6069dd9367de3c4f80298b11b7083d7132a280a1000",
+  "seed": 20260724,
+  "repeats": 100,
+  "budgets": [
+    30,
+    60,
+    120
+  ],
+  "stored_rows": 29706,
+  "role_counts_by_budget": {
+    "30": {
+      "excluded_boundary_scaffold": 2421,
+      "training": 3000
+    },
+    "60": {
+      "excluded_boundary_scaffold": 2921,
+      "training": 6000
+    },
+    "120": {
+      "excluded_boundary_scaffold": 3364,
+      "training": 12000
+    }
+  },
+  "boundary_policy": "Only training and boundary-excluded keys are stored. Every other development key is evaluation. If the final selected scaffold exceeds the exact label budget, a deterministic subset enters training and every unselected molecule from that scaffold is excluded from evaluation.",
+  "outcome_access": "No recipient HER values or calculated descriptors were loaded."
+}

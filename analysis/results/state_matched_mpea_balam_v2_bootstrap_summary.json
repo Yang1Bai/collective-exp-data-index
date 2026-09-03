@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "design_sha256": "a250f52f2653f90d000bd70cf6913adaf0b38106c21d1ef5e03969140baae6b4",
+  "replicates": 100000,
+  "groups": 59,
+  "runs": 60,
+  "observed": {
+    "real_q1": {
+      "relative_rmse_gain": 0.07207488704988092,
+      "aug_r2": 0.420957959276945
+    },
+    "real_q4": {
+      "relative_rmse_gain": 0.09209703447787049,
+      "aug_r2": 0.10342111396330977
+    },
+    "shuffled_q4": {
+      "relative_rmse_gain": -0.002637949298610266,
+      "aug_r2": -0.09344744650788295
+    },
+    "q4_minus_q1_gain": 0.020022147427989564,
+    "real_minus_shuffled_q4_gain": 0.09473498377648075
+  },
+  "bootstrap_ci95": {
+    "real_q1_gain": [
+      0.03049970895778255,
+      0.11517911314055065
+    ],
+    "real_q4_gain": [
+      0.044308933960919936,
+      0.14372210375613703
+    ],
+    "real_q4_aug_r2": [
+      -0.15084949423846306,
+      0.29056200473401467
+    ],
+    "shuffled_q4_gain": [
+      -0.01805429410109737,
+      0.01007548509143478
+    ],
+    "q4_minus_q1_gain": [
+      -0.04656631706373531,
+      0.08618555508683236
+    ],
+    "real_minus_shuffled_q4_gain": [
+      0.047966057528137165,
+      0.14335176768094096
+    ]
+  },
+  "gate": {
+    "checks": {
+      "q4_gain_threshold": true,
+      "q4_gain_interval_positive": true,
+      "positive_q4_run_count": true,
+      "q4_augmented_r2_positive": true,
+      "ood_specificity_point_positive": true,
+      "beats_shuffled_interval_positive": true
+    },
+    "pass": true,
+    "decision": "stable-on-this-program"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection and v1 verification exposed the control-architecture mismatch, this is a post-selection robustness and control-correction run, not an independent confirmation. V2 can validate source specificity on this programme but cannot establish prospective discovery or a universal transfer law."
+}

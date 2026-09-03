@@ -1,0 +1,134 @@
+{
+  "status": "safe-mamb-local-screen-complete",
+  "created_utc": "2026-07-23T22:57:33.764980+00:00",
+  "claim_guard": "This method was designed after inspection of earlier target outcomes and is restricted to method development. A favorable result can justify a full frozen portfolio run and later independent confirmation, but cannot itself establish a new cross-domain OOD claim.",
+  "frozen_hashes": {
+    "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+    "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f"
+  },
+  "targets": [
+    "polymer_tensile",
+    "alloy_ys",
+    "electrolyte_conductivity"
+  ],
+  "repeats": 3,
+  "learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "rows": 54,
+  "grouped_results": [
+    {
+      "target": "alloy_ys",
+      "contract": "partially_paired_same_domain_multi_property",
+      "method": "mechanism_bundle_feature_concat",
+      "q1_relative_rmse_gain": 0.12648306979965,
+      "q4_relative_rmse_gain": 0.07030190001689704,
+      "gain_specific": -0.05618116978275294,
+      "q4_r2": -0.23958915463028996,
+      "positive_q4_fraction": 0.7777777777777778,
+      "cells": 9
+    },
+    {
+      "target": "alloy_ys",
+      "contract": "partially_paired_same_domain_multi_property",
+      "method": "safe_crossfit_residual_stack",
+      "q1_relative_rmse_gain": 0.04658662184319039,
+      "q4_relative_rmse_gain": -0.00033943164433568627,
+      "gain_specific": -0.04692605348752608,
+      "q4_r2": -0.5199062115370108,
+      "positive_q4_fraction": 0.1111111111111111,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "contract": "unpaired_cross_database_transport",
+      "method": "mechanism_bundle_feature_concat",
+      "q1_relative_rmse_gain": 0.06188635772771082,
+      "q4_relative_rmse_gain": 0.03564628910793815,
+      "gain_specific": -0.02624006861977267,
+      "q4_r2": -1.7703760676052351,
+      "positive_q4_fraction": 0.5555555555555556,
+      "cells": 9
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "contract": "unpaired_cross_database_transport",
+      "method": "safe_crossfit_residual_stack",
+      "q1_relative_rmse_gain": -0.01731988734010241,
+      "q4_relative_rmse_gain": -0.059969336096898224,
+      "gain_specific": -0.04264944875679583,
+      "q4_r2": -2.2319699782000675,
+      "positive_q4_fraction": 0.1111111111111111,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tensile",
+      "contract": "paired_sparse_multi_property",
+      "method": "mechanism_bundle_feature_concat",
+      "q1_relative_rmse_gain": 0.1090597943032692,
+      "q4_relative_rmse_gain": 0.018784903525104993,
+      "gain_specific": -0.09027489077816421,
+      "q4_r2": -0.14997724553489503,
+      "positive_q4_fraction": 0.6666666666666666,
+      "cells": 9
+    },
+    {
+      "target": "polymer_tensile",
+      "contract": "paired_sparse_multi_property",
+      "method": "safe_crossfit_residual_stack",
+      "q1_relative_rmse_gain": 0.00030438584767564756,
+      "q4_relative_rmse_gain": 0.008995203437056485,
+      "gain_specific": 0.008690817589380838,
+      "q4_r2": -0.18275385156664928,
+      "positive_q4_fraction": 0.1111111111111111,
+      "cells": 9
+    }
+  ],
+  "source_router_summary": [
+    {
+      "target": "alloy_ys",
+      "sentinel": false,
+      "mean_transferability_score": 0.023156989014389687,
+      "positive_score_fraction": 0.18518518518518517,
+      "selected_fraction": 0.18518518518518517
+    },
+    {
+      "target": "alloy_ys",
+      "sentinel": true,
+      "mean_transferability_score": 0.0,
+      "positive_score_fraction": 0.0,
+      "selected_fraction": 0.0
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "sentinel": false,
+      "mean_transferability_score": 0.015560322106057468,
+      "positive_score_fraction": 0.25925925925925924,
+      "selected_fraction": 0.25925925925925924
+    },
+    {
+      "target": "electrolyte_conductivity",
+      "sentinel": true,
+      "mean_transferability_score": 0.002604984380536763,
+      "positive_score_fraction": 0.2222222222222222,
+      "selected_fraction": 0.0
+    },
+    {
+      "target": "polymer_tensile",
+      "sentinel": false,
+      "mean_transferability_score": 0.0007007370673586005,
+      "positive_score_fraction": 0.05555555555555555,
+      "selected_fraction": 0.05555555555555555
+    },
+    {
+      "target": "polymer_tensile",
+      "sentinel": true,
+      "mean_transferability_score": 0.022327145100095758,
+      "positive_score_fraction": 0.2222222222222222,
+      "selected_fraction": 0.0
+    }
+  ]
+}

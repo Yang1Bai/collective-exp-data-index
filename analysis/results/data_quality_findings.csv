@@ -1,0 +1,6 @@
+check,status,evidence
+canonical entity key completeness,pass_with_exclusions,2 of 96184 measurements lack a canonical key; all are flagged and excluded from modeling
+OBELiX official split after canonicalization,pass_after_exclusion,2 test rows (2 normalized compositions) overlapped training and were excluded
+signed organic target preservation,pass,aqsoldb: 8920/9982 values <= 0; freesolv: 558/642 values <= 0
+ISODB thermodynamic validity,pass_analysis_only,pinned archive hash verified; 1103 one-fit-per-system isosteric pairs from 512 DOIs; raw adsorbent identifiers remain outside the formula/SMILES measurement schema
+catalog license completeness,limitation,21 of 118 records have Unknown license

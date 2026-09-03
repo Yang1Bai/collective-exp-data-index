@@ -1,0 +1,64 @@
+{
+  "status": "formal-release-created",
+  "design_sha256": "91a6d65db3fd85954fe0ce37664933beb7bf07bf1340b573aed98e947e3de6c1",
+  "implementation_sha256": "bf519994867c1b920bb331fd958725a4ada7d93601699cdf664d159cb3a223f8",
+  "value_semantics_amendment_sha256": "aa6eed0eb169fbe7686203640549a537ee75e3dcf89b72bce62f024154a150a4",
+  "preoutcome_audit_sha256": "2f36fcea92b709cf56a43a87af72e9b0d83e6be41e2a3716e27293fc07186c0b",
+  "archive_sha256": "8fb2aada83bddd5c4c6b38745b3a39cd860f82520726c1f083efc257053892e0",
+  "release_sha256": "9a8c102631754261a082f1e5b7af77c384f3e580597b37beaf57198121027530",
+  "input_rows_after_property_selection": 102727,
+  "release_rows": 100314,
+  "exact_duplicates_removed": 2413,
+  "property_summary": {
+    "capacity": {
+      "records": 22641,
+      "materials": 3014,
+      "publications": 6852,
+      "value_quantiles": {
+        "0.01": 30.0,
+        "0.1": 116.0,
+        "0.5": 440.0,
+        "0.9": 1043.0,
+        "0.99": 1860.559999999997
+      }
+    },
+    "conductivity": {
+      "records": 12269,
+      "materials": 2186,
+      "publications": 5195,
+      "value_quantiles": {
+        "0.01": 1e-13,
+        "0.1": 1e-07,
+        "0.5": 0.001,
+        "0.9": 3.0,
+        "0.99": 62.127999999999886
+      }
+    },
+    "energy": {
+      "records": 14416,
+      "materials": 4729,
+      "publications": 4182,
+      "value_quantiles": {
+        "0.01": 2.7915,
+        "0.1": 13.3,
+        "0.5": 100.0,
+        "0.9": 1000.0,
+        "0.99": 3281.580000000004
+      }
+    },
+    "voltage": {
+      "records": 50988,
+      "materials": 8005,
+      "publications": 24753,
+      "value_quantiles": {
+        "0.01": 0.025287,
+        "0.1": 0.2,
+        "0.5": 1.2,
+        "0.9": 4.1,
+        "0.99": 5.0
+      }
+    }
+  },
+  "numeric_property_values_read": true,
+  "claim_guard": "A positive formal result is a retrospective within-corpus conductivity-to-rate-conditioned-capacity edge. The strict early-cycle subset is a sensitivity, and independent cross-database confirmation remains necessary."
+}

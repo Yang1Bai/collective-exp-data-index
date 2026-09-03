@@ -1,0 +1,9 @@
+scope,policy,unit,group_value_aggregation,auc20,hit_count20,total_top_units,recall20,first_hit,hit_positions,conditional_randomization_p,shuffled_q025_auc20,shuffled_q975_auc20
+external_candidate,estm_family_first,provenance_group,max,49,4,4,1.0,1,1;7;11;16,0.0019996001,0.0,45.0
+external_candidate,neighbor_entity_consensus,provenance_group,max,47,3,4,0.75,3,3;4;9,0.0019996001,0.0,45.0
+external_candidate,neighbor_family_first_consensus,provenance_group,max,60,4,4,1.0,3,3;4;5;12,0.0019996001,0.0,45.0
+external_candidate,wrong_source_family_first_consensus,provenance_group,max,6,1,4,0.25,15,15,0.0019996001,0.0,45.0
+hard_ood_40pct,estm_family_first,provenance_group,max,39,2,2,1.0,1,1;2,0.0029994001,3.0,36.0
+hard_ood_40pct,neighbor_entity_consensus,provenance_group,max,36,2,2,1.0,1,1;5,0.0029994001,3.0,36.0
+hard_ood_40pct,neighbor_family_first_consensus,provenance_group,max,39,2,2,1.0,1,1;2,0.0029994001,3.0,36.0
+hard_ood_40pct,wrong_source_family_first_consensus,provenance_group,max,18,1,2,0.5,3,3,0.0029994001,3.0,36.0

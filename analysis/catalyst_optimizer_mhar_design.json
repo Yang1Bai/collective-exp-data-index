@@ -1,0 +1,125 @@
+{
+  "design_version": "catalyst-optimizer-mhar-v1",
+  "status": "frozen-before-kl-shampoo-and-delta-mhar-outcomes",
+  "evidence_boundary": "Retrospective method development on already inspected catalyst programmes. Recipient outcomes are used only for the frozen final evaluation, never for optimizer or architecture selection. A new sealed programme remains necessary for prospective confirmation.",
+  "seeds": [
+    20260731,
+    20260732,
+    20260733
+  ],
+  "candidates": {
+    "standard_adamw": {
+      "depth_routing": "standard",
+      "optimizer": "adamw"
+    },
+    "standard_kl_shampoo": {
+      "depth_routing": "standard",
+      "optimizer": "kl_shampoo"
+    },
+    "delta_mhar_adamw": {
+      "depth_routing": "delta_mhar",
+      "optimizer": "adamw"
+    },
+    "delta_mhar_kl_shampoo": {
+      "depth_routing": "delta_mhar",
+      "optimizer": "kl_shampoo"
+    }
+  },
+  "architecture": {
+    "composition_mode": "set_query",
+    "fusion_mode": "cross_attention",
+    "depth_routing_heads": 4,
+    "routing_source": "additive block deltas",
+    "routing_initialization": "zero gate; exact standard-residual function at initialization"
+  },
+  "optimizer": {
+    "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+    "preconditioner": "RootInvKLShampooPreconditionerConfig",
+    "scope": "2-D non-embedding, non-terminal-head tensors",
+    "fallback": "Adam preconditioner for embeddings, vectors, biases, and terminal heads",
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-12,
+    "grafting_epsilon": 1e-8,
+    "factor_matrix_dtype": "float64",
+    "max_preconditioner_dim": 64,
+    "precondition_frequency": 10,
+    "start_preconditioning_step": 10,
+    "weight_decay_type": "decoupled"
+  },
+  "execution": {
+    "specgen": {
+      "source_program": "specgen_source",
+      "target_systems": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "model": {
+        "d_model": 64,
+        "n_heads": 4,
+        "composition_layers": 3,
+        "curve_layers": 3,
+        "condition_layers": 1,
+        "fusion_layers": 1,
+        "patch_size": 8,
+        "dropout": 0.1
+      },
+      "training": {
+        "epochs": 180,
+        "patience": 30,
+        "batch_size": 32,
+        "learning_rate": 0.0007
+      }
+    },
+    "ocx24": {
+      "target_name": "fe_co",
+      "directions": [
+        [
+          "ocx24_uoft",
+          "ocx24_vsp"
+        ],
+        [
+          "ocx24_vsp",
+          "ocx24_uoft"
+        ]
+      ],
+      "model": {
+        "d_model": 48,
+        "n_heads": 4,
+        "composition_layers": 3,
+        "curve_layers": 1,
+        "condition_layers": 1,
+        "fusion_layers": 1,
+        "use_curve": false,
+        "patch_size": 8,
+        "dropout": 0.1
+      },
+      "training": {
+        "epochs": 140,
+        "patience": 24,
+        "batch_size": 64,
+        "learning_rate": 0.0007
+      }
+    }
+  },
+  "screening": {
+    "seed_count": 1,
+    "selection_metric": "median Spearman gain across four SpecGen systems and two OCx24 directions",
+    "maximum_allowed_transfer_unit_regression": 0.1,
+    "recipient_driven_hyperparameter_tuning": false
+  },
+  "confirmation": {
+    "seed_count": 3,
+    "specgen_gate": {
+      "median_A_to_D_spearman_gain_over_best_existing_or_author_reference": 0.02,
+      "maximum_allowed_system_regression": 0.03,
+      "minimum_systems_with_nonnegative_gain": 3
+    },
+    "ocx24_gate": {
+      "median_spearman_gain_over_existing_attention": 0.02,
+      "must_beat_fair_extra_trees_in_both_directions": true
+    }
+  }
+}

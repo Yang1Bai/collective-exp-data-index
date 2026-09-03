@@ -1,0 +1,67 @@
+{
+  "status": "independent-audit-complete",
+  "software": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3"
+  },
+  "data": {
+    "recipient_rows": 180,
+    "recipient_formulations": 36,
+    "donor_rows": 410,
+    "folds": 5,
+    "anchor_replicates_per_fold": 30
+  },
+  "exact_reproduction": {
+    "max_abs_transfer_rho_error": 0.0,
+    "max_abs_baseline_rho_error": 9.71445146547012e-17,
+    "max_abs_difference_error": 8.326672684688674e-17
+  },
+  "reported_delta_rho": 0.24362059430272326,
+  "reproduced_delta_rho": 0.24362059430272326,
+  "difference": 0.0,
+  "shuffled_donor_assessment": {
+    "row_pooled_rho": {
+      "observed": 0.6882662431143434,
+      "shuffled_mean": 0.023785287820962068,
+      "shuffled_q95": 0.3209288837052836,
+      "empirical_one_sided_p": 0.004975124378109453
+    },
+    "within_temperature_mean_rho": {
+      "observed": 0.6941004071997963,
+      "shuffled_mean": 0.022974374396341982,
+      "shuffled_q95": 0.4307167680683598,
+      "empirical_one_sided_p": 0.004975124378109453
+    },
+    "temperature_25C_rho": {
+      "observed": 0.7009640870796632,
+      "shuffled_mean": 0.01702944317475279,
+      "shuffled_q95": 0.46644719056105477,
+      "empirical_one_sided_p": 0.004975124378109453
+    },
+    "formulation_mean_rho": {
+      "observed": 0.6073311197488163,
+      "shuffled_mean": 0.031028858238703796,
+      "shuffled_q95": 0.4996815641061507,
+      "empirical_one_sided_p": 0.014925373134328358
+    },
+    "temperature_25C_top1_hit": {
+      "observed": 0.4,
+      "shuffled_mean": 0.20800000000000002,
+      "shuffled_q95": 0.6,
+      "empirical_one_sided_p": 0.2935323383084577
+    },
+    "temperature_25C_top_quartile_precision": {
+      "observed": 0.9,
+      "shuffled_mean": 0.363,
+      "shuffled_q95": 0.6666666666666666,
+      "empirical_one_sided_p": 0.004975124378109453
+    },
+    "temperature_25C_normalized_regret": {
+      "observed": 0.015427310446785686,
+      "shuffled_mean": 0.3402588547451951,
+      "shuffled_q95": 0.6832830786281571,
+      "empirical_one_sided_p": 0.014925373134328358
+    }
+  },
+  "interpretive_guard": "The reported row-pooled Spearman mixes composition and temperature. Within-temperature, 25 C, and formulation-aggregated metrics are the decision-relevant checks for screening unseen formulations. Alternative target-only baselines are post-hoc robustness diagnostics, not new confirmatory estimands."
+}

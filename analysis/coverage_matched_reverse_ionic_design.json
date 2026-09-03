@@ -1,0 +1,51 @@
+{
+  "design_name": "Coverage-matched Caltech-to-OBELiX reverse ionic borrowing screen",
+  "design_version": "2026-07-23a",
+  "status": "frozen-before-local-outcome-model",
+  "frozen_utc": "2026-07-23T23:30:00-04:00",
+  "claim_guard": "The Caltech and OBELiX outcomes were used in earlier analyses, but this reverse source-to-target edge and coverage-aware implementation were chosen after the new source-coverage audit and before this local outcome model. It is method development, not independent confirmation.",
+  "target": "electrolyte_conductivity",
+  "source": "caltech_experimental_ionic_conductivity",
+  "physical_contract": "same experimental endpoint across two solid-electrolyte databases",
+  "source_selection_evidence_without_target_outcomes": {
+    "caltech_raw_rows": 571,
+    "caltech_rows_after_obelix_doi_and_evaluation_identity_exclusion": 271,
+    "caltech_entities_after_exclusion": 233,
+    "obelix_q4_entities": 25,
+    "caltech_q4_coverage_fraction": 0.32,
+    "thermoelectric_q4_coverage_fraction": 0.0,
+    "coverage_definition": "nearest source distance no larger than the 95th percentile of target-development leave-one-out nearest-neighbor distance in target-development-standardized composition features"
+  },
+  "leakage_exclusion": {
+    "shared_doi": "remove every Caltech row whose normalized DOI occurs anywhere in OBELiX",
+    "target_evaluation_identity": "remove every Caltech row matching any frozen OBELiX evaluation composition",
+    "target_training_identity": "for each target draw, also remove every Caltech row matching a sampled target-training composition",
+    "target_outcomes_in_source_selection": false
+  },
+  "methods": [
+    "caltech_same_endpoint_scalar",
+    "caltech_coverage_aware",
+    "te_electrical_zero_coverage_control",
+    "shuffled_caltech_control"
+  ],
+  "coverage_aware_features": [
+    "source ensemble mean",
+    "source ensemble standard deviation",
+    "nearest source-composition distance",
+    "exp(-distance / target-development-NN95) reliability",
+    "source mean multiplied by reliability"
+  ],
+  "target_learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "local_repeats": 3,
+  "evaluation": {
+    "reuse_frozen_outcome_free_q1_q4": true,
+    "primary": "Q4 relative RMSE gain of coverage-aware borrowing versus target-only",
+    "specificity": "Q4 gain minus Q1 gain",
+    "controls": "zero-coverage physical neighbor and shuffled source",
+    "escalation": "positive Q4 gain and specificity, positive Q4 R2, and superiority to both controls across at least two target learners"
+  }
+}

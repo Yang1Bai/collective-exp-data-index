@@ -1,0 +1,359 @@
+{
+  "dataset": {
+    "programs": {
+      "ocx24_uoft": 1230,
+      "ocx24_vsp": 940
+    },
+    "samples": 2170,
+    "targets": {
+      "fe_co": 2170
+    },
+    "unique_groups": 434,
+    "with_curves": 0,
+    "with_surface_composition": 0,
+    "with_targets": 2170,
+    "with_uncertainty": 0
+  },
+  "directions": {
+    "ocx24_uoft_to_ocx24_vsp": {
+      "attention_extra_trees_hybrid": {
+        "attention_weight": 0.5,
+        "metrics": {
+          "mae": 14.284510326984286,
+          "r2": -0.0705000549662762,
+          "rmse": 19.51302956613178,
+          "spearman": 0.5671811950810793
+        }
+      },
+      "composition_attention_only": {
+        "ensemble_metrics": {
+          "mae": 15.430912429705906,
+          "r2": -0.20715558728647387,
+          "rmse": 20.721108273955732,
+          "spearman": 0.3455726172055989
+        },
+        "runs": [
+          {
+            "best_epoch": 28,
+            "metrics": {
+              "mae": 17.845350224954352,
+              "r2": -0.6467426785432706,
+              "rmse": 24.201608221270714,
+              "spearman": -0.035126621581672256
+            },
+            "parameter_count": 164022,
+            "seed": 20260731,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 10.37014672405268,
+              "r2": 0.39214158823281575,
+              "rmse": 13.94595741683957,
+              "spearman": 0.6302646029436859
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 34,
+            "metrics": {
+              "mae": 16.072764404827133,
+              "r2": -0.1296809943927797,
+              "rmse": 20.045147983414097,
+              "spearman": 0.2628140645721651
+            },
+            "parameter_count": 164022,
+            "seed": 20260732,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 9.391120547239026,
+              "r2": 0.5964902784602325,
+              "rmse": 12.789462834879835,
+              "spearman": 0.7919668501157927
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 41,
+            "metrics": {
+              "mae": 16.804900670966884,
+              "r2": -0.40047728203448196,
+              "rmse": 22.318725446858597,
+              "spearman": 0.32985174963557046
+            },
+            "parameter_count": 164022,
+            "seed": 20260733,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 10.232856590031624,
+              "r2": 0.5507274959730327,
+              "rmse": 12.818711197568316,
+              "spearman": 0.6775930547381128
+            },
+            "validation_split": "group-held-out"
+          }
+        ]
+      },
+      "composition_condition_attention": {
+        "ensemble_metrics": {
+          "mae": 15.294420956313132,
+          "r2": -0.2234809319207225,
+          "rmse": 20.860751912296713,
+          "spearman": 0.54560848980643
+        },
+        "runs": [
+          {
+            "best_epoch": 24,
+            "metrics": {
+              "mae": 16.070992229151987,
+              "r2": -0.4663932853048989,
+              "rmse": 22.83792210169238,
+              "spearman": 0.348025908961202
+            },
+            "parameter_count": 164022,
+            "seed": 20260731,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 7.047033374156229,
+              "r2": 0.6744054337437251,
+              "rmse": 10.206708073795154,
+              "spearman": 0.8570033386626241
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 47,
+            "metrics": {
+              "mae": 14.79181837641467,
+              "r2": -0.03376566502415401,
+              "rmse": 19.175310604513136,
+              "spearman": 0.47643051811222553
+            },
+            "parameter_count": 164022,
+            "seed": 20260732,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 6.0954116195631345,
+              "r2": 0.8162444157280024,
+              "rmse": 8.63069115831521,
+              "spearman": 0.9021813636918878
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 24,
+            "metrics": {
+              "mae": 17.80196655856037,
+              "r2": -0.5623989918507442,
+              "rmse": 23.573677108514776,
+              "spearman": 0.49225860168572094
+            },
+            "parameter_count": 164022,
+            "seed": 20260733,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 6.772680391643226,
+              "r2": 0.7717028656312814,
+              "rmse": 9.137758439903717,
+              "spearman": 0.8665753608731847
+            },
+            "validation_split": "group-held-out"
+          }
+        ]
+      },
+      "extra_trees_composition": {
+        "metrics": {
+          "mae": 14.262181349347598,
+          "r2": -0.06633197627073328,
+          "rmse": 19.475004736066648,
+          "spearman": 0.35547459406938836
+        }
+      },
+      "extra_trees_composition_condition": {
+        "metrics": {
+          "mae": 13.72034315424109,
+          "r2": 0.013755434378140419,
+          "rmse": 18.7293914753803,
+          "spearman": 0.5264212881851257
+        }
+      }
+    },
+    "ocx24_vsp_to_ocx24_uoft": {
+      "attention_extra_trees_hybrid": {
+        "attention_weight": 0.5,
+        "metrics": {
+          "mae": 13.859390410891164,
+          "r2": 0.23457420037030596,
+          "rmse": 17.250713197120046,
+          "spearman": 0.5786225340478347
+        }
+      },
+      "composition_attention_only": {
+        "ensemble_metrics": {
+          "mae": 18.009377403151454,
+          "r2": -0.1791824251127354,
+          "rmse": 21.411446369350017,
+          "spearman": 0.345525695724572
+        },
+        "runs": [
+          {
+            "best_epoch": 19,
+            "metrics": {
+              "mae": 18.340286673917714,
+              "r2": -0.21059340661752257,
+              "rmse": 21.694750438731013,
+              "spearman": 0.33406924367438856
+            },
+            "parameter_count": 164022,
+            "seed": 20260731,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 9.774512142096906,
+              "r2": 0.5195959170628202,
+              "rmse": 13.560799135000394,
+              "spearman": 0.6115907882776868
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 3,
+            "metrics": {
+              "mae": 17.557404151038877,
+              "r2": -0.10507516389801452,
+              "rmse": 20.727714387826456,
+              "spearman": 0.3845030106192137
+            },
+            "parameter_count": 164022,
+            "seed": 20260732,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 9.110448115297222,
+              "r2": 0.3512943041890131,
+              "rmse": 12.845591886788787,
+              "spearman": 0.5062201689079806
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 14,
+            "metrics": {
+              "mae": 18.563913857872837,
+              "r2": -0.27657434988698837,
+              "rmse": 22.278121261870336,
+              "spearman": 0.35464939922128086
+            },
+            "parameter_count": 164022,
+            "seed": 20260733,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 10.112533777930716,
+              "r2": 0.524412797883291,
+              "rmse": 13.659369062015594,
+              "spearman": 0.7625921881353324
+            },
+            "validation_split": "group-held-out"
+          }
+        ]
+      },
+      "composition_condition_attention": {
+        "ensemble_metrics": {
+          "mae": 13.819910660829606,
+          "r2": 0.24451624093033075,
+          "rmse": 17.13831310572193,
+          "spearman": 0.5799195738289855
+        },
+        "runs": [
+          {
+            "best_epoch": 21,
+            "metrics": {
+              "mae": 14.26211539667686,
+              "r2": 0.18286785065851374,
+              "rmse": 17.823855615061532,
+              "spearman": 0.5491149153033821
+            },
+            "parameter_count": 164022,
+            "seed": 20260731,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 8.32760909178324,
+              "r2": 0.6467964444136798,
+              "rmse": 11.627717494946449,
+              "spearman": 0.7286041592376746
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 14,
+            "metrics": {
+              "mae": 15.100346408156119,
+              "r2": 0.10599080601292166,
+              "rmse": 18.643459305395837,
+              "spearman": 0.5547630886192508
+            },
+            "parameter_count": 164022,
+            "seed": 20260732,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 7.946085083357724,
+              "r2": 0.4960037075777579,
+              "rmse": 11.322541868602569,
+              "spearman": 0.6982741301496347
+            },
+            "validation_split": "group-held-out"
+          },
+          {
+            "best_epoch": 32,
+            "metrics": {
+              "mae": 13.141461002518101,
+              "r2": 0.3155688746214892,
+              "rmse": 16.31249465050902,
+              "spearman": 0.5638671740724948
+            },
+            "parameter_count": 164022,
+            "seed": 20260733,
+            "validation_group_overlap": [],
+            "validation_metrics": {
+              "mae": 7.511412817666024,
+              "r2": 0.7165760061519756,
+              "rmse": 10.54469121122047,
+              "spearman": 0.8543741847872285
+            },
+            "validation_split": "group-held-out"
+          }
+        ]
+      },
+      "extra_trees_composition": {
+        "metrics": {
+          "mae": 15.981370797457705,
+          "r2": 0.01796315654549263,
+          "rmse": 19.539767750658164,
+          "spearman": 0.3572235282861025
+        }
+      },
+      "extra_trees_composition_condition": {
+        "metrics": {
+          "mae": 14.29111934137205,
+          "r2": 0.18199592712868728,
+          "rmse": 17.833362581313438,
+          "spearman": 0.571063446594678
+        }
+      }
+    }
+  },
+  "evidence_boundary": "Post-outcome method-development benchmark: capacity and ranking loss were selected after inspecting the two cross-source directions. Source labels are grouped by physical sample and the complete other source is held out, but a fresh programme is required for confirmation.",
+  "seeds": [
+    20260731,
+    20260732,
+    20260733
+  ],
+  "status": "complete",
+  "target": "fe_co",
+  "transfer_gate": {
+    "all_direction_hybrid_gains_nonnegative": true,
+    "attention_ensemble_spearman_median_ge_0_50": true,
+    "hybrid_gain_over_fair_extra_trees_median_ge_0_02": true,
+    "passed": true,
+    "values": {
+      "attention_ensemble_spearman_median": 0.5627640318177077,
+      "hybrid_gain_over_fair_extra_trees_median": 0.024159497174555178
+    }
+  }
+}

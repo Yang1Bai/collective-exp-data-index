@@ -1,0 +1,6 @@
+temperature,formulations,raw_experiments,median_replicates,min_replicates,max_replicates
+-30.0,108,499,4.0,1,8
+-20.0,108,500,4.0,1,8
+0.0,108,500,4.0,1,8
+30.0,108,500,4.0,1,8
+60.0,108,500,4.0,1,8

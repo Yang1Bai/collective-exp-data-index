@@ -1,0 +1,54 @@
+{
+  "source_commit": "4cfcd47e4402f4ff40f893cbbcaa6b86734d8ac6",
+  "source_archive_sha256": "680f30a4597bf830486d8012981f03da42f1b7e64a392d6ab45fceaf9db88f45",
+  "ingestion": {
+    "json_files": 54253,
+    "ineligible_isotherms": 20688,
+    "eligible_isotherms": 33565
+  },
+  "candidate_systems": 17103,
+  "fit_systems_primary_fraction": 1312,
+  "primary": {
+    "n_systems": 1103,
+    "n_dois": 512,
+    "intercept": 2.7381884201216873,
+    "slope": 0.23437063101217026,
+    "slope_se_hc3": 0.007664432047544049,
+    "slope_ci_lo": 0.2193320881969057,
+    "slope_ci_hi": 0.24940917382743483,
+    "p_hc3": 3.6510094466599477e-149,
+    "r2": 0.6369527364455693,
+    "T_iso_K": 513.1716142219228,
+    "temperature_harmonic_median_K": 300.58509923933025,
+    "temperature_min_K": 20.0,
+    "temperature_max_K": 873.0,
+    "T_iso_relative_to_harmonic": 1.707242360052346
+  },
+  "bootstrap_95": {
+    "slope": [
+      0.21815649930853162,
+      0.25376488822041054
+    ],
+    "r2": [
+      0.5808058593159302,
+      0.6955825535196654
+    ],
+    "T_iso_K": [
+      473.9519174152882,
+      551.3122710487414
+    ]
+  },
+  "artifact_gate": {
+    "T_iso_inside_pooled_temperature_range": true,
+    "T_iso_within_10pct_of_median_harmonic_temperature": false,
+    "artifact_consistent": false
+  },
+  "krug_null": {
+    "p_null_r2_at_least_observed": 0.000999000999000999,
+    "r2_median": 0.00277363306535644,
+    "r2_q025": 1.9257370337202875e-05,
+    "r2_q975": 0.012252239431369752,
+    "T_iso_median_K": 7251.212700248202
+  },
+  "interpretation": "Artifact gate and null are diagnostic; no universal adsorption compensation mechanism is inferred."
+}

@@ -1,0 +1,75 @@
+{
+  "design_version": "2026-07-14a",
+  "status": "designated-before-first-external-outcome-run-prompted-by-internal-discovery",
+  "seed": 20260714,
+  "dataset": "birdshot-high-entropy-alloy-campaign",
+  "split": {
+    "type": "rolling_campaign_year",
+    "folds": [
+      {"id": "year1_to_year2", "development_years": [1], "test_year": 2},
+      {"id": "years1_2_to_year3", "development_years": [1, 2], "test_year": 3}
+    ],
+    "canonical_material_overlap_allowed": 0
+  },
+  "inference": {
+    "target_budget": 30,
+    "primary_learner": "ridge_alpha_10",
+    "training_repeats": 100,
+    "bootstrap_replicates": 5000,
+    "feature_permutations": 999,
+    "permutation_training_repeats": 20,
+    "sensitivity_repeats": 40,
+    "learning_curve_repeats": 60,
+    "learning_curve_budgets": [8, 15, 30, 45, 60, 75],
+    "external_min_relative_rmse": 0.05,
+    "external_min_target_sample_fraction_saved": 0.30,
+    "external_min_positive_learners_of_three": 2,
+    "external_requires_positive_effect_in_each_time_fold": true,
+    "primary_test": "one_sided_within_year_feature_mapping_permutation",
+    "multiplicity": "one_pre_specified_primary_edge; other_edges_are_exploratory"
+  },
+  "primary_hypothesis": {
+    "target": "birdshot_ys",
+    "source": "alloy_uts",
+    "direction": "positive",
+    "rationale": "The internally selected Borg UTS to Borg yield-strength edge is tested on an independent experimental campaign and future campaign years."
+  },
+  "targets": {
+    "birdshot_ys": {
+      "property": "Yield Strength (MPa)",
+      "transform": "log10",
+      "label": "BIRDSHOT yield strength",
+      "sources": [
+        {"task": "alloy_uts", "neighborhood": 3, "relation": "cross-dataset-physical-neighbor", "rationale": "paired tensile strength endpoints"},
+        {"task": "alloy_hardness", "neighborhood": 2, "relation": "cross-dataset-physical-neighbor", "rationale": "hardness-strength relation"},
+        {"task": "alloy_elongation", "neighborhood": 1, "relation": "cross-dataset-same-domain", "rationale": "strength-ductility relation is non-universal"},
+        {"task": "te_thermal", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated transport endpoint"},
+        {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated selectivity endpoint"}
+      ]
+    },
+    "birdshot_uts": {
+      "property": "UTS_True (Mpa)",
+      "transform": "log10",
+      "label": "BIRDSHOT ultimate tensile strength",
+      "sources": [
+        {"task": "alloy_ys", "neighborhood": 3, "relation": "cross-dataset-physical-neighbor", "rationale": "paired tensile strength endpoints"},
+        {"task": "alloy_hardness", "neighborhood": 2, "relation": "cross-dataset-physical-neighbor", "rationale": "hardness-strength relation"},
+        {"task": "alloy_elongation", "neighborhood": 1, "relation": "cross-dataset-same-domain", "rationale": "strength-ductility relation is non-universal"},
+        {"task": "te_thermal", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated transport endpoint"},
+        {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated selectivity endpoint"}
+      ]
+    },
+    "birdshot_hardness": {
+      "property": "Hardness, HV",
+      "transform": "log10",
+      "label": "BIRDSHOT Vickers hardness",
+      "sources": [
+        {"task": "alloy_ys", "neighborhood": 2, "relation": "cross-dataset-physical-neighbor", "rationale": "hardness-strength relation"},
+        {"task": "alloy_uts", "neighborhood": 2, "relation": "cross-dataset-physical-neighbor", "rationale": "hardness-strength relation"},
+        {"task": "alloy_elongation", "neighborhood": 1, "relation": "cross-dataset-same-domain", "rationale": "ductility-mechanical-response relation"},
+        {"task": "te_thermal", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated transport endpoint"},
+        {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated selectivity endpoint"}
+      ]
+    }
+  }
+}

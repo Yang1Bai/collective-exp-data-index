@@ -1,0 +1,89 @@
+{
+  "status": "independently-verified-postrelease-adjacency-diagnostic",
+  "method_selection_was_outcome_guided": true,
+  "frozen_primary_status": "non-evaluable-stage2-release",
+  "condition_groups": 22,
+  "bootstrap_rows": 40000,
+  "reconstructed_inference": {
+    "adjacency_only minus target_only": {
+      "effect": 0.06122855129459648,
+      "calendar_effect": 0.07950578356830595,
+      "cycle_effect": 0.042951319020887,
+      "ci95": [
+        0.025583559020170486,
+        0.09162467732722578
+      ],
+      "calendar_ci95": [
+        0.01701148499886948,
+        0.12372657793579744
+      ],
+      "cycle_ci95": [
+        0.010589663558325888,
+        0.08536540911687532
+      ],
+      "one_sided_sign_flip_p": 0.0036,
+      "holm_adjusted_p": 0.0108
+    },
+    "adjacency_only minus wrong_property": {
+      "effect": 0.06853633671096382,
+      "calendar_effect": 0.07909513171695437,
+      "cycle_effect": 0.05797754170497327,
+      "ci95": [
+        0.03498309883169634,
+        0.10036195766104652
+      ],
+      "calendar_ci95": [
+        0.027423796455045498,
+        0.12664523822531845
+      ],
+      "cycle_ci95": [
+        0.014960556638236167,
+        0.10116954032424418
+      ],
+      "one_sided_sign_flip_p": 0.0009,
+      "holm_adjusted_p": 0.0036
+    },
+    "adjacency_only minus shuffled_source": {
+      "effect": 0.11718949728082967,
+      "calendar_effect": 0.2177529520819642,
+      "cycle_effect": 0.016626042479695124,
+      "ci95": [
+        0.017159638033643516,
+        0.24023807308142933
+      ],
+      "calendar_ci95": [
+        0.041551230925025655,
+        0.4527423535995675
+      ],
+      "cycle_ci95": [
+        -0.07137815828478358,
+        0.07489484160283029
+      ],
+      "one_sided_sign_flip_p": 0.0356,
+      "holm_adjusted_p": 0.0356
+    },
+    "adjacency_only minus random_features": {
+      "effect": 0.07466681795576541,
+      "calendar_effect": 0.11041059093130468,
+      "cycle_effect": 0.03892304498022614,
+      "ci95": [
+        0.03422905362177072,
+        0.10745962028564006
+      ],
+      "calendar_ci95": [
+        0.046649938504031645,
+        0.14528450502488677
+      ],
+      "cycle_ci95": [
+        -0.015496203462905044,
+        0.09456200163930613
+      ],
+      "one_sided_sign_flip_p": 0.007,
+      "holm_adjusted_p": 0.014
+    }
+  },
+  "maximum_adjacency_global_prediction_difference": 5.684341886080802e-14,
+  "summary_sha256": "924edeba12f2bd9694332272a5cccd3c594fff1c9c35f1efe0fd059b7876034d",
+  "claim_guard": "The diagnostic is numerically reproducible but remains post hoc and cannot establish confirmation.",
+  "errors": []
+}

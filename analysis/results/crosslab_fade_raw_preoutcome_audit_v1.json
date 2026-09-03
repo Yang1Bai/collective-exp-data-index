@@ -1,0 +1,35 @@
+{
+  "status": "eligible-preoutcome",
+  "design_sha256": "717a44dbe48d6e49d6fbe69021eb8ef5e1450f55716e81da62a4f1624ddbe3f8",
+  "raw_restoration_amendment_sha256": "961ac9bbea22b838379c21e3d8620b1439bd6d744c5f2f42cf8517db49f5f58e",
+  "recipient": "HUST LFP/graphite, 77 cells",
+  "candidate_time_boundary": "cycles 1-100 only",
+  "recipient_outcome_statistics_reported": false,
+  "recipient_total_cycle_counts_reported": false,
+  "recipient_cells": 77,
+  "recipient_cells_with_usable_early_release": 77,
+  "realized_feature_intersection": [
+    "log10_var_delta_qv",
+    "log10_abs_min_delta_qv",
+    "capacity_slope_2_100",
+    "capacity_intercept_2_100",
+    "qd100_over_qref",
+    "ce_mean_10_100",
+    "ce_std_10_100",
+    "mean_charge_c_rate",
+    "mean_discharge_c_rate"
+  ],
+  "excluded_noncommon_features": [
+    "temperature",
+    "internal_resistance"
+  ],
+  "gate_checks": {
+    "recipient_cells_at_least_20": true,
+    "usable_early_fraction_at_least_0_90": true,
+    "delta_qv_available_at_least_0_95": true,
+    "protocol_descriptors_available_at_least_0_95": true
+  },
+  "early_release_sha256": "88f1aadd1476be906a16e84074c9a2e1e0720d1c30b2145650f8f0b521be04d4",
+  "sealed_outcomes_sha256": "9e4c46e2711380d813572ac659d52444f128e541821e385e1efaca5d725afde9",
+  "metadata_sha256": "58d43e47427104fe4b42e92d36a73cd8c9b4aedec1811895e42ea6f443d2c795"
+}

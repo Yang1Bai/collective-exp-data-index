@@ -1,0 +1,63 @@
+{
+  "budgets": [
+    60,
+    120,
+    240
+  ],
+  "claim_guard": "A positive result establishes one retrospective experimental-database borrowing edge from molecular optical spectroscopy to organic photovoltaic device prediction. It does not prove universal optoelectronic transfer, prospective device discovery, or benefit when device state is unavailable.",
+  "created_utc": "2026-07-27T03:11:24.462088+00:00",
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "direct_outcomes": [
+    "pce",
+    "voc",
+    "jsc",
+    "ff"
+  ],
+  "draw_sha256": "c4e754192f88f9e5d475f17b55a2a0a55aaca45d32ee3d364b5413d2d090ea72",
+  "feature_dimensions": {
+    "card": 21,
+    "categorical_encoding": "fit within each labelled target draw",
+    "categorical_input_columns": 6,
+    "numeric": 8,
+    "structure": 4096,
+    "support": 4
+  },
+  "learners": [
+    "extra_trees",
+    "random_forest"
+  ],
+  "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3",
+  "methods": [
+    "structure_only",
+    "state_aware_target_only",
+    "state_aware_plus_real_solid_optical_card",
+    "state_aware_plus_shuffled_source_card",
+    "state_aware_plus_state_blind_optical_card",
+    "state_aware_plus_permuted_real_card",
+    "state_aware_plus_gaussian_card"
+  ],
+  "metric_outcomes": [
+    "pce",
+    "voc",
+    "jsc",
+    "ff",
+    "pce_physics_recombined"
+  ],
+  "metric_rows": 168000,
+  "metrics_sha256": "ee1f2afbbe74f41dfa24b0ca747bc1c9f277dbc50f6523d2fb84697ba779e566",
+  "mode": "formal",
+  "primary_prediction_rows": 1453200,
+  "primary_predictions_sha256": "570d2c94e7039f68b99ac78216123d5ed8d4862ba0062b3c3363c70082e4649a",
+  "repeats": 200,
+  "run_sha256": "2cfd7de66cba312da10a881af70ec9af93977252bbdc8e74c967180acf194701",
+  "scopes": [
+    "qualified_hard_ood_40pct",
+    "source_qualified_external",
+    "full_external",
+    "source_qualified_double_scaffold_ood"
+  ],
+  "source_feature_sha256": "082a81a262a5c11166dc35312aa211fa4c68b5aba543b63abde13331c9bd0ba1",
+  "status": "model-run-complete",
+  "target_archive_sha256": "3a8199aa3e9e78e20bbb486240972aa361d8ea69fa69d27ce42de45c3ada0095",
+  "trees": 500
+}

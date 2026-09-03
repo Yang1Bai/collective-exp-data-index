@@ -1,0 +1,217 @@
+{
+  "configs_tested": [
+    {
+      "adversarial_weight": 0.0,
+      "composition_mode": "set_query",
+      "contrastive_weight": 0.0,
+      "depth_routing": "delta_mhar_sublayer",
+      "desc": "Delta-MHAR sublayer routing (no additional loss)",
+      "name": "delta_mhar",
+      "use_target": false
+    },
+    {
+      "adversarial_weight": 0.1,
+      "composition_mode": "set_query",
+      "contrastive_weight": 0.0,
+      "depth_routing": "standard",
+      "desc": "Adversarial GRP properly with target samples",
+      "name": "adversarial_with_target",
+      "use_target": true
+    },
+    {
+      "adversarial_weight": 0.0,
+      "composition_mode": "set_query",
+      "contrastive_weight": 0.1,
+      "depth_routing": "delta_mhar_sublayer",
+      "desc": "Contrastive + Delta-MHAR (best combo hypothesis)",
+      "name": "contrastive_delta_mhar",
+      "use_target": false
+    },
+    {
+      "adversarial_weight": 0.07,
+      "composition_mode": "set_query",
+      "contrastive_weight": 0.07,
+      "depth_routing": "delta_mhar_sublayer",
+      "desc": "Adversarial + Contrastive + Delta-MHAR (full combo)",
+      "name": "adv_contrastive_delta_mhar",
+      "use_target": true
+    }
+  ],
+  "ranking": [
+    {
+      "name": "delta_mhar",
+      "spearman": 0.5881397726027733
+    },
+    {
+      "name": "contrastive_delta_mhar",
+      "spearman": 0.583443783793012
+    },
+    {
+      "name": "adv_contrastive_delta_mhar",
+      "spearman": 0.582494388786554
+    },
+    {
+      "name": "adversarial_with_target",
+      "spearman": 0.27310810305773736
+    }
+  ],
+  "results": {
+    "adv_contrastive_delta_mhar": {
+      "description": "Adversarial + Contrastive + Delta-MHAR (full combo)",
+      "directions": {
+        "specgen_A": {
+          "mae": 25.85287131657676,
+          "r2": -0.002242800234693698,
+          "rmse": 43.28102217343748,
+          "spearman": 0.5475267721166571
+        },
+        "specgen_B": {
+          "mae": 31.221856350368935,
+          "r2": -0.32874847324287937,
+          "rmse": 37.65959554362333,
+          "spearman": 0.6174620054564509
+        },
+        "specgen_C": {
+          "mae": 65.25700484987289,
+          "r2": -5.282175083772008,
+          "rmse": 70.70348627320915,
+          "spearman": 0.155013948483104
+        },
+        "specgen_D": {
+          "mae": 22.064569430881093,
+          "r2": 0.2793672962420912,
+          "rmse": 29.25556726474234,
+          "spearman": 0.7603146630484732
+        }
+      },
+      "mean_transfer_spearman": 0.5200793472761713,
+      "median_transfer_spearman": 0.582494388786554,
+      "source_spearman": 0.9078464739219229,
+      "spearmans": [
+        0.5475267721166571,
+        0.6174620054564509,
+        0.155013948483104,
+        0.7603146630484732
+      ],
+      "wall_time": 164.3
+    },
+    "adversarial_with_target": {
+      "description": "Adversarial GRP properly with target samples",
+      "directions": {
+        "specgen_A": {
+          "mae": 25.243826390826513,
+          "r2": 0.025426793625450972,
+          "rmse": 42.67939653552017,
+          "spearman": 0.5848606653925964
+        },
+        "specgen_B": {
+          "mae": 31.01871812608508,
+          "r2": -0.3161303116098324,
+          "rmse": 37.48035605355738,
+          "spearman": 0.6354960487652065
+        },
+        "specgen_C": {
+          "mae": 74.12523488847033,
+          "r2": -6.844291719826981,
+          "rmse": 79.0064737790491,
+          "spearman": -0.21391546932243738
+        },
+        "specgen_D": {
+          "mae": 41.91305881076387,
+          "r2": -1.121458453077408,
+          "rmse": 50.19596470378828,
+          "spearman": -0.03864445927712169
+        }
+      },
+      "mean_transfer_spearman": 0.24194919638956094,
+      "median_transfer_spearman": 0.27310810305773736,
+      "source_spearman": 0.8953104666702846,
+      "spearmans": [
+        0.5848606653925964,
+        0.6354960487652065,
+        -0.21391546932243738,
+        -0.03864445927712169
+      ],
+      "wall_time": 74.9
+    },
+    "contrastive_delta_mhar": {
+      "description": "Contrastive + Delta-MHAR (best combo hypothesis)",
+      "directions": {
+        "specgen_A": {
+          "mae": 26.709755161830362,
+          "r2": -0.04473336638203795,
+          "rmse": 44.18895884647881,
+          "spearman": 0.5501724810889678
+        },
+        "specgen_B": {
+          "mae": 31.547165546719995,
+          "r2": -0.34800337877057896,
+          "rmse": 37.931476888625824,
+          "spearman": 0.6167150864970562
+        },
+        "specgen_C": {
+          "mae": 51.33016541496155,
+          "r2": -3.332431017692725,
+          "rmse": 58.7153479555427,
+          "spearman": 0.2597414284720858
+        },
+        "specgen_D": {
+          "mae": 19.056377544100336,
+          "r2": 0.43246168981973276,
+          "rmse": 25.962656723833028,
+          "spearman": 0.7555302252197835
+        }
+      },
+      "mean_transfer_spearman": 0.5455398053194733,
+      "median_transfer_spearman": 0.583443783793012,
+      "source_spearman": 0.9060260361169344,
+      "spearmans": [
+        0.5501724810889678,
+        0.6167150864970562,
+        0.2597414284720858,
+        0.7555302252197835
+      ],
+      "wall_time": 107.8
+    },
+    "delta_mhar": {
+      "description": "Delta-MHAR sublayer routing (no additional loss)",
+      "directions": {
+        "specgen_A": {
+          "mae": 25.99054361979167,
+          "r2": 0.0021393340235008607,
+          "rmse": 43.18629910737583,
+          "spearman": 0.5524072352662597
+        },
+        "specgen_B": {
+          "mae": 30.65900375124009,
+          "r2": -0.28854119587253857,
+          "rmse": 37.085438301104055,
+          "spearman": 0.623872309939287
+        },
+        "specgen_C": {
+          "mae": 52.82889709472655,
+          "r2": -3.597148003066107,
+          "rmse": 60.48254449762635,
+          "spearman": 0.23157752649813484
+        },
+        "specgen_D": {
+          "mae": 19.330573575458843,
+          "r2": 0.4152146213601071,
+          "rmse": 26.35419727372487,
+          "spearman": 0.7608426010157768
+        }
+      },
+      "mean_transfer_spearman": 0.5421749181798645,
+      "median_transfer_spearman": 0.5881397726027733,
+      "source_spearman": 0.9062739208596572,
+      "spearmans": [
+        0.5524072352662597,
+        0.623872309939287,
+        0.23157752649813484,
+        0.7608426010157768
+      ],
+      "wall_time": 31.8
+    }
+  },
+  "round1_baseline_median": 0.5837
+}

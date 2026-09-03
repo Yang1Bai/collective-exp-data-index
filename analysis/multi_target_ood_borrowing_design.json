@@ -1,0 +1,154 @@
+{
+  "design_version": "2026-07-23a",
+  "frozen_utc": "2026-07-23T19:22:11Z",
+  "status": "frozen-post-outcome-systematic-method-development-before-this-analysis",
+  "seed": 20260723,
+  "provenance": {
+    "parent_design": "analysis/knowledge_map_design.json",
+    "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+    "data_snapshot": "data/collective.sqlite",
+    "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "parent_runner": "analysis/run_knowledge_map.py",
+    "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f"
+  },
+  "claim_guard": "This systematic benchmark was designed after earlier component outcomes had been inspected. It can test whether a fixed borrowing procedure preferentially repairs held-out OOD regions across a declared portfolio, identify null and harmful edges, and generate hypotheses for external confirmation. It cannot retroactively create prospective validation, establish universal transfer, or prove laboratory discovery acceleration.",
+  "eligibility": {
+    "source_of_tasks_and_edges": "All target tasks and all five real donor edges per target are inherited without replacement from knowledge_map_design.json.",
+    "minimum_evaluation_groups": 12,
+    "included_targets": [
+      "te_zt",
+      "alloy_ys",
+      "catalysis_h2",
+      "electrolyte_conductivity",
+      "solubility",
+      "hydration",
+      "polymer_tensile",
+      "polymer_tm"
+    ],
+    "excluded_targets": {
+      "photo_z_pipi": "Only five intact evaluation groups; below the frozen minimum of 12."
+    }
+  },
+  "partition": {
+    "target_development": "Reuse the parent knowledge-map development indices.",
+    "target_evaluation": "Union of the parent discovery and confirmation indices; no target evaluation outcome is used for fitting, donor selection, or OOD assignment.",
+    "formula_distance": "Euclidean distance in elemental-composition features standardized using the complete target-development feature matrix only.",
+    "molecule_distance": "One minus the maximum exact Morgan radius-2 1024-bit Tanimoto similarity to any complete target-development molecule.",
+    "entity_to_group": "The median entity distance is assigned to each intact element-set or Bemis-Murcko-scaffold evaluation group.",
+    "strata": "Evaluation groups are sorted by distance with deterministic hash tie-breaking and divided into four approximately group-balanced quartiles. Q1 is ID-like and Q4 is OOD-like.",
+    "primary_id_scope": "q1",
+    "primary_ood_scope": "q4",
+    "all_groups_preserved": true,
+    "outcomes_used_to_define_ood": false
+  },
+  "representation": {
+    "formula": "Element fractions plus eight compact composition descriptors inherited from analysis/common.py.",
+    "molecule": "Morgan radius-2 1024-bit fingerprint inherited from analysis/run_knowledge_map.py.",
+    "donor_signal": "A leakage-excluded donor model prediction evaluated at every recipient entity and injected as one additional feature.",
+    "donor_training_exclusion": "Every recipient evaluation material identity present in a donor task is excluded before donor fitting."
+  },
+  "learners": {
+    "primary": "ridge_alpha_10",
+    "sensitivities": [
+      "random_forest",
+      "extra_trees"
+    ],
+    "tree_estimators": 100,
+    "tree_min_samples_leaf": 2,
+    "tree_max_features": 0.7,
+    "note": "Learners are fixed before this benchmark run; no per-edge hyperparameter search is allowed."
+  },
+  "inference": {
+    "formal_repeats": 100,
+    "smoke_repeats": 3,
+    "formal_bootstrap_resamples": 5000,
+    "smoke_bootstrap_resamples": 200,
+    "formal_sign_flip_permutations": 9999,
+    "smoke_sign_flip_permutations": 199,
+    "primary_effect": "gain_specific = gain_ood_q4 - gain_id_q1, where gain = (RMSE_target_only - RMSE_augmented) / RMSE_target_only.",
+    "hierarchical_bootstrap": "Resample target-training repeats and intact evaluation groups. A shared repeat draw is used for Q1 and Q4; group draws are nested within scope.",
+    "control_contrasts": "Paired target-training-repeat bootstrap for primary-versus-wrong and primary-versus-shuffled OOD-gain differences.",
+    "primary_p_value": "One-sided exact-or-Monte-Carlo sign-flip test on repeat-level Q4 relative-RMSE gain.",
+    "multiplicity": "Holm adjustment across the eight designated primary donor edges.",
+    "programme_bootstrap": "Resample the seven independent recipient programme clusters, not individual edges.",
+    "conditionality": "Intervals are conditional on the frozen dataset snapshot, representations, evaluation split, and learners."
+  },
+  "targets": {
+    "te_zt": {
+      "programme_cluster": "estm",
+      "primary_source": "te_seebeck",
+      "wrong_source": "alloy_ys",
+      "primary_edge_class": "within-database-neighbor"
+    },
+    "alloy_ys": {
+      "programme_cluster": "mpea",
+      "primary_source": "alloy_uts",
+      "wrong_source": "te_thermal",
+      "primary_edge_class": "within-database-neighbor"
+    },
+    "catalysis_h2": {
+      "programme_cluster": "ocx",
+      "primary_source": "catalysis_voltage",
+      "wrong_source": "alloy_ys",
+      "primary_edge_class": "within-database-neighbor"
+    },
+    "electrolyte_conductivity": {
+      "programme_cluster": "obelix",
+      "primary_source": "te_electrical",
+      "wrong_source": "alloy_ys",
+      "primary_edge_class": "cross-database-neighbor"
+    },
+    "solubility": {
+      "programme_cluster": "aqsoldb",
+      "primary_source": "hydration",
+      "wrong_source": "photo_e_pipi",
+      "primary_edge_class": "cross-database-neighbor"
+    },
+    "hydration": {
+      "programme_cluster": "freesolv",
+      "primary_source": "solubility",
+      "wrong_source": "photo_e_pipi",
+      "primary_edge_class": "cross-database-neighbor"
+    },
+    "polymer_tensile": {
+      "programme_cluster": "openpoly",
+      "primary_source": "polymer_young",
+      "wrong_source": "photo_e_pipi",
+      "primary_edge_class": "within-database-neighbor"
+    },
+    "polymer_tm": {
+      "programme_cluster": "openpoly",
+      "primary_source": "polymer_crystallization",
+      "wrong_source": "photo_e_pipi",
+      "primary_edge_class": "within-database-neighbor"
+    }
+  },
+  "edge_gate": {
+    "mean_ood_relative_rmse_gain_minimum": 0.05,
+    "hierarchical_ood_gain_ci_lower_above": 0.0,
+    "mean_augmented_ood_r2_above": 0.0,
+    "positive_ood_gain_repeat_fraction_minimum": 0.8,
+    "hierarchical_gain_specific_ci_lower_above": 0.0,
+    "primary_minus_wrong_ood_gain_ci_lower_above": 0.0,
+    "primary_minus_shuffled_ood_gain_ci_lower_above": 0.0,
+    "learners_with_positive_mean_ood_gain_minimum": 2,
+    "learners_total": 3,
+    "holm_adjusted_one_sided_p_below": 0.05,
+    "post_exclusion_identity_overlap_equals": 0
+  },
+  "classification": {
+    "ood-repair-gate-passed": "All frozen edge-gate criteria pass.",
+    "ood-improvement-not-specific": "Q4 improvement is positive with a positive interval, but the OOD-minus-ID or control-specificity gate fails.",
+    "directional-ood-improvement": "Mean Q4 improvement is positive but its interval includes zero.",
+    "harmful": "Mean Q4 improvement is negative and its upper interval is below zero.",
+    "unresolved": "Any remaining result."
+  },
+  "cohort_gate": {
+    "minimum_independent_programme_clusters_with_full_primary_edge_pass": 2,
+    "programme_bootstrap_mean_primary_ood_gain_ci_lower_above": 0.0,
+    "cross_database_upgrade_minimum_full_passes": 2,
+    "cross_database_designated_edges": 3,
+    "interpretation": "Passing the cohort gate supports a reproducible selective OOD-repair method-development result. Passing the cross-database upgrade additionally supports the narrower cross-database claim. Neither substitutes for a new outcome-unseen external programme."
+  },
+  "retention_rule": "All real, shuffled, null, and harmful edge results are retained and reported."
+}

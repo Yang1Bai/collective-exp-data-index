@@ -1,0 +1,53 @@
+{
+  "claim_guard": "Subsequent-candidate ranking corroboration within the same published programme; candidates were selected by SpecGen, so this does not establish unbiased or prospective search acceleration.",
+  "metrics": {
+    "A": {
+      "mae": 12.38847264285702,
+      "normalized_simple_regret": 1.3625304136253034,
+      "permutation_holm_p": 0.05987940120598794,
+      "permutation_one_sided_p": 0.05987940120598794,
+      "precision_best_fraction": 0.0,
+      "rmse": 15.115035467224622,
+      "spearman": 0.35939849624060144,
+      "target": "A",
+      "temporal_rank_corroboration": false
+    },
+    "B": {
+      "mae": 17.426637952380894,
+      "normalized_simple_regret": 0.060093896713613745,
+      "permutation_holm_p": 0.03497965020349796,
+      "permutation_one_sided_p": 0.01748982510174898,
+      "precision_best_fraction": 0.5,
+      "rmse": 22.53637219373887,
+      "spearman": 0.47518796992481205,
+      "target": "B",
+      "temporal_rank_corroboration": true
+    },
+    "C": {
+      "mae": 54.601348452380876,
+      "normalized_simple_regret": 0.23198594024604705,
+      "permutation_holm_p": 0.026159738402615977,
+      "permutation_one_sided_p": 0.008719912800871992,
+      "precision_best_fraction": 0.5,
+      "rmse": 56.1491857582084,
+      "spearman": 0.5310267393210225,
+      "target": "C",
+      "temporal_rank_corroboration": true
+    },
+    "D": {
+      "mae": 38.09661645238104,
+      "normalized_simple_regret": 0.28955532574974135,
+      "permutation_holm_p": 0.01011989880101199,
+      "permutation_one_sided_p": 0.0025299747002529975,
+      "precision_best_fraction": 0.25,
+      "rmse": 42.05899236563393,
+      "spearman": 0.6160211041131975,
+      "target": "D",
+      "temporal_rank_corroboration": true
+    }
+  },
+  "pdf_sha256": "290494694b54db4907688c9904112e11bda7405a387144c51ffa6311353d8507",
+  "protocol_sha256": "52db7d173985a4ea82eec3b806fc26682708b9b887255edb0b12d339fb1015a0",
+  "source_data_sha256": "9233301a19f2ca717749a0b1ef4720d2e1e688f1c6f34cb46bc076e8183a7f31",
+  "status": "complete-retrospective-temporal-check"
+}

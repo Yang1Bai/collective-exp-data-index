@@ -1,0 +1,149 @@
+{
+  "status": "complete-method-development",
+  "design_sha256": "835b5daaf2794df3b384003b67fe806e471ced404074be8eaf5d358e7905f73d",
+  "source_rows": 10407,
+  "source_salts": 22,
+  "target_rows": 1827,
+  "target_exact_formulations": 176,
+  "external_zero_shot": {
+    "full_mixture": {
+      "log_rmse": 0.3362571639836055,
+      "log_r2": 0.731524435225858,
+      "raw_rmse": 3.6101303546381023,
+      "raw_r2": 0.6294395421521868,
+      "spearman": 0.8708256451064949
+    },
+    "contrasts": {
+      "LiBF4_fluorinated_control": {
+        "relative_log_rmse_gain_mean": 0.4043235348292308,
+        "relative_log_rmse_gain_ci95": [
+          0.35259308243006127,
+          0.4527950156025204
+        ],
+        "spearman_gain_mean": 0.13025905115225037,
+        "spearman_gain_ci95": [
+          0.10624936047181668,
+          0.1552876579365079
+        ],
+        "raw_r2_gain_mean": 0.7355205473021375,
+        "raw_r2_gain_ci95": [
+          0.6672935248183333,
+          0.8043235391985736
+        ]
+      },
+      "LiBOB_wrong_salt_control": {
+        "relative_log_rmse_gain_mean": 0.3079072591958162,
+        "relative_log_rmse_gain_ci95": [
+          0.24698522940019313,
+          0.36289584857591217
+        ],
+        "spearman_gain_mean": 0.12470202599427671,
+        "spearman_gain_ci95": [
+          0.093281497688867,
+          0.15877946711285412
+        ],
+        "raw_r2_gain_mean": 0.38591710412969865,
+        "raw_r2_gain_ci95": [
+          0.2214952348950019,
+          0.5789762775851863
+        ]
+      },
+      "LiPF6_only": {
+        "relative_log_rmse_gain_mean": 0.2875715314295328,
+        "relative_log_rmse_gain_ci95": [
+          0.22941755866445787,
+          0.33878923501303326
+        ],
+        "spearman_gain_mean": 0.05481788898263694,
+        "spearman_gain_ci95": [
+          0.036598670126172746,
+          0.07491437439217943
+        ],
+        "raw_r2_gain_mean": -0.0013023096808585898,
+        "raw_r2_gain_ci95": [
+          -0.05061002005087263,
+          0.04827867133703053
+        ]
+      },
+      "chemistry_permuted": {
+        "relative_log_rmse_gain_mean": 0.2716453997508473,
+        "relative_log_rmse_gain_ci95": [
+          0.227764959053339,
+          0.31903717395480036
+        ],
+        "spearman_gain_mean": 0.13377388080175726,
+        "spearman_gain_ci95": [
+          0.10756920044767015,
+          0.1622469958482487
+        ],
+        "raw_r2_gain_mean": 0.18178759619967824,
+        "raw_r2_gain_ci95": [
+          0.1389404717803916,
+          0.22402548817030776
+        ]
+      },
+      "state_only": {
+        "relative_log_rmse_gain_mean": 0.2863565143085098,
+        "relative_log_rmse_gain_ci95": [
+          0.24025488395992026,
+          0.33518452583771186
+        ],
+        "spearman_gain_mean": 0.15956912869176104,
+        "spearman_gain_ci95": [
+          0.1315467315502223,
+          0.18801039096935923
+        ],
+        "raw_r2_gain_mean": 0.22971089839063763,
+        "raw_r2_gain_ci95": [
+          0.18237733526786457,
+          0.2791813981843229
+        ]
+      },
+      "without_LiPF6": {
+        "relative_log_rmse_gain_mean": 0.16380877355819745,
+        "relative_log_rmse_gain_ci95": [
+          0.12662864273177035,
+          0.20244240874000655
+        ],
+        "spearman_gain_mean": 0.04138146064689053,
+        "spearman_gain_ci95": [
+          0.023066103275299548,
+          0.06192619654019057
+        ],
+        "raw_r2_gain_mean": 0.249706491620497,
+        "raw_r2_gain_ci95": [
+          0.21362506148499624,
+          0.29114963238190616
+        ]
+      }
+    }
+  },
+  "five_anchor_macro": {
+    "anchor_constant": {
+      "log_rmse": 0.6770151393422777,
+      "spearman": NaN,
+      "raw_r2": -0.0665054341288341
+    },
+    "source_frozen": {
+      "log_rmse": 0.3309172097775586,
+      "spearman": 0.8730658502051405,
+      "raw_r2": 0.6312642946797336
+    },
+    "source_shrinkage_adapter": {
+      "log_rmse": 0.33025408204825973,
+      "spearman": 0.8726737858110178,
+      "raw_r2": 0.6526460020313084
+    },
+    "target_only_ridge": {
+      "log_rmse": 0.7664029859617253,
+      "spearman": 0.0706949827794848,
+      "raw_r2": -0.3764730742253961
+    }
+  },
+  "salt_exclusion_portfolio": {
+    "targets": 9,
+    "full_beats_state_on_rmse_and_rank": 7
+  },
+  "claim_guard": "This analysis was designed after the 2026 LiAsF6 outcomes and published transfer results were inspected. It is method development and retrospective external benchmarking, not prospective confirmation. It may justify freezing the representation and routing rule for an independent electrolyte programme, but it cannot by itself establish a new confirmatory edge or laboratory discovery acceleration.",
+  "mode": "formal"
+}

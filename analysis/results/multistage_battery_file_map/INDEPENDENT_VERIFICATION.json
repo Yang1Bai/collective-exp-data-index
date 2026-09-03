@@ -1,0 +1,26 @@
+{
+  "status": "verified-complete-metadata-only-map",
+  "rows": 279,
+  "unique_file_ids": 279,
+  "unique_internal_serials": 261,
+  "unique_internal_serial_serial_pairs": 279,
+  "unique_stage_serial_pairs": 279,
+  "stage_counts": {
+    "1": 141,
+    "2": 138
+  },
+  "mapping_method_counts": {
+    "exact-archive-serial-plus-internal-serial": 230,
+    "archive-serial-plus-complement-of-exactly-mapped-twin-stage": 43,
+    "archive-serial-plus-validated-lab-date-envelope": 6
+  },
+  "metadata_conflict_counts": {
+    "testpoint_metadata_conflict": 3,
+    "archive_internal_serial_conflicts_with_experiments_meta": 49,
+    "validated_lab_date_envelope_required_after_both_twin_internal_serials_conflicted": 6,
+    "testpoint_format_variant": 44
+  },
+  "numeric_csv_entries_opened": false,
+  "map_csv_sha256": "56b532a14295bd1bfbcb374e445a619e69c1fb7cfaed21d36506b16dc0e490b5",
+  "errors": []
+}

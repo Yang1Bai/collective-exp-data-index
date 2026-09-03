@@ -1,0 +1,85 @@
+{
+  "aggregate": {
+    "gains": [
+      -0.2737790535093251,
+      -1.0481877811443867,
+      0.11109612962104805,
+      -0.047388502319566206
+    ],
+    "mean_gain": -0.31456480183805746,
+    "median_gain": -0.16058377791444564,
+    "positive_directions": 1,
+    "total_directions": 4,
+    "wall_time_s": 38.2
+  },
+  "pairs": {
+    "MPEA\u2192BIRDSHOT": {
+      "baseline": {
+        "zero_shot_mae": 370.3534066763181,
+        "zero_shot_r2": -15.170759622778444,
+        "zero_shot_rmse": 515.2834949122689,
+        "zero_shot_spearman": -0.4075075195921042
+      },
+      "contrastive": {
+        "zero_shot_mae": 391.25304774676766,
+        "zero_shot_r2": -16.334526021613748,
+        "zero_shot_rmse": 533.5031729358823,
+        "zero_shot_spearman": -0.4548960219116704
+      },
+      "gain_vs_baseline": -0.047388502319566206,
+      "source_samples": 395,
+      "target_samples": 171
+    },
+    "MPEA\u2192steels": {
+      "baseline": {
+        "zero_shot_mae": 455.12267995981074,
+        "zero_shot_r2": -1.8031563255100203,
+        "zero_shot_rmse": 504.63954580645446,
+        "zero_shot_spearman": -0.11041880153168364
+      },
+      "contrastive": {
+        "zero_shot_mae": 618.4092858730219,
+        "zero_shot_r2": -3.7898947806087167,
+        "zero_shot_rmse": 659.6606956909242,
+        "zero_shot_spearman": 0.0006773280893644101
+      },
+      "gain_vs_baseline": 0.11109612962104805,
+      "source_samples": 395,
+      "target_samples": 312
+    },
+    "steels\u2192BIRDSHOT": {
+      "baseline": {
+        "zero_shot_mae": 1003.2964278951366,
+        "zero_shot_r2": -61.28511426488763,
+        "zero_shot_rmse": 1011.2840412175328,
+        "zero_shot_spearman": 0.5585969914671227
+      },
+      "contrastive": {
+        "zero_shot_mae": 996.0844053256922,
+        "zero_shot_r2": -60.45116071915637,
+        "zero_shot_rmse": 1004.4910378497985,
+        "zero_shot_spearman": -0.48959078967726405
+      },
+      "gain_vs_baseline": -1.0481877811443867,
+      "source_samples": 312,
+      "target_samples": 171
+    },
+    "steels\u2192MPEA": {
+      "baseline": {
+        "zero_shot_mae": 565.0334465837199,
+        "zero_shot_r2": -0.3952418552856989,
+        "zero_shot_rmse": 669.0543921259941,
+        "zero_shot_spearman": 0.12838037812788475
+      },
+      "contrastive": {
+        "zero_shot_mae": 560.38830683639,
+        "zero_shot_r2": -0.3770892834515658,
+        "zero_shot_rmse": 664.6878302340587,
+        "zero_shot_spearman": -0.14539867538144036
+      },
+      "gain_vs_baseline": -0.2737790535093251,
+      "source_samples": 312,
+      "target_samples": 395
+    }
+  }
+}

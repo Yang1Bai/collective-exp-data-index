@@ -1,0 +1,6 @@
+-r requirements.txt
+
+# Fixed research baseline. TabPFN-v2 weights carry the Prior Labs licence
+# (Apache-2.0 plus attribution requirement); later default weights are
+# non-commercial and are intentionally not selected by the benchmark.
+tabpfn==8.1.0

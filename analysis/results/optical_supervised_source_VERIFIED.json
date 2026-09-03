@@ -1,0 +1,10 @@
+{
+  "status": "verified-complete-source-representation",
+  "focused_config_sha256": "85af6621a6027bbe4b15685b464a1804cb1aaa85eb0d1f92e7a15687aa509494",
+  "source_summary_sha256": "b5fb3b1ddd22f8ed3eadeff3b8f3b24b3e5568b8ba14c60aa484062a9cc29130",
+  "embedding_sha256": "3db83f28f703be59a1037a61f79fce7c0aa2679c980eb101247052a41a8087c8",
+  "oof_sha256": "d11ce8889b067d283fdd1f051c9d70620a03d667900acdb65dae3f98253541b2",
+  "checkpoint_count": 21,
+  "target_rows": 668,
+  "blind_outcome_access": "No blind HER outcome was opened or required for verification."
+}

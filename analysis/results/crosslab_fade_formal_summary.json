@@ -1,0 +1,156 @@
+{
+  "status": "formal-complete",
+  "design": "analysis/crosslab_fade_transfer_design.json",
+  "amendment": "analysis/CROSSLAB_FADE_INFRASTRUCTURE_AMENDMENT.md",
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "donor_valid_cells": 113,
+  "wrong_chem_valid_cells": 54,
+  "donor_oof_life_spearman": 0.5752314335271032,
+  "recipient_cells": 77,
+  "recipient_uncensored_evaluated": 77,
+  "abstention_rate_transfer": 1.0,
+  "method_metrics_budget0": {
+    "recipient_only": {
+      "rmse_log10_life": 0.4506217899075387,
+      "mape_life": 2.6791257050454034,
+      "spearman": 0.09054341825847334,
+      "r2_log10_life": -32.19716142884741,
+      "coverage90": 0.1038961038961039
+    },
+    "donor_prior_transfer": {
+      "rmse_log10_life": 0.4506217899075387,
+      "mape_life": 2.6791257050454034,
+      "spearman": 0.09054341825847334,
+      "r2_log10_life": -32.19716142884741,
+      "coverage90": 0.1038961038961039
+    },
+    "shuffled_donor": {
+      "rmse_log10_life": 0.4506217899075387,
+      "mape_life": 2.6791257050454034,
+      "spearman": 0.09054341825847334,
+      "r2_log10_life": -32.19716142884741,
+      "coverage90": 0.1038961038961039
+    },
+    "wrong_chemistry_prior": {
+      "rmse_log10_life": 0.4506217899075387,
+      "mape_life": 2.6791257050454034,
+      "spearman": 0.09054341825847334,
+      "r2_log10_life": -32.19716142884741,
+      "coverage90": 0.1038961038961039
+    },
+    "prior_only": {
+      "rmse_log10_life": 0.3482747904385321,
+      "mape_life": 0.8084126014789582,
+      "spearman": 0.08362854834716903,
+      "r2_log10_life": -18.829905879613968,
+      "coverage90": 0.07792207792207792
+    },
+    "gaussian_prior": {
+      "rmse_log10_life": 0.4506217899075387,
+      "mape_life": 2.6791257050454034,
+      "spearman": 0.09054341825847334,
+      "r2_log10_life": -32.19716142884741,
+      "coverage90": 0.1038961038961039
+    },
+    "oracle_all_recipient": {
+      "rmse_log10_life": 0.11953488890827162,
+      "n": 77
+    }
+  },
+  "contrasts_budget0": [
+    {
+      "contrast": "donor_prior_transfer_vs_recipient_only",
+      "relative_rmse_reduction": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "fraction_cells_improved": 0.0,
+      "sign_flip_p_one_sided": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "contrast": "donor_prior_transfer_vs_shuffled_donor",
+      "relative_rmse_reduction": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "fraction_cells_improved": 0.0,
+      "sign_flip_p_one_sided": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "contrast": "donor_prior_transfer_vs_wrong_chemistry_prior",
+      "relative_rmse_reduction": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "fraction_cells_improved": 0.0,
+      "sign_flip_p_one_sided": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "contrast": "donor_prior_transfer_vs_prior_only",
+      "relative_rmse_reduction": -0.29386852645905215,
+      "ci95": [
+        -0.439215929047114,
+        -0.08121641514495778
+      ],
+      "fraction_cells_improved": 0.2597402597402597,
+      "sign_flip_p_one_sided": 0.999960000399996,
+      "holm_p": 1.0
+    },
+    {
+      "contrast": "donor_prior_transfer_vs_gaussian_prior",
+      "relative_rmse_reduction": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "fraction_cells_improved": 0.0,
+      "sign_flip_p_one_sided": 1.0,
+      "holm_p": 1.0
+    }
+  ],
+  "budget_mean_rmse": {
+    "5": {
+      "donor_prior_transfer": 0.4648834498485548,
+      "gaussian_prior": 0.4648834498485548,
+      "prior_only": 0.35566268573888116,
+      "recipient_only": 0.4648834498485548,
+      "shuffled_donor": 0.4648834498485548,
+      "wrong_chemistry_prior": 0.4648834498485548
+    },
+    "10": {
+      "donor_prior_transfer": 0.46264233906465513,
+      "gaussian_prior": 0.46264233906465513,
+      "prior_only": 0.35521205980195875,
+      "recipient_only": 0.46264233906465513,
+      "shuffled_donor": 0.46264233906465513,
+      "wrong_chemistry_prior": 0.46264233906465513
+    }
+  },
+  "success_gate": {
+    "checks": {
+      "relative_rmse_reduction_at_least_0_10": false,
+      "ci95_lower_above_zero": false,
+      "holm_p_below_0_05": false,
+      "margin_over_shuffled_at_least_0_05": false,
+      "margin_over_wrong_chem_at_least_0_05": false,
+      "absolute_r2_above_zero": false,
+      "coverage_not_degraded_more_than_5pp": true,
+      "fraction_cells_improved_at_least_0_65": false
+    },
+    "pass": false,
+    "decision": "null-harmful-or-incomplete-edge"
+  },
+  "predictions_sha256": "a57c912349defa914458f1e0e402cf47bd49d51c548b6ced54063924d8f0ea5f",
+  "metrics_sha256": "ae3e8f8fa197b57e1aad2e8c56807900cc92282f463ca1a1c2796d06c364f9ac",
+  "claim_guard": "A passing result establishes one outcome-blind, cross-laboratory, parameter-level borrowing edge for LFP capacity fade (same nominal cell model, different laboratory). It does not establish universal battery transfer, cross-chemistry transfer, or prospective cell design."
+}

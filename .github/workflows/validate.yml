@@ -1,0 +1,49 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  catalog-and-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install reproducibility environment
+        run: python -m pip install -r scripts/requirements.txt -r analysis/requirements.txt
+      - name: Validate catalog metadata
+        run: python scripts/validate_catalog.py
+      - name: Verify database summaries and generated indexes
+        run: |
+          python scripts/build_exports.py
+          python scripts/build_database_guide.py
+          git diff --exit-code -- \
+            CATALOG.md \
+            catalog/catalog.csv \
+            catalog_map.html \
+            research/data/DATABASE_GUIDE.md
+      - name: Verify manuscript-facing evidence package
+        run: python paper/reproduction/verify_paper_package.py
+      - name: Build pinned local snapshot
+        run: python scripts/localdb/build_localdb.py
+      - name: Audit snapshot
+        run: python analysis/audit_snapshot.py
+      - name: Run manuscript model contract tests
+        run: >-
+          python -m pytest -q
+          tests/test_multi_target_ood_borrowing.py
+          tests/test_mixture_response_transfer.py
+          tests/test_electrolyte_programme_interaction.py
+      - name: Regenerate Caltech external-policy figure data
+        run: python analysis/make_caltech_external_policy_figure.py
+      - name: Verify deterministic Caltech figure source tables
+        run: |
+          git diff --exit-code -- \
+            analysis/results/figure_caltech_policy_panel_a.csv \
+            analysis/results/figure_caltech_policy_panel_b.csv \
+            analysis/results/figure_caltech_policy_panel_c.csv

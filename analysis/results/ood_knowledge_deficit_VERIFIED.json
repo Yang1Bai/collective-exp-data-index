@@ -1,0 +1,9 @@
+{
+  "status": "verified-complete",
+  "design_sha256": "31ce9fa600d42abc28cf6e6b5ae0eb7cbb6c89d7307c3726a98076ed10388213",
+  "input_sha256": "a2ccdd88de18ccdc4e11d2f87026938d42dfcd3b56567b7cc912a27905f79b7b",
+  "metric_rows": 30000,
+  "contrast_rows": 24000,
+  "diagnostic_rows": 1000,
+  "claim_guard": "This analysis quantifies the problem geometry and localizes existing source effects. It cannot create an independent OBELiX transfer claim or redefine the frozen screening and sequential nulls."
+}

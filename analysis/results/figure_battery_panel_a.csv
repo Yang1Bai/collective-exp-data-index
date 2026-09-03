@@ -1,0 +1,6 @@
+step,title,subtitle
+1,Stage 1 source,2021 measurements upstream only
+2,Freeze prediction,source model fit before Stage 2 outcomes
+3,Stage 2 target,2023 condition groups 138 released cells
+4,Outcome-unseen test,135 endpoints 22 evaluable groups
+5,coverage boundary,135 evaluable of 138 Stage 2 cells; one condition group excluded

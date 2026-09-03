@@ -1,0 +1,49 @@
+target,source,label,domain,kind,total_n,training_n_after_target_evaluation_exclusion,raw_evaluation_key_overlap,post_exclusion_overlap,source_groups,group_cv_r2_mean,group_cv_r2_sd,relation,neighborhood,edge_class,is_shuffled_control,parent_source
+te_zt,te_power_factor,Thermoelectric power factor,thermoelectric,formula,870,522,348,0,181,0.13650109986478817,0.11261986916853393,constitutive-calibration,3,real-inherited-edge,False,
+te_zt,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,522,348,0,181,0.3824718208798545,0.11796643226488147,constitutive-calibration,3,real-inherited-edge,False,
+te_zt,te_seebeck,Thermoelectric Seebeck coefficient,thermoelectric,formula,870,522,348,0,181,0.20607269066647219,0.045122618792021195,physical-neighbor,2,real-inherited-edge,False,
+te_zt,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.315555898071724,0.099103362277743,distant-control,0,real-inherited-edge,False,
+te_zt,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097637,0.11722958780914076,distant-control,0,real-inherited-edge,False,
+te_zt,shuffled::te_seebeck,Shuffled Thermoelectric Seebeck coefficient,thermoelectric,formula,870,522,348,0,181,0.20607269066647219,0.045122618792021195,shuffled-control,-1,shuffled-control,True,te_seebeck
+alloy_ys,alloy_uts,Alloy ultimate tensile strength,multi-principal-element alloy,formula,238,162,76,0,66,0.4208036608330712,0.03901712915857416,physical-neighbor,3,real-inherited-edge,False,
+alloy_ys,alloy_hardness,Alloy hardness,multi-principal-element alloy,formula,377,297,80,0,109,0.5741066646027674,0.11970881896550958,physical-neighbor,2,real-inherited-edge,False,
+alloy_ys,alloy_elongation,Alloy elongation,multi-principal-element alloy,formula,253,158,95,0,70,-0.04142664030259776,0.2684644510133855,same-domain,1,real-inherited-edge,False,
+alloy_ys,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,870,0,0,301,0.5720583980809733,0.060103777012170415,distant-control,0,real-inherited-edge,False,
+alloy_ys,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097637,0.11722958780914076,distant-control,0,real-inherited-edge,False,
+alloy_ys,shuffled::alloy_uts,Shuffled Alloy ultimate tensile strength,multi-principal-element alloy,formula,238,162,76,0,66,0.4208036608330712,0.03901712915857416,shuffled-control,-1,shuffled-control,True,alloy_uts
+catalysis_h2,catalysis_co,CO2R CO Faradaic efficiency,CO2 electroreduction,formula,212,126,86,0,28,-0.23968657351641762,0.1332485660691061,closure-calibration,3,real-inherited-edge,False,
+catalysis_h2,catalysis_voltage,CO2R cell voltage,CO2 electroreduction,formula,212,126,86,0,28,-0.8244101594523424,0.875203831281252,same-domain,2,real-inherited-edge,False,
+catalysis_h2,te_zt,Thermoelectric ZT,thermoelectric,formula,870,870,0,0,301,0.2749497749396796,0.12664590959525993,distant-control,0,real-inherited-edge,False,
+catalysis_h2,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.315555898071724,0.099103362277743,distant-control,0,real-inherited-edge,False,
+catalysis_h2,electrolyte_conductivity,Solid-electrolyte ionic conductivity,solid electrolyte,formula,500,500,0,0,160,0.4087008253995328,0.07127104985843906,distant-control,0,real-inherited-edge,False,
+catalysis_h2,shuffled::catalysis_voltage,Shuffled CO2R cell voltage,CO2 electroreduction,formula,212,126,86,0,28,-0.8244101594523424,0.875203831281252,shuffled-control,-1,shuffled-control,True,catalysis_voltage
+electrolyte_conductivity,te_electrical,Thermoelectric electrical conductivity,thermoelectric,formula,870,870,0,0,301,0.3413687082759897,0.14107781356905794,cross-domain-transport,2,real-inherited-edge,False,
+electrolyte_conductivity,te_power_factor,Thermoelectric power factor,thermoelectric,formula,870,870,0,0,301,0.4313089446097977,0.10038053675489704,cross-domain-transport,1,real-inherited-edge,False,
+electrolyte_conductivity,te_thermal,Thermoelectric thermal conductivity,thermoelectric,formula,870,870,0,0,301,0.5720583980809733,0.060103777012170415,cross-domain-transport,1,real-inherited-edge,False,
+electrolyte_conductivity,alloy_ys,Alloy yield strength,multi-principal-element alloy,formula,395,395,0,0,150,0.315555898071724,0.099103362277743,distant-control,0,real-inherited-edge,False,
+electrolyte_conductivity,catalysis_h2,CO2R H2 Faradaic efficiency,CO2 electroreduction,formula,212,212,0,0,46,0.23641691307097637,0.11722958780914076,distant-control,0,real-inherited-edge,False,
+electrolyte_conductivity,shuffled::te_electrical,Shuffled Thermoelectric electrical conductivity,thermoelectric,formula,870,870,0,0,301,0.3413687082759897,0.14107781356905794,shuffled-control,-1,shuffled-control,True,te_electrical
+solubility,hydration,Hydration free energy,aqueous molecular thermodynamics,molecule,642,571,71,0,335,0.46270755082403675,0.038303904561988185,cross-dataset-thermodynamic,3,real-inherited-edge,False,
+solubility,pka_acid,Molecular pKa,aqueous molecular acid-base,molecule,4966,4905,61,0,1630,0.2801872259308941,0.08418240068137599,cross-dataset-ionization,2,real-inherited-edge,False,
+solubility,pka_base,Molecular conjugate-acid pKa,aqueous molecular acid-base,molecule,6711,6651,60,0,1822,0.3802585298402832,0.08059525309124083,cross-dataset-ionization,2,real-inherited-edge,False,
+solubility,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.2948165316695153,0.45711293224920985,distant-control,0,real-inherited-edge,False,
+solubility,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,304,0,0,216,0.33161993548111385,0.06353467411180255,distant-control,0,real-inherited-edge,False,
+solubility,shuffled::hydration,Shuffled Hydration free energy,aqueous molecular thermodynamics,molecule,642,571,71,0,335,0.46270755082403675,0.038303904561988185,shuffled-control,-1,shuffled-control,True,hydration
+hydration,solubility,Aqueous solubility,aqueous molecular thermodynamics,molecule,9980,9772,208,0,4775,0.40965857839659475,0.15594811531192437,cross-dataset-thermodynamic,3,real-inherited-edge,False,
+hydration,pka_acid,Molecular pKa,aqueous molecular acid-base,molecule,4966,4945,21,0,1647,0.2672294737761732,0.10864290238802593,cross-dataset-ionization,1,real-inherited-edge,False,
+hydration,pka_base,Molecular conjugate-acid pKa,aqueous molecular acid-base,molecule,6711,6652,59,0,1823,0.3804196356421586,0.08762999987658929,cross-dataset-ionization,1,real-inherited-edge,False,
+hydration,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.2948165316695153,0.45711293224920985,distant-control,0,real-inherited-edge,False,
+hydration,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,304,0,0,216,0.33161993548111385,0.06353467411180255,distant-control,0,real-inherited-edge,False,
+hydration,shuffled::solubility,Shuffled Aqueous solubility,aqueous molecular thermodynamics,molecule,9980,9772,208,0,4775,0.40965857839659475,0.15594811531192437,shuffled-control,-1,shuffled-control,True,solubility
+polymer_tensile,polymer_young,Polymer Young's modulus,polymer,molecule,82,50,32,0,39,-0.017064464205022983,0.2720450914043896,physical-neighbor,3,real-inherited-edge,False,
+polymer_tensile,polymer_hardness,Polymer hardness,polymer,molecule,49,29,20,0,22,-1.2294257517780114,0.9511003577076452,physical-neighbor,2,real-inherited-edge,False,
+polymer_tensile,polymer_elongation,Polymer elongation at break,polymer,molecule,70,40,30,0,32,-0.1510139833249411,0.21218721676774696,same-domain,2,real-inherited-edge,False,
+polymer_tensile,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,272,32,0,194,0.3319677024865018,0.20630674070969685,same-domain,1,real-inherited-edge,False,
+polymer_tensile,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.2948165316695153,0.45711293224920985,distant-control,0,real-inherited-edge,False,
+polymer_tensile,shuffled::polymer_young,Shuffled Polymer Young's modulus,polymer,molecule,82,50,32,0,39,-0.017064464205022983,0.2720450914043896,shuffled-control,-1,shuffled-control,True,polymer_young
+polymer_tm,polymer_tg,Polymer glass-transition temperature,polymer,molecule,304,270,34,0,194,0.32011535590714324,0.049042786007611826,physical-neighbor,3,real-inherited-edge,False,
+polymer_tm,polymer_crystallization,Polymer crystallization temperature,polymer,molecule,64,41,23,0,31,0.009944647905680023,0.16023511362171117,physical-neighbor,3,real-inherited-edge,False,
+polymer_tm,polymer_td,Polymer decomposition temperature,polymer,molecule,84,50,34,0,39,-0.11399485853165925,0.19912825922684899,same-domain,2,real-inherited-edge,False,
+polymer_tm,polymer_tensile,Polymer tensile strength,polymer,molecule,78,46,32,0,36,-0.3433071346369026,0.21887803567599562,same-domain,1,real-inherited-edge,False,
+polymer_tm,photo_e_pipi,Photoswitch E π-π* wavelength,molecular photoswitch,molecule,383,383,0,0,45,-0.2948165316695153,0.45711293224920985,distant-control,0,real-inherited-edge,False,
+polymer_tm,shuffled::polymer_crystallization,Shuffled Polymer crystallization temperature,polymer,molecule,64,41,23,0,31,0.009944647905680023,0.16023511362171117,shuffled-control,-1,shuffled-control,True,polymer_crystallization

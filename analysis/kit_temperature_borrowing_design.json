@@ -1,0 +1,91 @@
+{
+  "design_version": "2026-07-14a",
+  "status": "designated-before-first-target-outcome-model-run-after-descriptive-sample-and-correlation-audit-not-externally-preregistered",
+  "seed": 20260716,
+  "dataset": {
+    "id": "kit-electrolyte-conductivity-5035",
+    "record_doi": "10.5281/zenodo.7244939",
+    "file_name": "Conductivtiy_experiment.csv",
+    "raw_url": "https://zenodo.org/api/records/7244939/files/Conductivtiy_experiment.csv/content",
+    "raw_md5": "f84cfeb764e5d4db22cdb8b1253a0935",
+    "raw_sha256": "22b3445590b2d3a5c3ce48c9f784ca8af795dc66181eb0efc347efe31849c994",
+    "raw_rows_expected": 5035,
+    "independent_formulations_expected": 109,
+    "license": "CC-BY-4.0"
+  },
+  "analysis_unit": {
+    "unit": "unique_formulation",
+    "formulation_key": ["PC", "EC", "EMC", "LiPF_6"],
+    "replicate_aggregation": "median_conductivity_within_formulation_and_temperature",
+    "target_transform": "log10_S_per_cm",
+    "composition_features": [
+      "PC_over_total_solvent_mass",
+      "EC_over_total_solvent_mass",
+      "EMC_over_total_solvent_mass",
+      "LiPF6_over_total_solvent_mass"
+    ],
+    "forbidden_features": [
+      "experimentID",
+      "raw_batch_total_mass",
+      "Arrhenius_activationEnergy",
+      "Arrhenius_preExponential",
+      "Arrhenius_R2",
+      "Arrhenius_MSE",
+      "Arrhenius_lnConductivity",
+      "any_EIS_fit_output_other_than_the_temperature_specific_target"
+    ]
+  },
+  "split": {
+    "type": "fivefold_grouped_by_exact_formulation_hash",
+    "fold_assignment": "sha256_formulation_key_mod_5_with_deterministic_balancing",
+    "target_temperature_C": -30,
+    "target_budget_per_fold": 30,
+    "test_policy": "each formulation is held out once per repeat; all replicate experiments for a formulation stay together",
+    "source_policy": "source model is fit only on development formulations; held-out target formulations are excluded at every source temperature",
+    "development_source_feature_policy": "fivefold cross-fitted source predictions for target-training formulations; full-development source model only for held-out formulations"
+  },
+  "inference": {
+    "primary_source_temperature_C": -20,
+    "negative_control_source_temperatures_C": [0, 30, 60],
+    "target_training_repeats": 100,
+    "sensitivity_repeats": 40,
+    "hierarchical_bootstrap_replicates": 5000,
+    "fixed_subset_feature_mapping_permutations": 999,
+    "learning_curve_repeats": 60,
+    "learning_curve_budgets": [8, 15, 30, 45, 60, 75],
+    "primary_source_learner": "random_forest_300_trees_min_leaf_2_max_features_1.0",
+    "primary_target_learner": "random_forest_300_trees_min_leaf_2_max_features_1.0",
+    "sensitivity_learners": [
+      "extra_trees_300_trees_min_leaf_2_max_features_1.0",
+      "polynomial_degree_2_ridge_alpha_10"
+    ],
+    "minimum_relative_rmse_reduction": 0.05,
+    "minimum_target_sample_fraction_saved": 0.30,
+    "requires_bootstrap_lower_bound_above_zero": true,
+    "requires_positive_augmented_r2": true,
+    "requires_positive_effect_in_all_five_folds": true,
+    "minimum_positive_learners_of_three": 2,
+    "requires_positive_source_cv_r2": true,
+    "primary_test": "one_sided_fixed_target_subset_source_feature_mapping_permutation",
+    "multiplicity": "one_frozen_primary_edge; three temperature-distance controls and one shuffled-source placebo",
+    "adjacency_gate": "primary_effect_must_exceed_each_distant_temperature_control_and_effect_must_decrease_with_absolute_temperature_distance",
+    "placebo_gate": "shuffled_source_must_not_show_a_positive_95_percent_interval_and_must_be_smaller_than_the_primary_effect"
+  },
+  "primary_hypothesis": {
+    "target": "electrolyte_conductivity_at_minus_30_C",
+    "source": "electrolyte_conductivity_at_minus_20_C",
+    "relation": "within-campaign-adjacent-condition-borrowing",
+    "direction": "positive",
+    "rationale": "An adjacent-temperature conductivity model learned from a label-rich formulation slice should provide a selective local prior that materially reduces the labels needed at the coldest, deliberately data-poor target slice."
+  },
+  "interpretation_policy": {
+    "allowed_if_all_gates_pass": "within-campaign local-neighbor rescue under strict formulation-level leakage control",
+    "not_allowed": [
+      "independent-dataset replication",
+      "universal cross-domain transfer",
+      "direct evidence that an entire scientific field is rescued"
+    ],
+    "required_context": "Report together with independent cross-dataset nulls to establish selectivity and with explicit statement that independent replication of the rescue edge remains future work."
+  },
+  "decision_rule": "Call the frozen adjacent-temperature edge a local rescue only if all practical-effect, uncertainty, absolute-utility, fold-direction, learner-robustness, source-quality, leakage, permutation, sample-equivalence, adjacency, and placebo gates pass. Otherwise retain the exact failed gates and do not choose a new primary edge."
+}

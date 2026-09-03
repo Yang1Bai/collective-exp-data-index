@@ -1,55 +1,54 @@
-# Phase 1 findings: compensation laws across the unified experimental data lake
+# Phase 1 findings — pooled laws, transport, and artifact gates
 
-**Question.** Does a domain-transcending "unified" empirical law (Meyer-Neldel /
-enthalpy-entropy compensation) emerge from pooled multi-domain experimental data?
+## Thermoelectric Meyer–Neldel test
 
-**Data.** `data/collective.sqlite` (105,955 measurements). Domains tested:
-thermoelectric transport (ESTM, 880 materials with T-series) and gas adsorption
-(NIST ISODB, van't Hoff systems). Scripts: `mn_compensation.py`, `mn_family.py`,
-`hs_isodb.py`; parameter tables in the adjacent CSVs.
+Literature reference is part of the sample identity, so measurements with the
+same nominal formula but different sources are not merged. The primary gate
+requires at least four temperatures, a 100 K span, Arrhenius R²≥0.90 and
+0<Ea<2 eV.
 
-## Results
+- n=112 reference-separated series;
+- pooled ln A–Ea R²=0.107;
+- HC3 slope p=0.0013, but T_iso=2165 K versus median harmonic temperature
+  479 K;
+- no chemical family with n≥8 survives Holm correction.
 
-1. **No domain-wide compensation.** Pooling all 113 activated-transport
-   thermoelectric materials (Arrhenius R²>0.9, 0<Ea<2 eV): lnA vs Ea gives
-   **R² = 0.053** — no unified Meyer-Neldel law at the whole-domain level.
+Conclusion: a statistically non-zero slope is not a high-explanatory universal
+law.
 
-2. **Compensation is family-scoped, and plausibly genuine there.** Grouping by
-   chemical family (major elements ≥15 at.%), families with n≥8:
+## Direct UTS–yield-strength calibration transport
 
-   | family | n | R² | T_iso (K) |
-   |---|---|---|---|
-   | Ag-Se | 13 | 0.56 | 1689 |
-   | Ag-Bi-Se | 9 | 0.52 | 706 |
-   | Co-Li-O | 8 | 0.47 | 1851 |
+UTS and yield strength are paired only within the same source row.
 
-   Family-median R² = 0.52 vs pooled 0.053 (10×). For Ag-Se and Co-Li-O,
-   T_iso lies far above the experimental temperature range (~300–800 K),
-   passing the Krug artifact criterion; Ag-Bi-Se (706 K) is borderline.
+- Borg: n=495 rows/208 compositions, log–log R²=0.790;
+- BIRDSHOT: n=171 rows/151 compositions, R²=0.067;
+- exact cross-dataset composition overlap: zero;
+- unchanged Borg line on BIRDSHOT: R²=−3.006, cluster-bootstrap 95% interval
+  [−4.154,−2.185];
+- Borg-minus-BIRDSHOT slope difference [0.510,0.854];
+- median UTS/YS ratio: 1.36 versus 2.72.
 
-3. **The strongest apparent cross-system law is a statistical artifact.**
-   Adsorption (42 clean van't Hoff systems) shows seemingly strong
-   enthalpy–entropy compensation, **R² = 0.892** — but T_iso = 303 K vs
-   Krug harmonic-mean temperature 305 K (within 1%). This is the textbook
-   signature of error-induced compensation, not thermodynamics.
+Conclusion: a strong source-dataset calibration is not a transportable
+unconditional law.
 
-## Conclusion
+## ISODB matched-loading isosteric analysis
 
-**In the first controlled cross-domain test on unified experimental data,
-there is no evidence for a domain-transcending compensation law. Empirical
-regularity lives at the chemical-family level (moderate, artifact-robust
-Meyer-Neldel signals within thermoelectric families), while the strongest
-apparent cross-system regularity (adsorption H–S compensation, R²≈0.9)
-fails the Krug artifact control.** Practical corollary for the
-grand-unification program: any candidate "universal law" mined from
-aggregated experimental databases must clear artifact screens (Krug test,
-family stratification) before being interpreted — the screens, not the
-correlations, are the gatekeepers.
+The hash-verified pinned archive is streamed in memory. Pure-component systems
+require at least three temperatures, positive monotone isotherms, a common
+uptake range, and one geometric-midpoint fit per DOI–adsorbent–adsorbate system.
 
-## Limitations & next steps
+- 1,103 primary systems from 512 DOIs;
+- pooled heat–intercept R²=0.637;
+- T_iso=513 K versus median harmonic temperature 301 K;
+- independent-parameter Krug null median R²=0.003 and p=0.001 for reaching the
+  observed R²;
+- adsorbate-family intercept shifts remain significant under DOI wild-cluster
+  bootstrap (p=0.0002);
+- family-specific slopes are not jointly required after DOI clustering
+  (p=0.625), and leave-one-adsorbate-out R²=0.600.
 
-Small family sizes (n=8–13, p≈0.03–0.05); single summary-point extraction for
-ISODB (full-isotherm fits would sharpen ΔH); only 2 domains tested. Next:
-grow families via full ISODB build + more T-resolved datasets (Starrydata2),
-apply the same pipeline to OBELiX ionic conductivity, and pre-register the
-family-level MN hypothesis before the expanded test.
+Conclusion: this is a strong conditional empirical regularity, neither a
+simple Krug artifact nor an unconditional single-line law. This honest
+counterexample narrows the thesis from “global patterns do not exist” to
+“aggregation does not automatically establish universal coefficients or
+mechanism.”

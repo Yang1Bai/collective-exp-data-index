@@ -1,0 +1,55 @@
+{
+  "claim_guard": "SolventSeg and FINALES outcomes were already inspected in this project, and BambooMixer lacks row-level DOI provenance. This experiment can demonstrate external programme reuse, source-specific mechanism, multi-programme interaction, and routing behavior. It cannot establish independent confirmation or prospective discovery. Only an unchanged outcome-sealed third programme can do so.",
+  "design_sha256": "ca9bb9dc6a47de727cf9c89ea3fece209e5bf0f0475d583d1682f83635295cb1",
+  "finales": {
+    "metric_rows": 40,
+    "predictions": 29
+  },
+  "input_audit": {
+    "bamboo_rows": 10407,
+    "bamboo_target_family_rows": 395,
+    "bamboo_without_target_family_rows": 10012,
+    "calisol_articles": 3,
+    "calisol_rows": 410,
+    "finales_rows": 29,
+    "kit_aggregated_rows": 1089,
+    "kit_formulations": 109,
+    "kit_raw_rows": 5035,
+    "solventseg_formulations": 36,
+    "solventseg_rows": 180,
+    "strict_record_overlap_counts": {
+      "bamboo_to_calisol": 71,
+      "bamboo_to_kit": 0,
+      "bamboo_to_solventseg": 0,
+      "calisol_to_kit": 0,
+      "calisol_to_solventseg": 0,
+      "kit_to_solventseg": 0
+    }
+  },
+  "result_sha256": {
+    "bamboomixer_cross_database_interaction_finales_metrics.csv": "aaa831a35d6565ade8408269eb80ffba042a6ed0fe8e4a1ca575f8feae51f823",
+    "bamboomixer_cross_database_interaction_finales_predictions.csv": "bcd3759c19b82c3c6d60b101a255108fffb047c4b0a9e5fce7e87a79c08e0a10",
+    "bamboomixer_cross_database_interaction_input_audit.json": "8408fcf62c791c71dbfbd48aaca9eb8c8afb12ab8fcb11fdd6874d72135a10b1",
+    "bamboomixer_cross_database_interaction_seed_audit.csv": "b8147e323987d92e1572b0f4fcc7e28339f185e2d80635dda10cdcbd47ffc063",
+    "bamboomixer_cross_database_interaction_solventseg_anchor_contrasts.csv": "09bf8cf4bca610347c4160ea4450e81aaf432c5de71f38acab8833681375b141",
+    "bamboomixer_cross_database_interaction_solventseg_anchor_metrics.csv": "001af24fc7d3558969f41954228db0cc37aa2b4e2b520c18c175e0e2a4d384ab",
+    "bamboomixer_cross_database_interaction_solventseg_bootstrap.csv": "a6cd2682253f719e1c1005c63085bfb698c3d892f6e29ecd955f15a9a90f5051",
+    "bamboomixer_cross_database_interaction_solventseg_metrics.csv": "35699f09448a3a05c17eca5872659903f84b3650541ccc13212b4383539fa3f5",
+    "bamboomixer_cross_database_interaction_solventseg_predictions.csv": "a54fe81680727afe12c5ae4bdd2330d1d947427a5086f71ac9c02453ad09123e",
+    "bamboomixer_cross_database_interaction_solventseg_rank_permutation.csv": "5c79f46f0300e55b8cead8aafc2fe19c6a2970353c669313b89ad3486b5db815",
+    "bamboomixer_cross_database_interaction_summary.json": "85d12d0ba1435c24594daed29190e594a815bf13be43ffe6b2eec9ac46777dc8"
+  },
+  "routing_decision": "ranking",
+  "seed_audit_rows": 42,
+  "solventseg": {
+    "anchor_contrast_rows": 1500,
+    "anchor_metric_rows": 3300,
+    "bootstrap_rows": 45000,
+    "metrics": 72,
+    "predictions": 180,
+    "rank_permutations_per_model": 10000
+  },
+  "status": "verified-complete",
+  "summary_sha256": "85d12d0ba1435c24594daed29190e594a815bf13be43ffe6b2eec9ac46777dc8",
+  "verification_mode": "independent-recalculation"
+}

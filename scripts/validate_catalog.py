@@ -15,13 +15,17 @@ from __future__ import annotations
 import json
 import re
 
-import common
+try:
+    from . import common
+except ImportError:  # direct script execution
+    import common
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ENUMS = {
     "domain": {"materials", "chemistry"},
     "data_type": {"experimental", "computational", "mixed"},
     "access": {"open", "registration", "restricted"},
+    "source": {"curated-seed", "api-discovery", "community-contribution"},
 }
 REQUIRED = ["id", "name", "description", "domain", "subdomain",
             "data_type", "access", "homepage_url"]
@@ -76,6 +80,16 @@ def main() -> int:
     catalog = common.load_catalog()
     entries = common.entries_of(catalog)
     errors = lite_check(entries) + schema_check(entries)
+    warnings = []
+    unknown_license = [e["id"] for e in entries if str(e.get("license", "")).lower() == "unknown"]
+    missing_evidence = [e["id"] for e in entries if not e.get("verified_via")]
+    homepage_evidence = [e["id"] for e in entries if e.get("verified_via") == e.get("homepage_url")]
+    if unknown_license:
+        warnings.append(f"{len(unknown_license)} entries have license='Unknown'; do not describe the catalog as open-licensed")
+    if missing_evidence:
+        warnings.append(f"{len(missing_evidence)} entries lack a curator evidence URL")
+    if homepage_evidence:
+        warnings.append(f"{len(homepage_evidence)} entries use the homepage as the evidence URL; this is not an independent live-link audit")
 
     print(f"Validated {len(entries)} entries.")
     if errors:
@@ -83,6 +97,10 @@ def main() -> int:
         for e in errors:
             print("  -", e)
         return 1
+    if warnings:
+        print("\nWarnings:")
+        for warning in warnings:
+            print("  -", warning)
     print("OK - no problems found.")
     return 0
 

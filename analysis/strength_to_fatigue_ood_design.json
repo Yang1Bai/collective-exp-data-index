@@ -1,0 +1,175 @@
+{
+  "status": "frozen-before-fatigue-outcome-access",
+  "created_utc": "2026-07-29T15:20:00Z",
+  "research_question": "Can independently learned static-strength knowledge improve prediction of chemically and publication-disjoint fatigue life for data-poor multi-principal-element alloys when the borrowed strength is used through a physics-aligned stress-normalization contract?",
+  "selection_history": "The donor-to-recipient edge was selected after earlier MPEA strength and unrelated cross-domain results had been inspected. No numeric fatigue-life or stress-amplitude values from the recipient workbook were inspected before this design was frozen. Workbook sheet names, headers, and the outcome-free parameter worksheet were inspected to establish feasibility.",
+  "claim_guard": "A passing result establishes one retrospective, outcome-unseen, cross-database mechanical borrowing edge. It does not establish prospective alloy discovery, universal fatigue transfer, or a general law relating monotonic strength to fatigue.",
+  "recipient": {
+    "name": "FatigueData-CMA2022",
+    "article_doi": "10.1038/s41597-023-02354-1",
+    "repository_doi": "10.6084/m9.figshare.23007362.v2",
+    "figshare_article_id": 23007362,
+    "xlsx_file_id": 41461440,
+    "xlsx_md5": "d4d7456f83a4f55e3aa790acdedd2b01",
+    "eligible_material_type": "multi-principal elements alloy",
+    "eligible_fatigue_type": "sn",
+    "primary_outcome": "log10 fatigue life in cycles for failure observations",
+    "censored_secondary": "run-out-aware concordance using all eligible S-N observations",
+    "outcome_sheets_forbidden_before_freeze": [
+      "S-N",
+      "e-N",
+      "dadn"
+    ],
+    "metadata_sheet_allowed_before_freeze": "parameter"
+  },
+  "donors": {
+    "borg_uts": {
+      "dataset": "mpea-dataset-borg",
+      "table": "raw_mpea",
+      "outcome": "PROPERTY: UTS (MPa)",
+      "role": "primary neighboring endpoint",
+      "feature_contract": [
+        "composition",
+        "processing-family flags",
+        "phase-family flags",
+        "test temperature"
+      ]
+    },
+    "borg_ys": {
+      "dataset": "mpea-dataset-borg",
+      "table": "raw_mpea",
+      "outcome": "PROPERTY: YS (MPa)",
+      "role": "secondary neighboring endpoint"
+    },
+    "birdshot_uts": {
+      "dataset": "birdshot-high-entropy-alloy-campaign",
+      "table": "measurements",
+      "outcome": "UTS_True (Mpa)",
+      "role": "independent composition-only support card and disagreement diagnostic"
+    },
+    "wrong_controls": [
+      {
+        "dataset": "mpea-dataset-borg",
+        "outcome": "PROPERTY: HV",
+        "label": "size-matched predicted hardness"
+      },
+      {
+        "dataset": "mpea-dataset-borg",
+        "outcome": "PROPERTY: Elongation (%)",
+        "label": "size-matched predicted elongation"
+      },
+      {
+        "dataset": "mpea-dataset-borg",
+        "outcome": "fold-wise permuted PROPERTY: UTS (MPa)",
+        "label": "architecture-matched shuffled UTS"
+      }
+    ]
+  },
+  "preoutcome_gate": {
+    "minimum_eligible_curves": 50,
+    "minimum_unique_recipient_dois": 30,
+    "minimum_unique_recipient_compositions": 15,
+    "minimum_parseable_composition_fraction": 0.95,
+    "minimum_curves_with_test_temperature_fraction": 0.9,
+    "minimum_curves_with_load_ratio_fraction": 0.9,
+    "minimum_curves_with_processing_fraction": 0.8,
+    "minimum_recipient_compositions_with_supported_borg_neighbor": 10,
+    "supported_neighbor_l1_threshold": 0.5,
+    "minimum_nonoverlapping_borg_uts_rows": 300,
+    "minimum_source_group_oof_r2": 0.1,
+    "decision": "Do not read numeric fatigue outcomes or submit a formal job if any gate fails."
+  },
+  "provenance_contract": {
+    "normalize_doi": true,
+    "exclude_all_recipient_dois_from_all_borg_donor_fits": true,
+    "exclude_exact_recipient_compositions_from_corresponding_outer_donor_fits": true,
+    "outer_group": "connected component of recipient DOI and canonical composition",
+    "no_curve_points_cross_outer_folds": true,
+    "no_recipient_measured_uts_or_ys_in_formal_models": true,
+    "recipient_measured_uts_or_ys_role": "oracle ceiling and semantic validation only"
+  },
+  "ood_design": {
+    "primary": "leave-one-provenance-chemistry-component-out cross-validation over all eligible components",
+    "hard_ood": "components in the highest quartile of nearest-source composition distance, reported only if at least five independent components qualify",
+    "applicability": "Borrowing may act only where the recipient composition is within the frozen source-support threshold and source-model disagreement is below its donor-only 90th percentile; otherwise the policy falls back to target-only.",
+    "few_shot_budgets_in_curves": [
+      20,
+      40
+    ],
+    "primary_budget": 20,
+    "sampling_unit": "whole fatigue curve"
+  },
+  "feature_contracts": {
+    "target_only": [
+      "composition",
+      "processing-family flags",
+      "phase-family flags",
+      "fatigue-test type",
+      "fatigue temperature",
+      "environment",
+      "load ratio",
+      "frequency",
+      "load control",
+      "log10 stress amplitude"
+    ],
+    "borrowed_static_strength": [
+      "all target-only features",
+      "cross-fitted predicted log10 UTS",
+      "log10 stress amplitude minus predicted log10 UTS",
+      "predicted maximum stress divided by predicted UTS",
+      "source-support distance",
+      "Borg-versus-BIRDSHOT UTS disagreement"
+    ],
+    "secondary_joint_uts_ys": [
+      "all borrowed_static_strength features",
+      "cross-fitted predicted log10 YS",
+      "log10 stress amplitude minus predicted log10 YS"
+    ],
+    "safe_router": "Use borrowed_static_strength only inside the frozen applicability region; otherwise return the target-only prediction."
+  },
+  "models": {
+    "target_learners": [
+      "extra_trees",
+      "random_forest"
+    ],
+    "donor_learner": "extra_trees",
+    "tree_estimators": 480,
+    "repeats": 50,
+    "source_folds": 5,
+    "primary_common_source_size": 530,
+    "source_size_rule": "Deterministically size-match UTS, hardness, and elongation donors to the smallest eligible post-DOI-exclusion source; the frozen metadata-only count is 530 rows.",
+    "random_seed": 20260729
+  },
+  "primary_contrasts": [
+    "safe_borrowed_static_strength minus target_only",
+    "safe_borrowed_static_strength minus shuffled_uts",
+    "safe_borrowed_static_strength minus size_matched_hardness",
+    "safe_borrowed_static_strength minus size_matched_elongation"
+  ],
+  "success_gate": {
+    "primary_relative_rmse_gain_at_least": 0.05,
+    "cluster_bootstrap_ci95_lower_above": 0.0,
+    "holm_adjusted_one_sided_p_below": 0.05,
+    "augmented_absolute_r2_above": 0.0,
+    "positive_repeat_fraction_at_least": 0.8,
+    "must_beat_shuffled_and_both_wrong_controls": true,
+    "both_target_learners_nonnegative": true,
+    "minimum_applicability_coverage": 0.25
+  },
+  "inference": {
+    "primary_unit": "provenance-chemistry connected component",
+    "algorithmic_repeats_are_not_independent_samples": true,
+    "bootstrap": "hierarchical cluster bootstrap over connected components and whole fatigue curves",
+    "bootstrap_replicates": 100000,
+    "sign_flip_replicates": 100000,
+    "multiplicity": "Holm family-wise correction over the four primary contrasts",
+    "seed": 2026072901
+  },
+  "reporting": {
+    "retain_null_and_harmful_edges": true,
+    "report_exact_components_curves_dois_and_compositions": true,
+    "report_source_skill_and_applicability_coverage": true,
+    "report_full_portfolio_and_hard_ood_separately": true,
+    "no_claim_of_independent_positive_replication_unless_all_success_gates_pass": true
+  }
+}

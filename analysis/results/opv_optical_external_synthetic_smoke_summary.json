@@ -1,0 +1,101 @@
+{
+  "claim_guard": "A positive result establishes one retrospective experimental-database borrowing edge from molecular optical spectroscopy to organic photovoltaic device prediction. It does not prove universal optoelectronic transfer, prospective device discovery, or benefit when device state is unavailable.",
+  "cluster_inference": [
+    {
+      "bootstrap_ci95": [
+        0.0101427719086805,
+        0.03194033259168788,
+        0.05376948042540146
+      ],
+      "clusters": 308,
+      "contrast": "real_vs_target_only",
+      "control": "state_aware_target_only",
+      "control_rmse": 1.15434083231043,
+      "holm_p": 0.052439475605243945,
+      "one_sided_cluster_sign_p": 0.013109868901310986,
+      "paired_rows": 1038,
+      "real_rmse": 1.1174857860659435,
+      "relative_rmse_gain": 0.031927352141499346
+    },
+    {
+      "bootstrap_ci95": [
+        -0.015281195255595341,
+        0.006448500512362232,
+        0.027659002231126335
+      ],
+      "clusters": 308,
+      "contrast": "real_vs_shuffled_source",
+      "control": "state_aware_plus_shuffled_source_card",
+      "control_rmse": 1.1249782557332455,
+      "holm_p": 1.0,
+      "one_sided_cluster_sign_p": 0.3411765882341177,
+      "paired_rows": 1038,
+      "real_rmse": 1.1174857860659435,
+      "relative_rmse_gain": 0.006660101765627908
+    },
+    {
+      "bootstrap_ci95": [
+        -0.02509911870704611,
+        -0.0064459152217724,
+        0.01101524018951236
+      ],
+      "clusters": 308,
+      "contrast": "real_vs_state_blind",
+      "control": "state_aware_plus_state_blind_optical_card",
+      "control_rmse": 1.110146817432633,
+      "holm_p": 1.0,
+      "one_sided_cluster_sign_p": 0.7545524544754553,
+      "paired_rows": 1038,
+      "real_rmse": 1.1174857860659435,
+      "relative_rmse_gain": -0.006610809055222884
+    },
+    {
+      "bootstrap_ci95": [
+        -0.018273201226726578,
+        0.010606539311915353,
+        0.041561810711551794
+      ],
+      "clusters": 308,
+      "contrast": "real_vs_permuted_real",
+      "control": "state_aware_plus_permuted_real_card",
+      "control_rmse": 1.1303752440038588,
+      "holm_p": 1.0,
+      "one_sided_cluster_sign_p": 0.5582544174558255,
+      "paired_rows": 1038,
+      "real_rmse": 1.1174857860659435,
+      "relative_rmse_gain": 0.011402813363339452
+    }
+  ],
+  "created_utc": "2026-07-27T00:43:51.086675+00:00",
+  "decision": "null-harmful-or-incomplete-edge",
+  "design_sha256": "51b0914427eb2b42576ae18ce792ac531a619a09d24d15f36bc832024f29216d",
+  "gates": {
+    "absolute_pce_r2_positive": false,
+    "full_external_harm_within_0_01": true,
+    "gain_over_permuted_positive": true,
+    "gain_over_shuffled_at_least_0_02": false,
+    "holm_p_below_0_05": false,
+    "jsc_gain_nonnegative": false,
+    "minimum_mean_relative_pce_rmse_gain": true,
+    "positive_cluster_bootstrap_lower": true,
+    "positive_repeat_fraction_at_least_0_65": true
+  },
+  "implementation_sha256": "584690c0b3beddb9bfbaebc2c06946d39f51a9750ebaeaf351bf36e34803ea64",
+  "metrics_sha256": "c28b454717a299a2f053ee4f9c8e54a1d38f10118e62131624eb6007fc27e5cd",
+  "mode": "synthetic_smoke",
+  "passes_complete_gate": false,
+  "predictions_sha256": "850f9c78b1c81dc78f962f7cd0206857caa8ca060f48ac4c7be6658b5a3b6361",
+  "primary": {
+    "mean_full_external_pce_rmse_gain": 0.0048134408626348685,
+    "mean_gain_real_vs_permuted": 0.011402811473824397,
+    "mean_gain_real_vs_shuffled": 0.006660102377346564,
+    "mean_jsc_rmse_gain": -0.0068812589819084455,
+    "mean_physics_recombined_pce_rmse_gain": 0.022351970603080758,
+    "mean_real_pce_r2": -0.0534491859971502,
+    "mean_relative_pce_rmse_gain": 0.031927351723978925,
+    "median_relative_pce_rmse_gain": 0.031927351723978925,
+    "positive_repeat_fraction": 1.0
+  },
+  "run_sha256": "5b2e44959e8af9088fe42e8c1c74574187d8bf3bed79238e7e97dbfe2639a52d",
+  "status": "verified-inference-ready"
+}

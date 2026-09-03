@@ -1,0 +1,129 @@
+{
+  "design_version": "2026-07-13a",
+  "status": "designated-before-first-multitarget-run-not-externally-preregistered",
+  "seed": 20260713,
+  "partition": {
+    "development_fraction": 0.60,
+    "discovery_fraction": 0.20,
+    "internal_confirmation_fraction": 0.20,
+    "maximum_evaluation_entities_per_stage": 750,
+    "formula_group": "element_set",
+    "molecule_group": "bemis_murcko_scaffold"
+  },
+  "inference": {
+    "primary_learner": "ridge_alpha_10",
+    "discovery_repeats": 60,
+    "confirmation_repeats": 100,
+    "candidate_min_relative_rmse": 0.02,
+    "candidate_ci_floor": -0.01,
+    "confirmed_min_relative_rmse": 0.05,
+    "confirmed_min_target_sample_fraction_saved": 0.30,
+    "feature_permutations": 99,
+    "permutation_training_repeats": 20,
+    "sensitivity_repeats": 40,
+    "learning_curve_repeats": 60,
+    "multiplicity": "Holm_across_discovery_selected_edges",
+    "sensitivity_learners": ["random_forest", "extra_trees"]
+  },
+  "tasks": {
+    "te_zt": {"dataset": "estm-thermoelectric", "property": "ZT", "kind": "formula", "transform": "identity", "min": 0.0, "max": 5.0, "domain": "thermoelectric", "label": "Thermoelectric ZT"},
+    "te_power_factor": {"dataset": "estm-thermoelectric", "property": "power_factor(W/mK2)", "kind": "formula", "transform": "log10", "min": 0.0, "max": 0.02, "domain": "thermoelectric", "label": "Thermoelectric power factor"},
+    "te_electrical": {"dataset": "estm-thermoelectric", "property": "electrical_conductivity(S/m)", "kind": "formula", "transform": "log10", "min": 0.0, "max": 1000000000.0, "domain": "thermoelectric", "label": "Thermoelectric electrical conductivity"},
+    "te_thermal": {"dataset": "estm-thermoelectric", "property": "thermal_conductivity(W/mK)", "kind": "formula", "transform": "log10", "min": 0.0, "max": 100.0, "domain": "thermoelectric", "label": "Thermoelectric thermal conductivity"},
+    "te_seebeck": {"dataset": "estm-thermoelectric", "property": "seebeck_coefficient(μV/K)", "kind": "formula", "transform": "identity", "min": -2000.0, "max": 2000.0, "domain": "thermoelectric", "label": "Thermoelectric Seebeck coefficient"},
+
+    "alloy_ys": {"dataset": "mpea-dataset-borg", "property": "PROPERTY: YS (MPa)", "kind": "formula", "transform": "log10", "min": 0.0, "max": 10000.0, "domain": "multi-principal-element alloy", "label": "Alloy yield strength"},
+    "alloy_uts": {"dataset": "mpea-dataset-borg", "property": "PROPERTY: UTS (MPa)", "kind": "formula", "transform": "log10", "min": 0.0, "max": 10000.0, "domain": "multi-principal-element alloy", "label": "Alloy ultimate tensile strength"},
+    "alloy_hardness": {"dataset": "mpea-dataset-borg", "property": "PROPERTY: HV", "kind": "formula", "transform": "log10", "min": 0.0, "max": 10000.0, "domain": "multi-principal-element alloy", "label": "Alloy hardness"},
+    "alloy_elongation": {"dataset": "mpea-dataset-borg", "property": "PROPERTY: Elongation (%)", "kind": "formula", "transform": "log1p", "min": 0.0, "max": 200.0, "domain": "multi-principal-element alloy", "label": "Alloy elongation"},
+
+    "catalysis_h2": {"dataset": "ocx24-open-catalyst-experiments-2024", "property": "fe_h2", "kind": "formula", "transform": "identity", "min": 0.0, "max": 100.0, "domain": "CO2 electroreduction", "label": "CO2R H2 Faradaic efficiency"},
+    "catalysis_co": {"dataset": "ocx24-open-catalyst-experiments-2024", "property": "fe_co", "kind": "formula", "transform": "identity", "min": 0.0, "max": 100.0, "domain": "CO2 electroreduction", "label": "CO2R CO Faradaic efficiency"},
+    "catalysis_voltage": {"dataset": "ocx24-open-catalyst-experiments-2024", "property": "voltage", "kind": "formula", "transform": "identity", "min": 1.0, "max": 6.0, "domain": "CO2 electroreduction", "label": "CO2R cell voltage"},
+    "electrolyte_conductivity": {"dataset": "obelix-solid-electrolytes", "property": "ionic_conductivity", "kind": "formula", "transform": "log10", "min": 0.0, "max": 1.0, "domain": "solid electrolyte", "label": "Solid-electrolyte ionic conductivity"},
+
+    "solubility": {"dataset": "aqsoldb", "property": "logS", "kind": "molecule", "transform": "identity", "min": -20.0, "max": 5.0, "domain": "aqueous molecular thermodynamics", "label": "Aqueous solubility"},
+    "hydration": {"dataset": "freesolv", "property": "dG_hydration", "kind": "molecule", "transform": "identity", "min": -40.0, "max": 10.0, "domain": "aqueous molecular thermodynamics", "label": "Hydration free energy"},
+    "pka_acid": {"dataset": "iupac-digitized-pka", "property": "pKa(pKa1)", "kind": "molecule", "transform": "identity", "min": -25.0, "max": 25.0, "domain": "aqueous molecular acid-base", "label": "Molecular pKa"},
+    "pka_base": {"dataset": "iupac-digitized-pka", "property": "pKa(pKaH1)", "kind": "molecule", "transform": "identity", "min": -25.0, "max": 25.0, "domain": "aqueous molecular acid-base", "label": "Molecular conjugate-acid pKa"},
+
+    "photo_e_pipi": {"dataset": "photoswitch-dataset", "property": "E_pi-pi*_lambda_max", "kind": "molecule", "transform": "identity", "min": 200.0, "max": 800.0, "domain": "molecular photoswitch", "label": "Photoswitch E π-π* wavelength"},
+    "photo_e_npi": {"dataset": "photoswitch-dataset", "property": "E_n-pi*_lambda_max", "kind": "molecule", "transform": "identity", "min": 200.0, "max": 800.0, "domain": "molecular photoswitch", "label": "Photoswitch E n-π* wavelength"},
+    "photo_z_pipi": {"dataset": "photoswitch-dataset", "property": "Z_pi-pi*_lambda_max", "kind": "molecule", "transform": "identity", "min": 200.0, "max": 800.0, "domain": "molecular photoswitch", "label": "Photoswitch Z π-π* wavelength"},
+    "photo_z_npi": {"dataset": "photoswitch-dataset", "property": "Z_n-pi*_lambda_max", "kind": "molecule", "transform": "identity", "min": 200.0, "max": 800.0, "domain": "molecular photoswitch", "label": "Photoswitch Z n-π* wavelength"},
+
+    "polymer_tg": {"dataset": "openpoly-benchmark", "property": "Tg (K)", "kind": "molecule", "transform": "identity", "min": 100.0, "max": 1000.0, "domain": "polymer", "label": "Polymer glass-transition temperature"},
+    "polymer_tm": {"dataset": "openpoly-benchmark", "property": "Tm (K)", "kind": "molecule", "transform": "identity", "min": 100.0, "max": 1000.0, "domain": "polymer", "label": "Polymer melting temperature"},
+    "polymer_td": {"dataset": "openpoly-benchmark", "property": "Td (K)", "kind": "molecule", "transform": "identity", "min": 100.0, "max": 1500.0, "domain": "polymer", "label": "Polymer decomposition temperature"},
+    "polymer_crystallization": {"dataset": "openpoly-benchmark", "property": "Crystallization Temperature (K)", "kind": "molecule", "transform": "identity", "min": 100.0, "max": 1000.0, "domain": "polymer", "label": "Polymer crystallization temperature"},
+    "polymer_tensile": {"dataset": "openpoly-benchmark", "property": "Tensile Strength (MPa)", "kind": "molecule", "transform": "log10", "min": 0.0, "max": 100000.0, "domain": "polymer", "label": "Polymer tensile strength"},
+    "polymer_young": {"dataset": "openpoly-benchmark", "property": "Young's Modulus (MPa)", "kind": "molecule", "transform": "log10", "min": 0.0, "max": 1000000.0, "domain": "polymer", "label": "Polymer Young's modulus"},
+    "polymer_elongation": {"dataset": "openpoly-benchmark", "property": "Elongation at Break (%)", "kind": "molecule", "transform": "log1p", "min": 0.0, "max": 5000.0, "domain": "polymer", "label": "Polymer elongation at break"},
+    "polymer_hardness": {"dataset": "openpoly-benchmark", "property": "Hardness (MPa)", "kind": "molecule", "transform": "log10", "min": 0.0, "max": 1000000.0, "domain": "polymer", "label": "Polymer hardness"}
+  },
+  "targets": {
+    "te_zt": {"budget": 30, "sources": [
+      {"task": "te_power_factor", "neighborhood": 3, "relation": "constitutive-calibration", "rationale": "ZT contains power factor"},
+      {"task": "te_thermal", "neighborhood": 3, "relation": "constitutive-calibration", "rationale": "ZT is inversely related to thermal conductivity"},
+      {"task": "te_seebeck", "neighborhood": 2, "relation": "physical-neighbor", "rationale": "Seebeck coefficient contributes to power factor"},
+      {"task": "alloy_ys", "neighborhood": 0, "relation": "distant-control", "rationale": "mechanical alloy endpoint"},
+      {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "electrocatalytic selectivity endpoint"}
+    ]},
+    "alloy_ys": {"budget": 30, "sources": [
+      {"task": "alloy_uts", "neighborhood": 3, "relation": "physical-neighbor", "rationale": "paired tensile strength endpoints"},
+      {"task": "alloy_hardness", "neighborhood": 2, "relation": "physical-neighbor", "rationale": "hardness-strength relation"},
+      {"task": "alloy_elongation", "neighborhood": 1, "relation": "same-domain", "rationale": "strength-ductility relation is non-universal"},
+      {"task": "te_thermal", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated transport endpoint"},
+      {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated selectivity endpoint"}
+    ]},
+    "catalysis_h2": {"budget": 30, "sources": [
+      {"task": "catalysis_co", "neighborhood": 3, "relation": "closure-calibration", "rationale": "competing product selectivity"},
+      {"task": "catalysis_voltage", "neighborhood": 2, "relation": "same-domain", "rationale": "operating potential and selectivity"},
+      {"task": "te_zt", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated thermoelectric endpoint"},
+      {"task": "alloy_ys", "neighborhood": 0, "relation": "distant-control", "rationale": "unrelated mechanical endpoint"},
+      {"task": "electrolyte_conductivity", "neighborhood": 0, "relation": "distant-control", "rationale": "different electrochemical material function"}
+    ]},
+    "electrolyte_conductivity": {"budget": 30, "use_obelix_official_split": true, "sources": [
+      {"task": "te_electrical", "neighborhood": 2, "relation": "cross-domain-transport", "rationale": "composition-mediated charge transport"},
+      {"task": "te_power_factor", "neighborhood": 1, "relation": "cross-domain-transport", "rationale": "electronic transport composite"},
+      {"task": "te_thermal", "neighborhood": 1, "relation": "cross-domain-transport", "rationale": "lattice transport context"},
+      {"task": "alloy_ys", "neighborhood": 0, "relation": "distant-control", "rationale": "mechanical endpoint"},
+      {"task": "catalysis_h2", "neighborhood": 0, "relation": "distant-control", "rationale": "surface selectivity endpoint"}
+    ]},
+    "solubility": {"budget": 30, "sources": [
+      {"task": "hydration", "neighborhood": 3, "relation": "cross-dataset-thermodynamic", "rationale": "aqueous solvation contribution"},
+      {"task": "pka_acid", "neighborhood": 2, "relation": "cross-dataset-ionization", "rationale": "ionization controls apparent solubility"},
+      {"task": "pka_base", "neighborhood": 2, "relation": "cross-dataset-ionization", "rationale": "protonation controls apparent solubility"},
+      {"task": "photo_e_pipi", "neighborhood": 0, "relation": "distant-control", "rationale": "optical endpoint"},
+      {"task": "polymer_tg", "neighborhood": 0, "relation": "distant-control", "rationale": "polymer thermal endpoint"}
+    ]},
+    "hydration": {"budget": 30, "sources": [
+      {"task": "solubility", "neighborhood": 3, "relation": "cross-dataset-thermodynamic", "rationale": "aqueous dissolution relation"},
+      {"task": "pka_acid", "neighborhood": 1, "relation": "cross-dataset-ionization", "rationale": "charge-state context"},
+      {"task": "pka_base", "neighborhood": 1, "relation": "cross-dataset-ionization", "rationale": "charge-state context"},
+      {"task": "photo_e_pipi", "neighborhood": 0, "relation": "distant-control", "rationale": "optical endpoint"},
+      {"task": "polymer_tg", "neighborhood": 0, "relation": "distant-control", "rationale": "polymer thermal endpoint"}
+    ]},
+    "photo_z_pipi": {"budget": 20, "sources": [
+      {"task": "photo_e_pipi", "neighborhood": 3, "relation": "physical-neighbor", "rationale": "paired E/Z electronic transition"},
+      {"task": "photo_z_npi", "neighborhood": 2, "relation": "same-state-neighbor", "rationale": "same-isomer electronic transition"},
+      {"task": "photo_e_npi", "neighborhood": 2, "relation": "same-domain", "rationale": "other-isomer electronic transition"},
+      {"task": "pka_acid", "neighborhood": 0, "relation": "distant-control", "rationale": "acid-base endpoint"},
+      {"task": "solubility", "neighborhood": 0, "relation": "distant-control", "rationale": "aqueous bulk endpoint"}
+    ]},
+    "polymer_tensile": {"budget": 15, "sources": [
+      {"task": "polymer_young", "neighborhood": 3, "relation": "physical-neighbor", "rationale": "paired mechanical response"},
+      {"task": "polymer_hardness", "neighborhood": 2, "relation": "physical-neighbor", "rationale": "mechanical resistance"},
+      {"task": "polymer_elongation", "neighborhood": 2, "relation": "same-domain", "rationale": "strength-ductility relation"},
+      {"task": "polymer_tg", "neighborhood": 1, "relation": "same-domain", "rationale": "chain mobility context"},
+      {"task": "photo_e_pipi", "neighborhood": 0, "relation": "distant-control", "rationale": "small-molecule optical endpoint"}
+    ]},
+    "polymer_tm": {"budget": 15, "sources": [
+      {"task": "polymer_tg", "neighborhood": 3, "relation": "physical-neighbor", "rationale": "paired polymer thermal transitions"},
+      {"task": "polymer_crystallization", "neighborhood": 3, "relation": "physical-neighbor", "rationale": "crystallization-melting relation"},
+      {"task": "polymer_td", "neighborhood": 2, "relation": "same-domain", "rationale": "polymer thermal stability"},
+      {"task": "polymer_tensile", "neighborhood": 1, "relation": "same-domain", "rationale": "structure-mediated mechanical relation"},
+      {"task": "photo_e_pipi", "neighborhood": 0, "relation": "distant-control", "rationale": "small-molecule optical endpoint"}
+    ]}
+  }
+}

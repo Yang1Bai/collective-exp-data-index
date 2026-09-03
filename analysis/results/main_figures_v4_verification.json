@@ -1,0 +1,42 @@
+{
+  "status": "verified-complete",
+  "canonical_exports": [
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.pdf",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.svg",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.png",
+    "analysis\\figures\\knowledge_borrowing_overview_ai_v4.tiff",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v3.pdf",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v3.svg",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v3.png",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v3.tiff",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v3.pdf",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v3.svg",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v3.png",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v3.tiff",
+    "analysis\\figures\\figure4_routing_nmi_v4.pdf",
+    "analysis\\figures\\figure4_routing_nmi_v4.svg",
+    "analysis\\figures\\figure4_routing_nmi_v4.png",
+    "analysis\\figures\\figure4_routing_nmi_v4.tiff",
+    "analysis\\figures\\figure5_ordinal_screening_nmi_v4.pdf",
+    "analysis\\figures\\figure5_ordinal_screening_nmi_v4.svg",
+    "analysis\\figures\\figure5_ordinal_screening_nmi_v4.png",
+    "analysis\\figures\\figure5_ordinal_screening_nmi_v4.tiff"
+  ],
+  "figure1_routes": [
+    "predict",
+    "screen",
+    "abstain"
+  ],
+  "figure2_real_edges": 40,
+  "figure2_complete_passes": 0,
+  "figure3_strict_LiAsF6_rows": 1660,
+  "figure3_strict_LiAsF6_formulations": 156,
+  "figure3_external_raw_r2": 0.60708008274443,
+  "figure3_external_spearman": 0.8639511089469837,
+  "figure4_controlled_targets": 4,
+  "figure5_five_anchor_source_spearman": 0.9102998261437779,
+  "figure5_five_anchor_recipient_spearman": 0.5366383640583348,
+  "figure5_five_anchor_source_precision": 0.9325,
+  "figure5_five_anchor_recipient_precision": 0.49,
+  "figure5_frozen_decision": "not-replicated"
+}

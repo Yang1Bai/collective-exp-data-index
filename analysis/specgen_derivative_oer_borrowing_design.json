@@ -1,0 +1,35 @@
+{
+  "status": "frozen-before-donor-to-recipient-performance-fitting",
+  "retrospective": true,
+  "public_aggregate_results_known_before_freeze": true,
+  "source_archive": "Dataset/ref6/44160_2025_983_MOESM4_ESM.zip",
+  "source_member": "SpecGen/data/data.xlsx",
+  "recipient_members": {
+    "A": "SpecGen/data/transfer_A.xlsx",
+    "B": "SpecGen/data/transfer_B.xlsx",
+    "C": "SpecGen/data/transfer_C.xlsx",
+    "D": "SpecGen/data/transfer_D.xlsx"
+  },
+  "ood_unit": "complete derivative experimental system",
+  "source_model_candidates": {
+    "pls_components": [2, 4, 8, 12, 16],
+    "pca_ridge_alpha": [0.1, 1.0, 10.0, 100.0],
+    "selection": "lowest donor-only five-fold cross-validated MAE"
+  },
+  "anchor_budgets": [3, 5, 10, 20],
+  "anchor_draws": 200,
+  "source_shuffle_seeds": 500,
+  "selection_fraction": 0.1,
+  "primary_anchor_budget": 5,
+  "random_seed": 20260730,
+  "positive_gate": {
+    "source_oof_r2_gt": 0.0,
+    "zero_label_spearman_gt": 0.3,
+    "holm_shuffled_p_lt": 0.05,
+    "five_label_relative_rmse_gain_ge": 0.05,
+    "five_label_spearman_gain_ge": 0.1,
+    "five_label_borrowed_spearman_gt": 0.4,
+    "candidate_bootstrap_intervals_exclude_zero": true
+  },
+  "claim_guard": "Retrospective system-held-out reanalysis within one published experimental programme; cannot establish cross-laboratory transfer or prospective discovery."
+}

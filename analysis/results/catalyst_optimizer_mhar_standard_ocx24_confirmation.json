@@ -1,0 +1,334 @@
+{
+  "candidates": [
+    "standard_adamw"
+  ],
+  "datasets": {
+    "ocx24": {
+      "dataset": {
+        "programs": {
+          "ocx24_uoft": 1230,
+          "ocx24_vsp": 940
+        },
+        "samples": 2170,
+        "targets": {
+          "fe_co": 2170
+        },
+        "unique_groups": 434,
+        "with_curves": 0,
+        "with_surface_composition": 0,
+        "with_targets": 2170,
+        "with_uncertainty": 0
+      },
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "models": {
+            "standard_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 16.15492554426644,
+                  "r2": -0.35549453962607824,
+                  "rmse": 21.95736604048295,
+                  "spearman": 0.44485084217217646
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 24,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_adamw_seed20260731.pt",
+                  "elapsed_seconds": 10.083887666929513,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 16.070992229151987,
+                      "r2": -0.4663932853048989,
+                      "rmse": 22.83792210169238,
+                      "spearman": 0.348025908961202
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 7.047033374156229,
+                    "r2": 0.6744054337437251,
+                    "rmse": 10.206708073795154,
+                    "spearman": 0.8570033386626241
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 47,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_adamw_seed20260732.pt",
+                  "elapsed_seconds": 14.529602832626551,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 14.79181837641467,
+                      "r2": -0.03376566502415401,
+                      "rmse": 19.175310604513136,
+                      "spearman": 0.47643051811222553
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.0954116195631345,
+                    "r2": 0.8162444157280024,
+                    "rmse": 8.63069115831521,
+                    "spearman": 0.9021813636918878
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 24,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_adamw_seed20260733.pt",
+                  "elapsed_seconds": 9.622738708741963,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 17.80196655856037,
+                      "r2": -0.5623989918507442,
+                      "rmse": 23.573677108514776,
+                      "spearman": 0.49225860168572094
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.772680391643226,
+                    "r2": 0.7717028656312814,
+                    "rmse": 9.137758439903717,
+                    "spearman": 0.8665753608731847
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "models": {
+            "standard_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 13.740252726453054,
+                  "r2": 0.2451028504038275,
+                  "rmse": 17.131658131990715,
+                  "spearman": 0.586026441531503
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_adamw_seed20260731.pt",
+                  "elapsed_seconds": 6.982012332882732,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.26211539667686,
+                      "r2": 0.18286785065851374,
+                      "rmse": 17.823855615061532,
+                      "spearman": 0.5491149153033821
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.32760909178324,
+                    "r2": 0.6467964444136798,
+                    "rmse": 11.627717494946449,
+                    "spearman": 0.7286041592376746
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 14,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_adamw_seed20260732.pt",
+                  "elapsed_seconds": 5.837789125274867,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 15.100346408156119,
+                      "r2": 0.10599080601292166,
+                      "rmse": 18.643459305395837,
+                      "spearman": 0.5547630886192508
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 7.946085083357724,
+                    "r2": 0.4960037075777579,
+                    "rmse": 11.322541868602569,
+                    "spearman": 0.6982741301496347
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 32,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_standard_confirmation_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_adamw_seed20260733.pt",
+                  "elapsed_seconds": 8.81277341581881,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 13.141461002518101,
+                      "r2": 0.3155688746214892,
+                      "rmse": 16.31249465050902,
+                      "spearman": 0.5638671740724948
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 7.511412817666024,
+                    "r2": 0.7165760061519756,
+                    "rmse": 10.54469121122047,
+                    "spearman": 0.8543741847872285
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "gate": {
+        "candidates": {
+          "standard_adamw": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.10075764763425349,
+                "gain_over_tree": -0.08157044601294922,
+                "spearman": 0.44485084217217646
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": 0.006106867702517449,
+                "gain_over_tree": 0.014962994936824958,
+                "spearman": 0.586026441531503
+              }
+            },
+            "median_gain_over_current": -0.04732538996586802,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "model_names": [
+        "standard_adamw"
+      ],
+      "reference": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "fair_extra_trees": {
+            "mae": 13.72034315424109,
+            "r2": 0.013755434378140419,
+            "rmse": 18.7293914753803,
+            "spearman": 0.5264212881851257
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 15.294420956313132,
+            "r2": -0.2234809319207225,
+            "rmse": 20.860751912296713,
+            "spearman": 0.54560848980643
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "fair_extra_trees": {
+            "mae": 14.29111934137205,
+            "r2": 0.18199592712868728,
+            "rmse": 17.833362581313438,
+            "spearman": 0.571063446594678
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 13.819910660829606,
+            "r2": 0.24451624093033075,
+            "rmse": 17.13831310572193,
+            "spearman": 0.5799195738289855
+          }
+        }
+      }
+    }
+  },
+  "design_path": "analysis/catalyst_optimizer_mhar_refinement_design.json",
+  "design_sha256": "12c61a2906c5d6ca4d63ecdf294954b60875f64d33adcaaa465a24d01367dd57",
+  "evidence_boundary": "Retrospective refinement after the v1 recipient outcomes were inspected. The correction restores the previously strongest encoder depths, uses per-sublayer additive delta routing, and adds Adam step-norm grafting because ungrafted KL-Shampoo failed source validation. These results may improve the repository model but cannot constitute prospective confirmation.",
+  "input_artifacts": {
+    "ocx24": {
+      "bytes": 526042,
+      "sha256": "e55446ee81b26c0ceaa6e9d532186954124ff11a51f854ca13511c7c8b31de99"
+    },
+    "specgen": {
+      "bytes": 7759603,
+      "sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2"
+    }
+  },
+  "screening_selection": {
+    "candidates": {
+      "standard_adamw": {
+        "eligible": false,
+        "median_source_validation_spearman": 0.8556887617249263,
+        "median_transfer_gain": -0.04732538996586802,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.10075764763425349,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": 0.006106867702517449
+        },
+        "worst_transfer_gain": -0.10075764763425349
+      }
+    },
+    "selected_for_confirmation": null
+  },
+  "seeds": [
+    20260731,
+    20260732,
+    20260733
+  ],
+  "stage": "confirmation",
+  "status": "complete"
+}

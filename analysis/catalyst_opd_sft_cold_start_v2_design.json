@@ -1,0 +1,57 @@
+{
+  "design_version": "catalyst-opd-sft-cold-start-v2",
+  "status": "frozen-after-v1-collapse-before-v2-outcomes",
+  "supersedes_for_future_runs": "catalyst-opd-sft-cold-start-v1",
+  "v1_falsification": "V1 reached 1.0 strict JSON validity but collapsed all train and held-out states to ensemble plus predict; its unweighted completion loss was dominated by invariant JSON tokens.",
+  "objective": "Test whether explicitly weighting the decision-value tokens teaches the 360M teacher the frozen target-free router policy before gated OPD.",
+  "evidence_boundary": "Synthetic SFT states and retrospective real transfer edges may validate formatting, policy imitation, and execution only. They cannot establish scientific routing benefit or authorize promotion.",
+  "training_information": {
+    "prompt_fields": "the 12 target-label-free RouterState fields from catalyst-opd-router-shadow-v1",
+    "sft_targets": "decisions from deterministic_target_free_decision only",
+    "target_outcomes_used_for_sft": false,
+    "oracle_expert_used_for_sft": false,
+    "programme_identity_used_for_sft": false,
+    "decision_token_weight": 8.0,
+    "weighted_values": "expert, action, confidence, and reason-code value spans",
+    "invariant_json_token_weight": 1.0
+  },
+  "frozen_policy_reference": "analysis/catalyst_opd_sft_cold_start_design.json",
+  "synthetic_state_generation": {
+    "seed": 20260814,
+    "train_examples": 140,
+    "held_out_examples": 70,
+    "independent_rng_streams": true,
+    "stratification": "exactly equal frozen quotas across ensemble-abstain and Standard, MHAR, ensemble crossed with predict or rank",
+    "duplicate_states_allowed": false,
+    "v1_held_out_states_reused": false,
+    "outcomes_present": false
+  },
+  "teacher": {
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "update": "LoRA rank 8",
+    "steps": 140,
+    "batch_size": 2,
+    "learning_rate": 0.0005,
+    "implementation_gate": {
+      "held_out_strict_json_valid_fraction_minimum": 0.95,
+      "held_out_expert_action_agreement_with_frozen_policy_minimum": 0.90
+    }
+  },
+  "opd_handoff": {
+    "student_base_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "allowed_only_after_teacher_implementation_gate": true,
+    "teacher_student_tokenizer_fingerprint_must_match": true,
+    "steps": 40,
+    "student_gate": {
+      "held_out_strict_json_valid_fraction_minimum": 0.95,
+      "held_out_expert_action_agreement_with_teacher_minimum": 0.90
+    }
+  },
+  "real_state_evaluation": {
+    "input": "corrected target-label-free programme transfer states",
+    "outcomes": "evaluation-only downstream Spearman values",
+    "scientific_effect_verified": false,
+    "reason": "the real outcomes were already inspected during method development and are not sealed external confirmation"
+  },
+  "promotion_rule": "Remain shadow-only regardless of retrospective performance. Promotion requires a newly sealed external programme under catalyst-opd-router-shadow-v1."
+}

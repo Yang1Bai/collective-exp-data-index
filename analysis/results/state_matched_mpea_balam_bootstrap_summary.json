@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "design_sha256": "97913a1e53f12ad433a2583b4f548b98c88a74f1561407eba86fde5bbfc0c8b2",
+  "replicates": 100000,
+  "groups": 59,
+  "runs": 60,
+  "observed": {
+    "real_q1": {
+      "relative_rmse_gain": 0.0720748870498811,
+      "aug_r2": 0.4209579592769449
+    },
+    "real_q4": {
+      "relative_rmse_gain": 0.0920970344778705,
+      "aug_r2": 0.10342111396331
+    },
+    "shuffled_q4": {
+      "relative_rmse_gain": -0.05998158742431056,
+      "aug_r2": -0.22209869581057418
+    },
+    "q4_minus_q1_gain": 0.020022147427989398,
+    "real_minus_shuffled_q4_gain": 0.15207862190218108
+  },
+  "bootstrap_ci95": {
+    "real_q1_gain": [
+      0.030499708957782732,
+      0.11517911314055095
+    ],
+    "real_q4_gain": [
+      0.04430893396091978,
+      0.14372210375613692
+    ],
+    "real_q4_aug_r2": [
+      -0.15084949423846283,
+      0.290562004734015
+    ],
+    "shuffled_q4_gain": [
+      -0.14189420347974085,
+      0.006080528402746352
+    ],
+    "q4_minus_q1_gain": [
+      -0.04656631706373539,
+      0.08618555508683283
+    ],
+    "real_minus_shuffled_q4_gain": [
+      0.08324119870534416,
+      0.23756913312290018
+    ]
+  },
+  "gate": {
+    "checks": {
+      "q4_gain_threshold": true,
+      "q4_gain_interval_positive": true,
+      "positive_q4_run_count": true,
+      "q4_augmented_r2_positive": true,
+      "ood_specificity_point_positive": true,
+      "beats_shuffled_interval_positive": true
+    },
+    "pass": true,
+    "decision": "stable-on-this-program"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection, this is a post-selection robustness validation, not an independent confirmation. It may establish resampling stability and estimate the attainable effect on this dataset; it cannot establish prospective discovery or a universal transfer law."
+}

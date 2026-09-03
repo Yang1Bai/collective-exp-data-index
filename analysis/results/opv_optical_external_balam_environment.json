@@ -1,0 +1,18 @@
+{
+  "slurm_job_id": "71579",
+  "node": "balam005",
+  "python": "3.11.5",
+  "torch": "2.1.2+cu121",
+  "chemprop": "2.1.2",
+  "lightning": "2.1.2",
+  "cuda_available": true,
+  "cuda_runtime": "12.1",
+  "gpu": "NVIDIA A100-SXM4-40GB, 40960 MiB, 580.173.02\nNVIDIA A100-SXM4-40GB, 40960 MiB, 580.173.02\nNVIDIA A100-SXM4-40GB, 40960 MiB, 580.173.02\nNVIDIA A100-SXM4-40GB, 40960 MiB, 580.173.02",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "rdkit": "2026.03.3",
+  "scipy": "1.11.4",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "allocated_cpus": "128"
+}

@@ -30,9 +30,9 @@ def build_markdown(catalog: dict) -> str:
     n_comp = sum(1 for e in entries if e["data_type"] == "computational")
 
     out: list[str] = []
-    out.append("# Catalog\n")
+    out.append("# Experimental database and data-resource catalog\n")
     out.append(
-        f"_{catalog.get('entry_count', len(entries))} databases · "
+        f"_{catalog.get('entry_count', len(entries))} resources · "
         f"updated {catalog.get('updated', 'n/a')} · "
         f"{n_exp} experimental · {n_mixed} mixed · {n_comp} computational_\n"
     )
@@ -42,6 +42,13 @@ def build_markdown(catalog: dict) -> str:
         "underlying data is measured (**experimental**), simulated "
         "(**computational**), or **mixed**. Purely computational databases are "
         "excluded by policy (see catalog/excluded_computational.json).\n"
+    )
+    out.append(
+        "> For the project-use status, task-specific resources, scientific "
+        "disposition, and access/licence audit, see the "
+        "[database guide](research/data/DATABASE_GUIDE.md) and "
+        "[analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv). "
+        "Catalog presence does not mean that a resource entered the paper.\n"
     )
     out.append("> Legend: 🧪 experimental · 🧮 computational · 🔀 mixed · "
                "🔓 open · 🔑 registration · 🔒 restricted\n")

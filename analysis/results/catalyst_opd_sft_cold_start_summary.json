@@ -1,0 +1,120 @@
+{
+  "status": "sft-teacher-gate-failed-opd-not-run",
+  "scientific_effect_verified": false,
+  "promotion_allowed": false,
+  "models": {
+    "teacher": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "student": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "device": "Apple MPS",
+    "teacher_update": "LoRA rank 8",
+    "student_opd_started": false
+  },
+  "corrected_real_states": {
+    "path": "analysis/results/opd_router_real_states.json",
+    "sha256": "ee6fcbc8c6383c8d0ea1fb080f6f6fdd48722561e662c78dd1ab3c6a1a61eca0",
+    "rows": 15,
+    "wall_time_seconds": 375.6,
+    "corrections": [
+      "source_validation_spearman now uses held-out validation_metrics instead of source_apparent_metrics",
+      "predictive standard deviations now use the experts' actual std outputs instead of a missing variance key",
+      "normalized disagreement now uses prediction difference divided by pooled predictive uncertainty",
+      "standard_domain_share now uses relative latent-domain closeness instead of duplicating composition coverage"
+    ],
+    "state_ranges": {
+      "source_validation_spearman": [-0.2069, 0.9811],
+      "standard_predictive_std": [0.0479, 620.658],
+      "mhar_predictive_std": [0.0507, 538.9552],
+      "normalized_expert_disagreement": [0.0248, 0.7719],
+      "standard_domain_share": [0.3854, 0.5759],
+      "composition_support": [0.0633, 1.0]
+    }
+  },
+  "attempts": [
+    {
+      "design_version": "catalyst-opd-sft-cold-start-v1",
+      "design_sha256": "9c168b4487c91d25695c34ddfa2d1d7adfd456aab89b05b6a06395a74a9d0020",
+      "train_examples": 96,
+      "held_out_examples": 48,
+      "sft_steps": 80,
+      "decision_token_weight": 1.0,
+      "strict_json_valid_fraction_before": 0.0,
+      "held_out_strict_json_valid_fraction_after": 1.0,
+      "held_out_expert_action_agreement": 0.14583333333333334,
+      "failure_mode": "all 48 held-out states collapsed to ensemble plus predict",
+      "teacher_gate_passed": false,
+      "raw_report": {
+        "path": "analysis/results/catalyst_opd_sft_cold_start_checkpoint/report.json",
+        "sha256": "6f8e816607f9beba7a87e1f12236ab6156325fab46bef84aa90f248107d3d38d",
+        "versioned": false
+      }
+    },
+    {
+      "design_version": "catalyst-opd-sft-cold-start-v2",
+      "design_sha256": "ebeebfae8af82f14a2c423cf0c9ba778853f96863c5ca9cb763c06e8ed03c5e8",
+      "train_examples": 140,
+      "held_out_examples": 70,
+      "sft_steps": 140,
+      "decision_token_weight": 8.0,
+      "v1_held_out_states_reused": false,
+      "strict_json_valid_fraction_before": 0.0,
+      "held_out_strict_json_valid_fraction_after": 1.0,
+      "held_out_expert_action_agreement": 0.15714285714285714,
+      "held_out_predictions": {
+        "ensemble_predict": 1,
+        "mhar_predict": 63,
+        "standard_predict": 6,
+        "rank": 0,
+        "abstain": 0
+      },
+      "failure_mode": "decision-token weighting changed the collapsed expert class but did not teach action or threshold behavior",
+      "teacher_gate_passed": false,
+      "raw_report": {
+        "path": "analysis/results/catalyst_opd_sft_cold_start_v2_checkpoint/report.json",
+        "sha256": "324ab073920e144dc786c76c95f34b8cd32a0d5d3b5af90f058a0740a139264c",
+        "versioned": false
+      }
+    }
+  ],
+  "retrospective_real_state_evaluation": {
+    "best_frozen_single_expert": {
+      "name": "standard",
+      "median_spearman": 0.2938
+    },
+    "deterministic_target_free_policy": {
+      "median_spearman": 0.0732,
+      "median_gain_over_best_frozen": -0.22060000000000002,
+      "harmful_transfer_rate": 0.13333333333333333
+    },
+    "v1_teacher": {
+      "median_spearman": 0.2885,
+      "median_gain_over_best_frozen": -0.005300000000000027,
+      "harmful_transfer_rate": 0.3333333333333333
+    },
+    "v2_teacher": {
+      "median_spearman": 0.1538,
+      "median_gain_over_best_frozen": -0.14,
+      "harmful_transfer_rate": 0.2
+    },
+    "scientific_gate_passed": false,
+    "evidence_boundary": "All real outcomes were already inspected during development; these numbers are retrospective diagnostics only."
+  },
+  "verification": {
+    "opd_and_attention_tests": "69 passed, 1 skipped",
+    "full_repository_tests": "177 passed, 19 skipped, 12 failed",
+    "full_repository_failure_boundary": "The 12 failures are the same unrelated repository failures from missing ignored analysis artifacts, existing registry or freeze hash mismatches, a missing figure export, and the existing PyTorch/Chemprop checkpoint compatibility issue. No OPD or attention test failed.",
+    "ruff": "passed",
+    "format_check": "passed",
+    "json_validation": "passed",
+    "git_diff_check": "passed"
+  },
+  "decision": {
+    "continue_tuning_360m_teacher": false,
+    "run_opd_with_this_teacher": false,
+    "reason": "Both independently seeded SFT attempts learned valid JSON but failed the frozen held-out policy gate by a wide margin. OPD cannot recover routing behavior absent from the teacher.",
+    "next_valid_options": [
+      "Use the deterministic target-free router directly as an auditable baseline",
+      "Train a small numeric router on substantially more programme-held-out edges",
+      "Acquire a stronger same-tokenizer white-box teacher only if the additional compute is justified"
+    ]
+  }
+}

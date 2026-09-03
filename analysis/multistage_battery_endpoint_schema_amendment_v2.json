@@ -1,0 +1,14 @@
+{
+  "amendment": "Stage 2 metadata temperature encoding normalization",
+  "version": 2,
+  "frozen_utc": "2026-07-20T23:25:00Z",
+  "trigger": "Companion metadata in affected Stage 2 archives used 23Â°C; validation stopped before numeric CSV data rows were opened.",
+  "field": "Climate chamber temperature setpoint",
+  "normalization": "Remove ASCII spaces and accept exactly 23°C or 23Â°C.",
+  "accepted_tokens_after_space_removal": ["23°C", "23Â°C"],
+  "rejected": "Every other token, number, temperature, unit, missing field, or fuzzy match.",
+  "numeric_endpoint_change": false,
+  "stage2_outcomes_opened_for_affected_files_before_amendment": false,
+  "unchanged_primary_endpoint": "Q_rel_end_percent = 100 * Q_RPT_AT_T23 / Q_RPT_ET_T23",
+  "claim_guard": "This repairs a nonnumeric encoding artifact only and cannot select or alter any capacity value."
+}

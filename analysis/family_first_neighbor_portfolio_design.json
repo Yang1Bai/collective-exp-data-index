@@ -1,0 +1,50 @@
+{
+  "design_name": "Credibility-complementarity-abstention family-first portfolio audit",
+  "design_version": 1,
+  "frozen_utc": "2026-07-18T02:36:00Z",
+  "status": "outcome-informed method-development design frozen after the Caltech entity-level and local-gate results were observed",
+  "parent_caltech_design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "failed_local_gate_design_sha256": "6a1114e267a9be41bf185256791b591120827b54bc503c219e443f7d34f2c390",
+  "claim_guard": "This audit was motivated by observed Caltech outcomes and by the failure of multiplicative local OOD gates. It may establish a transparent method-development mechanism and conditional robustness on this target, but it cannot serve as independent confirmation or prospective discovery.",
+  "scientific_question": "Can qualified neighboring rankings discover more distinct high-value target regions when credibility is decided at source level, complementary ranks are preserved, and the acquisition unit is diversified across provenance-linked formulation groups?",
+  "strategy": {
+    "credibility": "Admit the predeclared OBELiX same-property and ESTM transport-neighbor rankings; retain Borg mechanical and OCx catalysis as wrong-domain controls. Source credibility is not inferred from source-only OOF R2.",
+    "complementarity": "Fuse the two admitted source ranks by unweighted Borda rank sum. Keep source-specific results and round-robin allocation visible so that one source cannot be credited for another source's proposals.",
+    "abstention": "A wrong, shuffled, or unqualified source receives no allocation in the final protocol; this audit evaluates those counterfactual portfolios rather than silently removing them.",
+    "family_first": "Traverse an outcome-free candidate order once while selecting only the first candidate from each connected provenance/formulation group; append remaining within-group candidates only after every represented group has had one opportunity.",
+    "ood_role": "OOD distance is a reporting and constrained-budget variable, not a multiplicative reward. It cannot override a qualified source rank.",
+    "fallback": "Composition novelty and uniform family-first orders are target-only safety comparators."
+  },
+  "candidate_scopes": [
+    "external_candidate",
+    "hard_ood_40pct"
+  ],
+  "primary_endpoint": {
+    "unit": "connected provenance/formulation group",
+    "top_region": "top ceil(5 percent) groups ranked by their best observed target value",
+    "metric": "AUC of cumulative first recovery of distinct top groups through acquisition 20",
+    "secondary": "distinct top-group recall at 20 and first-recovery positions"
+  },
+  "sensitivity_endpoints": [
+    "top groups defined by median target value",
+    "top groups defined by mean target value",
+    "original entity-level AUC20 and recall20 to expose the breadth-versus-repeat tradeoff"
+  ],
+  "fixed_policies": [
+    "uniform_family_first",
+    "composition_novelty_family_first",
+    "obelix_family_first",
+    "estm_family_first",
+    "neighbor_entity_consensus",
+    "neighbor_family_first_round_robin",
+    "neighbor_family_first_consensus",
+    "wrong_source_family_first_consensus",
+    "shuffled_neighbor_family_first_consensus"
+  ],
+  "conditional_null": {
+    "replicates": 5000,
+    "procedure": "independently permute the OBELiX and ESTM candidate predictions within each fixed candidate scope, rebuild the family-first consensus order, and compare AUC20",
+    "interpretation": "conditional candidate-pool randomization, not external-target uncertainty"
+  },
+  "future_freeze": "The CCA family-first rule, source admission criteria, group construction, endpoints, and source-specific hypothesis cards must be frozen before outcomes on the next target are revealed."
+}

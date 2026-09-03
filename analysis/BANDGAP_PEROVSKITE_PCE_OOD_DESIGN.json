@@ -1,0 +1,169 @@
+{
+  "status": "frozen-before-photovoltaic-transfer-contrasts",
+  "created_utc": "2026-07-28T19:50:00Z",
+  "scope": "retrospective outcome-unseen development benchmark",
+  "research_question": "Can independent experimental band-gap knowledge improve power-conversion-efficiency prediction in chemically held-out perovskite families when recipient band gaps are never used as model inputs?",
+  "inspection_boundary": {
+    "already_inspected": [
+      "one example recipient record",
+      "aggregate recipient field coverage",
+      "partial direct-band-gap source-skill diagnostics",
+      "no row-level or aggregate power-conversion-efficiency transfer contrast"
+    ],
+    "not_claimed": [
+      "prospective preregistration",
+      "prospective laboratory discovery",
+      "universal transfer"
+    ]
+  },
+  "recipient": {
+    "resource": "NOMAD Perovskite Solar Cell Database",
+    "entry_type": "PerovskiteSolarCell",
+    "target": "default power conversion efficiency in percent",
+    "valid_target_range": [
+      0.0,
+      40.0
+    ],
+    "required_identity": [
+      "entry_id",
+      "normalized DOI",
+      "valid ion-resolved composition"
+    ],
+    "forbidden_predictors": [
+      "recipient-reported band gap",
+      "open-circuit voltage",
+      "short-circuit current density",
+      "fill factor",
+      "any target-derived aggregate containing the held-out entry"
+    ]
+  },
+  "donors": {
+    "experimental_text_mined": {
+      "resource": "ChemDataExtractor Band Gap Database",
+      "gate": "DOI present; eV; 0.20-6.00 eV; extracted range width <=0.50 eV; Snowball=true; confidence>=0.80",
+      "aggregation": "median within DOI before median across DOI",
+      "training_exclusions": [
+        "every recipient DOI",
+        "every exact recipient composition for the strict generalization model"
+      ]
+    },
+    "computed_hse": {
+      "resource": "SNUMAT hybrid-functional band-gap database",
+      "calibration": "Huber regression to DOI-clean replicated experimental source cards on exact source-source composition overlap",
+      "eligibility_contract": "available only for target compositions without C, H, or N and within the 95th percentile of HSE source-source nearest-neighbor distance"
+    },
+    "curated_retrieval": {
+      "resources": [
+        "replicated DOI-clean ChemDataExtractor cards",
+        "verified experimental DOI-clean HybriD3 cards"
+      ],
+      "route": "use exact independent composition evidence when available; otherwise use the chemistry-contract generalization prediction"
+    }
+  },
+  "source_skill_gate": {
+    "endpoint": "recipient band gaps marked as directly measured by absorption, Tauc, EQE, IPCE, UPS, UV, or photoluminescence methods",
+    "unit": "unique normalized composition",
+    "minimum_compositions": 100,
+    "exact_recipient_compositions_excluded_from_strict_source_training": true,
+    "requirements_per_candidate": {
+      "absolute_R2": ">0",
+      "Spearman_r": ">=0.20",
+      "relative_RMSE_gain_over_source_median": ">=0.05",
+      "Holm_adjusted_empirical_p_vs_99_label_shuffles": "<=0.05"
+    },
+    "downstream_rule": "No photovoltaic outcome benchmark may be interpreted for a donor policy that fails this gate."
+  },
+  "chemical_ood_split": {
+    "outcome_blind": true,
+    "family_key": "sets of A-site, B-site, and C-site ion names, ignoring coefficients",
+    "family_eligibility": {
+      "minimum_rows": 10,
+      "minimum_distinct_dois": 3
+    },
+    "core_definition": "Most frequent eligible families accumulated in descending frequency until they cover at least 60 percent of valid rows.",
+    "distance": "Euclidean distance between family median element-fraction vectors and the closest core-family centroid.",
+    "test_selection": "Non-core eligible families ranked by decreasing distance then increasing frequency and lexical family key; add complete families until at least 20 percent of eligible rows are selected.",
+    "literature_exclusion": "Every DOI represented in the selected OOD families is removed in full from recipient training, even if that DOI also reports a core family.",
+    "test_rows": "Only rows belonging to selected OOD families and valid target range.",
+    "leakage_assertions": [
+      "zero family overlap",
+      "zero DOI overlap",
+      "zero entry_id overlap"
+    ]
+  },
+  "recipient_features": {
+    "composition": "118 element fractions plus eight deterministic composition descriptors",
+    "site_tokens": "A/B/C ion identities and rounded coefficients",
+    "device_state_tokens": [
+      "architecture",
+      "stack layers",
+      "deposition procedure",
+      "deposition solvents",
+      "PCE scan direction",
+      "light spectrum"
+    ],
+    "numeric_state": [
+      "cell area",
+      "number of deposition steps",
+      "annealing temperature",
+      "annealing time",
+      "light intensity",
+      "test temperature"
+    ],
+    "categorical_encoding": "FeatureHasher with 256 dimensions fit without outcomes",
+    "missingness": "explicit missing tokens and numeric missingness indicators"
+  },
+  "recipient_model": {
+    "algorithm": "ExtraTreesRegressor",
+    "parameters": {
+      "n_estimators": 500,
+      "min_samples_leaf": 3,
+      "max_features": 0.7,
+      "n_jobs": -1
+    },
+    "target_training_budgets": [
+      100,
+      300,
+      "all"
+    ],
+    "budget_unit": "rows sampled as intact DOI groups with deterministic near-target selection",
+    "draws_per_finite_budget": 50,
+    "primary_budget": 100
+  },
+  "policies": [
+    "target_only",
+    "experimental_text_mined",
+    "calibrated_hse_with_contract",
+    "support_weighted_contract_fusion",
+    "retrieval_routed_contract_fusion",
+    "composition_permuted_borrowed_feature_control"
+  ],
+  "borrowed_features": [
+    "predicted band gap",
+    "source-model ensemble standard deviation",
+    "nearest-source composition distance",
+    "source eligibility",
+    "exact independent lookup availability",
+    "number of independent lookup sources"
+  ],
+  "inference": {
+    "primary_metric": "relative OOD RMSE gain versus paired target-only model",
+    "secondary_metrics": [
+      "OOD MAE gain",
+      "delta OOD R2",
+      "Spearman rank correlation",
+      "worst-family RMSE"
+    ],
+    "resampling": "paired cluster bootstrap over OOD families and DOIs with 10000 replicates",
+    "multiple_comparisons": "Holm correction across the four real borrowing policies within the primary budget",
+    "acceptance_gate": {
+      "relative_RMSE_gain": ">=0.05",
+      "bootstrap_95_percent_interval": "strictly positive",
+      "Holm_adjusted_p": "<=0.05",
+      "gain_over_permuted_control": ">0",
+      "positive_draw_fraction": ">=0.70",
+      "augmented_absolute_R2": ">0"
+    }
+  },
+  "claim_guard": "A passing policy demonstrates retrospective improvement on a declared chemical-OOD benchmark. It does not establish prospective laboratory discovery or universal transfer. A failed policy remains part of the borrowing-map boundary and cannot be replaced after outcome inspection."
+}

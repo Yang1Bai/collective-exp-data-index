@@ -1,0 +1,8 @@
+{
+  "amendment_sha256": "5053143dd46253849c690df0457a089ead126a1d79fe80315041f60483698b43",
+  "control_audit_sha256": "d1a9fbcc14173a0bc08d9de5750f1f2570747d5fcc124416b9b9d9a476c0bdcb",
+  "metric_rows": 8400,
+  "preoutcome_sha256": "438d449b1970556e5b31fa2d517b85488c55fd955243bb3e8c2d0ae26218dadf",
+  "repeats": 100,
+  "status": "complete"
+}

@@ -1,0 +1,22 @@
+resource,display_name,family,analysis_layer,donor,recipient,artifact_gate,role_group
+aqsoldb,AqSolDB,aqueous molecular properties,normalized,true,true,false,both
+freesolv,FreeSolv,aqueous molecular properties,normalized,true,true,false,both
+calisol-23,CALiSol-23,electrolyte transport,normalized,true,true,false,both
+estm-thermoelectric,ESTM thermoelectrics,thermoelectric transport,normalized,true,true,false,both
+kit-electrolyte-conductivity-5035,KIT electrolyte conductivity,electrolyte transport,normalized,true,true,false,both
+mpea-dataset-borg,Borg MPEA,alloy mechanics,normalized,true,true,false,both
+obelix-solid-electrolytes,OBELiX,ionic transport,normalized,true,true,false,both
+ocx24-open-catalyst-experiments-2024,OCx24,electrocatalysis,normalized,true,true,false,both
+openpoly-benchmark,OpenPoly,polymers,normalized,true,true,false,both
+photoswitch-dataset,Photoswitch,molecular photochemistry,normalized,true,true,false,both
+caltech-ionic-external,Caltech ionic conductivity,ionic transport,external,true,true,false,both
+multistage-liion-aging,Multi-stage battery aging,battery aging,external,true,true,false,both
+specgen-derivative-oer,SpecGen derivative OER,electrocatalysis,external,true,true,false,both
+iupac-digitized-pka,IUPAC digitized pKa,aqueous molecular properties,normalized,true,false,false,donor only
+caltech-acid-oer,Caltech Acid-OER,electrocatalysis,external,true,false,false,donor only
+caltech-metal-oxide-orr,Caltech metal-oxide ORR,electrocatalysis,external,true,false,false,donor only
+birdshot-high-entropy-alloy-campaign,BIRDSHOT,alloy mechanics,normalized,false,true,false,recipient only
+matbench-steels,Matbench steels,alloy mechanics,normalized,false,true,false,recipient only
+starrydata2,Starrydata2,thermoelectric transport,external,false,true,false,recipient only
+tri-oer,TRI four-plate OER,electrocatalysis,external,false,true,false,recipient only
+nist-isodb,NIST ISODB,adsorption thermodynamics,analysis-only,false,false,true,artifact only

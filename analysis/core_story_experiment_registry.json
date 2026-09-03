@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "core_claim": "Qualified neighboring experimental knowledge can partially reduce target-domain knowledge scarcity in few-shot and OOD regions.",
+  "release_rule": "Every paper_submission_required experiment must have status complete or complete-boundary, all evidence_paths must exist, and all planned claim-bearing designs must be frozen before target outcomes are accessed.",
+  "accepted_complete_statuses": [
+    "complete",
+    "complete-boundary"
+  ],
+  "experiments": [
+    {
+      "id": "CS01",
+      "name": "OOD knowledge-deficit surface",
+      "paper_submission_required": true,
+      "status": "complete",
+      "design_paths": ["analysis/ood_knowledge_deficit_design.json"],
+      "evidence_paths": ["analysis/results/ood_knowledge_deficit_summary.json", "analysis/results/ood_knowledge_deficit_VERIFIED.json"],
+      "primary_endpoints": ["target-only RMSE by target-label budget and OOD quartile", "absolute-error association with outcome-free OOD distance"],
+      "required_controls": ["group/provenance split", "Random Forest sensitivity", "fixed OOD definitions"],
+      "compute": "complete: 100 repeats, 1,000 learner-budget tasks, 30,000 metric rows"
+    },
+    {
+      "id": "CS02",
+      "name": "Leakage-safe few-shot neighbor increment",
+      "paper_submission_required": true,
+      "status": "complete",
+      "design_paths": ["analysis/kit_temperature_borrowing_design.json"],
+      "evidence_paths": ["analysis/results/kit_temperature_summary.json", "analysis/results/kit_temperature_edges.csv"],
+      "primary_endpoints": ["relative RMSE reduction at n=30", "positive augmented-model R2"],
+      "required_controls": ["formulation grouping", "temperature-distance controls", "shuffled source", "three learners"],
+      "compute": "complete"
+    },
+    {
+      "id": "CS03",
+      "name": "Independent positive predictive replication",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_design.json", "analysis/tri_oer_neighbor_design.json"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_VALIDATED.json", "analysis/results/tri_oer_VALIDATED.json", "analysis/results/outcome_unseen_multi_target_summary.json"],
+      "primary_endpoints": ["n=30 held-out RMSE increment", "highest-OOD-stratum RMSE increment", "absolute target utility"],
+      "required_controls": ["article/campaign holdout", "target-only comparator", "wrong and shuffled sources", "multiplicity"],
+      "compute": "complete boundary: neither outcome-unseen target passed the prespecified full positive gate; an independent positive predictive replication was not obtained"
+    },
+    {
+      "id": "CS04",
+      "name": "Matched source-specificity controls",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_implementation.json", "analysis/tri_oer_implementation.json"],
+      "evidence_paths": ["analysis/results/caltech_ionic_external_policy_validation.json", "analysis/results/starrydata_reverse_matched_source_controls.json", "analysis/results/tri_oer_matched_source_controls.csv"],
+      "primary_endpoints": ["neighbor increment beyond matched controls"],
+      "required_controls": ["source-size match", "source-skill match", "representation-coverage match", "equal-capacity random feature"],
+      "compute": "complete: matched size, skill, coverage, shuffle, and equal-capacity contrasts retained; no target passes the complete specificity family"
+    },
+    {
+      "id": "CS05",
+      "name": "Learner and representation robustness",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_implementation.json", "analysis/tri_oer_implementation.json"],
+      "evidence_paths": ["analysis/results/kit_temperature_sensitivity.csv"],
+      "primary_endpoints": ["effect heterogeneity across learners and representations"],
+      "required_controls": ["three learner families", "two non-equivalent representations", "same split and budget"],
+      "compute": "complete: all 12 target-by-learner-by-representation cells retained; effects are heterogeneous and only Starrydata passes the frozen robustness envelope"
+    },
+    {
+      "id": "CS06",
+      "name": "Standard transfer baselines",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_implementation.json", "analysis/tri_oer_implementation.json"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_VALIDATED.json", "analysis/results/tri_oer_VALIDATED.json"],
+      "primary_endpoints": ["paired prediction and exploration utility against every named baseline"],
+      "required_controls": ["naive pooling", "source only", "frozen stacking", "residual shrinkage", "mixture of experts", "target only", "random", "novelty"],
+      "compute": "complete: every named baseline was evaluated in the formal runs; neither target passes the full comparative gate"
+    },
+    {
+      "id": "CS07",
+      "name": "Endpoint-separation falsification",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/ood_decision_borrowing_design.json", "analysis/obelix_ood_discovery_design.json"],
+      "evidence_paths": ["analysis/results/ood_decision_summary.json", "analysis/results/obelix_ood_discovery_summary.json", "analysis/results/caltech_ionic_external_policy_summary.json"],
+      "primary_endpoints": ["fixed screening", "adaptive acquisition", "random and novelty reference"],
+      "required_controls": ["uniform random", "shuffled source", "wrong source", "model sensitivity"],
+      "compute": "complete"
+    },
+    {
+      "id": "CS08",
+      "name": "Multi-source complementarity and family-first ablation",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/family_first_neighbor_portfolio_design.json", "analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_design.json", "analysis/tri_oer_neighbor_design.json"],
+      "evidence_paths": ["analysis/results/family_first_neighbor_portfolio_summary.json", "analysis/results/starrydata_reverse_policy_orders.csv", "analysis/results/tri_oer_policy_orders.csv"],
+      "primary_endpoints": ["distinct-component AUC20", "component recall20", "entity recall20 tradeoff"],
+      "required_controls": ["best single source", "entity consensus", "random", "novelty", "wrong portfolio", "shuffled portfolio"],
+      "compute": "complete boundary: Starrydata CCA AUC20=41 versus same-domain ESTM=71 and source-rank permutation p=0.546; all TRI exploration contrasts have Holm p=1.0"
+    },
+    {
+      "id": "CS09",
+      "name": "Outcome-unseen full-policy validation",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_design.json", "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_PREOUTCOME.json", "analysis/results/starrydata_reverse_policy_orders.csv", "analysis/results/tri_oer_PREOUTCOME.json", "analysis/results/tri_oer_policy_orders.csv"],
+      "primary_endpoints": ["few-shot RMSE", "distinct-component AUC20", "first top component"],
+      "required_controls": ["pre-outcome hashes", "outcome-permutation sentinel", "wrong and shuffled portfolios"],
+      "compute": "complete: Balam Job 70888 and portable local verification completed both frozen programmes without target or policy replacement"
+    },
+    {
+      "id": "CS10",
+      "name": "Reverse-direction and second-domain replication",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_design.json", "analysis/tri_oer_neighbor_design.json", "analysis/TRI_OER_CLEAN_REPLACEMENT_PROTOCOL.md"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_PREOUTCOME.json", "analysis/results/tri_oer_PREOUTCOME.json"],
+      "primary_endpoints": ["directed reverse-edge effect", "non-transport target effect or safe abstention"],
+      "required_controls": ["direction-specific fit", "second scientific family", "wrong-domain source"],
+      "compute": "complete boundary: reverse transport has a positive directional interval but fails multiplicity and absolute utility; the four-plate OER target is null"
+    },
+    {
+      "id": "CS11",
+      "name": "Prewritten scientific hypothesis and matched falsifier",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/starrydata_reverse_transport_design.json", "analysis/tri_oer_neighbor_design.json"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_hypothesis_cards.csv", "analysis/results/starrydata_reverse_PREOUTCOME.json", "analysis/results/tri_oer_hypothesis_cards.csv", "analysis/results/tri_oer_PREOUTCOME.json"],
+      "primary_endpoints": ["matched-control enrichment of prewritten source-derived regions"],
+      "required_controls": ["pre-outcome timestamp and hash", "target-only matched control", "mechanistic falsifier", "report all cards"],
+      "compute": "complete boundary: all six cards were tested and retained; none passes Holm correction"
+    },
+    {
+      "id": "CS12",
+      "name": "Independent-unit and multi-target inference",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/outcome_unseen_neighbor_validation_program.json", "analysis/tri_oer_implementation.json"],
+      "evidence_paths": ["analysis/results/starrydata_reverse_VALIDATED.json", "analysis/results/tri_oer_VALIDATED.json", "analysis/results/outcome_unseen_multi_target_summary.json"],
+      "primary_endpoints": ["hierarchical mean borrowing effect", "between-target heterogeneity", "target-level effects"],
+      "required_controls": ["article/campaign/dataset resampling", "Holm within target", "no seed-only external interval"],
+      "compute": "complete boundary: two-target mean relative RMSE gain 0.00304, 95% CI [-0.00617,0.01225], I2=76.7%"
+    },
+    {
+      "id": "CS15",
+      "name": "Systematic multi-target OOD repair stress test",
+      "paper_submission_required": true,
+      "status": "complete-boundary",
+      "design_paths": ["analysis/multi_target_ood_borrowing_design.json", "analysis/MULTI_TARGET_OOD_BORROWING_PROTOCOL.md"],
+      "evidence_paths": ["analysis/results/multi_target_ood_edge_summary.csv", "analysis/results/multi_target_ood_target_summary.csv", "analysis/results/multi_target_ood_summary.json", "analysis/results/multi_target_ood_VERIFIED.json"],
+      "primary_endpoints": ["designated-edge Q4 relative RMSE gain", "Q4-minus-Q1 OOD specificity", "augmented Q4 absolute R2", "programme-level mean OOD gain"],
+      "required_controls": ["outcome-free OOD groups", "intact evaluation groups", "wrong source", "shuffled source", "three learner families", "identity exclusion", "Holm correction", "programme-cluster inference"],
+      "compute": "complete boundary: Balam Job 71429 formally evaluated eight targets, 40 real edges, eight shuffled controls, three learners, and 100 grouped label draws. The strongest designated edge was alloy UTS to YS at +6.65% Q4 gain [3.53%,14.02%], but Q1 gain was +7.74% and augmented Q4 R2 was -0.666. No designated edge passed the complete OOD-repair gate; the seven-programme mean was +0.92% [-0.35%,2.92%] and 0/3 designated cross-database edges passed."
+    },
+    {
+      "id": "CS14",
+      "name": "Leave-one-target-program borrowing gate",
+      "paper_submission_required": false,
+      "status": "method-development-complete",
+      "design_paths": ["analysis/cca_leave_one_program_gate_design.json", "analysis/CCA_GATE_V2_PROSPECTIVE_PROTOCOL.md", "analysis/cca_gate_v2_architecture.json"],
+      "evidence_paths": ["analysis/results/cca_leave_one_program_summary.json", "analysis/results/cca_leave_one_program_VERIFIED.json", "analysis/CCA_LEAVE_ONE_PROGRAM_GATE_VALIDATION.md"],
+      "primary_endpoints": ["programme-level relative RMSE utility", "superiority to always-best credibility and never borrowing", "clear-harm admission and clear-benefit retention"],
+      "required_controls": ["leave one complete programme out", "programme-cluster bootstrap", "Holm over two primary contrasts", "adjacency only", "credibility only", "never borrow", "oracle descriptive bound", "20 percent coverage guard"],
+      "compute": "complete method development: 97 edges, 20 tasks, 13 programme clusters, 10000 programme bootstraps; CCA superiority family failed and the result was independently reconstructed"
+    },
+    {
+      "id": "CS13",
+      "name": "Prospective or genuinely temporal candidate test",
+      "paper_submission_required": false,
+      "required_for_claims": ["discovery acceleration", "new science discovered", "laboratory experiments saved"],
+      "status": "complete-boundary",
+      "design_paths": ["analysis/cca_gate_v2_architecture.json", "analysis/multistage_battery_cca_v2_design.json", "analysis/MULTISTAGE_BATTERY_CCA_V2_PROTOCOL.md", "analysis/MULTISTAGE_BATTERY_ENDPOINT_SCHEMA_AMENDMENT.md", "analysis/multistage_battery_endpoint_schema.json", "analysis/target_metadata/multistage_battery_preoutcome_metadata.json", "analysis/target_metadata/multistage_battery_preoutcome_freeze.json", "analysis/MULTISTAGE_BATTERY_STAGE2_COVERAGE_BOUNDARY.md", "analysis/results/multistage_battery_stage2_coverage_sensitivity/POSTRELEASE_SENSITIVITY_SPECIFICATION.json", "analysis/results/multistage_battery_stage2_coverage_sensitivity/POSTRELEASE_ADJACENCY_DIAGNOSTIC_SPECIFICATION.json"],
+      "evidence_paths": ["analysis/results/multistage_battery_file_map/archive_file_stage_map.csv", "analysis/results/multistage_battery_file_map/COMPLETE.json", "analysis/results/multistage_battery_file_map/INDEPENDENT_VERIFICATION.json", "analysis/results/multistage_battery_header_schema.json", "analysis/results/multistage_battery_stage1_source_freeze/STAGE1_SOURCE_FREEZE.json", "analysis/results/multistage_battery_stage2/STAGE2_RELEASE_AUDIT.json", "analysis/results/multistage_battery_stage2/Z10_MEMBER_AUDIT.json", "analysis/results/multistage_battery_stage2_coverage_sensitivity/analysis/POSTRELEASE_SENSITIVITY_SUMMARY.json", "analysis/results/multistage_battery_stage2_coverage_sensitivity/INDEPENDENT_VERIFICATION.json", "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/POSTRELEASE_ADJACENCY_DIAGNOSTIC_SUMMARY.json", "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/INDEPENDENT_VERIFICATION.json", "analysis/MULTISTAGE_BATTERY_STAGE2_FINDINGS.md"],
+      "primary_endpoints": ["condition-cluster relative RMSE gain versus adjacency-only", "condition-cluster relative RMSE gain versus target-only", "matched-control enrichment of source-inspired condition regions"],
+      "required_controls": ["pre-outcome temporal freeze", "target only", "adjacency only", "wrong-property source", "shuffled source", "equal-capacity random features", "all failures and abstentions retained"],
+      "compute": "complete boundary: 135/138 Stage 2 endpoints were extracted, but all three cells in one cycle condition lacked AT_T23, so the frozen 23-group primary is non-evaluable. A disclosed and independently reconstructed 22-group sensitivity found CCA-v2 did not beat adjacency-only. An outcome-guided diagnostic nominated the simpler continuous Stage 1 feature: 6.12% condition-RMSE gain versus target-only [2.56%,9.16%], Holm p=0.0108, positive in both aging strata and superior to wrong, shuffled, and random controls. This is method-development evidence, not confirmatory success or prospective discovery."
+    }
+  ]
+}

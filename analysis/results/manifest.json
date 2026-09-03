@@ -1,0 +1,1993 @@
+{
+  "manifest_schema_version": 5,
+  "snapshot_date": "2026-07-14",
+  "python": "3.11.13",
+  "database": {
+    "path": "data/collective.sqlite",
+    "schema_version": "3",
+    "sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "datasets": 14,
+    "measurements": 96184,
+    "distinct_properties": 230,
+    "distinct_canonical_entities": 29516
+  },
+  "source_lock": {
+    "path": "scripts/localdb/sources.lock.json",
+    "sha256": "4113c404b3b2aba54712d2d316c5dc14c3ce3e60cf70e387fd1f17af31b1e4a9"
+  },
+  "source_commits": {
+    "aqsoldb": "8e02b548fd9a78778ff89a5aa9a460d1a289cc3a",
+    "birdshot-high-entropy-alloy-campaign": "e4d72eabe31fad072b03ebb3788f4eb55e533dfc",
+    "calisol-23": "figshare-file-43151344-sha256-850ff20eaad7abfe8",
+    "estm-thermoelectric": "72d597cb6fdf6b79f6ca86ff759f9136de5d66ef",
+    "freesolv": "6c7d19b4b565537365ffd22006aa2cd4643200c6",
+    "iupac-digitized-pka": "1e65bbb75c401edfcaaf1b494e24468166fb2f16",
+    "kit-electrolyte-conductivity-5035": "zenodo-7244939-sha256-22b3445590b2d3a5",
+    "matbench-steels": "figshare-file-13354694-sha256-53c995e14371098f",
+    "mpea-dataset-borg": "e4d72eabe31fad072b03ebb3788f4eb55e533dfc",
+    "nist-isodb": "4cfcd47e4402f4ff40f893cbbcaa6b86734d8ac6",
+    "obelix-solid-electrolytes": "4eaac889809dd489e3bae468c45d5c0e02b9147a",
+    "ocx24-open-catalyst-experiments-2024": "a838178c0b6cef68ed6b23167cc93c98ee26d2f7",
+    "openpoly-benchmark": "ccaa66900747bfc576ef935e3d5f220b6c9b1f85",
+    "photoswitch-dataset": "e30d68287d7803bc0199604e2693ef50b5ee6b3b"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "rdkit": "2026.3.3"
+  },
+  "frozen_designs": [
+    "analysis/knowledge_map_design.json",
+    "analysis/external_confirmation_design.json",
+    "analysis/matbench_steels_confirmation_design.json",
+    "analysis/kit_temperature_borrowing_design.json",
+    "analysis/calisol_external_borrowing_design.json",
+    "analysis/calisol_anchored_delta_transfer_design.json",
+    "analysis/STRENGTH_LAW_SPEC.md",
+    "analysis/ISODB_ISOSTERIC_SPEC.md",
+    "analysis/OOD_DECISION_BORROWING_SPEC.md",
+    "analysis/ood_decision_borrowing_design.json",
+    "analysis/hard_ood_composition_design.json",
+    "analysis/obelix_ood_discovery_design.json",
+    "analysis/neighbor_transfer_methods_design.json",
+    "analysis/neighbor_transfer_policy_design.json",
+    "analysis/caltech_ionic_external_policy_design.json",
+    "analysis/caltech_ionic_external_policy_implementation.json",
+    "analysis/local_gated_neighbor_portfolio_design.json",
+    "analysis/family_first_neighbor_portfolio_design.json",
+    "analysis/cca_family_first_outcome_unseen_protocol.json",
+    "analysis/ood_knowledge_deficit_design.json",
+    "analysis/outcome_unseen_neighbor_validation_program.json",
+    "analysis/starrydata_reverse_transport_design.json",
+    "analysis/starrydata_reverse_transport_implementation.json",
+    "analysis/core_story_experiment_registry.json",
+    "analysis/target_metadata/starrydata_manifest_2026-07-17.json",
+    "analysis/caltech_acid_oer_neighbor_design.json",
+    "analysis/tri_oer_neighbor_design.json",
+    "analysis/tri_oer_implementation.json",
+    "analysis/specgen_derivative_oer_borrowing_design.json"
+  ],
+  "analysis_scripts": [
+    ".github/workflows/validate.yml",
+    "scripts/localdb/build_localdb.py",
+    "scripts/validate_catalog.py",
+    "analysis/common.py",
+    "analysis/audit_snapshot.py",
+    "analysis/run_confirmatory.py",
+    "analysis/run_knowledge_map.py",
+    "analysis/refine_candidate_permutations.py",
+    "analysis/run_external_confirmation.py",
+    "analysis/run_external_sensitivities.py",
+    "analysis/run_matbench_steels_confirmation.py",
+    "analysis/run_kit_temperature_borrowing.py",
+    "analysis/run_kit_sample_equivalence_uncertainty.py",
+    "analysis/run_calisol_external_borrowing.py",
+    "analysis/run_calisol_anchored_delta_transfer.py",
+    "analysis/verify_calisol_anchored_delta_transfer.py",
+    "analysis/run_strength_law_external.py",
+    "analysis/run_isodb_isosteric.py",
+    "analysis/run_isodb_universality.py",
+    "analysis/run_ood_decision_borrowing.py",
+    "analysis/run_hard_ood_composition.py",
+    "analysis/write_obelix_ood_discovery_input.py",
+    "analysis/run_obelix_ood_discovery.py",
+    "analysis/verify_obelix_ood_discovery_results.py",
+    "analysis/analyze_obelix_ood_discovery_diagnostics.py",
+    "analysis/analyze_neighbor_transfer_signals.py",
+    "analysis/run_neighbor_transfer_policy_benchmark.py",
+    "analysis/verify_neighbor_transfer_policy_results.py",
+    "analysis/audit_neighbor_transfer_policy_results.py",
+    "analysis/audit_caltech_ionic_external_target.py",
+    "analysis/run_caltech_ionic_external_policy.py",
+    "analysis/verify_caltech_ionic_external_policy_results.py",
+    "analysis/audit_caltech_ionic_external_policy_results.py",
+    "analysis/run_local_gated_neighbor_portfolio.py",
+    "analysis/audit_family_first_neighbor_portfolio.py",
+    "analysis/run_ood_knowledge_deficit_audit.py",
+    "analysis/verify_ood_knowledge_deficit_results.py",
+    "analysis/check_core_story_experiments.py",
+    "analysis/prepare_starrydata_reverse_transport.py",
+    "analysis/verify_starrydata_reverse_preoutcome.py",
+    "analysis/run_starrydata_reverse_transport.py",
+    "analysis/verify_starrydata_reverse_transport_results.py",
+    "analysis/prepare_starrydata_matched_source_controls.py",
+    "analysis/run_starrydata_matched_specificity.py",
+    "analysis/prepare_caltech_acid_oer_neighbor.py",
+    "analysis/prepare_tri_oer_neighbor.py",
+    "analysis/verify_tri_oer_preoutcome.py",
+    "analysis/run_tri_oer_neighbor.py",
+    "analysis/verify_tri_oer_neighbor_results.py",
+    "analysis/verify_tri_oer_neighbor_results_amended.py",
+    "analysis/synthesize_outcome_unseen_validation.py",
+    "analysis/synthesize_knowledge_map.py",
+    "analysis/make_data_foundation_figure.py",
+    "analysis/make_main_knowledge_map_figure.py",
+    "analysis/make_ood_decision_figure.py",
+    "analysis/make_caltech_external_policy_figure.py",
+    "analysis/make_family_first_neighbor_portfolio_figure.py",
+    "analysis/make_outcome_unseen_validation_figure.py",
+    "analysis/make_neighbor_map_exploration_figure.py",
+    "analysis/make_battery_continuous_borrowing_figure.py",
+    "analysis/balam/local_fetch_results.ps1",
+    "analysis/balam/local_upload_and_submit.ps1",
+    "analysis/balam/prepare_and_submit_balam.sh",
+    "analysis/balam/run_obelix_ood_discovery_balam.sh",
+    "analysis/balam/local_upload_and_submit_neighbor_policy.ps1",
+    "analysis/balam/local_fetch_neighbor_policy_results.ps1",
+    "analysis/balam/prepare_and_submit_neighbor_policy.sh",
+    "analysis/balam/run_neighbor_transfer_policy_balam.sh",
+    "analysis/balam/local_upload_and_submit_caltech_ionic_policy.ps1",
+    "analysis/balam/local_upload_and_submit_caltech_verification.ps1",
+    "analysis/balam/local_fetch_caltech_ionic_policy_results.ps1",
+    "analysis/balam/local_recover_caltech_ionic_policy_results.ps1",
+    "analysis/balam/prepare_and_submit_caltech_ionic_policy.sh",
+    "analysis/balam/run_caltech_ionic_external_policy_balam.sh",
+    "analysis/balam/run_caltech_ionic_external_policy_verify_balam.sh",
+    "analysis/balam/local_upload_and_submit_core_story_outcome_unseen.ps1",
+    "analysis/balam/local_fetch_core_story_outcome_unseen_results.ps1",
+    "analysis/balam/prepare_and_submit_core_story_outcome_unseen.sh",
+    "analysis/balam/run_core_story_outcome_unseen_balam.sh",
+    "tests/test_analysis_integrity.py",
+    "tests/test_caltech_external_protocol.py",
+    "tests/test_family_first_neighbor_portfolio.py",
+    "tests/test_core_story_registry.py",
+    "tests/test_starrydata_verifier.py",
+    "tests/test_tri_oer_verifier_amendment.py",
+    "tests/test_new_main_figures.py",
+    "analysis/run_specgen_derivative_oer_borrowing.py",
+    "analysis/run_specgen_composition_secondary.py",
+    "analysis/run_specgen_top20_temporal_check.py",
+    "analysis/verify_specgen_derivative_results.py",
+    "analysis/make_specgen_derivative_oer_figure.py",
+    "analysis/write_release_manifest.py"
+  ],
+  "manuscript_documentation": [
+    "README.md",
+    "docs/methodology.md",
+    "analysis/README.md",
+    "analysis/MANUSCRIPT_DRAFT.md",
+    "analysis/MANUSCRIPT_DRAFT_STREAMLINED.md",
+    "analysis/SUPPLEMENTARY_INFORMATION.md",
+    "analysis/PRESUBMISSION_REVIEW.md",
+    "analysis/ADVERSARIAL_REVIEW_RESPONSE.md",
+    "analysis/SELECTIVE_NEIGHBOR_BORROWING_STRATEGY.md",
+    "analysis/PAPER_PACKAGE.md",
+    "analysis/PHASE1_FINDINGS.md",
+    "analysis/PHASE2_FINDINGS.md",
+    "analysis/PHASE3_FINDINGS.md",
+    "analysis/RELATED_WORK.md",
+    "analysis/REFERENCES.bib",
+    "analysis/CITATION_VERIFICATION.md",
+    "analysis/TERMINOLOGY_LEDGER.md",
+    "analysis/DATA_FOUNDATION_FIGURE_CONTRACT.md",
+    "analysis/DATA_FOUNDATION_FIGURE_QA.md",
+    "analysis/FIGURE_CONTRACT.md",
+    "analysis/FIGURE_QA.md",
+    "analysis/FAMILY_FIRST_FIGURE_CONTRACT.md",
+    "analysis/OUTCOME_UNSEEN_FIGURE_CONTRACT.md",
+    "analysis/NEIGHBOR_MAP_FIGURE_CONTRACT.md",
+    "analysis/NEIGHBOR_MAP_FIGURE_QA.md",
+    "analysis/BATTERY_FIGURE_CONTRACT.md",
+    "analysis/BATTERY_FIGURE_QA.md",
+    "analysis/CCA_FAMILY_FIRST_PROTOCOL.md",
+    "analysis/KNOWLEDGE_BORROWING_MAP_SPEC.md",
+    "analysis/NEIGHBOR_TRANSFER_METHODS_ROADMAP.md",
+    "analysis/NEIGHBOR_TRANSFER_POLICY_VALIDATION.md",
+    "analysis/CALTECH_IONIC_EXTERNAL_POLICY_SPEC.md",
+    "analysis/CALTECH_IONIC_SCHEMA_AMENDMENT.md",
+    "analysis/CALTECH_IONIC_INFERENCE_AMENDMENT.md",
+    "analysis/CALTECH_IONIC_IMPLEMENTATION_AMENDMENT_2.md",
+    "analysis/CALTECH_IONIC_INFRASTRUCTURE_AMENDMENT_3.md",
+    "analysis/CALTECH_IONIC_VERIFIER_AMENDMENT_4.md",
+    "analysis/CALTECH_IONIC_REMOTE_VERIFICATION_AMENDMENT_5.md",
+    "analysis/CALTECH_IONIC_EXTERNAL_POLICY_VALIDATION.md",
+    "analysis/balam/README.md",
+    "analysis/balam/requirements.txt",
+    "analysis/MATBENCH_STEELS_CONFIRMATION_AMENDMENT.md",
+    "analysis/KIT_TEMPERATURE_BORROWING_AMENDMENT.md",
+    "analysis/CALISOL_EXTERNAL_BORROWING_AMENDMENT.md",
+    "analysis/CALISOL_ANCHORED_DELTA_TRANSFER_PROTOCOL.md",
+    "analysis/CALISOL_ANCHORED_DELTA_TRANSFER_FINDINGS.md",
+    "analysis/CALISOL_ANCHORED_DELTA_IMPLEMENTATION_AMENDMENT.md",
+    "analysis/CALISOL_ANCHORED_DELTA_FIGURE_CONTRACT.md",
+    "analysis/CALISOL_ANCHORED_DELTA_FIGURE_QA.md",
+    "analysis/CORE_STORY_EXPERIMENT_MATRIX.md",
+    "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md",
+    "analysis/STARRYDATA_FORMAL_EXECUTION_AMENDMENT.md",
+    "analysis/STARRYDATA_VERIFIER_AMENDMENT.md",
+    "analysis/CALTECH_ACID_OER_ACCIDENTAL_ACCESS_AMENDMENT.md",
+    "analysis/TRI_OER_CLEAN_REPLACEMENT_PROTOCOL.md",
+    "analysis/TRI_OER_PICKLE_SCHEMA_AMENDMENT.md",
+    "analysis/TRI_OER_VERIFIER_AMENDMENT.md",
+    "analysis/DATASET_CANDIDATE_EDGE_AUDIT_2026-07-30.md",
+    "analysis/SPECGEN_DERIVATIVE_OER_BORROWING_PROTOCOL.md",
+    "analysis/SPECGEN_COMPOSITION_SECONDARY_AMENDMENT.md",
+    "analysis/SPECGEN_TOP20_TEMPORAL_CHECK.md",
+    "analysis/SPECGEN_DERIVATIVE_FIGURE_CONTRACT.md",
+    "analysis/SPECGEN_DERIVATIVE_FIGURE_QA.md"
+  ],
+  "claim_artifacts": [
+    "analysis/results/data_lake_profile.csv",
+    "analysis/results/data_lake_registered_sources.csv",
+    "analysis/results/data_quality_findings.csv",
+    "analysis/results/knowledge_map_edges_refined.csv",
+    "analysis/results/external_confirmation_edges.csv",
+    "analysis/results/external_confirmation_utility_summary.json",
+    "analysis/results/matbench_steels_external_summary.json",
+    "analysis/results/matbench_steels_external_edges.csv",
+    "analysis/results/matbench_steels_external_sensitivity.csv",
+    "analysis/results/matbench_steels_external_source_quality.csv",
+    "analysis/results/matbench_steels_external_learning_curve.csv",
+    "analysis/results/kit_temperature_summary.json",
+    "analysis/results/kit_temperature_edges.csv",
+    "analysis/results/kit_temperature_sensitivity.csv",
+    "analysis/results/kit_temperature_source_quality.csv",
+    "analysis/results/kit_temperature_learning_curve.csv",
+    "analysis/results/kit_temperature_replicate_structure.csv",
+    "analysis/results/kit_temperature_feature_importance.csv",
+    "analysis/results/kit_temperature_permutation_null.csv",
+    "analysis/results/kit_sample_equivalence_uncertainty.json",
+    "analysis/results/kit_sample_equivalence_bootstrap.csv",
+    "analysis/results/calisol_external_summary.json",
+    "analysis/results/calisol_external_edges.csv",
+    "analysis/results/calisol_external_sensitivity.csv",
+    "analysis/results/calisol_external_source_quality.csv",
+    "analysis/results/calisol_external_source_quality_predictions.csv",
+    "analysis/results/calisol_external_learning_curve.csv",
+    "analysis/results/calisol_external_temperature_structure.csv",
+    "analysis/results/calisol_external_outer_folds.csv",
+    "analysis/results/calisol_external_feature_importance.csv",
+    "analysis/results/calisol_external_permutation_null.csv",
+    "analysis/results/calisol_anchored_delta_summary.json",
+    "analysis/results/calisol_anchored_delta_verified.json",
+    "analysis/results/calisol_anchored_delta_predictions.csv",
+    "analysis/results/calisol_anchored_delta_article_metrics.csv",
+    "analysis/results/calisol_anchored_delta_macro_metrics.csv",
+    "analysis/results/calisol_anchored_delta_shuffled_null.csv",
+    "analysis/results/calisol_anchored_delta_random_anchor_sensitivity.csv",
+    "analysis/results/calisol_anchored_delta_leakage_audit.csv",
+    "analysis/results/strength_law_summary.json",
+    "analysis/results/knowledge_map_synthesis_summary.json",
+    "analysis/results/isodb_compensation_summary.json",
+    "analysis/results/isodb_universality_summary.json",
+    "analysis/results/ood_decision_summary.json",
+    "analysis/results/ood_decision_edges.csv",
+    "analysis/results/hard_ood_decision_summary.json",
+    "analysis/results/hard_ood_decision_edges.csv",
+    "analysis/results/obelix_ood_discovery_summary.json",
+    "analysis/results/obelix_ood_discovery_edges.csv",
+    "analysis/results/obelix_ood_discovery_reach.csv",
+    "analysis/results/obelix_ood_discovery_diagnostics.json",
+    "analysis/results/obelix_ood_discovery_pairwise_diagnostics.csv",
+    "analysis/results/obelix_ood_discovery_survival.csv",
+    "analysis/results/obelix_ood_discovery_input_meta.json",
+    "analysis/results/obelix_ood_discovery_balam_job.json",
+    "analysis/results/obelix_ood_discovery_balam_environment.txt",
+    "analysis/results/obelix_ood_discovery_balam_checksums.sha256",
+    "analysis/results/obelix_ood_discovery_COMPLETE.json",
+    "analysis/results/neighbor_transfer_signal_summary.json",
+    "analysis/results/neighbor_transfer_signal_diagnostics.csv",
+    "analysis/results/neighbor_transfer_policy_reach.csv",
+    "analysis/results/neighbor_transfer_policy_trajectories.csv",
+    "analysis/results/neighbor_transfer_policy_contrasts.csv",
+    "analysis/results/neighbor_transfer_policy_bootstrap.csv",
+    "analysis/results/neighbor_transfer_policy_secondary_utility.csv",
+    "analysis/results/neighbor_transfer_policy_summary.json",
+    "analysis/results/neighbor_transfer_policy_validation.json",
+    "analysis/results/neighbor_transfer_policy_balam_environment.txt",
+    "analysis/results/neighbor_transfer_policy_balam_checksums.sha256",
+    "analysis/results/neighbor_transfer_policy_COMPLETE.json",
+    "analysis/results/caltech_ionic_external_audit.json",
+    "analysis/results/caltech_ionic_external_policy_summary.json",
+    "analysis/results/caltech_ionic_external_policy_contrasts.csv",
+    "analysis/results/caltech_ionic_external_policy_gate_summary.csv",
+    "analysis/results/caltech_ionic_external_policy_source_quality.csv",
+    "analysis/results/caltech_ionic_external_policy_validation.json",
+    "analysis/results/caltech_ionic_external_policy_balam_job.json",
+    "analysis/results/caltech_ionic_external_policy_balam_environment.txt",
+    "analysis/results/caltech_ionic_external_policy_balam_checksums.sha256",
+    "analysis/results/caltech_ionic_external_policy_COMPLETE.json",
+    "analysis/results/caltech_ionic_external_policy_VERIFIED.json",
+    "analysis/results/caltech_neighbor_portfolio_diagnostic.csv",
+    "analysis/results/local_gated_neighbor_portfolio_summary.json",
+    "analysis/results/local_gated_neighbor_portfolio_contrasts.csv",
+    "analysis/results/family_first_neighbor_portfolio_summary.json",
+    "analysis/results/family_first_neighbor_portfolio_metrics.csv",
+    "analysis/results/family_first_neighbor_portfolio_orders.csv",
+    "analysis/results/family_first_neighbor_portfolio_null.csv",
+    "analysis/results/family_first_neighbor_portfolio_figure_source.csv",
+    "analysis/results/family_first_neighbor_hypothesis_cards.csv",
+    "analysis/results/ood_knowledge_deficit_summary.json",
+    "analysis/results/ood_knowledge_deficit_metrics.csv",
+    "analysis/results/ood_knowledge_deficit_contrasts.csv",
+    "analysis/results/ood_knowledge_deficit_diagnostics.csv",
+    "analysis/results/ood_knowledge_deficit_VERIFIED.json",
+    "analysis/results/starrydata_reverse_target_metadata.csv",
+    "analysis/results/starrydata_reverse_source_predictions.csv",
+    "analysis/results/starrydata_reverse_source_quality.csv",
+    "analysis/results/starrydata_reverse_policy_orders.csv",
+    "analysis/results/starrydata_reverse_hypothesis_cards.csv",
+    "analysis/results/starrydata_reverse_PREOUTCOME.json",
+    "analysis/results/caltech_acid_oer_PREOUTCOME.json",
+    "analysis/results/caltech_acid_oer_target_metadata.csv",
+    "analysis/results/caltech_acid_oer_source_predictions.csv",
+    "analysis/results/caltech_acid_oer_source_quality.csv",
+    "analysis/results/caltech_acid_oer_policy_orders.csv",
+    "analysis/results/caltech_acid_oer_hypothesis_cards.csv",
+    "analysis/results/tri_oer_PREOUTCOME.json",
+    "analysis/results/tri_oer_target_metadata.csv",
+    "analysis/results/tri_oer_source_predictions.csv",
+    "analysis/results/tri_oer_source_quality.csv",
+    "analysis/results/tri_oer_matched_source_controls.csv",
+    "analysis/results/tri_oer_policy_orders.csv",
+    "analysis/results/tri_oer_hypothesis_cards.csv",
+    "analysis/results/starrydata_reverse_summary.json",
+    "analysis/results/starrydata_reverse_exploration.csv",
+    "analysis/results/starrydata_reverse_hypothesis_tests.csv",
+    "analysis/results/starrydata_reverse_matched_specificity_summary.json",
+    "analysis/results/starrydata_reverse_COMPLETE.json",
+    "analysis/results/starrydata_reverse_VALIDATED.json",
+    "analysis/results/tri_oer_summary.json",
+    "analysis/results/tri_oer_exploration.csv",
+    "analysis/results/tri_oer_hypothesis_tests.csv",
+    "analysis/results/tri_oer_COMPLETE.json",
+    "analysis/results/tri_oer_VALIDATED.json",
+    "analysis/results/outcome_unseen_multi_target_summary.json",
+    "analysis/results/core_story_balam_environment.txt",
+    "analysis/results/core_story_outcome_unseen_checksums.sha256",
+    "analysis/results/figure_data_foundation_inventory.csv",
+    "analysis/results/figure_data_foundation_lake.csv",
+    "analysis/results/figure_data_foundation_scope.csv",
+    "analysis/results/figure_data_foundation_portfolio.csv",
+    "analysis/results/specgen_derivative_oer_borrowing_complete.json",
+    "analysis/results/specgen_derivative_zero_label_metrics.csv",
+    "analysis/results/specgen_composition_secondary_summary.json",
+    "analysis/results/specgen_top20_temporal_metrics.csv",
+    "analysis/results/specgen_top20_temporal_summary.json",
+    "analysis/results/specgen_derivative_verification.json",
+    "analysis/results/specgen_derivative_oer_figure_source_data.csv",
+    "analysis/results/figure_main_panel_a.csv",
+    "analysis/results/figure_main_panel_b.csv",
+    "analysis/results/figure_main_panel_c.csv",
+    "analysis/results/figure_main_panel_d.csv",
+    "analysis/results/figure_ood_decision_panel_a.csv",
+    "analysis/results/figure_ood_decision_panel_b.csv",
+    "analysis/results/figure_ood_decision_panel_c.csv",
+    "analysis/results/figure_caltech_policy_panel_a.csv",
+    "analysis/results/figure_caltech_policy_panel_b.csv",
+    "analysis/results/figure_caltech_policy_panel_c.csv",
+    "analysis/results/figure_outcome_unseen_panel_a.csv",
+    "analysis/results/figure_outcome_unseen_panel_b.csv",
+    "analysis/results/figure_outcome_unseen_panel_c.csv",
+    "analysis/results/figure_outcome_unseen_panel_d.csv",
+    "analysis/results/figure_neighbor_map_panel_a.csv",
+    "analysis/results/figure_neighbor_map_panel_b.csv",
+    "analysis/results/figure_neighbor_map_panel_c.csv",
+    "analysis/results/figure_neighbor_map_panel_d.csv",
+    "analysis/results/figure_neighbor_map_panel_e.csv",
+    "analysis/results/figure_battery_panel_a.csv",
+    "analysis/results/figure_battery_panel_b.csv",
+    "analysis/results/figure_battery_panel_c.csv",
+    "analysis/results/figure_battery_panel_d.csv",
+    "analysis/results/figure_battery_panel_e.csv",
+    "analysis/results/multistage_battery_stage2/STAGE2_RELEASE_AUDIT.json",
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/analysis/POSTRELEASE_SENSITIVITY_SUMMARY.json",
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/analysis/training_only_gate.csv",
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/POSTRELEASE_ADJACENCY_DIAGNOSTIC_SUMMARY.json",
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/condition_borrowing_map.csv",
+    "analysis/figures/data_foundation_scope.svg",
+    "analysis/figures/data_foundation_scope.pdf",
+    "analysis/figures/data_foundation_scope.png",
+    "analysis/figures/data_foundation_scope.tiff",
+    "analysis/figures/specgen_derivative_oer_transfer.svg",
+    "analysis/figures/specgen_derivative_oer_transfer.pdf",
+    "analysis/figures/specgen_derivative_oer_transfer.png",
+    "analysis/figures/specgen_derivative_oer_transfer.tiff",
+    "analysis/figures/main_knowledge_borrowing.svg",
+    "analysis/figures/main_knowledge_borrowing.pdf",
+    "analysis/figures/main_knowledge_borrowing.png",
+    "analysis/figures/main_knowledge_borrowing.tif",
+    "analysis/figures/ood_decision_borrowing.svg",
+    "analysis/figures/ood_decision_borrowing.pdf",
+    "analysis/figures/ood_decision_borrowing.png",
+    "analysis/figures/ood_decision_borrowing.tiff",
+    "analysis/figures/caltech_external_policy_decomposition.svg",
+    "analysis/figures/caltech_external_policy_decomposition.pdf",
+    "analysis/figures/caltech_external_policy_decomposition.png",
+    "analysis/figures/caltech_external_policy_decomposition.tiff",
+    "analysis/figures/family_first_neighbor_portfolio.svg",
+    "analysis/figures/family_first_neighbor_portfolio.pdf",
+    "analysis/figures/family_first_neighbor_portfolio.png",
+    "analysis/figures/family_first_neighbor_portfolio_600dpi.tif",
+    "analysis/figures/outcome_unseen_validation.svg",
+    "analysis/figures/outcome_unseen_validation.pdf",
+    "analysis/figures/outcome_unseen_validation.png",
+    "analysis/figures/outcome_unseen_validation.tiff",
+    "analysis/figures/neighbor_map_exploration.svg",
+    "analysis/figures/neighbor_map_exploration.pdf",
+    "analysis/figures/neighbor_map_exploration.png",
+    "analysis/figures/neighbor_map_exploration.tiff",
+    "analysis/figures/battery_continuous_borrowing.svg",
+    "analysis/figures/battery_continuous_borrowing.pdf",
+    "analysis/figures/battery_continuous_borrowing.png",
+    "analysis/figures/battery_continuous_borrowing.tiff"
+  ],
+  "artifacts": {
+    "analysis/knowledge_map_design.json": {
+      "sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+      "bytes": 14083
+    },
+    "analysis/external_confirmation_design.json": {
+      "sha256": "700b2b7459a956c2835088e47de31616c33268fb3191f67be4cd512dc14219c9",
+      "bytes": 4088
+    },
+    "analysis/matbench_steels_confirmation_design.json": {
+      "sha256": "8c82b92f9508394e6909551386e66b62ff82cd048ae8cb123133e237b522a40a",
+      "bytes": 4108
+    },
+    "analysis/kit_temperature_borrowing_design.json": {
+      "sha256": "e8b865f524f21bd38023f104d9ef6efa40f6f1a74ba7d705e9bf014145f6a5ec",
+      "bytes": 4968
+    },
+    "analysis/calisol_external_borrowing_design.json": {
+      "sha256": "2a6a40f8098af6fabb66ba5ee0fbf7fc4caeb573c1f857fdbc9ad80a86e5f6eb",
+      "bytes": 7041
+    },
+    "analysis/calisol_anchored_delta_transfer_design.json": {
+      "sha256": "04279e568830b14a92199d165c96a6a3b05d55b6c64ce54b5c7eb046eb2c1cfe",
+      "bytes": 6942
+    },
+    "analysis/STRENGTH_LAW_SPEC.md": {
+      "sha256": "a20e228fb2bad7d0a9bb6c5a9b40d2b03bb61c78182c9deb951585c113a63206",
+      "bytes": 1212
+    },
+    "analysis/ISODB_ISOSTERIC_SPEC.md": {
+      "sha256": "e14686450c8ed8b53858b29dd3bbe95a171c07fd10f071a11ef5ae97e95730af",
+      "bytes": 3279
+    },
+    "analysis/OOD_DECISION_BORROWING_SPEC.md": {
+      "sha256": "07adf45b2b7987827336d8651b9294776379b7ce55ce144cfedab9ba31435f1e",
+      "bytes": 3008
+    },
+    "analysis/ood_decision_borrowing_design.json": {
+      "sha256": "8011e52a69b23afe583f99c31047cf0c474bf5c244cb48157a22284a0663599a",
+      "bytes": 6937
+    },
+    "analysis/hard_ood_composition_design.json": {
+      "sha256": "0d51f3f4b0e1165b2de5d0d76a1797ca71c83345aaa22a73f38b8b79b48a70ec",
+      "bytes": 4783
+    },
+    "analysis/obelix_ood_discovery_design.json": {
+      "sha256": "b310b508468ce844c4a231224b8f4d669e40fdb59a7cbfb04c3ecae31bee75c3",
+      "bytes": 3948
+    },
+    "analysis/neighbor_transfer_methods_design.json": {
+      "sha256": "e16a030c2ac87df3fbe0ab63af8253a4bac1b573ed29a627395bf30ca7b48b26",
+      "bytes": 6156
+    },
+    "analysis/neighbor_transfer_policy_design.json": {
+      "sha256": "4f3d64501630e55d0ae38f2ee1a70519e51a04d5eff72253cfdce08fc0f2744d",
+      "bytes": 5231
+    },
+    "analysis/caltech_ionic_external_policy_design.json": {
+      "sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+      "bytes": 10719
+    },
+    "analysis/caltech_ionic_external_policy_implementation.json": {
+      "sha256": "3653c974a6fd7e82a2e4cb879c77b6abf059efb26610fcddf5327698cef924ac",
+      "bytes": 6578
+    },
+    "analysis/local_gated_neighbor_portfolio_design.json": {
+      "sha256": "f9737d074e705308293a7bde77b07dce8b4deaae835846fe5294d83580b0eed8",
+      "bytes": 5389
+    },
+    "analysis/family_first_neighbor_portfolio_design.json": {
+      "sha256": "10f351712e91fdd26423785f9a0adebb3f3df1c4b9e7a906c9ea523af04902c4",
+      "bytes": 3805
+    },
+    "analysis/cca_family_first_outcome_unseen_protocol.json": {
+      "sha256": "ed45ddccb1aaaad0fafd5d3269badb6c3fcc5a851c48e36c71426971b884ca31",
+      "bytes": 4478
+    },
+    "analysis/ood_knowledge_deficit_design.json": {
+      "sha256": "31ce9fa600d42abc28cf6e6b5ae0eb7cbb6c89d7307c3726a98076ed10388213",
+      "bytes": 2791
+    },
+    "analysis/outcome_unseen_neighbor_validation_program.json": {
+      "sha256": "88162fd564fd80fce334335ab13cd295eadf8932bcfe678bb776496d0285d947",
+      "bytes": 7389
+    },
+    "analysis/starrydata_reverse_transport_design.json": {
+      "sha256": "a389ac6fd927280e44d14c6885676f1ab2c622b630195ede5357699dec260566",
+      "bytes": 5498
+    },
+    "analysis/starrydata_reverse_transport_implementation.json": {
+      "sha256": "56184ac4b13d83bbf4f355eb2cec41e48ce23c00c9ed32ba2a09e290f425d0c8",
+      "bytes": 7612
+    },
+    "analysis/core_story_experiment_registry.json": {
+      "sha256": "72289b9e370280e305019499713273b3e6cd8d0c82295eee7fe44f44f489a7af",
+      "bytes": 16406
+    },
+    "analysis/target_metadata/starrydata_manifest_2026-07-17.json": {
+      "sha256": "6fcfcb138180cb33415fcda0eb9b35a23673d96684e776c92d55b4105ffc2088",
+      "bytes": 12225
+    },
+    "analysis/caltech_acid_oer_neighbor_design.json": {
+      "sha256": "c314a82c01b43a060378fcaa703871d35ca01cdb502029841e29861aa8d16ccf",
+      "bytes": 4821
+    },
+    "analysis/tri_oer_neighbor_design.json": {
+      "sha256": "f05652dc1613240111bac3890deb02053bf2a56bd6a04924d6db6562aba084b0",
+      "bytes": 5563
+    },
+    "analysis/tri_oer_implementation.json": {
+      "sha256": "d6e0cab2136a67d5d2c8432db9daf7c6d97c50c6068628ad4ba5ab8e200bed69",
+      "bytes": 5114
+    },
+    "analysis/specgen_derivative_oer_borrowing_design.json": {
+      "sha256": "765d53d4a3d90f4532ef7699e91b8d6df2cf595d3fcff0b34a53fcfa6577a734",
+      "bytes": 1363
+    },
+    ".github/workflows/validate.yml": {
+      "sha256": "0d487befd776816b3fd33585f1dcefad4495ef922751ffe6e4a470a58b4d0f6d",
+      "bytes": 1540
+    },
+    "scripts/localdb/build_localdb.py": {
+      "sha256": "f9ed62ebbc287b1e37a36088bc2b7183bacebf41a5120960e44b56fde85e8a9f",
+      "bytes": 29447
+    },
+    "scripts/validate_catalog.py": {
+      "sha256": "a1f139f8b3640a463f94c22a05b1c51c8694eaf8b398f3961135ed4fd951d6a3",
+      "bytes": 3860
+    },
+    "analysis/common.py": {
+      "sha256": "3733e8feed2289089794ff48a4543f4e52e2e69b6160fc8f20d48773885d4abe",
+      "bytes": 13661
+    },
+    "analysis/audit_snapshot.py": {
+      "sha256": "3ecf05d22b74907aa51d0653151c2e48f28abe81c1b8220e9b1f609bfb5b7bcc",
+      "bytes": 5122
+    },
+    "analysis/run_confirmatory.py": {
+      "sha256": "f268cf0dc53a05c833d316ecf3f3ca2e3c09daa88cc7c618b66e20fd5d3cd3af",
+      "bytes": 37641
+    },
+    "analysis/run_knowledge_map.py": {
+      "sha256": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f",
+      "bytes": 39349
+    },
+    "analysis/refine_candidate_permutations.py": {
+      "sha256": "fb00f7350f250bdaa89366837e83e2418c1e5a982564c681e5ad590de7c96cf2",
+      "bytes": 4848
+    },
+    "analysis/run_external_confirmation.py": {
+      "sha256": "b00e6e238f2aa4a13e0812b42c5a2f815b6c91675cfd2dd523f8752a5617717d",
+      "bytes": 23971
+    },
+    "analysis/run_external_sensitivities.py": {
+      "sha256": "20119bb92fe326fc237dcd0598cc7c39d1cda580e66c87c3bb7d47b68607cd4f",
+      "bytes": 12889
+    },
+    "analysis/run_matbench_steels_confirmation.py": {
+      "sha256": "4daa6897faff4e43f795e8c6bbec4d2a15f9c6d6d2b4296610a9ea86b4801df8",
+      "bytes": 27388
+    },
+    "analysis/run_kit_temperature_borrowing.py": {
+      "sha256": "1e7db720453895c09c94cc7899f74d5d82311eda68ac9e3723829c91696773e2",
+      "bytes": 38706
+    },
+    "analysis/run_kit_sample_equivalence_uncertainty.py": {
+      "sha256": "98293f35e3b76551f91d54e6f247c6ba56428ede9e3d611d3243f7e45dd81f72",
+      "bytes": 8903
+    },
+    "analysis/run_calisol_external_borrowing.py": {
+      "sha256": "3816b77c328f53bb97d5be677b4f51b870b26ecf3f3215f6b6598714b7dbba44",
+      "bytes": 49801
+    },
+    "analysis/run_calisol_anchored_delta_transfer.py": {
+      "sha256": "0b2ca4ba523d677fbe8ffb3602d13d8df09810408fb11e93494417bef423e990",
+      "bytes": 31744
+    },
+    "analysis/verify_calisol_anchored_delta_transfer.py": {
+      "sha256": "6646db3cc2ce9aa36a24cfeff4231e3c4a15edb3638bf6c2619ea7d5dffa12b1",
+      "bytes": 9557
+    },
+    "analysis/run_strength_law_external.py": {
+      "sha256": "d207f7d62e43bf9a332eba44f9d2fc2567e246986dce09fb7957e186d6ddd45b",
+      "bytes": 8041
+    },
+    "analysis/run_isodb_isosteric.py": {
+      "sha256": "0c2476a40abed4e92df39496cd03d2dc91a4cb65396f5fb48bfd6219c9050845",
+      "bytes": 16990
+    },
+    "analysis/run_isodb_universality.py": {
+      "sha256": "02c7bc8d9bc3cc6ed081e170dd57d2909dd12a0b9ebbec112fbd8ee52e2fa6e9",
+      "bytes": 9693
+    },
+    "analysis/run_ood_decision_borrowing.py": {
+      "sha256": "a2b3309b820a02795e00f8096db9b0b4a914940e47d7e8b8ec1851544374bf29",
+      "bytes": 19623
+    },
+    "analysis/run_hard_ood_composition.py": {
+      "sha256": "25b866a30d40362f49d8eff90e0672b0bfeafd442d714d40339ffb9f3074f87d",
+      "bytes": 11402
+    },
+    "analysis/write_obelix_ood_discovery_input.py": {
+      "sha256": "5d3ff6e597bc1dfd47aca6bc48938ba86a3de0e3b645863e982107d67fdb3a34",
+      "bytes": 6587
+    },
+    "analysis/run_obelix_ood_discovery.py": {
+      "sha256": "5fdb8fd654412ecc26af767c288c5611856172993589142ce3a59bd8c7eb50de",
+      "bytes": 25731
+    },
+    "analysis/verify_obelix_ood_discovery_results.py": {
+      "sha256": "d9bf67482936f5521db5c531d1d08d47a9089191ed44055e5fe01abea8b896fb",
+      "bytes": 5534
+    },
+    "analysis/analyze_obelix_ood_discovery_diagnostics.py": {
+      "sha256": "87725dfb8d409859c1680494c41727d94877fb6ccb38f0b6cd9cca64ac938fe8",
+      "bytes": 6402
+    },
+    "analysis/analyze_neighbor_transfer_signals.py": {
+      "sha256": "18c25f8a940f4dc87044da4609b5e1a8021972e9d1002c785283a94ef5664315",
+      "bytes": 14912
+    },
+    "analysis/run_neighbor_transfer_policy_benchmark.py": {
+      "sha256": "8529526bc06aedd340c984b958dbdabd645ed77a6c0cf2e7f5f4536edd3b0f6c",
+      "bytes": 22793
+    },
+    "analysis/verify_neighbor_transfer_policy_results.py": {
+      "sha256": "b350f9cb56f583efcec4a4bc79d2463df4ae921ca8105e90891c16db7deaf5aa",
+      "bytes": 10496
+    },
+    "analysis/audit_neighbor_transfer_policy_results.py": {
+      "sha256": "b9c95893e70a3a662247e57f81d3969b120dc8c2340f2a76ba27e4dd7ca74468",
+      "bytes": 11763
+    },
+    "analysis/audit_caltech_ionic_external_target.py": {
+      "sha256": "a6d87e13f4f8a57530868059f064c93b6593d362605cb2517d3c929eb8b4efa2",
+      "bytes": 13291
+    },
+    "analysis/run_caltech_ionic_external_policy.py": {
+      "sha256": "c9215daf7a1f9670172f4d2bcb525ff5f7a789dcd20ee61a6793f40d182ced27",
+      "bytes": 38076
+    },
+    "analysis/verify_caltech_ionic_external_policy_results.py": {
+      "sha256": "4763f4c53fc26a02982507a506546bd41983f3f0e9a377876b9513339484db45",
+      "bytes": 12405
+    },
+    "analysis/audit_caltech_ionic_external_policy_results.py": {
+      "sha256": "dac2da7e337b0c7a8fddf2df5fef9575463ad7080bd03fc1f9b2ddf15fa78174",
+      "bytes": 11283
+    },
+    "analysis/run_local_gated_neighbor_portfolio.py": {
+      "sha256": "a7b1e6555be331624be905d4c8cfa18f7215f05a3001d34162516af39cbcdbeb",
+      "bytes": 32705
+    },
+    "analysis/audit_family_first_neighbor_portfolio.py": {
+      "sha256": "974b76daabd969f49221ec6ca828d49209d89650f93eda6cf986e1c3b9176767",
+      "bytes": 19525
+    },
+    "analysis/run_ood_knowledge_deficit_audit.py": {
+      "sha256": "43723fbdd444ef8e0dc81afc4140bc705ccc0ce341b8b67fdb79f1176f60aabd",
+      "bytes": 15109
+    },
+    "analysis/verify_ood_knowledge_deficit_results.py": {
+      "sha256": "ecc9e1d1bb8089e214213367d40edb56b82f0cea5cc6da7bc381d05eed46b0f4",
+      "bytes": 4861
+    },
+    "analysis/check_core_story_experiments.py": {
+      "sha256": "7aeef941801b28ae1fba755b6faa8442de5e798f527e0175d96c5f3aa12e85f7",
+      "bytes": 3351
+    },
+    "analysis/prepare_starrydata_reverse_transport.py": {
+      "sha256": "d3e910dfa4260d29258570b11800ec4d6954683ca7cc850806f647744eb3b853",
+      "bytes": 29654
+    },
+    "analysis/verify_starrydata_reverse_preoutcome.py": {
+      "sha256": "2a82b32e822339c410cad5ee6430d82fa2bd432628dfa2e5264f38fc9512df51",
+      "bytes": 3375
+    },
+    "analysis/run_starrydata_reverse_transport.py": {
+      "sha256": "d52c249f0179612ed04c0913f72f61fd07267a4bc2204daa9202fc5e2fc23c8e",
+      "bytes": 26760
+    },
+    "analysis/verify_starrydata_reverse_transport_results.py": {
+      "sha256": "7a855bd79e7b550ff07e6ce4587d7947a1871568958c764bb4e71d7285dfeb36",
+      "bytes": 16061
+    },
+    "analysis/prepare_starrydata_matched_source_controls.py": {
+      "sha256": "6844cb15eb81c922cb1310827fb4091c69d58a2b8e393a17b8742189a67efe27",
+      "bytes": 7054
+    },
+    "analysis/run_starrydata_matched_specificity.py": {
+      "sha256": "2b2d9ea23164843da09d91d34fd2fa30307e5649ff2fc36f91fb42e686a52624",
+      "bytes": 8650
+    },
+    "analysis/prepare_caltech_acid_oer_neighbor.py": {
+      "sha256": "28aec0d7f7f439d8e2ce040ecf8ca6a257fe52628ccb785ad389e90397039101",
+      "bytes": 19123
+    },
+    "analysis/prepare_tri_oer_neighbor.py": {
+      "sha256": "c0cf386a5a94dc5697195af62cb4f30a14e480a4c49593bf2583d0de7a0c8125",
+      "bytes": 22428
+    },
+    "analysis/verify_tri_oer_preoutcome.py": {
+      "sha256": "6761bd003656ec2f51cda5481d3485c1cb2c1f5e8057d8b03e71045ab8f9900c",
+      "bytes": 2037
+    },
+    "analysis/run_tri_oer_neighbor.py": {
+      "sha256": "5ace4ed56e9c119867deb66ff576cd3194d25aef4ae16910b936437b939b0c82",
+      "bytes": 26515
+    },
+    "analysis/verify_tri_oer_neighbor_results.py": {
+      "sha256": "3cfcd37046fe7f1dc8e122ccf852a0ab81104a374a328f82859953eb047c1f44",
+      "bytes": 12130
+    },
+    "analysis/verify_tri_oer_neighbor_results_amended.py": {
+      "sha256": "b2a668e7fec938145ff2c60f24d028d9876074836fd659ba2bcff71def0b8917",
+      "bytes": 2458
+    },
+    "analysis/synthesize_outcome_unseen_validation.py": {
+      "sha256": "a009d87df2a5f2e107a4b5e539a11f2093314a1fea57a837f8688dd8bd059b68",
+      "bytes": 4640
+    },
+    "analysis/synthesize_knowledge_map.py": {
+      "sha256": "1bba2c1fb8aee041f8b10101cc803180b28a6326aa7bbb36ec737bafbbb6914d",
+      "bytes": 21129
+    },
+    "analysis/make_data_foundation_figure.py": {
+      "sha256": "71ecf672d009e06739f6096677e6dba913d1f85b5d989c298fca8cb1a89759c1",
+      "bytes": 15028
+    },
+    "analysis/make_main_knowledge_map_figure.py": {
+      "sha256": "b296ade766e163ed4e5706bbe6b00cfe5583bebe4b7715c655de924c0a4d4a33",
+      "bytes": 14712
+    },
+    "analysis/make_ood_decision_figure.py": {
+      "sha256": "0956e13c5647675f90f38bd3bf21d84dc8bdec1db83e29a2bedf8b2ec1767cc1",
+      "bytes": 10848
+    },
+    "analysis/make_caltech_external_policy_figure.py": {
+      "sha256": "337212a127e08e91c384d7982552effbfa78ef7cc87dada861b6b0ce7f6f2099",
+      "bytes": 13027
+    },
+    "analysis/make_family_first_neighbor_portfolio_figure.py": {
+      "sha256": "689b7ed8fa8c9523755acf392efb3c0dc0eee2647f6450d60fbdc628ae331ce9",
+      "bytes": 12160
+    },
+    "analysis/make_outcome_unseen_validation_figure.py": {
+      "sha256": "565610a566137ce08c19f49d3ffacc1194fd1955eaca1096ef7e865d4771684d",
+      "bytes": 13327
+    },
+    "analysis/make_neighbor_map_exploration_figure.py": {
+      "sha256": "f80af91b60d2da80b44e79d07232b7d677575b59990e1e679a7576f05daf1147",
+      "bytes": 15120
+    },
+    "analysis/make_battery_continuous_borrowing_figure.py": {
+      "sha256": "a3761b1f559d4ebc02a13942fc3a77ce0582ec055ea9d4cef5010277aacbcca5",
+      "bytes": 14114
+    },
+    "analysis/balam/local_fetch_results.ps1": {
+      "sha256": "3f41ab9c53a846efea6438cd688c09753c1d71c50a8dd2417202fb8349a4b0dd",
+      "bytes": 1198
+    },
+    "analysis/balam/local_upload_and_submit.ps1": {
+      "sha256": "e36e8b23b3f3878db28e0ee31e27b5603b1a1c158154e0ed27f57fa822b5fcf1",
+      "bytes": 1945
+    },
+    "analysis/balam/prepare_and_submit_balam.sh": {
+      "sha256": "b85efdab85957f0349b8e5032e2f93a5b7829f4e1e965bf9bd3e4f7d3b38f457",
+      "bytes": 817
+    },
+    "analysis/balam/run_obelix_ood_discovery_balam.sh": {
+      "sha256": "d8fdc88f1dce313c4b94f91f4402ba7a1ad1c7513d322bbf01896cebf206c1a6",
+      "bytes": 3283
+    },
+    "analysis/balam/local_upload_and_submit_neighbor_policy.ps1": {
+      "sha256": "84038d06b9108fa50df0c7f7eebc321851955a5e0cde031c2e8ae114286e76d5",
+      "bytes": 1998
+    },
+    "analysis/balam/local_fetch_neighbor_policy_results.ps1": {
+      "sha256": "c939b8ca14fbae3eda3e00917498d547219023c26d00cec9903af0a05669874f",
+      "bytes": 1245
+    },
+    "analysis/balam/prepare_and_submit_neighbor_policy.sh": {
+      "sha256": "e04ec2594b93afa6b38fadd82e1b76aa766f6cb35580b66951bb0b94767a6205",
+      "bytes": 547
+    },
+    "analysis/balam/run_neighbor_transfer_policy_balam.sh": {
+      "sha256": "dd0ba48622057098e6fa599478aa16bfe2f6b5f70525cd07e37f297a8e9442e4",
+      "bytes": 3607
+    },
+    "analysis/balam/local_upload_and_submit_caltech_ionic_policy.ps1": {
+      "sha256": "912e0b437a7a033646f8a8ab3afcab766f6acdcdaef72c25179391d78b215adc",
+      "bytes": 2786
+    },
+    "analysis/balam/local_upload_and_submit_caltech_verification.ps1": {
+      "sha256": "a7890858c961813d8362e8f54560b60a960b1cc5a0434ab06f6e033ce36ebfc8",
+      "bytes": 1303
+    },
+    "analysis/balam/local_fetch_caltech_ionic_policy_results.ps1": {
+      "sha256": "02594128a402f4e97a4bab66a5b17d1a630019300ca5cf782b95672d8f3083c2",
+      "bytes": 1249
+    },
+    "analysis/balam/local_recover_caltech_ionic_policy_results.ps1": {
+      "sha256": "90558b55e1a501dcc9be09a862ab51aecb3fd0ac26bb32eeeb8d9e961ff1e240",
+      "bytes": 2259
+    },
+    "analysis/balam/prepare_and_submit_caltech_ionic_policy.sh": {
+      "sha256": "e404914366b99723011fc4169b6e9d4ff3592f33af81a5323e2a32b743b5bb7a",
+      "bytes": 552
+    },
+    "analysis/balam/run_caltech_ionic_external_policy_balam.sh": {
+      "sha256": "c2fac355adbb9ce112e9620e8cdccf79719975b51f4b0807bd59a0a5e90a4cf5",
+      "bytes": 4354
+    },
+    "analysis/balam/run_caltech_ionic_external_policy_verify_balam.sh": {
+      "sha256": "d9ebd26f56a5e8eb96eabf0021fa263e75f9f1945942f1f0df5756119aa41853",
+      "bytes": 2663
+    },
+    "analysis/balam/local_upload_and_submit_core_story_outcome_unseen.ps1": {
+      "sha256": "6758803e6d3900699cd78d2c849b2c24c69867dcc6190c47db97dcaf13b43bc4",
+      "bytes": 5237
+    },
+    "analysis/balam/local_fetch_core_story_outcome_unseen_results.ps1": {
+      "sha256": "a2f5878e59adbd2437e683b1e0fbe0a5bd243e93bd0db18484f46fe26a262c1f",
+      "bytes": 1382
+    },
+    "analysis/balam/prepare_and_submit_core_story_outcome_unseen.sh": {
+      "sha256": "c5786b11144f9c0a5c732e2f277e0ebc0c6535ef82e981764227ed3d11dd2e73",
+      "bytes": 546
+    },
+    "analysis/balam/run_core_story_outcome_unseen_balam.sh": {
+      "sha256": "b16787928a8855c92aacad36430d145c7d72c169714d2581bdbca9be67f72a8b",
+      "bytes": 4046
+    },
+    "tests/test_analysis_integrity.py": {
+      "sha256": "0db27b2f1393286e6496f45e7f7139a1b1ab24b4971272016b26094e1a60085c",
+      "bytes": 34265
+    },
+    "tests/test_caltech_external_protocol.py": {
+      "sha256": "07c9d2d9fb95aa9ece147ddd76f919adcb55d5c797f06db8a8a3a5d206863eb4",
+      "bytes": 4746
+    },
+    "tests/test_family_first_neighbor_portfolio.py": {
+      "sha256": "4f972dcadf569a2974e222a6e811a1a6026a913ca16ad8fc9cb37d7ecd1c1f50",
+      "bytes": 5859
+    },
+    "tests/test_core_story_registry.py": {
+      "sha256": "37af0669565f457c800d51641b3f8286976b3b06629fbc7f2e44559929092e81",
+      "bytes": 689
+    },
+    "tests/test_starrydata_verifier.py": {
+      "sha256": "d377f26391d01a2d96241448bcc1b030ea514cb97c10015821667c505f606bc8",
+      "bytes": 1368
+    },
+    "tests/test_tri_oer_verifier_amendment.py": {
+      "sha256": "8f63517c8c530b61871675bc096b35efbcc34e57ce72830c5b4af1ed7ac022e9",
+      "bytes": 1857
+    },
+    "tests/test_new_main_figures.py": {
+      "sha256": "eb687704684c2314fd0ec9a1f7deb4796b9c4d685080f81a11108d0bd3ebfdcf",
+      "bytes": 5080
+    },
+    "analysis/run_specgen_derivative_oer_borrowing.py": {
+      "sha256": "e5279730ad4890d46c52fbfbadf7c0481cfee9acc52d876dea1d0fb91465c32d",
+      "bytes": 23371
+    },
+    "analysis/run_specgen_composition_secondary.py": {
+      "sha256": "104083883f07eb8703ed1e9836140f7f8c9a234088914fa2d82703ab0aed7301",
+      "bytes": 11218
+    },
+    "analysis/run_specgen_top20_temporal_check.py": {
+      "sha256": "bfd301f4d190320b7b13224f81b024a9b88619b7eb8028c8153c15305ce16942",
+      "bytes": 6828
+    },
+    "analysis/verify_specgen_derivative_results.py": {
+      "sha256": "1d306d905e90b016cead53685660c71cdaf7767f1161ccf5067354197391fc58",
+      "bytes": 5207
+    },
+    "analysis/make_specgen_derivative_oer_figure.py": {
+      "sha256": "4acbad71c2e67199a6b410cf75fc4dec541830cf20641d54ed12cc6ab0acbe78",
+      "bytes": 18271
+    },
+    "analysis/write_release_manifest.py": {
+      "sha256": "567ee6c8bcde5991ba19e223c33c06bd45ef186a8c7eeb81e421a82bae0195b0",
+      "bytes": 28350
+    },
+    "README.md": {
+      "sha256": "c9f0cafcb9c37af8d5060ba0a9f15a785430abdaddf354d6263fa9ccfa59713c",
+      "bytes": 12319
+    },
+    "docs/methodology.md": {
+      "sha256": "e1dfbd4e7c50fe1bf56f828e022bd20c052e4de7b8766e4d82c2253935088470",
+      "bytes": 16630
+    },
+    "analysis/README.md": {
+      "sha256": "8e0dab9887a892161640768cb89a7a4949719e9b8c65c161ac7cda07098312c3",
+      "bytes": 25332
+    },
+    "analysis/MANUSCRIPT_DRAFT.md": {
+      "sha256": "2d59fd8b1f3a13dede0a76559887d5a560a4f1007701626da11f253f19c1984a",
+      "bytes": 110778
+    },
+    "analysis/MANUSCRIPT_DRAFT_STREAMLINED.md": {
+      "sha256": "6adc8497a5ea81d89640eb13b1e1bab808cc283b3131e5d3170f8dbc6ed7b913",
+      "bytes": 48253
+    },
+    "analysis/SUPPLEMENTARY_INFORMATION.md": {
+      "sha256": "ac77bd852832e35292631648acf19543dd90e1adfb78b47de208cc611221d8e1",
+      "bytes": 64868
+    },
+    "analysis/PRESUBMISSION_REVIEW.md": {
+      "sha256": "7aea516e0fec980282a2ceaaaf8d77ca31c53f8a733f510f86d2b5b098eaed68",
+      "bytes": 22625
+    },
+    "analysis/ADVERSARIAL_REVIEW_RESPONSE.md": {
+      "sha256": "35d40850f8d11dda56d2bb15ac7aa50a5a34986bc070d73e478bd2e081cc12f2",
+      "bytes": 13502
+    },
+    "analysis/SELECTIVE_NEIGHBOR_BORROWING_STRATEGY.md": {
+      "sha256": "831b2224676da34e4d26a1280445edb5661daf29da646d2d83dcb24c8e225aed",
+      "bytes": 11007
+    },
+    "analysis/PAPER_PACKAGE.md": {
+      "sha256": "4a9940e3a43049e56c5dcccd4db999ea65741c649691e087ee0aead72e868ae1",
+      "bytes": 10770
+    },
+    "analysis/PHASE1_FINDINGS.md": {
+      "sha256": "a26045980c5665d14c4676e64d8ecb9f331bb22b21426917d698663b7a29f4f6",
+      "bytes": 2260
+    },
+    "analysis/PHASE2_FINDINGS.md": {
+      "sha256": "f16082282a41be27ecf3d92176c4c059b8941c4937d16aa1e0159733692896fe",
+      "bytes": 8028
+    },
+    "analysis/PHASE3_FINDINGS.md": {
+      "sha256": "6fd4cdfc2fb8cb90ae5b198f9fb3bc2d94745c2dd25c3f379f4e831bdb07546f",
+      "bytes": 7980
+    },
+    "analysis/RELATED_WORK.md": {
+      "sha256": "7dfb1640fd9f284e712b41b703bb81e0cff7d13e6bdbc3d8e64eef18c0b6213d",
+      "bytes": 28482
+    },
+    "analysis/REFERENCES.bib": {
+      "sha256": "8c016e5a20a4bf81b3e9ba6475eb6632a271d4904523207635391afc06141a83",
+      "bytes": 20515
+    },
+    "analysis/CITATION_VERIFICATION.md": {
+      "sha256": "3f4e06de328335230737189b87217ae867da595265c1c44c1c25e3a1ba8da950",
+      "bytes": 7744
+    },
+    "analysis/TERMINOLOGY_LEDGER.md": {
+      "sha256": "966ce0f1ca1ae14f15f750531df16cc53f8fe4e004b43d41436ae850d7e776f1",
+      "bytes": 15130
+    },
+    "analysis/DATA_FOUNDATION_FIGURE_CONTRACT.md": {
+      "sha256": "b2e7a245c79bf5ea788e365a0850d0d60ca4ec2e91f72191ece2895ff8b8c951",
+      "bytes": 3152
+    },
+    "analysis/DATA_FOUNDATION_FIGURE_QA.md": {
+      "sha256": "5a785ae844b8f6fc33b9c7aa84f81c644509029ad2496c65bda61efaa70da487",
+      "bytes": 4679
+    },
+    "analysis/FIGURE_CONTRACT.md": {
+      "sha256": "44dff1a3d8a0b39947f4381c00e816b9912432f9e69f4b9ec3be43084580df93",
+      "bytes": 9371
+    },
+    "analysis/FIGURE_QA.md": {
+      "sha256": "3ae2f3587d4d4b9de7c637ae0c42bb0ac98669065597ed2dc4a1c5752223ac21",
+      "bytes": 19555
+    },
+    "analysis/FAMILY_FIRST_FIGURE_CONTRACT.md": {
+      "sha256": "4ba8f28833430254201c1176ea410c540e93e5b14a3e8b9f741bd43882eb31fc",
+      "bytes": 1960
+    },
+    "analysis/OUTCOME_UNSEEN_FIGURE_CONTRACT.md": {
+      "sha256": "3d4ddd87da998444fb3f7898fdece446baeafdc586ed283f105d5e900b465c52",
+      "bytes": 2947
+    },
+    "analysis/NEIGHBOR_MAP_FIGURE_CONTRACT.md": {
+      "sha256": "76f62e8625cbf85c810a28baca4f45408beacec44994cfeaafb22bc73ace3e3b",
+      "bytes": 2198
+    },
+    "analysis/NEIGHBOR_MAP_FIGURE_QA.md": {
+      "sha256": "75ac069b716b0839bfb64e0b83034960b1addfc60607feef1d4eac0d7a8d7f12",
+      "bytes": 3240
+    },
+    "analysis/BATTERY_FIGURE_CONTRACT.md": {
+      "sha256": "bacadf828b1c6d3a0f3e191168814a548a472b545bbc61252375622665ffcd11",
+      "bytes": 2450
+    },
+    "analysis/BATTERY_FIGURE_QA.md": {
+      "sha256": "8cba339a668b7576249ad0c9b7640efd450a750539df3d064e8a84af0767fcae",
+      "bytes": 3731
+    },
+    "analysis/CCA_FAMILY_FIRST_PROTOCOL.md": {
+      "sha256": "061ec986d4bbddc4ee74ef9380461022d76559a8d36e0c16d4ea283622b86551",
+      "bytes": 1791
+    },
+    "analysis/KNOWLEDGE_BORROWING_MAP_SPEC.md": {
+      "sha256": "bd0efc1c8397a8d5cd801c0bad262fa156329b747385300bedd02e405de4f71a",
+      "bytes": 12947
+    },
+    "analysis/NEIGHBOR_TRANSFER_METHODS_ROADMAP.md": {
+      "sha256": "9b60b10b521c85b42ae13531bdaf8d85ec643fdcd5ce8bf2407f3832bde765b0",
+      "bytes": 17338
+    },
+    "analysis/NEIGHBOR_TRANSFER_POLICY_VALIDATION.md": {
+      "sha256": "19b8ef9492ddb72366a5fc311a47f303bfbd8b95f62ea5ca3fcd19779760c301",
+      "bytes": 5360
+    },
+    "analysis/CALTECH_IONIC_EXTERNAL_POLICY_SPEC.md": {
+      "sha256": "f1daad463b905eb44ce662807663dc686a936b629c604de1b8924597de438f0e",
+      "bytes": 2577
+    },
+    "analysis/CALTECH_IONIC_SCHEMA_AMENDMENT.md": {
+      "sha256": "b25e1299aabb9a509f8d40aca1a19451d3008168845f4ed5af4fa7f2942bcccd",
+      "bytes": 1987
+    },
+    "analysis/CALTECH_IONIC_INFERENCE_AMENDMENT.md": {
+      "sha256": "3243fa5eaa354f47a0e4a303ecc4e36bb8ec1c5f9d391ee423163b08dfd116bc",
+      "bytes": 940
+    },
+    "analysis/CALTECH_IONIC_IMPLEMENTATION_AMENDMENT_2.md": {
+      "sha256": "477fb243a7e5a87a0aeabf0e472f707128ab22716a933b94a3611cc75c4cf24c",
+      "bytes": 1349
+    },
+    "analysis/CALTECH_IONIC_INFRASTRUCTURE_AMENDMENT_3.md": {
+      "sha256": "4962e60cdf12bf432771856f009c92000e5e886c7d51a02a9f0162315f0caba9",
+      "bytes": 1151
+    },
+    "analysis/CALTECH_IONIC_VERIFIER_AMENDMENT_4.md": {
+      "sha256": "4b3939e3a978d56ee1223a053ece2bdf7747f74b8c30e6e04f9d57080a813020",
+      "bytes": 1243
+    },
+    "analysis/CALTECH_IONIC_REMOTE_VERIFICATION_AMENDMENT_5.md": {
+      "sha256": "0f34efca5f0ce97027d2b8f89a244213ae9536eb284ecba3e16046ef53fc53ad",
+      "bytes": 1548
+    },
+    "analysis/CALTECH_IONIC_EXTERNAL_POLICY_VALIDATION.md": {
+      "sha256": "f39a0de87338912735671f87e4fa9d748ed403005b752178cf2ac2b455c41cda",
+      "bytes": 7212
+    },
+    "analysis/balam/README.md": {
+      "sha256": "15766fa0e5b3597a0a0a62bf51cdf19343da66de665ad2dbe25fefa7990986d0",
+      "bytes": 10455
+    },
+    "analysis/balam/requirements.txt": {
+      "sha256": "76d5783e8f739c85566a122fc0d79196050e48471cc391007c8d09854d816ecc",
+      "bytes": 78
+    },
+    "analysis/MATBENCH_STEELS_CONFIRMATION_AMENDMENT.md": {
+      "sha256": "59ddf9e97d08cde9eb25ecc4e5c84c4a4f142c0b5d8250a229f67fe67f10961a",
+      "bytes": 2032
+    },
+    "analysis/KIT_TEMPERATURE_BORROWING_AMENDMENT.md": {
+      "sha256": "aae4120cef2863c87cac46735614ccffd0e121eaf891b41ad0d3b5297c6d26e1",
+      "bytes": 5097
+    },
+    "analysis/CALISOL_EXTERNAL_BORROWING_AMENDMENT.md": {
+      "sha256": "92293534194ab14ad09cceb042183221213a02ca5769131194f6b37df7c23e48",
+      "bytes": 4049
+    },
+    "analysis/CALISOL_ANCHORED_DELTA_TRANSFER_PROTOCOL.md": {
+      "sha256": "c97d3658f36e136085c5f7838e8eb2cf1e0dc384cdf55b5efa394eea163ec0bf",
+      "bytes": 6941
+    },
+    "analysis/CALISOL_ANCHORED_DELTA_TRANSFER_FINDINGS.md": {
+      "sha256": "501295b0e0500293c498dd95eda5a9e1b92e12e4009975fa5008f52607a239d1",
+      "bytes": 4667
+    },
+    "analysis/CALISOL_ANCHORED_DELTA_IMPLEMENTATION_AMENDMENT.md": {
+      "sha256": "43f778cfab9d4c42655d1966464b085dc18ed575dd9de9ea9ee37b8af9bea672",
+      "bytes": 1349
+    },
+    "analysis/CALISOL_ANCHORED_DELTA_FIGURE_CONTRACT.md": {
+      "sha256": "4d178d009a0accf64a324908bbaec634b20789f6db5f337a99133cdade052417",
+      "bytes": 2287
+    },
+    "analysis/CALISOL_ANCHORED_DELTA_FIGURE_QA.md": {
+      "sha256": "54eeed943da54667705dbe6647a81f3d2a857b539135653622b3609a82e16659",
+      "bytes": 2109
+    },
+    "analysis/CORE_STORY_EXPERIMENT_MATRIX.md": {
+      "sha256": "7e821f365d021e45b2529d46b4b0fb67f64e055127e0f149234332b252e68057",
+      "bytes": 12245
+    },
+    "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md": {
+      "sha256": "2bce9940d88dbcc82ef28efd62456275e29c20e4065c97602d365661dbe7f125",
+      "bytes": 4600
+    },
+    "analysis/STARRYDATA_FORMAL_EXECUTION_AMENDMENT.md": {
+      "sha256": "5053143dd46253849c690df0457a089ead126a1d79fe80315041f60483698b43",
+      "bytes": 1588
+    },
+    "analysis/STARRYDATA_VERIFIER_AMENDMENT.md": {
+      "sha256": "b9842e6c51f7c4eaf6ab14099d72771d7ea7d576be4a7e1333855052fe9e5f8c",
+      "bytes": 1563
+    },
+    "analysis/CALTECH_ACID_OER_ACCIDENTAL_ACCESS_AMENDMENT.md": {
+      "sha256": "4fb3ddc02b98a2d58a89947fc03a623a4cad785f39aa713b8786189da000e36c",
+      "bytes": 1306
+    },
+    "analysis/TRI_OER_CLEAN_REPLACEMENT_PROTOCOL.md": {
+      "sha256": "6c6b55c497a4f39bb745c2187f39dfb8ec9de90c92fee555dc5f924fa22b3112",
+      "bytes": 971
+    },
+    "analysis/TRI_OER_PICKLE_SCHEMA_AMENDMENT.md": {
+      "sha256": "9d6c17ee440623a371512e248f15ebfb3315f54d1555068691070d0f733fe4ea",
+      "bytes": 1192
+    },
+    "analysis/TRI_OER_VERIFIER_AMENDMENT.md": {
+      "sha256": "8cdb846de862d799ac267741248657673440f4523258a715ab06beedab8525d2",
+      "bytes": 2465
+    },
+    "analysis/DATASET_CANDIDATE_EDGE_AUDIT_2026-07-30.md": {
+      "sha256": "1c6404a9aebf40d40efff959e5b702469425600699d6cc48606ec086ce3354bf",
+      "bytes": 4572
+    },
+    "analysis/SPECGEN_DERIVATIVE_OER_BORROWING_PROTOCOL.md": {
+      "sha256": "e93da8e01647d722438d6c37f95805543acc22288e1f8e2d5a4ce0025916929d",
+      "bytes": 4774
+    },
+    "analysis/SPECGEN_COMPOSITION_SECONDARY_AMENDMENT.md": {
+      "sha256": "66020bdf11daa67616baf12718c3ce6a232a22fcd27e677632793ba772c64e14",
+      "bytes": 1917
+    },
+    "analysis/SPECGEN_TOP20_TEMPORAL_CHECK.md": {
+      "sha256": "52db7d173985a4ea82eec3b806fc26682708b9b887255edb0b12d339fb1015a0",
+      "bytes": 1675
+    },
+    "analysis/SPECGEN_DERIVATIVE_FIGURE_CONTRACT.md": {
+      "sha256": "c037c3232220a9a7e21261baa83784a42a93d90bcc90ae771b56182868e82398",
+      "bytes": 2667
+    },
+    "analysis/SPECGEN_DERIVATIVE_FIGURE_QA.md": {
+      "sha256": "26e369a683d93c99409284b8c65a6f990a68d556362fb6f128b3c214079911b3",
+      "bytes": 4229
+    },
+    "analysis/results/data_lake_profile.csv": {
+      "sha256": "566c7e928d2a7defdd7f96eb285b966160bfec76c34ae88e5ccb6d80c54cec9a",
+      "bytes": 566
+    },
+    "analysis/results/data_lake_registered_sources.csv": {
+      "sha256": "0a116da6cfb147ddb3dd1a78d4fc952168c0dd1afbc55ca1d9bb61c5c0bd5ea8",
+      "bytes": 1338
+    },
+    "analysis/results/data_quality_findings.csv": {
+      "sha256": "1dfae120f82bcb9e8e56c2fcd80d429669a2a875c21a689553775c443dd548b2",
+      "bytes": 703
+    },
+    "analysis/results/knowledge_map_edges_refined.csv": {
+      "sha256": "b6ac303ca3be221c53606e96d4ced8a5053b5601b56316de6739024ffc1c1dba",
+      "bytes": 23975
+    },
+    "analysis/results/external_confirmation_edges.csv": {
+      "sha256": "3bd83468ad20874d905adeb97a776add0b11ec34c3b523e5b6a48a1c064c8323",
+      "bytes": 6861
+    },
+    "analysis/results/external_confirmation_utility_summary.json": {
+      "sha256": "f103d9d4c1e86051d2dc8eb71171433570f525d7f370b1ca1d7bfa4824dce6d5",
+      "bytes": 1252
+    },
+    "analysis/results/matbench_steels_external_summary.json": {
+      "sha256": "8907cad425508dd587db03a635614972741a03852ab90643f6ddb902110820a0",
+      "bytes": 1569
+    },
+    "analysis/results/matbench_steels_external_edges.csv": {
+      "sha256": "13e5f9678c1062278b0b9638da55ac0efe2bbaf93339fd8cad2d92320692d2d9",
+      "bytes": 4478
+    },
+    "analysis/results/matbench_steels_external_sensitivity.csv": {
+      "sha256": "ab8e9d871b0ca221be827efcc98824261514eccce40b0f22403080e974cd55ec",
+      "bytes": 1292
+    },
+    "analysis/results/matbench_steels_external_source_quality.csv": {
+      "sha256": "f55c19aa2fb8da524b31ad82e770fd9ba8fe0df8591a91e23a511a30d39d8b55",
+      "bytes": 602
+    },
+    "analysis/results/matbench_steels_external_learning_curve.csv": {
+      "sha256": "6a19409340574e4094a89a3412f787c25e97d679ec3784386de3dd4e0631a4c5",
+      "bytes": 587
+    },
+    "analysis/results/kit_temperature_summary.json": {
+      "sha256": "8976d7a5518e50fbaa3eb8c0e5ff0f0e901fdcce5822c6f7580708a3d80bbcf8",
+      "bytes": 2368
+    },
+    "analysis/results/kit_temperature_edges.csv": {
+      "sha256": "77c4b576e7c8fae546c272346110ee8711e2aaf513c67a2967b2f47109e5f694",
+      "bytes": 2696
+    },
+    "analysis/results/kit_temperature_sensitivity.csv": {
+      "sha256": "c3fcb3cf24f44834e95266d035edbfee9404bd5e477cc7aeae3f4ceaf052b0e7",
+      "bytes": 722
+    },
+    "analysis/results/kit_temperature_source_quality.csv": {
+      "sha256": "14c6452c7f31d08b09e5c2fdfe4b06031677c429e6bb33dd24d1976cacdf2916",
+      "bytes": 2433
+    },
+    "analysis/results/kit_temperature_learning_curve.csv": {
+      "sha256": "52e4cc2c6142365df35f8a3ac257a08da7aad275010826137bced2bffdb86308",
+      "bytes": 743
+    },
+    "analysis/results/kit_temperature_replicate_structure.csv": {
+      "sha256": "404544ab38d937d503dc957c3bcc5df0083e014a4a1a99e220b105ba1b6bca19",
+      "bytes": 195
+    },
+    "analysis/results/kit_temperature_feature_importance.csv": {
+      "sha256": "397d60765a79a09c51005b64bfbf8cc5c51b186bbb864adebfc3a03af378df87",
+      "bytes": 2232
+    },
+    "analysis/results/kit_temperature_permutation_null.csv": {
+      "sha256": "7f470b7441545bdb3e8777565f7417149fc6799c81731911af9e7e1dff360858",
+      "bytes": 46075
+    },
+    "analysis/results/kit_sample_equivalence_uncertainty.json": {
+      "sha256": "22929f8e8d0143c004f569a35b3b15edacf808c189f7afb7c9f5137034aaf193",
+      "bytes": 1033
+    },
+    "analysis/results/kit_sample_equivalence_bootstrap.csv": {
+      "sha256": "9189d372f9313342c381cbf3f663aad99fc333ccb9ba058562732f395451feb9",
+      "bytes": 376278
+    },
+    "analysis/results/calisol_external_summary.json": {
+      "sha256": "303069c23d47cf3e2ca9651ea165c010ecf7b9b353fecf49ff9c5cbcdb7ab114",
+      "bytes": 2689
+    },
+    "analysis/results/calisol_external_edges.csv": {
+      "sha256": "5d73982ca8a7be899f816a212c3a8908827df5220dfe6750896f8e9f2c811afb",
+      "bytes": 2824
+    },
+    "analysis/results/calisol_external_sensitivity.csv": {
+      "sha256": "5d0966799ddf699fee11bc4462b3c8a508cf544168fc797a67e8d807d534e9a1",
+      "bytes": 766
+    },
+    "analysis/results/calisol_external_source_quality.csv": {
+      "sha256": "af56d585773efc58644969ebe0ad28492df5c4068a7d7363d38799d25619d49c",
+      "bytes": 4591
+    },
+    "analysis/results/calisol_external_source_quality_predictions.csv": {
+      "sha256": "b650ca486f026085e8e0c97c5fc9db7f6d78c7973f2d452f549a7e3bd18ee49d",
+      "bytes": 865239
+    },
+    "analysis/results/calisol_external_learning_curve.csv": {
+      "sha256": "b2b0a76b60eb62f33a609391f54c07adee105ea7eb2453a721b2aeeeda78f7e0",
+      "bytes": 767
+    },
+    "analysis/results/calisol_external_temperature_structure.csv": {
+      "sha256": "8bd404f0d2a2180981923a98201a4fff714053a343a596f425535d24961d6348",
+      "bytes": 288
+    },
+    "analysis/results/calisol_external_outer_folds.csv": {
+      "sha256": "d2287bba73f0749b3ac097f2678ea92d9825ceb1ce1e0b02043ae5bc9b48a127",
+      "bytes": 569
+    },
+    "analysis/results/calisol_external_feature_importance.csv": {
+      "sha256": "ccfbaf084ad180d45e45243ca6f0930feebe891a3f2085e2d1eb0a820d7f8f80",
+      "bytes": 2273
+    },
+    "analysis/results/calisol_external_permutation_null.csv": {
+      "sha256": "1d0cf9a0f50b2cc1294f65653384f011397474aefb29f65159bbdfdb1262a8b8",
+      "bytes": 65980
+    },
+    "analysis/results/calisol_anchored_delta_summary.json": {
+      "sha256": "7681712a8049dfcfd445a6ea442c683547db375cbd1dcd7d0f86a56dcde1914b",
+      "bytes": 7400
+    },
+    "analysis/results/calisol_anchored_delta_verified.json": {
+      "sha256": "f4cf00912d00ea3a31e346c5af802b6725b7441d215732782042bca05ffbce45",
+      "bytes": 1035
+    },
+    "analysis/results/calisol_anchored_delta_predictions.csv": {
+      "sha256": "514b26354424b89f04cfcf3cea7ccbbf21ded3e4cee4befd935449bae0727d1f",
+      "bytes": 12241080
+    },
+    "analysis/results/calisol_anchored_delta_article_metrics.csv": {
+      "sha256": "df5f0c406c90b45ee26347bad6c7c82a67c1b873b2cec1c4ec49a26892cde789",
+      "bytes": 48232
+    },
+    "analysis/results/calisol_anchored_delta_macro_metrics.csv": {
+      "sha256": "f5ce00cebc695adafb3afa7685a2ce2787c71d7809c46847c7791868028c5250",
+      "bytes": 4596
+    },
+    "analysis/results/calisol_anchored_delta_shuffled_null.csv": {
+      "sha256": "578c50ddff9cabf38f0c0df610c9d10ed1646543aedac95f9129110627dbb4cd",
+      "bytes": 12386
+    },
+    "analysis/results/calisol_anchored_delta_random_anchor_sensitivity.csv": {
+      "sha256": "59963b64035c2647e0f4667209e3cf029ff459ec2516a43e5f5a8daf5fad733b",
+      "bytes": 19217
+    },
+    "analysis/results/calisol_anchored_delta_leakage_audit.csv": {
+      "sha256": "bbf89ea8f217370cd52eed92dc9c63d983e61f465396f81680b7393958996cdf",
+      "bytes": 2112
+    },
+    "analysis/results/strength_law_summary.json": {
+      "sha256": "a321eeb41260da40f67f2056493798175e69460b03edd3ab20e4918254f345d6",
+      "bytes": 1525
+    },
+    "analysis/results/knowledge_map_synthesis_summary.json": {
+      "sha256": "5c3e9d4e0971d20b619b3de6ac7323c2a6d093e276835db50f585f1fc4aa75de",
+      "bytes": 12881
+    },
+    "analysis/results/isodb_compensation_summary.json": {
+      "sha256": "cc6d63e290a44983eee844f1affa41c703c6e2cefa2f16cce02975c724cebb02",
+      "bytes": 1643
+    },
+    "analysis/results/isodb_universality_summary.json": {
+      "sha256": "a6b56b4624798023fecebb5ca1a85d22b5bba3cc1540e6963143eba67aa88508",
+      "bytes": 1222
+    },
+    "analysis/results/ood_decision_summary.json": {
+      "sha256": "924e1b3a89b86f68b7ac74c944a11a814438dffe184329e535f87c6c8e60a905",
+      "bytes": 35598
+    },
+    "analysis/results/ood_decision_edges.csv": {
+      "sha256": "1b155f3a7f0d948c1f7195028418b153801d73126d6157f62b2f17b93397ed9b",
+      "bytes": 11570
+    },
+    "analysis/results/hard_ood_decision_summary.json": {
+      "sha256": "5ede4eab20930db1f2165dfb0f34cdf967a3f020f20f22ab0091cb53c5b619a8",
+      "bytes": 19710
+    },
+    "analysis/results/hard_ood_decision_edges.csv": {
+      "sha256": "dc4791648d1fb057ae96106e096f9d053f2a43da18718e03a2c01d8d488e6596",
+      "bytes": 6991
+    },
+    "analysis/results/obelix_ood_discovery_summary.json": {
+      "sha256": "6ae02a31817286d4b601d2c56340541df7f990ade326ba8070f51747e0adce4e",
+      "bytes": 9122
+    },
+    "analysis/results/obelix_ood_discovery_edges.csv": {
+      "sha256": "8e62b3ee1faabca42f830106d497812d7eeb0afcee85110e9279126c0b7e279f",
+      "bytes": 4732
+    },
+    "analysis/results/obelix_ood_discovery_reach.csv": {
+      "sha256": "aaff212282c5ed7d535b4fc98da9a16396fb30cef9128ae862480af5dc9ab709",
+      "bytes": 104115
+    },
+    "analysis/results/obelix_ood_discovery_diagnostics.json": {
+      "sha256": "14a8afd23fe89ec2b839a0c97a0cb31c5422082701bff597684352fe912e9701",
+      "bytes": 3248
+    },
+    "analysis/results/obelix_ood_discovery_pairwise_diagnostics.csv": {
+      "sha256": "ecc1037aea70e892c89fb67b0bb7616467a46f4b731a22cea7415680f0b8e851",
+      "bytes": 1085
+    },
+    "analysis/results/obelix_ood_discovery_survival.csv": {
+      "sha256": "42da5eaa11a0fe08f233f6c6b707d6cacb66d2df628742971ec1148c3f56caa8",
+      "bytes": 16984
+    },
+    "analysis/results/obelix_ood_discovery_input_meta.json": {
+      "sha256": "79a355ecde2c75ed6b374c6d49fd14a600889860d66db6eee68271f5a41ce55e",
+      "bytes": 2823
+    },
+    "analysis/results/obelix_ood_discovery_balam_job.json": {
+      "sha256": "c27c24ad8b04eeceea44e2e99a552d92169b96f583f84fcbd7dbffdae9d93a4b",
+      "bytes": 1145
+    },
+    "analysis/results/obelix_ood_discovery_balam_environment.txt": {
+      "sha256": "7f3c41d4ee1759c57652a35ab84134aee980f2f90da5f79d9f9e80ff9b731226",
+      "bytes": 197
+    },
+    "analysis/results/obelix_ood_discovery_balam_checksums.sha256": {
+      "sha256": "10e76ab17127555a1d68b4fdb7904df768d7f4edf45363a7bd9036fb340f5791",
+      "bytes": 926
+    },
+    "analysis/results/obelix_ood_discovery_COMPLETE.json": {
+      "sha256": "cccba74ffced621e47136d9a932452fb38ccf5ffda63f9f747ea37f02c8d5893",
+      "bytes": 142
+    },
+    "analysis/results/neighbor_transfer_signal_summary.json": {
+      "sha256": "5de9faaf8fcf48aa8c84348060e1e781b6227183697462f0e1cdfaa202428800",
+      "bytes": 15378
+    },
+    "analysis/results/neighbor_transfer_signal_diagnostics.csv": {
+      "sha256": "e322b666877f8e9355f65adbd4d9935a54b7c55aa1434f8128ce60352de9d5f8",
+      "bytes": 479281
+    },
+    "analysis/results/neighbor_transfer_policy_reach.csv": {
+      "sha256": "01839f67632bbfc6297b6d900f034c25e9473998012dbc3ecca0af1ecc02a586",
+      "bytes": 125810
+    },
+    "analysis/results/neighbor_transfer_policy_trajectories.csv": {
+      "sha256": "3d425211f40a60fa00dad3a544ed867dfbb05e74526f3e70b02b1d23b85a4ec4",
+      "bytes": 14680213
+    },
+    "analysis/results/neighbor_transfer_policy_contrasts.csv": {
+      "sha256": "bf55b4e95e32e1a3e787bdd8da340c8e692e9a5957e7b191631e46421f02cf0c",
+      "bytes": 4522
+    },
+    "analysis/results/neighbor_transfer_policy_bootstrap.csv": {
+      "sha256": "36dd3999877f61f969ddfaf8d6e3e7aa83dec81f4281a11a24b8d361c36235fc",
+      "bytes": 8709898
+    },
+    "analysis/results/neighbor_transfer_policy_secondary_utility.csv": {
+      "sha256": "55218aecafc9dd4d192988a31f03491a435894512dd82878f34026d8fd63158d",
+      "bytes": 519861
+    },
+    "analysis/results/neighbor_transfer_policy_summary.json": {
+      "sha256": "6bfec05480c564846a6908b56ca06711c56989d691cc7401314b15066e56d01a",
+      "bytes": 39443
+    },
+    "analysis/results/neighbor_transfer_policy_validation.json": {
+      "sha256": "a02f4f4cbf00f495bc8c03fe26b4f89035b1eddee78760139010d2c1f7dfede2",
+      "bytes": 14506
+    },
+    "analysis/results/neighbor_transfer_policy_balam_environment.txt": {
+      "sha256": "b76f6b470ea0a43da92b05ce65acf40e7a62b17de1ccafa97a2500785bfa5314",
+      "bytes": 197
+    },
+    "analysis/results/neighbor_transfer_policy_balam_checksums.sha256": {
+      "sha256": "c0562b356b8de40a0f5de0f58ac436b20b8d934adba5aee9381dcae7b0582a8c",
+      "bytes": 1084
+    },
+    "analysis/results/neighbor_transfer_policy_COMPLETE.json": {
+      "sha256": "f863a8c731dff8d008fcbba1d1ad3c3f03c3acda8464ffdd58971ddbd3c85de6",
+      "bytes": 288
+    },
+    "analysis/results/caltech_ionic_external_audit.json": {
+      "sha256": "4ce4b6fbdbdab07e5bd8463258e86cdddb5a5dad68220d05264fea612a1c6b02",
+      "bytes": 3249
+    },
+    "analysis/results/caltech_ionic_external_policy_summary.json": {
+      "sha256": "3c86d19d8aa1ca52bdd3d411d03fdc95314f89668f0c50f352196d5b8acced73",
+      "bytes": 19073
+    },
+    "analysis/results/caltech_ionic_external_policy_contrasts.csv": {
+      "sha256": "80b8f9ac764d3f9cb493014c9635d581f9829379a1f4829b3d137c3b629c2466",
+      "bytes": 4197
+    },
+    "analysis/results/caltech_ionic_external_policy_gate_summary.csv": {
+      "sha256": "f94b502b173f45d3525ee093c3e65dbe824fa5f802ed218849c4ce192f974661",
+      "bytes": 5994
+    },
+    "analysis/results/caltech_ionic_external_policy_source_quality.csv": {
+      "sha256": "be0a7153bb7ea07626a9db459ea7c96dbb1d626838328d54f914ce2e9d71dc5a",
+      "bytes": 405
+    },
+    "analysis/results/caltech_ionic_external_policy_validation.json": {
+      "sha256": "2849eec299adb3082d0d36e6ed48d97e40cb15835dc089c253d26a2b1242953f",
+      "bytes": 38993
+    },
+    "analysis/results/caltech_ionic_external_policy_balam_job.json": {
+      "sha256": "e8e04062f2b84a030aca32019380ae2496712580eebda72f8a466a5e1f057e5e",
+      "bytes": 3049
+    },
+    "analysis/results/caltech_ionic_external_policy_balam_environment.txt": {
+      "sha256": "1ba4bfecc1e0b80db164f15981bdbc0260507f235abfb4083dd83f15d9c76457",
+      "bytes": 222
+    },
+    "analysis/results/caltech_ionic_external_policy_balam_checksums.sha256": {
+      "sha256": "bc67c2eab9132d44de1cc36c18789a92e2632a32cd0f857c58b9ac90f339de52",
+      "bytes": 1926
+    },
+    "analysis/results/caltech_ionic_external_policy_COMPLETE.json": {
+      "sha256": "117aec4825141024ccbda26ae7b3c8b08f183b7f4accdab39ca14a6b776d85ce",
+      "bytes": 142
+    },
+    "analysis/results/caltech_ionic_external_policy_VERIFIED.json": {
+      "sha256": "be4686080431ada81f092e7dd0bd18fdeadcb40157bb540937755a765615f2d9",
+      "bytes": 552
+    },
+    "analysis/results/caltech_neighbor_portfolio_diagnostic.csv": {
+      "sha256": "48f2ec7745a4f7549c44561446455f15a041008a0ea4a28baa7ecde5de35eb3e",
+      "bytes": 25621
+    },
+    "analysis/results/local_gated_neighbor_portfolio_summary.json": {
+      "sha256": "0e10c34ef2c72bd42de9155a7cef82a5cdfd8a6f0ac361add3ef144adad5733c",
+      "bytes": 16689
+    },
+    "analysis/results/local_gated_neighbor_portfolio_contrasts.csv": {
+      "sha256": "32cac87acf4a354ae85c2dfa797dcd2119e979e0e2e32461af0ed87d8eb812e7",
+      "bytes": 2399
+    },
+    "analysis/results/family_first_neighbor_portfolio_summary.json": {
+      "sha256": "21e54de925121ee09d598998ddd0ab3b132e5efc63766f1fe461091d695a749f",
+      "bytes": 13033
+    },
+    "analysis/results/family_first_neighbor_portfolio_metrics.csv": {
+      "sha256": "e33e8492bec6bebf0bd58bb8e5ab37ae7890b1c0738d72a908cb0888d11be1ea",
+      "bytes": 5483
+    },
+    "analysis/results/family_first_neighbor_portfolio_orders.csv": {
+      "sha256": "6a512fa25ab1f7651da932a8465b4472523005ca17010ae55314f7cd32ca6181",
+      "bytes": 259637
+    },
+    "analysis/results/family_first_neighbor_portfolio_null.csv": {
+      "sha256": "1566af3f251e1cd035cd477fb6796c6b41cc8cebc1404297811bc6652dd5e575",
+      "bytes": 1012511
+    },
+    "analysis/results/family_first_neighbor_portfolio_figure_source.csv": {
+      "sha256": "7a269f71f72f297040487b1a4ce189d6eb282b30f0f406fcee0f39247a238353",
+      "bytes": 1448
+    },
+    "analysis/results/family_first_neighbor_hypothesis_cards.csv": {
+      "sha256": "dee284dd8da38e6955d08c372c6cac7b86acc66a73d7c34902d674af6b7e7dab",
+      "bytes": 3943
+    },
+    "analysis/results/ood_knowledge_deficit_summary.json": {
+      "sha256": "a7a4275f69340be6f3ba5af5b2e92d49d7a40cadfc788f33e4b67af2f2e8317c",
+      "bytes": 99960
+    },
+    "analysis/results/ood_knowledge_deficit_metrics.csv": {
+      "sha256": "9cedea2bced21d1c8a9f360ea434f0a971c73592aa94fdd893bbd83c707ca583",
+      "bytes": 4155861
+    },
+    "analysis/results/ood_knowledge_deficit_contrasts.csv": {
+      "sha256": "91d567cdfd57b922bf5a2573126d9fdf6670ce0671f6d8e6a0df3fbc20ff4de1",
+      "bytes": 4307964
+    },
+    "analysis/results/ood_knowledge_deficit_diagnostics.csv": {
+      "sha256": "c539f5d3763da3197270e28c8b67b4f0d6da7436d0111eff175bda954796c98c",
+      "bytes": 107577
+    },
+    "analysis/results/ood_knowledge_deficit_VERIFIED.json": {
+      "sha256": "dcc3e08ec6f73f2c6cded71917dd0af3b9b345f5156649334ef6f3a3c1a30401",
+      "bytes": 499
+    },
+    "analysis/results/starrydata_reverse_target_metadata.csv": {
+      "sha256": "d023671660a43b6ab18aac6b1f0604df470741e8bc97c2cb47d652cb6da5008f",
+      "bytes": 6142254
+    },
+    "analysis/results/starrydata_reverse_source_predictions.csv": {
+      "sha256": "b291f417f99208b286dc9627df00fc65b19067755840b29b7fb4f52b2b81e20e",
+      "bytes": 3687559
+    },
+    "analysis/results/starrydata_reverse_source_quality.csv": {
+      "sha256": "38fe105e011a799a816cc8f053299b157f24576174ade0a81fff28dfde605dde",
+      "bytes": 551
+    },
+    "analysis/results/starrydata_reverse_policy_orders.csv": {
+      "sha256": "4ca0dbed74112549d5089769b613a2ca22b2b67019e27913fc59d48c2c33b628",
+      "bytes": 1292604
+    },
+    "analysis/results/starrydata_reverse_hypothesis_cards.csv": {
+      "sha256": "d32a5cbc3321682df268596b16a2cc4dd0b2ad929a9a10ec57d310dfd1c8fdff",
+      "bytes": 13439
+    },
+    "analysis/results/starrydata_reverse_PREOUTCOME.json": {
+      "sha256": "1c5d8c17d733ab1fc764ee0d2c1c31f6b8421a6e7ff4c56ae808950596d49746",
+      "bytes": 2334
+    },
+    "analysis/results/caltech_acid_oer_PREOUTCOME.json": {
+      "sha256": "d783aa0309e9b3bf39f04ffda9fde7ad6e8e6f9c7dce0c5fb3db10eeffd661c9",
+      "bytes": 1950
+    },
+    "analysis/results/caltech_acid_oer_target_metadata.csv": {
+      "sha256": "0913de4ce0de11dde8c12b0990f8b9154e7078531547aa72a0da4bd0fe1f2051",
+      "bytes": 29120
+    },
+    "analysis/results/caltech_acid_oer_source_predictions.csv": {
+      "sha256": "dc2316b21d81eeddbd516c60e78d5304e2c6a85db5c656912e702e3ae72c336d",
+      "bytes": 71865
+    },
+    "analysis/results/caltech_acid_oer_source_quality.csv": {
+      "sha256": "b25eeea917ed98c463d2143eb0add596159895f7488e4d2eb7c3a5f367f40e3d",
+      "bytes": 419
+    },
+    "analysis/results/caltech_acid_oer_policy_orders.csv": {
+      "sha256": "af3ef1f179277f91dfb3f3bc2a93e4a0435b7013d88f3b25a6a91fd840c02969",
+      "bytes": 165738
+    },
+    "analysis/results/caltech_acid_oer_hypothesis_cards.csv": {
+      "sha256": "06bd9e573234853251823115a386597f4aaf97fb0d758ac7a23ca06917fdab87",
+      "bytes": 4418
+    },
+    "analysis/results/tri_oer_PREOUTCOME.json": {
+      "sha256": "66f7c4e2f309f4348902e47d5cce3f8eb841ba9691b2c7256db10714ae798f3e",
+      "bytes": 2879
+    },
+    "analysis/results/tri_oer_target_metadata.csv": {
+      "sha256": "78ae5c08a5109b01ca33502a03c7552e229859cba1d0b1e9793742f948c20776",
+      "bytes": 1327667
+    },
+    "analysis/results/tri_oer_source_predictions.csv": {
+      "sha256": "b4541d922d592d8fde18810ff031a0d7f5ac6bb872895795b0b3dd9f50084ab8",
+      "bytes": 4116843
+    },
+    "analysis/results/tri_oer_source_quality.csv": {
+      "sha256": "732d91256eaa36cad7dfb6156b916abe99ce1948e3667662f6ff9c825da1afc4",
+      "bytes": 502
+    },
+    "analysis/results/tri_oer_matched_source_controls.csv": {
+      "sha256": "44d74b657a6e504dea5c7049c885660964fd124abb2adf68372190cf841bfca7",
+      "bytes": 4169650
+    },
+    "analysis/results/tri_oer_policy_orders.csv": {
+      "sha256": "8885322ae372fdd02f4be3b88154e56fe293fb9115f10931da015001195306f1",
+      "bytes": 8597077
+    },
+    "analysis/results/tri_oer_hypothesis_cards.csv": {
+      "sha256": "04dba8cb0377eec5e2738b60b56eb96be4ec37acc5e4e0eddbc88fe4d9a99611",
+      "bytes": 31945
+    },
+    "analysis/results/starrydata_reverse_summary.json": {
+      "sha256": "98f1ebefb1b7e315dba6b949d14c51b35807061c2036f1980597d466f570dea2",
+      "bytes": 797
+    },
+    "analysis/results/starrydata_reverse_exploration.csv": {
+      "sha256": "bb7937c75a38603055d964ab031d16b9fedbcfafd488657ee340e866b446ed79",
+      "bytes": 624
+    },
+    "analysis/results/starrydata_reverse_hypothesis_tests.csv": {
+      "sha256": "8f826fdaceb80e504f188306cfea75a49d9b44a919b873edaab606e1edc5d658",
+      "bytes": 501
+    },
+    "analysis/results/starrydata_reverse_matched_specificity_summary.json": {
+      "sha256": "4e8ec791abf3d5289a31da12d3a3ced775e8240903279b5b0bbc05fd3be76b64",
+      "bytes": 2026
+    },
+    "analysis/results/starrydata_reverse_COMPLETE.json": {
+      "sha256": "5975b8f043ef2bc1b2ec25c8b31d1dd64aa737bb7870015fc8949ad5b356b68c",
+      "bytes": 1898
+    },
+    "analysis/results/starrydata_reverse_VALIDATED.json": {
+      "sha256": "68570748be7cda2170cb2be40a4016435c40e63a880edde7cca104824f619e17",
+      "bytes": 7601
+    },
+    "analysis/results/tri_oer_summary.json": {
+      "sha256": "2e287fbd138caa4649b844c6d605bcb4d53da4ddebfd71afc258a6fd6bc6636b",
+      "bytes": 1301
+    },
+    "analysis/results/tri_oer_exploration.csv": {
+      "sha256": "243d968c7eb6b3e1153b2eda748d4dfe205ae0b4f3cd7984121e3bb0cc91997b",
+      "bytes": 2556
+    },
+    "analysis/results/tri_oer_hypothesis_tests.csv": {
+      "sha256": "0671c1d299c26e0b04f114489d90b0e583e350876c7533767e364b07d7b83a51",
+      "bytes": 404
+    },
+    "analysis/results/tri_oer_COMPLETE.json": {
+      "sha256": "55396c292ae6fafa11c2afedcc0d653777d712749540681f876c22bee8e51beb",
+      "bytes": 2367
+    },
+    "analysis/results/tri_oer_VALIDATED.json": {
+      "sha256": "99a035b62fe111a88c2f20646412cb0b4893e2a4d17f7f6879d68796d18e24d1",
+      "bytes": 272660
+    },
+    "analysis/results/outcome_unseen_multi_target_summary.json": {
+      "sha256": "0bb38fb1f94dd481c0f05d033c13cabe770a7ad8d51960b1bdba7e880bfd465a",
+      "bytes": 1528
+    },
+    "analysis/results/core_story_balam_environment.txt": {
+      "sha256": "a08eec496ef3061b6cf41bf781de73433ab3d2c6dfbaf34117c75443e1b7d80f",
+      "bytes": 202
+    },
+    "analysis/results/core_story_outcome_unseen_checksums.sha256": {
+      "sha256": "620bcb964bbea1e8b13e3e6b68ede099a71cda2ca1490475548d8861e8ed856c",
+      "bytes": 791
+    },
+    "analysis/results/figure_data_foundation_inventory.csv": {
+      "sha256": "2bff76725991daa9c6467ffd11e04f69f57c2f6b03b15f9fd4bed763e4fcb621",
+      "bytes": 1983
+    },
+    "analysis/results/figure_data_foundation_lake.csv": {
+      "sha256": "aa1817209ce93d3815d0bb4e78b9db76c687d5b76b8910b6ce4bfbb7995d54e8",
+      "bytes": 866
+    },
+    "analysis/results/figure_data_foundation_scope.csv": {
+      "sha256": "6eaae7de6fb312ee7689e283c13bddcc65d4e9fbcd4a4dd4b1122ef3874bbe1a",
+      "bytes": 390
+    },
+    "analysis/results/figure_data_foundation_portfolio.csv": {
+      "sha256": "c8d8a386ca7efd14a37e5e4fbd0a99bf8d27c8fd0f9cf3e902f11fe2ed02c071",
+      "bytes": 1473
+    },
+    "analysis/results/specgen_derivative_oer_borrowing_complete.json": {
+      "sha256": "3e6922f059a16c9763cabca27a4fe77cffa17819a8de2ff7f93fe169cc8704c5",
+      "bytes": 935
+    },
+    "analysis/results/specgen_derivative_zero_label_metrics.csv": {
+      "sha256": "9c4642746cef73e79022bc7f9a60a508dd7cd972897351a00e254b475a147aee",
+      "bytes": 1188
+    },
+    "analysis/results/specgen_composition_secondary_summary.json": {
+      "sha256": "5ec534d5569042b9e3e83e9cf9f7c691fda5f3109d2b2730958f7db9364d4ca5",
+      "bytes": 6752
+    },
+    "analysis/results/specgen_top20_temporal_metrics.csv": {
+      "sha256": "a5105bace59c799043d8dccb58aff9715c880db8836e413750d5da2732e3ba99",
+      "bytes": 660
+    },
+    "analysis/results/specgen_top20_temporal_summary.json": {
+      "sha256": "b26976cf27b70ed47031075ea9264ad9603bd249970e3daa0fce6e706f694d09",
+      "bytes": 2078
+    },
+    "analysis/results/specgen_derivative_verification.json": {
+      "sha256": "185faff25b3f71aa50708814d9a56e52181d0df3d9fe54b6574c7a18e2a9b289",
+      "bytes": 790
+    },
+    "analysis/results/specgen_derivative_oer_figure_source_data.csv": {
+      "sha256": "1f0d43ead3289db54bae174254ac94c3f4d94fccd0ea315feb0212785f598395",
+      "bytes": 2066
+    },
+    "analysis/results/figure_main_panel_a.csv": {
+      "sha256": "f5792dbf14d2fdd270abfaa4faafb206e56f5681da393b882733d6db8cd4ee60",
+      "bytes": 93840
+    },
+    "analysis/results/figure_main_panel_b.csv": {
+      "sha256": "fa7fad8af5c89102cfb4f25e7d1477f8c7be85349c331468e64dd7561fd55623",
+      "bytes": 5089
+    },
+    "analysis/results/figure_main_panel_c.csv": {
+      "sha256": "db238a13c85e850d5db358f90ae668695a577a26753918bd8726f1361576a7ba",
+      "bytes": 1053
+    },
+    "analysis/results/figure_main_panel_d.csv": {
+      "sha256": "c6e21fe5bdf9ae3c2f44970c3a6dd7a86b26d886a60f2fa332d2712b8c3d0f6d",
+      "bytes": 121599
+    },
+    "analysis/results/figure_ood_decision_panel_a.csv": {
+      "sha256": "e7b120221b5a11cf21be54492aabd900e1a9855db925bb36fdd93f8430505a32",
+      "bytes": 483
+    },
+    "analysis/results/figure_ood_decision_panel_b.csv": {
+      "sha256": "a9b5854b7bd7a15036ca85cdd6d393dac719f513d1aa94d32d9ef2f8d9e92bb4",
+      "bytes": 3271
+    },
+    "analysis/results/figure_ood_decision_panel_c.csv": {
+      "sha256": "40bcee2b529623be73ca46110a858de65f34118f532df02cea650e0fa9a36a0b",
+      "bytes": 5917
+    },
+    "analysis/results/figure_caltech_policy_panel_a.csv": {
+      "sha256": "d3597f84309d1dcfb06e3cc350fcabacea6e72b944c969c98e947467c77b3837",
+      "bytes": 712
+    },
+    "analysis/results/figure_caltech_policy_panel_b.csv": {
+      "sha256": "0a14e900b695fd0345df0a79dd019a439dec26bf1401e1c0e08153cb3582b81d",
+      "bytes": 788
+    },
+    "analysis/results/figure_caltech_policy_panel_c.csv": {
+      "sha256": "025f7e834dd73e3fa56a84ab87929b6643537b6d64bbb5d88adef413294dcae2",
+      "bytes": 1216
+    },
+    "analysis/results/figure_outcome_unseen_panel_a.csv": {
+      "sha256": "08536fd4f54b4afd42fea4645ec59334281282d4ffaf0aa516139a900ecbd91e",
+      "bytes": 424
+    },
+    "analysis/results/figure_outcome_unseen_panel_b.csv": {
+      "sha256": "f39034043fab361cb0f16048b8d2add835180719943cc1bf6cef232ba833aaa3",
+      "bytes": 448
+    },
+    "analysis/results/figure_outcome_unseen_panel_c.csv": {
+      "sha256": "7083cc54a4ac3eea659e10dc317fe7517a048e424d2e19e6af86e4af69b56244",
+      "bytes": 723
+    },
+    "analysis/results/figure_outcome_unseen_panel_d.csv": {
+      "sha256": "97068f8444361c3880ce2d6acc232ce85a7938795f0dd26b8361979d04e7eb4e",
+      "bytes": 407
+    },
+    "analysis/results/figure_neighbor_map_panel_a.csv": {
+      "sha256": "56ab598aa5e97af23ef94abfc8bdafba05a2b3768c4cccbb0df740404912d357",
+      "bytes": 336
+    },
+    "analysis/results/figure_neighbor_map_panel_b.csv": {
+      "sha256": "b838cad75f052ea38521173da94d03630e2aaa3b7e613b65d81cd2b94917c96d",
+      "bytes": 697
+    },
+    "analysis/results/figure_neighbor_map_panel_c.csv": {
+      "sha256": "5c1b4a7f17764cce9cef2e890b444701c0d51fc5e0be00f32029a256c36901f9",
+      "bytes": 787
+    },
+    "analysis/results/figure_neighbor_map_panel_d.csv": {
+      "sha256": "025f7e834dd73e3fa56a84ab87929b6643537b6d64bbb5d88adef413294dcae2",
+      "bytes": 1216
+    },
+    "analysis/results/figure_neighbor_map_panel_e.csv": {
+      "sha256": "4e7d59f17ae162f7fa6cdb2408e7b9342b1f593df98816b8da8d05ef78467232",
+      "bytes": 1029
+    },
+    "analysis/results/figure_battery_panel_a.csv": {
+      "sha256": "d2636f8d3a82c6a0598c573aec2b6ead3f7be7ff6f8265276274f5ee88862676",
+      "bytes": 329
+    },
+    "analysis/results/figure_battery_panel_b.csv": {
+      "sha256": "1e2cd452d0d5f4c90916cad053f1627d5ab175df1b0acb23e44a64756455c705",
+      "bytes": 649
+    },
+    "analysis/results/figure_battery_panel_c.csv": {
+      "sha256": "01948c350fdde70047f9b805d84b1ca8e14ea192499e544072adba3de3b1b147",
+      "bytes": 2462
+    },
+    "analysis/results/figure_battery_panel_d.csv": {
+      "sha256": "13921b8481cfb9bd0f3f6e6d49ba79136e7191af483ee24649ae8fdd9812f229",
+      "bytes": 123
+    },
+    "analysis/results/figure_battery_panel_e.csv": {
+      "sha256": "ad6c379adf0d8da360b7c1f6b9ca8b4d776f40894bf947e427b024b8d5c320a5",
+      "bytes": 242
+    },
+    "analysis/results/multistage_battery_stage2/STAGE2_RELEASE_AUDIT.json": {
+      "sha256": "b2c9914546e43b7413dfa81f1b33e9cb7c57f6a97dfa9df637daeab56ed3bfa3",
+      "bytes": 1126
+    },
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/analysis/POSTRELEASE_SENSITIVITY_SUMMARY.json": {
+      "sha256": "f51b6b111930e788e74e369bfea92629bc07a4e3e45d8399307b188a67d40294",
+      "bytes": 7212
+    },
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/analysis/training_only_gate.csv": {
+      "sha256": "3dc2458907d5905c141f3064d35be2721392deb0d4bd4b5fb90c9e334359c01a",
+      "bytes": 1932
+    },
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/POSTRELEASE_ADJACENCY_DIAGNOSTIC_SUMMARY.json": {
+      "sha256": "2f343e61ac6c7b4dac5fca2e06bda8c3d7d65e3d7e007979b1a45a34ea0fe15c",
+      "bytes": 4457
+    },
+    "analysis/results/multistage_battery_stage2_coverage_sensitivity/postrelease_adjacency_diagnostic/condition_borrowing_map.csv": {
+      "sha256": "745f234d870500d816686c6ac2ccbb4e9fdcdd234d4b914bc0a5f4760d6bd486",
+      "bytes": 6391
+    },
+    "analysis/figures/data_foundation_scope.svg": {
+      "sha256": "0270b19dfd9d164502827f32853f02d9323effb99a7452f2b8ba09836b534170",
+      "bytes": 104072
+    },
+    "analysis/figures/data_foundation_scope.pdf": {
+      "sha256": "a6c7d64d5179ee88f0de15c617e167301f518d478931fbbd6a5c9131a81dcc19",
+      "bytes": 88749
+    },
+    "analysis/figures/data_foundation_scope.png": {
+      "sha256": "e3d1908c9ec1bb83111b2c6c6f51e9dd5a129d3ddb486a87cfe8488677c7bd93",
+      "bytes": 513036
+    },
+    "analysis/figures/data_foundation_scope.tiff": {
+      "sha256": "b2ccb01341518b09d9b9a6b2b775958cef4daa521efe56a057a9e4972b0a1f3e",
+      "bytes": 2239574
+    },
+    "analysis/figures/specgen_derivative_oer_transfer.svg": {
+      "sha256": "d4a38c073db2de3b328d02a58b432994feb8765b85f37316fa989cafe3b8dc18",
+      "bytes": 80114
+    },
+    "analysis/figures/specgen_derivative_oer_transfer.pdf": {
+      "sha256": "693b5450b9cdbd362ac0e647bc4a2a0267875fc818e1f7cd6756c08e413b0801",
+      "bytes": 89659
+    },
+    "analysis/figures/specgen_derivative_oer_transfer.png": {
+      "sha256": "8e3c8c4b1eadbda228fbb9b299a943430e5cf4e67b8e80000392792344b9efec",
+      "bytes": 309955
+    },
+    "analysis/figures/specgen_derivative_oer_transfer.tiff": {
+      "sha256": "66fd87ffc720fb0719bde21ad7a1c6dd398f60b76626d4ec0bff556076ac068a",
+      "bytes": 558508
+    },
+    "analysis/figures/main_knowledge_borrowing.svg": {
+      "sha256": "44b673f3ccbfa18dc209b431c5e120b7fcbe2b282e8865727a48d5c1e4953483",
+      "bytes": 379503
+    },
+    "analysis/figures/main_knowledge_borrowing.pdf": {
+      "sha256": "d33c8f02ea3baa89a8266846a5aa334632c1ab733be4152fb63d4642e29274c4",
+      "bytes": 152330
+    },
+    "analysis/figures/main_knowledge_borrowing.png": {
+      "sha256": "bcbd23d27a12d10984d58044b891bff3aac83a1bcda67dac9087ba11ec93a3ec",
+      "bytes": 558131
+    },
+    "analysis/figures/main_knowledge_borrowing.tif": {
+      "sha256": "5ac9b7b079bf5f40efb99698da14479f8144a67e49e8c623523cbfc74b72c3b8",
+      "bytes": 606372
+    },
+    "analysis/figures/ood_decision_borrowing.svg": {
+      "sha256": "10609476ddb18b510d3de800d866bf77375c79feb14ad057597f84aa3222dc84",
+      "bytes": 44716
+    },
+    "analysis/figures/ood_decision_borrowing.pdf": {
+      "sha256": "5c5f06343d81e17914dd1832559ad34bbf98d57b03a43c1570259201b7c56f37",
+      "bytes": 67575
+    },
+    "analysis/figures/ood_decision_borrowing.png": {
+      "sha256": "9805e346d6a05f58f9dcabbfdc504b4ae0a9e5db591973286c2df9f124a2e323",
+      "bytes": 217623
+    },
+    "analysis/figures/ood_decision_borrowing.tiff": {
+      "sha256": "c9b1962a95d975a1653bd4bbfc0d9aa6d42bff8958c156e27f27c401acf47dcd",
+      "bytes": 275102
+    },
+    "analysis/figures/caltech_external_policy_decomposition.svg": {
+      "sha256": "cd25a97dca67d142716771ca45668d1a3f2461bd800a36a011b2721214998d0a",
+      "bytes": 49127
+    },
+    "analysis/figures/caltech_external_policy_decomposition.pdf": {
+      "sha256": "21bbbeae1a217f8927de4a8f23ca98b407e75018d5fd9d971cd975d5374e8df6",
+      "bytes": 78237
+    },
+    "analysis/figures/caltech_external_policy_decomposition.png": {
+      "sha256": "3a7f2e2d65fab9e90f742f94d1c48a38f790f60c1871a02fcdbad6a2b7c244a4",
+      "bytes": 178753
+    },
+    "analysis/figures/caltech_external_policy_decomposition.tiff": {
+      "sha256": "92e211e9414b9e695d47f2e60c837bfd304a180aee877812e0a6e35762ef4892",
+      "bytes": 231800
+    },
+    "analysis/figures/family_first_neighbor_portfolio.svg": {
+      "sha256": "88a360fe63f03c39eb117272c9b39a33ea55281f799c7457ed9153fe5f9e01ed",
+      "bytes": 46107
+    },
+    "analysis/figures/family_first_neighbor_portfolio.pdf": {
+      "sha256": "64f4830871569bde35902cd1f49844daf3221c988bdfa2f97c42d36a3826e915",
+      "bytes": 81209
+    },
+    "analysis/figures/family_first_neighbor_portfolio.png": {
+      "sha256": "f7baa47ef906b545c2e5253065b04b2dadb75052dc26fed7fd6e5f5c74500688",
+      "bytes": 268501
+    },
+    "analysis/figures/family_first_neighbor_portfolio_600dpi.tif": {
+      "sha256": "c0062f12986ee353f0465da43605aa702fc41c2dce7133931359a8eab81f95ff",
+      "bytes": 446970
+    },
+    "analysis/figures/outcome_unseen_validation.svg": {
+      "sha256": "f9b369427a519aab6ad6e98f07e1378598452c672775e3de05d16461b6c8c50e",
+      "bytes": 48889
+    },
+    "analysis/figures/outcome_unseen_validation.pdf": {
+      "sha256": "e39bc356863596e58c2b5de7be205fdd331b3b3921f00181bace95e8ea1a81ae",
+      "bytes": 69243
+    },
+    "analysis/figures/outcome_unseen_validation.png": {
+      "sha256": "324d04a654eee0248b6ece4b3e4233a2ce255186179a1800399ae063ce1a6c4c",
+      "bytes": 275689
+    },
+    "analysis/figures/outcome_unseen_validation.tiff": {
+      "sha256": "4441b5bc5f8f0ff0dfd7ddaa7f40e2567e84f76953fbf7513308253ecf89282c",
+      "bytes": 438116
+    },
+    "analysis/figures/neighbor_map_exploration.svg": {
+      "sha256": "6905242d560b78adc805b513455783b2b0373750b9fe25a2b070938e1997afed",
+      "bytes": 74071
+    },
+    "analysis/figures/neighbor_map_exploration.pdf": {
+      "sha256": "d1613517cf74cd3b7a038d53982fee291e7552082ba9c4cdd290a9956b051c1e",
+      "bytes": 90504
+    },
+    "analysis/figures/neighbor_map_exploration.png": {
+      "sha256": "6dcb797a7f762f853155a03dc02ee1b2378c942e00b7e72e16e617224f84eca4",
+      "bytes": 313232
+    },
+    "analysis/figures/neighbor_map_exploration.tiff": {
+      "sha256": "f3ef1090604dba5f7ac96d17a4f579f51059305cece88c968cb2146d2d63d26f",
+      "bytes": 455186
+    },
+    "analysis/figures/battery_continuous_borrowing.svg": {
+      "sha256": "51dcc2455bdf6c2d43a104a7722d096c11bbfa1f91fd23d55943ce3b76b2a5cd",
+      "bytes": 56116
+    },
+    "analysis/figures/battery_continuous_borrowing.pdf": {
+      "sha256": "abc83193ec4832cb38084cc56a20a9b41a86c7ab935dd449c1840967116d6db7",
+      "bytes": 62905
+    },
+    "analysis/figures/battery_continuous_borrowing.png": {
+      "sha256": "cb6f21e1f3966aa2c3a50bd42c151ee1195ca8fe48ea2d1e0745de99d26c4663",
+      "bytes": 332939
+    },
+    "analysis/figures/battery_continuous_borrowing.tiff": {
+      "sha256": "483f7eaa16ee51c35dbeb13b0447795bc3ae604e2be124560b0ca96d0268818c",
+      "bytes": 450838
+    }
+  },
+  "claim_boundary": "Qualified neighboring domains can supply useful and complementary information when sources are leakage-audited, endpoint-matched, and preserved independently. A controlled SpecGen OER perturbation series shows the routed mechanism directly: with five recipient labels, matched composition-relation transfer reduces RMSE by 16.3% and 26.1% in two complete held-out derivative systems, remains ranking-only in one, and is harmful in another. This within-programme post-primary result is not four independent replications. KIT provides a 15% few-shot RMSE reduction with positive absolute utility. On the external Caltech target, prespecified OBELiX and ESTM rankings recover 2/8 and 3/8 top-5% entities after formula and DOI exclusions, while mechanical and catalysis controls recover 0/8; an outcome-informed portfolio covers 5/8, demonstrating complementarity on the observed target. A subsequent CCA family-first allocation covers 4/4 distinct top external identity/provenance components and both 2/2 hard-OOD components by acquisition 20, while deliberately reducing repeated entity hits. All wrong-source suppression guards pass. CALiSol, Matbench, OBELiX sequential UCB, and Caltech adaptive residual policies provide the necessary boundaries: adjacency alone is insufficient, and target-surrogate or acquisition design can erase source signal. The release therefore supports component-level and retrospective proof of feasibility for the selective neighborhood-borrowing and distinct-region exploration strategy, not a universal distance law. In the protected multi-stage battery programme, the frozen 23-group primary was non-evaluable because one condition lacked all terminal endpoints; a disclosed outcome-guided diagnostic nominated continuous upstream source prediction after a 6.12% condition-RMSE gain over target-only and matched false-source controls, while the hard gate admitted only 4/22 groups. The integrated portfolio and continuous policy must be frozen on an outcome-unseen target before independent prospective acceleration or new science is claimed."
+}

@@ -1,0 +1,35 @@
+{
+  "analysis_status": "post-primary-outcome-universality-diagnostic",
+  "n_systems_major_families": 993,
+  "n_adsorbate_families": 16,
+  "n_dois": 462,
+  "pooled_vs_family_intercepts": {
+    "F": 10.256745986473467,
+    "df_num": 15,
+    "df_den": 976,
+    "p_classical": 4.078949671642927e-23,
+    "p_doi_wild_cluster": 0.0002
+  },
+  "common_vs_family_specific_slopes": {
+    "F": 4.5422870779101014,
+    "df_num": 15,
+    "df_den": 961,
+    "p_classical": 2.0449284236146037e-08,
+    "p_doi_wild_cluster": 0.625
+  },
+  "multilevel_decomposition": {
+    "pooled_slope_all_primary_systems": 0.23437063101217026,
+    "within_adsorbate_slope_major_families": 0.2996998487294391,
+    "within_adsorbate_r2": 0.6174638286871834,
+    "between_adsorbate_mean_slope": 0.1711234339480229,
+    "between_adsorbate_mean_r2": 0.8392577836729569
+  },
+  "leave_one_adsorbate_out": {
+    "pooled_r2": 0.6002485602373974,
+    "median_family_r2": 0.4150136496965643,
+    "families_with_negative_r2": 1,
+    "families_total": 16
+  },
+  "families_different_from_pooled_after_holm": 3,
+  "interpretation": "A strong pooled association is not a universal coefficient when DOI-clustered family intercept and slope heterogeneity are retained."
+}

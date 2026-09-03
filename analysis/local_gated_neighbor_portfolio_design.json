@@ -1,0 +1,78 @@
+{
+  "design_name": "Local-gated abstaining neighbor portfolio method development",
+  "design_version": 1,
+  "frozen_utc": "2026-07-18T01:49:08Z",
+  "status": "outcome-informed method-development design frozen after aggregate Caltech results but before candidate-level transfer-opportunity calculations",
+  "parent_caltech_design_sha256": "a3178927ccd050d8d4b94f8af9a9f5539bb926c321e46d601ee5d4d8594f4d7c",
+  "claim_guard": "Caltech candidate outcomes have already informed the method family. Results may demonstrate internal mechanics, candidate attribution, and ablation behavior on the observed target, but cannot establish independent transfer, prospective acceleration, or new science.",
+  "scientific_question": "Can useful neighbor rankings be preserved more effectively by borrowing only where the target is unfamiliar, the source is locally supported, and initial target labels agree with the source direction, while allowing every source to abstain?",
+  "campaign": {
+    "target": "Caltech experimental Li-ion conductivity database",
+    "candidate_scopes": [
+      "external_candidate",
+      "hard_ood_40pct"
+    ],
+    "initial_target_labels": 30,
+    "paired_initial_seeds": 100,
+    "budget": 40,
+    "primary_endpoint": "AUC of cumulative true-top-5-percent recovery through acquisition 20",
+    "secondary_endpoints": [
+      "top-5-percent recall at 20 and 40",
+      "first true-top-5-percent hit",
+      "regret at 20",
+      "unique true-top candidates contributed by each source"
+    ]
+  },
+  "transfer_opportunity": {
+    "source_global_qualification": "q_s=max(0,(Spearman(source prediction,target labels)-0.10)/0.90)*n/(n+20), using only the initial target labels; q_s=0 means source-level abstention",
+    "target_ood": "percentile rank of nearest-initial-label distance in the development-standardized composition space",
+    "source_support": "one minus the percentile rank of nearest-source-entity distance in source-standardized composition space",
+    "local_concordance": "positive part of Spearman correlation between source prediction and target outcome among the 12 nearest initial target labels, multiplied by 12/(12+12); nonpositive local correlation means candidate-level abstention",
+    "candidate_gate": "target OOD percentile >=0.50, source support percentile >=0.50, source qualification >0, and local concordance >0",
+    "source_candidate_score": "source prediction percentile * source qualification * target OOD percentile * source support percentile * local concordance inside the gate, otherwise zero",
+    "shuffled_source": "seed-specific permutation of the OBELiX prediction with OBELiX source-support geometry retained"
+  },
+  "portfolio": {
+    "independent_experts": [
+      "obelix_same_property",
+      "estm_transport_neighbor"
+    ],
+    "base_score": "sum of the positive source-candidate scores after converting each positive source score to a within-pool percentile while preserving exact zeros",
+    "diversity": "at each selection, add 0.25 times the percentile rank of nearest-selected-candidate composition distance to 0.75 times the base score rank",
+    "fallback": "when no candidate has positive neighbor score, choose sequential composition novelty relative to initial and already selected target entities",
+    "abstention": "a source contributes exactly zero outside its global or candidate-level gate",
+    "tie_break": "highest score, then highest composition novelty, then lexicographically smallest canonical composition"
+  },
+  "policies": [
+    "uniform_random",
+    "composition_novelty",
+    "static_neighbor_round_robin",
+    "static_neighbor_consensus",
+    "single_best_local_neighbor",
+    "global_gated_neighbor_portfolio",
+    "local_gated_no_source_support",
+    "local_gated_no_target_ood",
+    "local_gated_no_diversity",
+    "local_gated_neighbor_portfolio",
+    "local_gated_wrong_source_portfolio",
+    "local_gated_shuffled_obelix"
+  ],
+  "interpretation": {
+    "full_vs_static": "tests whether qualification and local opportunity improve over preserving unqualified static rankings",
+    "full_vs_global": "tests whether candidate-level concordance adds value beyond one global source weight",
+    "full_vs_no_support": "tests whether source familiarity is necessary",
+    "full_vs_no_ood": "tests whether targeting target-model unfamiliarity is necessary",
+    "full_vs_no_diversity": "tests whether composition diversity adds value beyond score ranking",
+    "wrong_and_shuffled": "tests whether the same algorithm suppresses unrelated or destroyed source information"
+  },
+  "candidate_attribution": {
+    "output": "one row per scope, candidate, and source with selection frequency and mean gate components across seeds",
+    "hypothesis_cards": "retrospective method-development cards for an OBELiX-dominant hit, an ESTM-dominant hit, a consensus hit, and a high-ranked false positive, each with an outcome-free composition-nearest control",
+    "new_science_guard": "cards demonstrate the reporting format only; a source-derived hypothesis must be written before target outcome access on the next target"
+  },
+  "uncertainty": {
+    "paired_bootstrap_replicates": 5000,
+    "unit": "initial-target-label seed conditional on the single observed Caltech database",
+    "dataset_level_warning": "seed intervals are not external-target uncertainty and cannot validate general transfer"
+  }
+}

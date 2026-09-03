@@ -1,0 +1,61 @@
+{
+  "analysis_status": "designated-before-first-target-outcome-model-run-after-descriptive-sample-and-correlation-audit-not-externally-preregistered",
+  "interpretation_scope": "within-campaign local-neighbor rescue; not independent-dataset replication",
+  "raw_rows": 5035,
+  "raw_experiment_ids": 504,
+  "independent_formulations": 108,
+  "outer_folds": 5,
+  "target_temperature_C": -30,
+  "primary_source_temperature_C": -20,
+  "target_budget_per_fold": 30,
+  "primary_source": "temperature_-20_C",
+  "relative_rmse_improvement": 0.1496659426283968,
+  "relative_rmse_ci": [
+    0.08554634328552989,
+    0.21003907722205267
+  ],
+  "pooled_base_r2": 0.738877609221734,
+  "pooled_augmented_r2": 0.8108173343128487,
+  "fold_effects": [
+    0.15620699737920854,
+    0.10497453908720765,
+    0.1802927905555715,
+    0.02132984064691583,
+    0.2580775366503062
+  ],
+  "target_equivalent_n": 47.816832200442676,
+  "target_sample_fraction_saved": 0.37260586660690026,
+  "primary_permutation_p": 0.001,
+  "permutation_observed_relative_mse_improvement": 0.3250863117204243,
+  "positive_learners_of_three": 3,
+  "source_oof_r2": 0.8584344466583936,
+  "source_feature_importance_mean": 0.7318466876039207,
+  "source_feature_rank_median": 1.0,
+  "temperature_distance_spearman_rho": -1.0,
+  "shuffled_source_effect": -0.029443263107323592,
+  "shuffled_source_ci": [
+    -0.042658813925972976,
+    -0.014755888924091895
+  ],
+  "test_formulations_seen_by_source_model": 0,
+  "arrhenius_or_eis_fit_features_used": false,
+  "quick_smoke_test": false,
+  "gates": {
+    "relative_rmse_at_least_5pct": true,
+    "hierarchical_bootstrap_ci_above_zero": true,
+    "positive_augmented_r2": true,
+    "positive_effect_in_all_five_formulation_folds": true,
+    "target_sample_fraction_saved_at_least_30pct": true,
+    "at_least_two_of_three_learners_positive": true,
+    "source_oof_r2_positive": true,
+    "zero_test_formulations_seen_by_source_model": true,
+    "primary_permutation_p_below_0_05": true,
+    "learning_curve_valid_for_equivalence": true,
+    "primary_exceeds_each_distant_temperature_control": true,
+    "effect_strictly_decreases_with_temperature_distance": true,
+    "shuffled_source_not_positive_at_95pct": true,
+    "shuffled_source_smaller_than_primary": true
+  },
+  "rescue_claim_supported": true,
+  "decision": "within-campaign-local-neighbor-rescue-gate-passed"
+}

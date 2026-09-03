@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "design_sha256": "1116aa24ac1ffcda9eb17ce413818758d32102f223cd3a16ee144159e903863c",
+  "metrics_rows": 130,
+  "prediction_rows": 11128,
+  "transfer_conditions": 9,
+  "target_only_budgets": 4,
+  "repeats": 1,
+  "learners": 2,
+  "outputs": {
+    "mpea_provenance_specificity_smoke_metrics.csv": "45247991f1955458e5842be9f19d65a393059bcf64419ed4726c7917d8766a00",
+    "mpea_provenance_specificity_smoke_predictions.csv.gz": "09702e0d2a2497cd6bc05438fe9795280d01fbd454f945f4c1f4ffe9e00da252",
+    "mpea_provenance_specificity_smoke_audit.json": "d4f01788aa20925bc749891c6a91f1e6d2678a6e6bd4d1c8fc4fd40b26a71645"
+  },
+  "claim_guard": "This is a review-triggered retrospective sensitivity and mechanism analysis. It may show source-specific transfer on this programme under stronger leakage boundaries; it cannot establish prospective discovery, universal transfer, or a causal strengthening mechanism."
+}

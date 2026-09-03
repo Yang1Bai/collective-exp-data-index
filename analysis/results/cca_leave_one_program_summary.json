@@ -1,0 +1,52 @@
+{
+  "status": "complete-method-development",
+  "claim_guard": "This benchmark may show whether a fixed meta-gate can recover useful decision structure without using the held-out target programme's outcomes. Because the gate family and features were motivated after inspecting the component studies, it is method development only. It cannot provide independent positive replication, prospective validation, or discovery acceleration.",
+  "design_sha256": "f1d24130a1ed3a8695a0fc2654bba4d45d427be45fc86ce527fc16ca8176d60d",
+  "input_sha256": {
+    "analysis/results/knowledge_map_synthesis_edges.csv": "c452629c8331dafe7eff8dca6e7b703bb2d34752eb10fa525f45eaafcab2a1e3",
+    "analysis/results/starrydata_reverse_metrics.csv": "41fc69de4a8907fdc8c692d3a175ba59ca5d5b91b5ec135853989f2128e10ec4",
+    "analysis/results/starrydata_reverse_source_quality.csv": "e76b9e60a18e938d20c86aeeb73a7a67d0f543156372afb950e76791719a3850",
+    "analysis/results/tri_oer_metrics.csv": "9cd07077efacd8774f1e94360bb629f621d67493d9ce2af21cb70ac9ecf1a779",
+    "analysis/results/tri_oer_source_quality.csv": "7aaf3daa438765127bc468415f1726b1ecd525daf33a95ed6fae0720d70a8ce1"
+  },
+  "edge_rows": 97,
+  "target_tasks": 20,
+  "programme_clusters": 13,
+  "features": [
+    "neighborhood_scaled",
+    "source_quality_clipped",
+    "credible_positive",
+    "strong_neighbor",
+    "same_domain",
+    "adjacent_condition",
+    "cross_dataset",
+    "distant_wrong",
+    "shuffled"
+  ],
+  "cca_meta": {
+    "policy": "cca_meta",
+    "programme_clusters": 13,
+    "target_tasks": 20,
+    "mean_programme_utility": 0.01581821833053184,
+    "bootstrap_ci_lo": -0.002255731479269069,
+    "bootstrap_ci_hi": 0.04266927951574219,
+    "programme_coverage": 0.8461538461538461,
+    "task_coverage": 0.85,
+    "admitted_tasks": 17,
+    "admitted_point_harm_rate": 0.5882352941176471,
+    "admitted_clear_harm_rate": 0.058823529411764705,
+    "clear_benefit_retained": 4,
+    "clear_benefit_available": 10,
+    "clear_benefit_retention_rate": 0.4,
+    "selected_positive_absolute_r2_rate_when_available": 0.23529411764705882
+  },
+  "coverage_guard_pass": true,
+  "primary_policy_superiority_pass": false,
+  "decision": "leave-one-program CCA meta-gate does not pass the frozen nontrivial superiority family",
+  "output_sha256": {
+    "analysis/results/cca_leave_one_program_edge_panel.csv": "8b93ccf080eac008a7c2731d46b27218012639c4a769a4f9a767301b32bda419",
+    "analysis/results/cca_leave_one_program_predictions.csv": "829997cdaf77e60188439ad791d6a76f018efcc6b5347012bc5407de4849a8d1",
+    "analysis/results/cca_leave_one_program_policy_summary.csv": "b833ce9c60f89fc3b61b26555692d79c9ee8a606333ddef3ac26c7c7c3efdb17",
+    "analysis/results/cca_leave_one_program_contrasts.csv": "fd86a7bb13213ef83ce1c6858b965e36e7bb8803cbddf30571fd3b0d49928efb"
+  }
+}

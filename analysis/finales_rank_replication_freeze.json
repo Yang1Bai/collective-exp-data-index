@@ -1,0 +1,26 @@
+{
+  "status": "frozen-before-row-level-outcome-download",
+  "frozen_local_date": "2026-07-30",
+  "design": {
+    "path": "analysis/finales_rank_replication_design.json",
+    "sha256": "74ac3f226f8add1e039595e0e28b60f1afda7bae18cfdb7e4ec045c5fcc4a8bf",
+    "bytes": 7956
+  },
+  "protocol": {
+    "path": "analysis/FINALES_RANK_REPLICATION_PROTOCOL.md",
+    "sha256": "55adae2a68e2d60524ecde74d6b4edea332f38eadcad06313b871f6fab759b0a",
+    "bytes": 5791
+  },
+  "donor": {
+    "path": "analysis/review_packages/edison/legacy_kosmos_2026-07-30/solventseg_validation/CALiSol23_LiPF6_EC_EMC_harmonized.csv",
+    "sha256": "56b17f0e067daa00a9ea79eb5c7810c498e6e0f4ca2f699623b1c483b2ad177c",
+    "rows": 410
+  },
+  "recipient_metadata": {
+    "data_doi": "10.24435/materialscloud:qt-1s",
+    "paper_doi": "10.1002/aenm.202403263",
+    "primary_archive_md5": "68e6797a70b121baa18380215d55638a",
+    "secondary_archive_md5": "bc7eb8d7b741f8bba859ff3d280719cd"
+  },
+  "outcome_access_at_freeze": "No FINALES server archive had been downloaded or opened locally. Only public record metadata and aggregate statements in the associated article had been inspected."
+}

@@ -1,0 +1,63 @@
+{
+  "artifact_hashes": {
+    "analysis/TRI_OER_CLEAN_REPLACEMENT_PROTOCOL.md": "6c6b55c497a4f39bb745c2187f39dfb8ec9de90c92fee555dc5f924fa22b3112",
+    "analysis/TRI_OER_PICKLE_SCHEMA_AMENDMENT.md": "9d6c17ee440623a371512e248f15ebfb3315f54d1555068691070d0f733fe4ea",
+    "analysis/outcome_unseen_neighbor_validation_program.json": "88162fd564fd80fce334335ab13cd295eadf8932bcfe678bb776496d0285d947",
+    "analysis/prepare_tri_oer_neighbor.py": "c0cf386a5a94dc5697195af62cb4f30a14e480a4c49593bf2583d0de7a0c8125",
+    "analysis/results/tri_oer_hypothesis_cards.csv": "aef47ffc7a51825a73cee6dba4415536f0566cb3bf573ba56cbeeb31b3eeb023",
+    "analysis/results/tri_oer_matched_source_controls.csv": "3e59f6e96e5e9d3ec175a4be90431f29aaf72f94326b500fb898d54e1cacbda9",
+    "analysis/results/tri_oer_policy_orders.csv": "8885322ae372fdd02f4be3b88154e56fe293fb9115f10931da015001195306f1",
+    "analysis/results/tri_oer_source_predictions.csv": "b4541d922d592d8fde18810ff031a0d7f5ac6bb872895795b0b3dd9f50084ab8",
+    "analysis/results/tri_oer_source_quality.csv": "7662ce1d0e5d48e4dacec978dfbcd42523e6fbd8652d661707017b23f537d276",
+    "analysis/results/tri_oer_target_metadata.csv": "78ae5c08a5109b01ca33502a03c7552e229859cba1d0b1e9793742f948c20776",
+    "analysis/run_tri_oer_neighbor.py": "5ace4ed56e9c119867deb66ff576cd3194d25aef4ae16910b936437b939b0c82",
+    "analysis/tri_oer_implementation.json": "d6e0cab2136a67d5d2c8432db9daf7c6d97c50c6068628ad4ba5ab8e200bed69",
+    "analysis/tri_oer_neighbor_design.json": "f05652dc1613240111bac3890deb02053bf2a56bd6a04924d6db6562aba084b0",
+    "analysis/verify_tri_oer_neighbor_results.py": "3cfcd37046fe7f1dc8e122ccf852a0ab81104a374a328f82859953eb047c1f44",
+    "analysis/verify_tri_oer_preoutcome.py": "6761bd003656ec2f51cda5481d3485c1cb2c1f5e8057d8b03e71045ab8f9900c"
+  },
+  "claim_guard": "Only composition buffers were decoded. Target fom buffers remain undecoded; later design changes are outcome-informed.",
+  "composition_clusters": 240,
+  "hypothesis_cards": 3,
+  "matched_control_rows": 8447,
+  "orr_source_sha256": "f9f74e75d1c6dafe359593b16c81e71cbb605546194da6d8016f5020c2b9c26e",
+  "plate_counts": {
+    "3496": 2112,
+    "3851": 2111,
+    "3860": 2112,
+    "4098": 2112
+  },
+  "policy_rows": 84470,
+  "schema_audit": {
+    "decoded_buffers": [
+      "3496:comp",
+      "3851:comp",
+      "3860:comp",
+      "4098:comp"
+    ],
+    "excluded_plate": "3875",
+    "pickle_keys": [
+      "3496",
+      "3851",
+      "3860",
+      "3875",
+      "4098"
+    ],
+    "retained_plates": [
+      "3496",
+      "3851",
+      "3860",
+      "4098"
+    ],
+    "undecoded_target_buffers": [
+      "3496:fom",
+      "3851:fom",
+      "3860:fom",
+      "4098:fom"
+    ]
+  },
+  "source_quality_rows": 5,
+  "status": "preoutcome-frozen",
+  "target_entities": 8447,
+  "target_sha256": "31bfd1fee2c56095844daad4aff0fdead298c4dcfb647c1b0b30f6ff2af8a5e1"
+}

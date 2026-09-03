@@ -1,0 +1,29 @@
+{
+  "status": "verified-complete",
+  "canonical_exports": [
+    "analysis\\figures\\knowledge_borrowing_overview_nmi_v2.pdf",
+    "analysis\\figures\\knowledge_borrowing_overview_nmi_v2.svg",
+    "analysis\\figures\\knowledge_borrowing_overview_nmi_v2.png",
+    "analysis\\figures\\knowledge_borrowing_overview_nmi_v2.tiff",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.pdf",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.svg",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.png",
+    "analysis\\figures\\figure2_failure_benchmark_nmi_v2.tiff",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.pdf",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.svg",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.png",
+    "analysis\\figures\\figure3_relation_transfer_nmi_v2.tiff",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.pdf",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.svg",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.png",
+    "analysis\\figures\\figure4_ordinal_screening_nmi_v2.tiff"
+  ],
+  "figure2_real_edges": 40,
+  "figure2_complete_passes": 0,
+  "figure3_external_raw_r2": 0.6294395421521868,
+  "figure3_external_spearman": 0.8708256451064949,
+  "figure4_five_anchor_source_spearman": 0.9102998261437779,
+  "figure4_best_fixed_recipient_spearman": 0.5366383640583346,
+  "figure4_delta_spearman": 0.37366146208544326,
+  "figure4_frozen_decision": "not-replicated"
+}

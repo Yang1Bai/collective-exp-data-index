@@ -1,0 +1,11 @@
+section,label,estimate,ci_low,ci_high,route,unit
+generic,complete OOD edges passed,0,,,reject,count_of_40
+prediction,controlled catalyst 1,16.3,9.2,22.9,predict,relative_RMSE_reduction_percent
+prediction,controlled catalyst 2,26.1,20.0,31.7,predict,relative_RMSE_reduction_percent
+prediction,external unseen-salt electrolyte,28.64,24.03,33.52,predict,relative_log_RMSE_reduction_percent
+prediction,ranking-only catalyst,3.2,-1.8,9.7,rank,relative_RMSE_reduction_percent
+prediction,harmful catalyst,-10.4,-17.2,-3.4,reject,relative_RMSE_reduction_percent
+screening,five-label recipient model,0.537,,,recipient_only,rank_score
+screening,neighboring-source score,0.910,,,rank,rank_score
+boundary,frozen donor score,0.694,,,reject,rank_score
+boundary,frozen recipient-only score,0.783,,,recipient_only,rank_score

@@ -1,0 +1,4 @@
+card_id,pairs,mean_paired_fom_difference,median_paired_fom_difference,randomization_p_one_sided,holm_p
+T1_same_oer_reference,172,-0.00378728488372093,-0.0028934999999999933,0.7649235076492351,1.0
+T2_adjacent_oxygen_electrocatalysis,172,-0.006235761627906981,0.0024185000000000456,0.893010698930107,1.0
+T3_electrocatalysis_consensus,172,-0.007373395348837215,-0.0010380000000000111,0.9056094390560944,1.0

@@ -1,0 +1,59 @@
+{
+  "coverage_scopes_reported": [
+    "coverage_matched_hard_ood|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched_hard_ood|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|caltech_adjacent_ionic_vs_ocx_wrong_catalysis",
+    "coverage_matched|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+    "coverage_matched|obelix_adjacent_ionic_vs_ocx_wrong_catalysis"
+  ],
+  "formal_amendment_sha256": "5053143dd46253849c690df0457a089ead126a1d79fe80315041f60483698b43",
+  "ionic_consensus_relative_rmse_gain": [
+    -0.02332339310060335,
+    -0.09260201859372658,
+    0.045955232392519876
+  ],
+  "ionic_minus_equal_capacity_random": [
+    0.008770005666124278,
+    -0.06246452404746003,
+    0.08000453537970859
+  ],
+  "ionic_minus_skill_matched_ocx": [
+    0.03199541927065995,
+    0.019351025700461155,
+    0.04463981284085875
+  ],
+  "original_preoutcome_sha256": "438d449b1970556e5b31fa2d517b85488c55fd955243bb3e8c2d0ae26218dadf",
+  "outcome_audit": {
+    "entities_without_outcome": 7,
+    "frozen_entities": 7403,
+    "nonfinite_selected_values": 0,
+    "out_of_range_selected_values": 7,
+    "outcome_entities": 7396,
+    "unequal_curve_lists": 0
+  },
+  "primary_scope": "n=30, ExtraTrees, composition, frozen OOD quartile 4",
+  "size_matched_adjacent_minus_wrong": {
+    "caltech_adjacent_ionic_minus_borg_wrong_mechanical": [
+      -0.05946863817171312,
+      -0.08444794629917066,
+      -0.034489330044255584
+    ],
+    "caltech_adjacent_ionic_minus_ocx_wrong_catalysis": [
+      0.04201936669934864,
+      0.040688755778289135,
+      0.043349977620408146
+    ],
+    "obelix_adjacent_ionic_minus_borg_wrong_mechanical": [
+      -0.09701990380356991,
+      -0.2180738450514404,
+      0.024034037444300584
+    ],
+    "obelix_adjacent_ionic_minus_ocx_wrong_catalysis": [
+      -0.05918645038089396,
+      -0.11444109333654386,
+      -0.003931807425244051
+    ]
+  },
+  "status": "smoke-nonclaim"
+}

@@ -1,0 +1,86 @@
+{
+  "protocol_name": "Outcome-unseen validation of CCA family-first neighborhood borrowing",
+  "version": 1,
+  "status": "protocol template; no target selected and no outcomes accessed",
+  "purpose": "Independently test whether credibility-gated, complementary, abstaining, family-first borrowing improves distinct-region OOD exploration.",
+  "target_selection": {
+    "allowed_metadata": [
+      "property definition",
+      "measurement conditions",
+      "candidate count",
+      "formula or structure identifiers",
+      "DOI or provenance groups",
+      "license and access status"
+    ],
+    "forbidden_before_freeze": [
+      "target outcome values",
+      "target-outcome correlations with any source prediction",
+      "policy hit rates or acquisition curves",
+      "manual inspection of high-outcome candidate identities"
+    ],
+    "minimum_target": "at least 100 candidate entities in at least 40 outcome-free components and at least 20 provenance groups",
+    "preferred_replication": "one physically adjacent expected-positive target and one distant or wrong-neighborhood target selected from metadata only"
+  },
+  "source_admission": {
+    "neighbor_count": "at least two physically nominated sources",
+    "required_controls": [
+      "at least one wrong-domain source",
+      "independent source-rank shuffle",
+      "uniform family-first",
+      "composition-novelty family-first"
+    ],
+    "leakage": "exclude exact target entities and target DOI/provenance groups from every source fit",
+    "credibility": "freeze grouped source quality, target-development incremental information, and abstention thresholds before candidate outcomes"
+  },
+  "fixed_policy": {
+    "source_representation": "within-pool ranks retained separately",
+    "fusion": "unweighted rank sum for consensus plus source-specific round-robin audit",
+    "family_first": "one first-pass representative per predeclared formula/provenance or composition-cluster component",
+    "ood": "scope, quota, or tie-breaker only; never a multiplicative reward",
+    "abstention": "zero allocation for a source that fails the frozen credibility threshold",
+    "fallback": "composition novelty and uniform allocation remain active safety channels"
+  },
+  "endpoints": {
+    "co_primary": [
+      "AUC of cumulative first recovery of distinct top-5-percent components through acquisition 20",
+      "acquisitions to first distinct top-5-percent component"
+    ],
+    "required_tradeoff": [
+      "entity top-5-percent recall at 20",
+      "component top-5-percent recall at 20",
+      "marginal distinct components contributed by each source"
+    ],
+    "sensitivities": [
+      "component value defined by maximum, median, and mean target outcome",
+      "top 5-percent and top 10-percent thresholds",
+      "composition-cluster definition fixed at two outcome-free resolutions"
+    ]
+  },
+  "inference": {
+    "unit": "independent target dataset, article block, or prospective campaign block; seed variation alone is insufficient",
+    "randomization": "independently shuffle every admitted source rank within the fixed candidate pool",
+    "multiplicity": "Holm correction over co-primary policy contrasts within each target",
+    "required_contrasts": [
+      "CCA versus uniform family-first",
+      "CCA versus composition-novelty family-first",
+      "CCA versus best admitted single source",
+      "CCA versus entity consensus",
+      "CCA versus wrong-source portfolio",
+      "CCA versus shuffled-source portfolio"
+    ]
+  },
+  "success_rule": {
+    "breadth": "positive practically meaningful distinct-component AUC20 gain over uniform, novelty, and the best single admitted source",
+    "specificity": "practical separation from wrong-source and shuffled-source portfolios",
+    "robustness": "same direction under at least two component-value definitions and no reversal on the second target or independent article/campaign block",
+    "science": "at least one source-specific hypothesis card written before target reveal and tested against a frozen matched control",
+    "failure": "retain a null or harmful result as an abstention edge in the borrowing map"
+  },
+  "audit_sentinels": [
+    "hash target metadata before outcome access",
+    "hash source predictions and all policy orders before outcome access",
+    "verify candidate-outcome permutation invariance",
+    "record excluded formula and DOI overlaps",
+    "archive code, environment, source data, and result hashes"
+  ]
+}

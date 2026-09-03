@@ -1,0 +1,440 @@
+{
+  "any_advanced_gate_passed": null,
+  "completed_datasets": [
+    "seccm"
+  ],
+  "datasets": {
+    "seccm": {
+      "dataset": {
+        "programs": {
+          "seccm_Au-rich": 322,
+          "seccm_Ir-rich": 322,
+          "seccm_Rh-rich": 322
+        },
+        "samples": 966,
+        "targets": {
+          "log10_k0": 966
+        },
+        "unique_groups": 3,
+        "with_curves": 966,
+        "with_surface_composition": 966,
+        "with_targets": 966,
+        "with_uncertainty": 966
+      },
+      "evidence_boundary": {
+        "independent_discovery_claim_allowed": false,
+        "reason": "The log10(k0) target is fitted from the input LSV"
+      },
+      "libraries": {
+        "Au-rich": {
+          "models": {
+            "crabnet_cross": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.5582964132783861,
+                  "r2": -79.6601735845053,
+                  "rmse": 0.586022874688946,
+                  "spearman": 0.3529366835594136
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 40,
+                  "checkpoint": "seccm_Au-rich/crabnet_cross_seed20260731.pt",
+                  "parameter_count": 279512,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.5582964132783861,
+                      "r2": -79.6601735845053,
+                      "rmse": 0.586022874688946,
+                      "spearman": 0.3529366835594136
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Ir-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.03334646360118339,
+                    "r2": 0.9550955634042162,
+                    "rmse": 0.04791955147841899,
+                    "spearman": 0.9734901779879294
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "crabnet_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.4322431628778198,
+                  "r2": -54.588558377353905,
+                  "rmse": 0.48649423476448805,
+                  "spearman": 0.1164618288556681
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 26,
+                  "checkpoint": "seccm_Au-rich/crabnet_perceiver_seed20260731.pt",
+                  "parameter_count": 346616,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.4322431628778198,
+                      "r2": -54.588558377353905,
+                      "rmse": 0.48649423476448805,
+                      "spearman": 0.1164618288556681
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Ir-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.03179549004973739,
+                    "r2": 0.9653793001688235,
+                    "rmse": 0.04207615437511736,
+                    "spearman": 0.9813400991811786
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "set_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.473015738693482,
+                  "r2": -56.63792028011233,
+                  "rmse": 0.4953807694219442,
+                  "spearman": 0.17237628814009834
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 75,
+                  "checkpoint": "seccm_Au-rich/set_perceiver_seed20260731.pt",
+                  "parameter_count": 367158,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.473015738693482,
+                      "r2": -56.63792028011233,
+                      "rmse": 0.4953807694219442,
+                      "spearman": 0.17237628814009834
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Ir-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.02754026644704683,
+                    "r2": 0.9725237747577458,
+                    "rmse": 0.03748406243043538,
+                    "spearman": 0.9834467381693769
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "tabpfn_v2": {
+              "manifest": {
+                "curve_components": 24,
+                "model_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+                "model_version": "v2",
+                "package": "tabpfn",
+                "package_version": "8.1.0"
+              },
+              "targets": {
+                "target": {
+                  "mae": 0.7750066268270345,
+                  "r2": -165.45433704037126,
+                  "rmse": 0.8418458010038466,
+                  "spearman": -0.07605725837887499
+                }
+              }
+            }
+          }
+        },
+        "Ir-rich": {
+          "models": {
+            "crabnet_cross": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.1613483167681107,
+                  "r2": -2.363876530489931,
+                  "rmse": 0.19771872405945307,
+                  "spearman": -0.49840995873530675
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 14,
+                  "checkpoint": "seccm_Ir-rich/crabnet_cross_seed20260731.pt",
+                  "parameter_count": 279512,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.1613483167681107,
+                      "r2": -2.363876530489931,
+                      "rmse": 0.19771872405945307,
+                      "spearman": -0.49840995873530675
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.033357888131204015,
+                    "r2": 0.9800593642746238,
+                    "rmse": 0.0437840760020791,
+                    "spearman": 0.9531695690616232
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "crabnet_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.19914822310224758,
+                  "r2": -5.551432586463339,
+                  "rmse": 0.2759280895422868,
+                  "spearman": -0.4893270895047213
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 22,
+                  "checkpoint": "seccm_Ir-rich/crabnet_perceiver_seed20260731.pt",
+                  "parameter_count": 346616,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.19914822310224758,
+                      "r2": -5.551432586463339,
+                      "rmse": 0.2759280895422868,
+                      "spearman": -0.4893270895047213
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.03138110329838424,
+                    "r2": 0.9793553465872864,
+                    "rmse": 0.04455028505038071,
+                    "spearman": 0.9587821473878445
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "set_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.34964737805051616,
+                  "r2": -15.062799660401943,
+                  "rmse": 0.43205436499070216,
+                  "spearman": -0.22111934232406796
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 94,
+                  "checkpoint": "seccm_Ir-rich/set_perceiver_seed20260731.pt",
+                  "parameter_count": 367158,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.34964737805051616,
+                      "r2": -15.062799660401943,
+                      "rmse": 0.43205436499070216,
+                      "spearman": -0.22111934232406796
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Rh-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.030946002038084883,
+                    "r2": 0.9829509987141305,
+                    "rmse": 0.04048518804419077,
+                    "spearman": 0.9480798062507209
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "tabpfn_v2": {
+              "manifest": {
+                "curve_components": 24,
+                "model_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+                "model_version": "v2",
+                "package": "tabpfn",
+                "package_version": "8.1.0"
+              },
+              "targets": {
+                "target": {
+                  "mae": 0.36524930028501623,
+                  "r2": -14.999990355993928,
+                  "rmse": 0.43120882079117606,
+                  "spearman": 0.16417007573790224
+                }
+              }
+            }
+          }
+        },
+        "Rh-rich": {
+          "models": {
+            "crabnet_cross": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.49597202959593334,
+                  "r2": -4.625466771829097,
+                  "rmse": 0.5539700439270989,
+                  "spearman": -0.30598001085846777
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "seccm_Rh-rich/crabnet_cross_seed20260731.pt",
+                  "parameter_count": 279512,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.49597202959593334,
+                      "r2": -4.625466771829097,
+                      "rmse": 0.5539700439270989,
+                      "spearman": -0.30598001085846777
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Ir-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.03264027177521195,
+                    "r2": 0.9074691577900117,
+                    "rmse": 0.04771577412325214,
+                    "spearman": 0.9396840041517703
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "crabnet_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.4674324278224872,
+                  "r2": -4.235828187279082,
+                  "rmse": 0.5344409069264668,
+                  "spearman": -0.5097892447254571
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 16,
+                  "checkpoint": "seccm_Rh-rich/crabnet_perceiver_seed20260731.pt",
+                  "parameter_count": 346616,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.4674324278224872,
+                      "r2": -4.235828187279082,
+                      "rmse": 0.5344409069264668,
+                      "spearman": -0.5097892447254571
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Ir-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.03330784596285623,
+                    "r2": 0.9017602079538813,
+                    "rmse": 0.04916572342324021,
+                    "spearman": 0.9435820551262831
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "set_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 0.5015247479539435,
+                  "r2": -4.6689874388657,
+                  "rmse": 0.5561087727666946,
+                  "spearman": -0.681073036584338
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 63,
+                  "checkpoint": "seccm_Rh-rich/set_perceiver_seed20260731.pt",
+                  "parameter_count": 367158,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 0.5015247479539435,
+                      "r2": -4.6689874388657,
+                      "rmse": 0.5561087727666946,
+                      "spearman": -0.681073036584338
+                    }
+                  },
+                  "validation_group_overlap": [
+                    "Au-rich",
+                    "Ir-rich"
+                  ],
+                  "validation_metrics": {
+                    "mae": 0.02465578222714074,
+                    "r2": 0.954235464421087,
+                    "rmse": 0.03355700914296521,
+                    "spearman": 0.9468804059508709
+                  },
+                  "validation_split": "row-held-out-insufficient-source-groups"
+                }
+              ]
+            },
+            "tabpfn_v2": {
+              "manifest": {
+                "curve_components": 24,
+                "model_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+                "model_version": "v2",
+                "package": "tabpfn",
+                "package_version": "8.1.0"
+              },
+              "targets": {
+                "target": {
+                  "mae": 0.5148261108564249,
+                  "r2": -5.108760682797365,
+                  "rmse": 0.5772760696310737,
+                  "spearman": -0.35068807137474645
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "design_path": "analysis/catalyst_attention_advanced_design.json",
+  "design_sha256": "2c18dff3b11a21b9c7ea81c9d05018ef073a87edb5c009b43e26a9e61a823ad7",
+  "evidence_boundary": "Post-outcome architecture development on previously inspected programmes. Results may select an architecture for a future blind programme but cannot confirm prospective catalyst discovery.",
+  "missing_datasets": [
+    "ocx24",
+    "specgen"
+  ],
+  "requested_datasets": [
+    "seccm"
+  ],
+  "selection": {},
+  "status": "partial"
+}

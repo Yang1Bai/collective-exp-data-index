@@ -1,0 +1,81 @@
+target,edge_label,criterion,pass
+te_zt,Seebeck → $ZT$,Gain ≥5%,0
+te_zt,Seebeck → $ZT$,OOD CI >0,0
+te_zt,Seebeck → $ZT$,OOD $R^2$ >0,0
+te_zt,Seebeck → $ZT$,≥80% repeats,0
+te_zt,Seebeck → $ZT$,OOD>ID CI >0,0
+te_zt,Seebeck → $ZT$,> wrong,0
+te_zt,Seebeck → $ZT$,> shuffle,0
+te_zt,Seebeck → $ZT$,≥2/3 learners,1
+te_zt,Seebeck → $ZT$,Holm $P$<0.05,0
+te_zt,Seebeck → $ZT$,No overlap,1
+alloy_ys,UTS → yield strength,Gain ≥5%,1
+alloy_ys,UTS → yield strength,OOD CI >0,1
+alloy_ys,UTS → yield strength,OOD $R^2$ >0,0
+alloy_ys,UTS → yield strength,≥80% repeats,1
+alloy_ys,UTS → yield strength,OOD>ID CI >0,0
+alloy_ys,UTS → yield strength,> wrong,1
+alloy_ys,UTS → yield strength,> shuffle,1
+alloy_ys,UTS → yield strength,≥2/3 learners,1
+alloy_ys,UTS → yield strength,Holm $P$<0.05,1
+alloy_ys,UTS → yield strength,No overlap,1
+catalysis_h2,Voltage → H$_2$ selectivity,Gain ≥5%,0
+catalysis_h2,Voltage → H$_2$ selectivity,OOD CI >0,0
+catalysis_h2,Voltage → H$_2$ selectivity,OOD $R^2$ >0,0
+catalysis_h2,Voltage → H$_2$ selectivity,≥80% repeats,0
+catalysis_h2,Voltage → H$_2$ selectivity,OOD>ID CI >0,0
+catalysis_h2,Voltage → H$_2$ selectivity,> wrong,0
+catalysis_h2,Voltage → H$_2$ selectivity,> shuffle,0
+catalysis_h2,Voltage → H$_2$ selectivity,≥2/3 learners,0
+catalysis_h2,Voltage → H$_2$ selectivity,Holm $P$<0.05,0
+catalysis_h2,Voltage → H$_2$ selectivity,No overlap,1
+polymer_tensile,Young's modulus → tensile strength,Gain ≥5%,0
+polymer_tensile,Young's modulus → tensile strength,OOD CI >0,0
+polymer_tensile,Young's modulus → tensile strength,OOD $R^2$ >0,0
+polymer_tensile,Young's modulus → tensile strength,≥80% repeats,0
+polymer_tensile,Young's modulus → tensile strength,OOD>ID CI >0,0
+polymer_tensile,Young's modulus → tensile strength,> wrong,1
+polymer_tensile,Young's modulus → tensile strength,> shuffle,0
+polymer_tensile,Young's modulus → tensile strength,≥2/3 learners,0
+polymer_tensile,Young's modulus → tensile strength,Holm $P$<0.05,0
+polymer_tensile,Young's modulus → tensile strength,No overlap,1
+polymer_tm,Crystallization $T$ → melting $T$,Gain ≥5%,0
+polymer_tm,Crystallization $T$ → melting $T$,OOD CI >0,0
+polymer_tm,Crystallization $T$ → melting $T$,OOD $R^2$ >0,0
+polymer_tm,Crystallization $T$ → melting $T$,≥80% repeats,0
+polymer_tm,Crystallization $T$ → melting $T$,OOD>ID CI >0,0
+polymer_tm,Crystallization $T$ → melting $T$,> wrong,1
+polymer_tm,Crystallization $T$ → melting $T$,> shuffle,0
+polymer_tm,Crystallization $T$ → melting $T$,≥2/3 learners,0
+polymer_tm,Crystallization $T$ → melting $T$,Holm $P$<0.05,0
+polymer_tm,Crystallization $T$ → melting $T$,No overlap,1
+electrolyte_conductivity,Electronic → ionic conductivity,Gain ≥5%,0
+electrolyte_conductivity,Electronic → ionic conductivity,OOD CI >0,0
+electrolyte_conductivity,Electronic → ionic conductivity,OOD $R^2$ >0,0
+electrolyte_conductivity,Electronic → ionic conductivity,≥80% repeats,0
+electrolyte_conductivity,Electronic → ionic conductivity,OOD>ID CI >0,0
+electrolyte_conductivity,Electronic → ionic conductivity,> wrong,0
+electrolyte_conductivity,Electronic → ionic conductivity,> shuffle,0
+electrolyte_conductivity,Electronic → ionic conductivity,≥2/3 learners,1
+electrolyte_conductivity,Electronic → ionic conductivity,Holm $P$<0.05,0
+electrolyte_conductivity,Electronic → ionic conductivity,No overlap,1
+solubility,Hydration → solubility,Gain ≥5%,0
+solubility,Hydration → solubility,OOD CI >0,0
+solubility,Hydration → solubility,OOD $R^2$ >0,0
+solubility,Hydration → solubility,≥80% repeats,0
+solubility,Hydration → solubility,OOD>ID CI >0,0
+solubility,Hydration → solubility,> wrong,0
+solubility,Hydration → solubility,> shuffle,0
+solubility,Hydration → solubility,≥2/3 learners,1
+solubility,Hydration → solubility,Holm $P$<0.05,1
+solubility,Hydration → solubility,No overlap,1
+hydration,Solubility → hydration,Gain ≥5%,0
+hydration,Solubility → hydration,OOD CI >0,0
+hydration,Solubility → hydration,OOD $R^2$ >0,0
+hydration,Solubility → hydration,≥80% repeats,0
+hydration,Solubility → hydration,OOD>ID CI >0,0
+hydration,Solubility → hydration,> wrong,0
+hydration,Solubility → hydration,> shuffle,0
+hydration,Solubility → hydration,≥2/3 learners,0
+hydration,Solubility → hydration,Holm $P$<0.05,0
+hydration,Solubility → hydration,No overlap,1

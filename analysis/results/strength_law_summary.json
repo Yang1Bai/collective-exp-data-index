@@ -1,0 +1,49 @@
+{
+  "analysis_status": "post-external-confirmation-diagnostic",
+  "canonical_composition_overlap": 0,
+  "fits": {
+    "borg": {
+      "n_rows": 495,
+      "n_compositions": 208,
+      "slope": 1.0343042624275463,
+      "intercept": -0.27339184867117844,
+      "r2": 0.7898869696923729,
+      "rmse_log10": 0.14693040070960625,
+      "median_uts_ys_ratio": 1.3617021276595744
+    },
+    "birdshot": {
+      "n_rows": 171,
+      "n_compositions": 151,
+      "slope": 0.34628843936607484,
+      "intercept": 1.5143212701706215,
+      "r2": 0.06703546705476704,
+      "rmse_log10": 0.14444324065258207,
+      "median_uts_ys_ratio": 2.721557648256554
+    }
+  },
+  "borg_to_birdshot": {
+    "external_r2": -3.0061494752293303,
+    "external_rmse_log10": 0.29931482720856684,
+    "external_mean_error_log10": 0.2506148249427559
+  },
+  "reference_log10_uts": 2.9958544245414127,
+  "cluster_bootstrap_95": {
+    "slope_difference_borg_minus_birdshot": [
+      0.5076401100984568,
+      0.8554404606596784
+    ],
+    "predicted_log_ys_difference_at_reference": [
+      0.24075005247913683,
+      0.30630011846038074
+    ],
+    "median_ratio_difference_borg_minus_birdshot": [
+      -1.8360079904060715,
+      -0.8733440158901693
+    ],
+    "external_r2": [
+      -4.15407006284548,
+      -2.1852460197479875
+    ]
+  },
+  "interpretation": "The Borg direct linear calibration is strong in its source dataset but does not transport to BIRDSHOT. This rejects an unconditional shared calibration, not all conditional strength relations."
+}

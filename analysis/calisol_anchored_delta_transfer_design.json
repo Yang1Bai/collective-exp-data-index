@@ -1,0 +1,146 @@
+{
+  "design_version": "2026-07-29a",
+  "experiment_id": "E6_calisol_provenance_anchored_delta_transfer",
+  "status": "post-outcome-motivated-mechanism-reanalysis-locked-before-E6-predictions",
+  "scientific_question": "Can a neighboring-temperature response relation, learned only from within-article contrasts, be transported across experimental articles after one to three target-article anchor measurements restore the absolute conductivity scale?",
+  "historical_context": {
+    "prior_edge": "CALiSol minus_30_C donor feature injected into a minus_40_C target model",
+    "prior_relative_rmse_gain": 0.01609237310838386,
+    "prior_ci95": [
+      -0.0213954581637092,
+      0.04210534111357568
+    ],
+    "prior_decision": "cross-article-borrowing-unresolved",
+    "use_in_E6": "context_only_not_a_same-estimand_comparator"
+  },
+  "data": {
+    "dataset": "CALiSol-23",
+    "record_doi": "10.11583/DTU.24559960.v1",
+    "raw_sha256": "850ff20eaad7abfe86fdd455b9cbf661e1b393dbdf9bb33e47769e00c2f5f617",
+    "upstream_design": "analysis/calisol_external_borrowing_design.json",
+    "target_temperature_C": -40,
+    "primary_donor_temperature_C": -30,
+    "wrong_condition_temperature_C": 20,
+    "target_transform": "log10_mS_per_cm",
+    "feature_contract": "the same 56 outcome-independent formulation features frozen for the original CALiSol analysis"
+  },
+  "deployment_contract": {
+    "ood_axis": "previously unseen source article DOI",
+    "adaptation": "few-shot target-article calibration",
+    "anchor_budgets": [
+      1,
+      2,
+      3
+    ],
+    "primary_anchor_budget": 1,
+    "common_scope_minimum_target_units_per_article": 8,
+    "common_scope_expected_articles": 11,
+    "common_scope_expected_target_units": 883,
+    "test_rows": "all non-anchor target formulations in the held-out article",
+    "anchor_outcomes_scored_as_test": false
+  },
+  "split_and_leakage": {
+    "outer_split": "leave_one_complete_target_article_out",
+    "source_exclusions": [
+      "held-out target article DOI",
+      "every exact held-out target chemistry identity"
+    ],
+    "preprocessing_fit": "source-training rows only within each outer split",
+    "article_doi_as_predictor": false,
+    "target_candidate_features_may_select_anchors": true,
+    "target_candidate_outcomes_may_select_anchors": false,
+    "target_nonanchor_outcomes_accessible_before_prediction": false
+  },
+  "anchor_selection": {
+    "primary": "deterministic_feature_medoid_then_farthest_point_traversal",
+    "distance": "euclidean_distance_after_source-training-only_standardization",
+    "first_anchor": "target candidate minimizing mean squared distance to all candidates in the held-out article",
+    "additional_anchors": "candidate maximizing its minimum distance to already selected anchors",
+    "tie_break": "lexicographically_smallest_unit_key",
+    "aggregation_across_anchors": "unweighted_mean_of_anchor-based_predictions",
+    "sensitivity": "100 outcome-independent random anchor selections per budget"
+  },
+  "models": {
+    "primary": {
+      "id": "neighbor_delta_ridge",
+      "training_data": "minus_30_C source rows from non-held-out articles",
+      "transfer_object": "within-source-article centered formulation-to-log-conductivity response",
+      "estimator": "Ridge_alpha_10_fit_without_intercept",
+      "article_weighting": "each source article has equal total fitting weight",
+      "prediction": "y_anchor_plus_predicted_change_from_anchor_to_candidate"
+    },
+    "same_contract_comparators": [
+      {
+        "id": "neighbor_absolute_ridge",
+        "description": "ordinary absolute minus_30_C model with its intercept recalibrated from the same target anchors"
+      },
+      {
+        "id": "anchor_constant",
+        "description": "mean target-anchor outcome assigned to every non-anchor candidate"
+      }
+    ],
+    "falsifiers_and_diagnostics": [
+      {
+        "id": "shuffled_neighbor_delta",
+        "description": "minus_30_C outcomes permuted within source article before the contrast model is fitted",
+        "permutations": 199
+      },
+      {
+        "id": "wrong_condition_delta",
+        "description": "the identical contrast method trained at plus_20_C"
+      },
+      {
+        "id": "same_condition_delta_ceiling",
+        "description": "the identical contrast method trained on minus_40_C rows from other articles; diagnostic ceiling, not evidence of neighboring-condition borrowing"
+      }
+    ],
+    "ridge_alpha_sensitivities": [
+      1.0,
+      100.0
+    ]
+  },
+  "primary_estimand": {
+    "scope": "the same 11 held-out articles with at least eight eligible target formulations",
+    "anchor_budget": 1,
+    "independent_unit": "source_article_DOI",
+    "article_metric": "RMSE over non-anchor formulations",
+    "portfolio_metric": "unweighted_mean_of_article_RMSE",
+    "contrast": "one_minus_macro_RMSE_neighbor_delta_ridge_divided_by_macro_RMSE_neighbor_absolute_ridge",
+    "reason": "isolates the value of changing the transferred object from absolute values to within-provenance response relations while holding donor, features, held-out articles and anchor information fixed"
+  },
+  "inference": {
+    "article_cluster_bootstrap_replicates": 10000,
+    "bootstrap_seed": 2026072906,
+    "paired_exact_sign_flip_unit": "article_RMSE_difference",
+    "primary_comparisons": 1,
+    "secondary_results": "descriptive unless explicitly multiplicity-corrected",
+    "random_anchor_repetitions": 100,
+    "shuffled_delta_permutations": 199
+  },
+  "success_gate": {
+    "minimum_relative_macro_rmse_gain_vs_absolute_neighbor": 0.05,
+    "article_bootstrap_ci_lower_bound_above_zero": true,
+    "exact_one_sided_sign_flip_p_at_most": 0.05,
+    "minimum_positive_articles_of_11": 8,
+    "pooled_nonanchor_r2_above_zero": true,
+    "minimum_relative_macro_rmse_gain_vs_anchor_constant": 0.05,
+    "minimum_gain_advantage_over_median_shuffled_delta": 0.03,
+    "shuffled_delta_permutation_p_at_most": 0.05,
+    "zero_heldout_article_or_exact_chemistry_leakage": true,
+    "all_required_gates_must_pass": true
+  },
+  "interpretation_policy": {
+    "positive": "supports a reusable, few-shot neighboring-condition borrowing contract in which within-provenance response relations transport after target-provenance anchoring",
+    "null": "article offsets are not the only barrier, or the adjacent-temperature response relation is not stable enough to transport",
+    "negative": "even the within-article response relation changes across provenance; abstention is required at this rung",
+    "allowed_claim": "post-outcome-motivated mechanistic rescue on one literature-aggregated electrolyte programme",
+    "forbidden_claims": [
+      "preregistered confirmation",
+      "outcome-blind independent replication",
+      "universal cross-domain transfer",
+      "zero-shot OOD prediction",
+      "prospective laboratory discovery",
+      "exact reproduction of MatEx or Bilinear Transduction"
+    ]
+  }
+}

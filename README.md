@@ -1,241 +1,230 @@
 # Collective Experimental Data Index
 
-A community catalog of **published, openly available experimental datasets** in
-materials science and chemistry — pointing to the data at its original home,
-with a short description, license, and DOI for each.
+**Experimental-data infrastructure and a falsification-gated method for borrowing knowledge across neighbouring scientific programmes.**
 
-The goal is simple: make it easy to *find and reuse* the datasets that are
-scattered across supporting information, data repositories, and lab websites,
-so researchers (and self-driving labs) don't rebuild the same corpus twice.
+[![Catalog](https://img.shields.io/badge/catalog-288%20resources-2F6B8A)](CATALOG.md)
+[![Analysed resources](https://img.shields.io/badge/analysed%20or%20audited-32%20resources-2A9D8F)](research/data/ANALYSED_RESOURCE_LEDGER.csv)
+[![Transfer attempts](https://img.shields.io/badge/transfer%20attempts-27-DB7C26)](research/evidence/ATTEMPT_LEDGER.csv)
+[![Target journal](https://img.shields.io/badge/target-Digital%20Discovery-6C5B7B)](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
 
-> **Status: private-first ("dead" repo).** This starts as a private working
-> repository. Once the catalog is mature and the metadata has been reviewed, it
-> can be opened to the community. Nothing here needs to stay closed for legal
-> reasons — see *What this is / isn't* below — it's private only so it can grow
-> without half-finished entries being mistaken for vetted ones.
+![Falsification-gated knowledge borrowing workflow](analysis/figures/knowledge_borrowing_overview_ai_v4.png)
 
-## What this is / isn't
+## The project in one sentence
 
-**This is a metadata index, not a data mirror.** For each database we record
-*where it lives, what's in it, and how to cite it* — the name, a description,
-domain tags, the DOI, the license, and a link. We do **not** re-host the
-underlying files.
+Neighbouring experimental programmes can improve selected out-of-distribution
+(OOD) predictions and candidate rankings when the shared relation,
+experimental state, transferable object, leakage boundary, and decision
+endpoint are matched; otherwise the method should abstain.
 
-**Why not just scrape the SI PDFs from Nature / ACS / RSC / Wiley / Science?**
-Because that path is both fragile and against those publishers' terms of use.
-Even when a supporting-information file is free to *read*, the publisher's
-terms typically prohibit bulk/automated downloading, and their sites actively
-block crawlers (rate limits, CAPTCHAs, IP bans). The SI files themselves remain
-under copyright. So bulk scraping is legally risky, technically brittle, and
-would get an institutional IP blocked.
+## Why this project exists
 
-**The better path — and the one this project takes — is to index datasets
-through the channels that explicitly allow programmatic access:**
+Scientific exploration is most valuable outside the region that has already
+been measured, but this is also where a data-poor model has the weakest
+empirical support. Experimental databases from nearby fields may contain
+useful information about common compositions, transport processes, structural
+motifs, processing histories, or measurement conditions. Simply pooling these
+databases, however, can import provenance effects, fitted-parameter artefacts,
+or negative transfer instead of knowledge.
 
-- **Data repositories** where authors deposit datasets under open licenses
-  (Zenodo, Figshare, Dryad, Materials Cloud, NOMAD, NIST) — these have proper
-  APIs and clear licenses (often CC-BY / CC0).
-- **Open scholarly metadata** (DataCite, Crossref, OpenAlex) to *discover*
-  which papers have associated datasets and where they are.
-- **Established domain databases** (Materials Project, OQMD, PubChem, ChEMBL,
-  Open Reaction Database, …) that publish their own bulk-download endpoints.
+This repository addresses both sides of that problem. It provides a curated
+index of experimental materials and chemistry databases, and it tests a
+directed **knowledge-borrowing contract**. Rather than moving an entire donor
+database or a generic pretrained model into a sparse recipient task, the
+contract transfers a qualified relation or candidate ordering, tests it
+against matched falsifiers, and routes it to numerical prediction, candidate
+screening, or rejection.
 
-The real, reusable experimental data almost always lives in one of these — not
-locked inside a publisher's SI PDF. Indexing them is legal, sustainable, and
-far more complete.
+## What the study shows
 
-If, for a specific dataset, the *only* copy is inside a publisher's SI, the
-right move is to link to the article's DOI and note the location — not to
-scrape it.
+The paper is built around four claim-bearing results:
 
-## What's in the seed catalog
+1. **Generic transfer is not enough.** Cross-fitted donor predictions repaired
+   0 of 40 declared OOD edges across eight recipients under the complete
+   prediction gate.
+2. **A qualified relation can cross database and chemistry identity.** A
+   component-order-invariant electrolyte relation learned from 10,407
+   measurements across 22 salts predicted an external unseen-salt programme
+   with raw R² = 0.607, Spearman ρ = 0.864, and 27.41% lower log-RMSE than a
+   temperature–concentration baseline.
+3. **Borrowed order can improve data-poor screening even when absolute
+   calibration is not portable.** Under the prespecified five-anchor
+   comparison, an equal-programme percentile-rank consensus ranked held-out
+   SolventSeg formulations at mean ρ = 0.885, compared with 0.162 for the
+   prespecified recipient-only Ridge model (Δρ = 0.723; 95% interval
+   0.329–1.349). In a separate 13-model recipient-only stress test, the source
+   numerical portfolio also remained ahead of the strongest tested recipient
+   model (0.910 versus 0.537). The first comparison is the formal routing
+   result; the second is a baseline-sensitivity analysis.
+4. **Failure and abstention are part of the map.** In the second recipient,
+   FINALES, the unchanged donor ordering reached concordance 0.694 versus 0.783
+   for the strongest same-anchor recipient model (difference −0.089; 95%
+   interval −0.293 to 0.096; permutation P = 0.131). The frozen route is
+   therefore WITHHOLD: evidence is insufficient for transfer, while the
+   interval crossing zero does not prove harmful transfer.
 
-The catalog holds **233 curated databases** across materials
-science and chemistry — with particular depth in high-throughput
-experimentation, self-driving-lab campaign datasets, and a July 2026
-TDM harvest of 115 open datasets from Zenodo and figshare spanning
-batteries, photovoltaics, spectroscopy, geophysics, bioactivity, alloys,
-magnetic materials, and more — each confirmed against its live landing
-page. Browse it three ways:
+These are retrospective experimental-data tests. They support selective OOD
+prediction and screening, not a universal transfer model, a unified physical
+law, or prospective laboratory discovery acceleration.
 
-- **[`CATALOG.md`](CATALOG.md)** — human-readable, grouped by domain and topic
-  (start here).
-- **[`catalog/catalog.csv`](catalog/catalog.csv)** — flat table for Excel /
-  pandas.
-- **[`catalog/catalog.json`](catalog/catalog.json)** — the machine-readable
-  source of truth.
+## How knowledge borrowing works
 
-Coverage includes the **July 2026 TDM harvest** (115 open datasets from
-Zenodo and figshare, covering batteries, photovoltaics, spectroscopy,
-geophysics, bioactivity, alloys, magnetic materials, mechanical properties,
-porous materials, polymers, and catalysis), as well as general
-materials-property databases (Materials Project,
-OQMD, AFLOW, NOMAD, JARVIS, Materials Cloud), crystallography (COD, AMCSD),
-catalysis (Open Catalyst OC20/OC22, Catalysis-Hub), batteries (BatteryArchive,
-TRI fast-charging, NASA PCoE, CALCE, Oxford), photovoltaics (The Perovskite
-Database, NREL PVDAQ, Emerging-PV), superconductors (SuperCon), thermoelectrics
-(ESTM, Starrydata2), 2D materials (C2DB, 2DMatpedia), polymers (PoLyInfo,
-Khazana), MOFs & porous materials (CoRE MOF, QMOF, MOFX-DB, CURATED COFs),
-glasses (SciGlass), alloys (NIMS MatNavi, MPEA), experimental spectra (RRUFF,
-NIST XPS, MAGNDATA), reaction data (Open Reaction Database, USPTO,
-Buchwald–Hartwig & Suzuki HTE sets, AstraZeneca ELN), molecular properties
-(ESOL, FreeSolv, AqSolDB, BigSolDB, CALiSol-23, Photoswitch, IUPAC pKa),
-optical properties (Deep4Chem, ChemFluor), kinetics & thermochemistry (NIST
-SRD 17, ATcT, ILThermo), bioactivity (PubChem, ChEMBL, BindingDB, Tox21),
-spectroscopy (NIST WebBook, nmrshiftdb2, SDBS, MassBank), self-driving-lab
-benchmarks & lab automation (Olympus, Summit, Atlas, mobile robotic chemist,
-Chemputer/XDL), data infrastructure (MDF, Foundry-ML, PARADIM), and ML
-benchmark suites (Matbench, MoleculeNet, TDC, OGB).
+| Stage | Question | Required evidence | Possible outcome |
+|---|---|---|---|
+| **1. Qualify** | Are the donor and recipient neighbours for this task? | Shared candidate representation, relevant experimental state, and a falsifiable physical or experimental relation | Eligible or reject |
+| **2. Transfer** | What exactly crosses the boundary? | A relation, response function, correction, or ordinal score; not automatically the raw database or model weights | Declared transferable object |
+| **3. Falsify** | Is the signal more than leakage, weak baselines, or generic regularization? | Grouped OOD splits, identity and provenance exclusions, strong recipient-only baselines, shuffled donors, and matched wrong donors | Supported, null, or harmful |
+| **4. Route** | What decision can the signal support? | Endpoint-specific utility and absolute-performance gates | Predict, rank, or abstain |
 
-### Experimental-only policy
+The method is directional: a resource may be a donor for one endpoint, a
+recipient for another, and ineligible for a third. “Neighbouring” is therefore
+a property of a declared donor–recipient relation, not a permanent label
+attached to a database.
 
-This is an index of **measured, experimental data**. Purely computational
-databases (pure DFT/MD/simulation, e.g. Materials Project, OQMD, QM9) are
-**excluded from the catalog by policy** at build time; they are archived in
-`catalog/excluded_computational.json` for transparency and can be reinstated
-by removing the filter in `scripts/build_seed.py`. Entries tagged `mixed`
-remain because they contain measured data alongside computed parts (the
-description states which). `CATALOG.md` marks each entry with 🧪 / 🔀.
+## Data scope: three layers that should not be confused
 
-## Repository layout
+| Layer | Current scope | What it means |
+|---|---:|---|
+| **Discovery catalog** | 288 resources | Resources with experimental content discovered and curated for access, domain, licence, and provenance. Catalog presence does not mean that a resource entered the paper. |
+| **Analysed-resource ledger** | 32 resources | Databases used, screened, or formally audited during the project, including unsuccessful candidates and controls. |
+| **Paper evidence layer** | Selected claim-bearing experiments | The small set of positive, boundary, and falsification results needed to support the manuscript's argument. |
 
-```
+The catalog currently contains 259 experimental and 29 mixed
+experimental/computational resources: 279 are open, 5 require registration,
+and 4 are restricted. Twenty-two records still have an unresolved data
+licence. The local integrated snapshot registers 14 sources (13 normalized and
+one analysis-only) and contains 96,184 measurements, 230 property labels, and
+29,516 canonical formula, molecule, or mixture entities.
+
+- Browse the catalog: [CATALOG.md](CATALOG.md) or
+  [catalog/catalog.csv](catalog/catalog.csv)
+- See what the project actually used: [analysed-resource
+  ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv)
+- See every retained transfer attempt: [attempt
+  ledger](research/evidence/ATTEMPT_LEDGER.csv)
+
+## Start here
+
+| If you want to... | Read this first |
+|---|---|
+| Audit the exact models, data and result files used by the submitted article | [Submission evidence package](paper/README.md) |
+| Read the repository-native narrative draft (the external Word submission may be newer) | [Markdown manuscript](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md) |
+| Check methods, robustness, nulls, and amendments | [Supplementary Information](analysis/SUPPLEMENTARY_INFORMATION.md) |
+| Inspect all positive, null, harmful, abstaining, and non-evaluable attempts | [Attempt ledger](research/evidence/ATTEMPT_LEDGER.csv) |
+| Identify data access, DOI, licence, and redistribution status | [Analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) |
+| Browse every broad and task-specific database connected to the project | [Database guide](research/data/DATABASE_GUIDE.md) |
+| Review the four manuscript figures and their source data | [Figure directory](analysis/figures/) and [figure QA](analysis/figures/FIGURE_QA_NMI_V3.md) |
+| Reproduce or extend an analysis | [Analysis guide](analysis/README.md) |
+| Run the frozen high-performance-computing workflows | [Balam guide](analysis/balam/README.md) |
+| Review Edison, Hypothesis Generation, and Legacy Kosmos outputs | [Edison report index](analysis/review_packages/edison/README.md) |
+| See exactly what is included in this release | [Release manifest](research/RELEASE_MANIFEST.md) |
+
+## Repository structure
+
+```text
 .
-├── README.md               # this file
-├── CATALOG.md              # generated, browsable index (do not edit by hand)
-├── catalog_map.html        # generated: interactive similarity map (1 point = 1 database)
-├── datapoint_map.html      # generated: unified map (1 point = 1 experimental sample)
-├── catalog/
-│   ├── catalog.json        # source of truth (edit here, or via seed files)
-│   ├── catalog.csv         # generated flat export
-│   ├── excluded_computational.json  # archived computational-only entries (policy)
-│   └── schema.json         # JSON Schema for one entry
-├── scripts/
-│   ├── seed/               # curated research records (provenance-preserving)
-│   ├── build_seed.py       # seed/*.json  -> catalog/catalog.json (+ experimental-only policy)
-│   ├── build_exports.py    # catalog.json -> catalog.csv + CATALOG.md + catalog_map.html
-│   ├── build_map.py        # interactive similarity map generator
-│   ├── validate_catalog.py # schema + duplicate checks (CI-friendly)
-│   ├── discover.py         # query open APIs for new candidate datasets
-│   ├── datapoint_map/      # data-point-level map pipeline (see its README)
-│   ├── discovered/         # auto-discovery candidates awaiting human review (gitignored)
-│   ├── tdm/                # PRIVATE harvest pipeline via official publisher APIs
-│   ├── common.py           # shared helpers
-│   └── requirements.txt    # optional extras (stdlib works without them)
-├── docs/
-│   └── methodology.md      # sourcing policy, FAIR, legal stance, roadmap
-├── CONTRIBUTING.md
-├── LICENSE                 # code (MIT)
-└── LICENSE-DATA.md         # catalog metadata (CC-BY-4.0) + note on source data
+├── catalog/                  machine-readable experimental-resource index
+├── scripts/localdb/          pinned ingestion and unified SQLite builder
+├── analysis/
+│   ├── MANUSCRIPT_*.md       manuscript drafts and paper package
+│   ├── figures/              main and supplementary figures plus source data
+│   ├── results/              compact formal outputs and verification records
+│   ├── review_packages/      Edison, Claude, and independent audit materials
+│   └── balam/                frozen remote-run, fetch, and verification helpers
+├── research/
+│   ├── data/                 analysed-resource ledger and data policy
+│   ├── evidence/             complete transfer-attempt ledger
+│   └── manuscript/           canonical manuscript navigation
+├── paper/                    submission evidence allowlist, article links and checks
+├── tests/                    integrity and scientific-workflow tests
+├── CATALOG.md                human-readable catalog
+└── CITATION.cff              repository citation metadata
 ```
 
-## Local unified database (data lake)
+## Reproduce the release checks
 
-`scripts/localdb/build_localdb.py` mirrors the **open-licensed** datasets
-locally and builds `data/collective.sqlite` — one native table per dataset
-(`raw_*`), a unified cross-domain `measurements` table
-(dataset · material · property · value · unit · conditions), and a `datasets`
-table carrying each database's short description, license, DOI and link
-straight from the catalog. Currently 10 datasets / **105,955 measurements /
-319 distinct properties** (thermoelectrics, solubility, pKa, electrocatalysis,
-alloys, hydration, photoswitches, solid electrolytes, polymers, adsorption
-isotherms); restricted/registration-only databases are indexed in the catalog
-but never mirrored. The ISODB loader parses a capped subset per build
-(`ISODB_CAP`) — raise it for a full local build.
+Python 3.11 or newer is recommended. From the repository root:
 
 ```bash
-python scripts/localdb/build_localdb.py                  # clone + build
-python scripts/localdb/build_localdb.py --query "SELECT dataset,property,COUNT(*) FROM measurements GROUP BY 1,2"
-```
+python -m venv .venv
+# PowerShell: .\.venv\Scripts\Activate.ps1
+# POSIX:      source .venv/bin/activate
+python -m pip install -r scripts/requirements.txt -r analysis/requirements.txt
 
-To add a dataset: add its clone spec to `SOURCES` and a loader block in
-`load_all()`. `data/` is gitignored — the mirror stays local.
-
-## Private collaborator data snapshot
-
-Authorized collaborators can download the complete working snapshot from the
-private [collaborator data workspace](collaboration_data/README.md). The
-snapshot contains the unified SQLite lake, locally retained external inputs,
-and additional cross-domain candidate tables for testing new transfer,
-representation-learning, calibration, ranking, and OOD methods.
-
-Large files are supplied as verified GitHub pre-release assets rather than
-ordinary Git blobs. The workspace includes a 474-file manifest, SHA-256
-checksums, a source/licence matrix, and one-command download helpers. This
-private access route does not relicense upstream datasets and must be removed
-or replaced before the repository is made public unless all redistribution
-rights have been confirmed.
-
-## Quick load
-
-```python
-import pandas as pd
-df = pd.read_csv("catalog/catalog.csv")
-# filter by domain
-materials = df[df["domain"] == "materials"]
-# filter by subdomain
-batteries = df[df["subdomain"] == "batteries"]
-# load full metadata
-import json
-with open("catalog/catalog.json") as f:
-    cat = json.load(f)
-entries = cat["entries"]
-```
-
-## Quick start
-
-No dependencies are required for the core tooling (pure standard library).
-
-```bash
-# Regenerate the catalog from the curated seed records:
-python scripts/build_seed.py
-
-# Regenerate CATALOG.md and catalog.csv from catalog.json:
-python scripts/build_exports.py
-
-# Validate before committing:
 python scripts/validate_catalog.py
+python scripts/validate_candidates.py
+python paper/reproduction/verify_paper_package.py
+python -m pytest -q \
+  tests/test_multi_target_ood_borrowing.py \
+  tests/test_mixture_response_transfer.py \
+  tests/test_electrolyte_programme_interaction.py
 ```
 
-### Discovering new datasets (the legitimate way)
-
-`discover.py` queries open APIs and writes candidate entries for you to review
-— it never downloads copyrighted SI or bypasses access controls.
+To rebuild the pinned local snapshot:
 
 ```bash
-export INDEX_CONTACT_EMAIL="you@your-institution.edu"   # polite API etiquette
-
-python scripts/discover.py --source zenodo   --query "perovskite solar cell"     --domain materials --limit 25
-python scripts/discover.py --source datacite --query "electrolyte conductivity"  --domain chemistry --limit 25
-python scripts/discover.py --source all      --query "high throughput experiment" --limit 15
+python scripts/localdb/build_localdb.py
+python analysis/audit_snapshot.py
 ```
 
-Candidates land in `scripts/discovered/`. Review them, keep the good ones, drop
-them into a `scripts/seed/*_seed.json` file (or straight into `catalog.json`),
-then rerun `build_exports.py` and `validate_catalog.py`.
+Some analyses require external upstream data, substantial CPU time, or the
+frozen Balam packages. Follow [analysis/README.md](analysis/README.md) for the
+analysis-specific commands instead of treating one monolithic command list as
+a complete reproduction.
 
-## Roadmap
+## How collaborators should add evidence
 
-1. **Seed & review** (now) — curated core of high-value databases. ✅
-2. **Expand via discovery** — run `discover.py` across sub-domains; review and
-   fold in new entries with descriptions.
-3. **Enrich** — add per-entry detail (size, formats, access notes, example
-   loading code), and verify licenses.
-4. **Automate freshness** — scheduled link-checking and re-discovery; flag dead
-   links and new versions.
-5. **Open up** — publish the repo publicly (and optionally a small static site
-   over `catalog.json`) once entries are reviewed.
+1. **Declare the scientific relation first.** Name the donor, recipient,
+   candidate representation, experimental state, transferable object, OOD
+   unit, and decision endpoint.
+2. **Freeze the evaluation before reading the target outcome.** Record splits,
+   baselines, falsifiers, metrics, thresholds, seeds, and leakage exclusions in
+   a protocol or design file.
+3. **Keep recipient-only baselines competitive.** A donor should not receive
+   credit merely because the target model was weak.
+4. **Verify independently.** Retain compact summaries, checksums, and a script
+   that reconstructs the claim-bearing metrics.
+5. **Record every result.** Positive, null, harmful, abstaining, and
+   non-evaluable attempts all belong in
+   [ATTEMPT_LEDGER.csv](research/evidence/ATTEMPT_LEDGER.csv).
+6. **Update claims only after the gate is passed.** Exploratory diagnostics and
+   AI-generated hypotheses cannot overwrite a frozen primary result.
 
-## Contributing
+## External AI research reports
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). In short: add an entry to a seed file
-or `catalog.json` following `catalog/schema.json`, run the build + validate
-scripts, and open a PR.
+Edison Literature High, Edison clean-sheet research, Hypothesis Generation,
+and Legacy Kosmos reports are preserved with their prompts, task identifiers,
+source links, local audits, and validation outputs in
+[analysis/review_packages/edison/](analysis/review_packages/edison/). These
+reports are hypothesis-generation records, not manuscript evidence by
+themselves. The SolventSeg ranking hypothesis entered the paper only after its
+reported effect was reproduced locally and then stress-tested against 13
+recipient-only configurations. The initial Edison CALiSol-to-KIT proposal was
+retained as a harmful result rather than removed.
 
-## License
+## Data, licensing, and citation
 
-- **Code** (the scripts): MIT — see [`LICENSE`](LICENSE).
-- **Catalog metadata** (descriptions, tags, links we wrote): CC-BY-4.0 — see
-  [`LICENSE-DATA.md`](LICENSE-DATA.md).
-- **The underlying datasets** keep their own licenses (recorded per entry).
-  Always check an entry's `license` before reusing its data.
+The repository does not re-host third-party raw datasets by default. It stores
+source-pinned metadata, compact derived summaries, protocols, and validation
+subsets only where reuse is appropriate. Consult the
+[analysed-resource ledger](research/data/ANALYSED_RESOURCE_LEDGER.csv) before
+redistributing any upstream data; an open download link does not by itself
+establish reuse rights.
+
+If you use this repository, cite [CITATION.cff](CITATION.cff) and also cite the
+original datasets and papers listed in the analysed-resource ledger. Repository
+code is released under the [MIT License](LICENSE), catalog metadata authored in
+this repository is released under
+[CC BY 4.0](LICENSE-DATA.md), and upstream datasets retain their own terms.
+
+## Current status
+
+- **Target journal:** *Digital Discovery*
+- **Article type:** methods-led full paper
+- **Manuscript-facing evidence index:** [paper/README.md](paper/README.md)
+- **Repository-native narrative draft:**
+  [analysis/MANUSCRIPT_DRAFT_STREAMLINED.md](analysis/MANUSCRIPT_DRAFT_STREAMLINED.md)
+  (retained for provenance; the external Word submission may be newer)
+- **Release date:** 31 July 2026
+- **Claim boundary:** retrospective evidence supports selective prediction and
+  screening improvements with explicit abstention; prospective discovery
+  acceleration remains unestablished.

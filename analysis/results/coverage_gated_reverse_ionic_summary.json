@@ -1,0 +1,95 @@
+{
+  "status": "coverage-gated-reverse-ionic-exploratory-complete",
+  "created_utc": "2026-07-23T23:12:27.526013+00:00",
+  "claim_guard": "This gate was added after the ungated reverse-edge outcome was inspected. It can diagnose whether transfer is candidate-local and can define a method for later independent testing, but it is not confirmatory evidence.",
+  "frozen_hashes": {
+    "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+    "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+    "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f"
+  },
+  "threshold": 10.505554018271697,
+  "rows": 81,
+  "grouped_results": [
+    {
+      "method": "caltech_features_hard_coverage_gate",
+      "scope": "q1",
+      "relative_rmse_gain": 0.2513333420808309,
+      "augmented_r2": -12.472299454981192,
+      "positive_fraction": 1.0,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    },
+    {
+      "method": "caltech_features_hard_coverage_gate",
+      "scope": "q4",
+      "relative_rmse_gain": -0.00333571839269397,
+      "augmented_r2": -2.749077584623349,
+      "positive_fraction": 0.5555555555555556,
+      "coverage_fraction": 0.32,
+      "cells": 9
+    },
+    {
+      "method": "caltech_features_hard_coverage_gate",
+      "scope": "q4_covered",
+      "relative_rmse_gain": 0.009590390875109612,
+      "augmented_r2": -19.177498657966257,
+      "positive_fraction": 0.5555555555555556,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    },
+    {
+      "method": "caltech_scalar_hard_coverage_gate",
+      "scope": "q1",
+      "relative_rmse_gain": 0.19084071052167112,
+      "augmented_r2": -15.47445278666251,
+      "positive_fraction": 1.0,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    },
+    {
+      "method": "caltech_scalar_hard_coverage_gate",
+      "scope": "q4",
+      "relative_rmse_gain": -0.007418702646947894,
+      "augmented_r2": -3.092098699345569,
+      "positive_fraction": 0.5555555555555556,
+      "coverage_fraction": 0.32,
+      "cells": 9
+    },
+    {
+      "method": "caltech_scalar_hard_coverage_gate",
+      "scope": "q4_covered",
+      "relative_rmse_gain": 0.00860486599264318,
+      "augmented_r2": -21.71037920066127,
+      "positive_fraction": 0.5555555555555556,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    },
+    {
+      "method": "shuffled_caltech_hard_coverage_gate",
+      "scope": "q1",
+      "relative_rmse_gain": -0.025353976982899675,
+      "augmented_r2": -23.742115933225197,
+      "positive_fraction": 0.1111111111111111,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    },
+    {
+      "method": "shuffled_caltech_hard_coverage_gate",
+      "scope": "q4",
+      "relative_rmse_gain": -0.004536245097824251,
+      "augmented_r2": -3.4079983565469436,
+      "positive_fraction": 0.2222222222222222,
+      "coverage_fraction": 0.32,
+      "cells": 9
+    },
+    {
+      "method": "shuffled_caltech_hard_coverage_gate",
+      "scope": "q4_covered",
+      "relative_rmse_gain": -0.0644976561182557,
+      "augmented_r2": -24.042993902287837,
+      "positive_fraction": 0.2222222222222222,
+      "coverage_fraction": 1.0,
+      "cells": 9
+    }
+  ]
+}

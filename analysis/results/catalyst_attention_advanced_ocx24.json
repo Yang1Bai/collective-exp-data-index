@@ -1,0 +1,657 @@
+{
+  "any_advanced_gate_passed": null,
+  "completed_datasets": [
+    "ocx24"
+  ],
+  "datasets": {
+    "ocx24": {
+      "dataset": {
+        "programs": {
+          "ocx24_uoft": 1230,
+          "ocx24_vsp": 940
+        },
+        "samples": 2170,
+        "targets": {
+          "fe_co": 2170
+        },
+        "unique_groups": 434,
+        "with_curves": 0,
+        "with_surface_composition": 0,
+        "with_targets": 2170,
+        "with_uncertainty": 0
+      },
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "models": {
+            "crabnet_cross": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.328005017535236,
+                  "r2": -0.02554982604115441,
+                  "rmse": 19.098960840708898,
+                  "spearman": 0.4749581579689897
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 37,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_cross_seed20260731.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.271218974402403,
+                      "r2": -0.036365473588301445,
+                      "rmse": 19.19940737740192,
+                      "spearman": 0.44808434965934985
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.420639795560635,
+                    "r2": 0.758502388054664,
+                    "rmse": 8.790296810284952,
+                    "spearman": 0.9197978682740187
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 16,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_cross_seed20260732.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 14.120078792420168,
+                      "r2": -0.006331526407110877,
+                      "rmse": 18.91916195229952,
+                      "spearman": 0.4795430224664813
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.671685779278909,
+                    "r2": 0.8142962359263237,
+                    "rmse": 8.676321899285691,
+                    "spearman": 0.8715374582526922
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 19,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_cross_seed20260733.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 15.372998523337193,
+                      "r2": -0.1553742621133698,
+                      "rmse": 20.271818069980228,
+                      "spearman": 0.43685642200641867
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.427555101313052,
+                    "r2": 0.8149860602969529,
+                    "rmse": 8.22605613104405,
+                    "spearman": 0.9016594390294675
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "crabnet_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.270840380025438,
+                  "r2": -0.005413168415467462,
+                  "rmse": 18.910527357810796,
+                  "spearman": 0.45688047820768035
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 36,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_perceiver_seed20260731.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 15.567854089156187,
+                      "r2": -0.23521736675505633,
+                      "rmse": 20.960568143064684,
+                      "spearman": 0.3750951203973467
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.176192462180281,
+                    "r2": 0.7846924031700596,
+                    "rmse": 8.29997522562365,
+                    "spearman": 0.9286517984434578
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 27,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_perceiver_seed20260732.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 14.111222624826281,
+                      "r2": 0.032023480969217366,
+                      "rmse": 18.555119977096528,
+                      "spearman": 0.5014403113799756
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.805231923992403,
+                    "r2": 0.6873916669293714,
+                    "rmse": 11.25707548672118,
+                    "spearman": 0.8087012114012617
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 8,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/crabnet_perceiver_seed20260733.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 15.750286716580563,
+                      "r2": -0.15498595670664117,
+                      "rmse": 20.26841124401959,
+                      "spearman": 0.3707635527456916
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.813283810615246,
+                    "r2": 0.802825004350593,
+                    "rmse": 8.492105150073824,
+                    "spearman": 0.8970971340145049
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "set_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 15.378205798938685,
+                  "r2": -0.22586342657813985,
+                  "rmse": 20.88105319227626,
+                  "spearman": 0.5244472005972207
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 26,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/set_perceiver_seed20260731.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 15.752000051637843,
+                      "r2": -0.34481342372620616,
+                      "rmse": 21.870684387174286,
+                      "spearman": 0.4693574044962079
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.6810719494256405,
+                    "r2": 0.6776750079455247,
+                    "rmse": 10.155331616140296,
+                    "spearman": 0.870264216701978
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 50,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/set_perceiver_seed20260732.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 14.596886858891512,
+                      "r2": -0.020511776822420558,
+                      "rmse": 19.051990929385635,
+                      "spearman": 0.466532945395656
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.875088734076407,
+                    "r2": 0.8149643436247065,
+                    "rmse": 8.660700405004611,
+                    "spearman": 0.8956012151094804
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 57,
+                  "checkpoint": "ocx24_uoft_to_ocx24_vsp/set_perceiver_seed20260733.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 15.865273345769744,
+                      "r2": -0.2935764735413655,
+                      "rmse": 21.450005596191595,
+                      "spearman": 0.5395402926486272
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 5.61490096923093,
+                    "r2": 0.8284372575471517,
+                    "rmse": 7.921381558823536,
+                    "spearman": 0.9087338826677254
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "tabpfn_v2": {
+              "manifest": {
+                "curve_components": 0,
+                "model_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+                "model_version": "v2",
+                "package": "tabpfn",
+                "package_version": "8.1.0"
+              },
+              "targets": {
+                "target": {
+                  "mae": 13.390364934564438,
+                  "r2": -0.01769113075048878,
+                  "rmse": 19.025643311963513,
+                  "spearman": 0.5864968256015373
+                }
+              }
+            }
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "models": {
+            "crabnet_cross": {
+              "ensemble": {
+                "target": {
+                  "mae": 15.52482230077357,
+                  "r2": 0.0537845601737148,
+                  "rmse": 19.180084745431117,
+                  "spearman": 0.48303675079267633
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 26,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_cross_seed20260731.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 16.129518352225247,
+                      "r2": -0.06858097625896065,
+                      "rmse": 20.382583290472322,
+                      "spearman": 0.3924563620561055
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 9.586958509219272,
+                    "r2": 0.46206955727696486,
+                    "rmse": 14.349771963361448,
+                    "spearman": 0.603129686714242
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 15,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_cross_seed20260732.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 14.759020473608375,
+                      "r2": 0.15063411454541642,
+                      "rmse": 18.17200775154294,
+                      "spearman": 0.5362208331435013
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.679666634394078,
+                    "r2": 0.32406323613048216,
+                    "rmse": 13.112433496457943,
+                    "spearman": 0.5831917142615716
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 23,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_cross_seed20260733.pt",
+                  "parameter_count": 177367,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 17.077511823518257,
+                      "r2": -0.12842753764836234,
+                      "rmse": 20.945577766877637,
+                      "spearman": 0.45177543275416593
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 9.466432041428197,
+                    "r2": 0.5577664644862101,
+                    "rmse": 13.171686823458705,
+                    "spearman": 0.7868171137420927
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "crabnet_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 16.78733783610789,
+                  "r2": -0.13108489762677422,
+                  "rmse": 20.97022587587677,
+                  "spearman": 0.45775685171174074
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_perceiver_seed20260731.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 17.798094431882788,
+                      "r2": -0.30212890031222983,
+                      "rmse": 22.49999883208125,
+                      "spearman": 0.378922730292662
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 9.613244758835421,
+                    "r2": 0.5029199350488516,
+                    "rmse": 13.794155310619857,
+                    "spearman": 0.6367274707993473
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 24,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_perceiver_seed20260732.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 15.718117106636582,
+                      "r2": 0.04534843211505091,
+                      "rmse": 19.265396500222195,
+                      "spearman": 0.523345806958803
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.680007896977807,
+                    "r2": 0.3901198589160425,
+                    "rmse": 12.455251762907112,
+                    "spearman": 0.6499683379855621
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 51,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/crabnet_perceiver_seed20260733.pt",
+                  "parameter_count": 244471,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 17.30563957044625,
+                      "r2": -0.22108346414443658,
+                      "rmse": 21.788542581292035,
+                      "spearman": 0.4338145732587965
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 9.307972547189598,
+                    "r2": 0.5255934473926147,
+                    "rmse": 13.64240377303988,
+                    "spearman": 0.790959485983725
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "set_perceiver": {
+              "ensemble": {
+                "target": {
+                  "mae": 15.22346710877442,
+                  "r2": 0.12627038438463944,
+                  "rmse": 18.430793567788637,
+                  "spearman": 0.5799223078683884
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 23,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/set_perceiver_seed20260731.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 15.967380251996486,
+                      "r2": -0.0008589587984433322,
+                      "rmse": 19.72613254915103,
+                      "spearman": 0.5451818776452801
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.32293044937098,
+                    "r2": 0.6452589863025454,
+                    "rmse": 11.652997133561616,
+                    "spearman": 0.7065109598883632
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 14,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/set_perceiver_seed20260732.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260732,
+                  "targets": {
+                    "target": {
+                      "mae": 16.83442207547119,
+                      "r2": -0.023396321716525392,
+                      "rmse": 19.946992868646426,
+                      "spearman": 0.5085096116865018
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.271941158900285,
+                    "r2": 0.46854121827851825,
+                    "rmse": 11.626930013451446,
+                    "spearman": 0.6998508190906461
+                  },
+                  "validation_split": "group-held-out"
+                },
+                {
+                  "best_epoch": 36,
+                  "checkpoint": "ocx24_vsp_to_ocx24_uoft/set_perceiver_seed20260733.pt",
+                  "parameter_count": 254742,
+                  "seed": 20260733,
+                  "targets": {
+                    "target": {
+                      "mae": 14.120794886495885,
+                      "r2": 0.1820362993543969,
+                      "rmse": 17.83292249706027,
+                      "spearman": 0.6033843849598362
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 7.311813723502195,
+                    "r2": 0.7259411399155857,
+                    "rmse": 10.36901453299923,
+                    "spearman": 0.859884489922607
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "tabpfn_v2": {
+              "manifest": {
+                "curve_components": 0,
+                "model_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+                "model_version": "v2",
+                "package": "tabpfn",
+                "package_version": "8.1.0"
+              },
+              "targets": {
+                "target": {
+                  "mae": 15.112301733313572,
+                  "r2": 0.10162987868843021,
+                  "rmse": 18.688874869986346,
+                  "spearman": 0.49011930911907464
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "candidates": {
+          "crabnet_cross": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.07065033183744024,
+                "gain_over_tree": -0.051463130216135966,
+                "spearman": 0.4749581579689897
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.09688282303630918,
+                "gain_over_tree": -0.08802669580200168,
+                "spearman": 0.48303675079267633
+              }
+            },
+            "median_gain_over_current": -0.08376657743687471,
+            "passed": false
+          },
+          "crabnet_perceiver": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.0887280115987496,
+                "gain_over_tree": -0.06954080997744533,
+                "spearman": 0.45688047820768035
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.12216272211724477,
+                "gain_over_tree": -0.11330659488293726,
+                "spearman": 0.45775685171174074
+              }
+            },
+            "median_gain_over_current": -0.10544536685799719,
+            "passed": false
+          },
+          "set_perceiver": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.021161289209209233,
+                "gain_over_tree": -0.00197408758790496,
+                "spearman": 0.5244472005972207
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": 2.734039402874089e-06,
+                "gain_over_tree": 0.008858861273710383,
+                "spearman": 0.5799223078683884
+              }
+            },
+            "median_gain_over_current": -0.01057927758490318,
+            "passed": false
+          },
+          "tabpfn_v2": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": 0.04088833579510731,
+                "gain_over_tree": 0.060075537416411584,
+                "spearman": 0.5864968256015373
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.08980026470991087,
+                "gain_over_tree": -0.08094413747560336,
+                "spearman": 0.49011930911907464
+              }
+            },
+            "median_gain_over_current": -0.02445596445740178,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "model_names": [
+        "crabnet_cross",
+        "set_perceiver",
+        "crabnet_perceiver",
+        "tabpfn_v2"
+      ],
+      "reference": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "fair_extra_trees": {
+            "mae": 13.72034315424109,
+            "r2": 0.013755434378140419,
+            "rmse": 18.7293914753803,
+            "spearman": 0.5264212881851257
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 15.294420956313132,
+            "r2": -0.2234809319207225,
+            "rmse": 20.860751912296713,
+            "spearman": 0.54560848980643
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "fair_extra_trees": {
+            "mae": 14.29111934137205,
+            "r2": 0.18199592712868728,
+            "rmse": 17.833362581313438,
+            "spearman": 0.571063446594678
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 13.819910660829606,
+            "r2": 0.24451624093033075,
+            "rmse": 17.13831310572193,
+            "spearman": 0.5799195738289855
+          }
+        }
+      }
+    }
+  },
+  "design_path": "analysis/catalyst_attention_advanced_design.json",
+  "design_sha256": "2c18dff3b11a21b9c7ea81c9d05018ef073a87edb5c009b43e26a9e61a823ad7",
+  "evidence_boundary": "Post-outcome architecture development on previously inspected programmes. Results may select an architecture for a future blind programme but cannot confirm prospective catalyst discovery.",
+  "missing_datasets": [
+    "seccm",
+    "specgen"
+  ],
+  "requested_datasets": [
+    "ocx24"
+  ],
+  "selection": {
+    "ocx24": null
+  },
+  "status": "partial"
+}

@@ -1,0 +1,77 @@
+{
+  "program": "Locked optical-to-photocatalysis blind OOD evaluation",
+  "version": 1,
+  "frozen_utc": "2026-07-26T02:13:10Z",
+  "freeze_status": "Frozen while the development-only job was pending and before development-gate results or blind HER values were inspected.",
+  "eligibility": "Run only if the independently verified development gate sets blind_release_allowed=true.",
+  "training": {
+    "recipient_label_budget": 60,
+    "frozen_draws": 100,
+    "model_and_hyperparameters": "Identical to optical_photocatalysis_development_gate_config.json",
+    "donor_properties": "Exactly the source-only admitted properties recorded before development modeling",
+    "feature_form": "Exactly the raw-or-rank form selected by the development gate"
+  },
+  "methods": [
+    "target_structure_only",
+    "target_structure_plus_calculated",
+    "target_structure_plus_selected_donor",
+    "target_structure_plus_calculated_plus_selected_donor",
+    "target_structure_plus_matched_shuffled_donor",
+    "target_structure_plus_equal_dimensional_gaussian"
+  ],
+  "scopes": [
+    "frozen_hard_ood_40pct",
+    "frozen_hard_ood_25pct",
+    "full_blind"
+  ],
+  "primary_endpoint": {
+    "scope": "frozen_hard_ood_40pct",
+    "metric": "paired relative reduction in log1p-HER RMSE versus target_structure_only",
+    "summary": "mean of the 100 draw-specific paired relative RMSE gains",
+    "independent_experimental_unit": "blind molecule, with dependence clustered by canonical Bemis-Murcko scaffold",
+    "computational_replication": "The 100 outcome-independent label-budget draws quantify training-set uncertainty and are not counted as 100 additional experimental samples."
+  },
+  "uncertainty": {
+    "method": "paired hierarchical scaffold-and-draw bootstrap",
+    "replicates": 10000,
+    "procedure": "For each replicate, sample blind scaffolds with replacement and sample the 100 label-budget draws with replacement; preserve method pairing and include every molecule belonging to each sampled scaffold.",
+    "interval": "percentile 95 percent confidence interval for relative RMSE gain"
+  },
+  "tests": {
+    "method": "one-sided paired scaffold sign randomization",
+    "randomizations": 100000,
+    "cluster_statistic": "For each scaffold, sum the squared-error improvement of the candidate over its matched baseline after averaging over label-budget draws; randomly flip scaffold signs.",
+    "comparison_family": [
+      "selected donor versus target structure only",
+      "selected donor versus matched shuffled donor",
+      "calculated plus selected donor versus calculated only"
+    ],
+    "multiplicity": "Holm correction across the three named comparisons"
+  },
+  "success_gate": {
+    "minimum_mean_relative_rmse_gain_vs_target_only": 0.05,
+    "hierarchical_bootstrap_95pct_lower_gain_greater_than": 0.0,
+    "holm_adjusted_p_below": 0.05,
+    "mean_draw_specific_donor_augmented_r2_greater_than": 0.0,
+    "minimum_mean_relative_rmse_gain_vs_shuffled_donor": 0.0,
+    "maximum_mean_full_blind_relative_rmse_harm": 0.02
+  },
+  "secondary_endpoints": {
+    "prediction": [
+      "RMSE",
+      "MAE",
+      "R2",
+      "Spearman correlation",
+      "average precision at HER at least 1.07 micromol per hour",
+      "average precision at HER at least 12.5 micromol per hour"
+    ],
+    "exploration": [
+      "high-activity enrichment among top 5, 10 and 20",
+      "experiments required to recover 25 and 50 percent of high-activity molecules",
+      "performance as a function of donor support"
+    ]
+  },
+  "missing_data": "No blind molecule may be removed after outcome access. Calculated-descriptor missing values use the corresponding labeled-development training median within each draw; an all-missing training column is set to zero.",
+  "reporting": "Report all frozen methods, scopes and endpoints regardless of direction. Exact molecule counts and scaffold counts are reported for every scope.",
+  "claim_guard": "Passing the full gate establishes one retrospective neighboring experimental-database edge for molecular photocatalytic OOD prediction. It does not establish prospective laboratory discovery, universality across photocatalysis, or a mechanism."
+}

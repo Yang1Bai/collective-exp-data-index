@@ -1,0 +1,161 @@
+{
+  "environment": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "rdkit": "2026.03.3"
+  },
+  "outcome_sentinel": {
+    "allowed_columns_read": [
+      "id",
+      "doi",
+      "doi_norm",
+      "donor",
+      "acceptor",
+      "donor_canonical",
+      "acceptor_canonical",
+      "donor_smiles",
+      "acceptor_smiles",
+      "d_a_ratio",
+      "additive",
+      "additive_canonical",
+      "additive_ratio",
+      "device_structure",
+      "device_type",
+      "etl",
+      "etl_canonical",
+      "htl",
+      "htl_canonical",
+      "active_layer_thickness",
+      "solvent",
+      "solvent_canonical",
+      "annealing_temp"
+    ],
+    "forbidden_columns_not_read": [
+      "eg_a",
+      "eg_d",
+      "ff",
+      "homo_a",
+      "homo_d",
+      "jsc",
+      "lumo_a",
+      "lumo_d",
+      "pce",
+      "pce_avg",
+      "pce_best",
+      "pce_recomputed",
+      "pce_relative_error_percent",
+      "voc"
+    ],
+    "metadata_csv": "analysis/results/opv_optical_target_metadata_no_outcomes.csv",
+    "metadata_sha256": "68f1e69ef9bda1ae4b9bd2cf16d0824e7d5b03bf50e04f6aa1316235a0b5eac3"
+  },
+  "source": {
+    "csv_sha256": "931948b68bc090afc8c067fe294ed6d62352c6df1a72ddfdca24edf323fb2726",
+    "dataset": "Deep4Chem experimental optical properties",
+    "doi": "10.6084/m9.figshare.12045567.v2",
+    "exact_target_molecule_overlap_global": 4,
+    "exact_target_molecule_overlap_solid": 0,
+    "global_unique_molecules": 6815,
+    "solid_unique_molecules": 953,
+    "strict_source_policy": "Retrain after excluding every exact target molecule and every target DOI; exact-overlap models are lookup upper bounds only.",
+    "target_doi_overlap_global": 0,
+    "target_doi_overlap_solid": 0
+  },
+  "status": "metadata-audited-row-outcomes-unopened",
+  "support_after_exact_target_exclusion": {
+    "acceptor_global": {
+      "max": 1.0,
+      "median": 0.3118279569892473,
+      "min": 0.1111111111111111,
+      "q10": 0.2638888888888889,
+      "q25": 0.2719298245614035,
+      "q75": 0.35294117647058826,
+      "q90": 0.3924050632911392
+    },
+    "acceptor_solid": {
+      "max": 0.6842105263157895,
+      "median": 0.27058823529411763,
+      "min": 0.06896551724137931,
+      "q10": 0.23333333333333334,
+      "q25": 0.23684210526315788,
+      "q75": 0.2761904761904762,
+      "q90": 0.375
+    },
+    "donor_global": {
+      "max": 1.0,
+      "median": 0.32663164275611234,
+      "min": 0.17543859649122806,
+      "q10": 0.1984126984126984,
+      "q25": 0.1984126984126984,
+      "q75": 0.4175824175824176,
+      "q90": 0.43243243243243246
+    },
+    "donor_solid": {
+      "max": 1.0,
+      "median": 0.30097087378640774,
+      "min": 0.10975609756097561,
+      "q10": 0.18888888888888888,
+      "q25": 0.18888888888888888,
+      "q75": 0.37373737373737376,
+      "q90": 0.4235294117647059
+    },
+    "pair_global": {
+      "max": 0.8140915784106943,
+      "median": 0.3165903559546959,
+      "min": 0.157485197087178,
+      "q10": 0.24610584487954842,
+      "q25": 0.25580065482410924,
+      "q75": 0.35708840293704236,
+      "q90": 0.4094179705384447
+    },
+    "pair_solid": {
+      "max": 0.6549666775012419,
+      "median": 0.27130426628042686,
+      "min": 0.1224744871391589,
+      "q10": 0.21934723054365152,
+      "q25": 0.22840602480957495,
+      "q75": 0.309426373877638,
+      "q90": 0.3612991272530952
+    },
+    "row_coverage_counts": {
+      "pair_global_ge_0.20": 21665,
+      "pair_global_ge_0.25": 19090,
+      "pair_global_ge_0.30": 12361,
+      "pair_global_ge_0.35": 6907,
+      "pair_global_ge_0.40": 2779,
+      "pair_solid_ge_0.20": 21568,
+      "pair_solid_ge_0.25": 13392,
+      "pair_solid_ge_0.30": 6971,
+      "pair_solid_ge_0.35": 2612,
+      "pair_solid_ge_0.40": 1037
+    }
+  },
+  "target": {
+    "dataset": "OPV-DB strict molecular benchmark",
+    "doi": "10.5281/zenodo.20841543",
+    "external_holdout_dois": 1044,
+    "external_holdout_rows": 4012,
+    "member": "data/opv_devices_strict_molecular_benchmark.csv",
+    "rows": 21720,
+    "state_coverage_percent": {
+      "active_layer_thickness": 30.336095764272557,
+      "additive": 34.91712707182321,
+      "annealing_temp": 24.8158379373849,
+      "d_a_ratio": 51.48710865561694,
+      "device_structure": 82.90055248618785,
+      "device_type": 77.07642725598527,
+      "etl": 77.4171270718232,
+      "htl": 81.62983425414365,
+      "solvent": 55.00920810313076
+    },
+    "unique_acceptor_scaffolds": 837,
+    "unique_acceptors": 1436,
+    "unique_doi_pairs": 10210,
+    "unique_dois": 5459,
+    "unique_donor_scaffolds": 1078,
+    "unique_donors": 1987,
+    "unique_pairs": 4856,
+    "valid_structure_rows": 21720,
+    "zip_sha256": "3a8199aa3e9e78e20bbb486240972aa361d8ea69fa69d27ce42de45c3ada0095"
+  }
+}

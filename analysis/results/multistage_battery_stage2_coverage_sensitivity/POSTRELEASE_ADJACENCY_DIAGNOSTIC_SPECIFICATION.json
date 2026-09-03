@@ -1,0 +1,29 @@
+{
+  "status": "specified-outcome-guided-postrelease-diagnostic",
+  "timing": "specified after inspecting the complete 22-group sensitivity summary",
+  "method_selection_was_outcome_guided": true,
+  "candidate_policy": "adjacency_only: target features plus the continuous Stage 1 degradation prediction",
+  "rationale": "The base sensitivity showed that the hard-gated CCA-v2 policy abstained on most groups, while the simpler adjacency feature had positive point estimates in both aging strata.",
+  "comparisons": [
+    "adjacency_only minus target_only",
+    "adjacency_only minus wrong_property",
+    "adjacency_only minus shuffled_source",
+    "adjacency_only minus random_features"
+  ],
+  "effect": "Within each aging stratum, one minus mean adjacency condition RMSE divided by mean comparator condition RMSE; average the two strata equally.",
+  "inference": "10000 condition-cluster bootstraps and 9999 paired condition-group sign flips; Holm correction over the four named diagnostic comparisons.",
+  "additional_diagnostics": [
+    "absolute held-out R2 by stratum",
+    "condition-group win counts",
+    "highest source-distance quartile",
+    "group-level map joined only to outcome-free applicability quantities",
+    "exact prediction comparison with the globally rescaled source feature"
+  ],
+  "summary_sha256": "9b1a1d3a11f010f8104d5edf12e6e15b9f39a8e1050cd173e4639c33d0232032",
+  "predictions_sha256": "54815a886dd2142c7fc233d99ac366ef2a13906bf55fd4ed8470d0901b309456",
+  "group_errors_sha256": "2c8c36fe2535f0e7514a6375964d562d5180ce124bc98004ecf968fc074721a4",
+  "applicability_sha256": "92c335cce27f988e885d2e33aaf8bdc77d64426c7fca360af5ad91dae6f9d83e",
+  "analysis_runner_sha256": "bef77bc2692f077644678abad0e1558686f0933a98089c1ff77073514ec73243",
+  "claim_guard": "All estimates and adjusted p-values are post hoc. They may nominate a simpler borrowing policy for a new independent outcome-unseen test but cannot establish the present target as a confirmatory success.",
+  "errors": []
+}

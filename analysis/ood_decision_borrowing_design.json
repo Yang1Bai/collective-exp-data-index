@@ -1,0 +1,122 @@
+{
+  "design_name": "OOD decision utility of directed knowledge borrowing",
+  "design_version": 1,
+  "frozen_utc": "2026-07-14T18:11:15Z",
+  "status": "frozen-before-any-OOD-ranking-or-decision-metric-computation",
+  "post_existing_prediction_note": "The underlying RMSE/R2 results were already known. No ranking, enrichment, first-hit, or regret result was inspected before this file was written. This is a post-outcome extension with prospectively locked decision endpoints, not an external preregistration.",
+  "scientific_question": "Can a physically adjacent source prior improve decisions in the fixed out-of-distribution portion of a target experimental database even when average predictive fit is weak or unchanged?",
+  "estimand_scope": "Retrospective finite-pool OOD screening utility under repeated target-label subsets; not population-wide causal generalization and not a prospective laboratory campaign.",
+  "candidate_direction": "Higher target values are always preferred.",
+  "fixed_positive_definition": {
+    "rule": "Within each held-out candidate pool, the positive set is the first ceil(0.05*N) candidates after sorting by observed target value descending and material_key ascending.",
+    "fraction": 0.05,
+    "tie_rule": "The stable secondary key fixes the set size; ties are not expanded."
+  },
+  "fixed_shortlist_definition": {
+    "rule": "The shortlist is the first ceil(0.10*N) candidates after sorting by prediction descending and material_key ascending.",
+    "fraction": 0.1
+  },
+  "primary_endpoint": {
+    "name": "candidate-pool fraction saved before the first top-5-percent hit",
+    "per_pool_baseline": "one-indexed rank of the first true positive under baseline predictions divided by N",
+    "per_pool_augmented": "one-indexed rank of the first true positive under augmented predictions divided by N",
+    "effect": "baseline fraction minus augmented fraction; positive favors borrowing",
+    "fold_aggregation": "Within each repeat, pool effects are weighted by candidate-pool size before inference."
+  },
+  "secondary_endpoints": [
+    "recall of true top-5-percent candidates inside the predicted top-10-percent shortlist",
+    "top-10-percent enrichment factor relative to random selection",
+    "simple regret after the predicted top-10-percent shortlist",
+    "Spearman rank correlation on the held-out candidate pool"
+  ],
+  "primary_edges": [
+    {
+      "edge_id": "birdshot_temporal_alloy_uts_to_ys",
+      "prediction_file": "analysis/results/external_confirmation_predictions.csv",
+      "target": "birdshot_ys",
+      "source": "alloy_uts",
+      "learner": "ridge-primary",
+      "ood_definition": "chronological Year 1 to Year 2 and Years 1-2 to Year 3 held-out campaigns with zero canonical-composition overlap",
+      "pool_column": "fold",
+      "repeat_column": "repeat",
+      "identity_column": "material_key"
+    },
+    {
+      "edge_id": "calisol_article_temperature_minus30_to_minus40",
+      "prediction_file": "analysis/results/calisol_external_predictions.csv",
+      "target": "calisol_conductivity_minus_40_C",
+      "source": "temperature_-30_C",
+      "learner": "random-forest-primary",
+      "ood_definition": "outer folds hold out complete source articles; source models exclude held-out articles and exact held-out chemistries",
+      "pool_column": "fold",
+      "repeat_column": "repeat",
+      "identity_column": "material_key"
+    },
+    {
+      "edge_id": "obelix_official_thermoelectric_zt_to_ionic_conductivity",
+      "prediction_file": "analysis/results/primary_transfer_predictions.csv",
+      "source": "Thermoelectric ZT",
+      "learner": "Ridge (primary)",
+      "ood_definition": "official OBELiX evaluation groups with DOI/composition-disjoint target split and global removal of exact source-target composition overlap",
+      "pool_column": "__single_official_pool__",
+      "repeat_column": "repeat",
+      "identity_column": "material_key"
+    }
+  ],
+  "secondary_boundaries": [
+    {
+      "edge_id": "kit_formulation_holdout_minus20_to_minus30",
+      "prediction_file": "analysis/results/kit_temperature_predictions.csv",
+      "target": "kit_conductivity_minus_30_C",
+      "source": "temperature_-20_C",
+      "learner": "random-forest-primary",
+      "scope": "within-campaign formulation holdout; positive reference, not independent OOD replication"
+    },
+    {
+      "edge_id": "matbench_composition_holdout_alloy_uts_to_ys",
+      "prediction_file": "analysis/results/matbench_steels_external_predictions.csv",
+      "target": "matbench_steel_ys",
+      "source": "alloy_uts",
+      "learner": "ridge-primary",
+      "scope": "official fold and exact-composition holdout; independent negative boundary but not labeled temporal or provenance OOD"
+    }
+  ],
+  "prespecified_controls": {
+    "birdshot": ["te_thermal", "catalysis_h2"],
+    "calisol": ["temperature_0_C", "shuffled_temperature_-30_C"],
+    "obelix": ["Alloy yield strength", "CO2R H2 Faradaic efficiency"],
+    "kit": ["temperature_60_C", "shuffled_temperature_-20_C"],
+    "matbench": ["te_thermal", "catalysis_h2"]
+  },
+  "inference": {
+    "bootstrap_replicates": 5000,
+    "bootstrap_unit": "repeat-level fold-weighted paired effect",
+    "confidence_interval": "paired percentile bootstrap over repeat identifiers",
+    "raw_p_value": "one-sided paired sign-flip Monte Carlo test over repeat-level effects with 9999 draws",
+    "multiplicity": "Holm correction across the three primary OOD edges only",
+    "secondary_endpoints": "descriptive and supportive; no separate significance claim"
+  },
+  "decision_statuses": {
+    "OOD_exploration_improvement": [
+      "Holm-adjusted p <= 0.05",
+      "95% bootstrap interval for the primary effect is entirely above zero",
+      "at least 80% of repeat-level effects are positive",
+      "relative reduction in mean fraction-to-first-hit is at least 25%",
+      "the named distant or shuffled controls do not pass all preceding gates"
+    ],
+    "OOD_exploration_rescue": [
+      "all OOD_exploration_improvement gates",
+      "baseline median fraction-to-first-hit is greater than 0.10",
+      "augmented median fraction-to-first-hit is at most 0.10"
+    ],
+    "directional_only": "primary point effect is positive but one or more improvement gates fail",
+    "unresolved_or_harmful": "primary point effect is non-positive or its interval is not bounded above zero"
+  },
+  "interpretive_guards": [
+    "An OOD decision gain does not imply improved global RMSE or calibrated property prediction.",
+    "The fixed held-out database is a retrospective candidate pool, not a prospective experimental validation.",
+    "The first-hit endpoint evaluates ranking utility and cannot identify a microscopic mechanism.",
+    "Only the three named primary edges may support an independent OOD claim; KIT and Matbench are contextual boundaries.",
+    "A positive edge cannot be generalized into a universal transfer law."
+  ]
+}

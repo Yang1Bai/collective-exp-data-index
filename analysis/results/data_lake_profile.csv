@@ -1,0 +1,14 @@
+dataset,measurements,properties,canonical_entities,missing_entity_key,flagged_measurements
+aqsoldb,9982,1,9980,2,2
+birdshot-high-entropy-alloy-campaign,855,5,151,0,0
+calisol-23,13301,1,6116,0,0
+estm-thermoelectric,26025,5,870,0,0
+freesolv,642,1,642,0,0
+iupac-digitized-pka,24017,170,10665,0,0
+kit-electrolyte-conductivity-5035,5035,1,109,0,0
+matbench-steels,927,3,312,0,0
+mpea-dataset-borg,2904,5,610,0,0
+obelix-solid-electrolytes,599,1,500,0,0
+ocx24-open-catalyst-experiments-2024,6938,3,212,0,0
+openpoly-benchmark,3985,28,585,0,0
+photoswitch-dataset,974,7,396,0,0

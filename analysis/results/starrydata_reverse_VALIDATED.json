@@ -1,0 +1,215 @@
+{
+  "claim_guard": "This validates one independent retrospective reverse-edge target. Second-family and multi-target inference remain open; prospective discovery is not established.",
+  "exploration_inference": {
+    "component_bootstrap_contrasts": {
+      "caltech_adjacent_single": {
+        "auc20_difference_ci95": [
+          41.0953,
+          5.0,
+          89.0
+        ],
+        "bootstrap_p_one_sided": 0.018698130186981302,
+        "holm_p": 0.13088691130886912
+      },
+      "composition_novelty_family_first": {
+        "auc20_difference_ci95": [
+          32.9705,
+          -8.0,
+          83.0
+        ],
+        "bootstrap_p_one_sided": 0.0740925907409259,
+        "holm_p": 0.2963703629637036
+      },
+      "estm_best_same_domain": {
+        "auc20_difference_ci95": [
+          -29.8961,
+          -60.0,
+          -7.0
+        ],
+        "bootstrap_p_one_sided": 1.0,
+        "holm_p": 1.0
+      },
+      "obelix_adjacent_single": {
+        "auc20_difference_ci95": [
+          22.8914,
+          -15.0,
+          66.0
+        ],
+        "bootstrap_p_one_sided": 0.13208679132086792,
+        "holm_p": 0.3962603739626038
+      },
+      "shuffled_neighbor_family_first": {
+        "auc20_difference_ci95": [
+          6.2201,
+          -45.0,
+          57.0
+        ],
+        "bootstrap_p_one_sided": 0.41275872412758724,
+        "holm_p": 0.8255174482551745
+      },
+      "uniform_family_first": {
+        "auc20_difference_ci95": [
+          40.0881,
+          5.0,
+          86.0
+        ],
+        "bootstrap_p_one_sided": 0.018698130186981302,
+        "holm_p": 0.13088691130886912
+      },
+      "wrong_source_family_first": {
+        "auc20_difference_ci95": [
+          41.0953,
+          5.0,
+          89.0
+        ],
+        "bootstrap_p_one_sided": 0.018698130186981302,
+        "holm_p": 0.13088691130886912
+      }
+    },
+    "observed_cca_auc20": 41,
+    "source_rank_null_ci95": [
+      13.0,
+      75.0
+    ],
+    "source_rank_null_mean": 43.1342,
+    "source_rank_permutation_p": 0.5462907418516296
+  },
+  "hierarchical_primary_prediction": {
+    "ionic_vs_best_control": {
+      "bootstrap_p_one_sided": 0.047795220477952205,
+      "holm_p": 0.09559044095590441,
+      "mean_ci95": [
+        0.007493825233482349,
+        -0.0013748988692823655,
+        0.016568116365174336
+      ]
+    },
+    "ionic_vs_same_domain_estm": {
+      "bootstrap_p_one_sided": 0.5680431956804319,
+      "holm_p": 0.5680431956804319,
+      "mean_ci95": [
+        -0.0009715271192587622,
+        -0.012025068125572662,
+        0.010261833305432148
+      ]
+    },
+    "ionic_vs_target": {
+      "bootstrap_p_one_sided": 0.023697630236976304,
+      "holm_p": 0.07109289071092892,
+      "mean_ci95": [
+        0.008807528712160334,
+        0.00016525197327398793,
+        0.017712797366170506
+      ]
+    }
+  },
+  "hypothesis_cards": 3,
+  "learner_representation_robustness": [
+    {
+      "count": 100,
+      "index": 0,
+      "learner": "extra_trees",
+      "mean": 0.008769595401816897,
+      "representation": "composition",
+      "std": 0.03862937153628491
+    },
+    {
+      "count": 100,
+      "index": 1,
+      "learner": "extra_trees",
+      "mean": 0.002886423408472211,
+      "representation": "composition_context",
+      "std": 0.03436554324937012
+    },
+    {
+      "count": 100,
+      "index": 2,
+      "learner": "random_forest",
+      "mean": 0.010108820044145584,
+      "representation": "composition",
+      "std": 0.04824158295633305
+    },
+    {
+      "count": 100,
+      "index": 3,
+      "learner": "random_forest",
+      "mean": 0.011104036682215143,
+      "representation": "composition_context",
+      "std": 0.04347475891340892
+    },
+    {
+      "count": 100,
+      "index": 4,
+      "learner": "ridge",
+      "mean": -0.0036586034283877756,
+      "representation": "composition",
+      "std": 0.2737695629030144
+    },
+    {
+      "count": 100,
+      "index": 5,
+      "learner": "ridge",
+      "mean": 0.02529089699773252,
+      "representation": "composition_context",
+      "std": 0.05295798733416346
+    }
+  ],
+  "matched_specificity_validation": {
+    "methods": [
+      "equal_capacity_random_control",
+      "ionic_consensus",
+      "size_matched|caltech_adjacent_ionic|borg_wrong_mechanical|adjacent",
+      "size_matched|caltech_adjacent_ionic|borg_wrong_mechanical|wrong",
+      "size_matched|caltech_adjacent_ionic|ocx_wrong_catalysis|adjacent",
+      "size_matched|caltech_adjacent_ionic|ocx_wrong_catalysis|wrong",
+      "size_matched|obelix_adjacent_ionic|borg_wrong_mechanical|adjacent",
+      "size_matched|obelix_adjacent_ionic|borg_wrong_mechanical|wrong",
+      "size_matched|obelix_adjacent_ionic|ocx_wrong_catalysis|adjacent",
+      "size_matched|obelix_adjacent_ionic|ocx_wrong_catalysis|wrong",
+      "skill_matched_ocx_control",
+      "target_only"
+    ],
+    "metric_rows": 8400,
+    "reported_summary_sha256": "4e8ec791abf3d5289a31da12d3a3ced775e8240903279b5b0bbc05fd3be76b64",
+    "scopes": [
+      "coverage_matched_hard_ood|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+      "coverage_matched_hard_ood|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+      "coverage_matched|caltech_adjacent_ionic_vs_borg_wrong_mechanical",
+      "coverage_matched|caltech_adjacent_ionic_vs_ocx_wrong_catalysis",
+      "coverage_matched|obelix_adjacent_ionic_vs_borg_wrong_mechanical",
+      "coverage_matched|obelix_adjacent_ionic_vs_ocx_wrong_catalysis",
+      "hard_ood_q4"
+    ]
+  },
+  "outcome_audit": {
+    "entities_without_outcome": 7,
+    "frozen_entities": 7403,
+    "nonfinite_selected_values": 0,
+    "out_of_range_selected_values": 7,
+    "outcome_entities": 7396,
+    "unequal_curve_lists": 0
+  },
+  "preoutcome_artifact_hashes": {
+    "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md": "2bce9940d88dbcc82ef28efd62456275e29c20e4065c97602d365661dbe7f125",
+    "analysis/prepare_starrydata_reverse_transport.py": "d3e910dfa4260d29258570b11800ec4d6954683ca7cc850806f647744eb3b853",
+    "analysis/results/starrydata_reverse_hypothesis_cards.csv": "9a7920682cace1477ebcc5ccf198828de8d1790bd784bbbdb9fa9fd490750140",
+    "analysis/results/starrydata_reverse_policy_orders.csv": "fbcedf91eb772583b47bd77b45791e6b4454ba4887c841cd2ca70af08d2e66ea",
+    "analysis/results/starrydata_reverse_source_predictions.csv": "a3dd53c5b7ee2d53f4a204cb56218a87ff24fd0d96d1d7f732ac89b102605c1a",
+    "analysis/results/starrydata_reverse_source_quality.csv": "e76b9e60a18e938d20c86aeeb73a7a67d0f543156372afb950e76791719a3850",
+    "analysis/results/starrydata_reverse_target_metadata.csv": "a7e11defcae67291f7e9c7d31e42ae8af490f750ee19249fc2588a9e73cb4ab5",
+    "analysis/run_starrydata_reverse_transport.py": "d52c249f0179612ed04c0913f72f61fd07267a4bc2204daa9202fc5e2fc23c8e",
+    "analysis/starrydata_reverse_transport_design.json": "a389ac6fd927280e44d14c6885676f1ab2c622b630195ede5357699dec260566",
+    "analysis/starrydata_reverse_transport_implementation.json": "56184ac4b13d83bbf4f355eb2cec41e48ce23c00c9ed32ba2a09e290f425d0c8",
+    "analysis/verify_starrydata_reverse_preoutcome.py": "2a82b32e822339c410cad5ee6430d82fa2bd432628dfa2e5264f38fc9512df51"
+  },
+  "preoutcome_sha256": "438d449b1970556e5b31fa2d517b85488c55fd955243bb3e8c2d0ae26218dadf",
+  "reported_summary_sha256": "98f1ebefb1b7e315dba6b949d14c51b35807061c2036f1980597d466f570dea2",
+  "row_validation": {
+    "evaluation_units": 284,
+    "group_error_rows": 2215200,
+    "metric_rows": 117000
+  },
+  "status": "verified-complete",
+  "verification_mode": "portable",
+  "verifier_amendment_sha256": "b9842e6c51f7c4eaf6ab14099d72771d7ea7d576be4a7e1333855052fe9e5f8c"
+}

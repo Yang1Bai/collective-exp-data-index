@@ -1,0 +1,87 @@
+{
+  "design_name": "Clean outcome-unseen TRI OER second-family neighboring-knowledge validation",
+  "version": 1,
+  "frozen_utc": "2026-07-18T05:35:00Z",
+  "status": "file hash and outcome-free pickle schema verified; four paper-defined target sets and composition systems frozen; target fom bytes not decoded or inspected",
+  "parent_program": "analysis/outcome_unseen_neighbor_validation_program.json",
+  "replacement_protocol": "analysis/TRI_OER_CLEAN_REPLACEMENT_PROTOCOL.md",
+  "replaces_for_confirmation": "Caltech acid-OER target, which failed the outcome-free per-plate minimum and remains sensitivity-only",
+  "claim_guard": "All four composition sets and every source/control remain in the denominator. This clean target can validate or reject the second-family edge; it cannot be replaced after target access.",
+  "formal_implementation": "analysis/tri_oer_implementation.json",
+  "formal_runner": "analysis/run_tri_oer_neighbor.py",
+  "formal_verifier": "analysis/verify_tri_oer_neighbor_results.py",
+  "target_record": {
+    "record_url": "https://data.caltech.edu/records/7b106-nf257",
+    "doi": "10.22002/D1.1345",
+    "file": "tri_data_share.pck",
+    "official_md5": "f84665fd51185cce686e911fbd3bca53",
+    "sha256": "31bfd1fee2c56095844daad4aff0fdead298c4dcfb647c1b0b30f6ff2af8a5e1",
+    "allowed_metadata": "pickle opcode/schema inspection found comp, fom, sno, and runint arrays; fom raw bytes were not decoded; the official paper defines the four confirmatory plate IDs and element order"
+  },
+  "target": {
+    "entity": "composition-set identifier plus row identifier and normalized composition",
+    "primary_outcome": "fom: negative OER overpotential at 3 mA cm-2",
+    "direction": "maximize, as specified by the official paper",
+    "outer_unit": "one of the four dataset/plate identifiers",
+    "outer_evaluation": "leave-one-composition-set-out over all four sets",
+    "components": "outcome-free composition clusters within and across sets",
+    "representations": ["element fractions", "element fractions plus any outcome-free process/context array present in every set"],
+    "confirmatory_sets": {
+      "3496": ["Mn", "Fe", "Co", "Ni", "La", "Ce"],
+      "3851": ["Mn", "Fe", "Co", "Ni", "Cu", "Ta"],
+      "3860": ["Mn", "Fe", "Co", "Cu", "Sn", "Ta"],
+      "4098": ["Ca", "Mn", "Co", "Ni", "Sn", "Sb"]
+    },
+    "excluded_pickle_set": "3875 is present in the deposited pickle but absent from the official paper's Table 1 four-dataset benchmark; it is excluded before fom decoding",
+    "schema_shapes": {"3496": 2121, "3851": 2119, "3860": 2121, "4098": 2121},
+    "minimums": ["100 target entities", "4 independent sets", "20 entities in every held-out set", "40 outcome-free composition clusters"]
+  },
+  "sources": {
+    "same_reaction_reference": {
+      "id": "caltech_acid_oer",
+      "endpoint": "J_t200",
+      "role": "same OER reference; full source use is allowed only after acid target is formally downgraded"
+    },
+    "adjacent_expected_positive": [
+      {
+        "id": "caltech_orr_metal_oxide",
+        "doi": "10.22002/D1.1632",
+        "endpoint": "J.uAcm2_0.63_secondCA"
+      },
+      {
+        "id": "ocx_electrocatalysis",
+        "dataset": "ocx24-open-catalyst-experiments-2024",
+        "endpoint": "fe_h2"
+      }
+    ],
+    "wrong_controls": ["mpea-dataset-borg yield strength", "obelix-solid-electrolytes ionic conductivity"],
+    "leakage_exclusions": ["exact normalized composition", "plate/set/sample lineage", "DOI/article", "shared MEAD parent record"]
+  },
+  "prediction": {
+    "label_budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "repeats_per_outer_set": 100,
+    "primary_endpoint": "paired relative RMSE reduction on the held-out set and its highest outcome-free OOD quartile",
+    "absolute_gate": "positive augmented-model R2 on held-out set",
+    "methods": ["target only", "source only", "naive standardized pooling", "frozen stacking", "residual shrinkage", "mixture of experts"],
+    "learners": ["ridge", "Random Forest", "ExtraTrees"],
+    "representations": ["composition", "composition plus outcome-free shared context"],
+    "specificity_controls": ["source-size match", "source-skill match", "target-coverage match", "equal-capacity random feature", "source shuffle"]
+  },
+  "exploration": {
+    "budget": 20,
+    "co_primary": ["distinct-composition-cluster AUC20", "acquisitions to first distinct top-5-percent cluster"],
+    "policies": ["uniform family-first", "composition novelty family-first", "best same-reaction source", "best ORR source", "best OCx source", "entity consensus", "CCA family-first consensus", "CCA round-robin", "wrong-source portfolio", "shuffled-source portfolio"],
+    "mandatory_tradeoffs": ["entity recall20", "component recall20", "marginal unique components by source"]
+  },
+  "hypothesis_cards": {
+    "timing": "after outcome-free target metadata and source ranks but before target fom access",
+    "minimum": "one same-OER card, one adjacent-reaction card, and one consensus/complementarity card",
+    "required_fields": ["candidate region", "source evidence", "physical rationale", "OOD-matched target-only control", "falsifier", "planned phase/electrochemistry measurement"]
+  },
+  "inference": {
+    "unit": "held-out composition set and composition cluster",
+    "within_target": "paired set/cluster bootstrap and source-rank randomization with Holm correction",
+    "across_targets": "random-effects synthesis with Starrydata target-level effect and between-target heterogeneity; target-level effects remain visible"
+  }
+}

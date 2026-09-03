@@ -1,0 +1,32 @@
+{
+  "release_name": "One-way Stage 1 numeric release for the multi-stage battery CCA-v2 experiment",
+  "version": 2,
+  "frozen_utc": "2026-07-20T22:15:00Z",
+  "status": "authorized-stage1-only-after-disclosed-infrastructure-amendment",
+  "released_stage": "1",
+  "released_archives": 141,
+  "stage2_numeric_release": false,
+  "stage2_archives_authorized_for_download": 0,
+  "allowed_numeric_members_per_archive": ["exactly one *_ET_T23.csv", "exactly one *_AT_T23.csv"],
+  "allowed_nonnumeric_members_per_archive": ["the matching *_ET_T23_meta.txt", "the matching *_AT_T23_meta.txt", "ZIP directory and member names"],
+  "forbidden_access": [
+    "every archive whose frozen stage is 2",
+    "all CU, exCU, ZYK, ET_T10, ET_T45, AT_T10, and AT_T45 numeric data rows",
+    "any Stage 2 capacity, resistance, lifetime, trajectory, stopping, or high-performing-condition value"
+  ],
+  "allowlist_sha256": "5f4beeaa9555588e897f53b21596f6d174d132df16e4ef543fa904e9f1c4cf09",
+  "allowlist_audit_sha256": "33ede118528a4b7c9f404ebe75b56f4d1da704a49321ca8e943fbf91a1e490d8",
+  "archive_map_sha256": "56b532a14295bd1bfbcb374e445a619e69c1fb7cfaed21d36506b16dc0e490b5",
+  "endpoint_schema_sha256": "f823de805108913c7c24ad55168c52cbdc3270c3870643c2ed069e634c97449f",
+  "endpoint_extractor_sha256": "6ba0d69fe64e950fc72b7eb7e76f83d9b7fe9072b27dd81671edad58f7160287",
+  "design_sha256": "87f763dd88292cb5221d331427b0a7fe72b3e89140eb16dd2d1300b930ef839d",
+  "header_report_sha256": "f2b74c263dad0be2ed77fb5d876a1edc13e4052419c4128b43cb19c67babee80",
+  "runner_sha256": "13572d593155827600c17eb494efa7a2ca74198ca21aa16bc9a85ebe2c89ec29",
+  "allowlist_builder_sha256": "acdd75eeceb46a38cde11bf63a5e5b495bbe7d30f7bf8d3dc2c50c91d1532f16",
+  "infrastructure_amendment_path": "analysis/MULTISTAGE_BATTERY_STAGE1_RELEASE_INFRASTRUCTURE_AMENDMENT.md",
+  "infrastructure_amendment_sha256": "aa04b46193f5a2e7ea9595202a91124192b13f316de7d01e3e4e74666fab34f3",
+  "success_rule": "All 141 Stage 1 archives must be accounted for. Evaluable cells pass the frozen archive hash, unique ET_T23/AT_T23 mapping, 23-degree metadata, step-type block, time, current, and positive-capacity checks. A frozen extractor validity failure is retained as endpoint-missing without substitution. Completion requires zero download, hash, or infrastructure errors.",
+  "failure_rule": "No failing cell, file, step, temperature, endpoint, source, or target may be substituted. A protocol change requires a new disclosed amendment and cannot inspect Stage 2 outcomes.",
+  "next_seal": "After complete Stage 1 extraction, freeze source models, Stage 2 outer splits, source predictions, applicability fields, and at least one calendar plus one cycle hypothesis card before any Stage 2 numeric row is opened.",
+  "claim_guard": "Stage 1 outcomes are source-development information, not target evidence. They may generate models and hypotheses but cannot establish OOD improvement, transfer, discovery, or experiments saved until the still-sealed Stage 2 test is executed."
+}

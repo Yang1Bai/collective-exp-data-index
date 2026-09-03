@@ -1,0 +1,107 @@
+{
+  "design_name": "Outcome-informed method-development benchmark for a leave-one-target-program-out CCA borrowing gate",
+  "version": 1,
+  "frozen_utc": "2026-07-20T14:40:00Z",
+  "status": "frozen after all component edge outcomes were known and after Edison and Hypothesis Generation advice, but before executing this gate benchmark",
+  "claim_guard": "This benchmark may show whether a fixed meta-gate can recover useful decision structure without using the held-out target programme's outcomes. Because the gate family and features were motivated after inspecting the component studies, it is method development only. It cannot provide independent positive replication, prospective validation, or discovery acceleration.",
+  "scientific_question": "Can a simple credibility, compatibility, and abstention gate trained on other target programmes reduce harmful borrowing while retaining non-trivial coverage on a completely held-out programme?",
+  "inputs": [
+    {
+      "path": "analysis/results/knowledge_map_synthesis_edges.csv",
+      "sha256": "C452629C8331DAFE7EFF8DCA6E7B703BB2D34752EB10FA525F45EAAFCAB2A1E3"
+    },
+    {
+      "path": "analysis/results/starrydata_reverse_metrics.csv",
+      "sha256": "41FC69DE4A8907FDC8C692D3A175BA59CA5D5B91B5EC135853989F2128E10EC4"
+    },
+    {
+      "path": "analysis/results/starrydata_reverse_source_quality.csv",
+      "sha256": "E76B9E60A18E938D20C86AEEB73A7A67D0F543156372AFB950E76791719A3850"
+    },
+    {
+      "path": "analysis/results/tri_oer_metrics.csv",
+      "sha256": "9CD07077EFACD8774F1E94360BB629F621D67493D9CE2AF21CB70AC9ECF1A779"
+    },
+    {
+      "path": "analysis/results/tri_oer_source_quality.csv",
+      "sha256": "7AAF3DAA438765127BC468415F1726B1ECD525DAF33A95ED6FAE0720D70A8CE1"
+    }
+  ],
+  "estimand": {
+    "edge_utility": "paired relative RMSE reduction versus the target-only learner; positive values favor borrowing",
+    "decision_utility": "the selected edge utility for a target task, or zero when the policy abstains",
+    "clear_harm": "the edge's upper 95% interval is below zero",
+    "clear_benefit": "the edge's lower 95% interval is above zero",
+    "practical_rescue": "clear benefit and positive augmented-model R2 when absolute R2 is available"
+  },
+  "primary_cell_extensions": {
+    "starrydata": "budget 30, ExtraTrees, composition, frozen OOD quartile 4; source-specific frozen stacks only",
+    "tri_oer": "budget 30, ExtraTrees, element_fraction, dynamic OOD quartile 4; source-specific frozen stacks on all four plates"
+  },
+  "independent_program_clusters": {
+    "internal_te": ["te_zt"],
+    "internal_alloy": ["alloy_ys"],
+    "internal_catalysis": ["catalysis_h2"],
+    "internal_obelix": ["electrolyte_conductivity"],
+    "internal_aqueous": ["solubility", "hydration"],
+    "internal_photoswitch": ["photo_z_pipi"],
+    "internal_openpoly": ["polymer_tensile", "polymer_tm"],
+    "external_birdshot": ["birdshot_ys", "birdshot_uts", "birdshot_hardness"],
+    "external_matbench": ["matbench_steel_ys"],
+    "kit_temperature": ["kit_conductivity_minus_30_C"],
+    "calisol_temperature": ["calisol_conductivity_minus_40_C"],
+    "starrydata_reverse": ["starrydata_reverse_zt"],
+    "tri_oer": ["tri_oer_plate_3496", "tri_oer_plate_3851", "tri_oer_plate_3860", "tri_oer_plate_4098"]
+  },
+  "outcome_free_features": [
+    "neighborhood_score scaled to 0 to 1",
+    "source grouped OOF R2 clipped to -1 to 1",
+    "source credibility indicator: grouped OOF R2 greater than zero",
+    "strong physical or condition adjacency indicator",
+    "same-domain indicator",
+    "adjacent-condition indicator",
+    "cross-dataset indicator",
+    "distant or wrong-source control indicator",
+    "shuffled-source indicator"
+  ],
+  "meta_gate": {
+    "model": "weighted Ridge regression with alpha 10 and standardized features",
+    "outer_split": "leave one complete programme cluster out",
+    "training_weight": "each training programme cluster has total weight one, divided equally among its edges",
+    "eligibility": "source OOF R2 greater than zero; strong adjacency; not distant, wrong, or shuffled",
+    "admission": "eligible and leave-one-program predicted relative RMSE gain greater than zero",
+    "selection": "within each held-out target task select the admitted source with the highest predicted gain; abstain if none is admitted",
+    "fallback": "zero borrowing utility, representing target-only prediction"
+  },
+  "fixed_comparators": {
+    "never_borrow": "always abstain",
+    "always_best_credibility": "select the non-shuffled source with the highest source OOF R2",
+    "adjacency_only": "select the source with highest neighborhood score, breaking ties by source OOF R2",
+    "credibility_only": "select the source with highest positive source OOF R2",
+    "cca_rule": "require positive source OOF R2 and strong adjacency, reject wrong, distant, and shuffled sources, then rank by neighborhood and source OOF R2",
+    "oracle_upper_bound": "select the realized best positive edge or abstain; descriptive only and never a deployable comparator"
+  },
+  "inference": {
+    "independent_unit": "target programme cluster",
+    "within_program": "average task-level decision utility and task-level harm indicators",
+    "uncertainty": "10000 programme-cluster bootstrap resamples with seed 20260720",
+    "primary_contrasts": [
+      "CCA meta-gate minus always-best-credibility",
+      "CCA meta-gate minus never-borrow"
+    ],
+    "multiplicity": "Holm correction over exactly the two primary contrasts using paired programme-level sign-flip randomization with the prespecified one-sided alternative that the CCA meta-gate has greater utility",
+    "secondary": "CCA rule, adjacency-only, credibility-only, coverage, clear-harm admission, clear-benefit retention, and available absolute R2 are descriptive"
+  },
+  "nontriviality_guard": {
+    "minimum_programme_coverage": 0.2,
+    "failure": "A gate below 20% programme coverage is classified as trivial abstention even if it avoids harm"
+  },
+  "required_outputs": [
+    "analysis/results/cca_leave_one_program_edge_panel.csv",
+    "analysis/results/cca_leave_one_program_predictions.csv",
+    "analysis/results/cca_leave_one_program_policy_summary.csv",
+    "analysis/results/cca_leave_one_program_contrasts.csv",
+    "analysis/results/cca_leave_one_program_summary.json",
+    "analysis/results/cca_leave_one_program_VERIFIED.json"
+  ]
+}

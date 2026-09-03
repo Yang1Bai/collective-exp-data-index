@@ -1,13 +1,19 @@
 # Analysed data resources
 
-[`ANALYSED_RESOURCE_LEDGER.csv`](ANALYSED_RESOURCE_LEDGER.csv) records the 31
-external resources that materially entered a donor model, recipient model,
-control, readiness screen, formal audit, or AI-generated research path. It is
-narrower than the discovery catalog and broader than the few claim-bearing
-examples retained in the manuscript.
+Start with the collaborator-facing
+[`DATABASE_GUIDE.md`](DATABASE_GUIDE.md). It connects the complete broad
+catalog to every task-specific resource that entered this project and explains
+the difference between discovery, analysis, and paper evidence.
 
-The scientific disposition of every retained positive, null, harmful,
-abstaining, and non-evaluable edge is recorded separately in
+[`ANALYSED_RESOURCE_LEDGER.csv`](ANALYSED_RESOURCE_LEDGER.csv) records every
+named external resource that materially entered an audit, donor model,
+recipient model, control, readiness screen, or Edison-generated research path.
+It is intentionally broader than the few databases showcased in the main
+paper and narrower than the 288-resource discovery catalog.
+
+The ledger distinguishes `catalogued`, `analysed`, `audit-only`, and
+`AI-proposed` resources. Inclusion does not imply that an edge was successful.
+The scientific disposition of each attempted edge is maintained separately in
 [`research/evidence/ATTEMPT_LEDGER.csv`](../evidence/ATTEMPT_LEDGER.csv).
 
 ## Private collaborator snapshot
@@ -18,7 +24,18 @@ files are GitHub pre-release assets rather than Git blobs. The file manifest
 and source matrix distinguish records with confirmed redistribution terms from
 `verify-upstream`, unknown, and collaborator-restricted inputs.
 
-Every upstream dataset retains its own licence. The private snapshot is an
-access mechanism for research collaboration, not a public relicensing
-decision. If repository visibility changes, remove or replace the private
-assets before the change.
+The private snapshot is an access mechanism for research collaboration, not a
+public relicensing decision. If repository visibility changes, remove or
+replace the private assets before that change.
+
+## Redistribution rule
+
+Third-party raw files are not committed from the local `Dataset/`, `data/`, or
+temporary download directories. Each upstream dataset keeps its own licence.
+Where a licence is `Unknown` or `verify-upstream`, users must inspect the linked
+record before downloading, redistributing, or building a derivative release.
+The repository contains only original analysis code, hashes, compact derived
+summaries, and small validation artefacts whose inclusion is necessary for the
+scientific audit trail.
+
+The broader resource index is available in [`catalog/catalog.csv`](../../catalog/catalog.csv).

@@ -10,11 +10,11 @@
     "access": "open",
     "license": "CC-BY-4.0 (data), MIT (code)",
     "doi": "10.48550/arXiv.2411.11783",
-    "homepage_url": "https://fair-chem.github.io/core/datasets/ocx24.html",
+    "homepage_url": "https://fair-chem.github.io/fair-chemistry-papers/#open-catalyst-experiments-2024-ocx24",
     "repository": "GitHub (FAIR-Chem/fairchem)",
     "associated_paper": "Abed et al., 'Open Catalyst Experiments 2024 (OCx24)', arXiv:2411.11783 (2024)",
     "year": 2024,
-    "verified_via": "https://fair-chem.github.io/core/datasets/ocx24.html"
+    "verified_via": "https://fair-chem.github.io/fair-chemistry-papers/#open-catalyst-experiments-2024-ocx24"
   },
   {
     "id": "a-lab-autonomous-inorganic-synthesis",

@@ -1,0 +1,89 @@
+{
+  "implementation_name": "Frozen TRI OER second-family prediction and exploration implementation",
+  "version": 1,
+  "frozen_utc": "2026-07-18T05:58:00Z",
+  "outcome_status_at_freeze": "four target fom buffers remain undecoded; target compositions, sources, matched controls, policies, and cards are hash-frozen",
+  "claim_guard": "All four plate-level targets, methods, controls, and cards remain in the result. No plate, learner, source, or representation may be dropped based on target FOM.",
+  "target_join": {
+    "procedure": "After PREOUTCOME verification, decode fom only for plates 3496, 3851, 3860, and 4098 and join by frozen original_row.",
+    "validity": "finite FOM only; no range trimming after reveal",
+    "direction": "larger is better because FOM is negative overpotential"
+  },
+  "few_shot_design": {
+    "independent_targets": "each of the four composition sets is a separate target unit",
+    "label_budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "repeats_per_plate": 100,
+    "sampling": "complete outcome-free composition clusters selected by SHA-256 order within the target plate",
+    "evaluation": "all unlabelled entities from the same plate",
+    "primary_ood": "highest quartile of nearest-selected-label distance recalculated from composition only within each repeat"
+  },
+  "representations": {
+    "element_fraction": "118 element-fraction vector",
+    "periodic_summary": "weighted mean, standard deviation, minimum and maximum of atomic number, periodic group, period, Pauling electronegativity and covalent radius, plus stoichiometric entropy and element count"
+  },
+  "learners": {
+    "ridge": {"alpha": 10.0, "scaling": true},
+    "random_forest": {"n_estimators": 300, "min_samples_leaf": 2, "max_features": 0.7},
+    "extra_trees": {"n_estimators": 300, "min_samples_leaf": 2, "max_features": 0.7}
+  },
+  "prediction_methods": [
+    "target_only",
+    "acid_same_reaction_frozen_stack",
+    "orr_adjacent_frozen_stack",
+    "ocx_adjacent_frozen_stack",
+    "adjacent_consensus_frozen_stack",
+    "all_neighbor_frozen_stack",
+    "source_only_calibrated",
+    "naive_domain_standardized_pooling",
+    "cross_fitted_residual_shrinkage",
+    "cross_fitted_mixture_of_experts",
+    "wrong_source_frozen_stack",
+    "shuffled_source_frozen_stack",
+    "equal_capacity_random_feature_stack"
+  ],
+  "primary_prediction_family": {
+    "primary_cell": "n=30, ExtraTrees, element_fraction, dynamic target-plate OOD quartile 4",
+    "contrasts": [
+      "all_neighbor_frozen_stack minus target_only",
+      "all_neighbor_frozen_stack minus acid_same_reaction_frozen_stack",
+      "adjacent_consensus_frozen_stack minus acid_same_reaction_frozen_stack",
+      "all_neighbor_frozen_stack minus best wrong/shuffled/equal-capacity control"
+    ],
+    "absolute_gate": "all-neighbor R2 > 0",
+    "replication_gate": "same effect direction on at least three of four plates",
+    "robustness": "same direction in at least two learners and both representations; all cells retained",
+    "multiplicity": "Holm over four named primary contrasts"
+  },
+  "matched_specificity": {
+    "source_size": "pre-frozen group-preserving equal-entity source/control ranks",
+    "source_skill": "pre-frozen closest wrong-source grouped OOF Spearman match; report gap and do not call matched when gap exceeds 0.05",
+    "target_coverage": "pre-frozen same-decile nearest-source-distance target scopes",
+    "capacity": "five frozen random features, equal to five real source channels",
+    "shuffle": "one pre-frozen independent permutation per real source"
+  },
+  "exploration": {
+    "budget": 20,
+    "top_component": "top ceil(5 percent) composition clusters within each plate ranked by maximum FOM; median and mean are sensitivities",
+    "co_primary": ["distinct-top-cluster AUC20", "acquisitions to first distinct top cluster"],
+    "mandatory": ["entity recall20", "component recall20", "unique components contributed by each source"],
+    "multiplicity": "Holm over CCA consensus versus random, novelty, same-reaction, best adjacent single, wrong, and shuffled policies"
+  },
+  "hypothesis_cards": {
+    "artifact": "analysis/results/tri_oer_hypothesis_cards.csv",
+    "test": "paired FOM difference against every frozen OOD-distance-matched control with 10,000 paired swaps",
+    "multiplicity": "Holm over three cards",
+    "reporting": "all cards and failures retained"
+  },
+  "inference": {
+    "within_plate": "paired repeat and composition-cluster bootstrap, 10,000 resamples",
+    "across_plates": "random-effects estimate over four plate-level effects with tau-squared and I-squared",
+    "across_targets": "random-effects synthesis of fixed Starrydata and TRI target-level effects; no seed interval is treated as dataset replication"
+  },
+  "compute": {
+    "preferred": "Balam full-node CPU parallel",
+    "threads_per_fit": 1,
+    "parallel_unit": "plate x repeat x budget x learner x representation",
+    "required_completion": "input/design/sentinel hashes, all four plates, row arithmetic, finite predictions, method/policy/card completeness, and independent verifier"
+  }
+}

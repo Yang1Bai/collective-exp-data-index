@@ -1,0 +1,6 @@
+target,source,permutation_p_raw_refined,permutation_p_holm_refined,permutations,amendment
+te_zt,te_power_factor,0.013,0.039,999,uniform-post-discovery-resolution-refinement
+alloy_ys,alloy_uts,0.001,0.005,999,uniform-post-discovery-resolution-refinement
+alloy_ys,alloy_hardness,0.08,0.16,999,uniform-post-discovery-resolution-refinement
+electrolyte_conductivity,te_thermal,0.76,0.76,999,uniform-post-discovery-resolution-refinement
+photo_z_pipi,photo_e_pipi,0.001,0.005,999,uniform-post-discovery-resolution-refinement

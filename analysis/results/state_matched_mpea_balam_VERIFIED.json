@@ -1,0 +1,37 @@
+{
+  "status": "verified-complete",
+  "verified_utc": "2026-07-24T00:19:49.404189+00:00",
+  "design_sha256": "97913a1e53f12ad433a2583b4f548b98c88a74f1561407eba86fde5bbfc0c8b2",
+  "metrics_sha256": "4adba670f4c3eabe329fa0a5d40ab84bcb570e96d44c4eecf37e30031e4eb9a2",
+  "predictions_sha256": "1a7f823a7c30cd69c73ed927ed6661b2a9552fbc7fb9c8bc2c66bb6c84f3f810",
+  "summary_sha256": "99b22362fb514918f02a5ad3fb04904263c43c95f4097baad14338566d43faa8",
+  "bootstrap_sha256": "72eedb89f20b7e3cb4e36f69612e9bad0b4622335332ede92026b08c741c0384",
+  "bootstrap_summary_sha256": "c43d78762211dbdb5cbf6443ec6fd8adaaa136bfa81e6a7f77a88306cccda75c",
+  "primary_runs_per_scope": 60,
+  "prediction_rows": 25680,
+  "evaluation_groups": 59,
+  "descriptive_gate": {
+    "checks": {
+      "mean_q4_gain": true,
+      "positive_q4_runs": true,
+      "positive_q4_r2": true,
+      "ood_specificity": true,
+      "beats_shuffled": true
+    },
+    "pass": true,
+    "decision": "eligible-for-frozen-balam-confirmation"
+  },
+  "primary_bootstrap_gate": {
+    "checks": {
+      "q4_gain_threshold": true,
+      "q4_gain_interval_positive": true,
+      "positive_q4_run_count": true,
+      "q4_augmented_r2_positive": true,
+      "ood_specificity_point_positive": true,
+      "beats_shuffled_interval_positive": true
+    },
+    "pass": true,
+    "decision": "stable-on-this-program"
+  },
+  "claim_guard": "Because MPEA outcomes were inspected during method selection, this is a post-selection robustness validation, not an independent confirmation. It may establish resampling stability and estimate the attainable effect on this dataset; it cannot establish prospective discovery or a universal transfer law."
+}

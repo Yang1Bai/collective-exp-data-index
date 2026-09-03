@@ -1,0 +1,52 @@
+{
+  "program": "Raw-source cross-laboratory fade transfer",
+  "version": 2,
+  "frozen_utc": "2026-07-29T22:12:00Z",
+  "recipient_life_or_post_cycle_100_statistics_opened": false,
+  "recipient_early_covariates_used": true,
+  "reason": "Remove source-specific capacity calibration from the response representation after an outcome-free support audit.",
+  "eligibility_rule": {
+    "donor_batch_out_spearman_at_least": 0.5,
+    "donor_absolute_log_life_r2_above": 0.0
+  },
+  "selection_rule_among_eligible": "minimum leave-one-batch-out RMSE",
+  "primary": {
+    "transfer_object": "donor mapping from normalized within-cell cycles-10-to-100 response to log10 cycles-to-80%-SOH",
+    "features": [
+      "log10 variance of capacity-normalized discharge-branch DeltaQ(V) between cycles 100 and 10",
+      "log10 absolute minimum of capacity-normalized discharge-branch DeltaQ(V) between cycles 100 and 10",
+      "discharge-capacity slope divided by Qref",
+      "discharge-capacity intercept divided by Qref",
+      "Qd(100)/Qref",
+      "coulombic-efficiency standard deviation over cycles 10-100"
+    ],
+    "excluded_lab_offset": "mean coulombic efficiency",
+    "learner": {
+      "class": "RandomForestRegressor",
+      "n_estimators": 800,
+      "min_samples_leaf": 2,
+      "max_features": 0.8,
+      "random_state": 20260729
+    },
+    "donor_batch_out": {
+      "spearman": 0.6496687480884626,
+      "rmse_log10_life": 0.1272099492081447,
+      "r2_log10_life": 0.4426831112952302
+    }
+  },
+  "support_rule": "Mahalanobis distance on the six normalized response features; donor 90th percentile; abstained recipient cells remain in the denominator and fall back to recipient-only prediction.",
+  "formal_controls_required": [
+    "recipient own-curve extrapolation",
+    "frozen-label shuffled MATR mapping",
+    "CALCE LCO wrong-chemistry mapping with the same normalized response contract",
+    "unconditional MATR mean",
+    "original coefficient-posterior sensitivity"
+  ],
+  "input_hashes_sha256": {
+    "donor_table": "f5381018df0f5e41f347b3181a93616564adb2d46ecd4347e4686bd339826312",
+    "candidate_methods_csv": "6f0438bd292ea1f51b4384c22d44c1366657e9b7948727fb455ed318f5e7b627",
+    "candidate_predictions_csv_gz": "f71922bbb4a7ffa04780f9cf43f932d10fa99ad562079e954c38504c3fe7c273",
+    "development_script": "762bbad603cd41392f842a89c21c18a34e1b8bcc462a794b15b5e073e5111b74"
+  },
+  "claim_guard": "This harmonization used recipient candidate-time covariates but no recipient outcomes. A pass is an outcome-sealed, covariate-informed cross-laboratory transfer result, not a pristine external confirmation."
+}

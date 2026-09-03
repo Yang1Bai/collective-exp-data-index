@@ -1,0 +1,180 @@
+{
+  "baselines": {
+    "Au-rich": {
+      "extra_trees_composition": {
+        "mae": 0.6529130476515371,
+        "r2": -113.58253357811122,
+        "rmse": 0.6984642831012391,
+        "spearman": -0.27506074417000187
+      },
+      "pls_curve": {
+        "mae": 0.3522606493300861,
+        "r2": -42.322131548966276,
+        "rmse": 0.4294769900575406,
+        "spearman": -0.21175467770461123
+      }
+    },
+    "Ir-rich": {
+      "extra_trees_composition": {
+        "mae": 0.2032174563817667,
+        "r2": -5.599792819554374,
+        "rmse": 0.2769446162339631,
+        "spearman": -0.5981262409463541
+      },
+      "pls_curve": {
+        "mae": 0.15153036416776802,
+        "r2": -1.97026808806599,
+        "rmse": 0.18579139704287556,
+        "spearman": -0.5496341781863412
+      }
+    },
+    "Rh-rich": {
+      "extra_trees_composition": {
+        "mae": 0.45406186195029136,
+        "r2": -3.8871537915694567,
+        "rmse": 0.5163390862009826,
+        "spearman": -0.2825712247729777
+      },
+      "pls_curve": {
+        "mae": 0.5480874405795257,
+        "r2": -5.615746358819112,
+        "rmse": 0.600753655517141,
+        "spearman": -0.0008861818000794707
+      }
+    }
+  },
+  "dataset": {
+    "programs": {
+      "seccm_Au-rich": 322,
+      "seccm_Ir-rich": 322,
+      "seccm_Rh-rich": 322
+    },
+    "samples": 966,
+    "targets": {
+      "log10_k0": 966
+    },
+    "unique_groups": 3,
+    "with_curves": 966,
+    "with_surface_composition": 966,
+    "with_targets": 966,
+    "with_uncertainty": 966
+  },
+  "evidence_boundary": "Representation benchmark only: log10(k0) was fitted from the input LSV, so this does not independently validate catalyst discovery.",
+  "held_out_unit": "complete composition library",
+  "representation_gate": {
+    "full_minus_composition_spearman_ge_0_10": false,
+    "median_full_spearman_ge_0_70": false,
+    "passed": false,
+    "values": {
+      "composition_spearman_median": -0.09984057353988025,
+      "difference": -0.14175783906054518,
+      "full_spearman_median": -0.24159841260042542
+    }
+  },
+  "seed": 20260731,
+  "status": "complete",
+  "variants": {
+    "Au-rich": {
+      "composition_only": {
+        "best_epoch": 70,
+        "metrics": {
+          "mae": 0.6882491564650998,
+          "r2": -116.86359256497921,
+          "rmse": 0.7083939274457851,
+          "spearman": 0.12110318581548407
+        },
+        "parameter_count": 187638,
+        "validation_metrics": {
+          "mae": 0.03226918050121818,
+          "r2": 0.9602941636989378,
+          "rmse": 0.0450604259192106,
+          "spearman": 0.9740283704301695
+        }
+      },
+      "full": {
+        "best_epoch": 50,
+        "metrics": {
+          "mae": 1.098374074413568,
+          "r2": -284.9415377657124,
+          "rmse": 1.1033762118282937,
+          "spearman": -0.12345926843544794
+        },
+        "parameter_count": 252822,
+        "validation_metrics": {
+          "mae": 0.03139097009245352,
+          "r2": 0.9655303540002365,
+          "rmse": 0.04198426264204193,
+          "spearman": 0.9734440472071657
+        }
+      }
+    },
+    "Ir-rich": {
+      "composition_only": {
+        "best_epoch": 64,
+        "metrics": {
+          "mae": 0.1525006765508244,
+          "r2": -1.7082654455838302,
+          "rmse": 0.1774080776741495,
+          "spearman": -0.09984057353988025
+        },
+        "parameter_count": 187638,
+        "validation_metrics": {
+          "mae": 0.03424854256776499,
+          "r2": 0.9740374867831364,
+          "rmse": 0.04995972674916008,
+          "spearman": 0.8417022258101718
+        }
+      },
+      "full": {
+        "best_epoch": 76,
+        "metrics": {
+          "mae": 0.44065819336092077,
+          "r2": -23.29457243995248,
+          "rmse": 0.5313521055909913,
+          "spearman": -0.6319673146103542
+        },
+        "parameter_count": 252822,
+        "validation_metrics": {
+          "mae": 0.027883894930127617,
+          "r2": 0.9861363139364611,
+          "rmse": 0.03650783228751383,
+          "spearman": 0.9699534847960637
+        }
+      }
+    },
+    "Rh-rich": {
+      "composition_only": {
+        "best_epoch": 78,
+        "metrics": {
+          "mae": 0.554436037684371,
+          "r2": -5.666896484590061,
+          "rmse": 0.6030715692284079,
+          "spearman": -0.417708685184473
+        },
+        "parameter_count": 187638,
+        "validation_metrics": {
+          "mae": 0.02859831060374925,
+          "r2": 0.9235195947707955,
+          "rmse": 0.04338042541802939,
+          "spearman": 0.9417752662130473
+        }
+      },
+      "full": {
+        "best_epoch": 79,
+        "metrics": {
+          "mae": 0.5362901018083421,
+          "r2": -5.286504345453982,
+          "rmse": 0.5856142134426665,
+          "spearman": -0.24159841260042542
+        },
+        "parameter_count": 252822,
+        "validation_metrics": {
+          "mae": 0.025263045865874308,
+          "r2": 0.9550528189828787,
+          "rmse": 0.033255994983891576,
+          "spearman": 0.9425364240956444
+        }
+      }
+    }
+  }
+}

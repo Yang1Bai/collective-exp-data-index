@@ -1,0 +1,18 @@
+{
+  "amendment": "Stage 2 trailing time_to_sec header extension",
+  "version": 4,
+  "frozen_utc": "2026-07-20T23:50:00Z",
+  "evidence_scope": "CSV header line only; affected numeric data rows remained unopened.",
+  "accepted_headers": [
+    ["run_time", "c_vol", "c_cur", "c_surf_temp", "amb_temp", "step_type"],
+    ["run_time", "c_vol", "c_cur", "c_surf_temp", "amb_temp", "step_type", "time_to_sec"]
+  ],
+  "time_to_sec_use": "ignored",
+  "time_source_unchanged": "run_time",
+  "current_source_unchanged": "c_cur",
+  "section_source_unchanged": "step_type",
+  "rejected": "Every other header, reordered column, or arbitrary extension.",
+  "numeric_endpoint_change": false,
+  "stage2_outcomes_opened_for_affected_files_before_amendment": false,
+  "claim_guard": "This accepts an unused trailing derived-time column and cannot select or alter a capacity value."
+}

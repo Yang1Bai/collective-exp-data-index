@@ -1,0 +1,28 @@
+{
+  "baseline_eligible_pairs": 92,
+  "bootstrap_rows": 20000,
+  "claim_guard": "The unchanged CALiSol ranking did not replicate against the strongest three-anchor recipient-only baseline in the frozen FINALES primary phase.",
+  "decision": "not-replicated",
+  "donor_eligible_pairs": 98,
+  "evaluation_formulations": 16,
+  "sha256": {
+    "finales_rank_replication_bootstrap.csv": "8a66f657558edc11295b71f4c0ae35124ce5a8adf5083c37d26a7d632b0552ed",
+    "finales_rank_replication_candidates.csv": "b9cd1b47d27a09aea0e50dea0eae538427260e7a6e4210d7cadb2a8f2c385ebb",
+    "finales_rank_replication_metrics.csv": "7fc19e1d89b5dfc7dd3b14c253fb071a5b478f47f0a2b887cbfa5e42d1a95c65",
+    "finales_rank_replication_secondary_candidates.csv": "8015606cc807e12944cb66007ff8a620807536ce0b019e324a15cd268669d55c",
+    "finales_rank_replication_shuffled_null.csv": "3ac568abb9993289d41a68735d10ffd322fc59ec3cc6af886c2ec0e2b5b3f240",
+    "finales_rank_replication_summary.json": "bb321759d3a086c2dde2e68008bea23b16b93462a505b02c9cb9635b84c3009a"
+  },
+  "shuffled_control_rows": 2000,
+  "status": "independently-verified-complete",
+  "verified_primary": {
+    "baseline_concordance": 0.782608695652174,
+    "bootstrap_ci95": [
+      -0.2932013494453841,
+      0.09592606894184498
+    ],
+    "concordance_advantage": -0.08873114463176579,
+    "donor_concordance": 0.6938775510204082,
+    "permutation_p": 0.13093453273363317
+  }
+}

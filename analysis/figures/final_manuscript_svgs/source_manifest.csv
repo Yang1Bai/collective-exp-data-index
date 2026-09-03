@@ -1,0 +1,13 @@
+file,role,tracked_svg,evidence_source
+Figure_1.svg,full manuscript Figure 1,analysis/figures/final_manuscript_svgs/Figure_1.svg,paper/claims/claim_manifest.csv
+Figure_1a.svg,standalone Figure 1a,analysis/figures/final_manuscript_svgs/Figure_1a.svg,research/data/ANALYSED_RESOURCE_LEDGER.csv
+Figure_1b.svg,standalone Figure 1b,analysis/figures/final_manuscript_svgs/Figure_1b.svg,analysis/bamboomixer_response_transfer_design.json
+Figure_1c.svg,standalone Figure 1c,analysis/figures/final_manuscript_svgs/Figure_1c.svg,analysis/results/transfer_screening.json;paper/models/README.md
+Figure_1d.svg,standalone Figure 1d,analysis/figures/final_manuscript_svgs/Figure_1d.svg,paper/claims/claim_manifest.csv
+Figure_2.svg,full manuscript Figure 2,analysis/figures/final_manuscript_svgs/Figure_2.svg,analysis/results/multi_target_ood_summary.json
+Figure_3.svg,full manuscript Figure 3,analysis/figures/final_manuscript_svgs/Figure_3.svg,analysis/results/bamboomixer_LiAsF6_only_summary.json
+Figure_4.svg,full manuscript Figure 4,analysis/figures/final_manuscript_svgs/Figure_4.svg,analysis/results/bamboomixer_cross_database_interaction_summary.json;analysis/results/finales_rank_replication_summary.json
+Figure_4a.svg,standalone Figure 4a,analysis/figures/final_manuscript_svgs/Figure_4a.svg,analysis/results/bamboomixer_cross_database_interaction_summary.json
+Figure_4b.svg,standalone Figure 4b,analysis/figures/final_manuscript_svgs/Figure_4b.svg,analysis/results/bamboomixer_recipient_baseline_stress_test_summary.json
+Figure_4c.svg,standalone Figure 4c,analysis/figures/final_manuscript_svgs/Figure_4c.svg,analysis/results/bamboomixer_cross_database_interaction_summary.json
+Figure_4d.svg,standalone Figure 4d,analysis/figures/final_manuscript_svgs/Figure_4d.svg,analysis/results/finales_rank_replication_summary.json

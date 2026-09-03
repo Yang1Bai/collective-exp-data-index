@@ -1,0 +1,31 @@
+{
+  "anchor_metric_rows": 3200,
+  "claim_guard": "Retrospective system-held-out reanalysis within one published experimental programme; cannot establish cross-laboratory transfer or prospective discovery.",
+  "decisions": {
+    "A": {
+      "classification": "abstain-or-negative",
+      "five_label_gate": false,
+      "zero_label_gate": false
+    },
+    "B": {
+      "classification": "ranking-only",
+      "five_label_gate": false,
+      "zero_label_gate": true
+    },
+    "C": {
+      "classification": "abstain-or-negative",
+      "five_label_gate": false,
+      "zero_label_gate": false
+    },
+    "D": {
+      "classification": "abstain-or-negative",
+      "five_label_gate": false,
+      "zero_label_gate": false
+    }
+  },
+  "shuffle_rows": 500,
+  "source_model_rows": 9,
+  "status": "verified-complete-internal",
+  "summary_sha256": "30275cff42d019e70c2ee21925bbb1a339b1737207ca0a63a369b66bb16bcfe8",
+  "zero_label_rows": 8
+}

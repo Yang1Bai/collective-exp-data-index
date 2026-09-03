@@ -1,0 +1,26 @@
+{
+  "analysis_status": "post-outcome-sample-equivalence-uncertainty-diagnostic",
+  "decision_policy": "does not redefine the frozen rescue decision or its point-estimate gate",
+  "resampled_units": [
+    "unique_formulations",
+    "target_training_repetitions_independently_within_each_curve_budget"
+  ],
+  "bootstrap_replicates": 5000,
+  "target_budget": 30,
+  "point_target_equivalent_n": 47.816832200442676,
+  "point_target_sample_fraction_saved": 0.37260586660690026,
+  "bootstrap_target_equivalent_n_95": [
+    38.34087131840973,
+    59.70784223733069
+  ],
+  "bootstrap_target_sample_fraction_saved_95": [
+    0.21754516868090906,
+    0.4975534184302318
+  ],
+  "bootstrap_probability_fraction_saved_at_least_30pct": 0.8038,
+  "interpolation_status_counts": {
+    "interpolated": 4996,
+    "right-censored-at-largest-learning-curve-budget": 4
+  },
+  "limitation": "This conditional bootstrap quantifies formulation and target-subset stability in the observed KIT campaign; it is not prospective or cross-campaign uncertainty."
+}

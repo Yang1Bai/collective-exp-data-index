@@ -1,0 +1,110 @@
+{
+  "status": "retrospective-screen-failed",
+  "scientific_effect_verified": false,
+  "promotion_allowed": false,
+  "design": {
+    "path": "analysis/catalyst_numeric_expert_router_design.json",
+    "sha256": "f17816215d3bd649ef3fc642dd10eac6156f96d6452257386759b0f89b2365fa"
+  },
+  "detailed_report": {
+    "path": "analysis/results/catalyst_numeric_expert_router.json",
+    "sha256": "25946e1ad829f6b2680975cbf5f37c262562f3c354ccec7ce89cdf766f8e0367",
+    "bytes": 181291
+  },
+  "edge_inventory": {
+    "total": 34,
+    "unique_donor_programmes": 13,
+    "suites": {
+      "alloy_yield_strength": 6,
+      "ocx24_fe_co": 2,
+      "seccm_her": 6,
+      "specgen": 20
+    },
+    "target_outcomes_in_features": false,
+    "programme_identity_in_features": false
+  },
+  "learner": {
+    "family": "three-output standardized Ridge regression",
+    "features": 10,
+    "primary_split": "leave-one-suite-out",
+    "secondary_split": "leave-one-donor-programme-out",
+    "nested_alpha_grid": [0.1, 1.0, 10.0, 100.0]
+  },
+  "primary_leave_one_suite_out": {
+    "numeric_router_median_spearman": 0.019443115811764018,
+    "numeric_router_mean_spearman": 0.05809215854693145,
+    "always_standard_median_spearman": 0.02559177248226826,
+    "median_gain_over_always_standard": -0.006148656670504241,
+    "paired_group_bootstrap_ci90": [-0.08629969021646264, 0.03398081426938454],
+    "numeric_router_harmful_transfer_rate": 0.4411764705882353,
+    "always_standard_harmful_transfer_rate": 0.47058823529411764,
+    "oracle_expert_agreement": 0.17647058823529413,
+    "useful_edge_retention": 0.875,
+    "non_abstain_fraction": 1.0,
+    "out_of_fold_predicted_vs_realized_spearman": {
+      "standard": -0.13216195569136746,
+      "mhar": 0.048128342245989296,
+      "ensemble": -0.0615737203972498
+    },
+    "selected_alpha_by_fold": {
+      "alloy_yield_strength": 100.0,
+      "ocx24_fe_co": 100.0,
+      "seccm_her": 100.0,
+      "specgen": 100.0
+    },
+    "qualification_gate_passed": false
+  },
+  "secondary_leave_one_donor_programme_out": {
+    "numeric_router_median_spearman": 0.0,
+    "numeric_router_mean_spearman": 0.05028487292357126,
+    "always_standard_median_spearman": 0.02559177248226826,
+    "median_gain_over_always_standard": -0.02559177248226826,
+    "paired_group_bootstrap_ci90": [-0.10162936317672729, 0.025111781393613218],
+    "numeric_router_harmful_transfer_rate": 0.3235294117647059,
+    "always_standard_harmful_transfer_rate": 0.47058823529411764,
+    "oracle_expert_agreement": 0.4583333333333333,
+    "useful_edge_retention": 0.75,
+    "non_abstain_fraction": 0.7058823529411765,
+    "out_of_fold_predicted_vs_realized_spearman": {
+      "standard": -0.3240641711229947,
+      "mhar": 0.11657754010695186,
+      "ensemble": -0.15049656226126812
+    },
+    "qualification_gate_passed": false
+  },
+  "baselines": {
+    "always_standard_median_spearman": 0.02559177248226826,
+    "always_mhar_median_spearman": 0.010679473069849343,
+    "always_ensemble_median_spearman": 0.019443115811764018,
+    "deterministic_target_free_router": {
+      "median_spearman": 0.0,
+      "mean_spearman": 0.06977826043510281,
+      "harmful_transfer_rate": 0.23529411764705882
+    },
+    "oracle_upper_bound_median_spearman": 0.06688074775909128
+  },
+  "decision": {
+    "continue_model_search_on_same_edges": false,
+    "return_to_llm_or_opd_now": false,
+    "reason": "The current target-free RouterState does not predict expert utility reliably across held-out suites or donors. Harm decreases, but median benefit and bootstrap gates fail in both splits.",
+    "next_valid_step": "Collect genuinely new independent transfer edges and improve upstream state variables such as endpoint alignment, process conditions, active-site descriptors, and calibrated source-validation uncertainty before retraining any router."
+  },
+  "verification": {
+    "focused_tests": {
+      "passed": 94,
+      "skipped": 1,
+      "failed": 0
+    },
+    "full_repository_tests": {
+      "passed": 182,
+      "skipped": 19,
+      "failed": 12,
+      "numeric_router_related_failures": 0,
+      "failure_scope": "Pre-existing unrelated missing generated artifacts, registry/freeze mismatches, figure exports, and checkpoint compatibility."
+    },
+    "ruff_format_check": "passed",
+    "ruff_check": "passed",
+    "json_validation": "passed",
+    "git_diff_check": "passed"
+  }
+}

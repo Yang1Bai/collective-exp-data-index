@@ -1,0 +1,196 @@
+{
+  "artifact_manifest": {
+    "domain_alignment_screening": {
+      "design_path": "analysis/catalyst_mhar_domain_alignment_design.json",
+      "design_sha256": "23f6b17e0f2fe29676fde34c237ffdb838e235d6c17991db03de0e743df84b1e",
+      "path": "analysis/results/catalyst_mhar_domain_alignment_screening.json",
+      "seeds": [
+        20260731
+      ],
+      "sha256": "e27e5b6ba89ae574e028629191af0265f1db2da77f92591d671a203dba8bbce6",
+      "stage": "screening"
+    },
+    "initial_screening": {
+      "design_path": "analysis/catalyst_optimizer_mhar_design.json",
+      "design_sha256": "0943ad24a38df630356a7b6096cfd18256e2bf84b603a0854a5be39a11557b27",
+      "path": "analysis/results/catalyst_optimizer_mhar_screening.json",
+      "seeds": [
+        20260731
+      ],
+      "sha256": "5e1da8f77bfe6cc1ada76f1478d3005d72b58fa40089b9ad76fd71c69c8cf947",
+      "stage": "screening"
+    },
+    "mhar_confirmation": {
+      "design_path": "analysis/catalyst_optimizer_mhar_refinement_design.json",
+      "design_sha256": "12c61a2906c5d6ca4d63ecdf294954b60875f64d33adcaaa465a24d01367dd57",
+      "path": "analysis/results/catalyst_optimizer_mhar_confirmation.json",
+      "seeds": [
+        20260731,
+        20260732,
+        20260733
+      ],
+      "sha256": "f4ed632147ca3495f11ae7d788cc03d8cdb3604cd16a9540ebeb644f4e10dc4c",
+      "stage": "confirmation"
+    },
+    "refinement_screening": {
+      "design_path": "analysis/catalyst_optimizer_mhar_refinement_design.json",
+      "design_sha256": "12c61a2906c5d6ca4d63ecdf294954b60875f64d33adcaaa465a24d01367dd57",
+      "path": "analysis/results/catalyst_optimizer_mhar_refinement_screening.json",
+      "seeds": [
+        20260731
+      ],
+      "sha256": "c2b82d1cd73b092a1664abeee28dd7c7b590c3d0f8ef86bfde00a3276373a307",
+      "stage": "screening"
+    },
+    "standard_ocx24_confirmation": {
+      "design_path": "analysis/catalyst_optimizer_mhar_refinement_design.json",
+      "design_sha256": "12c61a2906c5d6ca4d63ecdf294954b60875f64d33adcaaa465a24d01367dd57",
+      "path": "analysis/results/catalyst_optimizer_mhar_standard_ocx24_confirmation.json",
+      "seeds": [
+        20260731,
+        20260732,
+        20260733
+      ],
+      "sha256": "a145b51721bf7c6ab288a606571a446bc19b684171a3b441a6e9db53b893f3d2",
+      "stage": "confirmation"
+    }
+  },
+  "domain_alignment_screening": {
+    "decision": "reject-as-universal-transfer-method",
+    "mhar_coral_ocx24": {
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "gain_over_current": -0.07462955277931699,
+          "gain_over_tree": -0.055442351158012715,
+          "spearman": 0.47097893702711296
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "gain_over_current": -0.07450318708750492,
+          "gain_over_tree": -0.06564705985319741,
+          "spearman": 0.5054163867414806
+        }
+      },
+      "median_gain_over_current": -0.07456636993341095,
+      "passed": false
+    },
+    "mhar_coral_specgen": {
+      "gains": {
+        "A": -0.01982181960207352,
+        "B": -0.0006029345816799259,
+        "C": 0.01457539670800162,
+        "D": -0.03595077578485628
+      },
+      "median_gain": -0.010212377091876723,
+      "nonnegative_systems": 1,
+      "passed": false
+    },
+    "standard_coral_ocx24": {
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "gain_over_current": -0.261768003300864,
+          "gain_over_tree": -0.24258080167955975,
+          "spearman": 0.2838404865055659
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "gain_over_current": -0.03860014991157279,
+          "gain_over_tree": -0.02974402267726528,
+          "spearman": 0.5413194239174127
+        }
+      },
+      "median_gain_over_current": -0.1501840766062184,
+      "passed": false
+    },
+    "standard_coral_specgen": {
+      "gains": {
+        "A": 0.004310525842642132,
+        "B": 0.020214806696224996,
+        "C": 0.03859975403139854,
+        "D": 0.007547113214409595
+      },
+      "median_gain": 0.013880959955317296,
+      "nonnegative_systems": 4,
+      "passed": false
+    }
+  },
+  "evidence_boundary": "Retrospective method development on already inspected recipient programmes. No result is prospective evidence, and post-outcome expert routing is not promotion eligible.",
+  "mhar_confirmation": {
+    "decision": "retain-as-specialist-not-default",
+    "ocx24": {
+      "candidates": {
+        "sublayer_delta_mhar_adamw": {
+          "directions": {
+            "ocx24_uoft_to_ocx24_vsp": {
+              "gain_over_current": 0.07235801774355066,
+              "gain_over_tree": 0.09154521936485494,
+              "spearman": 0.6179665075499806
+            },
+            "ocx24_vsp_to_ocx24_uoft": {
+              "gain_over_current": -0.0577880754486324,
+              "gain_over_tree": -0.048931948214324894,
+              "spearman": 0.5221314983803531
+            }
+          },
+          "median_gain_over_current": 0.0072849711474591294,
+          "passed": false
+        }
+      },
+      "passed": false,
+      "selected": null
+    },
+    "overall_median_transfer_gain": 0.002809149582466197,
+    "specgen": {
+      "candidates": {
+        "sublayer_delta_mhar_adamw": {
+          "gains": {
+            "A": -0.010021897592392137,
+            "B": -0.004520509525331673,
+            "C": 0.03902570717660048,
+            "D": 0.010138808690264067
+          },
+          "median_gain": 0.002809149582466197,
+          "nonnegative_systems": 2,
+          "passed": false
+        }
+      },
+      "passed": false,
+      "selected": null
+    }
+  },
+  "ocx24_complementarity_diagnostic": {
+    "best_per_direction_post_outcome": {
+      "ocx24_uoft_to_ocx24_vsp": 0.6179665075499806,
+      "ocx24_vsp_to_ocx24_uoft": 0.586026441531503
+    },
+    "claim_boundary": "Diagnostic only. The expert choice was observed after recipient outcomes and must be frozen before testing on a new programme.",
+    "standard_adamw": {
+      "ocx24_uoft_to_ocx24_vsp": 0.44485084217217646,
+      "ocx24_vsp_to_ocx24_uoft": 0.586026441531503
+    },
+    "sublayer_delta_mhar_adamw": {
+      "ocx24_uoft_to_ocx24_vsp": 0.6179665075499806,
+      "ocx24_vsp_to_ocx24_uoft": 0.5221314983803531
+    }
+  },
+  "optimizer_findings": {
+    "adam_step_norm_grafted_kl_shampoo": {
+      "decision": "reject-for-transfer",
+      "mhar_median_transfer_gain": -0.01224014239783311,
+      "standard_median_source_validation_spearman": 0.8706424367080262,
+      "standard_median_transfer_gain": -0.01100729601779371
+    },
+    "ungrafted_kl_shampoo": {
+      "decision": "reject",
+      "mhar_median_transfer_gain": -0.38208747042123375,
+      "standard_median_source_validation_spearman": 0.6455806273545246,
+      "standard_median_transfer_gain": -0.3745327297167305
+    }
+  },
+  "promotion_decision": {
+    "current_default": "hierarchical_cross_attention_v1",
+    "new_universal_default": null,
+    "next_confirmatory_candidate": "target-label-free standard/MHAR expert router",
+    "passed_all_frozen_dataset_gates": false,
+    "research_specialist": "sublayer_delta_mhar_adamw"
+  },
+  "status": "complete"
+}

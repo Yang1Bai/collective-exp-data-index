@@ -1,0 +1,769 @@
+{
+ "design": "policy-transfer-benchmark-v1",
+ "seed": 20260810,
+ "wall_time_s": 333.6,
+ "edges": [
+  {
+   "pair": "steels\u2192mpea",
+   "donor_family": "steels",
+   "recipient_family": "mpea",
+   "source_n": 312,
+   "target_n": 395,
+   "coverage": 0.06329113924050633,
+   "mean_min_distance": 0.6264479832212421,
+   "standard_rho": -0.31917634298340636,
+   "contrastive_rho": -0.019789109899963554,
+   "extra_trees_rho": 0.26642246077801324
+  },
+  {
+   "pair": "steels\u2192birdshot",
+   "donor_family": "steels",
+   "recipient_family": "birdshot",
+   "source_n": 312,
+   "target_n": 171,
+   "coverage": 0.1286549707602339,
+   "mean_min_distance": 0.45398518524269443,
+   "standard_rho": 0.33128710307297854,
+   "contrastive_rho": -0.24523459949421472,
+   "extra_trees_rho": -0.33636929069979954
+  },
+  {
+   "pair": "mpea\u2192steels",
+   "donor_family": "mpea",
+   "recipient_family": "steels",
+   "source_n": 395,
+   "target_n": 312,
+   "coverage": 1.0,
+   "mean_min_distance": 0.03897325648557405,
+   "standard_rho": 0.011249066043528419,
+   "contrastive_rho": 0.007089770437535487,
+   "extra_trees_rho": 0.16973259913943853
+  },
+  {
+   "pair": "mpea\u2192birdshot",
+   "donor_family": "mpea",
+   "recipient_family": "birdshot",
+   "source_n": 395,
+   "target_n": 171,
+   "coverage": 1.0,
+   "mean_min_distance": 0.0694416193357819,
+   "standard_rho": -0.3949853868571163,
+   "contrastive_rho": -0.43145257341040305,
+   "extra_trees_rho": 0.4158668082008177
+  },
+  {
+   "pair": "birdshot\u2192steels",
+   "donor_family": "birdshot",
+   "recipient_family": "steels",
+   "source_n": 171,
+   "target_n": 312,
+   "coverage": 1.0,
+   "mean_min_distance": 0.029900940279412955,
+   "standard_rho": -0.04504229079923646,
+   "contrastive_rho": 0.01938539649965641,
+   "extra_trees_rho": 0.29919727351369435
+  },
+  {
+   "pair": "birdshot\u2192mpea",
+   "donor_family": "birdshot",
+   "recipient_family": "mpea",
+   "source_n": 171,
+   "target_n": 395,
+   "coverage": 0.5063291139240507,
+   "mean_min_distance": 0.4540280322404221,
+   "standard_rho": -0.14461086189575548,
+   "contrastive_rho": -0.08504220659423199,
+   "extra_trees_rho": 0.22752115437372195
+  },
+  {
+   "pair": "ocx24_uoft\u2192vsp",
+   "donor_family": "ocx24_uoft",
+   "recipient_family": "ocx24_vsp",
+   "source_n": 1230,
+   "target_n": 940,
+   "coverage": 0.526595744680851,
+   "mean_min_distance": 0.2882585288831463,
+   "standard_rho": 0.5613359218046533,
+   "contrastive_rho": 0.5260270926021434,
+   "extra_trees_rho": 0.3533022419734641
+  },
+  {
+   "pair": "ocx24_vsp\u2192uoft",
+   "donor_family": "ocx24_vsp",
+   "recipient_family": "ocx24_uoft",
+   "source_n": 940,
+   "target_n": 1230,
+   "coverage": 0.7682926829268293,
+   "mean_min_distance": 0.18613959953430986,
+   "standard_rho": 0.534387101835161,
+   "contrastive_rho": 0.4777694168522713,
+   "extra_trees_rho": 0.35955312110993726
+  },
+  {
+   "pair": "seccm_Ir\u2192Au",
+   "donor_family": "seccm_Ir-rich",
+   "recipient_family": "seccm_Au-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.07174458875249669,
+   "standard_rho": 0.1922399875923765,
+   "contrastive_rho": 0.22184970996461204,
+   "extra_trees_rho": -0.2604550036171751
+  },
+  {
+   "pair": "seccm_Au\u2192Ir",
+   "donor_family": "seccm_Au-rich",
+   "recipient_family": "seccm_Ir-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.07161678958896253,
+   "standard_rho": 0.5071151551312731,
+   "contrastive_rho": 0.317441966414231,
+   "extra_trees_rho": 0.6151298470974451
+  },
+  {
+   "pair": "seccm_Rh\u2192Au",
+   "donor_family": "seccm_Rh-rich",
+   "recipient_family": "seccm_Au-rich",
+   "source_n": 322,
+   "target_n": 322,
+   "coverage": 1.0,
+   "mean_min_distance": 0.06262948769598549,
+   "standard_rho": 0.1406450510255618,
+   "contrastive_rho": 0.04228710785864289,
+   "extra_trees_rho": -0.31801437168080865
+  },
+  {
+   "pair": "specgen\u2192specgen_A",
+   "donor_family": "specgen",
+   "recipient_family": "specgen_specgen_A",
+   "source_n": 462,
+   "target_n": 126,
+   "coverage": 1.0,
+   "mean_min_distance": 0.010468644808194929,
+   "standard_rho": 0.5418213997069805,
+   "contrastive_rho": 0.5007199208650296,
+   "extra_trees_rho": 0.5552299247707317
+  },
+  {
+   "pair": "specgen\u2192specgen_B",
+   "donor_family": "specgen",
+   "recipient_family": "specgen_specgen_B",
+   "source_n": 462,
+   "target_n": 126,
+   "coverage": 1.0,
+   "mean_min_distance": 0.010468644808194929,
+   "standard_rho": 0.6133554510170487,
+   "contrastive_rho": 0.5628829272790042,
+   "extra_trees_rho": 0.6101697966601127
+  },
+  {
+   "pair": "specgen\u2192specgen_C",
+   "donor_family": "specgen",
+   "recipient_family": "specgen_specgen_C",
+   "source_n": 462,
+   "target_n": 126,
+   "coverage": 0.8333333333333334,
+   "mean_min_distance": 0.1160857787723453,
+   "standard_rho": 0.2937996820680213,
+   "contrastive_rho": 0.26627171014183665,
+   "extra_trees_rho": 0.26169721333597074
+  },
+  {
+   "pair": "specgen\u2192specgen_D",
+   "donor_family": "specgen",
+   "recipient_family": "specgen_specgen_D",
+   "source_n": 462,
+   "target_n": 126,
+   "coverage": 0.8333333333333334,
+   "mean_min_distance": 0.11608577881290921,
+   "standard_rho": 0.7416748532256031,
+   "contrastive_rho": 0.7316920262074971,
+   "extra_trees_rho": 0.7470952163330905
+  }
+ ],
+ "policy": {
+  "design": "policy-transfer-baseline-v1",
+  "edges": [
+   {
+    "pair": "steels\u2192mpea",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "steels\u2192mpea",
+     "method": "standard",
+     "source_n": 312,
+     "target_n": 395,
+     "source_fit_spearman": 0.064,
+     "coverage": 0.0633,
+     "mean_min_distance": 0.6264,
+     "donor_family": "steels",
+     "recipient_family": "mpea",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.319176
+   },
+   {
+    "pair": "steels\u2192mpea",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "steels\u2192mpea",
+     "method": "contrastive",
+     "source_n": 312,
+     "target_n": 395,
+     "source_fit_spearman": 0.0687,
+     "coverage": 0.0633,
+     "mean_min_distance": 0.6264,
+     "donor_family": "steels",
+     "recipient_family": "mpea",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.019789
+   },
+   {
+    "pair": "steels\u2192birdshot",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "steels\u2192birdshot",
+     "method": "standard",
+     "source_n": 312,
+     "target_n": 171,
+     "source_fit_spearman": 0.064,
+     "coverage": 0.1287,
+     "mean_min_distance": 0.454,
+     "donor_family": "steels",
+     "recipient_family": "birdshot",
+     "feature_richness": 0.0
+    },
+    "target_spearman": 0.331287
+   },
+   {
+    "pair": "steels\u2192birdshot",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "steels\u2192birdshot",
+     "method": "contrastive",
+     "source_n": 312,
+     "target_n": 171,
+     "source_fit_spearman": 0.0687,
+     "coverage": 0.1287,
+     "mean_min_distance": 0.454,
+     "donor_family": "steels",
+     "recipient_family": "birdshot",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.245235
+   },
+   {
+    "pair": "mpea\u2192steels",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "mpea\u2192steels",
+     "method": "standard",
+     "source_n": 395,
+     "target_n": 312,
+     "source_fit_spearman": 0.6676,
+     "coverage": 1.0,
+     "mean_min_distance": 0.039,
+     "donor_family": "mpea",
+     "recipient_family": "steels",
+     "feature_richness": 0.0
+    },
+    "target_spearman": 0.011249
+   },
+   {
+    "pair": "mpea\u2192steels",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "mpea\u2192steels",
+     "method": "contrastive",
+     "source_n": 395,
+     "target_n": 312,
+     "source_fit_spearman": 0.7085,
+     "coverage": 1.0,
+     "mean_min_distance": 0.039,
+     "donor_family": "mpea",
+     "recipient_family": "steels",
+     "feature_richness": 0.0
+    },
+    "target_spearman": 0.00709
+   },
+   {
+    "pair": "mpea\u2192birdshot",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "mpea\u2192birdshot",
+     "method": "standard",
+     "source_n": 395,
+     "target_n": 171,
+     "source_fit_spearman": 0.6676,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0694,
+     "donor_family": "mpea",
+     "recipient_family": "birdshot",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.394985
+   },
+   {
+    "pair": "mpea\u2192birdshot",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "mpea\u2192birdshot",
+     "method": "contrastive",
+     "source_n": 395,
+     "target_n": 171,
+     "source_fit_spearman": 0.7085,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0694,
+     "donor_family": "mpea",
+     "recipient_family": "birdshot",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.431453
+   },
+   {
+    "pair": "birdshot\u2192steels",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "birdshot\u2192steels",
+     "method": "standard",
+     "source_n": 171,
+     "target_n": 312,
+     "source_fit_spearman": 0.6851,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0299,
+     "donor_family": "birdshot",
+     "recipient_family": "steels",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.045042
+   },
+   {
+    "pair": "birdshot\u2192steels",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "birdshot\u2192steels",
+     "method": "contrastive",
+     "source_n": 171,
+     "target_n": 312,
+     "source_fit_spearman": 0.7202,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0299,
+     "donor_family": "birdshot",
+     "recipient_family": "steels",
+     "feature_richness": 0.0
+    },
+    "target_spearman": 0.019385
+   },
+   {
+    "pair": "birdshot\u2192mpea",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "birdshot\u2192mpea",
+     "method": "standard",
+     "source_n": 171,
+     "target_n": 395,
+     "source_fit_spearman": 0.6851,
+     "coverage": 0.5063,
+     "mean_min_distance": 0.454,
+     "donor_family": "birdshot",
+     "recipient_family": "mpea",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.144611
+   },
+   {
+    "pair": "birdshot\u2192mpea",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "birdshot\u2192mpea",
+     "method": "contrastive",
+     "source_n": 171,
+     "target_n": 395,
+     "source_fit_spearman": 0.7202,
+     "coverage": 0.5063,
+     "mean_min_distance": 0.454,
+     "donor_family": "birdshot",
+     "recipient_family": "mpea",
+     "feature_richness": 0.0
+    },
+    "target_spearman": -0.085042
+   },
+   {
+    "pair": "ocx24_uoft\u2192vsp",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_uoft\u2192vsp",
+     "method": "standard",
+     "source_n": 1230,
+     "target_n": 940,
+     "source_fit_spearman": 0.8928,
+     "coverage": 0.5266,
+     "mean_min_distance": 0.2883,
+     "donor_family": "ocx24_uoft",
+     "recipient_family": "ocx24_vsp",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.561336
+   },
+   {
+    "pair": "ocx24_uoft\u2192vsp",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_uoft\u2192vsp",
+     "method": "contrastive",
+     "source_n": 1230,
+     "target_n": 940,
+     "source_fit_spearman": 0.9087,
+     "coverage": 0.5266,
+     "mean_min_distance": 0.2883,
+     "donor_family": "ocx24_uoft",
+     "recipient_family": "ocx24_vsp",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.526027
+   },
+   {
+    "pair": "ocx24_vsp\u2192uoft",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_vsp\u2192uoft",
+     "method": "standard",
+     "source_n": 940,
+     "target_n": 1230,
+     "source_fit_spearman": 0.867,
+     "coverage": 0.7683,
+     "mean_min_distance": 0.1861,
+     "donor_family": "ocx24_vsp",
+     "recipient_family": "ocx24_uoft",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.534387
+   },
+   {
+    "pair": "ocx24_vsp\u2192uoft",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "ocx24_vsp\u2192uoft",
+     "method": "contrastive",
+     "source_n": 940,
+     "target_n": 1230,
+     "source_fit_spearman": 0.852,
+     "coverage": 0.7683,
+     "mean_min_distance": 0.1861,
+     "donor_family": "ocx24_vsp",
+     "recipient_family": "ocx24_uoft",
+     "feature_richness": 0.3
+    },
+    "target_spearman": 0.477769
+   },
+   {
+    "pair": "seccm_Ir\u2192Au",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Ir\u2192Au",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9714,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0717,
+     "donor_family": "seccm_Ir-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.19224
+   },
+   {
+    "pair": "seccm_Ir\u2192Au",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Ir\u2192Au",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9575,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0717,
+     "donor_family": "seccm_Ir-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.22185
+   },
+   {
+    "pair": "seccm_Au\u2192Ir",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Au\u2192Ir",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.3872,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0716,
+     "donor_family": "seccm_Au-rich",
+     "recipient_family": "seccm_Ir-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.507115
+   },
+   {
+    "pair": "seccm_Au\u2192Ir",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Au\u2192Ir",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.2795,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0716,
+     "donor_family": "seccm_Au-rich",
+     "recipient_family": "seccm_Ir-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.317442
+   },
+   {
+    "pair": "seccm_Rh\u2192Au",
+    "method": "standard",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Rh\u2192Au",
+     "method": "standard",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9816,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0626,
+     "donor_family": "seccm_Rh-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.140645
+   },
+   {
+    "pair": "seccm_Rh\u2192Au",
+    "method": "contrastive",
+    "decision": "abstain",
+    "state": {
+     "pair_name": "seccm_Rh\u2192Au",
+     "method": "contrastive",
+     "source_n": 322,
+     "target_n": 322,
+     "source_fit_spearman": 0.9805,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0626,
+     "donor_family": "seccm_Rh-rich",
+     "recipient_family": "seccm_Au-rich",
+     "feature_richness": 0.7
+    },
+    "target_spearman": 0.042287
+   },
+   {
+    "pair": "specgen\u2192specgen_A",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_A",
+     "method": "standard",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.9038,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0105,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_A",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.541821
+   },
+   {
+    "pair": "specgen\u2192specgen_A",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_A",
+     "method": "contrastive",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.8993,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0105,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_A",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.50072
+   },
+   {
+    "pair": "specgen\u2192specgen_B",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_B",
+     "method": "standard",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.9038,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0105,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_B",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.613355
+   },
+   {
+    "pair": "specgen\u2192specgen_B",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_B",
+     "method": "contrastive",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.8993,
+     "coverage": 1.0,
+     "mean_min_distance": 0.0105,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_B",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.562883
+   },
+   {
+    "pair": "specgen\u2192specgen_C",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_C",
+     "method": "standard",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.9038,
+     "coverage": 0.8333,
+     "mean_min_distance": 0.1161,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_C",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.2938
+   },
+   {
+    "pair": "specgen\u2192specgen_C",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_C",
+     "method": "contrastive",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.8993,
+     "coverage": 0.8333,
+     "mean_min_distance": 0.1161,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_C",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.266272
+   },
+   {
+    "pair": "specgen\u2192specgen_D",
+    "method": "standard",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_D",
+     "method": "standard",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.9038,
+     "coverage": 0.8333,
+     "mean_min_distance": 0.1161,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_D",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.741675
+   },
+   {
+    "pair": "specgen\u2192specgen_D",
+    "method": "contrastive",
+    "decision": "apply",
+    "state": {
+     "pair_name": "specgen\u2192specgen_D",
+     "method": "contrastive",
+     "source_n": 462,
+     "target_n": 126,
+     "source_fit_spearman": 0.8993,
+     "coverage": 0.8333,
+     "mean_min_distance": 0.1161,
+     "donor_family": "specgen",
+     "recipient_family": "specgen_specgen_D",
+     "feature_richness": 1.0
+    },
+    "target_spearman": 0.731692
+   }
+  ],
+  "summary": {
+   "n_edges": 30,
+   "n_apply": 12,
+   "n_rank_only": 0,
+   "n_abstain": 18,
+   "mean_realized_spearman": 0.21172458345350834,
+   "harm_edges": 0,
+   "missed_positive_edges": 3
+  },
+  "sha256": "809c6d61d0ec081653c4843253263ddb86d6883e1e5b4781db35c193d42ab5b6"
+ },
+ "always_transfer": {
+  "mean_realized_spearman_by_method": {
+   "standard": 0.23767305933251145,
+   "contrastive": 0.19279323704824314
+  },
+  "harm_edges_by_method": {
+   "standard": 4,
+   "contrastive": 4
+  }
+ },
+ "extra_trees_row": {
+  "steels\u2192mpea": 0.26642246077801324,
+  "steels\u2192birdshot": -0.33636929069979954,
+  "mpea\u2192steels": 0.16973259913943853,
+  "mpea\u2192birdshot": 0.4158668082008177,
+  "birdshot\u2192steels": 0.29919727351369435,
+  "birdshot\u2192mpea": 0.22752115437372195,
+  "ocx24_uoft\u2192vsp": 0.3533022419734641,
+  "ocx24_vsp\u2192uoft": 0.35955312110993726,
+  "seccm_Ir\u2192Au": -0.2604550036171751,
+  "seccm_Au\u2192Ir": 0.6151298470974451,
+  "seccm_Rh\u2192Au": -0.31801437168080865,
+  "specgen\u2192specgen_A": 0.5552299247707317,
+  "specgen\u2192specgen_B": 0.6101697966601127,
+  "specgen\u2192specgen_C": 0.26169721333597074,
+  "specgen\u2192specgen_D": 0.7470952163330905
+ }
+}

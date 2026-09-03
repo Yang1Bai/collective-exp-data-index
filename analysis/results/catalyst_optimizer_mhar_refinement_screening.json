@@ -1,0 +1,2252 @@
+{
+  "candidates": [
+    "standard_adamw",
+    "standard_kl_shampoo_grafted",
+    "sublayer_delta_mhar_adamw",
+    "sublayer_delta_mhar_kl_shampoo_grafted"
+  ],
+  "datasets": {
+    "ocx24": {
+      "dataset": {
+        "programs": {
+          "ocx24_uoft": 1230,
+          "ocx24_vsp": 940
+        },
+        "samples": 2170,
+        "targets": {
+          "fe_co": 2170
+        },
+        "unique_groups": 434,
+        "with_curves": 0,
+        "with_surface_composition": 0,
+        "with_targets": 2170,
+        "with_uncertainty": 0
+      },
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "models": {
+            "standard_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 16.070992229151987,
+                  "r2": -0.4663932853048989,
+                  "rmse": 22.83792210169238,
+                  "spearman": 0.348025908961202
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 24,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_adamw_seed20260731.pt",
+                  "elapsed_seconds": 10.35255033429712,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 16.070992229151987,
+                      "r2": -0.4663932853048989,
+                      "rmse": 22.83792210169238,
+                      "spearman": 0.348025908961202
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 7.047033374156229,
+                    "r2": 0.6744054337437251,
+                    "rmse": 10.206708073795154,
+                    "spearman": 0.8570033386626241
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "standard_kl_shampoo_grafted": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.173383672969427,
+                  "r2": -0.069038513218447,
+                  "rmse": 19.499704555983303,
+                  "spearman": 0.41376255045560734
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 23,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_kl_shampoo_grafted_seed20260731.pt",
+                  "elapsed_seconds": 20.48509924998507,
+                  "optimizer": {
+                    "adamw_fallback_parameter_count": 16518,
+                    "beta1": 0.9,
+                    "beta2": 0.999,
+                    "epsilon": 1e-12,
+                    "factor_matrix_dtype": "float64",
+                    "fallback_tensor_count": 100,
+                    "grafting_epsilon": 1e-08,
+                    "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                    "matrix_adam_step_norm_grafting": true,
+                    "matrix_parameter_count": 147504,
+                    "matrix_tensor_count": 35,
+                    "max_preconditioner_dim": 64,
+                    "name": "kl_shampoo_grafted",
+                    "precondition_frequency": 10,
+                    "start_preconditioning_step": 10,
+                    "weight_decay": 0.0002,
+                    "weight_decay_type": "decoupled"
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.173383672969427,
+                      "r2": -0.069038513218447,
+                      "rmse": 19.499704555983303,
+                      "spearman": 0.41376255045560734
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.841569201633365,
+                    "r2": 0.6997419545942862,
+                    "rmse": 9.801542916818299,
+                    "spearman": 0.8706424367080262
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.837893150522197,
+                  "r2": -0.15642178920768623,
+                  "rmse": 20.28100577143883,
+                  "spearman": 0.5481637342838749
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 24,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_uoft_to_ocx24_vsp/sublayer_delta_mhar_adamw_seed20260731.pt",
+                  "elapsed_seconds": 10.995396999642253,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164230
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          -0.014225010760128498,
+                          0.009132174775004387,
+                          -0.007737885694950819,
+                          0.039659660309553146
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          0.0006964124622754753,
+                          -0.022979751229286194,
+                          -0.0031712446361780167,
+                          -0.00413760170340538
+                        ],
+                        "head_disagreement": 0.01331110019236803,
+                        "heads": 4,
+                        "mean_max_weight": 0.5120850801467896,
+                        "mean_normalized_entropy": 0.9991824626922607,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.01795286312699318,
+                          0.018607713282108307,
+                          0.006324595306068659,
+                          0.011072613298892975
+                        ],
+                        "head_disagreement": 0.02144179679453373,
+                        "heads": 4,
+                        "mean_max_weight": 0.35662323236465454,
+                        "mean_normalized_entropy": 0.9977392554283142,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.837893150522197,
+                      "r2": -0.15642178920768623,
+                      "rmse": 20.28100577143883,
+                      "spearman": 0.5481637342838749
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.946509873372593,
+                    "r2": 0.6895152207437718,
+                    "rmse": 9.96706468281893,
+                    "spearman": 0.8600612316084592
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_kl_shampoo_grafted": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.76558168419808,
+                  "r2": -0.11684478626719552,
+                  "rmse": 19.930939286382742,
+                  "spearman": 0.5254080944593142
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 54,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_uoft_to_ocx24_vsp/sublayer_delta_mhar_kl_shampoo_grafted_seed20260731.pt",
+                  "elapsed_seconds": 38.48241095803678,
+                  "optimizer": {
+                    "adamw_fallback_parameter_count": 16534,
+                    "beta1": 0.9,
+                    "beta2": 0.999,
+                    "epsilon": 1e-12,
+                    "factor_matrix_dtype": "float64",
+                    "fallback_tensor_count": 104,
+                    "grafting_epsilon": 1e-08,
+                    "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                    "matrix_adam_step_norm_grafting": true,
+                    "matrix_parameter_count": 147696,
+                    "matrix_tensor_count": 39,
+                    "max_preconditioner_dim": 64,
+                    "name": "kl_shampoo_grafted",
+                    "precondition_frequency": 10,
+                    "start_preconditioning_step": 10,
+                    "weight_decay": 0.0002,
+                    "weight_decay_type": "decoupled"
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          -0.022179298102855682,
+                          0.024587826803326607,
+                          -0.014772990718483925,
+                          0.047549840062856674
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          -0.04424811154603958,
+                          -0.03431385010480881,
+                          0.0017944425344467163,
+                          0.007656748406589031
+                        ],
+                        "head_disagreement": 0.023095667362213135,
+                        "heads": 4,
+                        "mean_max_weight": 0.518652617931366,
+                        "mean_normalized_entropy": 0.9981362223625183,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.03356339409947395,
+                          0.011727981269359589,
+                          0.008449283428490162,
+                          0.03997684642672539
+                        ],
+                        "head_disagreement": 0.029333507642149925,
+                        "heads": 4,
+                        "mean_max_weight": 0.3656315207481384,
+                        "mean_normalized_entropy": 0.9959553480148315,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.76558168419808,
+                      "r2": -0.11684478626719552,
+                      "rmse": 19.930939286382742,
+                      "spearman": 0.5254080944593142
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.417557477152756,
+                    "r2": 0.7166616150303997,
+                    "rmse": 9.521378422596475,
+                    "spearman": 0.8834123662158523
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "models": {
+            "standard_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.26211539667686,
+                  "r2": 0.18286785065851374,
+                  "rmse": 17.823855615061532,
+                  "spearman": 0.5491149153033821
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_adamw_seed20260731.pt",
+                  "elapsed_seconds": 7.446699541993439,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.26211539667686,
+                      "r2": 0.18286785065851374,
+                      "rmse": 17.823855615061532,
+                      "spearman": 0.5491149153033821
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.32760909178324,
+                    "r2": 0.6467964444136798,
+                    "rmse": 11.627717494946449,
+                    "spearman": 0.7286041592376746
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "standard_kl_shampoo_grafted": {
+              "ensemble": {
+                "target": {
+                  "mae": 13.19617026868694,
+                  "r2": 0.256532544645348,
+                  "rmse": 17.001470559960286,
+                  "spearman": 0.5594156215632485
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_kl_shampoo_grafted_seed20260731.pt",
+                  "elapsed_seconds": 16.0465344581753,
+                  "optimizer": {
+                    "adamw_fallback_parameter_count": 16518,
+                    "beta1": 0.9,
+                    "beta2": 0.999,
+                    "epsilon": 1e-12,
+                    "factor_matrix_dtype": "float64",
+                    "fallback_tensor_count": 100,
+                    "grafting_epsilon": 1e-08,
+                    "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                    "matrix_adam_step_norm_grafting": true,
+                    "matrix_parameter_count": 147504,
+                    "matrix_tensor_count": 35,
+                    "max_preconditioner_dim": 64,
+                    "name": "kl_shampoo_grafted",
+                    "precondition_frequency": 10,
+                    "start_preconditioning_step": 10,
+                    "weight_decay": 0.0002,
+                    "weight_decay_type": "decoupled"
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 13.19617026868694,
+                      "r2": 0.256532544645348,
+                      "rmse": 17.001470559960286,
+                      "spearman": 0.5594156215632485
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.11963322713037,
+                    "r2": 0.6432123474425453,
+                    "rmse": 11.686564123982532,
+                    "spearman": 0.7124867489660957
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 18.535236383618248,
+                  "r2": -0.3389507500060598,
+                  "rmse": 22.815910679381343,
+                  "spearman": 0.481769609102781
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 27,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_vsp_to_ocx24_uoft/sublayer_delta_mhar_adamw_seed20260731.pt",
+                  "elapsed_seconds": 9.211820667143911,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164230
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          0.007261010352522135,
+                          0.030755847692489624,
+                          0.0032043922692537308,
+                          -0.04688384011387825
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          -0.022733528167009354,
+                          -0.002137275179848075,
+                          -0.0048157814890146255,
+                          -0.019119100645184517
+                        ],
+                        "head_disagreement": 0.019912755116820335,
+                        "heads": 4,
+                        "mean_max_weight": 0.5158531665802002,
+                        "mean_normalized_entropy": 0.9988251328468323,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.008496633730828762,
+                          0.009561751037836075,
+                          0.009499319829046726,
+                          0.01170219387859106
+                        ],
+                        "head_disagreement": 0.024415994063019753,
+                        "heads": 4,
+                        "mean_max_weight": 0.36746877431869507,
+                        "mean_normalized_entropy": 0.9964638948440552,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 18.535236383618248,
+                      "r2": -0.3389507500060598,
+                      "rmse": 22.815910679381343,
+                      "spearman": 0.481769609102781
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.501499664827882,
+                    "r2": 0.6453622864556916,
+                    "rmse": 11.651300340707268,
+                    "spearman": 0.7197045935296353
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_kl_shampoo_grafted": {
+              "ensemble": {
+                "target": {
+                  "mae": 16.81790800397012,
+                  "r2": -0.12041606001019778,
+                  "rmse": 20.871091845136597,
+                  "spearman": 0.4838720734339821
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 20,
+                  "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/ocx24_vsp_to_ocx24_uoft/sublayer_delta_mhar_kl_shampoo_grafted_seed20260731.pt",
+                  "elapsed_seconds": 16.219764458946884,
+                  "optimizer": {
+                    "adamw_fallback_parameter_count": 16534,
+                    "beta1": 0.9,
+                    "beta2": 0.999,
+                    "epsilon": 1e-12,
+                    "factor_matrix_dtype": "float64",
+                    "fallback_tensor_count": 104,
+                    "grafting_epsilon": 1e-08,
+                    "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                    "matrix_adam_step_norm_grafting": true,
+                    "matrix_parameter_count": 147696,
+                    "matrix_tensor_count": 39,
+                    "max_preconditioner_dim": 64,
+                    "name": "kl_shampoo_grafted",
+                    "precondition_frequency": 10,
+                    "start_preconditioning_step": 10,
+                    "weight_decay": 0.0002,
+                    "weight_decay_type": "decoupled"
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          0.008347971364855766,
+                          0.03965405747294426,
+                          0.019608208909630775,
+                          -0.022881440818309784
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          -0.020266614854335785,
+                          0.009300467558205128,
+                          0.012964156456291676,
+                          -0.006592110730707645
+                        ],
+                        "head_disagreement": 0.025805454701185226,
+                        "heads": 4,
+                        "mean_max_weight": 0.5216349363327026,
+                        "mean_normalized_entropy": 0.9976455569267273,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.024736769497394562,
+                          0.0203375443816185,
+                          0.018343456089496613,
+                          0.020190032199025154
+                        ],
+                        "head_disagreement": 0.02128761075437069,
+                        "heads": 4,
+                        "mean_max_weight": 0.3621252179145813,
+                        "mean_normalized_entropy": 0.9972745776176453,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 16.81790800397012,
+                      "r2": -0.12041606001019778,
+                      "rmse": 20.871091845136597,
+                      "spearman": 0.4838720734339821
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.25732997119989,
+                    "r2": 0.6338123035058159,
+                    "rmse": 11.839512284049391,
+                    "spearman": 0.7308195856400876
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "gate": {
+        "candidates": {
+          "standard_adamw": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.19758258084522795,
+                "gain_over_tree": -0.17839537922392368,
+                "spearman": 0.348025908961202
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.030804658525603434,
+                "gain_over_tree": -0.021948531291295925,
+                "spearman": 0.5491149153033821
+              }
+            },
+            "median_gain_over_current": -0.11419361968541569,
+            "passed": false
+          },
+          "standard_kl_shampoo_grafted": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.13184593935082262,
+                "gain_over_tree": -0.11265873772951834,
+                "spearman": 0.41376255045560734
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.02050395226573698,
+                "gain_over_tree": -0.01164782503142947,
+                "spearman": 0.5594156215632485
+              }
+            },
+            "median_gain_over_current": -0.0761749458082798,
+            "passed": false
+          },
+          "sublayer_delta_mhar_adamw": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": 0.002555244477444929,
+                "gain_over_tree": 0.021742446098749202,
+                "spearman": 0.5481637342838749
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.09814996472620452,
+                "gain_over_tree": -0.08929383749189701,
+                "spearman": 0.481769609102781
+              }
+            },
+            "median_gain_over_current": -0.047797360124379795,
+            "passed": false
+          },
+          "sublayer_delta_mhar_kl_shampoo_grafted": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.020200395347115707,
+                "gain_over_tree": -0.0010131937258114343,
+                "spearman": 0.5254080944593142
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.09604750039500343,
+                "gain_over_tree": -0.08719137316069592,
+                "spearman": 0.4838720734339821
+              }
+            },
+            "median_gain_over_current": -0.05812394787105957,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "model_names": [
+        "standard_adamw",
+        "standard_kl_shampoo_grafted",
+        "sublayer_delta_mhar_adamw",
+        "sublayer_delta_mhar_kl_shampoo_grafted"
+      ],
+      "reference": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "fair_extra_trees": {
+            "mae": 13.72034315424109,
+            "r2": 0.013755434378140419,
+            "rmse": 18.7293914753803,
+            "spearman": 0.5264212881851257
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 15.294420956313132,
+            "r2": -0.2234809319207225,
+            "rmse": 20.860751912296713,
+            "spearman": 0.54560848980643
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "fair_extra_trees": {
+            "mae": 14.29111934137205,
+            "r2": 0.18199592712868728,
+            "rmse": 17.833362581313438,
+            "spearman": 0.571063446594678
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 13.819910660829606,
+            "r2": 0.24451624093033075,
+            "rmse": 17.13831310572193,
+            "spearman": 0.5799195738289855
+          }
+        }
+      }
+    },
+    "specgen": {
+      "dataset": {
+        "programs": {
+          "specgen_A": 126,
+          "specgen_B": 126,
+          "specgen_C": 126,
+          "specgen_D": 126,
+          "specgen_source": 462
+        },
+        "samples": 966,
+        "targets": {
+          "oer_overpotential_mV": 966
+        },
+        "unique_groups": 5,
+        "with_curves": 966,
+        "with_surface_composition": 0,
+        "with_targets": 966,
+        "with_uncertainty": 0
+      },
+      "gate": {
+        "candidates": {
+          "standard_adamw": {
+            "gains": {
+              "A": -0.004250532441909538,
+              "B": 0.008801045087805992,
+              "C": 0.028496865348017264,
+              "D": -0.01021979917388438
+            },
+            "median_gain": 0.002275256322948227,
+            "nonnegative_systems": 2,
+            "passed": false
+          },
+          "standard_kl_shampoo_grafted": {
+            "gains": {
+              "A": -0.01292257851781664,
+              "B": -0.00909201351777078,
+              "C": 0.012886582477377062,
+              "D": -0.007268145993050146
+            },
+            "median_gain": -0.008180079755410463,
+            "nonnegative_systems": 1,
+            "passed": false
+          },
+          "sublayer_delta_mhar_adamw": {
+            "gains": {
+              "A": 0.023793382730576074,
+              "B": 0.007610174297124628,
+              "C": 0.013789483158403726,
+              "D": 0.017328963847235368
+            },
+            "median_gain": 0.015559223502819547,
+            "nonnegative_systems": 4,
+            "passed": false
+          },
+          "sublayer_delta_mhar_kl_shampoo_grafted": {
+            "gains": {
+              "A": 0.0026547079824206232,
+              "B": -0.017914056327326677,
+              "C": 0.023784383720466207,
+              "D": -0.006566228468339541
+            },
+            "median_gain": -0.001955760242959459,
+            "nonnegative_systems": 2,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "models": {
+        "standard_adamw": {
+          "ensemble": {
+            "A": {
+              "mae": 26.310137745690724,
+              "r2": -0.02500714276395133,
+              "rmse": 43.76979195486261,
+              "spearman": 0.5482046975449363
+            },
+            "B": {
+              "mae": 31.625904870411713,
+              "r2": -0.328945769127021,
+              "rmse": 37.66239133513692,
+              "spearman": 0.6328893315936648
+            },
+            "C": {
+              "mae": 42.40982990567645,
+              "r2": -2.1654927788707417,
+              "rmse": 50.18876097473336,
+              "spearman": 0.2874793773008348
+            },
+            "D": {
+              "mae": 18.90115186903212,
+              "r2": 0.4721127353553566,
+              "rmse": 25.039297036562907,
+              "spearman": 0.7376463265773711
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 52,
+              "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/specgen/standard_adamw_seed20260731.pt",
+              "elapsed_seconds": 67.3579994160682,
+              "optimizer": {
+                "implementation": "torch.optim.AdamW",
+                "name": "adamw",
+                "parameter_count": 368198
+              },
+              "parameter_count": 368198,
+              "routing_diagnostics": {
+                "A": {},
+                "B": {},
+                "C": {},
+                "D": {}
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 26.310137745690724,
+                  "r2": -0.02500714276395133,
+                  "rmse": 43.76979195486261,
+                  "spearman": 0.5482046975449363
+                },
+                "B": {
+                  "mae": 31.625904870411713,
+                  "r2": -0.328945769127021,
+                  "rmse": 37.66239133513692,
+                  "spearman": 0.6328893315936648
+                },
+                "C": {
+                  "mae": 42.40982990567645,
+                  "r2": -2.1654927788707417,
+                  "rmse": 50.18876097473336,
+                  "spearman": 0.2874793773008348
+                },
+                "D": {
+                  "mae": 18.90115186903212,
+                  "r2": 0.4721127353553566,
+                  "rmse": 25.039297036562907,
+                  "spearman": 0.7376463265773711
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 12.116503106980092,
+                "r2": 0.7241206020135105,
+                "rmse": 15.179994561576407,
+                "spearman": 0.8693838503330056
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        },
+        "standard_kl_shampoo_grafted": {
+          "ensemble": {
+            "A": {
+              "mae": 26.30353475903708,
+              "r2": -0.02725810385924099,
+              "rmse": 43.81782579932142,
+              "spearman": 0.5395326514690292
+            },
+            "B": {
+              "mae": 31.417399136982276,
+              "r2": -0.3172670335457739,
+              "rmse": 37.496538169879365,
+              "spearman": 0.614996272988088
+            },
+            "C": {
+              "mae": 47.24183790418836,
+              "r2": -2.729480288072895,
+              "rmse": 54.47659676356071,
+              "spearman": 0.2718690944301946
+            },
+            "D": {
+              "mae": 18.973991805788067,
+              "r2": 0.4741988740185351,
+              "rmse": 24.98977211124566,
+              "spearman": 0.7405979797582053
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 51,
+              "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/specgen/standard_kl_shampoo_grafted_seed20260731.pt",
+              "elapsed_seconds": 103.31084816716611,
+              "optimizer": {
+                "adamw_fallback_parameter_count": 25094,
+                "beta1": 0.9,
+                "beta2": 0.999,
+                "epsilon": 1e-12,
+                "factor_matrix_dtype": "float64",
+                "fallback_tensor_count": 116,
+                "grafting_epsilon": 1e-08,
+                "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                "matrix_adam_step_norm_grafting": true,
+                "matrix_parameter_count": 343104,
+                "matrix_tensor_count": 43,
+                "max_preconditioner_dim": 64,
+                "name": "kl_shampoo_grafted",
+                "precondition_frequency": 10,
+                "start_preconditioning_step": 10,
+                "weight_decay": 0.0002,
+                "weight_decay_type": "decoupled"
+              },
+              "parameter_count": 368198,
+              "routing_diagnostics": {
+                "A": {},
+                "B": {},
+                "C": {},
+                "D": {}
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 26.30353475903708,
+                  "r2": -0.02725810385924099,
+                  "rmse": 43.81782579932142,
+                  "spearman": 0.5395326514690292
+                },
+                "B": {
+                  "mae": 31.417399136982276,
+                  "r2": -0.3172670335457739,
+                  "rmse": 37.496538169879365,
+                  "spearman": 0.614996272988088
+                },
+                "C": {
+                  "mae": 47.24183790418836,
+                  "r2": -2.729480288072895,
+                  "rmse": 54.47659676356071,
+                  "spearman": 0.2718690944301946
+                },
+                "D": {
+                  "mae": 18.973991805788067,
+                  "r2": 0.4741988740185351,
+                  "rmse": 24.98977211124566,
+                  "spearman": 0.7405979797582053
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 12.206545729864203,
+                "r2": 0.7381639330341698,
+                "rmse": 14.788588190969644,
+                "spearman": 0.8712164555191129
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        },
+        "sublayer_delta_mhar_adamw": {
+          "ensemble": {
+            "A": {
+              "mae": 25.674747866675965,
+              "r2": 0.015720561558832502,
+              "rmse": 42.89140205049079,
+              "spearman": 0.5762486127174219
+            },
+            "B": {
+              "mae": 31.329438321552587,
+              "r2": -0.34170301011842685,
+              "rmse": 37.84273001004056,
+              "spearman": 0.6316984608029834
+            },
+            "C": {
+              "mae": 35.634058585999504,
+              "r2": -1.2473140387899972,
+              "rmse": 42.28805329105558,
+              "spearman": 0.27277199511122124
+            },
+            "D": {
+              "mae": 18.660455467587433,
+              "r2": 0.45310765175282675,
+              "rmse": 25.486046040444815,
+              "spearman": 0.7651950895984908
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 32,
+              "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/specgen/sublayer_delta_mhar_adamw_seed20260731.pt",
+              "elapsed_seconds": 67.34990941733122,
+              "optimizer": {
+                "implementation": "torch.optim.AdamW",
+                "name": "adamw",
+                "parameter_count": 368878
+              },
+              "parameter_count": 368878,
+              "routing_diagnostics": {
+                "A": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.0009449325152672827,
+                      0.020004335790872574,
+                      -0.009459073655307293,
+                      0.023134561255574226
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      0.0015873444499447942,
+                      -0.0029648891650140285,
+                      0.003391199978068471,
+                      -0.0152030223980546
+                    ],
+                    "head_disagreement": 0.018135495483875275,
+                    "heads": 4,
+                    "mean_max_weight": 0.5234012007713318,
+                    "mean_normalized_entropy": 0.9974679350852966,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.017554497346282005,
+                      0.01555428933352232,
+                      0.012432493269443512,
+                      -0.009008989669382572
+                    ],
+                    "head_disagreement": 0.013487647287547588,
+                    "heads": 4,
+                    "mean_max_weight": 0.35059672594070435,
+                    "mean_normalized_entropy": 0.9987843036651611,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.0037657353095710278,
+                      0.006784806028008461,
+                      -0.03079267404973507,
+                      -0.0130135053768754
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.001959114335477352,
+                      0.0012298442889004946,
+                      -0.026473144069314003,
+                      -0.018376456573605537
+                    ],
+                    "head_disagreement": 0.032279860228300095,
+                    "heads": 4,
+                    "mean_max_weight": 0.5256731510162354,
+                    "mean_normalized_entropy": 0.9964713454246521,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      0.003118381602689624,
+                      -0.008532806299626827,
+                      -0.01634833961725235,
+                      0.004910126328468323
+                    ],
+                    "head_disagreement": 0.004691950976848602,
+                    "heads": 4,
+                    "mean_max_weight": 0.33914217352867126,
+                    "mean_normalized_entropy": 0.9998493194580078,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.017065459862351418,
+                      0.005805725231766701,
+                      -0.03350123390555382,
+                      -0.017637386918067932
+                    ],
+                    "head_disagreement": 0.003383825533092022,
+                    "heads": 4,
+                    "mean_max_weight": 0.2542472183704376,
+                    "mean_normalized_entropy": 0.9999193549156189,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      0.0027250810526311398,
+                      -0.0015086645726114511,
+                      -0.028536150231957436,
+                      -0.022668229416012764
+                    ],
+                    "head_disagreement": 0.004263422451913357,
+                    "heads": 4,
+                    "mean_max_weight": 0.20664888620376587,
+                    "mean_normalized_entropy": 0.9997723698616028,
+                    "source_count": 5
+                  }
+                },
+                "B": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.0009449325152672827,
+                      0.020004335790872574,
+                      -0.009459073655307293,
+                      0.023134561255574226
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      0.0015873444499447942,
+                      -0.0029648891650140285,
+                      0.003391199978068471,
+                      -0.0152030223980546
+                    ],
+                    "head_disagreement": 0.018135495483875275,
+                    "heads": 4,
+                    "mean_max_weight": 0.5234012007713318,
+                    "mean_normalized_entropy": 0.9974679350852966,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.017554497346282005,
+                      0.01555428933352232,
+                      0.012432493269443512,
+                      -0.009008989669382572
+                    ],
+                    "head_disagreement": 0.013487647287547588,
+                    "heads": 4,
+                    "mean_max_weight": 0.35059672594070435,
+                    "mean_normalized_entropy": 0.9987843036651611,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.0037657353095710278,
+                      0.006784806028008461,
+                      -0.03079267404973507,
+                      -0.0130135053768754
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.001959114335477352,
+                      0.0012298442889004946,
+                      -0.026473144069314003,
+                      -0.018376456573605537
+                    ],
+                    "head_disagreement": 0.01141447201371193,
+                    "heads": 4,
+                    "mean_max_weight": 0.5108222961425781,
+                    "mean_normalized_entropy": 0.9995748996734619,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      0.003118381602689624,
+                      -0.008532806299626827,
+                      -0.01634833961725235,
+                      0.004910126328468323
+                    ],
+                    "head_disagreement": 0.004936177749186754,
+                    "heads": 4,
+                    "mean_max_weight": 0.3418976664543152,
+                    "mean_normalized_entropy": 0.9997982978820801,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.017065459862351418,
+                      0.005805725231766701,
+                      -0.03350123390555382,
+                      -0.017637386918067932
+                    ],
+                    "head_disagreement": 0.003928229678422213,
+                    "heads": 4,
+                    "mean_max_weight": 0.25731363892555237,
+                    "mean_normalized_entropy": 0.9997936487197876,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      0.0027250810526311398,
+                      -0.0015086645726114511,
+                      -0.028536150231957436,
+                      -0.022668229416012764
+                    ],
+                    "head_disagreement": 0.005538291297852993,
+                    "heads": 4,
+                    "mean_max_weight": 0.20880094170570374,
+                    "mean_normalized_entropy": 0.9996732473373413,
+                    "source_count": 5
+                  }
+                },
+                "C": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.0009449325152672827,
+                      0.020004335790872574,
+                      -0.009459073655307293,
+                      0.023134561255574226
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      0.0015873444499447942,
+                      -0.0029648891650140285,
+                      0.003391199978068471,
+                      -0.0152030223980546
+                    ],
+                    "head_disagreement": 0.016123861074447632,
+                    "heads": 4,
+                    "mean_max_weight": 0.5190353393554688,
+                    "mean_normalized_entropy": 0.9986749291419983,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.017554497346282005,
+                      0.01555428933352232,
+                      0.012432493269443512,
+                      -0.009008989669382572
+                    ],
+                    "head_disagreement": 0.017544202506542206,
+                    "heads": 4,
+                    "mean_max_weight": 0.35788339376449585,
+                    "mean_normalized_entropy": 0.9983064532279968,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.0037657353095710278,
+                      0.006784806028008461,
+                      -0.03079267404973507,
+                      -0.0130135053768754
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.001959114335477352,
+                      0.0012298442889004946,
+                      -0.026473144069314003,
+                      -0.018376456573605537
+                    ],
+                    "head_disagreement": 0.02375694550573826,
+                    "heads": 4,
+                    "mean_max_weight": 0.5204281806945801,
+                    "mean_normalized_entropy": 0.9980601668357849,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      0.003118381602689624,
+                      -0.008532806299626827,
+                      -0.01634833961725235,
+                      0.004910126328468323
+                    ],
+                    "head_disagreement": 0.004953576717525721,
+                    "heads": 4,
+                    "mean_max_weight": 0.3402411937713623,
+                    "mean_normalized_entropy": 0.999853789806366,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.017065459862351418,
+                      0.005805725231766701,
+                      -0.03350123390555382,
+                      -0.017637386918067932
+                    ],
+                    "head_disagreement": 0.0037348971236497164,
+                    "heads": 4,
+                    "mean_max_weight": 0.2559815049171448,
+                    "mean_normalized_entropy": 0.999893844127655,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      0.0027250810526311398,
+                      -0.0015086645726114511,
+                      -0.028536150231957436,
+                      -0.022668229416012764
+                    ],
+                    "head_disagreement": 0.00441370252519846,
+                    "heads": 4,
+                    "mean_max_weight": 0.20671740174293518,
+                    "mean_normalized_entropy": 0.9997546076774597,
+                    "source_count": 5
+                  }
+                },
+                "D": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.0009449325152672827,
+                      0.020004335790872574,
+                      -0.009459073655307293,
+                      0.023134561255574226
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      0.0015873444499447942,
+                      -0.0029648891650140285,
+                      0.003391199978068471,
+                      -0.0152030223980546
+                    ],
+                    "head_disagreement": 0.02075263299047947,
+                    "heads": 4,
+                    "mean_max_weight": 0.5291380882263184,
+                    "mean_normalized_entropy": 0.9964874386787415,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.017554497346282005,
+                      0.01555428933352232,
+                      0.012432493269443512,
+                      -0.009008989669382572
+                    ],
+                    "head_disagreement": 0.01690681464970112,
+                    "heads": 4,
+                    "mean_max_weight": 0.3535940945148468,
+                    "mean_normalized_entropy": 0.9984117150306702,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.0037657353095710278,
+                      0.006784806028008461,
+                      -0.03079267404973507,
+                      -0.0130135053768754
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.001959114335477352,
+                      0.0012298442889004946,
+                      -0.026473144069314003,
+                      -0.018376456573605537
+                    ],
+                    "head_disagreement": 0.012836996465921402,
+                    "heads": 4,
+                    "mean_max_weight": 0.5106372833251953,
+                    "mean_normalized_entropy": 0.9993388652801514,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      0.003118381602689624,
+                      -0.008532806299626827,
+                      -0.01634833961725235,
+                      0.004910126328468323
+                    ],
+                    "head_disagreement": 0.003792690811678767,
+                    "heads": 4,
+                    "mean_max_weight": 0.33999910950660706,
+                    "mean_normalized_entropy": 0.999889612197876,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.017065459862351418,
+                      0.005805725231766701,
+                      -0.03350123390555382,
+                      -0.017637386918067932
+                    ],
+                    "head_disagreement": 0.0042134178802371025,
+                    "heads": 4,
+                    "mean_max_weight": 0.25582683086395264,
+                    "mean_normalized_entropy": 0.9997924566268921,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      0.0027250810526311398,
+                      -0.0015086645726114511,
+                      -0.028536150231957436,
+                      -0.022668229416012764
+                    ],
+                    "head_disagreement": 0.0036594911944121122,
+                    "heads": 4,
+                    "mean_max_weight": 0.20767661929130554,
+                    "mean_normalized_entropy": 0.9998016953468323,
+                    "source_count": 5
+                  }
+                }
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 25.674747866675965,
+                  "r2": 0.015720561558832502,
+                  "rmse": 42.89140205049079,
+                  "spearman": 0.5762486127174219
+                },
+                "B": {
+                  "mae": 31.329438321552587,
+                  "r2": -0.34170301011842685,
+                  "rmse": 37.84273001004056,
+                  "spearman": 0.6316984608029834
+                },
+                "C": {
+                  "mae": 35.634058585999504,
+                  "r2": -1.2473140387899972,
+                  "rmse": 42.28805329105558,
+                  "spearman": 0.27277199511122124
+                },
+                "D": {
+                  "mae": 18.660455467587433,
+                  "r2": 0.45310765175282675,
+                  "rmse": 25.486046040444815,
+                  "spearman": 0.7651950895984908
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 12.240706743512828,
+                "r2": 0.714009456728389,
+                "rmse": 15.45566932902777,
+                "spearman": 0.8629950444079582
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        },
+        "sublayer_delta_mhar_kl_shampoo_grafted": {
+          "ensemble": {
+            "A": {
+              "mae": 36.013030085487976,
+              "r2": -0.48700311463386314,
+              "rmse": 52.718977153365884,
+              "spearman": 0.5551099379692664
+            },
+            "B": {
+              "mae": 31.560431101965534,
+              "r2": -0.33933978932068354,
+              "rmse": 37.809388003443885,
+              "spearman": 0.6061742301785321
+            },
+            "C": {
+              "mae": 28.411258612738703,
+              "r2": -0.559017178854341,
+              "rmse": 35.221776833214854,
+              "spearman": 0.2827668956732837
+            },
+            "D": {
+              "mae": 20.59442371186757,
+              "r2": 0.369360458065348,
+              "rmse": 27.367941877391562,
+              "spearman": 0.7412998972829159
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 35,
+              "checkpoint": "analysis/results/catalyst_optimizer_mhar_refinement_checkpoints/specgen/sublayer_delta_mhar_kl_shampoo_grafted_seed20260731.pt",
+              "elapsed_seconds": 99.23577991686761,
+              "optimizer": {
+                "adamw_fallback_parameter_count": 25134,
+                "beta1": 0.9,
+                "beta2": 0.999,
+                "epsilon": 1e-12,
+                "factor_matrix_dtype": "float64",
+                "fallback_tensor_count": 126,
+                "grafting_epsilon": 1e-08,
+                "implementation": "facebookresearch/optimizers@f18f735c972d304542af15e62b5acaa503169f2b",
+                "matrix_adam_step_norm_grafting": true,
+                "matrix_parameter_count": 343744,
+                "matrix_tensor_count": 53,
+                "max_preconditioner_dim": 64,
+                "name": "kl_shampoo_grafted",
+                "precondition_frequency": 10,
+                "start_preconditioning_step": 10,
+                "weight_decay": 0.0002,
+                "weight_decay_type": "decoupled"
+              },
+              "parameter_count": 368878,
+              "routing_diagnostics": {
+                "A": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      0.01333742868155241,
+                      -0.0024590520188212395,
+                      -0.019266188144683838,
+                      0.022998107597231865
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.004398761782795191,
+                      0.002157358918339014,
+                      0.008437945507466793,
+                      -0.030826743692159653
+                    ],
+                    "head_disagreement": 0.013003991916775703,
+                    "heads": 4,
+                    "mean_max_weight": 0.5133115649223328,
+                    "mean_normalized_entropy": 0.9992802739143372,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      -0.002747720805928111,
+                      0.028733450919389725,
+                      0.006301098968833685,
+                      0.027419107034802437
+                    ],
+                    "head_disagreement": 0.0177310723811388,
+                    "heads": 4,
+                    "mean_max_weight": 0.36048758029937744,
+                    "mean_normalized_entropy": 0.9973722100257874,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.010795103386044502,
+                      -0.002080606296658516,
+                      -0.013599514961242676,
+                      -0.007846751250326633
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.013192778453230858,
+                      -0.004847947973757982,
+                      -0.027919786050915718,
+                      -0.015944404527544975
+                    ],
+                    "head_disagreement": 0.02640766091644764,
+                    "heads": 4,
+                    "mean_max_weight": 0.521685004234314,
+                    "mean_normalized_entropy": 0.9978656768798828,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.002762791933491826,
+                      -0.016130024567246437,
+                      -0.008003661409020424,
+                      0.0024940338917076588
+                    ],
+                    "head_disagreement": 0.013496424071490765,
+                    "heads": 4,
+                    "mean_max_weight": 0.34680992364883423,
+                    "mean_normalized_entropy": 0.9991664290428162,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02441016212105751,
+                      -0.012004583142697811,
+                      -0.02327258139848709,
+                      -0.016304986551404
+                    ],
+                    "head_disagreement": 0.013482766225934029,
+                    "heads": 4,
+                    "mean_max_weight": 0.2683049738407135,
+                    "mean_normalized_entropy": 0.9981411099433899,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.001825428451411426,
+                      -0.011962187476456165,
+                      -0.02614985592663288,
+                      -0.015944935381412506
+                    ],
+                    "head_disagreement": 0.017640963196754456,
+                    "heads": 4,
+                    "mean_max_weight": 0.2304697036743164,
+                    "mean_normalized_entropy": 0.9970718026161194,
+                    "source_count": 5
+                  }
+                },
+                "B": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      0.01333742868155241,
+                      -0.0024590520188212395,
+                      -0.019266188144683838,
+                      0.022998107597231865
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.004398761782795191,
+                      0.002157358918339014,
+                      0.008437945507466793,
+                      -0.030826743692159653
+                    ],
+                    "head_disagreement": 0.013003991916775703,
+                    "heads": 4,
+                    "mean_max_weight": 0.5133115649223328,
+                    "mean_normalized_entropy": 0.9992802739143372,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      -0.002747720805928111,
+                      0.028733450919389725,
+                      0.006301098968833685,
+                      0.027419107034802437
+                    ],
+                    "head_disagreement": 0.0177310723811388,
+                    "heads": 4,
+                    "mean_max_weight": 0.36048758029937744,
+                    "mean_normalized_entropy": 0.9973722100257874,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.010795103386044502,
+                      -0.002080606296658516,
+                      -0.013599514961242676,
+                      -0.007846751250326633
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.013192778453230858,
+                      -0.004847947973757982,
+                      -0.027919786050915718,
+                      -0.015944404527544975
+                    ],
+                    "head_disagreement": 0.01647522859275341,
+                    "heads": 4,
+                    "mean_max_weight": 0.5129601955413818,
+                    "mean_normalized_entropy": 0.9991917014122009,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.002762791933491826,
+                      -0.016130024567246437,
+                      -0.008003661409020424,
+                      0.0024940338917076588
+                    ],
+                    "head_disagreement": 0.007567895110696554,
+                    "heads": 4,
+                    "mean_max_weight": 0.342421293258667,
+                    "mean_normalized_entropy": 0.9996938705444336,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02441016212105751,
+                      -0.012004583142697811,
+                      -0.02327258139848709,
+                      -0.016304986551404
+                    ],
+                    "head_disagreement": 0.007812702096998692,
+                    "heads": 4,
+                    "mean_max_weight": 0.26705676317214966,
+                    "mean_normalized_entropy": 0.9992132782936096,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.001825428451411426,
+                      -0.011962187476456165,
+                      -0.02614985592663288,
+                      -0.015944935381412506
+                    ],
+                    "head_disagreement": 0.009012037888169289,
+                    "heads": 4,
+                    "mean_max_weight": 0.21403829753398895,
+                    "mean_normalized_entropy": 0.9991845488548279,
+                    "source_count": 5
+                  }
+                },
+                "C": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      0.01333742868155241,
+                      -0.0024590520188212395,
+                      -0.019266188144683838,
+                      0.022998107597231865
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.004398761782795191,
+                      0.002157358918339014,
+                      0.008437945507466793,
+                      -0.030826743692159653
+                    ],
+                    "head_disagreement": 0.010414939373731613,
+                    "heads": 4,
+                    "mean_max_weight": 0.5107377767562866,
+                    "mean_normalized_entropy": 0.9993778467178345,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      -0.002747720805928111,
+                      0.028733450919389725,
+                      0.006301098968833685,
+                      0.027419107034802437
+                    ],
+                    "head_disagreement": 0.01658380962908268,
+                    "heads": 4,
+                    "mean_max_weight": 0.35780835151672363,
+                    "mean_normalized_entropy": 0.99758380651474,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.010795103386044502,
+                      -0.002080606296658516,
+                      -0.013599514961242676,
+                      -0.007846751250326633
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.013192778453230858,
+                      -0.004847947973757982,
+                      -0.027919786050915718,
+                      -0.015944404527544975
+                    ],
+                    "head_disagreement": 0.01946157217025757,
+                    "heads": 4,
+                    "mean_max_weight": 0.5160232782363892,
+                    "mean_normalized_entropy": 0.9988958835601807,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.002762791933491826,
+                      -0.016130024567246437,
+                      -0.008003661409020424,
+                      0.0024940338917076588
+                    ],
+                    "head_disagreement": 0.011548674665391445,
+                    "heads": 4,
+                    "mean_max_weight": 0.3446626663208008,
+                    "mean_normalized_entropy": 0.999366044998169,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02441016212105751,
+                      -0.012004583142697811,
+                      -0.02327258139848709,
+                      -0.016304986551404
+                    ],
+                    "head_disagreement": 0.01186580304056406,
+                    "heads": 4,
+                    "mean_max_weight": 0.2665068209171295,
+                    "mean_normalized_entropy": 0.9986222982406616,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.001825428451411426,
+                      -0.011962187476456165,
+                      -0.02614985592663288,
+                      -0.015944935381412506
+                    ],
+                    "head_disagreement": 0.016347667202353477,
+                    "heads": 4,
+                    "mean_max_weight": 0.22768071293830872,
+                    "mean_normalized_entropy": 0.9975638389587402,
+                    "source_count": 5
+                  }
+                },
+                "D": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      0.01333742868155241,
+                      -0.0024590520188212395,
+                      -0.019266188144683838,
+                      0.022998107597231865
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.004398761782795191,
+                      0.002157358918339014,
+                      0.008437945507466793,
+                      -0.030826743692159653
+                    ],
+                    "head_disagreement": 0.015418216586112976,
+                    "heads": 4,
+                    "mean_max_weight": 0.5149366855621338,
+                    "mean_normalized_entropy": 0.999161422252655,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      -0.002747720805928111,
+                      0.028733450919389725,
+                      0.006301098968833685,
+                      0.027419107034802437
+                    ],
+                    "head_disagreement": 0.018416056409478188,
+                    "heads": 4,
+                    "mean_max_weight": 0.3628334701061249,
+                    "mean_normalized_entropy": 0.9970961809158325,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.010795103386044502,
+                      -0.002080606296658516,
+                      -0.013599514961242676,
+                      -0.007846751250326633
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.013192778453230858,
+                      -0.004847947973757982,
+                      -0.027919786050915718,
+                      -0.015944404527544975
+                    ],
+                    "head_disagreement": 0.016944099217653275,
+                    "heads": 4,
+                    "mean_max_weight": 0.5149869918823242,
+                    "mean_normalized_entropy": 0.9990866184234619,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.002762791933491826,
+                      -0.016130024567246437,
+                      -0.008003661409020424,
+                      0.0024940338917076588
+                    ],
+                    "head_disagreement": 0.012182396836578846,
+                    "heads": 4,
+                    "mean_max_weight": 0.34773993492126465,
+                    "mean_normalized_entropy": 0.9992798566818237,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02441016212105751,
+                      -0.012004583142697811,
+                      -0.02327258139848709,
+                      -0.016304986551404
+                    ],
+                    "head_disagreement": 0.011410078965127468,
+                    "heads": 4,
+                    "mean_max_weight": 0.27013131976127625,
+                    "mean_normalized_entropy": 0.9987413287162781,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.001825428451411426,
+                      -0.011962187476456165,
+                      -0.02614985592663288,
+                      -0.015944935381412506
+                    ],
+                    "head_disagreement": 0.008293832652270794,
+                    "heads": 4,
+                    "mean_max_weight": 0.21422386169433594,
+                    "mean_normalized_entropy": 0.9990293979644775,
+                    "source_count": 5
+                  }
+                }
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 36.013030085487976,
+                  "r2": -0.48700311463386314,
+                  "rmse": 52.718977153365884,
+                  "spearman": 0.5551099379692664
+                },
+                "B": {
+                  "mae": 31.560431101965534,
+                  "r2": -0.33933978932068354,
+                  "rmse": 37.809388003443885,
+                  "spearman": 0.6061742301785321
+                },
+                "C": {
+                  "mae": 28.411258612738703,
+                  "r2": -0.559017178854341,
+                  "rmse": 35.221776833214854,
+                  "spearman": 0.2827668956732837
+                },
+                "D": {
+                  "mae": 20.59442371186757,
+                  "r2": 0.369360458065348,
+                  "rmse": 27.367941877391562,
+                  "spearman": 0.7412998972829159
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 11.394870721726187,
+                "r2": 0.7498257042973764,
+                "rmse": 14.455506857730528,
+                "spearman": 0.874415920926902
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        }
+      },
+      "reference": {
+        "author_random_forest": {
+          "A": 0.5524552299868458,
+          "B": 0.6097378435269689,
+          "C": 0.2589825119528175,
+          "D": 0.7478661257512554
+        },
+        "hierarchical_cross_attention_v1": {
+          "A": 0.5429762726710843,
+          "B": 0.6240882865058588,
+          "C": 0.24990551042196488,
+          "D": 0.7366804400690086
+        }
+      }
+    }
+  },
+  "design_path": "analysis/catalyst_optimizer_mhar_refinement_design.json",
+  "design_sha256": "12c61a2906c5d6ca4d63ecdf294954b60875f64d33adcaaa465a24d01367dd57",
+  "evidence_boundary": "Retrospective refinement after the v1 recipient outcomes were inspected. The correction restores the previously strongest encoder depths, uses per-sublayer additive delta routing, and adds Adam step-norm grafting because ungrafted KL-Shampoo failed source validation. These results may improve the repository model but cannot constitute prospective confirmation.",
+  "input_artifacts": {
+    "ocx24": {
+      "bytes": 526042,
+      "sha256": "e55446ee81b26c0ceaa6e9d532186954124ff11a51f854ca13511c7c8b31de99"
+    },
+    "specgen": {
+      "bytes": 7759603,
+      "sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2"
+    }
+  },
+  "screening_selection": {
+    "candidates": {
+      "standard_adamw": {
+        "eligible": false,
+        "median_source_validation_spearman": 0.8570033386626241,
+        "median_transfer_gain": -0.007235165807896959,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.19758258084522795,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.030804658525603434,
+          "specgen_A": -0.004250532441909538,
+          "specgen_B": 0.008801045087805992,
+          "specgen_C": 0.028496865348017264,
+          "specgen_D": -0.01021979917388438
+        },
+        "worst_transfer_gain": -0.19758258084522795
+      },
+      "standard_kl_shampoo_grafted": {
+        "eligible": false,
+        "median_source_validation_spearman": 0.8706424367080262,
+        "median_transfer_gain": -0.01100729601779371,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.13184593935082262,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.02050395226573698,
+          "specgen_A": -0.01292257851781664,
+          "specgen_B": -0.00909201351777078,
+          "specgen_C": 0.012886582477377062,
+          "specgen_D": -0.007268145993050146
+        },
+        "worst_transfer_gain": -0.13184593935082262
+      },
+      "sublayer_delta_mhar_adamw": {
+        "eligible": true,
+        "median_source_validation_spearman": 0.8600612316084592,
+        "median_transfer_gain": 0.010699828727764177,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": 0.002555244477444929,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.09814996472620452,
+          "specgen_A": 0.023793382730576074,
+          "specgen_B": 0.007610174297124628,
+          "specgen_C": 0.013789483158403726,
+          "specgen_D": 0.017328963847235368
+        },
+        "worst_transfer_gain": -0.09814996472620452
+      },
+      "sublayer_delta_mhar_kl_shampoo_grafted": {
+        "eligible": true,
+        "median_source_validation_spearman": 0.874415920926902,
+        "median_transfer_gain": -0.01224014239783311,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.020200395347115707,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.09604750039500343,
+          "specgen_A": 0.0026547079824206232,
+          "specgen_B": -0.017914056327326677,
+          "specgen_C": 0.023784383720466207,
+          "specgen_D": -0.006566228468339541
+        },
+        "worst_transfer_gain": -0.09604750039500343
+      }
+    },
+    "selected_for_confirmation": "sublayer_delta_mhar_adamw"
+  },
+  "seeds": [
+    20260731
+  ],
+  "stage": "screening",
+  "status": "complete"
+}

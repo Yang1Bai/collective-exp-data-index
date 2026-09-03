@@ -1,0 +1,97 @@
+{
+  "design_name": "CCA-v2 candidate-local applicability architecture",
+  "version": 1,
+  "frozen_utc": "2026-07-20T16:20:00Z",
+  "status": "architecture frozen after CCA-v1 outcomes and before selection or outcome access for a new temporal or prospective target; a target-specific execution appendix remains mandatory",
+  "claim_guard": "This architecture records the post-CCA-v1 improvement without retuning the completed 13-program benchmark. It cannot change any CCA-v1 decision. It becomes confirmatory only after a target-specific appendix freezes the new programme, sources, candidate pool, representations, splits, thresholds, controls, endpoints, and outcome hashes before target outcome access.",
+  "scientific_hypothesis": "Candidate-local source applicability and endpoint-specific source use can improve OOD decision utility beyond adjacency-only while limiting negative transfer on a target programme unseen during method development.",
+  "stages": [
+    {
+      "name": "contraindication_gate",
+      "purpose": "remove leakage and empirically non-specific sources",
+      "required_checks": [
+        "canonical material, article, campaign, and time grouping",
+        "written physical, condition, or mechanism rationale",
+        "matched wrong-source control",
+        "shuffled-source control",
+        "source uncertainty estimable without target-test outcomes"
+      ],
+      "source_oof_skill_use": "continuous reliability covariate with uncertainty, not a universal binary admission threshold"
+    },
+    {
+      "name": "candidate_local_applicability",
+      "purpose": "separate useful and harmful regions inside a nominally adjacent edge",
+      "outcome_free_features": [
+        "distance to source training support in the frozen representation",
+        "group-calibrated source ensemble or conformal uncertainty",
+        "distance to labelled target support",
+        "composition, condition, and provenance compatibility",
+        "agreement and disagreement among admitted source ranks",
+        "declared decision endpoint"
+      ],
+      "cross_fitting": "all source support and uncertainty quantities are estimated inside source groups"
+    },
+    {
+      "name": "endpoint_specific_borrowing",
+      "prediction": "cross-fitted source predictions enter through shrinkage with a point mass at zero",
+      "fixed_screening": "preserve source ranks and combine local support, rank consensus, and diversity",
+      "breadth_exploration": "one first-pass allocation per outcome-free family or provenance component",
+      "adaptive_acquisition": "allowed only if the target-only backbone beats uniform random; retain random and novelty arms"
+    },
+    {
+      "name": "abstention",
+      "rule": "borrow only when the lower calibrated bound on incremental utility exceeds the predeclared practical dead zone",
+      "fallback": "use the endpoint-matched target-only policy"
+    }
+  ],
+  "minimum_validation": {
+    "first_confirmatory_test": "one genuinely temporal or prospective target programme",
+    "general_policy_estimation": "at least five independent programmes spanning at least two scientific families",
+    "independent_unit": "experimental programme or campaign, never ML seed",
+    "coverage_guard": {
+      "programme_fraction": 0.2,
+      "eligible_task_or_candidate_fraction": 0.2
+    },
+    "safety_guard_after_five_programmes": {
+      "maximum_clear_harm_fraction": 0.1,
+      "maximum_clearly_harmful_programmes": 0
+    }
+  },
+  "primary_family": {
+    "comparisons": [
+      "CCA-v2 minus adjacency-only",
+      "CCA-v2 minus endpoint-matched target-only"
+    ],
+    "multiplicity": "Holm correction over exactly these two efficacy comparisons",
+    "success": "both programme-level 95% intervals are above zero and the safety and coverage guards pass"
+  },
+  "required_controls": [
+    "target only",
+    "adjacency only",
+    "global source credibility only",
+    "strongest single qualified source",
+    "shuffled source labels or ranks",
+    "size, skill, and coverage matched wrong source",
+    "novelty and uniform random for exploration",
+    "oracle reported descriptively only"
+  ],
+  "scientific_inspiration_card": [
+    "source-specific proposed material family or condition",
+    "source-derived rationale and expected direction",
+    "mechanistic or compositional falsifier",
+    "matched target-only or wrong-source control",
+    "timestamp and pre-outcome file hash"
+  ],
+  "mandatory_target_specific_appendix": [
+    "target identity and immutable outcome-access record",
+    "source set and direction rationales",
+    "candidate pool and exclusions",
+    "representations and all feature calculations",
+    "grouping and outer evaluation unit",
+    "practical dead zone and uncertainty calibration",
+    "endpoint and complete policy definitions",
+    "control family and multiplicity",
+    "input and pre-outcome artifact hashes",
+    "compute and stopping rules"
+  ]
+}

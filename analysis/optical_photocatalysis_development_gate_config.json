@@ -1,0 +1,51 @@
+{
+  "program": "Optical-to-photocatalysis development-only recipient gate",
+  "version": 1,
+  "frozen_utc": "2026-07-24T20:31:00Z",
+  "freeze_status": "Implementation settings frozen before donor-gate results and before aggregate recipient-outcome modeling; target paper, file schema, and isolated example rows had been inspected.",
+  "recipient_model": {
+    "class": "RandomForestRegressor",
+    "n_estimators": 300,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "criterion": "squared_error",
+    "representation": "2048-bit radius-2 chiral Morgan fingerprint"
+  },
+  "calculated_descriptor_columns": [
+    "EA* (V)",
+    "EA (V)",
+    "Sr (a.u.)",
+    "Δσ (Ang)",
+    "H_CT (Ang)",
+    "ΔD (a.u.)",
+    "E_eb (eV)",
+    "E_sol (eV)",
+    "E_b (eV)",
+    "S1-S0 (eV)",
+    "S1-T1 (eV)"
+  ],
+  "methods": [
+    "target_structure_only",
+    "target_structure_plus_calculated",
+    "target_structure_plus_donor_raw",
+    "target_structure_plus_donor_rank",
+    "target_structure_plus_calculated_plus_donor_raw",
+    "target_structure_plus_calculated_plus_donor_rank",
+    "target_structure_plus_shuffled_donor_raw",
+    "target_structure_plus_shuffled_donor_rank",
+    "target_structure_plus_gaussian_features"
+  ],
+  "rank_transform": "For every split and feature column, use the labeled training empirical CDF for both training and evaluation rows. Evaluation feature values do not alter the transform.",
+  "missing_descriptor_policy": "Replace calculated-descriptor missing values with the labeled training median for that split; if an entire training column is missing, replace it with zero.",
+  "negative_controls": {
+    "shuffle": "Permute each donor-feature column independently within training and within evaluation, using fixed outcome-independent seeds.",
+    "gaussian": "Generate the same number of independent standard-normal columns as the admitted donor vector, separately for training and evaluation with fixed seeds."
+  },
+  "feature_form_selection": "At budget 60, choose raw or rank using the lower mean RMSE of target_structure_plus_donor across the 100 frozen draws; ties choose raw.",
+  "development_admission": {
+    "minimum_mean_paired_relative_rmse_gain": 0.02,
+    "must_exceed_median_matched_shuffled_gain": true,
+    "comparison_baseline": "target_structure_only"
+  },
+  "claim_guard": "Passing this gate permits one locked blind evaluation. It is not evidence of blind-set benefit and cannot establish a transferable edge by itself."
+}

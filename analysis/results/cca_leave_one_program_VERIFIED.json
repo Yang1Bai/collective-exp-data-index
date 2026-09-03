@@ -1,0 +1,19 @@
+{
+  "status": "verified-complete",
+  "verification_mode": "independent reconstruction from frozen inputs",
+  "claim_guard": "This benchmark may show whether a fixed meta-gate can recover useful decision structure without using the held-out target programme's outcomes. Because the gate family and features were motivated after inspecting the component studies, it is method development only. It cannot provide independent positive replication, prospective validation, or discovery acceleration.",
+  "design_sha256": "f1d24130a1ed3a8695a0fc2654bba4d45d427be45fc86ce527fc16ca8176d60d",
+  "summary_sha256": "86d1d3754287cfb6ed807ae9e2f40e3964ce6641753cffb6a7a96b50c1382cef",
+  "edge_rows": 97,
+  "target_tasks": 20,
+  "programme_clusters": 13,
+  "lopo_assignment_verified": true,
+  "programme_grouping_verified": true,
+  "saved_outputs_reconstructed": true,
+  "cca_admitted_tasks": 17,
+  "cca_clear_harms": 1,
+  "cca_clear_benefits_retained": 4,
+  "coverage_guard_pass": true,
+  "primary_policy_superiority_pass": false,
+  "decision": "leave-one-program CCA meta-gate does not pass the frozen nontrivial superiority family"
+}

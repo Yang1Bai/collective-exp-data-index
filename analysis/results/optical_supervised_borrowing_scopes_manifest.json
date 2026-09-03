@@ -1,0 +1,20 @@
+{
+  "status": "outcome-independent-dynamic-ood-scopes-frozen",
+  "created_utc": "2026-07-26T21:55:39.855999+00:00",
+  "design_sha256": "3d59bac4cecf05cac87136d51015881e77b8812cea2eeb41e6831d71d122a6c7",
+  "focused_config_sha256": "85af6621a6027bbe4b15685b464a1804cb1aaa85eb0d1f92e7a15687aa509494",
+  "pair_audit_sha256": "ef32c0e3817a0f99946eae18fbd07b3dfb9f2f762510539d780a78a63245f8d7",
+  "target_metadata_sha256": "3de1cffab5d7776f0a39593562e055832767bcc703a5f6511fda5e7482407eb1",
+  "draw_sha256": "1a3188cb23d8fc2fc6746cd476331650b3c4afa23adf8003b643c0189f3c8cc3",
+  "implementation_sha256": "963248749ab4c4781cad5d68c7f040a6bc0971a18e8ba1e1dc57a559187c006f",
+  "scope_sha256": "54ce71e88d33ddbb985f7eb4d48c18b6832b96ae3e176ab14771f18adbb6453e",
+  "budgets": [
+    30,
+    60,
+    120
+  ],
+  "draws_per_budget": 300,
+  "scope_rows": 425890,
+  "hard_scope_rows": 170653,
+  "outcome_access": "No recipient HER value, calculated descriptor, or blind outcome was loaded."
+}

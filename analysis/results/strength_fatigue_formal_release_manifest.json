@@ -1,0 +1,23 @@
+{
+  "claim_guard": "A passing result establishes one retrospective, outcome-unseen, cross-database mechanical borrowing edge. It does not establish prospective alloy discovery, universal fatigue transfer, or a general law relating monotonic strength to fatigue.",
+  "created_utc": "2026-07-29T15:25:06.393320+00:00",
+  "design_sha256": "e26d74d1955e6deab26ba91d235fd0d48c7e3bdb55753677d02331977ffabf6f",
+  "donor_release_sha256": "4764dece60345fc98217d53312184c24474cc091b8a75cf1b6bc82f284496bc2",
+  "donor_rows": {
+    "birdshot_uts": 171,
+    "borg_elongation": 612,
+    "borg_hardness": 530,
+    "borg_uts": 534,
+    "borg_ys": 1062
+  },
+  "preoutcome_audit_sha256": "6f631072667a3d1854fcd47edd8ec289d4e3709d6125a0796180e56d82e68c63",
+  "preoutcome_verification_sha256": "02ae9106360227e90a54d47a50f752fa55cedc4067be06dca5f744c7aebf02bd",
+  "recipient_numeric_outcomes_released": true,
+  "recipient_xlsx_md5": "d4d7456f83a4f55e3aa790acdedd2b01",
+  "status": "formal-release-after-design-freeze",
+  "target_curves": 62,
+  "target_failure_rows": 433,
+  "target_release_sha256": "73a09937b5cb91690fd19744d7449e592c0d4c4d944a91781d73c2bad6ce0ae9",
+  "target_rows": 503,
+  "target_runout_rows": 70
+}

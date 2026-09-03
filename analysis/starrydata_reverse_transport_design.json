@@ -1,0 +1,90 @@
+{
+  "design_name": "Outcome-unseen reverse transport validation on Starrydata2",
+  "version": 1,
+  "frozen_utc": "2026-07-18T04:00:44Z",
+  "status": "outcome-free target metadata, components, source ranks, fixed policy orders, and hypothesis cards generated; target y values remain unopened and formal outcome access requires a verified PREOUTCOME sentinel",
+  "parent_program": "analysis/outcome_unseen_neighbor_validation_program.json",
+  "claim_guard": "This target tests a reverse directed edge and independent OOD utility. It is retained regardless of sign. No target value, high-performing material identity, or outcome correlation was inspected before this freeze.",
+  "source_snapshot": {
+    "manifest_path": "analysis/target_metadata/starrydata_manifest_2026-07-17.json",
+    "manifest_sha256": "6fcfcb138180cb33415fcda0eb9b35a23673d96684e776c92d55b4105ffc2088",
+    "generated_at": "2026-07-17T19:21:58.665206+00:00",
+    "db_snapshot": "2026-07-18 02:00:02 UTC+0900 (JST)",
+    "base_url": "https://github.com/starrydata/starrydata_datasets/releases/latest/download",
+    "files": {
+      "papers": {
+        "name": "ThermoelectricMaterials_papers.csv.gz",
+        "rows": 9475,
+        "bytes": 1454829,
+        "sha256": "96852da8483e2742aef948ae1f9d33da85ff732f088dbf72d062c8a608205176"
+      },
+      "samples": {
+        "name": "ThermoelectricMaterials_samples.csv.gz",
+        "rows": 55137,
+        "bytes": 2050488,
+        "sha256": "a09cec97df60d47b6a9300c835db58bf64f8f7142279a58ddc09201a96b8b1ed"
+      },
+      "curves": {
+        "name": "ThermoelectricMaterials_curves.csv.gz",
+        "rows": 155638,
+        "bytes": 25148909,
+        "sha256": "eb17491ce9a9ff3e96295f8ab2b2be8c9a0e2e1b1e75459dff0e9f82e9c32e83"
+      }
+    }
+  },
+  "outcome_access_protocol": [
+    "Download only the three hash-pinned files.",
+    "Read compressed CSV headers with zero data rows and archive the column list.",
+    "Freeze a schema amendment mapping composition, sample, DOI, temperature, property descriptor, units, x values, and y values.",
+    "Build and hash an outcome-free target metadata table, provenance components, OOD scopes, source predictions, policy orders, and hypothesis cards.",
+    "Only then parse and join target y values."
+  ],
+  "schema_amendment": "analysis/STARRYDATA_REVERSE_TRANSPORT_SCHEMA_AMENDMENT.md",
+  "formal_implementation": "analysis/starrydata_reverse_transport_implementation.json",
+  "preoutcome_protocol": {
+    "runner": "analysis/prepare_starrydata_reverse_transport.py",
+    "verifier": "analysis/verify_starrydata_reverse_preoutcome.py",
+    "sentinel": "analysis/results/starrydata_reverse_PREOUTCOME.json",
+    "required_status": "verified-preoutcome",
+    "forbidden_columns": ["y", "ZT", "target_value", "outcome"]
+  },
+  "primary_target": {
+    "property_family": "thermoelectric figure of merit ZT",
+    "condition": "temperature retained explicitly; the primary condition window and aggregation rule will be fixed from descriptor and unit metadata without inspecting y values",
+    "entity": "canonical composition plus sample identifier",
+    "provenance_group": "paper SID/DOI",
+    "component": "connected exact composition, sample lineage, and DOI group; a second outcome-free composition-cluster resolution is mandatory",
+    "minimum": "100 entities, 40 components, 20 provenance groups"
+  },
+  "sources": {
+    "same_domain_reference": "ESTM ZT",
+    "adjacent_transport": ["OBELiX ionic conductivity", "Caltech ionic conductivity"],
+    "wrong_domain": ["Borg yield strength", "OCx H2 Faradaic efficiency"],
+    "leakage_exclusions": ["exact composition", "paper DOI/SID", "sample identifier", "repository record lineage"]
+  },
+  "prediction": {
+    "label_budgets": [15, 30, 60],
+    "primary_budget": 30,
+    "primary_endpoint": "relative RMSE reduction in the highest outcome-free OOD quartile versus target-only",
+    "absolute_gate": "positive augmented-model R2",
+    "required_baselines": ["target only", "naive pooling", "source only", "source-feature stacking", "residual shrinkage", "mixture of experts"],
+    "learners": ["regularized linear", "Random Forest", "ExtraTrees or gradient boosting"],
+    "representations": ["composition only", "composition plus temperature/available structure or processing context"]
+  },
+  "exploration": {
+    "budget": 20,
+    "co_primary": ["distinct-component AUC20", "acquisitions to first distinct top-5-percent component"],
+    "required_policies": ["uniform family-first", "composition novelty family-first", "best single source", "entity consensus", "CCA family-first consensus", "CCA round-robin", "wrong-source portfolio", "shuffled-source portfolio"],
+    "source_increment": "The adjacent ionic source must be compared with the best same-domain ESTM policy and must contribute unique high-value components to support reverse cross-domain borrowing."
+  },
+  "specificity": {
+    "matched_controls": ["source-size matched", "source-skill matched", "target-coverage matched", "equal-capacity random feature"],
+    "abstention": "Any source that fails its frozen credibility threshold receives zero weight and zero portfolio allocation."
+  },
+  "inference": {
+    "unit": "paper SID/DOI and independent composition component",
+    "within_target": "paired group bootstrap and source-rank randomization",
+    "multiplicity": "Holm over named primary contrasts",
+    "seed_warning": "Repeated target-label seeds are conditional sensitivity, not external replication."
+  }
+}

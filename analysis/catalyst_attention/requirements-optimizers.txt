@@ -1,0 +1,5 @@
+-r requirements.txt
+
+# Official Meta implementation with RootInvKLShampooPreconditionerConfig.
+# Commit-pinned because KL-Shampoo is newer than the latest tagged release.
+torch-shampoo @ git+https://github.com/facebookresearch/optimizers.git@f18f735c972d304542af15e62b5acaa503169f2b

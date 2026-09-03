@@ -1,0 +1,63 @@
+{
+  "design_name": "SAFE-MAMB local method-development screen",
+  "design_version": "2026-07-23a",
+  "status": "frozen-before-local-screen",
+  "frozen_utc": "2026-07-23T23:50:00-04:00",
+  "parent_design": "analysis/multi_target_ood_borrowing_design.json",
+  "claim_guard": "This method was designed after inspection of earlier target outcomes and is restricted to method development. A favorable result can justify a full frozen portfolio run and later independent confirmation, but cannot itself establish a new cross-domain OOD claim.",
+  "hypothesis": "Mechanism-eligible donor bundles improve recipient OOD prediction more reliably when donor features are cross-fitted by material identity, donors explain target-only residuals, and grouped pseudo-OOD validation can set the total transfer contribution exactly to zero.",
+  "screen_targets": [
+    "polymer_tensile",
+    "alloy_ys",
+    "electrolyte_conductivity"
+  ],
+  "contracts": {
+    "polymer_tensile": "paired_sparse_multi_property",
+    "alloy_ys": "partially_paired_same_domain_multi_property",
+    "electrolyte_conductivity": "unpaired_cross_database_transport"
+  },
+  "methods": [
+    "target_only",
+    "mechanism_bundle_feature_concat",
+    "safe_crossfit_residual_stack"
+  ],
+  "local_repeats": 3,
+  "learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "source_rules": {
+    "eligible": "neighborhood >= 1 and relation != distant-control",
+    "sentinel": "the frozen wrong source is scored but cannot enter the final stack",
+    "evaluation_identity_exclusion": true,
+    "meta_fold_identity_exclusion": true,
+    "positive_crossfit_transferability_required": true
+  },
+  "stack": {
+    "target_only_anchor": true,
+    "correction": "ridge regression on target-only out-of-fold residuals",
+    "alphas": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "blend_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "meta_folds": 3,
+    "objective": "0.5 * all-sample MSE + 0.5 * pseudo-OOD upper-quartile MSE",
+    "fallback": "blend = 0"
+  },
+  "evaluation": {
+    "reuse_frozen_q1_q4": true,
+    "outcomes_used_to_define_q1_q4": false,
+    "primary_screen_metric": "q4_relative_rmse_gain",
+    "required_escalation_pattern": "positive mean Q4 gain, positive Q4-minus-Q1 specificity, positive Q4 R2, and no material advantage for the wrong-source sentinel"
+  }
+}

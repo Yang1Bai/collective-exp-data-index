@@ -1,0 +1,58 @@
+{
+  "design_name": "Task-conditioned partial-label multi-task borrowing local screen",
+  "design_version": "2026-07-23a",
+  "status": "frozen-before-local-screen",
+  "frozen_utc": "2026-07-23T23:10:00-04:00",
+  "parent_design": "analysis/multi_target_ood_borrowing_design.json",
+  "claim_guard": "This method was specified after earlier single-donor, bundle-concatenation, and SAFE residual-stack outcomes were inspected. It is method development only and requires a later frozen portfolio run plus outcome-unseen confirmation.",
+  "hypothesis": "Neighbor datasets are more transferable when they train a task-conditioned shared representation from the union of partially labeled material-property pairs than when they are compressed to scalar donor predictions.",
+  "screen_targets": [
+    "polymer_tensile",
+    "alloy_ys",
+    "electrolyte_conductivity"
+  ],
+  "methods": [
+    "target_only",
+    "task_conditioned_bundle_safe_blend",
+    "task_conditioned_wrong_safe_blend"
+  ],
+  "local_repeats": 3,
+  "learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "shared_expert": {
+    "architecture": [
+      64,
+      32
+    ],
+    "activation": "relu",
+    "alpha": 0.01,
+    "maximum_iterations": 500,
+    "early_stopping": true,
+    "task_token": "one-hot property identity concatenated to the common composition or Morgan representation",
+    "target_and_source_scaling": "responses standardized separately inside each task",
+    "task_balance": "each task contributes equal total sample weight",
+    "missing_labels": "represented as separate observed material-property rows; no imputation",
+    "evaluation_identity_exclusion": "all source-property rows matching a target evaluation identity are excluded",
+    "meta_fold_identity_exclusion": "all source-property rows matching a held target meta-fold identity are excluded"
+  },
+  "safety_blend": {
+    "grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "objective": "0.5 * grouped out-of-fold all-sample MSE + 0.5 * pseudo-OOD upper-quartile MSE",
+    "fallback": "blend = 0 recovers the target-only learner exactly"
+  },
+  "evaluation": {
+    "reuse_frozen_outcome_free_q1_q4": true,
+    "bundle": "all mechanism-eligible sources",
+    "negative_control": "the frozen wrong source alone",
+    "escalation": "bundle Q4 gain and Q4-minus-Q1 specificity exceed the wrong-source result, Q4 R2 is positive, and at least two learners benefit"
+  }
+}

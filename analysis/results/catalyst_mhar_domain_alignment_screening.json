@@ -1,0 +1,1152 @@
+{
+  "candidates": [
+    "standard_coral_adamw",
+    "sublayer_delta_mhar_coral_adamw"
+  ],
+  "datasets": {
+    "ocx24": {
+      "dataset": {
+        "programs": {
+          "ocx24_uoft": 1230,
+          "ocx24_vsp": 940
+        },
+        "samples": 2170,
+        "targets": {
+          "fe_co": 2170
+        },
+        "unique_groups": 434,
+        "with_curves": 0,
+        "with_surface_composition": 0,
+        "with_targets": 2170,
+        "with_uncertainty": 0
+      },
+      "directions": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "models": {
+            "standard_coral_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 16.366469462080843,
+                  "r2": -0.2812955277026863,
+                  "rmse": 21.347941830830866,
+                  "spearman": 0.2838404865055659
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 35,
+                  "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/ocx24_uoft_to_ocx24_vsp/standard_coral_adamw_seed20260731.pt",
+                  "elapsed_seconds": 20.892909500282258,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 16.366469462080843,
+                      "r2": -0.2812955277026863,
+                      "rmse": 21.347941830830866,
+                      "spearman": 0.2838404865055659
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.8584313225890465,
+                    "r2": 0.6949108486674169,
+                    "rmse": 9.880080922910375,
+                    "spearman": 0.8642817033194031
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_coral_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 13.408843492602953,
+                  "r2": 0.105730238771917,
+                  "rmse": 17.834692613093328,
+                  "spearman": 0.47097893702711296
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 23,
+                  "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/ocx24_uoft_to_ocx24_vsp/sublayer_delta_mhar_coral_adamw_seed20260731.pt",
+                  "elapsed_seconds": 17.91621525026858,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164230
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          0.003539387136697769,
+                          0.03572860360145569,
+                          0.009409232065081596,
+                          0.041704125702381134
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          0.0006433340604417026,
+                          0.0007720933645032346,
+                          0.0017650751397013664,
+                          -0.007429592311382294
+                        ],
+                        "head_disagreement": 0.020981553941965103,
+                        "heads": 4,
+                        "mean_max_weight": 0.5227084755897522,
+                        "mean_normalized_entropy": 0.9983424544334412,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.01777033880352974,
+                          0.009701840579509735,
+                          0.006019510328769684,
+                          0.006928876508027315
+                        ],
+                        "head_disagreement": 0.01185372844338417,
+                        "heads": 4,
+                        "mean_max_weight": 0.34879425168037415,
+                        "mean_normalized_entropy": 0.9991986751556396,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 13.408843492602953,
+                      "r2": 0.105730238771917,
+                      "rmse": 17.834692613093328,
+                      "spearman": 0.47097893702711296
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 6.945356915698283,
+                    "r2": 0.6995662277192466,
+                    "rmse": 9.804410687721255,
+                    "spearman": 0.8593442992571618
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "models": {
+            "standard_coral_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 14.251663255284278,
+                  "r2": 0.14689841216934707,
+                  "rmse": 18.2119261976359,
+                  "spearman": 0.5413194239174127
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 21,
+                  "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/ocx24_vsp_to_ocx24_uoft/standard_coral_adamw_seed20260731.pt",
+                  "elapsed_seconds": 12.515578165650368,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164022
+                  },
+                  "parameter_count": 164022,
+                  "routing_diagnostics": {
+                    "target": {}
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 14.251663255284278,
+                      "r2": 0.14689841216934707,
+                      "rmse": 18.2119261976359,
+                      "spearman": 0.5413194239174127
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.443914601482977,
+                    "r2": 0.6558557832488241,
+                    "rmse": 11.477628829019691,
+                    "spearman": 0.728324483027006
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            },
+            "sublayer_delta_mhar_coral_adamw": {
+              "ensemble": {
+                "target": {
+                  "mae": 13.629384716138336,
+                  "r2": 0.24711973085762706,
+                  "rmse": 17.10875725333504,
+                  "spearman": 0.5054163867414806
+                }
+              },
+              "runs": [
+                {
+                  "best_epoch": 27,
+                  "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/ocx24_vsp_to_ocx24_uoft/sublayer_delta_mhar_coral_adamw_seed20260731.pt",
+                  "elapsed_seconds": 15.615002959035337,
+                  "optimizer": {
+                    "implementation": "torch.optim.AdamW",
+                    "name": "adamw",
+                    "parameter_count": 164230
+                  },
+                  "parameter_count": 164230,
+                  "routing_diagnostics": {
+                    "target": {
+                      "composition.encoder.routers.0": {
+                        "gate": [
+                          0.0,
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "heads": 4
+                      },
+                      "composition.encoder.routers.1": {
+                        "gate": [
+                          -0.006464430596679449,
+                          0.007581428159028292,
+                          0.010415972210466862,
+                          -0.02078307792544365
+                        ],
+                        "head_disagreement": 0.0,
+                        "heads": 4,
+                        "mean_max_weight": 1.0,
+                        "mean_normalized_entropy": 0.0,
+                        "source_count": 1
+                      },
+                      "composition.encoder.routers.2": {
+                        "gate": [
+                          -0.0028670066967606544,
+                          -0.004870960023254156,
+                          0.004672398325055838,
+                          -0.006210201419889927
+                        ],
+                        "head_disagreement": 0.028096787631511688,
+                        "heads": 4,
+                        "mean_max_weight": 0.5279590487480164,
+                        "mean_normalized_entropy": 0.9969883561134338,
+                        "source_count": 2
+                      },
+                      "composition.encoder.routers.3": {
+                        "gate": [
+                          0.016838621348142624,
+                          0.009048223495483398,
+                          0.012365726754069328,
+                          -0.0003607444523368031
+                        ],
+                        "head_disagreement": 0.023900946602225304,
+                        "heads": 4,
+                        "mean_max_weight": 0.3642033338546753,
+                        "mean_normalized_entropy": 0.9970279335975647,
+                        "source_count": 3
+                      }
+                    }
+                  },
+                  "seed": 20260731,
+                  "targets": {
+                    "target": {
+                      "mae": 13.629384716138336,
+                      "r2": 0.24711973085762706,
+                      "rmse": 17.10875725333504,
+                      "spearman": 0.5054163867414806
+                    }
+                  },
+                  "validation_group_overlap": [],
+                  "validation_metrics": {
+                    "mae": 8.111583144231396,
+                    "r2": 0.642259273790132,
+                    "rmse": 11.702162657109994,
+                    "spearman": 0.7065891226721308
+                  },
+                  "validation_split": "group-held-out"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "gate": {
+        "candidates": {
+          "standard_coral_adamw": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.261768003300864,
+                "gain_over_tree": -0.24258080167955975,
+                "spearman": 0.2838404865055659
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.03860014991157279,
+                "gain_over_tree": -0.02974402267726528,
+                "spearman": 0.5413194239174127
+              }
+            },
+            "median_gain_over_current": -0.1501840766062184,
+            "passed": false
+          },
+          "sublayer_delta_mhar_coral_adamw": {
+            "directions": {
+              "ocx24_uoft_to_ocx24_vsp": {
+                "gain_over_current": -0.07462955277931699,
+                "gain_over_tree": -0.055442351158012715,
+                "spearman": 0.47097893702711296
+              },
+              "ocx24_vsp_to_ocx24_uoft": {
+                "gain_over_current": -0.07450318708750492,
+                "gain_over_tree": -0.06564705985319741,
+                "spearman": 0.5054163867414806
+              }
+            },
+            "median_gain_over_current": -0.07456636993341095,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "model_names": [
+        "standard_coral_adamw",
+        "sublayer_delta_mhar_coral_adamw"
+      ],
+      "reference": {
+        "ocx24_uoft_to_ocx24_vsp": {
+          "fair_extra_trees": {
+            "mae": 13.72034315424109,
+            "r2": 0.013755434378140419,
+            "rmse": 18.7293914753803,
+            "spearman": 0.5264212881851257
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 15.294420956313132,
+            "r2": -0.2234809319207225,
+            "rmse": 20.860751912296713,
+            "spearman": 0.54560848980643
+          }
+        },
+        "ocx24_vsp_to_ocx24_uoft": {
+          "fair_extra_trees": {
+            "mae": 14.29111934137205,
+            "r2": 0.18199592712868728,
+            "rmse": 17.833362581313438,
+            "spearman": 0.571063446594678
+          },
+          "hierarchical_cross_attention_v1": {
+            "mae": 13.819910660829606,
+            "r2": 0.24451624093033075,
+            "rmse": 17.13831310572193,
+            "spearman": 0.5799195738289855
+          }
+        }
+      }
+    },
+    "specgen": {
+      "dataset": {
+        "programs": {
+          "specgen_A": 126,
+          "specgen_B": 126,
+          "specgen_C": 126,
+          "specgen_D": 126,
+          "specgen_source": 462
+        },
+        "samples": 966,
+        "targets": {
+          "oer_overpotential_mV": 966
+        },
+        "unique_groups": 5,
+        "with_curves": 966,
+        "with_surface_composition": 0,
+        "with_targets": 966,
+        "with_uncertainty": 0
+      },
+      "gate": {
+        "candidates": {
+          "standard_coral_adamw": {
+            "gains": {
+              "A": 0.004310525842642132,
+              "B": 0.020214806696224996,
+              "C": 0.03859975403139854,
+              "D": 0.007547113214409595
+            },
+            "median_gain": 0.013880959955317296,
+            "nonnegative_systems": 4,
+            "passed": false
+          },
+          "sublayer_delta_mhar_coral_adamw": {
+            "gains": {
+              "A": -0.01982181960207352,
+              "B": -0.0006029345816799259,
+              "C": 0.01457539670800162,
+              "D": -0.03595077578485628
+            },
+            "median_gain": -0.010212377091876723,
+            "nonnegative_systems": 1,
+            "passed": false
+          }
+        },
+        "passed": false,
+        "selected": null
+      },
+      "models": {
+        "standard_coral_adamw": {
+          "ensemble": {
+            "A": {
+              "mae": 26.006704905676468,
+              "r2": -0.013425523684772012,
+              "rmse": 43.52181068323138,
+              "spearman": 0.556765755829488
+            },
+            "B": {
+              "mae": 32.12854827396454,
+              "r2": -0.3552164741093775,
+              "rmse": 38.032826161974725,
+              "spearman": 0.6443030932020838
+            },
+            "C": {
+              "mae": 47.59953346857948,
+              "r2": -2.807776490749517,
+              "rmse": 55.04546372953963,
+              "spearman": 0.29758226598421605
+            },
+            "D": {
+              "mae": 19.52846108088419,
+              "r2": 0.4360251646399934,
+              "rmse": 25.881020863710898,
+              "spearman": 0.755413238965665
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 35,
+              "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/specgen/standard_coral_adamw_seed20260731.pt",
+              "elapsed_seconds": 95.03117337496951,
+              "optimizer": {
+                "implementation": "torch.optim.AdamW",
+                "name": "adamw",
+                "parameter_count": 368198
+              },
+              "parameter_count": 368198,
+              "routing_diagnostics": {
+                "A": {},
+                "B": {},
+                "C": {},
+                "D": {}
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 26.006704905676468,
+                  "r2": -0.013425523684772012,
+                  "rmse": 43.52181068323138,
+                  "spearman": 0.556765755829488
+                },
+                "B": {
+                  "mae": 32.12854827396454,
+                  "r2": -0.3552164741093775,
+                  "rmse": 38.032826161974725,
+                  "spearman": 0.6443030932020838
+                },
+                "C": {
+                  "mae": 47.59953346857948,
+                  "r2": -2.807776490749517,
+                  "rmse": 55.04546372953963,
+                  "spearman": 0.29758226598421605
+                },
+                "D": {
+                  "mae": 19.52846108088419,
+                  "r2": 0.4360251646399934,
+                  "rmse": 25.881020863710898,
+                  "spearman": 0.755413238965665
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 12.969401840936566,
+                "r2": 0.7055603245068266,
+                "rmse": 15.682314038829135,
+                "spearman": 0.8604030724320277
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        },
+        "sublayer_delta_mhar_coral_adamw": {
+          "ensemble": {
+            "A": {
+              "mae": 33.013693576388896,
+              "r2": -0.3422406988882827,
+              "rmse": 50.087140469629354,
+              "spearman": 0.5326334103847723
+            },
+            "B": {
+              "mae": 29.18462630983384,
+              "r2": -0.15701936606399491,
+              "rmse": 35.14184641040787,
+              "spearman": 0.6234853519241789
+            },
+            "C": {
+              "mae": 43.5434368799603,
+              "r2": -2.3904394692092787,
+              "rmse": 51.9414187860831,
+              "spearman": 0.27355790866081914
+            },
+            "D": {
+              "mae": 18.753093610491067,
+              "r2": 0.4874389481996607,
+              "rmse": 24.673135333834285,
+              "spearman": 0.7119153499663992
+            }
+          },
+          "runs": [
+            {
+              "best_epoch": 45,
+              "checkpoint": "analysis/results/catalyst_mhar_domain_alignment_checkpoints/specgen/sublayer_delta_mhar_coral_adamw_seed20260731.pt",
+              "elapsed_seconds": 145.4962813751772,
+              "optimizer": {
+                "implementation": "torch.optim.AdamW",
+                "name": "adamw",
+                "parameter_count": 368878
+              },
+              "parameter_count": 368878,
+              "routing_diagnostics": {
+                "A": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.019019460305571556,
+                      -0.0030122590251266956,
+                      -0.026469459757208824,
+                      0.02286820486187935
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.044373709708452225,
+                      -0.04015686735510826,
+                      -0.034013744443655014,
+                      -0.03211294114589691
+                    ],
+                    "head_disagreement": 0.06064779683947563,
+                    "heads": 4,
+                    "mean_max_weight": 0.5469963550567627,
+                    "mean_normalized_entropy": 0.9873000383377075,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.011555992998182774,
+                      -0.009588904678821564,
+                      -0.007636444177478552,
+                      0.016770748421549797
+                    ],
+                    "head_disagreement": 0.012664303183555603,
+                    "heads": 4,
+                    "mean_max_weight": 0.3474380671977997,
+                    "mean_normalized_entropy": 0.9989992380142212,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.011910311877727509,
+                      -0.01027047261595726,
+                      -0.04918970912694931,
+                      -0.007656622678041458
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.02693232148885727,
+                      -0.00015463454474229366,
+                      -0.032128121703863144,
+                      -0.020296666771173477
+                    ],
+                    "head_disagreement": 0.015316830947995186,
+                    "heads": 4,
+                    "mean_max_weight": 0.513546347618103,
+                    "mean_normalized_entropy": 0.998873770236969,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.03130778670310974,
+                      -0.0013497689506039023,
+                      -0.01844993606209755,
+                      -0.009237424470484257
+                    ],
+                    "head_disagreement": 0.00690189003944397,
+                    "heads": 4,
+                    "mean_max_weight": 0.3422755002975464,
+                    "mean_normalized_entropy": 0.9997550249099731,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02160160057246685,
+                      7.682653813390061e-05,
+                      -0.004397620912641287,
+                      -0.016066016629338264
+                    ],
+                    "head_disagreement": 0.014195375144481659,
+                    "heads": 4,
+                    "mean_max_weight": 0.2778123617172241,
+                    "mean_normalized_entropy": 0.9974678754806519,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.010871917940676212,
+                      -0.007966737262904644,
+                      -0.01490562129765749,
+                      -0.021685250103473663
+                    ],
+                    "head_disagreement": 0.013982437551021576,
+                    "heads": 4,
+                    "mean_max_weight": 0.2224176973104477,
+                    "mean_normalized_entropy": 0.9979125261306763,
+                    "source_count": 5
+                  }
+                },
+                "B": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.019019460305571556,
+                      -0.0030122590251266956,
+                      -0.026469459757208824,
+                      0.02286820486187935
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.044373709708452225,
+                      -0.04015686735510826,
+                      -0.034013744443655014,
+                      -0.03211294114589691
+                    ],
+                    "head_disagreement": 0.06064779683947563,
+                    "heads": 4,
+                    "mean_max_weight": 0.5469963550567627,
+                    "mean_normalized_entropy": 0.9873000383377075,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.011555992998182774,
+                      -0.009588904678821564,
+                      -0.007636444177478552,
+                      0.016770748421549797
+                    ],
+                    "head_disagreement": 0.012664303183555603,
+                    "heads": 4,
+                    "mean_max_weight": 0.3474380671977997,
+                    "mean_normalized_entropy": 0.9989992380142212,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.011910311877727509,
+                      -0.01027047261595726,
+                      -0.04918970912694931,
+                      -0.007656622678041458
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.02693232148885727,
+                      -0.00015463454474229366,
+                      -0.032128121703863144,
+                      -0.020296666771173477
+                    ],
+                    "head_disagreement": 0.01770956441760063,
+                    "heads": 4,
+                    "mean_max_weight": 0.514685332775116,
+                    "mean_normalized_entropy": 0.9990614652633667,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.03130778670310974,
+                      -0.0013497689506039023,
+                      -0.01844993606209755,
+                      -0.009237424470484257
+                    ],
+                    "head_disagreement": 0.0063913254998624325,
+                    "heads": 4,
+                    "mean_max_weight": 0.3402941823005676,
+                    "mean_normalized_entropy": 0.9998074769973755,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02160160057246685,
+                      7.682653813390061e-05,
+                      -0.004397620912641287,
+                      -0.016066016629338264
+                    ],
+                    "head_disagreement": 0.0038778726011514664,
+                    "heads": 4,
+                    "mean_max_weight": 0.2586381733417511,
+                    "mean_normalized_entropy": 0.9997121095657349,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.010871917940676212,
+                      -0.007966737262904644,
+                      -0.01490562129765749,
+                      -0.021685250103473663
+                    ],
+                    "head_disagreement": 0.008554769679903984,
+                    "heads": 4,
+                    "mean_max_weight": 0.21441851556301117,
+                    "mean_normalized_entropy": 0.9992727041244507,
+                    "source_count": 5
+                  }
+                },
+                "C": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.019019460305571556,
+                      -0.0030122590251266956,
+                      -0.026469459757208824,
+                      0.02286820486187935
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.044373709708452225,
+                      -0.04015686735510826,
+                      -0.034013744443655014,
+                      -0.03211294114589691
+                    ],
+                    "head_disagreement": 0.050618331879377365,
+                    "heads": 4,
+                    "mean_max_weight": 0.5387800931930542,
+                    "mean_normalized_entropy": 0.9892715215682983,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.011555992998182774,
+                      -0.009588904678821564,
+                      -0.007636444177478552,
+                      0.016770748421549797
+                    ],
+                    "head_disagreement": 0.01206017006188631,
+                    "heads": 4,
+                    "mean_max_weight": 0.34622132778167725,
+                    "mean_normalized_entropy": 0.9993547201156616,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.011910311877727509,
+                      -0.01027047261595726,
+                      -0.04918970912694931,
+                      -0.007656622678041458
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.02693232148885727,
+                      -0.00015463454474229366,
+                      -0.032128121703863144,
+                      -0.020296666771173477
+                    ],
+                    "head_disagreement": 0.01481279730796814,
+                    "heads": 4,
+                    "mean_max_weight": 0.5121974945068359,
+                    "mean_normalized_entropy": 0.9992074370384216,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.03130778670310974,
+                      -0.0013497689506039023,
+                      -0.01844993606209755,
+                      -0.009237424470484257
+                    ],
+                    "head_disagreement": 0.004486566875129938,
+                    "heads": 4,
+                    "mean_max_weight": 0.3389643430709839,
+                    "mean_normalized_entropy": 0.9998885989189148,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02160160057246685,
+                      7.682653813390061e-05,
+                      -0.004397620912641287,
+                      -0.016066016629338264
+                    ],
+                    "head_disagreement": 0.011226974427700043,
+                    "heads": 4,
+                    "mean_max_weight": 0.2705638110637665,
+                    "mean_normalized_entropy": 0.9985412359237671,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.010871917940676212,
+                      -0.007966737262904644,
+                      -0.01490562129765749,
+                      -0.021685250103473663
+                    ],
+                    "head_disagreement": 0.012907229363918304,
+                    "heads": 4,
+                    "mean_max_weight": 0.22104422748088837,
+                    "mean_normalized_entropy": 0.9981973767280579,
+                    "source_count": 5
+                  }
+                },
+                "D": {
+                  "composition.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "composition.encoder.routers.1": {
+                    "gate": [
+                      -0.019019460305571556,
+                      -0.0030122590251266956,
+                      -0.026469459757208824,
+                      0.02286820486187935
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "composition.encoder.routers.2": {
+                    "gate": [
+                      -0.044373709708452225,
+                      -0.04015686735510826,
+                      -0.034013744443655014,
+                      -0.03211294114589691
+                    ],
+                    "head_disagreement": 0.047988682985305786,
+                    "heads": 4,
+                    "mean_max_weight": 0.5345576405525208,
+                    "mean_normalized_entropy": 0.9928368926048279,
+                    "source_count": 2
+                  },
+                  "composition.encoder.routers.3": {
+                    "gate": [
+                      0.011555992998182774,
+                      -0.009588904678821564,
+                      -0.007636444177478552,
+                      0.016770748421549797
+                    ],
+                    "head_disagreement": 0.01507281232625246,
+                    "heads": 4,
+                    "mean_max_weight": 0.347817599773407,
+                    "mean_normalized_entropy": 0.9986708164215088,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.0": {
+                    "gate": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "heads": 4
+                  },
+                  "curve.encoder.routers.1": {
+                    "gate": [
+                      -0.011910311877727509,
+                      -0.01027047261595726,
+                      -0.04918970912694931,
+                      -0.007656622678041458
+                    ],
+                    "head_disagreement": 0.0,
+                    "heads": 4,
+                    "mean_max_weight": 1.0,
+                    "mean_normalized_entropy": 0.0,
+                    "source_count": 1
+                  },
+                  "curve.encoder.routers.2": {
+                    "gate": [
+                      -0.02693232148885727,
+                      -0.00015463454474229366,
+                      -0.032128121703863144,
+                      -0.020296666771173477
+                    ],
+                    "head_disagreement": 0.027779150754213333,
+                    "heads": 4,
+                    "mean_max_weight": 0.5223677754402161,
+                    "mean_normalized_entropy": 0.9977102279663086,
+                    "source_count": 2
+                  },
+                  "curve.encoder.routers.3": {
+                    "gate": [
+                      -0.03130778670310974,
+                      -0.0013497689506039023,
+                      -0.01844993606209755,
+                      -0.009237424470484257
+                    ],
+                    "head_disagreement": 0.009605210274457932,
+                    "heads": 4,
+                    "mean_max_weight": 0.34245765209198,
+                    "mean_normalized_entropy": 0.9995030164718628,
+                    "source_count": 3
+                  },
+                  "curve.encoder.routers.4": {
+                    "gate": [
+                      -0.02160160057246685,
+                      7.682653813390061e-05,
+                      -0.004397620912641287,
+                      -0.016066016629338264
+                    ],
+                    "head_disagreement": 0.004779542330652475,
+                    "heads": 4,
+                    "mean_max_weight": 0.25920623540878296,
+                    "mean_normalized_entropy": 0.9995936751365662,
+                    "source_count": 4
+                  },
+                  "curve.encoder.routers.5": {
+                    "gate": [
+                      -0.010871917940676212,
+                      -0.007966737262904644,
+                      -0.01490562129765749,
+                      -0.021685250103473663
+                    ],
+                    "head_disagreement": 0.008770430460572243,
+                    "heads": 4,
+                    "mean_max_weight": 0.2150210291147232,
+                    "mean_normalized_entropy": 0.9992104768753052,
+                    "source_count": 5
+                  }
+                }
+              },
+              "seed": 20260731,
+              "targets": {
+                "A": {
+                  "mae": 33.013693576388896,
+                  "r2": -0.3422406988882827,
+                  "rmse": 50.087140469629354,
+                  "spearman": 0.5326334103847723
+                },
+                "B": {
+                  "mae": 29.18462630983384,
+                  "r2": -0.15701936606399491,
+                  "rmse": 35.14184641040787,
+                  "spearman": 0.6234853519241789
+                },
+                "C": {
+                  "mae": 43.5434368799603,
+                  "r2": -2.3904394692092787,
+                  "rmse": 51.9414187860831,
+                  "spearman": 0.27355790866081914
+                },
+                "D": {
+                  "mae": 18.753093610491067,
+                  "r2": 0.4874389481996607,
+                  "rmse": 24.673135333834285,
+                  "spearman": 0.7119153499663992
+                }
+              },
+              "validation_group_overlap": [
+                "specgen_source"
+              ],
+              "validation_metrics": {
+                "mae": 12.210065423874626,
+                "r2": 0.7098162456342331,
+                "rmse": 15.568563012743558,
+                "spearman": 0.8653237692300833
+              },
+              "validation_split": "row-held-out-insufficient-source-groups"
+            }
+          ]
+        }
+      },
+      "reference": {
+        "author_random_forest": {
+          "A": 0.5524552299868458,
+          "B": 0.6097378435269689,
+          "C": 0.2589825119528175,
+          "D": 0.7478661257512554
+        },
+        "hierarchical_cross_attention_v1": {
+          "A": 0.5429762726710843,
+          "B": 0.6240882865058588,
+          "C": 0.24990551042196488,
+          "D": 0.7366804400690086
+        }
+      }
+    }
+  },
+  "design_path": "analysis/catalyst_mhar_domain_alignment_design.json",
+  "design_sha256": "23f6b17e0f2fe29676fde34c237ffdb838e235d6c17991db03de0e743df84b1e",
+  "evidence_boundary": "Retrospective transductive domain-adaptation development after SpecGen and OCx24 recipient outcomes were inspected. Target inputs are available to CORAL but target outcomes are structurally absent from its batches. Results are useful for method development only; a sealed new programme is required for confirmation.",
+  "input_artifacts": {
+    "ocx24": {
+      "bytes": 526042,
+      "sha256": "e55446ee81b26c0ceaa6e9d532186954124ff11a51f854ca13511c7c8b31de99"
+    },
+    "specgen": {
+      "bytes": 7759603,
+      "sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2"
+    }
+  },
+  "screening_selection": {
+    "candidates": {
+      "standard_coral_adamw": {
+        "eligible": false,
+        "median_source_validation_spearman": 0.8604030724320277,
+        "median_transfer_gain": 0.005928819528525864,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.261768003300864,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.03860014991157279,
+          "specgen_A": 0.004310525842642132,
+          "specgen_B": 0.020214806696224996,
+          "specgen_C": 0.03859975403139854,
+          "specgen_D": 0.007547113214409595
+        },
+        "worst_transfer_gain": -0.261768003300864
+      },
+      "sublayer_delta_mhar_coral_adamw": {
+        "eligible": true,
+        "median_source_validation_spearman": 0.8593442992571618,
+        "median_transfer_gain": -0.0278862976934649,
+        "transfer_unit_gains": {
+          "ocx24_ocx24_uoft_to_ocx24_vsp": -0.07462955277931699,
+          "ocx24_ocx24_vsp_to_ocx24_uoft": -0.07450318708750492,
+          "specgen_A": -0.01982181960207352,
+          "specgen_B": -0.0006029345816799259,
+          "specgen_C": 0.01457539670800162,
+          "specgen_D": -0.03595077578485628
+        },
+        "worst_transfer_gain": -0.07462955277931699
+      }
+    },
+    "selected_for_confirmation": "sublayer_delta_mhar_coral_adamw"
+  },
+  "seeds": [
+    20260731
+  ],
+  "stage": "screening",
+  "status": "complete"
+}

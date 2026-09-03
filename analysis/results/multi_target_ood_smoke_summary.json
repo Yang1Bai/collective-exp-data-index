@@ -1,0 +1,51 @@
+{
+  "status": "smoke-complete",
+  "created_utc": "2026-07-23T19:34:44.509851+00:00",
+  "mode": "smoke",
+  "design_sha256": "cc911d9d9677e0c523a77632f7866e9e6fedcb5625472f9004ad203fe0512d89",
+  "parent_design_sha256": "a63b1e6d85348758039bef8691134a3cc269013369453d52364565610544ef03",
+  "data_snapshot_sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39",
+  "parent_runner_sha256_at_freeze": "ed7b137780102aa14c9566e7be80f63ac6ba16ba36e3c1e96ed6ed6ce117115f",
+  "targets": 8,
+  "programme_clusters": 7,
+  "real_edges": 40,
+  "shuffled_controls": 8,
+  "evaluated_source_features": 48,
+  "learners": [
+    "ridge_alpha_10",
+    "random_forest",
+    "extra_trees"
+  ],
+  "repeats": 3,
+  "bootstrap_resamples": 200,
+  "sign_flip_permutations": 199,
+  "rows": {
+    "strata": 2623,
+    "source_quality": 48,
+    "metrics": 1296,
+    "contrasts": 432,
+    "group_errors": 1908,
+    "edge_summary": 48,
+    "target_summary": 8
+  },
+  "primary_edge_classifications": {
+    "directional-ood-improvement": 4,
+    "unresolved": 3,
+    "ood-improvement-not-specific": 1
+  },
+  "programme_inference": {
+    "mean_primary_ood_gain": 0.005738660257462216,
+    "ci95": [
+      -0.024692242691575886,
+      0.04151198168404487
+    ],
+    "programme_clusters_with_full_pass": 0,
+    "selective_ood_repair_cohort_gate_passed": false
+  },
+  "cross_database_inference": {
+    "designated_edges": 3,
+    "full_passes": 0,
+    "cross_database_upgrade_gate_passed": false
+  },
+  "claim_guard": "This systematic benchmark was designed after earlier component outcomes had been inspected. It can test whether a fixed borrowing procedure preferentially repairs held-out OOD regions across a declared portfolio, identify null and harmful edges, and generate hypotheses for external confirmation. It cannot retroactively create prospective validation, establish universal transfer, or prove laboratory discovery acceleration."
+}

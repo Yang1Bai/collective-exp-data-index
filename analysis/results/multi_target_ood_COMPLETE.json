@@ -1,0 +1,16 @@
+{
+  "status": "formal-complete",
+  "created_utc": "2026-07-23T19:52:31.425629+00:00",
+  "design_sha256": "cc911d9d9677e0c523a77632f7866e9e6fedcb5625472f9004ad203fe0512d89",
+  "output_hashes": {
+    "multi_target_ood_strata.csv": "09cc0b9169f54ac1026d07c499a3c3b1e07286a5a0c8b4356df32d06e1a2895f",
+    "multi_target_ood_source_quality.csv": "52c119a616659767db40b14469a2f41a5a151d6d111e0e59e06a7213231b984f",
+    "multi_target_ood_metrics.csv": "a81afa7acc5ad26366a242a15c90e0d079d41602864d61d6bf15a0f3f4c9c2b1",
+    "multi_target_ood_contrasts.csv": "abf929e404be6c5eedaa263eb1d6d23489a7365da894ec8104b223f7840f6e7a",
+    "multi_target_ood_group_errors.csv": "822943e0c47354b2b39687c84d62626a8cc2b47272d377be3ca6147728376673",
+    "multi_target_ood_edge_summary.csv": "e9790aa1507e1ddb8507cfe74b8d74989f1d4a29692c7c8255ca8a44b5ce2b7b",
+    "multi_target_ood_target_summary.csv": "2a193b145d658efc34a2c4951b6445e84c03ec28272909093adab15bdfbf2a05",
+    "multi_target_ood_summary.json": "505f5c01f69fb33ba175c19cfaff6f3345798d2b47f7cece7ce50f30886eb938"
+  },
+  "claim_guard": "This systematic benchmark was designed after earlier component outcomes had been inspected. It can test whether a fixed borrowing procedure preferentially repairs held-out OOD regions across a declared portfolio, identify null and harmful edges, and generate hypotheses for external confirmation. It cannot retroactively create prospective validation, establish universal transfer, or prove laboratory discovery acceleration."
+}

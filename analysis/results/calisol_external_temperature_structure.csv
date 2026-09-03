@@ -1,0 +1,6 @@
+nominal_temperature_C,raw_rows_in_window,paper_specific_formulations_before_outcome_filter,eligible_positive_formulations,articles,salts,active_solvent_columns
+-40,1000,1000,895,15,9,23
+-30,974,974,913,15,9,27
+-20,996,993,968,17,12,30
+0,1155,1139,1130,21,12,36
+20,1318,1308,1306,23,12,36

@@ -1,0 +1,18 @@
+{
+  "status": "donor-only-development-complete",
+  "recipient_files_opened": false,
+  "donor_cells": 178,
+  "candidate_methods": 32,
+  "selection_rule": "highest leave-one-batch-out Spearman; ties within 0.01 choose lower RMSE, then simpler learner",
+  "best_candidate": {
+    "feature_set": "response_plus_protocol",
+    "alignment": "within_lab_robust",
+    "transfer_object": "differential_correction",
+    "learner": "hist_gradient_boosting",
+    "oof_spearman": 0.10944347332676746,
+    "oof_rmse_log10_life": 0.6178785119753124,
+    "oof_r2_log10_life": -12.148197815738449,
+    "relative_rmse_gain_over_own_curve": 0.6406998911342645
+  },
+  "gate_passes_oof_spearman_at_least_0_5": false
+}

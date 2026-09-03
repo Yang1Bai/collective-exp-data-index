@@ -1,0 +1,4758 @@
+{
+  "decision": {
+    "freeze_for_sealed_external_programme": false,
+    "reason": "The numeric RouterState signal did not satisfy every frozen robustness gate.",
+    "replace_existing_expert_or_router": false
+  },
+  "design": {
+    "bytes": 3424,
+    "path": "/Users/sissifeng/collective-exp-data-index/analysis/catalyst_numeric_expert_router_design.json",
+    "sha256": "f17816215d3bd649ef3fc642dd10eac6156f96d6452257386759b0f89b2365fa"
+  },
+  "design_version": "catalyst-numeric-expert-router-v1",
+  "edge_inventory": {
+    "programme_identity_in_features": false,
+    "suites": {
+      "alloy_yield_strength": 6,
+      "ocx24_fe_co": 2,
+      "seccm_her": 6,
+      "specgen": 20
+    },
+    "target_outcomes_in_features": false,
+    "total": 34,
+    "unique_donor_programmes": 13
+  },
+  "edges": [
+    {
+      "donor_group": "alloy_yield_strength:birdshot",
+      "evaluation": {
+        "ensemble_spearman": 0.07531514933630006,
+        "mhar_spearman": 0.0012033228065327025,
+        "standard_spearman": 0.10162936317672729
+      },
+      "example_id": "alloy_yield_strength:birdshot\u2192mpea",
+      "recipient_group": "alloy_yield_strength:mpea",
+      "state": {
+        "composition_support": 0.5063291139240507,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 96.44190979003906,
+        "normalized_expert_disagreement": 0.5240115523338318,
+        "source_sample_count": 171,
+        "source_validation_spearman": 0.7076612903225807,
+        "standard_domain_share": 0.6209421754085434,
+        "standard_predictive_std": 65.68712615966797,
+        "surface_available": false,
+        "target_candidate_count": 395,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "alloy_yield_strength:birdshot",
+      "evaluation": {
+        "ensemble_spearman": 0.0726719528626431,
+        "mhar_spearman": -0.05595344341704896,
+        "standard_spearman": 0.10922473854419279
+      },
+      "example_id": "alloy_yield_strength:birdshot\u2192steels",
+      "recipient_group": "alloy_yield_strength:steels",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 94.50970458984375,
+        "normalized_expert_disagreement": 0.1630653291940689,
+        "source_sample_count": 171,
+        "source_validation_spearman": 0.7076612903225807,
+        "standard_domain_share": 0.6645837487953825,
+        "standard_predictive_std": 50.98861312866211,
+        "surface_available": false,
+        "target_candidate_count": 312,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "alloy_yield_strength:mpea",
+      "evaluation": {
+        "ensemble_spearman": -0.3898337322494207,
+        "mhar_spearman": -0.4387654509271272,
+        "standard_spearman": -0.4117879649649553
+      },
+      "example_id": "alloy_yield_strength:mpea\u2192birdshot",
+      "recipient_group": "alloy_yield_strength:birdshot",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 336.2912902832031,
+        "normalized_expert_disagreement": 0.1800166517496109,
+        "source_sample_count": 395,
+        "source_validation_spearman": 0.7317885034666899,
+        "standard_domain_share": 0.490479731884284,
+        "standard_predictive_std": 395.7785949707031,
+        "surface_available": false,
+        "target_candidate_count": 171,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "alloy_yield_strength:mpea",
+      "evaluation": {
+        "ensemble_spearman": -0.1832546986272726,
+        "mhar_spearman": -0.1754729369555967,
+        "standard_spearman": -0.18150160387963177
+      },
+      "example_id": "alloy_yield_strength:mpea\u2192steels",
+      "recipient_group": "alloy_yield_strength:steels",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 530.8910522460938,
+        "normalized_expert_disagreement": 0.0596657358109951,
+        "source_sample_count": 395,
+        "source_validation_spearman": 0.7317885034666899,
+        "standard_domain_share": 0.44786765626891534,
+        "standard_predictive_std": 609.1034545898438,
+        "surface_available": false,
+        "target_candidate_count": 312,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "alloy_yield_strength:steels",
+      "evaluation": {
+        "ensemble_spearman": -0.02550369880906449,
+        "mhar_spearman": 0.14586464632713236,
+        "standard_spearman": -0.5688325948533242
+      },
+      "example_id": "alloy_yield_strength:steels\u2192birdshot",
+      "recipient_group": "alloy_yield_strength:birdshot",
+      "state": {
+        "composition_support": 0.1286549707602339,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 306.0311279296875,
+        "normalized_expert_disagreement": 0.034025851637125015,
+        "source_sample_count": 312,
+        "source_validation_spearman": 0.0739900504059161,
+        "standard_domain_share": 0.6421918324262579,
+        "standard_predictive_std": 289.6249084472656,
+        "surface_available": false,
+        "target_candidate_count": 171,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "alloy_yield_strength:steels",
+      "evaluation": {
+        "ensemble_spearman": -0.05887128265809901,
+        "mhar_spearman": -0.21642482564743556,
+        "standard_spearman": 0.029964006430624544
+      },
+      "example_id": "alloy_yield_strength:steels\u2192mpea",
+      "recipient_group": "alloy_yield_strength:mpea",
+      "state": {
+        "composition_support": 0.06329113924050633,
+        "condition_observed_fraction": 0.0,
+        "curve_available": false,
+        "mhar_predictive_std": 310.0670166015625,
+        "normalized_expert_disagreement": 0.036709513515233994,
+        "source_sample_count": 312,
+        "source_validation_spearman": 0.0739900504059161,
+        "standard_domain_share": 0.58027988279919,
+        "standard_predictive_std": 290.96246337890625,
+        "surface_available": false,
+        "target_candidate_count": 395,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "alloy_yield_strength"
+    },
+    {
+      "donor_group": "ocx24_fe_co:ocx24_uoft",
+      "evaluation": {
+        "ensemble_spearman": 0.531443157873281,
+        "mhar_spearman": 0.5635935427993176,
+        "standard_spearman": 0.4652485734130151
+      },
+      "example_id": "ocx24_fe_co:ocx24_uoft\u2192ocx24_vsp",
+      "recipient_group": "ocx24_fe_co:ocx24_vsp",
+      "state": {
+        "composition_support": 0.526595744680851,
+        "condition_observed_fraction": 0.16666666666666663,
+        "curve_available": false,
+        "mhar_predictive_std": 3.8522138595581055,
+        "normalized_expert_disagreement": 0.5735415816307068,
+        "source_sample_count": 1230,
+        "source_validation_spearman": 0.9124662475911628,
+        "standard_domain_share": 0.5097152452087361,
+        "standard_predictive_std": 7.121142387390137,
+        "surface_available": false,
+        "target_candidate_count": 940,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "ocx24_fe_co"
+    },
+    {
+      "donor_group": "ocx24_fe_co:ocx24_vsp",
+      "evaluation": {
+        "ensemble_spearman": 0.5199394801479815,
+        "mhar_spearman": 0.5257332268636069,
+        "standard_spearman": 0.5093981874727485
+      },
+      "example_id": "ocx24_fe_co:ocx24_vsp\u2192ocx24_uoft",
+      "recipient_group": "ocx24_fe_co:ocx24_uoft",
+      "state": {
+        "composition_support": 0.7682926829268293,
+        "condition_observed_fraction": 0.16666666666666666,
+        "curve_available": false,
+        "mhar_predictive_std": 7.442132949829102,
+        "normalized_expert_disagreement": 0.4763471484184265,
+        "source_sample_count": 940,
+        "source_validation_spearman": 0.8921059155871983,
+        "standard_domain_share": 0.5533915843294077,
+        "standard_predictive_std": 6.299205303192139,
+        "surface_available": false,
+        "target_candidate_count": 1230,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "ocx24_fe_co"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Au-rich",
+      "evaluation": {
+        "ensemble_spearman": 0.08687854822139843,
+        "mhar_spearman": -0.11468587092656948,
+        "standard_spearman": 0.47841326911226006
+      },
+      "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Ir-rich",
+      "recipient_group": "seccm_her:seccm_Ir-rich",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.0445198193192482,
+        "normalized_expert_disagreement": 0.04428844898939133,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.17770463563936142,
+        "standard_domain_share": 0.5108275069250908,
+        "standard_predictive_std": 0.045029185712337494,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Au-rich",
+      "evaluation": {
+        "ensemble_spearman": -0.1567902029981582,
+        "mhar_spearman": -0.23146729802270463,
+        "standard_spearman": 0.0541660271753059
+      },
+      "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Rh-rich",
+      "recipient_group": "seccm_her:seccm_Rh-rich",
+      "state": {
+        "composition_support": 0.9161490683229814,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.036115046590566635,
+        "normalized_expert_disagreement": 0.05353185534477234,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.17770463563936142,
+        "standard_domain_share": 0.5263806552786117,
+        "standard_predictive_std": 0.037606749683618546,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Ir-rich",
+      "evaluation": {
+        "ensemble_spearman": 0.22556516778956498,
+        "mhar_spearman": 0.23751954641006517,
+        "standard_spearman": 0.21669220736905723
+      },
+      "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Au-rich",
+      "recipient_group": "seccm_her:seccm_Au-rich",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.04119081050157547,
+        "normalized_expert_disagreement": 0.33167025446891785,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.9694853732812454,
+        "standard_domain_share": 0.5130980885308685,
+        "standard_predictive_std": 0.04095717892050743,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Ir-rich",
+      "evaluation": {
+        "ensemble_spearman": -0.04649282455127948,
+        "mhar_spearman": 0.08082944891209548,
+        "standard_spearman": -0.17406385685942138
+      },
+      "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Rh-rich",
+      "recipient_group": "seccm_her:seccm_Rh-rich",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.030425002798438072,
+        "normalized_expert_disagreement": 0.24416019022464752,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.9694853732812454,
+        "standard_domain_share": 0.49641906803436053,
+        "standard_predictive_std": 0.036816731095314026,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Rh-rich",
+      "evaluation": {
+        "ensemble_spearman": -0.03213366304115673,
+        "mhar_spearman": -0.08550964767569823,
+        "standard_spearman": -0.025111781393613218
+      },
+      "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Au-rich",
+      "recipient_group": "seccm_her:seccm_Au-rich",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.21806320548057556,
+        "normalized_expert_disagreement": 0.3601599335670471,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.9845581223661142,
+        "standard_domain_share": 0.36969163935675964,
+        "standard_predictive_std": 0.22397015988826752,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "seccm_her:seccm_Rh-rich",
+      "evaluation": {
+        "ensemble_spearman": -0.5335362571641716,
+        "mhar_spearman": -0.5721334707445435,
+        "standard_spearman": -0.5088899436247478
+      },
+      "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Ir-rich",
+      "recipient_group": "seccm_her:seccm_Ir-rich",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.0,
+        "curve_available": true,
+        "mhar_predictive_std": 0.08648397773504257,
+        "normalized_expert_disagreement": 0.493867963552475,
+        "source_sample_count": 322,
+        "source_validation_spearman": 0.9845581223661142,
+        "standard_domain_share": 0.41295711155987097,
+        "standard_predictive_std": 0.08433247357606888,
+        "surface_available": true,
+        "target_candidate_count": 322,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "seccm_her"
+    },
+    {
+      "donor_group": "specgen:specgen_A",
+      "evaluation": {
+        "ensemble_spearman": 0.25604621902008684,
+        "mhar_spearman": 0.2616796077981712,
+        "standard_spearman": 0.23430757765971555
+      },
+      "example_id": "specgen:specgen_A\u2192specgen_B",
+      "recipient_group": "specgen:specgen_B",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 36.707340240478516,
+        "normalized_expert_disagreement": 0.06914179772138596,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.1922887036706051,
+        "standard_domain_share": 0.5119855941199154,
+        "standard_predictive_std": 43.43082046508789,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_A",
+      "evaluation": {
+        "ensemble_spearman": 0.006069841422758684,
+        "mhar_spearman": 0.008366079732170541,
+        "standard_spearman": -0.0006089330174365795
+      },
+      "example_id": "specgen:specgen_A\u2192specgen_C",
+      "recipient_group": "specgen:specgen_C",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 39.97821044921875,
+        "normalized_expert_disagreement": 0.0903293713927269,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.1922887036706051,
+        "standard_domain_share": 0.49736075471162905,
+        "standard_predictive_std": 44.27019500732422,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_A",
+      "evaluation": {
+        "ensemble_spearman": 0.05703538389649451,
+        "mhar_spearman": 0.06108782218261144,
+        "standard_spearman": 0.05572445237841261
+      },
+      "example_id": "specgen:specgen_A\u2192specgen_D",
+      "recipient_group": "specgen:specgen_D",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 36.22897720336914,
+        "normalized_expert_disagreement": 0.08329257369041443,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.1922887036706051,
+        "standard_domain_share": 0.4903901931628324,
+        "standard_predictive_std": 43.28372573852539,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_A",
+      "evaluation": {
+        "ensemble_spearman": 0.07184347069363738,
+        "mhar_spearman": 0.07157748003049169,
+        "standard_spearman": 0.07267367333557112
+      },
+      "example_id": "specgen:specgen_A\u2192specgen_source",
+      "recipient_group": "specgen:specgen_source",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 37.894309997558594,
+        "normalized_expert_disagreement": 0.054809123277664185,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.1922887036706051,
+        "standard_domain_share": 0.5012222375705558,
+        "standard_predictive_std": 43.772640228271484,
+        "surface_available": false,
+        "target_candidate_count": 462,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_B",
+      "evaluation": {
+        "ensemble_spearman": 0.14653988062961468,
+        "mhar_spearman": 0.2043255242153204,
+        "standard_spearman": 0.11728709843236579
+      },
+      "example_id": "specgen:specgen_B\u2192specgen_A",
+      "recipient_group": "specgen:specgen_A",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 37.300010681152344,
+        "normalized_expert_disagreement": 0.47574347257614136,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.5424901185770752,
+        "standard_domain_share": 0.4840885090050609,
+        "standard_predictive_std": 28.506563186645508,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_B",
+      "evaluation": {
+        "ensemble_spearman": -0.023019467861124684,
+        "mhar_spearman": -0.01516633170521845,
+        "standard_spearman": -0.02724000360266787
+      },
+      "example_id": "specgen:specgen_B\u2192specgen_C",
+      "recipient_group": "specgen:specgen_C",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 36.38373565673828,
+        "normalized_expert_disagreement": 0.3879842162132263,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.5424901185770752,
+        "standard_domain_share": 0.47352969091315417,
+        "standard_predictive_std": 29.528379440307617,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_B",
+      "evaluation": {
+        "ensemble_spearman": -0.12345649386544262,
+        "mhar_spearman": -0.10301389587013217,
+        "standard_spearman": -0.18475129172841745
+      },
+      "example_id": "specgen:specgen_B\u2192specgen_D",
+      "recipient_group": "specgen:specgen_D",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 23.18140983581543,
+        "normalized_expert_disagreement": 0.037955962121486664,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.5424901185770752,
+        "standard_domain_share": 0.5682158878892047,
+        "standard_predictive_std": 21.360429763793945,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_B",
+      "evaluation": {
+        "ensemble_spearman": -0.08013145071180783,
+        "mhar_spearman": 0.012992866407528147,
+        "standard_spearman": -0.08958216300781427
+      },
+      "example_id": "specgen:specgen_B\u2192specgen_source",
+      "recipient_group": "specgen:specgen_source",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 34.274749755859375,
+        "normalized_expert_disagreement": 0.2837386727333069,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.5424901185770752,
+        "standard_domain_share": 0.5038185486808173,
+        "standard_predictive_std": 28.61558723449707,
+        "surface_available": false,
+        "target_candidate_count": 462,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_C",
+      "evaluation": {
+        "ensemble_spearman": 0.03281639020076935,
+        "mhar_spearman": 0.05206227315580923,
+        "standard_spearman": -0.24118546962547158
+      },
+      "example_id": "specgen:specgen_C\u2192specgen_A",
+      "recipient_group": "specgen:specgen_A",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 26.186460494995117,
+        "normalized_expert_disagreement": 0.08584170043468475,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.3306152806639384,
+        "standard_domain_share": 0.4982520120558987,
+        "standard_predictive_std": 27.656291961669922,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_C",
+      "evaluation": {
+        "ensemble_spearman": -0.32405484009395696,
+        "mhar_spearman": -0.3223480252831316,
+        "standard_spearman": -0.3149363018511284
+      },
+      "example_id": "specgen:specgen_C\u2192specgen_B",
+      "recipient_group": "specgen:specgen_B",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 24.711793899536133,
+        "normalized_expert_disagreement": 0.06973402202129364,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.3306152806639384,
+        "standard_domain_share": 0.37119283065315917,
+        "standard_predictive_std": 26.981246948242188,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_C",
+      "evaluation": {
+        "ensemble_spearman": 0.13359830220324814,
+        "mhar_spearman": 0.1421502973440596,
+        "standard_spearman": 0.02121953853391197
+      },
+      "example_id": "specgen:specgen_C\u2192specgen_D",
+      "recipient_group": "specgen:specgen_D",
+      "state": {
+        "composition_support": 0.5952380952380952,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 23.351825714111328,
+        "normalized_expert_disagreement": 0.13697485625743866,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.3306152806639384,
+        "standard_domain_share": 0.34922969874799054,
+        "standard_predictive_std": 26.795143127441406,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_C",
+      "evaluation": {
+        "ensemble_spearman": -0.020264973213617574,
+        "mhar_spearman": -0.022830586385352653,
+        "standard_spearman": -0.023675092821523115
+      },
+      "example_id": "specgen:specgen_C\u2192specgen_source",
+      "recipient_group": "specgen:specgen_source",
+      "state": {
+        "composition_support": 0.8787878787878788,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 26.082754135131836,
+        "normalized_expert_disagreement": 0.08607588708400726,
+        "source_sample_count": 126,
+        "source_validation_spearman": 0.3306152806639384,
+        "standard_domain_share": 0.46772364727871363,
+        "standard_predictive_std": 27.260313034057617,
+        "surface_available": false,
+        "target_candidate_count": 462,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_D",
+      "evaluation": {
+        "ensemble_spearman": -0.08750937397870608,
+        "mhar_spearman": -0.08299187090353617,
+        "standard_spearman": -0.09754027058120815
+      },
+      "example_id": "specgen:specgen_D\u2192specgen_A",
+      "recipient_group": "specgen:specgen_A",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 43.56209182739258,
+        "normalized_expert_disagreement": 0.030335407704114914,
+        "source_sample_count": 126,
+        "source_validation_spearman": -0.16753150993284777,
+        "standard_domain_share": 0.5075985103850419,
+        "standard_predictive_std": 34.42673873901367,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_D",
+      "evaluation": {
+        "ensemble_spearman": -0.35832912133910694,
+        "mhar_spearman": -0.35708425640678265,
+        "standard_spearman": -0.35502647967527795
+      },
+      "example_id": "specgen:specgen_D\u2192specgen_B",
+      "recipient_group": "specgen:specgen_B",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 43.2949104309082,
+        "normalized_expert_disagreement": 0.02902669459581375,
+        "source_sample_count": 126,
+        "source_validation_spearman": -0.16753150993284777,
+        "standard_domain_share": 0.5061526086231187,
+        "standard_predictive_std": 34.2191276550293,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_D",
+      "evaluation": {
+        "ensemble_spearman": 0.08245792963701543,
+        "mhar_spearman": 0.08649248583628734,
+        "standard_spearman": 0.07542092996592338
+      },
+      "example_id": "specgen:specgen_D\u2192specgen_C",
+      "recipient_group": "specgen:specgen_C",
+      "state": {
+        "composition_support": 0.5952380952380952,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 43.56303787231445,
+        "normalized_expert_disagreement": 0.029042495414614677,
+        "source_sample_count": 126,
+        "source_validation_spearman": -0.16753150993284777,
+        "standard_domain_share": 0.5052725852069047,
+        "standard_predictive_std": 34.41265106201172,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_D",
+      "evaluation": {
+        "ensemble_spearman": -0.03147929357732647,
+        "mhar_spearman": -0.03426808820127243,
+        "standard_spearman": -0.019735588967228764
+      },
+      "example_id": "specgen:specgen_D\u2192specgen_source",
+      "recipient_group": "specgen:specgen_source",
+      "state": {
+        "composition_support": 0.8787878787878788,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 43.444889068603516,
+        "normalized_expert_disagreement": 0.02684350498020649,
+        "source_sample_count": 126,
+        "source_validation_spearman": -0.16753150993284777,
+        "standard_domain_share": 0.5023768901689638,
+        "standard_predictive_std": 34.33301544189453,
+        "surface_available": false,
+        "target_candidate_count": 462,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_source",
+      "evaluation": {
+        "ensemble_spearman": 0.5085820560310457,
+        "mhar_spearman": 0.4895041545980574,
+        "standard_spearman": 0.47768245498368517
+      },
+      "example_id": "specgen:specgen_source\u2192specgen_A",
+      "recipient_group": "specgen:specgen_A",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 12.174516677856445,
+        "normalized_expert_disagreement": 0.6144772171974182,
+        "source_sample_count": 462,
+        "source_validation_spearman": 0.9295115828894189,
+        "standard_domain_share": 0.565627803251665,
+        "standard_predictive_std": 11.937573432922363,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_source",
+      "evaluation": {
+        "ensemble_spearman": 0.6155362144045179,
+        "mhar_spearman": 0.6020436783428441,
+        "standard_spearman": 0.6339722141010601
+      },
+      "example_id": "specgen:specgen_source\u2192specgen_B",
+      "recipient_group": "specgen:specgen_B",
+      "state": {
+        "composition_support": 1.0,
+        "condition_observed_fraction": 0.5,
+        "curve_available": true,
+        "mhar_predictive_std": 14.283886909484863,
+        "normalized_expert_disagreement": 0.3357386887073517,
+        "source_sample_count": 462,
+        "source_validation_spearman": 0.9295115828894189,
+        "standard_domain_share": 0.4901236030383491,
+        "standard_predictive_std": 13.83873462677002,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_source",
+      "evaluation": {
+        "ensemble_spearman": 0.340500555720729,
+        "mhar_spearman": 0.3414164442295399,
+        "standard_spearman": 0.34138695954599474
+      },
+      "example_id": "specgen:specgen_source\u2192specgen_C",
+      "recipient_group": "specgen:specgen_C",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 13.153812408447266,
+        "normalized_expert_disagreement": 0.5710691809654236,
+        "source_sample_count": 462,
+        "source_validation_spearman": 0.9295115828894189,
+        "standard_domain_share": 0.5343280139139348,
+        "standard_predictive_std": 11.492433547973633,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    },
+    {
+      "donor_group": "specgen:specgen_source",
+      "evaluation": {
+        "ensemble_spearman": 0.7197744265251246,
+        "mhar_spearman": 0.7371813812084388,
+        "standard_spearman": 0.6925556247335696
+      },
+      "example_id": "specgen:specgen_source\u2192specgen_D",
+      "recipient_group": "specgen:specgen_D",
+      "state": {
+        "composition_support": 0.8333333333333334,
+        "condition_observed_fraction": 0.6666666666666667,
+        "curve_available": true,
+        "mhar_predictive_std": 14.014348030090332,
+        "normalized_expert_disagreement": 0.32766467332839966,
+        "source_sample_count": 462,
+        "source_validation_spearman": 0.9295115828894189,
+        "standard_domain_share": 0.4663106309839375,
+        "standard_predictive_std": 13.405848503112793,
+        "surface_available": false,
+        "target_candidate_count": 126,
+        "task_kind": "catalyst_ranking"
+      },
+      "suite": "specgen"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 97300480,
+      "path": "/Users/sissifeng/collective-exp-data-index/collaborator_workspace/data/data/collective.sqlite",
+      "sha256": "62d7127324dde91b1f8ac5ebfd54b86c16ea6cbe9bd12015f0fcefbe18073b39"
+    },
+    {
+      "bytes": 526042,
+      "path": "/Users/sissifeng/collective-exp-data-index/research/data/ocx24.csv",
+      "sha256": "e55446ee81b26c0ceaa6e9d532186954124ff11a51f854ca13511c7c8b31de99"
+    },
+    {
+      "bytes": 7759603,
+      "path": "/Users/sissifeng/collective-exp-data-index/research/data/specgen.zip",
+      "sha256": "ca565bf1bb581080985ec86c331291aabb2c9b354500839aba7f9b8b57ba0cb2"
+    },
+    {
+      "bytes": 6608379,
+      "path": "/Users/sissifeng/.collective_data_cache/catalyst_attention/SECCM_dataset.zip",
+      "sha256": "6e30cdb3a5ecd257daa091bfc2b6cfaa7889d27938e27ae614977d8845f0ffc0"
+    },
+    {
+      "bytes": 11963,
+      "path": "/Users/sissifeng/.collective_data_cache/catalyst_attention/EDX_dataset.zip",
+      "sha256": "95340043ccecec0e9c92c75900c1992d3f92e98fc72cc80c895b53289f5b8791"
+    },
+    {
+      "bytes": 20949,
+      "path": "/Users/sissifeng/.collective_data_cache/catalyst_attention/XPS_dataset.zip",
+      "sha256": "67d1aef3c2d8d640828d241540c21f0d32a8c7923257f323d32403fe8d3d998a"
+    }
+  ],
+  "primary_leave_one_suite_out": {
+    "folds": [
+      {
+        "held_out_group": "alloy_yield_strength",
+        "inner_mse_by_alpha": {
+          "0.1": 0.20544441456829055,
+          "1.0": 0.1407575598331237,
+          "10.0": 0.11279694071697541,
+          "100.0": 0.09502804786825954
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.0061089362401273465,
+            "condition_observed_fraction": 0.012304841401388114,
+            "curve_available": -0.017023158492519862,
+            "log10_source_sample_count": 0.030183765043439465,
+            "log10_target_candidate_count": -0.0012567937952833418,
+            "log_standard_to_mhar_predictive_std_ratio": 0.009341202615055241,
+            "normalized_expert_disagreement": 0.0207203112185642,
+            "source_validation_spearman": 0.020524163365753564,
+            "standard_domain_share": 0.017856502955017103,
+            "surface_available": -0.01871829771046411
+          },
+          "mhar": {
+            "composition_support": -0.007131796736025336,
+            "condition_observed_fraction": 0.01522151000342347,
+            "curve_available": -0.01796370100627435,
+            "log10_source_sample_count": 0.02802434553144225,
+            "log10_target_candidate_count": -0.0011646355363589787,
+            "log_standard_to_mhar_predictive_std_ratio": 0.009681822001606118,
+            "normalized_expert_disagreement": 0.02274148514801561,
+            "source_validation_spearman": 0.023202677653379595,
+            "standard_domain_share": 0.018401790875654904,
+            "surface_available": -0.022534709161467634
+          },
+          "standard": {
+            "composition_support": -0.0009553709046575473,
+            "condition_observed_fraction": 0.00577809511948529,
+            "curve_available": -0.015188375218014034,
+            "log10_source_sample_count": 0.03399458157763468,
+            "log10_target_candidate_count": 0.0020881318561419885,
+            "log_standard_to_mhar_predictive_std_ratio": 0.006128434496330565,
+            "normalized_expert_disagreement": 0.01725208161877485,
+            "source_validation_spearman": 0.014978714042290451,
+            "standard_domain_share": 0.020127403268725707,
+            "surface_available": -0.010366446858035573
+          }
+        },
+        "test_edges": 6,
+        "train_edges": 28
+      },
+      {
+        "held_out_group": "ocx24_fe_co",
+        "inner_mse_by_alpha": {
+          "0.1": 0.32281769345033945,
+          "1.0": 0.23910427177628155,
+          "10.0": 0.1586008429093713,
+          "100.0": 0.10902052052067977
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": 0.00043223481952056375,
+            "condition_observed_fraction": 0.020875794936029275,
+            "curve_available": 0.012953146379608128,
+            "log10_source_sample_count": 0.018757524441756233,
+            "log10_target_candidate_count": -0.012883336184683833,
+            "log_standard_to_mhar_predictive_std_ratio": -0.002276253061698021,
+            "normalized_expert_disagreement": 0.01835217437562183,
+            "source_validation_spearman": 0.015125618978509047,
+            "standard_domain_share": 0.013626974626024439,
+            "surface_available": -0.011620859020893244
+          },
+          "mhar": {
+            "composition_support": -0.0005455667253843785,
+            "condition_observed_fraction": 0.02484455131541394,
+            "curve_available": 0.01556485051480883,
+            "log10_source_sample_count": 0.016377771220511265,
+            "log10_target_candidate_count": -0.01625588889795767,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0008536119567130774,
+            "normalized_expert_disagreement": 0.019286170694166566,
+            "source_validation_spearman": 0.016511075884406857,
+            "standard_domain_share": 0.012942110077775848,
+            "surface_available": -0.01443483632262613
+          },
+          "standard": {
+            "composition_support": 0.012119602363124028,
+            "condition_observed_fraction": 0.018511148282706894,
+            "curve_available": 0.018291099344740158,
+            "log10_source_sample_count": 0.021501705464418947,
+            "log10_target_candidate_count": -0.0040406152046069494,
+            "log_standard_to_mhar_predictive_std_ratio": -0.006517654707050342,
+            "normalized_expert_disagreement": 0.018151416731451066,
+            "source_validation_spearman": 0.01248434545031543,
+            "standard_domain_share": 0.010051458193336946,
+            "surface_available": -0.0026456732528645395
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "seccm_her",
+        "inner_mse_by_alpha": {
+          "0.1": 0.41337521337931815,
+          "1.0": 0.19241634730254184,
+          "10.0": 0.09865368298341295,
+          "100.0": 0.09083514506347548
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.0004484378316978091,
+            "condition_observed_fraction": 0.013794122951270296,
+            "curve_available": 0.007663036145834699,
+            "log10_source_sample_count": 0.029249633660628754,
+            "log10_target_candidate_count": 0.005300102875859252,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0059516109208196,
+            "normalized_expert_disagreement": 0.031044267433712035,
+            "source_validation_spearman": 0.025662850735047683,
+            "standard_domain_share": 0.006643571062372947,
+            "surface_available": 0.0
+          },
+          "mhar": {
+            "composition_support": -0.000829425424253467,
+            "condition_observed_fraction": 0.01652928847173814,
+            "curve_available": 0.010229284260312494,
+            "log10_source_sample_count": 0.029419056056386284,
+            "log10_target_candidate_count": 0.004207707896994672,
+            "log_standard_to_mhar_predictive_std_ratio": 0.008823560653439439,
+            "normalized_expert_disagreement": 0.031448121128036646,
+            "source_validation_spearman": 0.02476897729511691,
+            "standard_domain_share": 0.005162826714642647,
+            "surface_available": 0.0
+          },
+          "standard": {
+            "composition_support": 0.00868849547185192,
+            "condition_observed_fraction": 0.01623393217629975,
+            "curve_available": 0.009846441879773316,
+            "log10_source_sample_count": 0.028153429685169703,
+            "log10_target_candidate_count": 0.010524981234975432,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0014381478700500555,
+            "normalized_expert_disagreement": 0.03423166215818767,
+            "source_validation_spearman": 0.028272446224153962,
+            "standard_domain_share": 0.00226062784973079,
+            "surface_available": 0.0
+          }
+        },
+        "test_edges": 6,
+        "train_edges": 28
+      },
+      {
+        "held_out_group": "specgen",
+        "inner_mse_by_alpha": {
+          "0.1": 0.42769145344262294,
+          "1.0": 0.22576968936833106,
+          "10.0": 0.18464998766018223,
+          "100.0": 0.14026936982543936
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.006078956089832871,
+            "condition_observed_fraction": 0.02085277498314775,
+            "curve_available": -0.005278642490309309,
+            "log10_source_sample_count": 0.013510699434708852,
+            "log10_target_candidate_count": 0.02167243519451857,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0009375022622961161,
+            "normalized_expert_disagreement": 0.00911286877653641,
+            "source_validation_spearman": 0.0028557635990904707,
+            "standard_domain_share": 0.011364055910178236,
+            "surface_available": -0.00527864249030931
+          },
+          "mhar": {
+            "composition_support": -0.008007610192119955,
+            "condition_observed_fraction": 0.02264328218364085,
+            "curve_available": -0.005935825492726446,
+            "log10_source_sample_count": 0.016542703192431313,
+            "log10_target_candidate_count": 0.020277176787088003,
+            "log_standard_to_mhar_predictive_std_ratio": 0.00495890935155105,
+            "normalized_expert_disagreement": 0.010638409299424837,
+            "source_validation_spearman": 0.0060180524590692204,
+            "standard_domain_share": 0.011559491911334206,
+            "surface_available": -0.005935825492726449
+          },
+          "standard": {
+            "composition_support": 0.003552784138965535,
+            "condition_observed_fraction": 0.01962671751177589,
+            "curve_available": 0.0017645150948723328,
+            "log10_source_sample_count": 0.011519222762438136,
+            "log10_target_candidate_count": 0.027733316482652873,
+            "log_standard_to_mhar_predictive_std_ratio": -0.001508635400073136,
+            "normalized_expert_disagreement": 0.007324448108453709,
+            "source_validation_spearman": -0.00013516706804028,
+            "standard_domain_share": 0.006553551339247727,
+            "surface_available": 0.001764515094872333
+          }
+        },
+        "test_edges": 20,
+        "train_edges": 14
+      }
+    ],
+    "rows": [
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5050879773670599,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:birdshot",
+        "example_id": "alloy_yield_strength:birdshot\u2192mpea",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.2150636773093517,
+          "mhar": 0.22523963204347158,
+          "standard": 0.20108351837545557
+        },
+        "realized": {
+          "ensemble": 0.07531514933630006,
+          "mhar": 0.0012033228065327025,
+          "standard": 0.10162936317672729
+        },
+        "recipient_group": "alloy_yield_strength:mpea",
+        "routed_spearman": 0.0012033228065327025,
+        "state": {
+          "composition_support": 0.5063291139240507,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 96.44190979003906,
+          "normalized_expert_disagreement": 0.5240115523338318,
+          "source_sample_count": 171,
+          "source_validation_spearman": 0.7076612903225807,
+          "standard_domain_share": 0.6209421754085434,
+          "standard_predictive_std": 65.68712615966797,
+          "surface_available": false,
+          "target_candidate_count": 395,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5069770871222342,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:birdshot",
+        "example_id": "alloy_yield_strength:birdshot\u2192steels",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.1575215334198817,
+          "mhar": 0.1601294624214986,
+          "standard": 0.17408363666596693
+        },
+        "realized": {
+          "ensemble": 0.0726719528626431,
+          "mhar": -0.05595344341704896,
+          "standard": 0.10922473854419279
+        },
+        "recipient_group": "alloy_yield_strength:steels",
+        "routed_spearman": 0.10922473854419279,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 94.50970458984375,
+          "normalized_expert_disagreement": 0.1630653291940689,
+          "source_sample_count": 171,
+          "source_validation_spearman": 0.7076612903225807,
+          "standard_domain_share": 0.6645837487953825,
+          "standard_predictive_std": 50.98861312866211,
+          "surface_available": false,
+          "target_candidate_count": 312,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5000722303449695,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:mpea",
+        "example_id": "alloy_yield_strength:mpea\u2192birdshot",
+        "oracle_expert": "ensemble",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.17901525813816718,
+          "mhar": 0.17887079744822826,
+          "standard": 0.17566460040685386
+        },
+        "realized": {
+          "ensemble": -0.3898337322494207,
+          "mhar": -0.4387654509271272,
+          "standard": -0.4117879649649553
+        },
+        "recipient_group": "alloy_yield_strength:birdshot",
+        "routed_spearman": -0.3898337322494207,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 336.2912902832031,
+          "normalized_expert_disagreement": 0.1800166517496109,
+          "source_sample_count": 395,
+          "source_validation_spearman": 0.7317885034666899,
+          "standard_domain_share": 0.490479731884284,
+          "standard_predictive_std": 395.7785949707031,
+          "surface_available": false,
+          "target_candidate_count": 171,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5001583458180974,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:mpea",
+        "example_id": "alloy_yield_strength:mpea\u2192steels",
+        "oracle_expert": "mhar",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.14956217749809347,
+          "mhar": 0.14777725177780862,
+          "standard": 0.1498788691342881
+        },
+        "realized": {
+          "ensemble": -0.1832546986272726,
+          "mhar": -0.1754729369555967,
+          "standard": -0.18150160387963177
+        },
+        "recipient_group": "alloy_yield_strength:steels",
+        "routed_spearman": -0.18150160387963177,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 530.8910522460938,
+          "normalized_expert_disagreement": 0.0596657358109951,
+          "source_sample_count": 395,
+          "source_validation_spearman": 0.7317885034666899,
+          "standard_domain_share": 0.44786765626891534,
+          "standard_predictive_std": 609.1034545898438,
+          "surface_available": false,
+          "target_candidate_count": 312,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5013268273981485,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:steels",
+        "example_id": "alloy_yield_strength:steels\u2192birdshot",
+        "oracle_expert": "mhar",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.2003457610245753,
+          "mhar": 0.20299941582087233,
+          "standard": 0.1834154984398173
+        },
+        "realized": {
+          "ensemble": -0.02550369880906449,
+          "mhar": 0.14586464632713236,
+          "standard": -0.5688325948533242
+        },
+        "recipient_group": "alloy_yield_strength:birdshot",
+        "routed_spearman": 0.14586464632713236,
+        "state": {
+          "composition_support": 0.1286549707602339,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 306.0311279296875,
+          "normalized_expert_disagreement": 0.034025851637125015,
+          "source_sample_count": 312,
+          "source_validation_spearman": 0.0739900504059161,
+          "standard_domain_share": 0.6421918324262579,
+          "standard_predictive_std": 289.6249084472656,
+          "surface_available": false,
+          "target_candidate_count": 171,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5013247925808693,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:steels",
+        "example_id": "alloy_yield_strength:steels\u2192mpea",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength",
+        "predicted_spearman": {
+          "ensemble": 0.18077667625005844,
+          "mhar": 0.18342626141179694,
+          "standard": 0.16280531736563159
+        },
+        "realized": {
+          "ensemble": -0.05887128265809901,
+          "mhar": -0.21642482564743556,
+          "standard": 0.029964006430624544
+        },
+        "recipient_group": "alloy_yield_strength:mpea",
+        "routed_spearman": -0.21642482564743556,
+        "state": {
+          "composition_support": 0.06329113924050633,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 310.0670166015625,
+          "normalized_expert_disagreement": 0.036709513515233994,
+          "source_sample_count": 312,
+          "source_validation_spearman": 0.0739900504059161,
+          "standard_domain_share": 0.58027988279919,
+          "standard_predictive_std": 290.96246337890625,
+          "surface_available": false,
+          "target_candidate_count": 395,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5080358538984359,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "ocx24_fe_co:ocx24_uoft",
+        "example_id": "ocx24_fe_co:ocx24_uoft\u2192ocx24_vsp",
+        "oracle_expert": "mhar",
+        "outer_group": "ocx24_fe_co",
+        "predicted_spearman": {
+          "ensemble": 0.0694332489423736,
+          "mhar": 0.05336154114550193,
+          "standard": 0.040465838843632335
+        },
+        "realized": {
+          "ensemble": 0.531443157873281,
+          "mhar": 0.5635935427993176,
+          "standard": 0.4652485734130151
+        },
+        "recipient_group": "ocx24_fe_co:ocx24_vsp",
+        "routed_spearman": 0.531443157873281,
+        "state": {
+          "composition_support": 0.526595744680851,
+          "condition_observed_fraction": 0.16666666666666663,
+          "curve_available": false,
+          "mhar_predictive_std": 3.8522138595581055,
+          "normalized_expert_disagreement": 0.5735415816307068,
+          "source_sample_count": 1230,
+          "source_validation_spearman": 0.9124662475911628,
+          "standard_domain_share": 0.5097152452087361,
+          "standard_predictive_std": 7.121142387390137,
+          "surface_available": false,
+          "target_candidate_count": 940,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "ocx24_fe_co"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5012495588305825,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "ocx24_fe_co:ocx24_vsp",
+        "example_id": "ocx24_fe_co:ocx24_vsp\u2192ocx24_uoft",
+        "oracle_expert": "mhar",
+        "outer_group": "ocx24_fe_co",
+        "predicted_spearman": {
+          "ensemble": 0.06169491745213076,
+          "mhar": 0.029678443370205004,
+          "standard": 0.06419403511329588
+        },
+        "realized": {
+          "ensemble": 0.5199394801479815,
+          "mhar": 0.5257332268636069,
+          "standard": 0.5093981874727485
+        },
+        "recipient_group": "ocx24_fe_co:ocx24_uoft",
+        "routed_spearman": 0.5093981874727485,
+        "state": {
+          "composition_support": 0.7682926829268293,
+          "condition_observed_fraction": 0.16666666666666666,
+          "curve_available": false,
+          "mhar_predictive_std": 7.442132949829102,
+          "normalized_expert_disagreement": 0.4763471484184265,
+          "source_sample_count": 940,
+          "source_validation_spearman": 0.8921059155871983,
+          "standard_domain_share": 0.5533915843294077,
+          "standard_predictive_std": 6.299205303192139,
+          "surface_available": false,
+          "target_candidate_count": 1230,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "ocx24_fe_co"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5010636480227166,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Au-rich",
+        "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Ir-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.049080095182345525,
+          "mhar": 0.04695279913691222,
+          "standard": 0.013829455786188057
+        },
+        "realized": {
+          "ensemble": 0.08687854822139843,
+          "mhar": -0.11468587092656948,
+          "standard": 0.47841326911226006
+        },
+        "recipient_group": "seccm_her:seccm_Ir-rich",
+        "routed_spearman": 0.08687854822139843,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.0445198193192482,
+          "normalized_expert_disagreement": 0.04428844898939133,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.17770463563936142,
+          "standard_domain_share": 0.5108275069250908,
+          "standard_predictive_std": 0.045029185712337494,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5009767995729565,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Au-rich",
+        "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Rh-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.05299384202373476,
+          "mhar": 0.05104024287782183,
+          "standard": 0.013104427830574285
+        },
+        "realized": {
+          "ensemble": -0.1567902029981582,
+          "mhar": -0.23146729802270463,
+          "standard": 0.0541660271753059
+        },
+        "recipient_group": "seccm_her:seccm_Rh-rich",
+        "routed_spearman": -0.1567902029981582,
+        "state": {
+          "composition_support": 0.9161490683229814,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.036115046590566635,
+          "normalized_expert_disagreement": 0.05353185534477234,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.17770463563936142,
+          "standard_domain_share": 0.5263806552786117,
+          "standard_predictive_std": 0.037606749683618546,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5018689643044214,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Ir-rich",
+        "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Au-rich",
+        "oracle_expert": "mhar",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.14896759175167912,
+          "mhar": 0.1452296631428362,
+          "standard": 0.12413084020069151
+        },
+        "realized": {
+          "ensemble": 0.22556516778956498,
+          "mhar": 0.23751954641006517,
+          "standard": 0.21669220736905723
+        },
+        "recipient_group": "seccm_her:seccm_Au-rich",
+        "routed_spearman": 0.22556516778956498,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.04119081050157547,
+          "normalized_expert_disagreement": 0.33167025446891785,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9694853732812454,
+          "standard_domain_share": 0.5130980885308685,
+          "standard_predictive_std": 0.04095717892050743,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5005287869011357,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Ir-rich",
+        "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Rh-rich",
+        "oracle_expert": "mhar",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.13881501027833998,
+          "mhar": 0.13775743647606875,
+          "standard": 0.10976900494948796
+        },
+        "realized": {
+          "ensemble": -0.04649282455127948,
+          "mhar": 0.08082944891209548,
+          "standard": -0.17406385685942138
+        },
+        "recipient_group": "seccm_her:seccm_Rh-rich",
+        "routed_spearman": -0.04649282455127948,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.030425002798438072,
+          "normalized_expert_disagreement": 0.24416019022464752,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9694853732812454,
+          "standard_domain_share": 0.49641906803436053,
+          "standard_predictive_std": 0.036816731095314026,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5000571284229179,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Rh-rich",
+        "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Au-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.14098980568449448,
+          "mhar": 0.1408755488386587,
+          "standard": 0.12551957046033213
+        },
+        "realized": {
+          "ensemble": -0.03213366304115673,
+          "mhar": -0.08550964767569823,
+          "standard": -0.025111781393613218
+        },
+        "recipient_group": "seccm_her:seccm_Au-rich",
+        "routed_spearman": -0.03213366304115673,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.21806320548057556,
+          "normalized_expert_disagreement": 0.3601599335670471,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9845581223661142,
+          "standard_domain_share": 0.36969163935675964,
+          "standard_predictive_std": 0.22397015988826752,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5007318107697943,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Rh-rich",
+        "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Ir-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her",
+        "predicted_spearman": {
+          "ensemble": 0.1647887242875813,
+          "mhar": 0.16332510274799264,
+          "standard": 0.14964078374163942
+        },
+        "realized": {
+          "ensemble": -0.5335362571641716,
+          "mhar": -0.5721334707445435,
+          "standard": -0.5088899436247478
+        },
+        "recipient_group": "seccm_her:seccm_Ir-rich",
+        "routed_spearman": -0.5335362571641716,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.08648397773504257,
+          "normalized_expert_disagreement": 0.493867963552475,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9845581223661142,
+          "standard_domain_share": 0.41295711155987097,
+          "standard_predictive_std": 0.08433247357606888,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5021597943101592,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_B",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.08535310950051869,
+          "mhar": 0.06204412490099005,
+          "standard": 0.08103352088020019
+        },
+        "realized": {
+          "ensemble": 0.25604621902008684,
+          "mhar": 0.2616796077981712,
+          "standard": 0.23430757765971555
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.25604621902008684,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 36.707340240478516,
+          "normalized_expert_disagreement": 0.06914179772138596,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.5119855941199154,
+          "standard_predictive_std": 43.43082046508789,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5057406575155962,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.14676423360685764,
+          "mhar": 0.12870596881593724,
+          "standard": 0.13528291857566527
+        },
+        "realized": {
+          "ensemble": 0.006069841422758684,
+          "mhar": 0.008366079732170541,
+          "standard": -0.0006089330174365795
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.006069841422758684,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 39.97821044921875,
+          "normalized_expert_disagreement": 0.0903293713927269,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.49736075471162905,
+          "standard_predictive_std": 44.27019500732422,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5058443052209598,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.14571814074928674,
+          "mhar": 0.12871687778142013,
+          "standard": 0.13402953030736722
+        },
+        "realized": {
+          "ensemble": 0.05703538389649451,
+          "mhar": 0.06108782218261144,
+          "standard": 0.05572445237841261
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.05703538389649451,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 36.22897720336914,
+          "normalized_expert_disagreement": 0.08329257369041443,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.4903901931628324,
+          "standard_predictive_std": 43.28372573852539,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5060232589315619,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_source",
+        "oracle_expert": "standard",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.13807104446539273,
+          "mhar": 0.11072724905669236,
+          "standard": 0.15011756232851645
+        },
+        "realized": {
+          "ensemble": 0.07184347069363738,
+          "mhar": 0.07157748003049169,
+          "standard": 0.07267367333557112
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": 0.07267367333557112,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 37.894309997558594,
+          "normalized_expert_disagreement": 0.054809123277664185,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.5012222375705558,
+          "standard_predictive_std": 43.772640228271484,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5027306043064955,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.10183129753495437,
+          "mhar": 0.07833529905269114,
+          "standard": 0.09637008892196341
+        },
+        "realized": {
+          "ensemble": 0.14653988062961468,
+          "mhar": 0.2043255242153204,
+          "standard": 0.11728709843236579
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.14653988062961468,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 37.300010681152344,
+          "normalized_expert_disagreement": 0.47574347257614136,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.4840885090050609,
+          "standard_predictive_std": 28.506563186645508,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5065031464716796,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.1591522040562082,
+          "mhar": 0.14194081454869326,
+          "standard": 0.146145911112849
+        },
+        "realized": {
+          "ensemble": -0.023019467861124684,
+          "mhar": -0.01516633170521845,
+          "standard": -0.02724000360266787
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": -0.023019467861124684,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 36.38373565673828,
+          "normalized_expert_disagreement": 0.3879842162132263,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.47352969091315417,
+          "standard_predictive_std": 29.528379440307617,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5082868094781393,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.1565190424034431,
+          "mhar": 0.13868127858964494,
+          "standard": 0.13994542344716449
+        },
+        "realized": {
+          "ensemble": -0.12345649386544262,
+          "mhar": -0.10301389587013217,
+          "standard": -0.18475129172841745
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": -0.12345649386544262,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 23.18140983581543,
+          "normalized_expert_disagreement": 0.037955962121486664,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.5682158878892047,
+          "standard_predictive_std": 21.360429763793945,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5048530382862073,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_source",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.15090902558749425,
+          "mhar": 0.12373055410848312,
+          "standard": 0.16061510215990896
+        },
+        "realized": {
+          "ensemble": -0.08013145071180783,
+          "mhar": 0.012992866407528147,
+          "standard": -0.08958216300781427
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.08958216300781427,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 34.274749755859375,
+          "normalized_expert_disagreement": 0.2837386727333069,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.5038185486808173,
+          "standard_predictive_std": 28.61558723449707,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5043767503533255,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.08806210962617,
+          "mhar": 0.06541063246422207,
+          "standard": 0.07930860891951902
+        },
+        "realized": {
+          "ensemble": 0.03281639020076935,
+          "mhar": 0.05206227315580923,
+          "standard": -0.24118546962547158
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.03281639020076935,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 26.186460494995117,
+          "normalized_expert_disagreement": 0.08584170043468475,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.4982520120558987,
+          "standard_predictive_std": 27.656291961669922,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5006725712201961,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.06956152354365609,
+          "mhar": 0.04697097798921382,
+          "standard": 0.0682163811032637
+        },
+        "realized": {
+          "ensemble": -0.32405484009395696,
+          "mhar": -0.3223480252831316,
+          "standard": -0.3149363018511284
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": -0.32405484009395696,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 24.711793899536133,
+          "normalized_expert_disagreement": 0.06973402202129364,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.37119283065315917,
+          "standard_predictive_std": 26.981246948242188,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5058276185589088,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.133832551899892,
+          "mhar": 0.11898220011999651,
+          "standard": 0.1221773147820745
+        },
+        "realized": {
+          "ensemble": 0.13359830220324814,
+          "mhar": 0.1421502973440596,
+          "standard": 0.02121953853391197
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.13359830220324814,
+        "state": {
+          "composition_support": 0.5952380952380952,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 23.351825714111328,
+          "normalized_expert_disagreement": 0.13697485625743866,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.34922969874799054,
+          "standard_predictive_std": 26.795143127441406,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5049389100100896,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_source",
+        "oracle_expert": "ensemble",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.13788122627691715,
+          "mhar": 0.11119310280272011,
+          "standard": 0.1477590462970963
+        },
+        "realized": {
+          "ensemble": -0.020264973213617574,
+          "mhar": -0.022830586385352653,
+          "standard": -0.023675092821523115
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.023675092821523115,
+        "state": {
+          "composition_support": 0.8787878787878788,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 26.082754135131836,
+          "normalized_expert_disagreement": 0.08607588708400726,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.46772364727871363,
+          "standard_predictive_std": 27.260313034057617,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5009416231785154,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.08167263430694859,
+          "mhar": 0.04975756497254666,
+          "standard": 0.07978938794991774
+        },
+        "realized": {
+          "ensemble": -0.08750937397870608,
+          "mhar": -0.08299187090353617,
+          "standard": -0.09754027058120815
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": -0.08750937397870608,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.56209182739258,
+          "normalized_expert_disagreement": 0.030335407704114914,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5075985103850419,
+          "standard_predictive_std": 34.42673873901367,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5008930583314476,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.08140847123612209,
+          "mhar": 0.049481189392198255,
+          "standard": 0.07962235457322683
+        },
+        "realized": {
+          "ensemble": -0.35832912133910694,
+          "mhar": -0.35708425640678265,
+          "standard": -0.35502647967527795
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": -0.35832912133910694,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.2949104309082,
+          "normalized_expert_disagreement": 0.02902669459581375,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5061526086231187,
+          "standard_predictive_std": 34.2191276550293,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.506139578819236,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.14532263009094942,
+          "mhar": 0.11991315560346567,
+          "standard": 0.13304347245247736
+        },
+        "realized": {
+          "ensemble": 0.08245792963701543,
+          "mhar": 0.08649248583628734,
+          "standard": 0.07542092996592338
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.08245792963701543,
+        "state": {
+          "composition_support": 0.5952380952380952,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 43.56303787231445,
+          "normalized_expert_disagreement": 0.029042495414614677,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5052725852069047,
+          "standard_predictive_std": 34.41265106201172,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5075910496775845,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_source",
+        "oracle_expert": "standard",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.13491105784116234,
+          "mhar": 0.09914625763112107,
+          "standard": 0.15009315719633137
+        },
+        "realized": {
+          "ensemble": -0.03147929357732647,
+          "mhar": -0.03426808820127243,
+          "standard": -0.019735588967228764
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.019735588967228764,
+        "state": {
+          "composition_support": 0.8787878787878788,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.444889068603516,
+          "normalized_expert_disagreement": 0.02684350498020649,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5023768901689638,
+          "standard_predictive_std": 34.33301544189453,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5036434271728003,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_A",
+        "oracle_expert": "ensemble",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.15811510856577735,
+          "mhar": 0.15082825422017668,
+          "standard": 0.13588464263005318
+        },
+        "realized": {
+          "ensemble": 0.5085820560310457,
+          "mhar": 0.4895041545980574,
+          "standard": 0.47768245498368517
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.5085820560310457,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 12.174516677856445,
+          "normalized_expert_disagreement": 0.6144772171974182,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.565627803251665,
+          "standard_predictive_std": 11.937573432922363,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5049160282284232,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.13441202101127878,
+          "mhar": 0.12457996455443233,
+          "standard": 0.11934379763038439
+        },
+        "realized": {
+          "ensemble": 0.6155362144045179,
+          "mhar": 0.6020436783428441,
+          "standard": 0.6339722141010601
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.6155362144045179,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 14.283886909484863,
+          "normalized_expert_disagreement": 0.3357386887073517,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.4901236030383491,
+          "standard_predictive_std": 13.83873462677002,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5016566821147764,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.2139881403258781,
+          "mhar": 0.2106747760963252,
+          "standard": 0.1866261332714004
+        },
+        "realized": {
+          "ensemble": 0.340500555720729,
+          "mhar": 0.3414164442295399,
+          "standard": 0.34138695954599474
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.340500555720729,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 13.153812408447266,
+          "normalized_expert_disagreement": 0.5710691809654236,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.5343280139139348,
+          "standard_predictive_std": 11.492433547973633,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5020188398339266,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen",
+        "predicted_spearman": {
+          "ensemble": 0.19334718672131748,
+          "mhar": 0.18930950705346433,
+          "standard": 0.17144912934051723
+        },
+        "realized": {
+          "ensemble": 0.7197744265251246,
+          "mhar": 0.7371813812084388,
+          "standard": 0.6925556247335696
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.7197744265251246,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 14.014348030090332,
+          "normalized_expert_disagreement": 0.32766467332839966,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.4663106309839375,
+          "standard_predictive_std": 13.405848503112793,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      }
+    ],
+    "summary": {
+      "baselines": {
+        "always_ensemble": {
+          "harmful_transfer_rate": 0.47058823529411764,
+          "mean_spearman": 0.05905743387872057,
+          "median_spearman": 0.019443115811764018
+        },
+        "always_mhar": {
+          "harmful_transfer_rate": 0.4411764705882353,
+          "mean_spearman": 0.052867877356703806,
+          "median_spearman": 0.010679473069849343
+        },
+        "always_standard": {
+          "harmful_transfer_rate": 0.47058823529411764,
+          "mean_spearman": 0.043014633997360996,
+          "median_spearman": 0.02559177248226826
+        },
+        "deterministic_target_free_router": {
+          "harmful_transfer_rate": 0.23529411764705882,
+          "mean_spearman": 0.06977826043510281,
+          "median_spearman": 0.0
+        },
+        "oracle_upper_bound": {
+          "harmful_transfer_rate": 0.3235294117647059,
+          "mean_spearman": 0.10116107955645363,
+          "median_spearman": 0.06688074775909128
+        }
+      },
+      "edges": 34,
+      "gain_over_always_standard": {
+        "draws": 2000,
+        "median": -0.006148656670504241,
+        "outer_group_bootstrap_ci90": [
+          -0.08629969021646264,
+          0.03398081426938454
+        ],
+        "seed": 20260813
+      },
+      "numeric_router": {
+        "expert_action_counts": {
+          "ensemble:rank": 24,
+          "mhar:rank": 3,
+          "standard:rank": 7
+        },
+        "harmful_transfer_rate": 0.4411764705882353,
+        "mean_spearman": 0.05809215854693145,
+        "median_spearman": 0.019443115811764018,
+        "non_abstain_fraction": 1.0,
+        "oracle_expert_agreement": 0.17647058823529413,
+        "useful_edge_retention": 0.875
+      },
+      "outer_groups": 4,
+      "qualification_gate": {
+        "bootstrap_lower_bound_above_0": false,
+        "harm_not_above_standard": true,
+        "median_gain_at_least_0_02": false,
+        "non_abstain_fraction_at_least_0_5": true,
+        "passed": false,
+        "useful_edge_retention_at_least_0_5": true
+      }
+    }
+  },
+  "promotion_allowed": false,
+  "qualification_gate_passed_both_splits": false,
+  "scientific_effect_verified": false,
+  "secondary_leave_one_donor_out": {
+    "folds": [
+      {
+        "held_out_group": "alloy_yield_strength:birdshot",
+        "inner_mse_by_alpha": {
+          "0.1": 0.10671077574515751,
+          "1.0": 0.08574792238675762,
+          "10.0": 0.09053480030565286,
+          "100.0": 0.10229886231064285
+        },
+        "selected_alpha": 1.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.03637763376468639,
+            "condition_observed_fraction": 0.12964858799209403,
+            "curve_available": 0.14175818750346475,
+            "log10_source_sample_count": 0.23482912891185767,
+            "log10_target_candidate_count": 0.03972181389018667,
+            "log_standard_to_mhar_predictive_std_ratio": 0.028980896997631365,
+            "normalized_expert_disagreement": -0.0005258172617343961,
+            "source_validation_spearman": 0.029647931469835954,
+            "standard_domain_share": 0.0567151665245402,
+            "surface_available": -0.0697159717794238
+          },
+          "mhar": {
+            "composition_support": -0.046507079608757315,
+            "condition_observed_fraction": 0.12811324263885615,
+            "curve_available": 0.13894068378418623,
+            "log10_source_sample_count": 0.191090535515825,
+            "log10_target_candidate_count": 0.04148187084416571,
+            "log_standard_to_mhar_predictive_std_ratio": 0.03556311737755737,
+            "normalized_expert_disagreement": 0.006650243127354903,
+            "source_validation_spearman": 0.06778645180923334,
+            "standard_domain_share": 0.07474108649409858,
+            "surface_available": -0.08377232525886838
+          },
+          "standard": {
+            "composition_support": 0.028744903380180167,
+            "condition_observed_fraction": 0.17739097334011958,
+            "curve_available": 0.1401691245981823,
+            "log10_source_sample_count": 0.32109082634632047,
+            "log10_target_candidate_count": 0.06754253216014007,
+            "log_standard_to_mhar_predictive_std_ratio": 0.01027810013365342,
+            "normalized_expert_disagreement": -0.008175153433966215,
+            "source_validation_spearman": -0.05436658379630084,
+            "standard_domain_share": 0.026878193558373203,
+            "surface_available": -0.01871490462569339
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "alloy_yield_strength:mpea",
+        "inner_mse_by_alpha": {
+          "0.1": 0.10776830698149607,
+          "1.0": 0.08307018166089683,
+          "10.0": 0.07476872290224539,
+          "100.0": 0.08720364216417505
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": 0.02549321679520122,
+            "condition_observed_fraction": 0.060782982813887214,
+            "curve_available": -0.008763450629617486,
+            "log10_source_sample_count": 0.11246596272504,
+            "log10_target_candidate_count": -0.0081544612033009,
+            "log_standard_to_mhar_predictive_std_ratio": 0.028483733156951144,
+            "normalized_expert_disagreement": 0.02501428883795285,
+            "source_validation_spearman": 0.04421216800136047,
+            "standard_domain_share": 0.0406779817800674,
+            "surface_available": -0.06391010972168065
+          },
+          "mhar": {
+            "composition_support": 0.018516236037763072,
+            "condition_observed_fraction": 0.07015171703689516,
+            "curve_available": -0.0020116871814002896,
+            "log10_source_sample_count": 0.10586858897071796,
+            "log10_target_candidate_count": -0.010945128326809763,
+            "log_standard_to_mhar_predictive_std_ratio": 0.04239999057710559,
+            "normalized_expert_disagreement": 0.030234120897851612,
+            "source_validation_spearman": 0.053223791641915534,
+            "standard_domain_share": 0.04422188387476299,
+            "surface_available": -0.07241338330521599
+          },
+          "standard": {
+            "composition_support": 0.06051476676046423,
+            "condition_observed_fraction": 0.06331408517111778,
+            "curve_available": 0.003353561214519941,
+            "log10_source_sample_count": 0.12921557856005142,
+            "log10_target_candidate_count": 0.018874123953677983,
+            "log_standard_to_mhar_predictive_std_ratio": 0.006666113800459441,
+            "normalized_expert_disagreement": 0.02685844503042792,
+            "source_validation_spearman": 0.017851097957379738,
+            "standard_domain_share": 0.03216208959016649,
+            "surface_available": -0.03913133743989077
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "alloy_yield_strength:steels",
+        "inner_mse_by_alpha": {
+          "0.1": 0.15672951734706297,
+          "1.0": 0.11935506809254193,
+          "10.0": 0.09042489588146452,
+          "100.0": 0.09539264218894561
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.024241771187701527,
+            "condition_observed_fraction": 0.07984019933750582,
+            "curve_available": 0.04347276231953072,
+            "log10_source_sample_count": 0.10490393906304323,
+            "log10_target_candidate_count": 0.01514404075758655,
+            "log_standard_to_mhar_predictive_std_ratio": 0.015087401030633048,
+            "normalized_expert_disagreement": 0.03978928718967751,
+            "source_validation_spearman": 0.04043624276693611,
+            "standard_domain_share": 0.06357318431948153,
+            "surface_available": -0.04032356069296235
+          },
+          "mhar": {
+            "composition_support": -0.02400341233504005,
+            "condition_observed_fraction": 0.09377094316763407,
+            "curve_available": 0.05156759599263128,
+            "log10_source_sample_count": 0.09698411599898239,
+            "log10_target_candidate_count": 0.02217974565327572,
+            "log_standard_to_mhar_predictive_std_ratio": 0.02605622078548644,
+            "normalized_expert_disagreement": 0.04537937429870627,
+            "source_validation_spearman": 0.051462237368443714,
+            "standard_domain_share": 0.058461141743841254,
+            "surface_available": -0.05064296263626102
+          },
+          "standard": {
+            "composition_support": -0.013801154587061524,
+            "condition_observed_fraction": 0.06803261543736053,
+            "curve_available": 0.04639381462660735,
+            "log10_source_sample_count": 0.12739700626901487,
+            "log10_target_candidate_count": 0.021154912669757615,
+            "log_standard_to_mhar_predictive_std_ratio": -0.0005047892489219379,
+            "normalized_expert_disagreement": 0.03451185109889974,
+            "source_validation_spearman": 0.00922944653580411,
+            "standard_domain_share": 0.07066991111655138,
+            "surface_available": -0.014837494284651191
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "ocx24_fe_co:ocx24_uoft",
+        "inner_mse_by_alpha": {
+          "0.1": 0.1608594226604553,
+          "1.0": 0.12578869595772896,
+          "10.0": 0.0982514523241212,
+          "100.0": 0.09659894196518301
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.0001019740553631184,
+            "condition_observed_fraction": 0.021682733680115404,
+            "curve_available": 0.00791963448863348,
+            "log10_source_sample_count": 0.024828320393787184,
+            "log10_target_candidate_count": -0.00298358153379243,
+            "log_standard_to_mhar_predictive_std_ratio": -0.0034108510197106865,
+            "normalized_expert_disagreement": 0.022038861278829834,
+            "source_validation_spearman": 0.01730470600781385,
+            "standard_domain_share": 0.014574147386079676,
+            "surface_available": -0.014163911220029017
+          },
+          "mhar": {
+            "composition_support": -0.0011226894200841255,
+            "condition_observed_fraction": 0.025849379072719152,
+            "curve_available": 0.010152858094061645,
+            "log10_source_sample_count": 0.02312884953215535,
+            "log10_target_candidate_count": -0.005416435397555964,
+            "log_standard_to_mhar_predictive_std_ratio": -0.00036537699734298673,
+            "normalized_expert_disagreement": 0.023228864385636386,
+            "source_validation_spearman": 0.01878300618024526,
+            "standard_domain_share": 0.013924504597953627,
+            "surface_available": -0.017254063044652147
+          },
+          "standard": {
+            "composition_support": 0.011737065301475244,
+            "condition_observed_fraction": 0.01911069554057543,
+            "curve_available": 0.013038531812434112,
+            "log10_source_sample_count": 0.02727288522705139,
+            "log10_target_candidate_count": 0.00499337315795286,
+            "log_standard_to_mhar_predictive_std_ratio": -0.007665901883256542,
+            "normalized_expert_disagreement": 0.0217756329068782,
+            "source_validation_spearman": 0.014661916638695833,
+            "standard_domain_share": 0.010992979974989867,
+            "surface_available": -0.004901818942786414
+          }
+        },
+        "test_edges": 1,
+        "train_edges": 33
+      },
+      {
+        "held_out_group": "ocx24_fe_co:ocx24_vsp",
+        "inner_mse_by_alpha": {
+          "0.1": 0.16446281828871756,
+          "1.0": 0.12701913811276463,
+          "10.0": 0.09838206704986777,
+          "100.0": 0.096149793250927
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.003251230074991837,
+            "condition_observed_fraction": 0.021427175918927115,
+            "curve_available": 0.007852151950860236,
+            "log10_source_sample_count": 0.024596221473311586,
+            "log10_target_candidate_count": -0.004703805954285261,
+            "log_standard_to_mhar_predictive_std_ratio": 0.007684951370149934,
+            "normalized_expert_disagreement": 0.023653575597098443,
+            "source_validation_spearman": 0.017313784480446483,
+            "standard_domain_share": 0.013817773100675128,
+            "surface_available": -0.014253889771663635
+          },
+          "mhar": {
+            "composition_support": -0.004584545597628123,
+            "condition_observed_fraction": 0.025587884096004574,
+            "curve_available": 0.00998219447414815,
+            "log10_source_sample_count": 0.023201985991533315,
+            "log10_target_candidate_count": -0.007131537786993116,
+            "log_standard_to_mhar_predictive_std_ratio": 0.011507353910266053,
+            "normalized_expert_disagreement": 0.025051597946204863,
+            "source_validation_spearman": 0.018816975992018887,
+            "standard_domain_share": 0.013015541406685866,
+            "surface_available": -0.017400025453990012
+          },
+          "standard": {
+            "composition_support": 0.008676396452503924,
+            "condition_observed_fraction": 0.018877799709434272,
+            "curve_available": 0.01328095685001389,
+            "log10_source_sample_count": 0.02646338259363284,
+            "log10_target_candidate_count": 0.003045275563670696,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0030801170930261244,
+            "normalized_expert_disagreement": 0.023125327915957613,
+            "source_validation_spearman": 0.014614836750966165,
+            "standard_domain_share": 0.010309308744569264,
+            "surface_available": -0.004859679994456711
+          }
+        },
+        "test_edges": 1,
+        "train_edges": 33
+      },
+      {
+        "held_out_group": "seccm_her:seccm_Au-rich",
+        "inner_mse_by_alpha": {
+          "0.1": 0.1243472142383582,
+          "1.0": 0.1000224649312957,
+          "10.0": 0.08493771588770538,
+          "100.0": 0.0963372847336952
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.017368445794660937,
+            "condition_observed_fraction": 0.08746241278997692,
+            "curve_available": 0.04139061477594006,
+            "log10_source_sample_count": 0.09577450247852182,
+            "log10_target_candidate_count": 0.01766853958138221,
+            "log_standard_to_mhar_predictive_std_ratio": 0.014549673697304298,
+            "normalized_expert_disagreement": 0.04924206274298067,
+            "source_validation_spearman": 0.0499566409570708,
+            "standard_domain_share": 0.05775704397818866,
+            "surface_available": -0.049861297962175255
+          },
+          "mhar": {
+            "composition_support": -0.019065428484956428,
+            "condition_observed_fraction": 0.0935262243265857,
+            "curve_available": 0.05188729138714322,
+            "log10_source_sample_count": 0.09782907909705123,
+            "log10_target_candidate_count": 0.01624095819695464,
+            "log_standard_to_mhar_predictive_std_ratio": 0.028498871313099514,
+            "normalized_expert_disagreement": 0.0488588901918642,
+            "source_validation_spearman": 0.04788414523445359,
+            "standard_domain_share": 0.06452213302814724,
+            "surface_available": -0.04536805685076469
+          },
+          "standard": {
+            "composition_support": 0.010080534342438408,
+            "condition_observed_fraction": 0.09708791734694106,
+            "curve_available": 0.03969423131276201,
+            "log10_source_sample_count": 0.0938090567571414,
+            "log10_target_candidate_count": 0.041209047748296354,
+            "log_standard_to_mhar_predictive_std_ratio": -0.007431803492250331,
+            "normalized_expert_disagreement": 0.05959749439650875,
+            "source_validation_spearman": 0.0503751767534054,
+            "standard_domain_share": 0.03690720295510407,
+            "surface_available": -0.057120033873790714
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "seccm_her:seccm_Ir-rich",
+        "inner_mse_by_alpha": {
+          "0.1": 0.1790335712537754,
+          "1.0": 0.13582327369241698,
+          "10.0": 0.10383987518792376,
+          "100.0": 0.1010356403754763
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.003495006004026002,
+            "condition_observed_fraction": 0.022003976149446297,
+            "curve_available": 0.003512990148477134,
+            "log10_source_sample_count": 0.028478632082692953,
+            "log10_target_candidate_count": 0.0025437430589066506,
+            "log_standard_to_mhar_predictive_std_ratio": 0.006160117158681009,
+            "normalized_expert_disagreement": 0.025354278873503996,
+            "source_validation_spearman": 0.01922529773866157,
+            "standard_domain_share": 0.014094843637912857,
+            "surface_available": -0.01880449227172046
+          },
+          "mhar": {
+            "composition_support": -0.005468313248883086,
+            "condition_observed_fraction": 0.02760311662964368,
+            "curve_available": 0.0045010330131301695,
+            "log10_source_sample_count": 0.02732660295569513,
+            "log10_target_candidate_count": 0.0003667155570972134,
+            "log_standard_to_mhar_predictive_std_ratio": 0.008701033000760661,
+            "normalized_expert_disagreement": 0.026940882560094324,
+            "source_validation_spearman": 0.019295517526299863,
+            "standard_domain_share": 0.01296924887258701,
+            "surface_available": -0.025454653180751817
+          },
+          "standard": {
+            "composition_support": 0.00907162126039976,
+            "condition_observed_fraction": 0.018214897512306594,
+            "curve_available": 0.009409546063803011,
+            "log10_source_sample_count": 0.030365828953120563,
+            "log10_target_candidate_count": 0.010023701807507576,
+            "log_standard_to_mhar_predictive_std_ratio": 0.002740916544575834,
+            "normalized_expert_disagreement": 0.024810643886183346,
+            "source_validation_spearman": 0.018070093073936408,
+            "standard_domain_share": 0.01108915093728854,
+            "surface_available": -0.005241384763627992
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "seccm_her:seccm_Rh-rich",
+        "inner_mse_by_alpha": {
+          "0.1": 0.1251375117285822,
+          "1.0": 0.09671915751531428,
+          "10.0": 0.07405516784125567,
+          "100.0": 0.08056292831509171
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.017010668474234398,
+            "condition_observed_fraction": 0.06940836853575562,
+            "curve_available": 0.04828678216492013,
+            "log10_source_sample_count": 0.0945214954612826,
+            "log10_target_candidate_count": 0.018733618249855092,
+            "log_standard_to_mhar_predictive_std_ratio": 0.005204861358722982,
+            "normalized_expert_disagreement": 0.06592409682560021,
+            "source_validation_spearman": 0.04424628520436621,
+            "standard_domain_share": 0.03324670141564528,
+            "surface_available": -0.013161645089596188
+          },
+          "mhar": {
+            "composition_support": -0.024124116831137125,
+            "condition_observed_fraction": 0.07721716850116896,
+            "curve_available": 0.055546700378496204,
+            "log10_source_sample_count": 0.087718971653101,
+            "log10_target_candidate_count": 0.016902910172122483,
+            "log_standard_to_mhar_predictive_std_ratio": 0.017942354978030855,
+            "normalized_expert_disagreement": 0.07066736044116124,
+            "source_validation_spearman": 0.054481697300114214,
+            "standard_domain_share": 0.032909309712032445,
+            "surface_available": -0.019615460833917568
+          },
+          "standard": {
+            "composition_support": 0.01961451546847329,
+            "condition_observed_fraction": 0.06802026226941955,
+            "curve_available": 0.055305211663400626,
+            "log10_source_sample_count": 0.1102863367384205,
+            "log10_target_candidate_count": 0.04382129027159765,
+            "log_standard_to_mhar_predictive_std_ratio": -0.018930940875374343,
+            "normalized_expert_disagreement": 0.0701426932713161,
+            "source_validation_spearman": 0.020476597714043674,
+            "standard_domain_share": 0.015421381967270402,
+            "surface_available": 0.015447208686401528
+          }
+        },
+        "test_edges": 2,
+        "train_edges": 32
+      },
+      {
+        "held_out_group": "specgen:specgen_A",
+        "inner_mse_by_alpha": {
+          "0.1": 0.16516133439155914,
+          "1.0": 0.12232890310488063,
+          "10.0": 0.10015127701491623,
+          "100.0": 0.10623098279002553
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.024575076369616394,
+            "condition_observed_fraction": 0.08814407406577378,
+            "curve_available": 0.04070173314748738,
+            "log10_source_sample_count": 0.11294459697852105,
+            "log10_target_candidate_count": 0.01823495212626379,
+            "log_standard_to_mhar_predictive_std_ratio": -0.005344064975274937,
+            "normalized_expert_disagreement": 0.047542953019841516,
+            "source_validation_spearman": 0.044389076978222815,
+            "standard_domain_share": 0.05151004233802269,
+            "surface_available": -0.03582462079409326
+          },
+          "mhar": {
+            "composition_support": -0.03036111510664107,
+            "condition_observed_fraction": 0.09917488711747537,
+            "curve_available": 0.04690834268122776,
+            "log10_source_sample_count": 0.105099406849744,
+            "log10_target_candidate_count": 0.015924520513359127,
+            "log_standard_to_mhar_predictive_std_ratio": 0.010684790689803351,
+            "normalized_expert_disagreement": 0.05142819749609856,
+            "source_validation_spearman": 0.053140291798612856,
+            "standard_domain_share": 0.05522208550554245,
+            "surface_available": -0.04474121454438702
+          },
+          "standard": {
+            "composition_support": 0.01320147531378017,
+            "condition_observed_fraction": 0.08637232827851268,
+            "curve_available": 0.050628280215831795,
+            "log10_source_sample_count": 0.1325582414335546,
+            "log10_target_candidate_count": 0.04548288603630635,
+            "log_standard_to_mhar_predictive_std_ratio": -0.03075257738583955,
+            "normalized_expert_disagreement": 0.04778776548216534,
+            "source_validation_spearman": 0.01980309825559148,
+            "standard_domain_share": 0.03860420459496855,
+            "surface_available": -0.012804701326588314
+          }
+        },
+        "test_edges": 4,
+        "train_edges": 30
+      },
+      {
+        "held_out_group": "specgen:specgen_B",
+        "inner_mse_by_alpha": {
+          "0.1": 0.14404083638225335,
+          "1.0": 0.10628799463621337,
+          "10.0": 0.09479043796121366,
+          "100.0": 0.10730507975056112
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.013561108176808863,
+            "condition_observed_fraction": 0.10449028312931384,
+            "curve_available": 0.04630431124294392,
+            "log10_source_sample_count": 0.08958378452534843,
+            "log10_target_candidate_count": 0.023594171980617938,
+            "log_standard_to_mhar_predictive_std_ratio": 0.011732417429542752,
+            "normalized_expert_disagreement": 0.03898645895942918,
+            "source_validation_spearman": 0.05615201951595911,
+            "standard_domain_share": 0.07220263283325944,
+            "surface_available": -0.04092628003493609
+          },
+          "mhar": {
+            "composition_support": -0.022532583728081323,
+            "condition_observed_fraction": 0.1134488307809747,
+            "curve_available": 0.05078876242659385,
+            "log10_source_sample_count": 0.08925265611176648,
+            "log10_target_candidate_count": 0.01752581197277869,
+            "log_standard_to_mhar_predictive_std_ratio": 0.028202215191922356,
+            "normalized_expert_disagreement": 0.038347730726278464,
+            "source_validation_spearman": 0.06467933227971309,
+            "standard_domain_share": 0.07498238062852525,
+            "surface_available": -0.04691840118148576
+          },
+          "standard": {
+            "composition_support": 0.026133657141247137,
+            "condition_observed_fraction": 0.10474631345586563,
+            "curve_available": 0.05619344977534939,
+            "log10_source_sample_count": 0.10556258276573871,
+            "log10_target_candidate_count": 0.050608751726962886,
+            "log_standard_to_mhar_predictive_std_ratio": -0.009526955074414053,
+            "normalized_expert_disagreement": 0.03915596134539052,
+            "source_validation_spearman": 0.030230625499932915,
+            "standard_domain_share": 0.06173351894218372,
+            "surface_available": -0.01864479270792587
+          }
+        },
+        "test_edges": 4,
+        "train_edges": 30
+      },
+      {
+        "held_out_group": "specgen:specgen_C",
+        "inner_mse_by_alpha": {
+          "0.1": 0.15689938160541997,
+          "1.0": 0.12427696644730625,
+          "10.0": 0.10280290604205013,
+          "100.0": 0.10563691676785704
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.004141397201195416,
+            "condition_observed_fraction": 0.0847063849633971,
+            "curve_available": 0.04558912722312836,
+            "log10_source_sample_count": 0.10385559314427173,
+            "log10_target_candidate_count": 0.01734878766080326,
+            "log_standard_to_mhar_predictive_std_ratio": 0.015067050389887156,
+            "normalized_expert_disagreement": 0.044587529663029625,
+            "source_validation_spearman": 0.03806609376815052,
+            "standard_domain_share": 0.06047001804686638,
+            "surface_available": -0.04434602612694006
+          },
+          "mhar": {
+            "composition_support": -0.012068679560724004,
+            "condition_observed_fraction": 0.09491110137894215,
+            "curve_available": 0.05187151189358443,
+            "log10_source_sample_count": 0.09662863659588272,
+            "log10_target_candidate_count": 0.015416887230103501,
+            "log_standard_to_mhar_predictive_std_ratio": 0.028999229405533716,
+            "normalized_expert_disagreement": 0.0484658835183917,
+            "source_validation_spearman": 0.047942854829443396,
+            "standard_domain_share": 0.06018654180873588,
+            "surface_available": -0.05368263476051189
+          },
+          "standard": {
+            "composition_support": 0.03168623137511338,
+            "condition_observed_fraction": 0.0856273206772564,
+            "curve_available": 0.05636224705193522,
+            "log10_source_sample_count": 0.11491494251357469,
+            "log10_target_candidate_count": 0.03987240982211325,
+            "log_standard_to_mhar_predictive_std_ratio": -0.0015364081464789817,
+            "normalized_expert_disagreement": 0.041846380164824455,
+            "source_validation_spearman": 0.015237385198751932,
+            "standard_domain_share": 0.05011226441495443,
+            "surface_available": -0.023419669962339164
+          }
+        },
+        "test_edges": 4,
+        "train_edges": 30
+      },
+      {
+        "held_out_group": "specgen:specgen_D",
+        "inner_mse_by_alpha": {
+          "0.1": 0.16370532129685375,
+          "1.0": 0.12773692547743346,
+          "10.0": 0.1041547097214268,
+          "100.0": 0.10561526106025568
+        },
+        "selected_alpha": 10.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.008592459640787626,
+            "condition_observed_fraction": 0.08582862841450613,
+            "curve_available": 0.044890908252896676,
+            "log10_source_sample_count": 0.10478371987572017,
+            "log10_target_candidate_count": 0.012888363146199228,
+            "log_standard_to_mhar_predictive_std_ratio": 0.007211675192194499,
+            "normalized_expert_disagreement": 0.043477579846528,
+            "source_validation_spearman": 0.023551692952750593,
+            "standard_domain_share": 0.06052373748966347,
+            "surface_available": -0.04516521621146607
+          },
+          "mhar": {
+            "composition_support": -0.016540461093681756,
+            "condition_observed_fraction": 0.09509995632217666,
+            "curve_available": 0.0504801839883048,
+            "log10_source_sample_count": 0.09609750670524005,
+            "log10_target_candidate_count": 0.010172882637125086,
+            "log_standard_to_mhar_predictive_std_ratio": 0.02400342618228084,
+            "normalized_expert_disagreement": 0.046967266352597126,
+            "source_validation_spearman": 0.03820060668428437,
+            "standard_domain_share": 0.0642803181008887,
+            "surface_available": -0.0536120580485219
+          },
+          "standard": {
+            "composition_support": 0.03309649048963217,
+            "condition_observed_fraction": 0.08651115563563629,
+            "curve_available": 0.0545234372280636,
+            "log10_source_sample_count": 0.12407770737705019,
+            "log10_target_candidate_count": 0.04044043779144372,
+            "log_standard_to_mhar_predictive_std_ratio": -0.015554647146804145,
+            "normalized_expert_disagreement": 0.04550335818100488,
+            "source_validation_spearman": -0.0054464835356732135,
+            "standard_domain_share": 0.0486031145610602,
+            "surface_available": -0.022557815354139744
+          }
+        },
+        "test_edges": 4,
+        "train_edges": 30
+      },
+      {
+        "held_out_group": "specgen:specgen_source",
+        "inner_mse_by_alpha": {
+          "0.1": 0.09439988231918597,
+          "1.0": 0.08688534368488542,
+          "10.0": 0.0750925633930992,
+          "100.0": 0.06751882764436248
+        },
+        "selected_alpha": 100.0,
+        "standardized_coefficients": {
+          "ensemble": {
+            "composition_support": -0.007285242386947428,
+            "condition_observed_fraction": 0.009093359016981863,
+            "curve_available": -0.004424755225417429,
+            "log10_source_sample_count": 0.010858425556947741,
+            "log10_target_candidate_count": 0.016452773268878992,
+            "log_standard_to_mhar_predictive_std_ratio": 0.007405434986285017,
+            "normalized_expert_disagreement": 0.014161137759623453,
+            "source_validation_spearman": 0.0037096896825805042,
+            "standard_domain_share": 0.012427182669590612,
+            "surface_available": -0.008346724121659823
+          },
+          "mhar": {
+            "composition_support": -0.008384550852472155,
+            "condition_observed_fraction": 0.013549716202197642,
+            "curve_available": -0.002420765228484873,
+            "log10_source_sample_count": 0.010098059183440606,
+            "log10_target_candidate_count": 0.014281942758700579,
+            "log_standard_to_mhar_predictive_std_ratio": 0.010954064204008613,
+            "normalized_expert_disagreement": 0.01623445130596575,
+            "source_validation_spearman": 0.005522287431688389,
+            "standard_domain_share": 0.011914511268037215,
+            "surface_available": -0.011710624650783128
+          },
+          "standard": {
+            "composition_support": 0.00441801357437258,
+            "condition_observed_fraction": 0.005903354134704471,
+            "curve_available": 0.0004463776242979335,
+            "log10_source_sample_count": 0.012005014985411448,
+            "log10_target_candidate_count": 0.02424631525516217,
+            "log_standard_to_mhar_predictive_std_ratio": 0.0031767843601913626,
+            "normalized_expert_disagreement": 0.013178691100502996,
+            "source_validation_spearman": 0.00047498245394931655,
+            "standard_domain_share": 0.00884374322897505,
+            "surface_available": 0.0013020321883474005
+          }
+        },
+        "test_edges": 4,
+        "train_edges": 30
+      }
+    ],
+    "rows": [
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:birdshot",
+        "example_id": "alloy_yield_strength:birdshot\u2192mpea",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength:birdshot",
+        "predicted_spearman": {
+          "ensemble": -0.3177678779085722,
+          "mhar": -0.20810744149358174,
+          "standard": -0.6168068338903446
+        },
+        "realized": {
+          "ensemble": 0.07531514933630006,
+          "mhar": 0.0012033228065327025,
+          "standard": 0.10162936317672729
+        },
+        "recipient_group": "alloy_yield_strength:mpea",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.5063291139240507,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 96.44190979003906,
+          "normalized_expert_disagreement": 0.5240115523338318,
+          "source_sample_count": 171,
+          "source_validation_spearman": 0.7076612903225807,
+          "standard_domain_share": 0.6209421754085434,
+          "standard_predictive_std": 65.68712615966797,
+          "surface_available": false,
+          "target_candidate_count": 395,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:birdshot",
+        "example_id": "alloy_yield_strength:birdshot\u2192steels",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength:birdshot",
+        "predicted_spearman": {
+          "ensemble": -0.4053477752628117,
+          "mhar": -0.32687595232281796,
+          "standard": -0.557189281009863
+        },
+        "realized": {
+          "ensemble": 0.0726719528626431,
+          "mhar": -0.05595344341704896,
+          "standard": 0.10922473854419279
+        },
+        "recipient_group": "alloy_yield_strength:steels",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 94.50970458984375,
+          "normalized_expert_disagreement": 0.1630653291940689,
+          "source_sample_count": 171,
+          "source_validation_spearman": 0.7076612903225807,
+          "standard_domain_share": 0.6645837487953825,
+          "standard_predictive_std": 50.98861312866211,
+          "surface_available": false,
+          "target_candidate_count": 312,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5101840671191984,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:mpea",
+        "example_id": "alloy_yield_strength:mpea\u2192birdshot",
+        "oracle_expert": "ensemble",
+        "outer_group": "alloy_yield_strength:mpea",
+        "predicted_spearman": {
+          "ensemble": 0.21722950338597277,
+          "mhar": 0.19686136914757602,
+          "standard": 0.1538422497189884
+        },
+        "realized": {
+          "ensemble": -0.3898337322494207,
+          "mhar": -0.4387654509271272,
+          "standard": -0.4117879649649553
+        },
+        "recipient_group": "alloy_yield_strength:birdshot",
+        "routed_spearman": -0.3898337322494207,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 336.2912902832031,
+          "normalized_expert_disagreement": 0.1800166517496109,
+          "source_sample_count": 395,
+          "source_validation_spearman": 0.7317885034666899,
+          "standard_domain_share": 0.490479731884284,
+          "standard_predictive_std": 395.7785949707031,
+          "surface_available": false,
+          "target_candidate_count": 171,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5149848059456743,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:mpea",
+        "example_id": "alloy_yield_strength:mpea\u2192steels",
+        "oracle_expert": "mhar",
+        "outer_group": "alloy_yield_strength:mpea",
+        "predicted_spearman": {
+          "ensemble": 0.16574647949115173,
+          "mhar": 0.13577686759980323,
+          "standard": 0.13378164304839296
+        },
+        "realized": {
+          "ensemble": -0.1832546986272726,
+          "mhar": -0.1754729369555967,
+          "standard": -0.18150160387963177
+        },
+        "recipient_group": "alloy_yield_strength:steels",
+        "routed_spearman": -0.1832546986272726,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 530.8910522460938,
+          "normalized_expert_disagreement": 0.0596657358109951,
+          "source_sample_count": 395,
+          "source_validation_spearman": 0.7317885034666899,
+          "standard_domain_share": 0.44786765626891534,
+          "standard_predictive_std": 609.1034545898438,
+          "surface_available": false,
+          "target_candidate_count": 312,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.504362792257093,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:steels",
+        "example_id": "alloy_yield_strength:steels\u2192birdshot",
+        "oracle_expert": "mhar",
+        "outer_group": "alloy_yield_strength:steels",
+        "predicted_spearman": {
+          "ensemble": 0.12056168299953796,
+          "mhar": 0.04353722325875714,
+          "standard": 0.12928726751372388
+        },
+        "realized": {
+          "ensemble": -0.02550369880906449,
+          "mhar": 0.14586464632713236,
+          "standard": -0.5688325948533242
+        },
+        "recipient_group": "alloy_yield_strength:birdshot",
+        "routed_spearman": -0.5688325948533242,
+        "state": {
+          "composition_support": 0.1286549707602339,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 306.0311279296875,
+          "normalized_expert_disagreement": 0.034025851637125015,
+          "source_sample_count": 312,
+          "source_validation_spearman": 0.0739900504059161,
+          "standard_domain_share": 0.6421918324262579,
+          "standard_predictive_std": 289.6249084472656,
+          "surface_available": false,
+          "target_candidate_count": 171,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5025958707326408,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "alloy_yield_strength:steels",
+        "example_id": "alloy_yield_strength:steels\u2192mpea",
+        "oracle_expert": "standard",
+        "outer_group": "alloy_yield_strength:steels",
+        "predicted_spearman": {
+          "ensemble": 0.08810686764946843,
+          "mhar": 0.024653283131310377,
+          "standard": 0.09329860911474998
+        },
+        "realized": {
+          "ensemble": -0.05887128265809901,
+          "mhar": -0.21642482564743556,
+          "standard": 0.029964006430624544
+        },
+        "recipient_group": "alloy_yield_strength:mpea",
+        "routed_spearman": 0.029964006430624544,
+        "state": {
+          "composition_support": 0.06329113924050633,
+          "condition_observed_fraction": 0.0,
+          "curve_available": false,
+          "mhar_predictive_std": 310.0670166015625,
+          "normalized_expert_disagreement": 0.036709513515233994,
+          "source_sample_count": 312,
+          "source_validation_spearman": 0.0739900504059161,
+          "standard_domain_share": 0.58027988279919,
+          "standard_predictive_std": 290.96246337890625,
+          "surface_available": false,
+          "target_candidate_count": 395,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "alloy_yield_strength"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5036434968905175,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "ocx24_fe_co:ocx24_uoft",
+        "example_id": "ocx24_fe_co:ocx24_uoft\u2192ocx24_vsp",
+        "oracle_expert": "mhar",
+        "outer_group": "ocx24_fe_co:ocx24_uoft",
+        "predicted_spearman": {
+          "ensemble": 0.14146237672374862,
+          "mhar": 0.13417538294271367,
+          "standard": 0.10530969687823409
+        },
+        "realized": {
+          "ensemble": 0.531443157873281,
+          "mhar": 0.5635935427993176,
+          "standard": 0.4652485734130151
+        },
+        "recipient_group": "ocx24_fe_co:ocx24_vsp",
+        "routed_spearman": 0.531443157873281,
+        "state": {
+          "composition_support": 0.526595744680851,
+          "condition_observed_fraction": 0.16666666666666663,
+          "curve_available": false,
+          "mhar_predictive_std": 3.8522138595581055,
+          "normalized_expert_disagreement": 0.5735415816307068,
+          "source_sample_count": 1230,
+          "source_validation_spearman": 0.9124662475911628,
+          "standard_domain_share": 0.5097152452087361,
+          "standard_predictive_std": 7.121142387390137,
+          "surface_available": false,
+          "target_candidate_count": 940,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "ocx24_fe_co"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5041169148176864,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "ocx24_fe_co:ocx24_vsp",
+        "example_id": "ocx24_fe_co:ocx24_vsp\u2192ocx24_uoft",
+        "oracle_expert": "mhar",
+        "outer_group": "ocx24_fe_co:ocx24_vsp",
+        "predicted_spearman": {
+          "ensemble": 0.12679084509279487,
+          "mhar": 0.10511251599942381,
+          "standard": 0.11855701545742205
+        },
+        "realized": {
+          "ensemble": 0.5199394801479815,
+          "mhar": 0.5257332268636069,
+          "standard": 0.5093981874727485
+        },
+        "recipient_group": "ocx24_fe_co:ocx24_uoft",
+        "routed_spearman": 0.5199394801479815,
+        "state": {
+          "composition_support": 0.7682926829268293,
+          "condition_observed_fraction": 0.16666666666666666,
+          "curve_available": false,
+          "mhar_predictive_std": 7.442132949829102,
+          "normalized_expert_disagreement": 0.4763471484184265,
+          "source_sample_count": 940,
+          "source_validation_spearman": 0.8921059155871983,
+          "standard_domain_share": 0.5533915843294077,
+          "standard_predictive_std": 6.299205303192139,
+          "surface_available": false,
+          "target_candidate_count": 1230,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "ocx24_fe_co"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Au-rich",
+        "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Ir-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her:seccm_Au-rich",
+        "predicted_spearman": {
+          "ensemble": -0.1870965246216398,
+          "mhar": -0.17019964506218954,
+          "standard": -0.24020337644886713
+        },
+        "realized": {
+          "ensemble": 0.08687854822139843,
+          "mhar": -0.11468587092656948,
+          "standard": 0.47841326911226006
+        },
+        "recipient_group": "seccm_her:seccm_Ir-rich",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.0445198193192482,
+          "normalized_expert_disagreement": 0.04428844898939133,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.17770463563936142,
+          "standard_domain_share": 0.5108275069250908,
+          "standard_predictive_std": 0.045029185712337494,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Au-rich",
+        "example_id": "seccm_her:seccm_Au-rich\u2192seccm_Rh-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her:seccm_Au-rich",
+        "predicted_spearman": {
+          "ensemble": -0.1635669526792548,
+          "mhar": -0.1426807547073689,
+          "standard": -0.2336368926706205
+        },
+        "realized": {
+          "ensemble": -0.1567902029981582,
+          "mhar": -0.23146729802270463,
+          "standard": 0.0541660271753059
+        },
+        "recipient_group": "seccm_her:seccm_Rh-rich",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.9161490683229814,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.036115046590566635,
+          "normalized_expert_disagreement": 0.05353185534477234,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.17770463563936142,
+          "standard_domain_share": 0.5263806552786117,
+          "standard_predictive_std": 0.037606749683618546,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5219235838910765,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Ir-rich",
+        "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Au-rich",
+        "oracle_expert": "mhar",
+        "outer_group": "seccm_her:seccm_Ir-rich",
+        "predicted_spearman": {
+          "ensemble": 0.03944677857670245,
+          "mhar": 0.0018438171959170996,
+          "standard": 0.08329394635885543
+        },
+        "realized": {
+          "ensemble": 0.22556516778956498,
+          "mhar": 0.23751954641006517,
+          "standard": 0.21669220736905723
+        },
+        "recipient_group": "seccm_her:seccm_Au-rich",
+        "routed_spearman": 0.21669220736905723,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.04119081050157547,
+          "normalized_expert_disagreement": 0.33167025446891785,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9694853732812454,
+          "standard_domain_share": 0.5130980885308685,
+          "standard_predictive_std": 0.04095717892050743,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5208330887929662,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Ir-rich",
+        "example_id": "seccm_her:seccm_Ir-rich\u2192seccm_Rh-rich",
+        "oracle_expert": "mhar",
+        "outer_group": "seccm_her:seccm_Ir-rich",
+        "predicted_spearman": {
+          "ensemble": 0.030550113530923063,
+          "mhar": -0.00513981754310968,
+          "standard": 0.07221629111685544
+        },
+        "realized": {
+          "ensemble": -0.04649282455127948,
+          "mhar": 0.08082944891209548,
+          "standard": -0.17406385685942138
+        },
+        "recipient_group": "seccm_her:seccm_Rh-rich",
+        "routed_spearman": -0.17406385685942138,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.030425002798438072,
+          "normalized_expert_disagreement": 0.24416019022464752,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9694853732812454,
+          "standard_domain_share": 0.49641906803436053,
+          "standard_predictive_std": 0.036816731095314026,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5592254783644184,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Rh-rich",
+        "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Au-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her:seccm_Rh-rich",
+        "predicted_spearman": {
+          "ensemble": 0.07466343031720915,
+          "mhar": 0.05997133881406427,
+          "standard": 0.1931143870460459
+        },
+        "realized": {
+          "ensemble": -0.03213366304115673,
+          "mhar": -0.08550964767569823,
+          "standard": -0.025111781393613218
+        },
+        "recipient_group": "seccm_her:seccm_Au-rich",
+        "routed_spearman": -0.025111781393613218,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.21806320548057556,
+          "normalized_expert_disagreement": 0.3601599335670471,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9845581223661142,
+          "standard_domain_share": 0.36969163935675964,
+          "standard_predictive_std": 0.22397015988826752,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "predict",
+          "confidence": 0.5573986943099135,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "seccm_her:seccm_Rh-rich",
+        "example_id": "seccm_her:seccm_Rh-rich\u2192seccm_Ir-rich",
+        "oracle_expert": "standard",
+        "outer_group": "seccm_her:seccm_Rh-rich",
+        "predicted_spearman": {
+          "ensemble": 0.14243785487433602,
+          "mhar": 0.12776844882234614,
+          "standard": 0.257235243494163
+        },
+        "realized": {
+          "ensemble": -0.5335362571641716,
+          "mhar": -0.5721334707445435,
+          "standard": -0.5088899436247478
+        },
+        "recipient_group": "seccm_her:seccm_Ir-rich",
+        "routed_spearman": -0.5088899436247478,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.0,
+          "curve_available": true,
+          "mhar_predictive_std": 0.08648397773504257,
+          "normalized_expert_disagreement": 0.493867963552475,
+          "source_sample_count": 322,
+          "source_validation_spearman": 0.9845581223661142,
+          "standard_domain_share": 0.41295711155987097,
+          "standard_predictive_std": 0.08433247357606888,
+          "surface_available": true,
+          "target_candidate_count": 322,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "seccm_her"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_B",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_A",
+        "predicted_spearman": {
+          "ensemble": -0.07232712053003817,
+          "mhar": -0.05142242625449259,
+          "standard": -0.12160113630650507
+        },
+        "realized": {
+          "ensemble": 0.25604621902008684,
+          "mhar": 0.2616796077981712,
+          "standard": 0.23430757765971555
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 36.707340240478516,
+          "normalized_expert_disagreement": 0.06914179772138596,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.5119855941199154,
+          "standard_predictive_std": 43.43082046508789,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5130884635703693,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_A",
+        "predicted_spearman": {
+          "ensemble": -0.006355351473388823,
+          "mhar": 0.01982157566734981,
+          "standard": -0.07220826876676115
+        },
+        "realized": {
+          "ensemble": 0.006069841422758684,
+          "mhar": 0.008366079732170541,
+          "standard": -0.0006089330174365795
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.008366079732170541,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 39.97821044921875,
+          "normalized_expert_disagreement": 0.0903293713927269,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.49736075471162905,
+          "standard_predictive_std": 44.27019500732422,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5156997363353581,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_A",
+        "predicted_spearman": {
+          "ensemble": -0.014991557814941325,
+          "mhar": 0.016407914855774867,
+          "standard": -0.08866198759913566
+        },
+        "realized": {
+          "ensemble": 0.05703538389649451,
+          "mhar": 0.06108782218261144,
+          "standard": 0.05572445237841261
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.06108782218261144,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 36.22897720336914,
+          "normalized_expert_disagreement": 0.08329257369041443,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.4903901931628324,
+          "standard_predictive_std": 43.28372573852539,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_A",
+        "example_id": "specgen:specgen_A\u2192specgen_source",
+        "oracle_expert": "standard",
+        "outer_group": "specgen:specgen_A",
+        "predicted_spearman": {
+          "ensemble": -0.04635388127237357,
+          "mhar": -0.03273426172020036,
+          "standard": -0.036155335658612765
+        },
+        "realized": {
+          "ensemble": 0.07184347069363738,
+          "mhar": 0.07157748003049169,
+          "standard": 0.07267367333557112
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 37.894309997558594,
+          "normalized_expert_disagreement": 0.054809123277664185,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.1922887036706051,
+          "standard_domain_share": 0.5012222375705558,
+          "standard_predictive_std": 43.772640228271484,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.503801648169114,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_B",
+        "predicted_spearman": {
+          "ensemble": 0.09390593812141163,
+          "mhar": 0.07221006228261123,
+          "standard": 0.08630264178318363
+        },
+        "realized": {
+          "ensemble": 0.14653988062961468,
+          "mhar": 0.2043255242153204,
+          "standard": 0.11728709843236579
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.14653988062961468,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 37.300010681152344,
+          "normalized_expert_disagreement": 0.47574347257614136,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.4840885090050609,
+          "standard_predictive_std": 28.506563186645508,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5028272167960526,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_B",
+        "predicted_spearman": {
+          "ensemble": 0.1407828282148701,
+          "mhar": 0.13512839462276505,
+          "standard": 0.1014634828729446
+        },
+        "realized": {
+          "ensemble": -0.023019467861124684,
+          "mhar": -0.01516633170521845,
+          "standard": -0.02724000360266787
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": -0.023019467861124684,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 36.38373565673828,
+          "normalized_expert_disagreement": 0.3879842162132263,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.47352969091315417,
+          "standard_predictive_std": 29.528379440307617,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5044896321308607,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_B",
+        "predicted_spearman": {
+          "ensemble": 0.17557396204802844,
+          "mhar": 0.18455322630975002,
+          "standard": 0.10922473690320814
+        },
+        "realized": {
+          "ensemble": -0.12345649386544262,
+          "mhar": -0.10301389587013217,
+          "standard": -0.18475129172841745
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": -0.10301389587013217,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 23.18140983581543,
+          "normalized_expert_disagreement": 0.037955962121486664,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.5682158878892047,
+          "standard_predictive_std": 21.360429763793945,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5173699292031743,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_B",
+        "example_id": "specgen:specgen_B\u2192specgen_source",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_B",
+        "predicted_spearman": {
+          "ensemble": 0.1281084790553507,
+          "mhar": 0.10242081282253049,
+          "standard": 0.16284833746169922
+        },
+        "realized": {
+          "ensemble": -0.08013145071180783,
+          "mhar": 0.012992866407528147,
+          "standard": -0.08958216300781427
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.08958216300781427,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 34.274749755859375,
+          "normalized_expert_disagreement": 0.2837386727333069,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.5424901185770752,
+          "standard_domain_share": 0.5038185486808173,
+          "standard_predictive_std": 28.61558723449707,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5079825641024373,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_C",
+        "predicted_spearman": {
+          "ensemble": -0.004069347267945514,
+          "mhar": 0.011895780936929008,
+          "standard": -0.039082435334388516
+        },
+        "realized": {
+          "ensemble": 0.03281639020076935,
+          "mhar": 0.05206227315580923,
+          "standard": -0.24118546962547158
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.05206227315580923,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 26.186460494995117,
+          "normalized_expert_disagreement": 0.08584170043468475,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.4982520120558987,
+          "standard_predictive_std": 27.656291961669922,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen:specgen_C",
+        "predicted_spearman": {
+          "ensemble": -0.13478513962233385,
+          "mhar": -0.1164135842065345,
+          "standard": -0.1499258362674506
+        },
+        "realized": {
+          "ensemble": -0.32405484009395696,
+          "mhar": -0.3223480252831316,
+          "standard": -0.3149363018511284
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 24.711793899536133,
+          "normalized_expert_disagreement": 0.06973402202129364,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.37119283065315917,
+          "standard_predictive_std": 26.981246948242188,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "mhar",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_C",
+        "predicted_spearman": {
+          "ensemble": -0.0848976357216719,
+          "mhar": -0.04814838961540688,
+          "standard": -0.13566916195268053
+        },
+        "realized": {
+          "ensemble": 0.13359830220324814,
+          "mhar": 0.1421502973440596,
+          "standard": 0.02121953853391197
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.5952380952380952,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 23.351825714111328,
+          "normalized_expert_disagreement": 0.13697485625743866,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.34922969874799054,
+          "standard_predictive_std": 26.795143127441406,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5064777028645895,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_C",
+        "example_id": "specgen:specgen_C\u2192specgen_source",
+        "oracle_expert": "ensemble",
+        "outer_group": "specgen:specgen_C",
+        "predicted_spearman": {
+          "ensemble": -0.0018001512526293062,
+          "mhar": 0.008283052637412532,
+          "standard": 0.021238458366591516
+        },
+        "realized": {
+          "ensemble": -0.020264973213617574,
+          "mhar": -0.022830586385352653,
+          "standard": -0.023675092821523115
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.023675092821523115,
+        "state": {
+          "composition_support": 0.8787878787878788,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 26.082754135131836,
+          "normalized_expert_disagreement": 0.08607588708400726,
+          "source_sample_count": 126,
+          "source_validation_spearman": 0.3306152806639384,
+          "standard_domain_share": 0.46772364727871363,
+          "standard_predictive_std": 27.260313034057617,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "standard",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_A",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_D",
+        "predicted_spearman": {
+          "ensemble": -0.040238661210070775,
+          "mhar": -0.07795039936611699,
+          "standard": -0.021161997688811073
+        },
+        "realized": {
+          "ensemble": -0.08750937397870608,
+          "mhar": -0.08299187090353617,
+          "standard": -0.09754027058120815
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.56209182739258,
+          "normalized_expert_disagreement": 0.030335407704114914,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5075985103850419,
+          "standard_predictive_std": 34.42673873901367,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "abstain",
+          "confidence": 0.0,
+          "expert": "standard",
+          "reason_codes": [
+            "out_of_support"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen:specgen_D",
+        "predicted_spearman": {
+          "ensemble": -0.04175838975053804,
+          "mhar": -0.07956176792078483,
+          "standard": -0.022464699092800154
+        },
+        "realized": {
+          "ensemble": -0.35832912133910694,
+          "mhar": -0.35708425640678265,
+          "standard": -0.35502647967527795
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.0,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.2949104309082,
+          "normalized_expert_disagreement": 0.02902669459581375,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5061526086231187,
+          "standard_predictive_std": 34.2191276550293,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5106030431717322,
+          "expert": "ensemble",
+          "reason_codes": [
+            "experts_agree"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_D",
+        "predicted_spearman": {
+          "ensemble": 0.016438951797072207,
+          "mhar": -0.008162569890898308,
+          "standard": -0.004767134546392292
+        },
+        "realized": {
+          "ensemble": 0.08245792963701543,
+          "mhar": 0.08649248583628734,
+          "standard": 0.07542092996592338
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.08245792963701543,
+        "state": {
+          "composition_support": 0.5952380952380952,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 43.56303787231445,
+          "normalized_expert_disagreement": 0.029042495414614677,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5052725852069047,
+          "standard_predictive_std": 34.41265106201172,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5415239690785502,
+          "expert": "standard",
+          "reason_codes": [
+            "standard_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_D",
+        "example_id": "specgen:specgen_D\u2192specgen_source",
+        "oracle_expert": "standard",
+        "outer_group": "specgen:specgen_D",
+        "predicted_spearman": {
+          "ensemble": -0.021219933540843422,
+          "mhar": -0.06621746301060814,
+          "standard": 0.06182800461625683
+        },
+        "realized": {
+          "ensemble": -0.03147929357732647,
+          "mhar": -0.03426808820127243,
+          "standard": -0.019735588967228764
+        },
+        "recipient_group": "specgen:specgen_source",
+        "routed_spearman": -0.019735588967228764,
+        "state": {
+          "composition_support": 0.8787878787878788,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 43.444889068603516,
+          "normalized_expert_disagreement": 0.02684350498020649,
+          "source_sample_count": 126,
+          "source_validation_spearman": -0.16753150993284777,
+          "standard_domain_share": 0.5023768901689638,
+          "standard_predictive_std": 34.33301544189453,
+          "surface_available": false,
+          "target_candidate_count": 462,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5034949931213069,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_A",
+        "oracle_expert": "ensemble",
+        "outer_group": "specgen:specgen_source",
+        "predicted_spearman": {
+          "ensemble": 0.04458023819437934,
+          "mhar": 0.05157022443699296,
+          "standard": 0.01578225563994144
+        },
+        "realized": {
+          "ensemble": 0.5085820560310457,
+          "mhar": 0.4895041545980574,
+          "standard": 0.47768245498368517
+        },
+        "recipient_group": "specgen:specgen_A",
+        "routed_spearman": 0.4895041545980574,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 12.174516677856445,
+          "normalized_expert_disagreement": 0.6144772171974182,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.565627803251665,
+          "standard_predictive_std": 11.937573432922363,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5020444318492147,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_B",
+        "oracle_expert": "standard",
+        "outer_group": "specgen:specgen_source",
+        "predicted_spearman": {
+          "ensemble": 0.008420409371329467,
+          "mhar": 0.01250927306975882,
+          "standard": -0.01472254137826863
+        },
+        "realized": {
+          "ensemble": 0.6155362144045179,
+          "mhar": 0.6020436783428441,
+          "standard": 0.6339722141010601
+        },
+        "recipient_group": "specgen:specgen_B",
+        "routed_spearman": 0.6020436783428441,
+        "state": {
+          "composition_support": 1.0,
+          "condition_observed_fraction": 0.5,
+          "curve_available": true,
+          "mhar_predictive_std": 14.283886909484863,
+          "normalized_expert_disagreement": 0.3357386887073517,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.4901236030383491,
+          "standard_predictive_std": 13.83873462677002,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5041554936318856,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_C",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_source",
+        "predicted_spearman": {
+          "ensemble": 0.042191384803949676,
+          "mhar": 0.050502372067720895,
+          "standard": 0.0074257990652538235
+        },
+        "realized": {
+          "ensemble": 0.340500555720729,
+          "mhar": 0.3414164442295399,
+          "standard": 0.34138695954599474
+        },
+        "recipient_group": "specgen:specgen_C",
+        "routed_spearman": 0.3414164442295399,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 13.153812408447266,
+          "normalized_expert_disagreement": 0.5710691809654236,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.5343280139139348,
+          "standard_predictive_std": 11.492433547973633,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      },
+      {
+        "decision": {
+          "action": "rank",
+          "confidence": 0.5036992955983292,
+          "expert": "mhar",
+          "reason_codes": [
+            "mhar_closer"
+          ],
+          "valid": true
+        },
+        "donor_group": "specgen:specgen_source",
+        "example_id": "specgen:specgen_source\u2192specgen_D",
+        "oracle_expert": "mhar",
+        "outer_group": "specgen:specgen_source",
+        "predicted_spearman": {
+          "ensemble": 0.013594545359576955,
+          "mhar": 0.020993136556235303,
+          "standard": -0.018039069609583038
+        },
+        "realized": {
+          "ensemble": 0.7197744265251246,
+          "mhar": 0.7371813812084388,
+          "standard": 0.6925556247335696
+        },
+        "recipient_group": "specgen:specgen_D",
+        "routed_spearman": 0.7371813812084388,
+        "state": {
+          "composition_support": 0.8333333333333334,
+          "condition_observed_fraction": 0.6666666666666667,
+          "curve_available": true,
+          "mhar_predictive_std": 14.014348030090332,
+          "normalized_expert_disagreement": 0.32766467332839966,
+          "source_sample_count": 462,
+          "source_validation_spearman": 0.9295115828894189,
+          "standard_domain_share": 0.4663106309839375,
+          "standard_predictive_std": 13.405848503112793,
+          "surface_available": false,
+          "target_candidate_count": 126,
+          "task_kind": "catalyst_ranking"
+        },
+        "suite": "specgen"
+      }
+    ],
+    "summary": {
+      "baselines": {
+        "always_ensemble": {
+          "harmful_transfer_rate": 0.47058823529411764,
+          "mean_spearman": 0.05905743387872057,
+          "median_spearman": 0.019443115811764018
+        },
+        "always_mhar": {
+          "harmful_transfer_rate": 0.4411764705882353,
+          "mean_spearman": 0.052867877356703806,
+          "median_spearman": 0.010679473069849343
+        },
+        "always_standard": {
+          "harmful_transfer_rate": 0.47058823529411764,
+          "mean_spearman": 0.043014633997360996,
+          "median_spearman": 0.02559177248226826
+        },
+        "deterministic_target_free_router": {
+          "harmful_transfer_rate": 0.23529411764705882,
+          "mean_spearman": 0.06977826043510281,
+          "median_spearman": 0.0
+        },
+        "oracle_upper_bound": {
+          "harmful_transfer_rate": 0.3235294117647059,
+          "mean_spearman": 0.10116107955645363,
+          "median_spearman": 0.06688074775909128
+        }
+      },
+      "edges": 34,
+      "gain_over_always_standard": {
+        "draws": 2000,
+        "median": -0.02559177248226826,
+        "outer_group_bootstrap_ci90": [
+          -0.10162936317672729,
+          0.025111781393613218
+        ],
+        "seed": 20260813
+      },
+      "numeric_router": {
+        "expert_action_counts": {
+          "ensemble:rank": 7,
+          "mhar:abstain": 8,
+          "mhar:rank": 8,
+          "standard:abstain": 2,
+          "standard:predict": 1,
+          "standard:rank": 8
+        },
+        "harmful_transfer_rate": 0.3235294117647059,
+        "mean_spearman": 0.05028487292357126,
+        "median_spearman": 0.0,
+        "non_abstain_fraction": 0.7058823529411765,
+        "oracle_expert_agreement": 0.4583333333333333,
+        "useful_edge_retention": 0.75
+      },
+      "outer_groups": 13,
+      "qualification_gate": {
+        "bootstrap_lower_bound_above_0": false,
+        "harm_not_above_standard": true,
+        "median_gain_at_least_0_02": false,
+        "non_abstain_fraction_at_least_0_5": true,
+        "passed": false,
+        "useful_edge_retention_at_least_0_5": true
+      }
+    }
+  },
+  "seed": 20260813,
+  "status": "retrospective-screen-failed",
+  "wall_time_seconds": 257.6
+}
