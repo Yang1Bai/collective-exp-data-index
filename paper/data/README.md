@@ -5,8 +5,9 @@ harmonized validation tables and a tracked integrated snapshot. It does not
 claim ownership of third-party raw data and does not re-host those data unless
 the upstream terms permit the specific retained artifact.
 
-- [`datasets.csv`](datasets.csv) maps every article-facing resource to its
-  upstream access page, DOI, licence and repository representation.
+- [`datasets.csv`](datasets.csv) maps all 15 third-party resources used in the
+  submitted study to their upstream access page, DOI, licence, redistribution
+  status and repository representation.
 - [`article_source_data.csv`](article_source_data.csv) lists each headline
   number, its full-precision value and the exact JSON path from which it is
   read.
@@ -19,6 +20,12 @@ the upstream terms permit the specific retained artifact.
 For reproducibility, cite both this repository release and the original data
 publication or record shown in `datasets.csv`. An open download URL is not by
 itself a redistribution licence.
+
+The manifest's `repository_representation` column identifies the normalized,
+harmonized or derived artifact used for audit. It does not imply that the raw
+third-party source is redistributed here. Every row is explicitly marked
+`not redistributed` in accordance with the submitted Data availability
+statement.
 
 The retired OCx24 direct dataset page currently returns 404, so the manifest
 uses FAIR Chemistry's current official OCx24 publication entry. The retained
