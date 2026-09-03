@@ -1,0 +1,22 @@
+{
+  "bamboo_rows": 10407,
+  "bamboo_target_family_rows": 395,
+  "bamboo_without_target_family_rows": 10012,
+  "calisol_articles": 3,
+  "calisol_rows": 410,
+  "finales_rows": 29,
+  "kit_aggregated_rows": 1089,
+  "kit_formulations": 109,
+  "kit_raw_rows": 5035,
+  "portfolio_rule": "remove the complete LiPF6 EC EMC target family from the BambooMixer arm before combining programme predictions; combine predictions with equal programme weight rather than pooling rows",
+  "solventseg_formulations": 36,
+  "solventseg_rows": 180,
+  "strict_record_overlap_counts": {
+    "bamboo_to_calisol": 71,
+    "bamboo_to_kit": 0,
+    "bamboo_to_solventseg": 0,
+    "calisol_to_kit": 0,
+    "calisol_to_solventseg": 0,
+    "kit_to_solventseg": 0
+  }
+}

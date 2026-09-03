@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "model_or_training_changes": false,
+  "transfer_actions": [
+    {
+      "recipient": "LiAsF6",
+      "action": "transfer_now",
+      "endpoint": "absolute_prediction",
+      "synthesis_route_selection": "not_evaluable",
+      "bridge_status": "not_required_for_validated_endpoint",
+      "reason_codes": [
+        "STATE_FULLY_SUPPORTED",
+        "REPRESENTATION_PARTIALLY_SUPPORTED",
+        "ABSOLUTE_GAIN_CI_ABOVE_ZERO",
+        "CHEMISTRY_SPECIFICITY_CI_ABOVE_ZERO",
+        "UNSEEN_IDENTITY_BUT_DESCRIPTOR_SUPPORTED"
+      ]
+    },
+    {
+      "recipient": "SolventSeg",
+      "action": "transfer_now",
+      "endpoint": "candidate_ranking",
+      "synthesis_route_selection": "not_evaluable",
+      "bridge_status": "not_required_for_validated_endpoint",
+      "reason_codes": [
+        "NO_EXACT_FORMULATION_OVERLAP",
+        "ABSOLUTE_SCALE_NOT_SUPPORTED",
+        "RANK_ADVANTAGE_CI_ABOVE_ZERO",
+        "RANK_PERMUTATION_SIGNIFICANT",
+        "SHORTLIST_UTILITY_IMPROVED"
+      ]
+    },
+    {
+      "recipient": "FINALES",
+      "action": "withhold",
+      "endpoint": "none",
+      "synthesis_route_selection": "not_evaluable",
+      "bridge_status": "not_justified_without_route_resolved_hypothesis",
+      "reason_codes": [
+        "RANK_ADVANTAGE_NOT_POSITIVE",
+        "RANK_ADVANTAGE_CI_CROSSES_ZERO",
+        "PERMUTATION_NOT_SIGNIFICANT",
+        "SHORTLIST_PRECISION_NOT_IMPROVED",
+        "REGRET_WORSE_THAN_RECIPIENT_BASELINE"
+      ]
+    }
+  ],
+  "synthesis_route_readiness": {
+    "programme": "Precursor Genome -> A-Lab target-synthesis campaign",
+    "source_status": "hold-recipient-attempt-table-not-verified",
+    "record_counts": {
+      "donor_reactions": 1035,
+      "recipient_reported_attempts": 355
+    },
+    "route_choice_supported": false,
+    "selected_synthesis_route": null,
+    "bridge_experiment_supported_now": false,
+    "current_action": "data_recovery",
+    "blocking_issue": "A machine-readable table linking every attempted recipe, including failed and partial attempts, to candidate metadata and target-phase outcome has not been verified.",
+    "next_required_evidence": [
+      "verify the complete recipient attempt table including failures",
+      "encode candidate-level route identifiers and process parameters",
+      "freeze route alternatives, target checksum and grouped evaluation",
+      "then apply the ambiguity and value-of-information bridge gate"
+    ],
+    "checklist": [
+      {
+        "requirement": "donor precursor and stoichiometry fields",
+        "status": "available"
+      },
+      {
+        "requirement": "donor temperature and time fields",
+        "status": "available"
+      },
+      {
+        "requirement": "donor negative and partial outcomes",
+        "status": "available"
+      },
+      {
+        "requirement": "complete recipient attempt table",
+        "status": "missing"
+      },
+      {
+        "requirement": "recipient failed and partial outcomes",
+        "status": "missing"
+      },
+      {
+        "requirement": "candidate-level synthesis route identifiers",
+        "status": "missing"
+      },
+      {
+        "requirement": "two or more comparable route alternatives",
+        "status": "missing"
+      },
+      {
+        "requirement": "frozen target checksum and grouped split",
+        "status": "missing"
+      }
+    ]
+  },
+  "bridge_contract": {
+    "trigger": "route candidates are complete and feasible, the endpoint confidence interval crosses its frozen threshold, matched falsifiers pass, a paired route contrast is designable, and expected information value exceeds experiment cost",
+    "never_bridge_to_rescue": [
+      "missing route metadata",
+      "no feasible route",
+      "matched falsifier failure",
+      "endpoint interval wholly below threshold"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "anchor_budgets": [
+    3,
+    5,
+    10
+  ],
+  "claim_guard": "This outcome-inspected sensitivity can challenge baseline dependence but cannot provide independent confirmation.",
+  "design_sha256": "ca9bb9dc6a47de727cf9c89ea3fece209e5bf0f0475d583d1682f83635295cb1",
+  "draws_per_budget": 100,
+  "five_anchor": {
+    "passes_adversarial_spearman_gate": true,
+    "recipient_macro": [
+      {
+        "model": "rbf_kernel_ridge_alpha_10",
+        "normalized_regret": 0.03927820347945519,
+        "spearman": 0.5366383640583346,
+        "top_quartile_precision": 0.49
+      },
+      {
+        "model": "rbf_kernel_ridge_alpha_0.1",
+        "normalized_regret": 0.061179220741207054,
+        "spearman": 0.5196410165226899,
+        "top_quartile_precision": 0.4475
+      },
+      {
+        "model": "rbf_kernel_ridge_alpha_1",
+        "normalized_regret": 0.059200130095654835,
+        "spearman": 0.5021389948037399,
+        "top_quartile_precision": 0.45625
+      },
+      {
+        "model": "recipient_rank_ensemble",
+        "normalized_regret": 0.06256726934254507,
+        "spearman": 0.41181333490611904,
+        "top_quartile_precision": 0.40875
+      },
+      {
+        "model": "random_forest",
+        "normalized_regret": 0.08483585020188805,
+        "spearman": 0.3772970883668284,
+        "top_quartile_precision": 0.44375
+      },
+      {
+        "model": "extra_trees",
+        "normalized_regret": 0.050377484354664374,
+        "spearman": 0.3494785959336233,
+        "top_quartile_precision": 0.44625
+      },
+      {
+        "model": "knn_5",
+        "normalized_regret": 0.07060668284859567,
+        "spearman": 0.2935039373312561,
+        "top_quartile_precision": 0.36625
+      },
+      {
+        "model": "ridge_alpha_0.1",
+        "normalized_regret": 0.19458113549450357,
+        "spearman": 0.237172058120514,
+        "top_quartile_precision": 0.27625
+      },
+      {
+        "model": "knn_3",
+        "normalized_regret": 0.06057741474999179,
+        "spearman": 0.235800380967847,
+        "top_quartile_precision": 0.3225
+      },
+      {
+        "model": "ridge_alpha_1",
+        "normalized_regret": 0.18341831909434428,
+        "spearman": 0.217335374430695,
+        "top_quartile_precision": 0.21875
+      },
+      {
+        "model": "knn_1",
+        "normalized_regret": 0.22970748259724044,
+        "spearman": 0.1915092748372618,
+        "top_quartile_precision": 0.33875
+      },
+      {
+        "model": "ridge_alpha_10",
+        "normalized_regret": 0.17708169816196992,
+        "spearman": 0.16189172532352053,
+        "top_quartile_precision": 0.1625
+      },
+      {
+        "model": "ridge_alpha_100",
+        "normalized_regret": 0.19301475433147122,
+        "spearman": 0.06864039228178737,
+        "top_quartile_precision": 0.10625
+      }
+    ],
+    "source_minus_oracle_spearman": {
+      "ci95": [
+        0.18337534118798662,
+        0.5396549448534288
+      ],
+      "mean": 0.29985577635695154
+    },
+    "source_minus_strongest_spearman": {
+      "ci95": [
+        0.21257687374893036,
+        0.5622189765440571
+      ],
+      "mean": 0.3736614620854431
+    },
+    "source_portfolio": {
+      "normalized_regret": 0.0004687164937070424,
+      "spearman": 0.910299826143778,
+      "top_quartile_precision": 0.9325
+    },
+    "strongest_average_recipient_model": "rbf_kernel_ridge_alpha_10"
+  },
+  "predictions_sha256": "a54fe81680727afe12c5ae4bdd2330d1d947427a5086f71ac9c02453ad09123e",
+  "rbf_gamma_from_unlabelled_pool": 0.01317128450048067,
+  "rows": 4200,
+  "status": "complete-post-outcome-recipient-baseline-stress-test"
+}

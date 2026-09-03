@@ -1,0 +1,9 @@
+requirement,status
+donor precursor and stoichiometry fields,available
+donor temperature and time fields,available
+donor negative and partial outcomes,available
+complete recipient attempt table,missing
+recipient failed and partial outcomes,missing
+candidate-level synthesis route identifiers,missing
+two or more comparable route alternatives,missing
+frozen target checksum and grouped split,missing

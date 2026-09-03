@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "model_or_training_changes": false,
+  "aggregation_policy": "No universal score. Support, endpoint utility, specificity, and uncertainty remain separate.",
+  "cards": [
+    {
+      "recipient": "LiAsF6",
+      "transferred_object": "chemistry-state-conductivity relation",
+      "evidence_status": "retrospective external benchmark",
+      "source_artifacts": [
+        "analysis/results/bamboomixer_applicability_domain_summary.json",
+        "analysis/results/bamboomixer_LiAsF6_only_summary.json"
+      ],
+      "data_support": {
+        "source_rows": 10407,
+        "source_salts": 22,
+        "recipient_rows": 1660,
+        "recipient_formulations": 156,
+        "exact_salt_identity_overlap_fraction": 0.0,
+        "solvent_identity_overlap_fraction": 0.30434782608695654,
+        "temperature_inside_source_range_fraction": 1.0,
+        "concentration_inside_source_range_fraction": 1.0,
+        "full_representation_inside_donor_q95_fraction": 0.6078313253012049,
+        "salt_descriptor_reference_percentile": 50.0
+      },
+      "absolute_endpoint": {
+        "raw_r2": 0.60708008274443,
+        "spearman": 0.8639511089469837,
+        "relative_log_rmse_gain_vs_state_only": 0.2740993466742442,
+        "relative_log_rmse_gain_vs_state_only_ci95": {
+          "low": 0.21790512969868628,
+          "high": 0.32922581386111144
+        },
+        "relative_log_rmse_gain_vs_chemistry_permuted": 0.2587549306167092,
+        "relative_log_rmse_gain_vs_chemistry_permuted_ci95": {
+          "low": 0.20733405920322623,
+          "high": 0.31090720481095024
+        }
+      },
+      "rank_endpoint": {
+        "spearman": 0.8639511089469837,
+        "spearman_gain_vs_state_only": 0.15822899893436573,
+        "spearman_gain_vs_state_only_ci95": {
+          "low": 0.12998548761344988,
+          "high": 0.18981556783580966
+        }
+      },
+      "gate_evaluation": {
+        "absolute_prediction_supported": true,
+        "candidate_ranking_supported": false
+      },
+      "decision": "predict",
+      "reason_codes": [
+        "STATE_FULLY_SUPPORTED",
+        "REPRESENTATION_PARTIALLY_SUPPORTED",
+        "ABSOLUTE_GAIN_CI_ABOVE_ZERO",
+        "CHEMISTRY_SPECIFICITY_CI_ABOVE_ZERO",
+        "UNSEEN_IDENTITY_BUT_DESCRIPTOR_SUPPORTED"
+      ],
+      "plain_language_reason": "The salt identity is unseen, but temperature and concentration are fully covered, 60.8% of recipient rows lie inside the donor's relation-distance boundary, and the lower confidence bounds for both state-only and chemistry-shuffled comparisons remain positive."
+    },
+    {
+      "recipient": "SolventSeg",
+      "transferred_object": "programme-balanced candidate order",
+      "evidence_status": "post-outcome cross-programme method development",
+      "source_artifacts": [
+        "analysis/bamboomixer_cross_database_interaction_design.json",
+        "analysis/results/bamboomixer_cross_database_interaction_input_audit.json",
+        "analysis/results/bamboomixer_cross_database_interaction_summary.json",
+        "analysis/results/bamboomixer_recipient_baseline_stress_test_summary.json"
+      ],
+      "data_support": {
+        "source_programmes": 3,
+        "recipient_rows": 180,
+        "recipient_formulations": 36,
+        "recipient_temperatures": 5,
+        "strict_record_overlap_count": 0,
+        "recipient_labels_used_by_source_rank": 0,
+        "recipient_anchor_budget_for_baseline": 5
+      },
+      "absolute_endpoint": {
+        "relative_log_rmse_gain_vs_state_only": -0.1800366403692153,
+        "relative_log_rmse_gain_vs_state_only_ci95": {
+          "low": -0.43965893835854153,
+          "high": 0.2106397144669739
+        },
+        "relative_log_rmse_gain_vs_chemistry_permuted": -0.15146484613306588,
+        "relative_log_rmse_gain_vs_chemistry_permuted_ci95": {
+          "low": -0.30171960323169833,
+          "high": 0.2715592865320579
+        }
+      },
+      "rank_endpoint": {
+        "all_formulations_25C_spearman": 0.9178196814166149,
+        "all_formulations_25C_top_quartile_precision": 1.0,
+        "five_anchor_source_spearman": 0.910299826143778,
+        "five_anchor_recipient_baseline_spearman": 0.5366383640583346,
+        "source_minus_recipient_spearman": 0.3736614620854431,
+        "source_minus_recipient_spearman_ci95": {
+          "low": 0.21257687374893036,
+          "high": 0.5622189765440571
+        },
+        "source_top_quartile_precision": 0.9325,
+        "recipient_top_quartile_precision": 0.49,
+        "source_normalized_regret": 0.0004687164937070424,
+        "recipient_normalized_regret": 0.03927820347945519,
+        "holm_adjusted_permutation_p": 0.0006999300069993001
+      },
+      "gate_evaluation": {
+        "absolute_prediction_supported": false,
+        "candidate_ranking_supported": true
+      },
+      "decision": "rank",
+      "reason_codes": [
+        "NO_EXACT_FORMULATION_OVERLAP",
+        "ABSOLUTE_SCALE_NOT_SUPPORTED",
+        "RANK_ADVANTAGE_CI_ABOVE_ZERO",
+        "RANK_PERMUTATION_SIGNIFICANT",
+        "SHORTLIST_UTILITY_IMPROVED"
+      ],
+      "plain_language_reason": "Programme shift breaks absolute calibration: the source portfolio is 18.0% worse than state-only on log-RMSE. Candidate order survives: with zero recipient labels the source rank exceeds the strongest five-label recipient model by 0.374 Spearman units, and the full 95% interval remains above zero."
+    },
+    {
+      "recipient": "FINALES",
+      "transferred_object": "unchanged candidate order replication",
+      "evidence_status": "frozen retrospective replication",
+      "source_artifacts": [
+        "analysis/results/finales_rank_replication_summary.json"
+      ],
+      "data_support": {
+        "recipient_formulations": 16,
+        "eligible_temperature_matched_pairs": 98,
+        "recipient_anchor_budget": 3,
+        "temperature_tolerance_C": 1.0,
+        "recipient_doi_absent_from_donor": true
+      },
+      "absolute_endpoint": {
+        "evaluated": false
+      },
+      "rank_endpoint": {
+        "donor_concordance": 0.6938775510204082,
+        "recipient_baseline_concordance": 0.782608695652174,
+        "donor_minus_recipient_concordance": -0.08873114463176579,
+        "donor_minus_recipient_concordance_ci95": {
+          "low": -0.2932013494453841,
+          "high": 0.095926068941845
+        },
+        "donor_top_quartile_precision": 0.5,
+        "recipient_top_quartile_precision": 0.5,
+        "donor_normalized_regret": 0.5630256405707067,
+        "recipient_normalized_regret": 0.1804503774293165,
+        "permutation_p": 0.13093453273363317
+      },
+      "gate_evaluation": {
+        "absolute_prediction_supported": false,
+        "candidate_ranking_supported": false
+      },
+      "decision": "withhold",
+      "reason_codes": [
+        "RANK_ADVANTAGE_NOT_POSITIVE",
+        "RANK_ADVANTAGE_CI_CROSSES_ZERO",
+        "PERMUTATION_NOT_SIGNIFICANT",
+        "SHORTLIST_PRECISION_NOT_IMPROVED",
+        "REGRET_WORSE_THAN_RECIPIENT_BASELINE"
+      ],
+      "plain_language_reason": "The donor order is weaker than the three-anchor recipient baseline; its advantage is -0.089, its 95% interval crosses zero, the permutation test is not significant (P=0.131), and regret is 0.563 versus 0.180. This recipient therefore supplies quantitative evidence to withhold transfer."
+    }
+  ]
+}
