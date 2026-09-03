@@ -25,7 +25,12 @@ ENUMS = {
     "domain": {"materials", "chemistry"},
     "data_type": {"experimental", "computational", "mixed"},
     "access": {"open", "registration", "restricted"},
-    "source": {"curated-seed", "api-discovery", "community-contribution"},
+    "source": {
+        "curated-seed",
+        "api-discovery",
+        "api-discovery-tdm",
+        "community-contribution",
+    },
 }
 REQUIRED = ["id", "name", "description", "domain", "subdomain",
             "data_type", "access", "homepage_url"]

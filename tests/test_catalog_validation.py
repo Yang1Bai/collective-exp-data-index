@@ -21,11 +21,17 @@ def valid_catalog_entry() -> dict:
     }
 
 
-def test_lite_catalog_gate_rejects_untracked_source_class() -> None:
+def test_lite_catalog_gate_accepts_tdm_discovery_source() -> None:
     entry = valid_catalog_entry()
     entry["source"] = "api-discovery-tdm"
+    assert not lite_check([entry])
+
+
+def test_lite_catalog_gate_rejects_untracked_source_class() -> None:
+    entry = valid_catalog_entry()
+    entry["source"] = "api-discovery-untracked"
     errors = lite_check([entry])
-    assert any("source='api-discovery-tdm'" in error for error in errors)
+    assert any("source='api-discovery-untracked'" in error for error in errors)
 
 
 def test_lite_catalog_gate_rejects_duplicate_doi() -> None:

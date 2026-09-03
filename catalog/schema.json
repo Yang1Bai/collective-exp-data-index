@@ -77,7 +77,12 @@
     },
     "source": {
       "type": "string",
-      "enum": ["curated-seed", "api-discovery", "community-contribution"],
+      "enum": [
+        "curated-seed",
+        "api-discovery",
+        "api-discovery-tdm",
+        "community-contribution"
+      ],
       "default": "curated-seed",
       "description": "How this entry entered the catalog."
     },
