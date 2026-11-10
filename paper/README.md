@@ -54,10 +54,17 @@ are not redistributed in this submission package. Repository paths in the
 manifest point only to normalized snapshots, harmonized subsets or derived
 results retained for audit under the applicable upstream terms.
 
-Large computational intermediates are intentionally omitted. The frozen
-designs and runners reconstruct those intermediates from the upstream inputs;
-their absence does not remove any submitted headline result or source-data
-value from this package.
+Large row-level and resampling outputs (per-repetition metrics, bootstrap and
+permutation draws, row-level predictions) are not tracked in Git because of
+their size. They are **not** missing: every one of them is supplied in the
+complete Source Data package (89 files, 31 MB), which is archived at Zenodo
+together with the revision analyses (see [ARTICLE_LINKS.md](ARTICLE_LINKS.md)).
+No reported value requires regeneration. Of the 87 files listed in the
+package manifest, 38 are also tracked here with identical content and 49 exist
+only in the Zenodo package (Supplementary Table S12). The frozen designs and
+runners can still reconstruct the omitted files from the upstream inputs; see
+[reproduction/README.md](reproduction/README.md) for software versions and
+known reproducibility limits.
 
 ## Scope and release status
 
@@ -66,7 +73,6 @@ in the repository for provenance, but they are not automatically article
 evidence. Only paths in the claim manifest and model allowlist should be cited
 as support for the current manuscript.
 
-The URLs in `ARTICLE_LINKS.md` point to the reviewer-response branch. They are
-usable during peer review but are not yet archival. Before publication, create
-an immutable release, archive it, and replace the review-branch landing URL
-with the release DOI; no DOI is fabricated in this package.
+The URLs in `ARTICLE_LINKS.md` point to `main`, which now contains the former
+reviewer-response branch. The archival record is the Zenodo release cited in
+the manuscript; its DOI is added once minted and no DOI is fabricated here.

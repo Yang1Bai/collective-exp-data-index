@@ -16,15 +16,43 @@ have not changed.
 
 ## Full scientific rerun and verification
 
-The compact checkout intentionally retains summaries, selected derived tables
-and verification records rather than every large intermediate array. The
-legacy claim-specific verifiers therefore require a full rerun first; they are
-not substitutes for the fast package audit above.
+The Git checkout retains code, designs, summaries, selected derived tables and
+verification records, but not the large row-level and resampling outputs.
+Those outputs do not need to be regenerated to check a reported value: they
+are all supplied in the complete Source Data package archived at Zenodo (see
+[../ARTICLE_LINKS.md](../ARTICLE_LINKS.md)). To run the claim-specific
+verifiers without rerunning the models, unpack that package into the
+repository root so that its files land at their recorded paths under
+`analysis/results/`. A full rerun, described below, is needed only to
+reproduce the outputs independently.
 
 The repository also retains tests for historical or optional model families
 that require additional environments such as Torch or Chemprop and some
 superseded export assets. Those tests remain useful for their own workflows,
 but they are not part of the current manuscript submission gate.
+
+## Software versions used for the reported analyses
+
+| Analysis | Python | NumPy | pandas | SciPy | scikit-learn | RDKit | Other |
+|---|---|---|---|---|---|---|---|
+| Broad screen (Balam cluster) | 3.11.5 | 1.26.4 | 2.3.3 | 1.17.1 | 1.9.0 | 2026.03.3 | joblib 1.5.3 |
+| Other submitted analyses (local) | 3.11.13 | 1.26.4 | 2.3.3 | 1.17.1 | 1.9.0 | 2026.03.3 | matplotlib 3.11.1 |
+| Revision (R1) analyses | 3.13 | 2.5.3 | 3.0.5 | 1.18.1 | 1.9.1 | 2026.09.1 | full package list deposited with them |
+
+`analysis/requirements.txt` gives the version ranges of the submitted
+environment (NumPy < 2, pandas < 3). An environment file is deposited with
+each broad-screen result.
+
+Known limit: the procedure that chooses SolventSeg training formulations
+without using conductivity is not reproducible across numerical-library
+versions, because most chemistry descriptors of the 36 formulations differ
+only by rounding noise that the procedure rescales. The recorded training
+formulations of every repetition are therefore deposited and must be reused
+when re-evaluating SolventSeg results; refitting the CALiSol source model and
+the target-only models on those recorded formulations reproduces the archived
+results.
+
+## Environment
 
 Create an environment with Python 3.11 or newer and install the repository
 analysis dependencies, including RDKit:
@@ -55,8 +83,10 @@ python analysis/run_bamboomixer_recipient_baseline_stress_test.py
 python analysis/run_finales_rank_replication.py
 ```
 
-The jobs reconstruct ignored intermediate files such as per-repeat metrics and
-bootstrap arrays. After those files exist, run the independent verifiers:
+The jobs reconstruct the untracked files, such as per-repeat metrics and
+bootstrap arrays, that are otherwise supplied in the Zenodo Source Data
+package. After those files exist (from the package or from a rerun), run the
+independent verifiers:
 
 ```bash
 python analysis/verify_multi_target_ood_borrowing.py

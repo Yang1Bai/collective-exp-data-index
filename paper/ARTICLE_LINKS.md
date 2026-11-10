@@ -1,33 +1,44 @@
 # Article-ready repository links
 
-These links target the current reviewer-response branch. They will resolve
-after this package is committed and pushed to that branch.
+These links target the `main` branch, which is the branch linked from the
+manuscript (revision R1). The former `submission/reviewer-response-package`
+branch has been merged into `main`, so every file the Supplementary Information
+describes as tracked on GitHub is present on `main`. Two summary files,
+`analysis/results/bamboomixer_LiAsF6_only_summary.json` and
+`analysis/results/bamboomixer_cross_database_interaction_summary.json`, differ
+from the review-branch copies only in writing undefined metrics as JSON `null`
+instead of `NaN`; no reported value changed.
 
-- Submission evidence landing page: <https://github.com/Yang1Bai/collective-exp-data-index/tree/submission/reviewer-response-package/paper>
-- Claim-to-artifact manifest: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/claims/claim_manifest.csv>
-- Article source data: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/article_source_data.csv>
-- Data access, DOI and licence manifest: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/datasets.csv>
-- Model and protocol allowlist: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/models/README.md>
-- Reproduction instructions: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/reproduction/README.md>
+- Submission evidence landing page: <https://github.com/Yang1Bai/collective-exp-data-index/tree/main/paper>
+- Claim-to-artifact manifest: <https://github.com/Yang1Bai/collective-exp-data-index/blob/main/paper/claims/claim_manifest.csv>
+- Article source data: <https://github.com/Yang1Bai/collective-exp-data-index/blob/main/paper/data/article_source_data.csv>
+- Data access, DOI and licence manifest: <https://github.com/Yang1Bai/collective-exp-data-index/blob/main/paper/data/datasets.csv>
+- Model and protocol allowlist: <https://github.com/Yang1Bai/collective-exp-data-index/blob/main/paper/models/README.md>
+- Reproduction instructions: <https://github.com/Yang1Bai/collective-exp-data-index/blob/main/paper/reproduction/README.md>
 
-## Data and code availability text for the manuscript
+## Data and code availability text for the manuscript (R1)
 
-The code, frozen model specifications, derived results and source data
-supporting this study are available in the submission evidence package on
-GitHub at
-<https://github.com/Yang1Bai/collective-exp-data-index/tree/submission/reviewer-response-package/paper>.
+The analysis code, analysis designs, derived results and the complete Source
+Data package, including the prediction for every data point, the resampled
+results and the training formulations of every repetition, are archived at
+Zenodo. The version used in this article has DOI 10.5281/zenodo.XXXXXXX, and
+the concept DOI 10.5281/zenodo.YYYYYYY resolves to the most recent version.
+The code is maintained at <https://github.com/Yang1Bai/collective-exp-data-index>.
 The third-party datasets used in this study were obtained from their original
-repositories, which are listed together with their access links, DOIs and
-licence information in the data manifest at
-<https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/datasets.csv>.
-Raw third-party datasets are not redistributed unless permitted by their
-original terms.
+repositories, which are listed with their access links, DOIs and licence
+information in the data manifest (`paper/data/datasets.csv`) and in
+Supplementary Table S2. Raw third-party datasets are not redistributed unless
+permitted by their original terms.
+
+The two Zenodo DOIs are placeholders until the archive is minted; replace
+them here, in `CITATION.cff` and in the manuscript at the same time. No DOI is
+fabricated in this package.
 
 ## Publication step
 
-The branch URLs above are appropriate for review, not long-term citation.
-Before acceptance, tag the exact frozen commit, archive that release through
-Zenodo or an equivalent service, add the resulting DOI to `CITATION.cff`, and
-replace the landing-page URL in the paragraph above with the DOI. Keep the
+Tag the exact frozen commit, archive that release together with the complete
+Source Data package and the revision analyses (`Revision_analyses_R1.zip`)
+through Zenodo, add the resulting DOI to `CITATION.cff`, and replace the
+placeholder DOIs in the paragraph above. Keep the
 claim, data and model links as repository-relative paths inside the archived
 release.
