@@ -73,6 +73,6 @@ in the repository for provenance, but they are not automatically article
 evidence. Only paths in the claim manifest and model allowlist should be cited
 as support for the current manuscript.
 
-The URLs in `ARTICLE_LINKS.md` point to `main`, which now contains the former
-reviewer-response branch. The archival record is the Zenodo release cited in
-the manuscript; its DOI is added once minted and no DOI is fabricated here.
+The URLs in `ARTICLE_LINKS.md` point to `main`. The archival record cited in
+the manuscript is the Zenodo release <https://doi.org/10.5281/zenodo.24120899>
+(all versions: <https://doi.org/10.5281/zenodo.24120898>).
