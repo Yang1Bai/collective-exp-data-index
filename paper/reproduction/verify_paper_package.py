@@ -9,9 +9,9 @@ import itertools
 import json
 import math
 import re
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
-
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -52,25 +52,54 @@ def iter_paths(value: str) -> Iterable[str]:
 
 def verify_claim_paths() -> int:
     manifest = ROOT / "paper/claims/claim_manifest.csv"
-    fields = ("model_definition", "design", "result", "verification", "source_data", "figure")
+    fields = ("model_definition", "design", "result", "verification", "source_data")
+    expected_claims = {
+        "broad_scalar_screen",
+        "liasf6_external",
+        "solventseg_rank",
+        "solventseg_baseline_stress",
+        "finales_boundary",
+    }
     with manifest.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
-    require(len(rows) == 6, f"claim manifest: expected 6 rows, found {len(rows)}")
+    claims = {row["claim_id"] for row in rows}
+    require(len(rows) == len(expected_claims), f"claim manifest has duplicate or extra rows: {len(rows)}")
+    require(claims == expected_claims, f"claim manifest differs from submitted claims: {claims}")
     for row in rows:
         for field in fields:
             for relative in iter_paths(row[field]):
                 require((ROOT / relative).exists(), f"missing {row['claim_id']} {field}: {relative}")
+        require(row["manuscript_figure"].strip(), f"missing manuscript figure: {row['claim_id']}")
     return len(rows)
 
 
 def verify_dataset_ledger() -> int:
+    expected_resources = {
+        "aqsoldb",
+        "freesolv",
+        "estm-thermoelectric",
+        "mpea-dataset-borg",
+        "ocx24-open-catalyst-experiments-2024",
+        "obelix-solid-electrolytes",
+        "openpoly-benchmark",
+        "iupac-digitized-pka",
+        "photoswitch-dataset",
+        "bamboomixer",
+        "bamboomixer-liasf6-extension",
+        "calisol-23",
+        "kit-electrolyte-conductivity-5035",
+        "solventseg",
+        "finales",
+    }
     with (ROOT / "research/data/ANALYSED_RESOURCE_LEDGER.csv").open(
         newline="", encoding="utf-8"
     ) as handle:
         ledger = {row["resource_id"]: row for row in csv.DictReader(handle)}
     with (ROOT / "paper/data/datasets.csv").open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
-    require(len(rows) == 14, f"dataset manifest: expected 14 rows, found {len(rows)}")
+    resources = {row["resource_id"] for row in rows}
+    require(len(rows) == len(expected_resources), f"dataset manifest has duplicate or extra rows: {len(rows)}")
+    require(resources == expected_resources, f"dataset manifest differs from submitted resources: {resources}")
     for row in rows:
         source = ledger.get(row["resource_id"])
         require(source is not None, f"dataset absent from ledger: {row['resource_id']}")
@@ -79,20 +108,16 @@ def verify_dataset_ledger() -> int:
                 row[field] == source[field],
                 f"{row['resource_id']} {field} differs from resource ledger",
             )
+        require(row["doi_kind"] in {"dataset record", "publication"}, f"invalid DOI kind: {row['resource_id']}")
+        require(row["primary_url"].startswith("https://"), f"missing HTTPS access link: {row['resource_id']}")
+        require(row["doi"].strip(), f"missing DOI: {row['resource_id']}")
+        require(row["raw_redistribution"] == "not redistributed", f"raw redistribution mismatch: {row['resource_id']}")
+        require(
+            row["upstream_license"] not in {"", "Unknown", "verify-upstream"},
+            f"unresolved licence information: {row['resource_id']}",
+        )
         for relative in iter_paths(row["repository_representation"]):
             require((ROOT / relative).exists(), f"missing repository data representation: {relative}")
-    return len(rows)
-
-
-def verify_figure_manifest() -> int:
-    manifest = ROOT / "analysis/figures/final_manuscript_svgs/source_manifest.csv"
-    with manifest.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle))
-    require(len(rows) == 12, f"figure manifest: expected 12 rows, found {len(rows)}")
-    for row in rows:
-        require((ROOT / row["tracked_svg"]).is_file(), f"missing tracked SVG: {row['tracked_svg']}")
-        for relative in iter_paths(row["evidence_source"]):
-            require((ROOT / relative).exists(), f"missing figure evidence source: {relative}")
     return len(rows)
 
 
@@ -130,6 +155,18 @@ def verify_article_source_data() -> int:
         newline="", encoding="utf-8"
     ) as handle:
         rows = list(csv.DictReader(handle))
+    require(len(rows) == 30, f"article source-data row count changed: {len(rows)}")
+    require(
+        {row["claim_id"] for row in rows}
+        == {
+            "broad_scalar_screen",
+            "liasf6_external",
+            "solventseg_rank",
+            "solventseg_baseline_stress",
+            "finales_boundary",
+        },
+        "article source data differs from submitted claims",
+    )
     for row in rows:
         artifact = row["artifact"]
         if artifact not in cache:
@@ -160,25 +197,6 @@ def verify_headlines() -> None:
         broad["programme_inference"]["mean_primary_ood_gain"],
         0.009247991733308742,
         "broad programme mean gain",
-    )
-
-    specgen = load_json("analysis/results/transfer_screening.json")
-    comparison = {row["method"]: row for row in specgen["aggregate"]["comparison"]}
-    require(specgen["screening_config"]["epochs"] == 40, "SpecGen screening epoch count changed")
-    require(specgen["screening_config"]["seed"] == 20260802, "SpecGen screening seed changed")
-    close(
-        comparison["contrastive"]["median_spearman"],
-        0.5994560361010429,
-        "SpecGen contrastive median Spearman",
-    )
-    close(
-        comparison["baseline"]["median_spearman"],
-        0.5836792647722425,
-        "SpecGen baseline median Spearman",
-    )
-    require(
-        comparison["contrastive"]["positive_directions"] == 3,
-        "SpecGen positive-direction count changed",
     )
 
     liasf6 = load_json("analysis/results/bamboomixer_LiAsF6_only_summary.json")
@@ -301,15 +319,14 @@ def verify_checksums() -> int:
 def main() -> None:
     claims = verify_claim_paths()
     datasets = verify_dataset_ledger()
-    figures = verify_figure_manifest()
     links = verify_markdown_links()
     metrics = verify_article_source_data()
     verify_headlines()
     checksums = verify_checksums()
     print(
         "Submission package verified: "
-        f"{claims} claims, {datasets} datasets, {figures} figure files, "
-        f"{metrics} source-data values, {links} relative links, {checksums} checksums."
+        f"{claims} claims, {datasets} datasets, {metrics} source-data values, "
+        f"{links} relative links, {checksums} checksums."
     )
 
 

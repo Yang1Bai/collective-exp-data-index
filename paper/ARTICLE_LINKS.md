@@ -8,19 +8,19 @@ after this package is committed and pushed to that branch.
 - Article source data: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/article_source_data.csv>
 - Data access, DOI and licence manifest: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/datasets.csv>
 - Model and protocol allowlist: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/models/README.md>
-- Editable final figures: <https://github.com/Yang1Bai/collective-exp-data-index/tree/submission/reviewer-response-package/analysis/figures/final_manuscript_svgs>
 - Reproduction instructions: <https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/reproduction/README.md>
 
 ## Data and code availability text for the manuscript
 
-Code, frozen model specifications, derived result tables, validation records
-and editable figure files are available in the submission evidence package at
+The code, frozen model specifications, derived results and source data
+supporting this study are available in the submission evidence package on
+GitHub at
 <https://github.com/Yang1Bai/collective-exp-data-index/tree/submission/reviewer-response-package/paper>.
-The claim-to-artifact mapping and full-precision values underlying the reported
-headline results are provided in the claim manifest and article source-data
-table within that package. Third-party raw datasets are not redistributed by
-default; their access URLs, DOIs, licence terms and repository representations
-are listed in the data manifest. Upstream datasets remain subject to their
+The third-party datasets used in this study were obtained from their original
+repositories, which are listed together with their access links, DOIs and
+licence information in the data manifest at
+<https://github.com/Yang1Bai/collective-exp-data-index/blob/submission/reviewer-response-package/paper/data/datasets.csv>.
+Raw third-party datasets are not redistributed unless permitted by their
 original terms.
 
 ## Publication step
