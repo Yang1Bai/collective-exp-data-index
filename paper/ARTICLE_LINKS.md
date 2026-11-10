@@ -21,24 +21,21 @@ instead of `NaN`; no reported value changed.
 The analysis code, analysis designs, derived results and the complete Source
 Data package, including the prediction for every data point, the resampled
 results and the training formulations of every repetition, are archived at
-Zenodo. The version used in this article has DOI 10.5281/zenodo.XXXXXXX, and
-the concept DOI 10.5281/zenodo.YYYYYYY resolves to the most recent version.
-The code is maintained at <https://github.com/Yang1Bai/collective-exp-data-index>.
-The third-party datasets used in this study were obtained from their original
+Zenodo. The version used in this article has DOI 10.5281/zenodo.24120899, and
+the concept DOI 10.5281/zenodo.24120898 resolves to the most recent version.
+The code is maintained at
+<https://github.com/Yang1Bai/collective-exp-data-index/tree/main/paper>. The
+third-party datasets used in this study were obtained from their original
 repositories, which are listed with their access links, DOIs and licence
 information in the data manifest (`paper/data/datasets.csv`) and in
 Supplementary Table S2. Raw third-party datasets are not redistributed unless
 permitted by their original terms.
 
-The two Zenodo DOIs are placeholders until the archive is minted; replace
-them here, in `CITATION.cff` and in the manuscript at the same time. No DOI is
-fabricated in this package.
+Zenodo record: <https://zenodo.org/records/24120899>
 
 ## Publication step
 
-Tag the exact frozen commit, archive that release together with the complete
-Source Data package and the revision analyses (`Revision_analyses_R1.zip`)
-through Zenodo, add the resulting DOI to `CITATION.cff`, and replace the
-placeholder DOIs in the paragraph above. Keep the
-claim, data and model links as repository-relative paths inside the archived
-release.
+The Zenodo record archives commit 5e472c4 of `main` together with the complete
+Source Data package and the revision analyses (`Revision_analyses_R1.zip`).
+Its version DOI is 10.5281/zenodo.24120899 and its concept DOI is
+10.5281/zenodo.24120898; both are recorded in `CITATION.cff`.
