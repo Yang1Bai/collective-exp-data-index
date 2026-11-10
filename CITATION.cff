@@ -5,6 +5,11 @@ type: software
 authors:
   - family-names: "Bai"
     given-names: "Yang"
+doi: "10.5281/zenodo.24120898"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24120899"
+    description: "Version archived for the Digital Discovery article (revision R1)"
 repository-code: "https://github.com/Yang1Bai/collective-exp-data-index"
 url: "https://github.com/Yang1Bai/collective-exp-data-index"
 date-released: "2026-07-31"
